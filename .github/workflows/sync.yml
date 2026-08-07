@@ -2,8 +2,8 @@ name: Sync Garmin Metrics
 
 on:
   schedule:
-    - cron: '0 22 * * *'
-  workflow_dispatch:
+    - cron: '20 0 * * *'  # Runs daily at 8:20 AM Philippine Time (00:20 UTC)
+  workflow_dispatch:      # Allows you to still run it manually anytime
 
 jobs:
   run-script:
@@ -19,11 +19,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install gspread oauth2client garminconnect
+          pip install garminconnect gspread oauth2client
 
-      - name: Run automation script
+      - name: Run Garmin to Sheets script
         env:
-          GARMIN_TOKENS_JSON: ${{ secrets.GARMIN_TOKENS_JSON }}
           GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+          GARMIN_TOKENS_JSON: ${{ secrets.GARMIN_TOKENS_JSON }}
         run: |
           python garmin_to_sheets.py
