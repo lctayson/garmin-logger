@@ -2,8 +2,8 @@ name: Sync Garmin Metrics
 
 on:
   schedule:
-    - cron: '0 22 * * *'  # Runs daily
-  workflow_dispatch:      # Allows manual trigger anytime
+    - cron: '0 22 * * *'
+  workflow_dispatch:
 
 jobs:
   run-script:
@@ -23,8 +23,7 @@ jobs:
 
       - name: Run automation script
         env:
-          GARMIN_EMAIL: ${{ secrets.GARMIN_EMAIL }}
-          GARMIN_PASSWORD: ${{ secrets.GARMIN_PASSWORD }}
+          GARMIN_TOKENS_JSON: ${{ secrets.GARMIN_TOKENS_JSON }}
           GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
         run: |
           python garmin_to_sheets.py
