@@ -25,12 +25,31 @@ def ensure_worksheet_with_headers(sh, title, headers):
     except gspread.exceptions.WorksheetNotFound:
         worksheet = sh.add_worksheet(title=title, rows="500", cols=len(headers) + 2)
     
-    # Check if the first row matches headers; if empty or different, set them
     existing_rows = worksheet.get_all_values()
     if not existing_rows or existing_rows[0] != headers:
         worksheet.insert_row(headers, 1)
         
     return worksheet
+
+def format_time(seconds):
+    """Converts seconds into mm:ss format."""
+    if not seconds or seconds == "N/A" or seconds <= 0:
+        return "N/A"
+    m = int(seconds // 60)
+    s = int(seconds % 60)
+    return f"{m}:{s:02d}"
+
+def speed_to_pace_metrics(speed_mps):
+    """Takes speed in meters/sec and returns (formatted_mm_ss, decimal_min_per_km)."""
+    if not speed_mps or speed_mps <= 0:
+        return "N/A", "N/A"
+    
+    # Seconds to travel 1 kilometer
+    sec_per_km = 1000.0 / speed_mps
+    formatted_pace = format_time(sec_per_km)
+    decimal_pace = round(sec_per_km / 60.0, 2)
+    
+    return formatted_pace, decimal_pace
 
 def main():
     print("Setting up Garmin token session...")
@@ -85,14 +104,14 @@ def main():
     anaerobic_te = latest_activity.get("anaerobicTrainingEffect", "N/A")
     activity_id = latest_activity.get("activityId")
 
-    # Extract true activity date
     start_time_local = latest_activity.get("startTimeLocal")
     act_date = start_time_local.split(" ")[0] if start_time_local else today
 
-    # Summary metrics mirroring your screenshot
     dist_km = round(latest_activity.get("distance", 0) / 1000, 2)
     duration_min = round(latest_activity.get("duration", 0) / 60, 2)
-    avg_pace_val = round(duration_min / dist_km, 2) if dist_km > 0 else "N/A"
+    avg_speed_mps = latest_activity.get("averageSpeed", 0)
+    avg_pace_str, avg_pace_dec = speed_to_pace_metrics(avg_speed_mps)
+
     avg_hr = latest_activity.get("averageHR", "N/A")
     max_hr = latest_activity.get("maxHR", "N/A")
     avg_power = latest_activity.get("averagePower", latest_activity.get("avgPower", "N/A"))
@@ -100,7 +119,7 @@ def main():
     gct = latest_activity.get("avgGroundContactTime", "N/A")
 
     summary_row = [
-        act_date, act_name, dist_km, duration_min, avg_pace_val, 
+        act_date, act_name, dist_km, duration_min, avg_pace_str, avg_pace_dec, 
         avg_hr, max_hr, avg_power, cadence, gct, aerobic_te, anaerobic_te
     ]
 
@@ -109,17 +128,52 @@ def main():
     if activity_id:
         try:
             splits_data = api.get_activity_splits(activity_id)
+            interval_counter = 0
             for idx, lap in enumerate(splits_data.get("lapDTOs", [])):
                 l_dist = round(lap.get("distance", 0) / 1000, 2)
-                l_dur = round(lap.get("duration", 0) / 60, 2)
-                l_pace = round(l_dur / l_dist, 2) if l_dist > 0 and l_dur > 0 else "N/A"
+                l_dur_sec = lap.get("duration", 0)
+                l_time_str = format_time(l_dur_sec)
                 
+                # Calculate pace using lap average speed (m/s)
+                l_speed_mps = lap.get("averageSpeed", 0)
+                l_pace_str, l_pace_dec = speed_to_pace_metrics(l_speed_mps)
+                
+                intensity = lap.get("intensity", "ACTIVE").upper()
+                lap_index = idx + 1
+                
+                if lap_index == 1 and l_dist > 0.5:
+                    step_type = "Warm Up"
+                    interval_idx = ""
+                elif "REST" in intensity or "RECOVERY" in intensity:
+                    step_type = "Recovery"
+                    interval_idx = interval_counter
+                elif lap_index >= len(splits_data.get("lapDTOs", [])) - 1 and l_dist > 0.5:
+                    step_type = "Cool Down"
+                    interval_idx = ""
+                else:
+                    interval_counter += 1
+                    step_type = "Run"
+                    interval_idx = interval_counter
+
                 laps_to_log.append([
-                    act_date, act_name, idx + 1, l_dist, l_pace, 
+                    act_date, 
+                    interval_idx if interval_idx != "" else "--", 
+                    step_type, 
+                    lap_index, 
+                    l_time_str, 
+                    l_dist, 
+                    l_pace_str, 
+                    l_pace_dec,
                     lap.get("averageHR", "N/A"), 
+                    lap.get("maxHR", "N/A"),
                     lap.get("averageRunCadence", lap.get("averageCadence", "N/A")), 
                     lap.get("avgGroundContactTime", "N/A"), 
-                    lap.get("avgPower", "N/A")
+                    lap.get("avgStrideLength", "N/A"),
+                    lap.get("avgVerticalOscillation", "N/A"),
+                    lap.get("avgVerticalRatio", "N/A"),
+                    lap.get("avgPower", "N/A"),
+                    lap.get("maxPower", "N/A"),
+                    lap.get("calories", "N/A")
                 ])
         except Exception as e:
             print(f"Could not fetch laps for activity {activity_id}: {e}")
@@ -143,19 +197,23 @@ def main():
         today, readiness_score, hrv_status, hrv_weekly_avg, sleep_hours, sleep_score, rhr, total_steps
     ])
 
-    # Tab 2: Workout Summary (High-level metadata per workout)
-    summary_headers = ["Date", "Activity Name", "Dist (km)", "Time (min)", "Avg Pace", "Avg HR", "Max HR", "Avg Power", "Cadence", "GCT (ms)", "Aerobic TE", "Anaerobic TE"]
+    # Tab 2: Workout Summary
+    summary_headers = ["Date", "Activity Name", "Dist (km)", "Time (min)", "Avg Pace", "Avg Pace (dec)", "Avg HR", "Max HR", "Avg Power", "Cadence", "GCT (ms)", "Aerobic TE", "Anaerobic TE"]
     summary_sheet = ensure_worksheet_with_headers(sh, "Workout_Summary", summary_headers)
     summary_sheet.append_row(summary_row)
 
-    # Tab 3: Workout Granularity (Lap-by-lap splits)
-    lap_headers = ["Date", "Activity Name", "Lap", "Dist (km)", "Pace (min/km)", "Avg HR", "Cadence", "GCT (ms)", "Power (W)"]
+    # Tab 3: Workout Granularity
+    lap_headers = [
+        "Date", "Interval #", "Step Type", "Lap", "Time", "Dist (km)", 
+        "Avg Pace", "Avg Pace (dec)", "Avg HR", "Max HR", "Cadence", "GCT (ms)", 
+        "Stride (m)", "Vert Osc (cm)", "Vert Ratio (%)", "Power (W)", "Max Power (W)", "Calories"
+    ]
     granularity_sheet = ensure_worksheet_with_headers(sh, "Workout_Granularity", lap_headers)
     
     if laps_to_log:
         for lap_row in laps_to_log:
             granularity_sheet.append_row(lap_row)
-        print(f"Successfully logged summary and {len(laps_to_log)} lap splits!")
+        print(f"Successfully logged summary and {len(laps_to_log)} detailed lap splits with proper pace formatting!")
     else:
         print("Successfully logged daily health metrics and workout summary.")
 
