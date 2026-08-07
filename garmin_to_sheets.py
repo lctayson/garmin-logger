@@ -5,19 +5,19 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from garminconnect import Garmin
 
-# --- CONFIGURATION VIA ENVIRONMENT VARIABLES ---
-SPREADSHEET_NAME = "Garmin_Metrics_Log"  # Must match your Google Sheet name
+# --- CONFIGURATION ---
+SPREADSHEET_NAME = "Garmin_Metrics_Log"
 
-# 1. Load Google credentials JSON safely from the environment variable string
+# Load credentials and tokens safely from environment variables
 google_creds_json = os.environ.get("GOOGLE_CREDENTIALS_JSON")
+garmin_tokens_json = os.environ.get("GARMIN_TOKENS_JSON")
+
 if not google_creds_json:
     raise ValueError("GOOGLE_CREDENTIALS_JSON environment variable is missing.")
-CREDENTIALS_DICT = json.loads(google_creds_json)
-
-# 2. Load Garmin tokens JSON safely from the environment variable string
-garmin_tokens_json = os.environ.get("GARMIN_TOKENS_JSON")
 if not garmin_tokens_json:
     raise ValueError("GARMIN_TOKENS_JSON environment variable is missing.")
+
+CREDENTIALS_DICT = json.loads(google_creds_json)
 
 def main():
     print("Setting up Garmin token session...")
@@ -36,7 +36,7 @@ def main():
     today = datetime.today().strftime("%Y-%m-%d")
     print(f"Fetching data for {today}...")
 
-    # 3. Fetch Daily Health Metrics (Steps, RHR, Sleep)
+    # 1. Fetch Daily Health Metrics (Steps, RHR, Sleep)
     stats = api.get_stats(today)
     rhr = stats.get("restingHeartRate", "N/A")
     total_steps = stats.get("totalSteps", "N/A")
@@ -46,8 +46,8 @@ def main():
     sleep_seconds = sleep_data.get("dailySleepDTO", {}).get("sleepTimeSeconds", 0)
     sleep_hours = round(sleep_seconds / 3600, 2) if sleep_seconds else "N/A"
 
-    # 4. Fetch Latest Activity
-    activities = api.get_activities(0, 1)  # Get the most recent activity
+    # 2. Fetch Latest Activity
+    activities = api.get_activities(0, 1)
     latest_activity = activities[0] if activities else {}
     
     act_name = latest_activity.get("activityName", "N/A")
@@ -56,7 +56,7 @@ def main():
     duration_min = round(latest_activity.get("duration", 0) / 60, 2)
     avg_hr = latest_activity.get("averageHR", "N/A")
 
-    # 5. Connect to Google Sheets using Dictionary credentials
+    # 3. Connect to Google Sheets
     print("Connecting to Google Drive / Sheets...")
     scope = [
         "https://spreadsheets.google.com/feeds",
@@ -74,7 +74,7 @@ def main():
             "Duration (min)", "Avg HR", "Resting HR", "Sleep (hrs)", "Steps"
         ])
 
-    # 6. Append Data Row
+    # 4. Append Data Row
     row_data = [
         today, act_name, act_type, distance_km, 
         duration_min, avg_hr, rhr, sleep_hours, total_steps
