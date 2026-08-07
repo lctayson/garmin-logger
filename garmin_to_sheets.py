@@ -81,19 +81,34 @@ def main():
     rhr = stats.get("restingHeartRate", "N/A")
     total_steps = stats.get("totalSteps", "N/A")
     
+    # Detailed Sleep Architecture
     sleep_data = api.get_sleep_data(today)
     daily_sleep = sleep_data.get("dailySleepDTO", {})
     sleep_score = daily_sleep.get("sleepScores", {}).get("overall", {}).get("value", "N/A")
-    sleep_seconds = daily_sleep.get("sleepTimeSeconds", 0)
-    sleep_hours = round(sleep_seconds / 3600, 2) if sleep_seconds else "N/A"
+    
+    sleep_sec = daily_sleep.get("sleepTimeSeconds", 0)
+    deep_sec = daily_sleep.get("deepSleepSeconds", 0)
+    light_sec = daily_sleep.get("lightSleepSeconds", 0)
+    rem_sec = daily_sleep.get("remSleepSeconds", 0)
+    awake_sec = daily_sleep.get("awakeSleepSeconds", 0)
 
+    sleep_hours = round(sleep_sec / 3600, 2) if sleep_sec else "N/A"
+    deep_hours = round(deep_sec / 3600, 2) if deep_sec else "N/A"
+    light_hours = round(light_sec / 3600, 2) if light_sec else "N/A"
+    rem_hours = round(rem_sec / 3600, 2) if rem_sec else "N/A"
+    awake_hours = round(awake_sec / 3600, 2) if awake_sec else "N/A"
+
+    # Comprehensive HRV Metrics
     try:
         hrv_data = api.get_hrv_data(today)
-        hrv_status = hrv_data.get("hrvSummary", {}).get("status", "N/A")
-        hrv_weekly_avg = hrv_data.get("hrvSummary", {}).get("weeklyAvg", "N/A")
+        hrv_summary = hrv_data.get("hrvSummary", {})
+        hrv_status = hrv_summary.get("status", "N/A")
+        hrv_weekly_avg = hrv_summary.get("weeklyAvg", "N/A")
+        hrv_last_night = hrv_summary.get("lastNightAvg", "N/A")
     except Exception:
-        hrv_status, hrv_weekly_avg = "N/A", "N/A"
+        hrv_status, hrv_weekly_avg, hrv_last_night = "N/A", "N/A", "N/A"
 
+    # Training Readiness
     try:
         readiness_data = api.get_training_readiness(today)
         readiness_score = readiness_data.get("score", "N/A")
@@ -191,7 +206,6 @@ def main():
                     lap_calories
                 ])
 
-            # Append overall summary row at the bottom of the lap table (matching Garmin export)
             total_duration_sec = latest_activity.get("duration", 0)
             total_time_str = format_time(total_duration_sec) if total_duration_sec else "N/A"
             
@@ -232,11 +246,16 @@ def main():
     client = gspread.authorize(creds)
     sh = client.open(SPREADSHEET_NAME)
 
-    # Tab 1: Daily Readiness
-    readiness_headers = ["Date", "Readiness Score", "HRV Status", "HRV Avg", "Sleep (hrs)", "Sleep Score", "Resting HR", "Steps"]
+    # Tab 1: Daily Readiness (Updated with full sleep and HRV metrics)
+    readiness_headers = [
+        "Date", "Readiness Score", "HRV Status", "HRV Weekly Avg", "HRV Last Night Avg", 
+        "Resting HR", "Sleep Score", "Total Sleep (hrs)", "Deep Sleep (hrs)", 
+        "Light Sleep (hrs)", "REM Sleep (hrs)", "Awake (hrs)", "Steps"
+    ]
     readiness_sheet = ensure_worksheet_with_headers(sh, "Daily_Readiness", readiness_headers)
     readiness_sheet.append_row([
-        today, readiness_score, hrv_status, hrv_weekly_avg, sleep_hours, sleep_score, rhr, total_steps
+        today, readiness_score, hrv_status, hrv_weekly_avg, hrv_last_night, 
+        rhr, sleep_score, sleep_hours, deep_hours, light_hours, rem_hours, awake_hours, total_steps
     ])
 
     # Tab 2: Workout Summary
@@ -255,7 +274,7 @@ def main():
     if laps_to_log:
         for lap_row in laps_to_log:
             granularity_sheet.append_row(lap_row)
-        print(f"Successfully logged summary and {len(laps_to_log)} splits (including Garmin-style summary row)!")
+        print(f"Successfully logged comprehensive health metrics and lap splits!")
     else:
         print("Successfully logged daily health metrics and workout summary.")
 
