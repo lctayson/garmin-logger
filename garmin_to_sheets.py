@@ -45,9 +45,10 @@ def speed_to_pace_metrics(speed_mps):
     return formatted_pace, decimal_pace
 
 def get_lap_metric(lap, possible_keys, default="N/A"):
+    """Safely checks multiple alternative keys for a Garmin lap metric."""
     for key in possible_keys:
         val = lap.get(key)
-        if val is not None:
+        if val is not None and val != "":
             return val
     return default
 
@@ -84,7 +85,6 @@ def main():
     activities = api.get_activities(0, 1)
     latest = activities[0] if activities else {}
     avg_speed_mps = latest.get("averageSpeed", 0)
-    # Threshold: if lap is 20% slower than avg speed, tag as recovery
     recovery_threshold = avg_speed_mps * 0.8 
 
     laps_to_log = []
@@ -96,7 +96,6 @@ def main():
             l_dist = round(lap.get("distance", 0) / 1000, 2)
             l_speed = lap.get("averageSpeed", 0)
             
-            # Robust Classification
             meta = f"{lap.get('intensity', '')} {lap.get('stepType', '')} {lap.get('lapType', '')}".upper()
             
             if lap_idx == 1 and (l_dist > 0.5 or "WARM" in meta):
@@ -110,16 +109,20 @@ def main():
                 step_type, int_idx = "Run", interval_counter
 
             l_pace, l_pace_dec = speed_to_pace_metrics(l_speed)
+            
+            # Expanded and corrected key mapping for Garmin split metrics
+            cadence = get_lap_metric(lap, ["averageRunCadence", "avgRunCadence", "averageCadence", "runCadence", "cadence"])
+            gct = get_lap_metric(lap, ["avgGroundContactTime", "averageGroundContactTime", "groundContactTime"])
+            stride = get_lap_metric(lap, ["avgStrideLength", "averageStrideLength", "strideLength"])
+            vert_osc = get_lap_metric(lap, ["avgVerticalOscillation", "averageVerticalOscillation", "verticalOscillation"])
+            vert_ratio = get_lap_metric(lap, ["avgVerticalRatio", "averageVerticalRatio", "verticalRatio"])
+            power = get_lap_metric(lap, ["avgPower", "averagePower", "power"])
+            max_power = get_lap_metric(lap, ["maxPower", "maximumPower"])
+
             laps_to_log.append([
                 today, int_idx, step_type, lap_idx, format_time(lap.get("duration")), l_dist,
-                l_pace, l_pace_dec, lap.get("averageHR"), lap.get("maxHR"), 
-                get_lap_metric(lap, ["avgRunCadence", "averageCadence"]),
-                get_lap_metric(lap, ["avgGroundContactTime", "groundContactTime"]),
-                get_lap_metric(lap, ["avgStrideLength", "strideLength"]),
-                get_lap_metric(lap, ["avgVerticalOscillation", "verticalOscillation"]),
-                get_lap_metric(lap, ["avgVerticalRatio", "verticalRatio"]),
-                get_lap_metric(lap, ["avgPower", "power"]),
-                get_lap_metric(lap, ["maxPower"]), lap.get("calories")
+                l_pace, l_pace_dec, lap.get("averageHR", "N/A"), lap.get("maxHR", "N/A"), 
+                cadence, gct, stride, vert_osc, vert_ratio, power, max_power, lap.get("calories", "N/A")
             ])
 
     # 3. WRITE TO SHEETS
