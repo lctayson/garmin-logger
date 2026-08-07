@@ -81,7 +81,6 @@ def main():
     rhr = stats.get("restingHeartRate", "N/A")
     total_steps = stats.get("totalSteps", "N/A")
     
-    # Detailed Sleep Architecture
     sleep_data = api.get_sleep_data(today)
     daily_sleep = sleep_data.get("dailySleepDTO", {})
     sleep_score = daily_sleep.get("sleepScores", {}).get("overall", {}).get("value", "N/A")
@@ -98,7 +97,6 @@ def main():
     rem_hours = round(rem_sec / 3600, 2) if rem_sec else "N/A"
     awake_hours = round(awake_sec / 3600, 2) if awake_sec else "N/A"
 
-    # Comprehensive HRV Metrics
     try:
         hrv_data = api.get_hrv_data(today)
         hrv_summary = hrv_data.get("hrvSummary", {})
@@ -108,7 +106,6 @@ def main():
     except Exception:
         hrv_status, hrv_weekly_avg, hrv_last_night = "N/A", "N/A", "N/A"
 
-    # Training Readiness
     try:
         readiness_data = api.get_training_readiness(today)
         readiness_score = readiness_data.get("score", "N/A")
@@ -145,12 +142,14 @@ def main():
         avg_hr, max_hr, avg_power, cadence, gct, aerobic_te, anaerobic_te
     ]
 
-    # Fetch lap splits and build summary row
+    # Fetch lap splits with robust step classification
     laps_to_log = []
     if activity_id:
         try:
             splits_data = api.get_activity_splits(activity_id)
             interval_counter = 0
+            total_laps = len(splits_data.get("lapDTOs", []))
+            
             for idx, lap in enumerate(splits_data.get("lapDTOs", [])):
                 l_dist = round(lap.get("distance", 0) / 1000, 2)
                 l_dur_sec = lap.get("duration", 0)
@@ -159,18 +158,23 @@ def main():
                 l_speed_mps = lap.get("averageSpeed", 0)
                 l_pace_str, l_pace_dec = speed_to_pace_metrics(l_speed_mps)
                 
-                intensity = lap.get("intensity", "ACTIVE").upper()
                 lap_index = idx + 1
                 
-                if lap_index == 1 and l_dist > 0.5:
+                # Check all possible Garmin intensity/step type indicators
+                intensity = str(lap.get("intensity", "")).upper()
+                step_type_api = str(lap.get("stepType", "")).upper()
+                lap_type = str(lap.get("lapType", "")).upper()
+                combined_meta = f"{intensity} {step_type_api} {lap_type}"
+                
+                if lap_index == 1 and (l_dist > 0.5 or "WARM" in combined_meta):
                     step_type = "Warm Up"
-                    interval_idx = ""
-                elif "REST" in intensity or "RECOVERY" in intensity:
+                    interval_idx = "--"
+                elif any(k in combined_meta for k in ["REST", "RECOVERY"]):
                     step_type = "Recovery"
-                    interval_idx = interval_counter
-                elif lap_index >= len(splits_data.get("lapDTOs", [])) - 1 and l_dist > 0.5:
+                    interval_idx = interval_counter  # Keeps association with the current interval
+                elif any(k in combined_meta for k in ["COOL", "COOLDOWN"]) or (lap_index >= total_laps - 1 and l_dist > 0.5 and "INTERVAL" not in combined_meta):
                     step_type = "Cool Down"
-                    interval_idx = ""
+                    interval_idx = "--"
                 else:
                     interval_counter += 1
                     step_type = "Run"
@@ -187,7 +191,7 @@ def main():
 
                 laps_to_log.append([
                     act_date, 
-                    interval_idx if interval_idx != "" else "--", 
+                    interval_idx, 
                     step_type, 
                     lap_index, 
                     l_time_str, 
@@ -246,7 +250,7 @@ def main():
     client = gspread.authorize(creds)
     sh = client.open(SPREADSHEET_NAME)
 
-    # Tab 1: Daily Readiness (Updated with full sleep and HRV metrics)
+    # Tab 1: Daily Readiness
     readiness_headers = [
         "Date", "Readiness Score", "HRV Status", "HRV Weekly Avg", "HRV Last Night Avg", 
         "Resting HR", "Sleep Score", "Total Sleep (hrs)", "Deep Sleep (hrs)", 
@@ -274,7 +278,7 @@ def main():
     if laps_to_log:
         for lap_row in laps_to_log:
             granularity_sheet.append_row(lap_row)
-        print(f"Successfully logged comprehensive health metrics and lap splits!")
+        print(f"Successfully logged metrics and splits with correct Recovery step classification!")
     else:
         print("Successfully logged daily health metrics and workout summary.")
 
