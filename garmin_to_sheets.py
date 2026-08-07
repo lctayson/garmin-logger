@@ -130,7 +130,7 @@ def main():
         avg_hr, max_hr, avg_power, cadence, gct, aerobic_te, anaerobic_te
     ]
 
-    # Fetch lap splits with multi-key fallback handling
+    # Fetch lap splits and build summary row
     laps_to_log = []
     if activity_id:
         try:
@@ -161,7 +161,6 @@ def main():
                     step_type = "Run"
                     interval_idx = interval_counter
 
-                # Extract dynamics safely with fallbacks
                 lap_cadence = get_lap_metric(lap, ["averageRunCadence", "averageCadence", "runCadence"])
                 lap_gct = get_lap_metric(lap, ["avgGroundContactTime", "averageGroundContactTime", "groundContactTime"])
                 lap_stride = get_lap_metric(lap, ["avgStrideLength", "averageStrideLength", "strideLength"])
@@ -191,6 +190,33 @@ def main():
                     lap_max_power,
                     lap_calories
                 ])
+
+            # Append overall summary row at the bottom of the lap table (matching Garmin export)
+            total_duration_sec = latest_activity.get("duration", 0)
+            total_time_str = format_time(total_duration_sec) if total_duration_sec else "N/A"
+            
+            summary_lap_row = [
+                act_date,
+                "--",
+                "Summary",
+                "--",
+                total_time_str,
+                dist_km,
+                avg_pace_str,
+                avg_pace_dec,
+                avg_hr,
+                max_hr,
+                cadence,
+                gct,
+                get_lap_metric(latest_activity, ["avgStrideLength", "averageStrideLength"]),
+                get_lap_metric(latest_activity, ["avgVerticalOscillation", "averageVerticalOscillation"]),
+                get_lap_metric(latest_activity, ["avgVerticalRatio", "averageVerticalRatio"]),
+                avg_power,
+                get_lap_metric(latest_activity, ["maxPower", "maximumPower"]),
+                latest_activity.get("calories", "N/A")
+            ]
+            laps_to_log.append(summary_lap_row)
+
         except Exception as e:
             print(f"Could not fetch laps for activity {activity_id}: {e}")
 
@@ -229,7 +255,7 @@ def main():
     if laps_to_log:
         for lap_row in laps_to_log:
             granularity_sheet.append_row(lap_row)
-        print(f"Successfully logged summary and {len(laps_to_log)} detailed lap splits with resolved keys!")
+        print(f"Successfully logged summary and {len(laps_to_log)} splits (including Garmin-style summary row)!")
     else:
         print("Successfully logged daily health metrics and workout summary.")
 
