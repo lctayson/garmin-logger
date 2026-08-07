@@ -44,12 +44,19 @@ def speed_to_pace_metrics(speed_mps):
     if not speed_mps or speed_mps <= 0:
         return "N/A", "N/A"
     
-    # Seconds to travel 1 kilometer
     sec_per_km = 1000.0 / speed_mps
     formatted_pace = format_time(sec_per_km)
     decimal_pace = round(sec_per_km / 60.0, 2)
     
     return formatted_pace, decimal_pace
+
+def get_lap_metric(lap, possible_keys, default="N/A"):
+    """Safely checks multiple alternative keys for a Garmin lap metric."""
+    for key in possible_keys:
+        val = lap.get(key)
+        if val is not None:
+            return val
+    return default
 
 def main():
     print("Setting up Garmin token session...")
@@ -114,16 +121,16 @@ def main():
 
     avg_hr = latest_activity.get("averageHR", "N/A")
     max_hr = latest_activity.get("maxHR", "N/A")
-    avg_power = latest_activity.get("averagePower", latest_activity.get("avgPower", "N/A"))
-    cadence = latest_activity.get("averageRunningCadenceInStepsPerMinute", latest_activity.get("averageCadence", "N/A"))
-    gct = latest_activity.get("avgGroundContactTime", "N/A")
+    avg_power = get_lap_metric(latest_activity, ["averagePower", "avgPower", "power"])
+    cadence = get_lap_metric(latest_activity, ["averageRunningCadenceInStepsPerMinute", "averageRunCadence", "averageCadence"])
+    gct = get_lap_metric(latest_activity, ["avgGroundContactTime", "averageGroundContactTime", "groundContactTime"])
 
     summary_row = [
         act_date, act_name, dist_km, duration_min, avg_pace_str, avg_pace_dec, 
         avg_hr, max_hr, avg_power, cadence, gct, aerobic_te, anaerobic_te
     ]
 
-    # Fetch lap splits
+    # Fetch lap splits with multi-key fallback handling
     laps_to_log = []
     if activity_id:
         try:
@@ -134,7 +141,6 @@ def main():
                 l_dur_sec = lap.get("duration", 0)
                 l_time_str = format_time(l_dur_sec)
                 
-                # Calculate pace using lap average speed (m/s)
                 l_speed_mps = lap.get("averageSpeed", 0)
                 l_pace_str, l_pace_dec = speed_to_pace_metrics(l_speed_mps)
                 
@@ -155,6 +161,16 @@ def main():
                     step_type = "Run"
                     interval_idx = interval_counter
 
+                # Extract dynamics safely with fallbacks
+                lap_cadence = get_lap_metric(lap, ["averageRunCadence", "averageCadence", "runCadence"])
+                lap_gct = get_lap_metric(lap, ["avgGroundContactTime", "averageGroundContactTime", "groundContactTime"])
+                lap_stride = get_lap_metric(lap, ["avgStrideLength", "averageStrideLength", "strideLength"])
+                lap_vert_osc = get_lap_metric(lap, ["avgVerticalOscillation", "averageVerticalOscillation", "verticalOscillation"])
+                lap_vert_ratio = get_lap_metric(lap, ["avgVerticalRatio", "averageVerticalRatio", "verticalRatio"])
+                lap_power = get_lap_metric(lap, ["avgPower", "averagePower", "power"])
+                lap_max_power = get_lap_metric(lap, ["maxPower", "maximumPower"])
+                lap_calories = lap.get("calories", "N/A")
+
                 laps_to_log.append([
                     act_date, 
                     interval_idx if interval_idx != "" else "--", 
@@ -166,14 +182,14 @@ def main():
                     l_pace_dec,
                     lap.get("averageHR", "N/A"), 
                     lap.get("maxHR", "N/A"),
-                    lap.get("averageRunCadence", lap.get("averageCadence", "N/A")), 
-                    lap.get("avgGroundContactTime", "N/A"), 
-                    lap.get("avgStrideLength", "N/A"),
-                    lap.get("avgVerticalOscillation", "N/A"),
-                    lap.get("avgVerticalRatio", "N/A"),
-                    lap.get("avgPower", "N/A"),
-                    lap.get("maxPower", "N/A"),
-                    lap.get("calories", "N/A")
+                    lap_cadence, 
+                    lap_gct, 
+                    lap_stride,
+                    lap_vert_osc,
+                    lap_vert_ratio,
+                    lap_power,
+                    lap_max_power,
+                    lap_calories
                 ])
         except Exception as e:
             print(f"Could not fetch laps for activity {activity_id}: {e}")
@@ -213,7 +229,7 @@ def main():
     if laps_to_log:
         for lap_row in laps_to_log:
             granularity_sheet.append_row(lap_row)
-        print(f"Successfully logged summary and {len(laps_to_log)} detailed lap splits with proper pace formatting!")
+        print(f"Successfully logged summary and {len(laps_to_log)} detailed lap splits with resolved keys!")
     else:
         print("Successfully logged daily health metrics and workout summary.")
 
