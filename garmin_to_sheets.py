@@ -23,16 +23,18 @@ def main():
     print("Setting up Garmin token session...")
     token_dir = "./.garminconnect"
     os.makedirs(token_dir, exist_ok=True)
-    token_file_path = os.path.join(token_dir, "oauth2_token.json")
     
-    # Write the token secret into the file expected by garth/garminconnect
+    # python-garminconnect looks for exactly this filename
+    token_file_path = os.path.join(token_dir, "garmin_tokens.json")
+    
+    # Write the token secret into the file
     with open(token_file_path, "w") as f:
         f.write(garmin_tokens_json)
 
     print("Connecting to Garmin Connect using pre-authenticated tokens...")
-    # Initialize with tokenstore so it loads session files instead of prompting for password/MFA
-    api = Garmin(tokenstore=token_dir)
-    api.login()
+    # Initialize without credentials, then login explicitly with the directory
+    api = Garmin()
+    api.login(token_dir)
 
     today = datetime.today().strftime("%Y-%m-%d")
     print(f"Fetching data for {today}...")
