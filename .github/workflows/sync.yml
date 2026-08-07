@@ -1,0 +1,30 @@
+name: Sync Garmin Metrics
+
+on:
+  schedule:
+    - cron: '0 22 * * *'  # Runs daily
+  workflow_dispatch:      # Allows manual trigger anytime
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install gspread oauth2client garminconnect
+
+      - name: Run automation script
+        env:
+          GARMIN_EMAIL: ${{ secrets.GARMIN_EMAIL }}
+          GARMIN_PASSWORD: ${{ secrets.GARMIN_PASSWORD }}
+          GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+        run: |
+          python garmin_to_sheets.py
