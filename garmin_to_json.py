@@ -117,14 +117,30 @@ def main():
             try:
                 splits = api.get_activity_splits(act_id)
                 lap_dtos = splits.get("lapDTOs", [])
+                total_laps = len(lap_dtos)
+                recovery_threshold = avg_speed_mps * 0.8
+
                 for idx, lap in enumerate(lap_dtos, start=1):
+                    l_dist = round(lap.get("distance", 0) / 1000, 3)
                     l_speed = lap.get("averageSpeed", 0)
+                    
+                    meta = f"{lap.get('intensity', '')} {lap.get('stepType', '')} {lap.get('lapType', '')}".upper()
+                    
+                    if idx == 1 and (l_dist > 0.5 or "WARM" in meta):
+                        step_type = "Warm Up"
+                    elif any(k in meta for k in ["REST", "RECOVERY"]) or (0 < l_speed < recovery_threshold and idx > 1 and idx < total_laps):
+                        step_type = "Recovery"
+                    elif any(k in meta for k in ["COOL", "COOLDOWN"]) or (idx >= total_laps - 1 and l_dist > 0.5 and "INTERVAL" not in meta):
+                        step_type = "Cool Down"
+                    else:
+                        step_type = "Run"
+
                     l_pace, _ = speed_to_pace_metrics(l_speed)
                     intervals.append({
                         "interval_number": idx,
-                        "step_type": lap.get("stepType", "Unknown"),
+                        "step_type": step_type,
                         "time_min": round(lap.get("duration", 0) / 60, 2),
-                        "distance_km": round(lap.get("distance", 0) / 1000, 3),
+                        "distance_km": l_dist,
                         "avg_pace": l_pace,
                         "avg_hr": lap.get("averageHR", "N/A"),
                         "max_hr": lap.get("maxHR", "N/A"),
