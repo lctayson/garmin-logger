@@ -44,7 +44,7 @@
             "intervals": [
                 {
                     "interval_number": 1,
-                    "step_type": "Unknown",
+                    "step_type": "Warm Up",
                     "time_min": 7.96,
                     "distance_km": 1.0,
                     "avg_pace": "7:57",
@@ -58,7 +58,7 @@
                 },
                 {
                     "interval_number": 2,
-                    "step_type": "Unknown",
+                    "step_type": "Run",
                     "time_min": 7.66,
                     "distance_km": 1.0,
                     "avg_pace": "7:39",
@@ -72,7 +72,7 @@
                 },
                 {
                     "interval_number": 3,
-                    "step_type": "Unknown",
+                    "step_type": "Run",
                     "time_min": 7.79,
                     "distance_km": 1.0,
                     "avg_pace": "7:47",
@@ -86,7 +86,7 @@
                 },
                 {
                     "interval_number": 4,
-                    "step_type": "Unknown",
+                    "step_type": "Run",
                     "time_min": 0.17,
                     "distance_km": 0.023,
                     "avg_pace": "7:19",
@@ -100,7 +100,7 @@
                 },
                 {
                     "interval_number": 5,
-                    "step_type": "Unknown",
+                    "step_type": "Run",
                     "time_min": 0.33,
                     "distance_km": 0.06,
                     "avg_pace": "5:32",
@@ -114,7 +114,7 @@
                 },
                 {
                     "interval_number": 6,
-                    "step_type": "Unknown",
+                    "step_type": "Recovery",
                     "time_min": 1.5,
                     "distance_km": 0.128,
                     "avg_pace": "11:43",
@@ -128,7 +128,7 @@
                 },
                 {
                     "interval_number": 7,
-                    "step_type": "Unknown",
+                    "step_type": "Run",
                     "time_min": 0.33,
                     "distance_km": 0.066,
                     "avg_pace": "5:03",
@@ -142,7 +142,7 @@
                 },
                 {
                     "interval_number": 8,
-                    "step_type": "Unknown",
+                    "step_type": "Recovery",
                     "time_min": 1.5,
                     "distance_km": 0.128,
                     "avg_pace": "11:42",
@@ -156,7 +156,7 @@
                 },
                 {
                     "interval_number": 9,
-                    "step_type": "Unknown",
+                    "step_type": "Run",
                     "time_min": 0.33,
                     "distance_km": 0.061,
                     "avg_pace": "5:28",
@@ -170,7 +170,7 @@
                 },
                 {
                     "interval_number": 10,
-                    "step_type": "Unknown",
+                    "step_type": "Run",
                     "time_min": 0.15,
                     "distance_km": 0.021,
                     "avg_pace": "7:11",
