@@ -44,7 +44,7 @@
             "intervals": [
                 {
                     "interval_number": 1,
-                    "step_type": "Warm Up",
+                    "step_type": "Run",
                     "time_min": 7.96,
                     "distance_km": 1.0,
                     "avg_pace": "7:57",
