@@ -35,8 +35,8 @@ jobs:
           git config --global user.name "GitHub Action Bot"
           git config --global user.email "bot@github.com"
           
-          # Stage any new or modified JSON files in the repo
-          git add *.json
+          # Stage files inside the data directory
+          git add data/*.json
           
           # Commit only if there are changes, otherwise exit gracefully
           git commit -m "Auto-export daily telemetry JSON for $(date +%Y-%m-%d)" || echo "No changes to commit"
