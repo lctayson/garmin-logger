@@ -1,78 +1,159 @@
+import os
 import json
 from datetime import datetime
+from garminconnect import Garmin
 
-def build_multi_activity_payload(garmin_activities, garmin_health_data):
-    """
-    Combines multi-sport activity data with comprehensive health, sleep stages, 
-    and HRV metrics into a structured JSON payload.
-    """
-    today = datetime.now().strftime("%Y-%m-%d")
-    activities_list = []
+def format_time(seconds):
+    if not seconds or seconds == "N/A" or seconds <= 0:
+        return "N/A"
+    m = int(seconds // 60)
+    s = int(seconds % 60)
+    return f"{m}:{s:02d}"
+
+def speed_to_pace_metrics(speed_mps):
+    if not speed_mps or speed_mps <= 0:
+        return "N/A", "N/A"
+    sec_per_km = 1000.0 / speed_mps
+    formatted_pace = format_time(sec_per_km)
+    decimal_pace = round(sec_per_km / 60.0, 2)
+    return formatted_pace, decimal_pace
+
+def get_lap_metric(lap, possible_keys, default="N/A"):
+    """Safely checks multiple alternative keys for a Garmin metric."""
+    for key in possible_keys:
+        val = lap.get(key)
+        if val is not None and val != "":
+            return val
+    return default
+
+def main():
+    garmin_tokens_json = os.environ.get("GARMIN_TOKENS_JSON")
+    if not garmin_tokens_json:
+        raise ValueError("GARMIN_TOKENS_JSON environment variable is missing.")
+
+    token_dir = "./.garminconnect"
+    os.makedirs(token_dir, exist_ok=True)
+    with open(os.path.join(token_dir, "garmin_tokens.json"), "w") as f:
+        f.write(garmin_tokens_json)
+
+    api = Garmin()
+    api.login(token_dir)
+    today = datetime.today().strftime("%Y-%m-%d")
+
+    # 1. FETCH HEALTH & READINESS METRICS
+    stats = api.get_stats(today)
+    rhr = stats.get("restingHeartRate", "N/A")
+    total_steps = stats.get("totalSteps", "N/A")
     
-    for act in garmin_activities:
-        # 1. High-Level Activity Summary
+    sleep_dto = api.get_sleep_data(today).get("dailySleepDTO", {})
+    sleep_score = sleep_dto.get("sleepScores", {}).get("overall", {}).get("value", "N/A")
+    sleep_duration_sec = sleep_dto.get("sleepTimeSeconds", 0)
+    
+    sleep_metrics = sleep_dto.get("sleepMetrics", {})
+    deep_sec = sleep_dto.get("deepSleepSeconds", sleep_metrics.get("deepSleepSeconds", 0))
+    light_sec = sleep_dto.get("lightSleepSeconds", sleep_metrics.get("lightSleepSeconds", 0))
+    rem_sec = sleep_dto.get("remSleepSeconds", sleep_metrics.get("remSleepSeconds", 0))
+    awake_sec = sleep_dto.get("awakeSleepSeconds", sleep_metrics.get("awakeSleepSeconds", 0))
+
+    try:
+        hrv_summary = api.get_hrv_data(today).get("hrvSummary", {})
+        hrv_status = hrv_summary.get("status", "N/A")
+        hrv_last = hrv_summary.get("lastNightAvg", "N/A")
+        hrv_baseline = hrv_summary.get("baseline", "N/A")
+    except Exception:
+        hrv_status, hrv_last, hrv_baseline = "N/A", "N/A", "N/A"
+
+    health_metrics = {
+        "resting_hr": rhr,
+        "sleep_score": sleep_score,
+        "total_sleep_hours": round(sleep_duration_sec / 3600, 2),
+        "sleep_stages_hours": {
+            "deep": round(deep_sec / 3600, 2),
+            "light": round(light_sec / 3600, 2),
+            "rem": round(rem_sec / 3600, 2),
+            "awake": round(awake_sec / 3600, 2)
+        },
+        "hrv": {
+            "last_night_avg_ms": hrv_last,
+            "status": hrv_status,
+            "baseline_balanced_range": hrv_baseline
+        },
+        "total_steps": total_steps
+    }
+
+    # 2. FETCH ACTIVITIES & INTERVALS (Supports multi-activity / brick sessions)
+    try:
+        activities = api.get_activities_by_date(today, today)
+    except Exception:
+        raw_acts = api.get_activities(0, 10)
+        activities = [a for a in raw_acts if a.get("startTimeLocal", "").startswith(today)]
+
+    activities_list = []
+    for act in activities:
+        act_id = act.get("activityId")
+        avg_speed_mps = act.get("averageSpeed", 0)
+        avg_pace_str, _ = speed_to_pace_metrics(avg_speed_mps)
+
         summary = {
-            "activity_type": act.get('activityType', {}).get('typeKey', 'unknown'),
-            "start_time": act.get('startTimeLocal', 'N/A'),
-            "total_distance_km": round(act.get('distance', 0) / 1000, 3),
-            "total_duration_min": round(act.get('duration', 0) / 60, 2),
-            "avg_pace": act.get('avgPace', 'N/A'),
-            "avg_hr": act.get('averageHR', 'N/A'),
-            "max_hr": act.get('maxHR', 'N/A'),
-            "avg_cadence": act.get('averageRunCadence', act.get('averageCadence', 'N/A')),
-            "avg_gct_ms": act.get('avgGroundContactTime', 'N/A'),
-            "avg_stride_length_m": act.get('avgStrideLength', 'N/A'),
-            "avg_vertical_oscillation_cm": act.get('avgVerticalOscillation', 'N/A'),
-            "aerobic_te": act.get('aerobicTrainingEffect', 'N/A')
+            "activity_type": act.get("activityType", {}).get("typeKey", "unknown"),
+            "activity_name": act.get("activityName", "N/A"),
+            "start_time": act.get("startTimeLocal", "N/A"),
+            "total_distance_km": round(act.get("distance", 0) / 1000, 3),
+            "total_duration_min": round(act.get("duration", 0) / 60, 2),
+            "avg_pace": avg_pace_str,
+            "avg_hr": act.get("averageHR", "N/A"),
+            "max_hr": act.get("maxHR", "N/A"),
+            "avg_cadence": get_lap_metric(act, ["averageRunCadence", "averageCadence"]),
+            "avg_gct_ms": get_lap_metric(act, ["avgGroundContactTime", "averageGroundContactTime"]),
+            "avg_stride_length_m": get_lap_metric(act, ["avgStrideLength", "averageStrideLength"]),
+            "avg_vertical_oscillation_cm": get_lap_metric(act, ["avgVerticalOscillation", "averageVerticalOscillation"]),
+            "aerobic_te": act.get("aerobicTrainingEffect", "N/A"),
+            "anaerobic_te": act.get("anaerobicTrainingEffect", "N/A"),
+            "calories": act.get("calories", "N/A")
         }
-        
-        # 2. Granular Intervals/Laps
+
         intervals = []
-        for idx, lap in enumerate(act.get('laps', []), start=1):
-            intervals.append({
-                "interval_number": idx,
-                "step_type": lap.get("stepType", "Unknown"),
-                "time_min": round(lap.get("duration", 0) / 60, 2),
-                "distance_km": round(lap.get("distance", 0) / 1000, 3),
-                "avg_pace": lap.get("avgPace", 'N/A'),
-                "avg_hr": lap.get("averageHR", 'N/A'),
-                "max_hr": lap.get("maxHR", 'N/A'),
-                "cadence": lap.get("averageRunCadence", lap.get("averageCadence", 'N/A')),
-                "avg_gct_ms": lap.get("groundContactTime", 'N/A'),
-                "avg_stride_length_m": lap.get("strideLength", 'N/A'),
-                "vertical_oscillation_cm": lap.get("verticalOscillation", 'N/A'),
-                "power_w": lap.get("averagePower", 'N/A')
-            })
-            
+        if act_id:
+            try:
+                splits = api.get_activity_splits(act_id)
+                lap_dtos = splits.get("lapDTOs", [])
+                for idx, lap in enumerate(lap_dtos, start=1):
+                    l_speed = lap.get("averageSpeed", 0)
+                    l_pace, _ = speed_to_pace_metrics(l_speed)
+                    intervals.append({
+                        "interval_number": idx,
+                        "step_type": lap.get("stepType", "Unknown"),
+                        "time_min": round(lap.get("duration", 0) / 60, 2),
+                        "distance_km": round(lap.get("distance", 0) / 1000, 3),
+                        "avg_pace": l_pace,
+                        "avg_hr": lap.get("averageHR", "N/A"),
+                        "max_hr": lap.get("maxHR", "N/A"),
+                        "cadence": get_lap_metric(lap, ["averageRunCadence", "averageCadence"]),
+                        "avg_gct_ms": get_lap_metric(lap, ["avgGroundContactTime", "averageGroundContactTime"]),
+                        "avg_stride_length_m": get_lap_metric(lap, ["avgStrideLength", "strideLength"]),
+                        "vertical_oscillation_cm": get_lap_metric(lap, ["verticalOscillation", "avgVerticalOscillation"]),
+                        "power_w": get_lap_metric(lap, ["averagePower", "avgPower", "power"])
+                    })
+            except Exception:
+                pass
+
         activities_list.append({
             "summary": summary,
             "intervals": intervals
         })
-        
-    # 3. Enhanced Daily Health, Sleep Stages & HRV Metrics
-    # Note: Garmin Connect API returns sleep stage durations typically in seconds.
-    sleep_data = garmin_health_data.get('sleepMetrics', {})
-    
-    health_metrics = {
-        "resting_hr": garmin_health_data.get('restingHR', 'N/A'),
-        "sleep_score": garmin_health_data.get('sleepScore', 'N/A'),
-        "total_sleep_hours": round(garmin_health_data.get('sleepDuration', 0) / 3600, 2),
-        "sleep_stages_hours": {
-            "deep": round(sleep_data.get('deepSleepSeconds', 0) / 3600, 2),
-            "light": round(sleep_data.get('lightSleepSeconds', 0) / 3600, 2),
-            "rem": round(sleep_data.get('remSleepSeconds', 0) / 3600, 2),
-            "awake": round(sleep_data.get('awakeSleepSeconds', 0) / 3600, 2)
-        },
-        "hrv": {
-            "last_night_avg_ms": garmin_health_data.get('lastNightAvgHRV', 'N/A'),
-            "status": garmin_health_data.get('hrvStatus', 'N/A'),
-            "baseline_balanced_range": garmin_health_data.get('hrvBaseline', 'N/A')
-        },
-        "readiness_score": garmin_health_data.get('readinessScore', 'N/A')
-    }
-    
-    return {
+
+    payload = {
         "date": today,
         "health_metrics": health_metrics,
         "activities": activities_list
     }
+
+    # 3. SAVE PAYLOAD TO LOCAL JSON FILE (for GitHub Actions sync)
+    os.makedirs("data", exist_ok=True)
+    file_path = os.path.join("data", f"telemetry_{today}.json")
+    with open(file_path, "w") as f:
+        json.dump(payload, f, indent=4)
+    print(f"Successfully generated telemetry JSON at: {file_path}")
+
+if __name__ == "__main__":
+    main()
