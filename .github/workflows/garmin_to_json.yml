@@ -1,0 +1,43 @@
+name: Garmin to JSON Pipeline
+
+on:
+  schedule:
+    # Runs daily at 8:20 AM Philippine Time (UTC+8) -> 00:20 UTC
+    - cron: '20 0 * * *'
+  workflow_dispatch: # Allows manual triggering from the GitHub Actions tab
+
+jobs:
+  run-exporter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install garminconnect requests
+
+      - name: Run garmin_to_json.py
+        env:
+          GARMIN_EMAIL: ${{ secrets.GARMIN_EMAIL }}
+          GARMIN_PASSWORD: ${{ secrets.GARMIN_PASSWORD }}
+        run: python garmin_to_json.py
+
+      - name: Commit and Push Generated JSON
+        run: |
+          git config --global user.name "GitHub Action Bot"
+          git config --global user.email "bot@github.com"
+          
+          # Stage any new or modified JSON files in the repo
+          git add *.json
+          
+          # Commit only if there are changes, otherwise exit gracefully
+          git commit -m "Auto-export daily telemetry JSON for $(date +%Y-%m-%d)" || echo "No changes to commit"
+          git push
