@@ -81,7 +81,7 @@ def main():
         "total_steps": total_steps
     }
 
-    # 2. FETCH ACTIVITIES & INTERVALS (Supports multi-activity / brick sessions)
+    # 2. FETCH ACTIVITIES & INTERVALS
     try:
         activities = api.get_activities_by_date(today, today)
     except Exception:
@@ -103,10 +103,10 @@ def main():
             "avg_pace": avg_pace_str,
             "avg_hr": act.get("averageHR", "N/A"),
             "max_hr": act.get("maxHR", "N/A"),
-            "avg_cadence": get_lap_metric(act, ["averageRunCadence", "averageCadence"]),
-            "avg_gct_ms": get_lap_metric(act, ["avgGroundContactTime", "averageGroundContactTime"]),
-            "avg_stride_length_m": get_lap_metric(act, ["avgStrideLength", "averageStrideLength"]),
-            "avg_vertical_oscillation_cm": get_lap_metric(act, ["avgVerticalOscillation", "averageVerticalOscillation"]),
+            "avg_cadence": get_lap_metric(act, ["averageRunCadence", "averageCadence", "runCadence"]),
+            "avg_gct_ms": get_lap_metric(act, ["avgGroundContactTime", "averageGroundContactTime", "groundContactTime", "gct", "avgGct", "groundContactTimeInMs"]),
+            "avg_stride_length_m": get_lap_metric(act, ["avgStrideLength", "averageStrideLength", "strideLength"]),
+            "avg_vertical_oscillation_cm": get_lap_metric(act, ["avgVerticalOscillation", "averageVerticalOscillation", "verticalOscillation"]),
             "aerobic_te": act.get("aerobicTrainingEffect", "N/A"),
             "anaerobic_te": act.get("anaerobicTrainingEffect", "N/A"),
             "calories": act.get("calories", "N/A")
@@ -128,8 +128,8 @@ def main():
                         "avg_pace": l_pace,
                         "avg_hr": lap.get("averageHR", "N/A"),
                         "max_hr": lap.get("maxHR", "N/A"),
-                        "cadence": get_lap_metric(lap, ["averageRunCadence", "averageCadence"]),
-                        "avg_gct_ms": get_lap_metric(lap, ["avgGroundContactTime", "averageGroundContactTime"]),
+                        "cadence": get_lap_metric(lap, ["averageRunCadence", "averageCadence", "runCadence"]),
+                        "avg_gct_ms": get_lap_metric(lap, ["avgGroundContactTime", "averageGroundContactTime", "groundContactTime", "gct", "avgGct", "groundContactTimeInMs"]),
                         "avg_stride_length_m": get_lap_metric(lap, ["avgStrideLength", "strideLength"]),
                         "vertical_oscillation_cm": get_lap_metric(lap, ["verticalOscillation", "avgVerticalOscillation"]),
                         "power_w": get_lap_metric(lap, ["averagePower", "avgPower", "power"])
@@ -148,7 +148,7 @@ def main():
         "activities": activities_list
     }
 
-    # 3. SAVE PAYLOAD TO LOCAL JSON FILE (for GitHub Actions sync)
+    # 3. SAVE PAYLOAD TO LOCAL JSON FILE
     os.makedirs("data", exist_ok=True)
     file_path = os.path.join("data", f"telemetry_{today}.json")
     with open(file_path, "w") as f:
