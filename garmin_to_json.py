@@ -126,11 +126,12 @@ def main():
                     
                     meta = f"{lap.get('intensity', '')} {lap.get('stepType', '')} {lap.get('lapType', '')}".upper()
                     
-                    if idx == 1 and (l_dist > 0.5 or "WARM" in meta):
+                    # Check explicit Garmin tags first before making assumptions
+                    if "WARM" in meta or lap.get('stepType') == 'WARMUP':
                         step_type = "Warm Up"
-                    elif any(k in meta for k in ["REST", "RECOVERY"]) or (0 < l_speed < recovery_threshold and idx > 1 and idx < total_laps):
+                    elif any(k in meta for k in ["REST", "RECOVERY"]) or (0 < l_speed < recovery_threshold and idx > 1 and idx < total_laps and lap.get('stepType') not in ['RUN', 'INTERVAL']):
                         step_type = "Recovery"
-                    elif any(k in meta for k in ["COOL", "COOLDOWN"]) or (idx >= total_laps - 1 and l_dist > 0.5 and "INTERVAL" not in meta):
+                    elif "COOL" in meta or lap.get('stepType') == 'COOLDOWN':
                         step_type = "Cool Down"
                     else:
                         step_type = "Run"
