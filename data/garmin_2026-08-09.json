@@ -24,7 +24,7 @@
         "training_status": {
             "acute_load": "N/A",
             "load_ratio": "N/A",
-            "vo2_max": "N/A",
+            "vo2_max": 45.0,
             "lthr": "N/A",
             "lt_pace": "N/A"
         },
@@ -56,13 +56,6 @@
                 "aerobic_te": 5.0,
                 "anaerobic_te": 0.20000000298023224,
                 "calories": 1544.0
-            },
-            "subjective": {
-                "leg_soreness_0_10": "N/A",
-                "leg_heaviness_0_10": "N/A",
-                "overall_fatigue_0_10": "N/A",
-                "motivation_0_10": "N/A",
-                "session_rpe_0_10": "N/A"
             },
             "intervals": [
                 {
