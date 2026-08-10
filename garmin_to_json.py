@@ -19,13 +19,27 @@ def speed_to_pace_metrics(speed_mps):
     decimal_pace = round(sec_per_km / 60.0, 2)
     return formatted_pace, decimal_pace
 
-def get_metric(source_dict, possible_keys, default="N/A"):
-    """Safely checks multiple alternative keys for a Garmin metric."""
-    for key in possible_keys:
-        if source_dict and key in source_dict:
-            val = source_dict.get(key)
+def deep_get(source_dict, keys, default="N/A"):
+    """Recursively checks multiple alternative keys or nested dictionaries."""
+    if not isinstance(source_dict, dict):
+        return default
+    for key in keys:
+        if "." in key:
+            parts = key.split(".")
+            val = source_dict
+            for part in parts:
+                if isinstance(val, dict) and part in val:
+                    val = val.get(part)
+                else:
+                    val = None
+                    break
             if val is not None and val != "":
                 return val
+        else:
+            if key in source_dict:
+                val = source_dict.get(key)
+                if val is not None and val != "":
+                    return val
     return default
 
 def main():
@@ -33,6 +47,12 @@ def main():
     parser.add_argument("--date", type=str, default=datetime.today().strftime("%Y-%m-%d"), help="Date in YYYY-MM-DD format (defaults to today)")
     args = parser.parse_args()
     target_date = args.date
+
+    # Validate date format to catch typos early
+    try:
+        datetime.strptime(target_date, "%Y-%m-%d")
+    except ValueError as e:
+        raise ValueError(f"Invalid date format provided: '{target_date}'. Please use YYYY-MM-DD format.") from e
 
     garmin_tokens_json = os.environ.get("GARMIN_TOKENS_JSON")
     if not garmin_tokens_json:
@@ -48,29 +68,31 @@ def main():
 
     # 1. FETCH HEALTH & READINESS METRICS
     stats = api.get_stats(target_date)
-    rhr = stats.get("restingHeartRate", "N/A")
-    total_steps = stats.get("totalSteps", "N/A")
+    rhr = deep_get(stats, ["restingHeartRate", "rhr"], "N/A")
+    total_steps = deep_get(stats, ["totalSteps", "steps"], "N/A")
     
-    sleep_dto = api.get_sleep_data(target_date).get("dailySleepDTO", {})
-    sleep_score = sleep_dto.get("sleepScores", {}).get("overall", {}).get("value", "N/A")
-    sleep_duration_sec = sleep_dto.get("sleepTimeSeconds", 0)
+    sleep_data = api.get_sleep_data(target_date)
+    sleep_dto = sleep_data.get("dailySleepDTO", {}) if isinstance(sleep_data, dict) else {}
+    sleep_score = deep_get(sleep_dto, ["sleepScores.overall.value", "overallSleepScore", "sleepScore"], "N/A")
+    sleep_duration_sec = deep_get(sleep_dto, ["sleepTimeSeconds", "durationInSeconds"], 0)
     
     sleep_metrics = sleep_dto.get("sleepMetrics", {})
-    deep_sec = sleep_dto.get("deepSleepSeconds", sleep_metrics.get("deepSleepSeconds", 0))
-    light_sec = sleep_dto.get("lightSleepSeconds", sleep_metrics.get("lightSleepSeconds", 0))
-    rem_sec = sleep_dto.get("remSleepSeconds", sleep_metrics.get("remSleepSeconds", 0))
-    awake_sec = sleep_dto.get("awakeSleepSeconds", sleep_metrics.get("awakeSleepSeconds", 0))
+    deep_sec = deep_get(sleep_dto, ["deepSleepSeconds", "sleepMetrics.deepSleepSeconds"], 0)
+    light_sec = deep_get(sleep_dto, ["lightSleepSeconds", "sleepMetrics.lightSleepSeconds"], 0)
+    rem_sec = deep_get(sleep_dto, ["remSleepSeconds", "sleepMetrics.remSleepSeconds"], 0)
+    awake_sec = deep_get(sleep_dto, ["awakeSleepSeconds", "sleepMetrics.awakeSleepSeconds"], 0)
 
     # HRV & 7-Day Average Extraction
+    hrv_status, hrv_last, hrv_baseline, hrv_weekly_avg = "N/A", "N/A", "N/A", "N/A"
     try:
         hrv_data = api.get_hrv_data(target_date)
-        hrv_summary = hrv_data.get("hrvSummary", {})
-        hrv_status = hrv_summary.get("status", "N/A")
-        hrv_last = hrv_summary.get("lastNightAvg", "N/A")
-        hrv_baseline = hrv_summary.get("baseline", "N/A")
-        hrv_weekly_avg = get_metric(hrv_summary, ["weeklyAvg", "sevenDayAvg", "sevenDayAverage"], "N/A")
+        hrv_summary = hrv_data.get("hrvSummary", {}) if isinstance(hrv_data, dict) else {}
+        hrv_status = deep_get(hrv_summary, ["status", "hrvStatus"], "N/A")
+        hrv_last = deep_get(hrv_summary, ["lastNightAvg", "weeklyAvg", "bal"], "N/A")
+        hrv_baseline = deep_get(hrv_summary, ["baseline", "baselineRange"], "N/A")
+        hrv_weekly_avg = deep_get(hrv_summary, ["weeklyAvg", "sevenDayAvg", "sevenDayAverage", "lastSevenDaysAvg"], "N/A")
     except Exception:
-        hrv_status, hrv_last, hrv_baseline, hrv_weekly_avg = "N/A", "N/A", "N/A", "N/A"
+        pass
 
     # Training Status, Acute Load, VO2 Max & Lactate Threshold Extraction
     acute_load, load_ratio, vo2_max = "N/A", "N/A", "N/A"
@@ -79,8 +101,8 @@ def main():
     try:
         training_status = api.get_training_status(target_date)
         if training_status:
-            acute_load = get_metric(training_status, ["acuteLoad", "load", "currentAcuteLoad"], "N/A")
-            load_ratio = get_metric(training_status, ["loadRatio", "acuteChronicWorkloadRatio", "loadRatioValue"], "N/A")
+            acute_load = deep_get(training_status, ["acuteLoad", "load", "currentAcuteLoad", "trainingLoadDTO.acuteLoad"], "N/A")
+            load_ratio = deep_get(training_status, ["loadRatio", "acuteChronicWorkloadRatio", "loadRatioValue"], "N/A")
     except Exception:
         pass
 
@@ -89,24 +111,25 @@ def main():
             user_metrics = api.get_user_summary(target_date)
             if user_metrics:
                 if acute_load == "N/A":
-                    acute_load = get_metric(user_metrics, ["acuteLoad", "currentAcuteLoad", "trainingLoad"], "N/A")
+                    acute_load = deep_get(user_metrics, ["acuteLoad", "currentAcuteLoad", "trainingLoad"], "N/A")
                 if load_ratio == "N/A":
-                    load_ratio = get_metric(user_metrics, ["loadRatio", "acuteChronicRatio"], "N/A")
+                    load_ratio = deep_get(user_metrics, ["loadRatio", "acuteChronicRatio"], "N/A")
         except Exception:
             pass
 
     try:
         max_metrics = api.get_max_metrics(target_date)
         if isinstance(max_metrics, list) and len(max_metrics) > 0:
-            vo2_max = get_metric(max_metrics[0], ["vo2MaxValue", "vo2Max"], "N/A")
-            lthr = get_metric(max_metrics[0], ["lactateThresholdHeartRate", "lthr"], "N/A")
-            lt_speed = get_metric(max_metrics[0], ["lactateThresholdSpeed", "ltSpeed"], 0)
+            m_item = max_metrics[0]
+            vo2_max = deep_get(m_item, ["vo2MaxValue", "vo2Max", "generic.vo2MaxValue"], "N/A")
+            lthr = deep_get(m_item, ["lactateThresholdHeartRate", "lthr", "running.lactateThresholdHeartRate"], "N/A")
+            lt_speed = deep_get(m_item, ["lactateThresholdSpeed", "ltSpeed", "running.lactateThresholdSpeed"], 0)
             if lt_speed and lt_speed != "N/A" and lt_speed > 0:
                 lt_pace, _ = speed_to_pace_metrics(lt_speed)
         elif isinstance(max_metrics, dict):
-            vo2_max = get_metric(max_metrics, ["vo2MaxValue", "vo2Max"], "N/A")
-            lthr = get_metric(max_metrics, ["lactateThresholdHeartRate", "lthr"], "N/A")
-            lt_speed = get_metric(max_metrics, ["lactateThresholdSpeed", "ltSpeed"], 0)
+            vo2_max = deep_get(max_metrics, ["vo2MaxValue", "vo2Max"], "N/A")
+            lthr = deep_get(max_metrics, ["lactateThresholdHeartRate", "lthr"], "N/A")
+            lt_speed = deep_get(max_metrics, ["lactateThresholdSpeed", "ltSpeed"], 0)
             if lt_speed and lt_speed != "N/A" and lt_speed > 0:
                 lt_pace, _ = speed_to_pace_metrics(lt_speed)
     except Exception:
@@ -121,12 +144,12 @@ def main():
             "baseline_balanced_range": hrv_baseline
         },
         "sleep_score": sleep_score,
-        "total_sleep_hours": round(sleep_duration_sec / 3600, 2),
+        "total_sleep_hours": round(sleep_duration_sec / 3600, 2) if sleep_duration_sec else "N/A",
         "sleep_stages_hours": {
-            "deep": round(deep_sec / 3600, 2),
-            "light": round(light_sec / 3600, 2),
-            "rem": round(rem_sec / 3600, 2),
-            "awake": round(awake_sec / 3600, 2)
+            "deep": round(deep_sec / 3600, 2) if deep_sec else 0,
+            "light": round(light_sec / 3600, 2) if light_sec else 0,
+            "rem": round(rem_sec / 3600, 2) if rem_sec else 0,
+            "awake": round(awake_sec / 3600, 2) if awake_sec else 0
         },
         "training_status": {
             "acute_load": acute_load,
@@ -136,14 +159,6 @@ def main():
             "lt_pace": lt_pace
         },
         "total_steps": total_steps
-    }
-
-    subjective_metrics = {
-        "leg_soreness_0_10": "N/A",
-        "leg_heaviness_0_10": "N/A",
-        "overall_fatigue_0_10": "N/A",
-        "motivation_0_10": "N/A",
-        "session_rpe_0_10": "N/A"
     }
 
     # 2. FETCH ACTIVITIES & INTERVALS
@@ -159,33 +174,33 @@ def main():
         avg_speed_mps = act.get("averageSpeed", 0)
         avg_pace_str, _ = speed_to_pace_metrics(avg_speed_mps)
 
-        avg_gap_mps = get_metric(act, ["averageGradeAdjustedSpeed", "gradeAdjustedSpeed"], 0)
-        avg_gap_str, _ = speed_to_pace_metrics(avg_gap_mps) if avg_gap_mps != "N/A" else ("N/A", "N/A")
+        avg_gap_mps = deep_get(act, ["averageGradeAdjustedSpeed", "gradeAdjustedSpeed"], 0)
+        avg_gap_str, _ = speed_to_pace_metrics(avg_gap_mps) if avg_gap_mps and avg_gap_mps != "N/A" else ("N/A", "N/A")
 
         summary = {
-            "activity_type": act.get("activityType", {}).get("typeKey", "unknown"),
-            "activity_name": act.get("activityName", "N/A"),
-            "start_time": act.get("startTimeLocal", "N/A"),
-            "total_distance_km": round(act.get("distance", 0) / 1000, 3),
-            "total_duration_min": round(act.get("duration", 0) / 60, 2),
+            "activity_type": deep_get(act, ["activityType.typeKey", "activityType"], "unknown"),
+            "activity_name": deep_get(act, ["activityName"], "N/A"),
+            "start_time": deep_get(act, ["startTimeLocal"], "N/A"),
+            "total_distance_km": round(act.get("distance", 0) / 1000, 3) if act.get("distance") else 0,
+            "total_duration_min": round(act.get("duration", 0) / 60, 2) if act.get("duration") else 0,
             "avg_pace": avg_pace_str,
             "avg_gap": avg_gap_str,
-            "avg_hr": act.get("averageHR", "N/A"),
-            "max_hr": act.get("maxHR", "N/A"),
-            "avg_power_w": get_metric(act, ["averagePower", "avgPower"]),
-            "max_power_w": get_metric(act, ["maxPower", "maximumPower"]),
-            "normalized_power_w": get_metric(act, ["normalizedPower", "normPower"]),
-            "avg_cadence": get_metric(act, ["averageRunningCadenceInStepsPerMinute", "averageRunCadence", "averageCadence"]),
-            "avg_gct_ms": get_metric(act, ["avgGroundContactTime", "averageGroundContactTime", "groundContactTime"]),
-            "avg_stride_length_m": get_metric(act, ["avgStrideLength", "averageStrideLength"]),
-            "avg_vertical_oscillation_cm": get_metric(act, ["avgVerticalOscillation", "averageVerticalOscillation"]),
-            "avg_vertical_ratio_pct": get_metric(act, ["avgVerticalRatio", "verticalRatio"]),
-            "elevation_gain_m": get_metric(act, ["elevationGain", "totalAscent"], 0),
-            "elevation_loss_m": get_metric(act, ["elevationLoss", "totalDescent"], 0),
-            "avg_temperature_c": get_metric(act, ["averageTemperature", "minTemperature"]),
-            "aerobic_te": act.get("aerobicTrainingEffect", "N/A"),
-            "anaerobic_te": act.get("anaerobicTrainingEffect", "N/A"),
-            "calories": act.get("calories", "N/A")
+            "avg_hr": deep_get(act, ["averageHR", "avgHR"], "N/A"),
+            "max_hr": deep_get(act, ["maxHR", "maximumHR"], "N/A"),
+            "avg_power_w": deep_get(act, ["averagePower", "avgPower"], "N/A"),
+            "max_power_w": deep_get(act, ["maxPower", "maximumPower"], "N/A"),
+            "normalized_power_w": deep_get(act, ["normalizedPower", "normPower"], "N/A"),
+            "avg_cadence": deep_get(act, ["averageRunningCadenceInStepsPerMinute", "averageRunCadence", "averageCadence"], "N/A"),
+            "avg_gct_ms": deep_get(act, ["avgGroundContactTime", "averageGroundContactTime", "groundContactTime"], "N/A"),
+            "avg_stride_length_m": deep_get(act, ["avgStrideLength", "averageStrideLength", "strideLength"], "N/A"),
+            "avg_vertical_oscillation_cm": deep_get(act, ["avgVerticalOscillation", "averageVerticalOscillation", "verticalOscillation"], "N/A"),
+            "avg_vertical_ratio_pct": deep_get(act, ["avgVerticalRatio", "verticalRatio"], "N/A"),
+            "elevation_gain_m": deep_get(act, ["elevationGain", "totalAscent"], 0),
+            "elevation_loss_m": deep_get(act, ["elevationLoss", "totalDescent"], 0),
+            "avg_temperature_c": deep_get(act, ["averageTemperature", "minTemperature", "temperature"], "N/A"),
+            "aerobic_te": deep_get(act, ["aerobicTrainingEffect"], "N/A"),
+            "anaerobic_te": deep_get(act, ["anaerobicTrainingEffect"], "N/A"),
+            "calories": deep_get(act, ["calories"], "N/A")
         }
 
         intervals = []
@@ -195,11 +210,11 @@ def main():
                 lap_dtos = splits.get("lapDTOs", [])
                 
                 for idx, lap in enumerate(lap_dtos, start=1):
-                    l_dist = round(lap.get("distance", 0) / 1000, 3)
+                    l_dist = round(lap.get("distance", 0) / 1000, 3) if lap.get("distance") else 0
                     l_speed = lap.get("averageSpeed", 0)
-                    l_gap_speed = get_metric(lap, ["averageGradeAdjustedSpeed", "gradeAdjustedSpeed"], 0)
+                    l_gap_speed = deep_get(lap, ["averageGradeAdjustedSpeed", "gradeAdjustedSpeed"], 0)
                     l_pace, _ = speed_to_pace_metrics(l_speed)
-                    l_gap_pace, _ = speed_to_pace_metrics(l_gap_speed) if l_gap_speed != "N/A" else ("N/A", "N/A")
+                    l_gap_pace, _ = speed_to_pace_metrics(l_gap_speed) if l_gap_speed and l_gap_speed != "N/A" else ("N/A", "N/A")
                     
                     meta = f"{lap.get('intensity', '')} {lap.get('stepType', '')} {lap.get('lapType', '')}".upper()
                     
@@ -215,27 +230,26 @@ def main():
                     intervals.append({
                         "interval_number": idx,
                         "step_type": step_type,
-                        "time_min": round(lap.get("duration", 0) / 60, 2),
+                        "time_min": round(lap.get("duration", 0) / 60, 2) if lap.get("duration") else 0,
                         "distance_km": l_dist,
                         "avg_pace": l_pace,
                         "avg_gap": l_gap_pace,
-                        "avg_hr": lap.get("averageHR", "N/A"),
-                        "max_hr": lap.get("maxHR", "N/A"),
-                        "power_w": get_metric(lap, ["averagePower", "avgPower", "power"]),
-                        "cadence": get_metric(lap, ["averageRunningCadenceInStepsPerMinute", "averageRunCadence", "averageCadence"]),
-                        "avg_gct_ms": get_metric(lap, ["avgGroundContactTime", "averageGroundContactTime", "groundContactTime"]),
-                        "avg_stride_length_m": get_metric(lap, ["avgStrideLength", "strideLength"]),
-                        "vertical_oscillation_cm": get_metric(lap, ["verticalOscillation", "avgVerticalOscillation"]),
-                        "vertical_ratio_pct": get_metric(lap, ["verticalRatio", "avgVerticalRatio"]),
-                        "elevation_gain_m": get_metric(lap, ["elevationGain", "totalAscent"], 0),
-                        "elevation_loss_m": get_metric(lap, ["elevationLoss", "totalDescent"], 0)
+                        "avg_hr": deep_get(lap, ["averageHR", "avgHR"], "N/A"),
+                        "max_hr": deep_get(lap, ["maxHR", "maximumHR"], "N/A"),
+                        "power_w": deep_get(lap, ["averagePower", "avgPower", "power"], "N/A"),
+                        "cadence": deep_get(lap, ["averageRunningCadenceInStepsPerMinute", "averageRunCadence", "averageCadence"], "N/A"),
+                        "avg_gct_ms": deep_get(lap, ["avgGroundContactTime", "averageGroundContactTime", "groundContactTime"], "N/A"),
+                        "avg_stride_length_m": deep_get(lap, ["avgStrideLength", "strideLength"], "N/A"),
+                        "vertical_oscillation_cm": deep_get(lap, ["verticalOscillation", "avgVerticalOscillation"], "N/A"),
+                        "vertical_ratio_pct": deep_get(lap, ["verticalRatio", "avgVerticalRatio"], "N/A"),
+                        "elevation_gain_m": deep_get(lap, ["elevationGain", "totalAscent"], 0),
+                        "elevation_loss_m": deep_get(lap, ["elevationLoss", "totalDescent"], 0)
                     })
             except Exception:
                 pass
 
         activities_list.append({
             "summary": summary,
-            "subjective": subjective_metrics,
             "intervals": intervals
         })
 
@@ -250,7 +264,7 @@ def main():
     file_path = os.path.join("data", f"garmin_{target_date}.json")
     with open(file_path, "w") as f:
         json.dump(payload, f, indent=4)
-    print(f"Successfully generated telemetry JSON for {target_date} at: {file_path}")
+    print(f"Successfully generated cleaned telemetry JSON for {target_date} at: {file_path}")
 
 if __name__ == "__main__":
     main()
