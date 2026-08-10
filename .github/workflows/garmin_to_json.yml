@@ -4,6 +4,12 @@ on:
   repository_dispatch:
     types: [trigger-garmin-sync]
   workflow_dispatch: # Allows manual runs as well
+    inputs:
+      date:
+        description: 'Date to fetch metrics for (YYYY-MM-DD)'
+        required: false
+        default: '' # Leaves it blank so python defaults to today if not provided
+        type: string
 
 # Add this permissions block so the bot is allowed to push changes
 permissions:
@@ -17,7 +23,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
@@ -29,7 +35,13 @@ jobs:
       - name: Run garmin_to_json.py
         env:
           GARMIN_TOKENS_JSON: ${{ secrets.GARMIN_TOKENS_JSON }}
-        run: python garmin_to_json.py
+        run: |
+          # If a date was inputted in workflow_dispatch, pass it as an argument
+          if [ -n "${{ inputs.date }}" ]; then
+            python garmin_to_json.py --date "${{ inputs.date }}"
+          else
+            python garmin_to_json.py
+          fi
 
       - name: Commit and Push Generated JSON
         run: |
