@@ -167,10 +167,10 @@ def main():
 
     # 3. SAVE PAYLOAD TO LOCAL JSON FILE
     os.makedirs("data", exist_ok=True)
-    file_path = os.path.join("data", f"telemetry_{today}.json")
+    file_path = os.path.join("data", f"garmin_{today}.json")
     with open(file_path, "w") as f:
         json.dump(payload, f, indent=4)
-    print(f"Successfully generated telemetry JSON at: {file_path}")
+    print(f"Successfully generated garmin telemetry JSON at: {file_path}")
 
 if __name__ == "__main__":
     main()
