@@ -1,22 +1,20 @@
 name: Garmin to JSON Pipeline
 
 on:
-  schedule:
-    # Runs daily at 8:20 AM Philippine Time (UTC+8) -> 00:20 UTC
-    - cron: '20 0 * * *'
-  workflow_dispatch: # Allows manual triggering from the GitHub Actions tab
+  repository_dispatch:
+    types: [trigger-garmin-sync]
+  workflow_dispatch: # Allows manual runs as well
 
-# 👇 Add this permissions block so the bot is allowed to push changes
+# Add this permissions block so the bot is allowed to push changes
 permissions:
   contents: write
 
 jobs:
-  run-exporter:
+  build-garmin-data:
     runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+    steps:	
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v4
