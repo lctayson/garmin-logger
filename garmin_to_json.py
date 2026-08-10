@@ -1,5 +1,6 @@
 import os
 import json
+import argparse
 from datetime import datetime
 from garminconnect import Garmin
 
@@ -28,6 +29,11 @@ def get_metric(source_dict, possible_keys, default="N/A"):
     return default
 
 def main():
+    parser = argparse.ArgumentParser(description="Fetch Garmin telemetry and health metrics for a given date.")
+    parser.add_argument("--date", type=str, default=datetime.today().strftime("%Y-%m-%d"), help="Date in YYYY-MM-DD format (defaults to today)")
+    args = parser.parse_args()
+    target_date = args.date
+
     garmin_tokens_json = os.environ.get("GARMIN_TOKENS_JSON")
     if not garmin_tokens_json:
         raise ValueError("GARMIN_TOKENS_JSON environment variable is missing.")
@@ -39,14 +45,13 @@ def main():
 
     api = Garmin()
     api.login(token_dir)
-    today = datetime.today().strftime("%Y-%m-%d")
 
     # 1. FETCH HEALTH & READINESS METRICS
-    stats = api.get_stats(today)
+    stats = api.get_stats(target_date)
     rhr = stats.get("restingHeartRate", "N/A")
     total_steps = stats.get("totalSteps", "N/A")
     
-    sleep_dto = api.get_sleep_data(today).get("dailySleepDTO", {})
+    sleep_dto = api.get_sleep_data(target_date).get("dailySleepDTO", {})
     sleep_score = sleep_dto.get("sleepScores", {}).get("overall", {}).get("value", "N/A")
     sleep_duration_sec = sleep_dto.get("sleepTimeSeconds", 0)
     
@@ -58,7 +63,7 @@ def main():
 
     # HRV & 7-Day Average Extraction
     try:
-        hrv_data = api.get_hrv_data(today)
+        hrv_data = api.get_hrv_data(target_date)
         hrv_summary = hrv_data.get("hrvSummary", {})
         hrv_status = hrv_summary.get("status", "N/A")
         hrv_last = hrv_summary.get("lastNightAvg", "N/A")
@@ -67,22 +72,43 @@ def main():
     except Exception:
         hrv_status, hrv_last, hrv_baseline, hrv_weekly_avg = "N/A", "N/A", "N/A", "N/A"
 
-    # Training Status & Acute Load
+    # Training Status, Acute Load, VO2 Max & Lactate Threshold Extraction
     acute_load, load_ratio, vo2_max = "N/A", "N/A", "N/A"
+    lthr, lt_pace = "N/A", "N/A"
+
     try:
-        training_status = api.get_training_status(today)
+        training_status = api.get_training_status(target_date)
         if training_status:
-            acute_load = get_metric(training_status, ["acuteLoad", "load"], "N/A")
-            load_ratio = get_metric(training_status, ["loadRatio", "acuteChronicWorkloadRatio"], "N/A")
+            acute_load = get_metric(training_status, ["acuteLoad", "load", "currentAcuteLoad"], "N/A")
+            load_ratio = get_metric(training_status, ["loadRatio", "acuteChronicWorkloadRatio", "loadRatioValue"], "N/A")
     except Exception:
         pass
 
+    if acute_load == "N/A" or load_ratio == "N/A":
+        try:
+            user_metrics = api.get_user_summary(target_date)
+            if user_metrics:
+                if acute_load == "N/A":
+                    acute_load = get_metric(user_metrics, ["acuteLoad", "currentAcuteLoad", "trainingLoad"], "N/A")
+                if load_ratio == "N/A":
+                    load_ratio = get_metric(user_metrics, ["loadRatio", "acuteChronicRatio"], "N/A")
+        except Exception:
+            pass
+
     try:
-        max_metrics = api.get_max_metrics(today)
+        max_metrics = api.get_max_metrics(target_date)
         if isinstance(max_metrics, list) and len(max_metrics) > 0:
             vo2_max = get_metric(max_metrics[0], ["vo2MaxValue", "vo2Max"], "N/A")
+            lthr = get_metric(max_metrics[0], ["lactateThresholdHeartRate", "lthr"], "N/A")
+            lt_speed = get_metric(max_metrics[0], ["lactateThresholdSpeed", "ltSpeed"], 0)
+            if lt_speed and lt_speed != "N/A" and lt_speed > 0:
+                lt_pace, _ = speed_to_pace_metrics(lt_speed)
         elif isinstance(max_metrics, dict):
             vo2_max = get_metric(max_metrics, ["vo2MaxValue", "vo2Max"], "N/A")
+            lthr = get_metric(max_metrics, ["lactateThresholdHeartRate", "lthr"], "N/A")
+            lt_speed = get_metric(max_metrics, ["lactateThresholdSpeed", "ltSpeed"], 0)
+            if lt_speed and lt_speed != "N/A" and lt_speed > 0:
+                lt_pace, _ = speed_to_pace_metrics(lt_speed)
     except Exception:
         pass
 
@@ -105,12 +131,13 @@ def main():
         "training_status": {
             "acute_load": acute_load,
             "load_ratio": load_ratio,
-            "vo2_max": vo2_max
+            "vo2_max": vo2_max,
+            "lthr": lthr,
+            "lt_pace": lt_pace
         },
         "total_steps": total_steps
     }
 
-    # Subjective placeholder block (ready for manual entry or automated ingestion)
     subjective_metrics = {
         "leg_soreness_0_10": "N/A",
         "leg_heaviness_0_10": "N/A",
@@ -121,10 +148,10 @@ def main():
 
     # 2. FETCH ACTIVITIES & INTERVALS
     try:
-        activities = api.get_activities_by_date(today, today)
+        activities = api.get_activities_by_date(target_date, target_date)
     except Exception:
-        raw_acts = api.get_activities(0, 10)
-        activities = [a for a in raw_acts if a.get("startTimeLocal", "").startswith(today)]
+        raw_acts = api.get_activities(0, 20)
+        activities = [a for a in raw_acts if a.get("startTimeLocal", "").startswith(target_date)]
 
     activities_list = []
     for act in activities:
@@ -132,7 +159,6 @@ def main():
         avg_speed_mps = act.get("averageSpeed", 0)
         avg_pace_str, _ = speed_to_pace_metrics(avg_speed_mps)
 
-        # Grade Adjusted Pace (GAP) calculation if present
         avg_gap_mps = get_metric(act, ["averageGradeAdjustedSpeed", "gradeAdjustedSpeed"], 0)
         avg_gap_str, _ = speed_to_pace_metrics(avg_gap_mps) if avg_gap_mps != "N/A" else ("N/A", "N/A")
 
@@ -214,17 +240,17 @@ def main():
         })
 
     payload = {
-        "date": today,
+        "date": target_date,
         "health_metrics": health_metrics,
         "activities": activities_list
     }
 
-    # 3. SAVE PAYLOAD TO LOCAL JSON FILE
+    # 3. SAVE PAYLOAD TO LOCAL JSON FILE (garmin_YYYY-MM-DD.json)
     os.makedirs("data", exist_ok=True)
-    file_path = os.path.join("data", f"telemetry_{today}.json")
+    file_path = os.path.join("data", f"garmin_{target_date}.json")
     with open(file_path, "w") as f:
         json.dump(payload, f, indent=4)
-    print(f"Successfully generated comprehensive telemetry JSON at: {file_path}")
+    print(f"Successfully generated telemetry JSON for {target_date} at: {file_path}")
 
 if __name__ == "__main__":
     main()
