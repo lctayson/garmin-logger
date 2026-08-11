@@ -836,6 +836,345 @@ def endpoint_shape(value):
     return info
 
 
+
+def remove_none_values(value):
+    """Recursively remove null fields and empty containers from exported JSON."""
+    if isinstance(value, dict):
+        cleaned = {}
+        for key, item in value.items():
+            item = remove_none_values(item)
+            if item is None:
+                continue
+            if isinstance(item, (dict, list)) and not item:
+                continue
+            cleaned[key] = item
+        return cleaned
+
+    if isinstance(value, list):
+        cleaned = [remove_none_values(x) for x in value]
+        return [x for x in cleaned if x is not None and x != {} and x != []]
+
+    return value
+
+
+def compact_training_history(training_history):
+    return remove_none_values({
+        "7_day_distance_km": training_history.get("7_day_distance_km"),
+        "28_day_avg_weekly_distance_km": training_history.get("28_day_avg_weekly_distance_km"),
+        "weekly_distance_last_4_weeks_km": training_history.get("weekly_distance_last_4_weeks_km"),
+    })
+
+
+def compact_health_metrics(health):
+    """Keep only metrics that materially help day-to-day endurance coaching."""
+    hrv = health.get("hrv") or {}
+    training = health.get("training_status") or {}
+
+    return remove_none_values({
+        "resting_hr": health.get("resting_hr"),
+        "hrv": {
+            "last_night_avg_ms": hrv.get("last_night_avg_ms"),
+            "seven_day_avg_ms": hrv.get("seven_day_avg_ms"),
+            "status": hrv.get("status"),
+            "baseline_balanced_range": hrv.get("baseline_balanced_range"),
+        },
+        "sleep_score": health.get("sleep_score"),
+        "total_sleep_hours": health.get("total_sleep_hours"),
+        "respiration_rate_sleep": health.get("respiration_rate_sleep"),
+        "body_battery_morning": health.get("body_battery_morning"),
+        "recovery_time_hours": health.get("recovery_time_hours"),
+        "training_readiness": health.get("training_readiness"),
+        "training_status": {
+            "acute_load": training.get("acute_load"),
+            "load_ratio": training.get("load_ratio"),
+            "vo2_max": training.get("vo2_max"),
+            "lthr_bpm": training.get("lthr_bpm"),
+            "lt_pace": training.get("lt_pace"),
+        },
+    })
+
+
+def compact_run_summary(summary):
+    return remove_none_values({
+        "activity_id": summary.get("activity_id"),
+        "activity_type": summary.get("activity_type"),
+        "activity_name": summary.get("activity_name"),
+        "start_time": summary.get("start_time"),
+        "distance_km": summary.get("total_distance_km"),
+        "duration_min": summary.get("total_duration_min"),
+        "moving_duration_min": summary.get("moving_duration_min"),
+        "avg_pace": summary.get("avg_pace"),
+        "avg_gap": summary.get("avg_gap"),
+        "avg_hr": summary.get("avg_hr"),
+        "max_hr": summary.get("max_hr"),
+        "avg_power_w": summary.get("avg_power_w"),
+        "normalized_power_w": summary.get("normalized_power_w"),
+        "avg_cadence_spm": summary.get("avg_cadence"),
+        "avg_gct_ms": summary.get("avg_gct_ms"),
+        "avg_stride_length_m": summary.get("avg_stride_length_m"),
+        "avg_vertical_oscillation_cm": summary.get("avg_vertical_oscillation_cm"),
+        "avg_vertical_ratio_pct": summary.get("avg_vertical_ratio_pct"),
+        "elevation_gain_m": summary.get("elevation_gain_m"),
+        "elevation_loss_m": summary.get("elevation_loss_m"),
+        "avg_temperature_c": summary.get("avg_temperature_c"),
+        "primary_benefit": summary.get("primary_benefit"),
+        "aerobic_te": summary.get("aerobic_te"),
+        "anaerobic_te": summary.get("anaerobic_te"),
+        "exercise_load": summary.get("exercise_load"),
+        "impact_load_km": summary.get("impact_load_km"),
+        "session_rpe_0_10": summary.get("session_rpe_0_10"),
+    })
+
+
+def compact_run_split(item):
+    return remove_none_values({
+        "lap": item.get("interval_number"),
+        "distance_km": item.get("distance_km"),
+        "time_min": item.get("time_min"),
+        "avg_pace": item.get("avg_pace"),
+        "avg_gap": item.get("avg_gap"),
+        "avg_hr": item.get("avg_hr"),
+        "max_hr": item.get("max_hr"),
+        "avg_power_w": item.get("power_w"),
+        "normalized_power_w": item.get("normalized_power_w"),
+        "cadence_spm": item.get("cadence"),
+        "avg_gct_ms": item.get("avg_gct_ms"),
+        "avg_stride_length_m": item.get("avg_stride_length_m"),
+        "vertical_oscillation_cm": item.get("vertical_oscillation_cm"),
+        "vertical_ratio_pct": item.get("vertical_ratio_pct"),
+        "elevation_gain_m": item.get("elevation_gain_m"),
+        "elevation_loss_m": item.get("elevation_loss_m"),
+    })
+
+
+def compact_swim_segment(item):
+    return remove_none_values({
+        "distance_km": item.get("distance_km"),
+        "duration_min": item.get("time_min"),
+        "avg_pace_per_100m": item.get("avg_swim_pace_per_100m"),
+        "avg_hr": item.get("avg_hr"),
+        "max_hr": item.get("max_hr"),
+    })
+
+
+def compact_bike_segment(item):
+    return remove_none_values({
+        "distance_km": item.get("distance_km"),
+        "duration_min": item.get("time_min"),
+        "avg_speed_kph": item.get("avg_speed_kph"),
+        "avg_hr": item.get("avg_hr"),
+        "max_hr": item.get("max_hr"),
+        "avg_power_w": item.get("power_w"),
+        "normalized_power_w": item.get("normalized_power_w"),
+        "avg_cadence_rpm": item.get("cadence"),
+        "elevation_gain_m": item.get("elevation_gain_m"),
+    })
+
+
+def compact_transition(item):
+    return remove_none_values({
+        "duration_min": item.get("time_min"),
+    })
+
+
+def compact_multisport_activity(activity):
+    summary = activity.get("summary") or {}
+    intervals = activity.get("intervals") or []
+
+    overall = remove_none_values({
+        "activity_id": summary.get("activity_id"),
+        "activity_type": summary.get("activity_type"),
+        "activity_name": summary.get("activity_name"),
+        "start_time": summary.get("start_time"),
+        "duration_min": summary.get("total_duration_min"),
+        "max_hr": summary.get("max_hr"),
+        "aerobic_te": summary.get("aerobic_te"),
+        "anaerobic_te": summary.get("anaerobic_te"),
+        "exercise_load": summary.get("exercise_load"),
+        "session_rpe_0_10": summary.get("session_rpe_0_10"),
+    })
+
+    disciplines = {}
+
+    for item in intervals:
+        seg = item.get("segment_type")
+
+        if seg == "swim":
+            disciplines["swim"] = compact_swim_segment(item)
+
+        elif seg == "transition_1":
+            disciplines["t1"] = compact_transition(item)
+
+        elif seg == "bike":
+            disciplines["bike"] = compact_bike_segment(item)
+
+        elif seg == "transition_2":
+            disciplines["t2"] = compact_transition(item)
+
+        elif seg == "run":
+            disciplines["run"] = {
+                "summary": remove_none_values({
+                    "distance_km": item.get("distance_km"),
+                    "duration_min": item.get("time_min"),
+                    "avg_pace": item.get("avg_pace"),
+                    "avg_hr": item.get("avg_hr"),
+                    "max_hr": item.get("max_hr"),
+                    "avg_power_w": item.get("power_w"),
+                    "normalized_power_w": item.get("normalized_power_w"),
+                    "cadence_spm": item.get("cadence"),
+                    "elevation_gain_m": item.get("elevation_gain_m"),
+                }),
+            }
+
+    # If genuine/derived child splits exist, nest them under that discipline.
+    # We keep only metrics useful for training/race analysis.
+    derived = activity.get("discipline_splits") or {}
+    for discipline, data in derived.items():
+        if discipline not in disciplines:
+            disciplines[discipline] = {}
+
+        split_rows = []
+        for row in (data or {}).get("splits", []):
+            if discipline == "run":
+                split_rows.append(remove_none_values({
+                    "lap": row.get("split_number"),
+                    "distance_km": row.get("distance_km"),
+                    "time_min": row.get("time_min"),
+                    "avg_pace": row.get("avg_pace"),
+                    "avg_hr": row.get("avg_hr"),
+                    "max_hr": row.get("max_hr"),
+                    "avg_power_w": row.get("avg_power_w"),
+                    "cadence_spm": row.get("avg_cadence"),
+                }))
+            elif discipline == "bike":
+                split_rows.append(remove_none_values({
+                    "lap": row.get("split_number"),
+                    "distance_km": row.get("distance_km"),
+                    "time_min": row.get("time_min"),
+                    "avg_speed_kph": row.get("avg_speed_kph"),
+                    "avg_hr": row.get("avg_hr"),
+                    "max_hr": row.get("max_hr"),
+                    "avg_power_w": row.get("avg_power_w"),
+                    "cadence_rpm": row.get("avg_cadence"),
+                }))
+            elif discipline == "swim":
+                split_rows.append(remove_none_values({
+                    "lap": row.get("split_number"),
+                    "distance_km": row.get("distance_km"),
+                    "time_min": row.get("time_min"),
+                    "avg_pace_per_100m": row.get("avg_swim_pace_per_100m"),
+                    "avg_hr": row.get("avg_hr"),
+                    "max_hr": row.get("max_hr"),
+                }))
+
+        if split_rows:
+            disciplines[discipline]["splits"] = split_rows
+
+    return {
+        "summary": overall,
+        "disciplines": remove_none_values(disciplines),
+    }
+
+
+def compact_activity(activity):
+    summary = activity.get("summary") or {}
+    discipline = summary.get("discipline")
+
+    if discipline == "multi_sport":
+        return compact_multisport_activity(activity)
+
+    if discipline == "run":
+        return {
+            "summary": compact_run_summary(summary),
+            "splits": [
+                compact_run_split(x)
+                for x in activity.get("intervals", [])
+            ],
+        }
+
+    # Non-running single-sport activities are retained only as compact
+    # cross-training context for a 10K training plan.
+    if discipline == "bike":
+        return {
+            "summary": remove_none_values({
+                "activity_id": summary.get("activity_id"),
+                "activity_type": summary.get("activity_type"),
+                "activity_name": summary.get("activity_name"),
+                "start_time": summary.get("start_time"),
+                "distance_km": summary.get("total_distance_km"),
+                "duration_min": summary.get("total_duration_min"),
+                "avg_speed_kph": summary.get("avg_speed_kph"),
+                "avg_hr": summary.get("avg_hr"),
+                "max_hr": summary.get("max_hr"),
+                "avg_power_w": summary.get("avg_power_w"),
+                "normalized_power_w": summary.get("normalized_power_w"),
+                "avg_cadence_rpm": summary.get("avg_cadence"),
+                "exercise_load": summary.get("exercise_load"),
+            })
+        }
+
+    if discipline == "swim":
+        return {
+            "summary": remove_none_values({
+                "activity_id": summary.get("activity_id"),
+                "activity_type": summary.get("activity_type"),
+                "activity_name": summary.get("activity_name"),
+                "start_time": summary.get("start_time"),
+                "distance_km": summary.get("total_distance_km"),
+                "duration_min": summary.get("total_duration_min"),
+                "avg_pace_per_100m": summary.get("avg_swim_pace_per_100m"),
+                "avg_hr": summary.get("avg_hr"),
+                "max_hr": summary.get("max_hr"),
+                "exercise_load": summary.get("exercise_load"),
+            })
+        }
+
+    return {
+        "summary": remove_none_values({
+            "activity_id": summary.get("activity_id"),
+            "activity_type": summary.get("activity_type"),
+            "activity_name": summary.get("activity_name"),
+            "start_time": summary.get("start_time"),
+            "duration_min": summary.get("total_duration_min"),
+            "avg_hr": summary.get("avg_hr"),
+            "max_hr": summary.get("max_hr"),
+            "exercise_load": summary.get("exercise_load"),
+        })
+    }
+
+
+def compact_payload(payload):
+    """
+    Final schema for coaching/10K analysis.
+
+    Internal Garmin/debug structures may be used while extracting data, but
+    they are intentionally not exported.
+    """
+    subjective = payload.get("subjective") or {}
+
+    return {
+        "date": payload.get("date"),
+        "training_history": compact_training_history(
+            payload.get("training_history") or {}
+        ),
+        "health_metrics": compact_health_metrics(
+            payload.get("health_metrics") or {}
+        ),
+        # Keep manual fields visible even while null so they are easy to fill in.
+        "subjective": {
+            "leg_soreness_0_10": subjective.get("leg_soreness_0_10"),
+            "leg_heaviness_0_10": subjective.get("leg_heaviness_0_10"),
+            "overall_fatigue_0_10": subjective.get("overall_fatigue_0_10"),
+            "motivation_0_10": subjective.get("motivation_0_10"),
+            "notes": subjective.get("notes"),
+        },
+        "activities": [
+            compact_activity(activity)
+            for activity in payload.get("activities", [])
+        ],
+    }
+
+
 def main():
     # Force Philippine Time (UTC+8) so cron jobs running on UTC servers pick up the correct local date
     ph_today = datetime.now(ZoneInfo("Asia/Manila")).strftime("%Y-%m-%d")
@@ -1247,7 +1586,9 @@ def main():
         split_summaries_raw = None
         activity_details_raw = None
 
-        if act_id and not is_strength:
+        # Deep detail is only useful for multisport child-leg reconstruction.
+        # Normal run/bike/swim activities already have useful Garmin laps.
+        if act_id and not is_strength and is_multisport:
             try:
                 typed_splits_raw = api.get_activity_typed_splits(act_id)
             except Exception:
@@ -1328,7 +1669,6 @@ def main():
             "summary": summary,
             "segments": segments if segments else None,
             "discipline_splits": discipline_splits if discipline_splits else None,
-            "split_source_diagnostics": split_source_diagnostics,
             "intervals": intervals
         })
 
@@ -1340,11 +1680,14 @@ def main():
         "activities": activities_list
     }
 
+    # Export only the coaching-relevant schema.
+    payload = compact_payload(payload)
+
     os.makedirs("data", exist_ok=True)
     file_path = os.path.join("data", f"garmin_{target_date_str}.json")
     with open(file_path, "w") as f:
         json.dump(payload, f, indent=4)
-    print(f"Successfully generated deep multi-sport JSON for {target_date_str} at: {file_path}")
+    print(f"Successfully generated compact Garmin coaching JSON for {target_date_str} at: {file_path}")
 
 if __name__ == "__main__":
     main()
