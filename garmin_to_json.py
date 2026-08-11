@@ -929,6 +929,8 @@ def compact_run_summary(summary):
 def compact_run_split(item):
     return remove_none_values({
         "lap": item.get("interval_number"),
+        "step_type": item.get("step_type"),
+        "lap_trigger": item.get("lap_trigger"),
         "distance_km": item.get("distance_km"),
         "time_min": item.get("time_min"),
         "avg_pace": item.get("avg_pace"),
