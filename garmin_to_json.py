@@ -213,6 +213,447 @@ def deep_get(source_dict, keys, default=None):
                     return val
     return default
 
+
+def first_available_metric_key(index_map, exact=(), contains=()):
+    """Find a metric descriptor key without assuming Garmin's column order."""
+    for key in exact:
+        if key in index_map:
+            return key
+
+    lower_map = {str(k).lower(): k for k in index_map}
+    for token in contains:
+        token = token.lower()
+        for lower_key, original_key in lower_map.items():
+            if token in lower_key:
+                return original_key
+
+    return None
+
+
+def parse_activity_detail_samples(details):
+    """
+    Parse Garmin get_activity_details() safely.
+
+    Garmin's activityDetailMetrics rows are positional. metricDescriptors
+    tells us which metricsIndex belongs to which key; hardcoding indexes is unsafe.
+    """
+    if not isinstance(details, dict):
+        return [], [], {}
+
+    descriptors = details.get("metricDescriptors") or []
+    rows = details.get("activityDetailMetrics") or []
+
+    index_map = {}
+    descriptor_keys = []
+
+    for desc in descriptors:
+        if not isinstance(desc, dict):
+            continue
+        key = desc.get("key")
+        idx = desc.get("metricsIndex")
+        if key is None:
+            continue
+        descriptor_keys.append(str(key))
+        try:
+            idx = int(idx)
+        except (TypeError, ValueError):
+            continue
+        index_map[str(key)] = idx
+
+    time_key = first_available_metric_key(
+        index_map,
+        exact=("sumDuration", "sumElapsedDuration", "sumMovingDuration"),
+        contains=("duration",),
+    )
+    distance_key = first_available_metric_key(
+        index_map,
+        exact=("sumDistance",),
+        contains=("distance",),
+    )
+    hr_key = first_available_metric_key(
+        index_map,
+        exact=("directHeartRate",),
+        contains=("heartrate", "heart_rate", "heart"),
+    )
+    power_key = first_available_metric_key(
+        index_map,
+        exact=("directPower",),
+        contains=("power",),
+    )
+    cadence_key = first_available_metric_key(
+        index_map,
+        exact=("directRunCadence", "directCadence"),
+        contains=("cadence",),
+    )
+    speed_key = first_available_metric_key(
+        index_map,
+        exact=("directSpeed",),
+        contains=("speed",),
+    )
+    temperature_key = first_available_metric_key(
+        index_map,
+        exact=("directTemperature",),
+        contains=("temperature", "temp"),
+    )
+
+    selected = {
+        "time": time_key,
+        "distance": distance_key,
+        "hr": hr_key,
+        "power": power_key,
+        "cadence": cadence_key,
+        "speed": speed_key,
+        "temperature": temperature_key,
+    }
+
+    samples = []
+
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+
+        metrics = row.get("metrics")
+        if not isinstance(metrics, list):
+            continue
+
+        sample = {}
+
+        for output_key, metric_key in selected.items():
+            if metric_key is None:
+                sample[output_key] = None
+                continue
+
+            idx = index_map.get(metric_key)
+            if idx is None or idx < 0 or idx >= len(metrics):
+                sample[output_key] = None
+                continue
+
+            sample[output_key] = safe_float(metrics[idx], 4)
+
+        # Some Garmin payloads also expose timestamps outside the positional array.
+        sample["timestamp"] = deep_get(
+            row,
+            ["startGMT", "startTimeGMT", "timestamp", "clockTime"],
+            None,
+        )
+        samples.append(sample)
+
+    return samples, descriptor_keys, selected
+
+
+def normalize_cumulative_series(samples, total_duration_sec=None, total_distance_m=None):
+    """
+    Normalize Garmin cumulative time/distance to seconds/meters.
+
+    Most devices already return seconds/meters. The scale detection protects
+    against millisecond or kilometer-like variants without silently assuming.
+    """
+    normalized = [dict(s) for s in samples]
+
+    def choose_scale(values, expected, candidates):
+        numeric = [float(v) for v in values if v is not None]
+        if not numeric or expected is None or expected <= 0:
+            return 1.0
+
+        maximum = max(numeric)
+        if maximum <= 0:
+            return 1.0
+
+        best_scale = 1.0
+        best_error = float("inf")
+
+        for scale in candidates:
+            scaled = maximum * scale
+            error = abs(scaled - expected) / expected
+            if error < best_error:
+                best_error = error
+                best_scale = scale
+
+        return best_scale
+
+    t_scale = choose_scale(
+        [s.get("time") for s in normalized],
+        total_duration_sec,
+        (1.0, 0.001, 60.0),
+    )
+    d_scale = choose_scale(
+        [s.get("distance") for s in normalized],
+        total_distance_m,
+        (1.0, 1000.0, 0.001),
+    )
+
+    for s in normalized:
+        if s.get("time") is not None:
+            s["time_sec"] = float(s["time"]) * t_scale
+        else:
+            s["time_sec"] = None
+
+        if s.get("distance") is not None:
+            s["distance_m"] = float(s["distance"]) * d_scale
+        else:
+            s["distance_m"] = None
+
+    return normalized, {"time_scale": t_scale, "distance_scale": d_scale}
+
+
+def interpolated_boundary_time(samples, target_distance_m):
+    """Return interpolated time when local cumulative distance crosses target."""
+    if not samples:
+        return None
+
+    previous = None
+    for sample in samples:
+        d = sample.get("local_distance_m")
+        t = sample.get("time_sec")
+        if d is None or t is None:
+            continue
+
+        if d >= target_distance_m:
+            if previous is None:
+                return t
+
+            pd = previous.get("local_distance_m")
+            pt = previous.get("time_sec")
+            if pd is None or pt is None or d <= pd:
+                return t
+
+            fraction = (target_distance_m - pd) / (d - pd)
+            fraction = max(0.0, min(1.0, fraction))
+            return pt + fraction * (t - pt)
+
+        previous = sample
+
+    return None
+
+
+def average_metric_between(samples, key, start_time, end_time):
+    vals = [
+        s.get(key)
+        for s in samples
+        if s.get("time_sec") is not None
+        and start_time <= s["time_sec"] <= end_time
+        and s.get(key) is not None
+    ]
+    if not vals:
+        return None
+    return round(sum(vals) / len(vals), 1)
+
+
+def max_metric_between(samples, key, start_time, end_time):
+    vals = [
+        s.get(key)
+        for s in samples
+        if s.get("time_sec") is not None
+        and start_time <= s["time_sec"] <= end_time
+        and s.get(key) is not None
+    ]
+    if not vals:
+        return None
+    return round(max(vals), 1)
+
+
+def derive_fixed_distance_splits(detail_samples, segment_intervals):
+    """
+    Build analysis-friendly distance splits from Garmin activity-detail samples.
+
+    These are NOT Garmin laps. They are explicitly marked derived:
+      swim -> 500 m
+      bike -> 5 km
+      run  -> 1 km
+
+    Segment boundaries come from the multisport segment durations already
+    returned by Garmin.
+    """
+    if not detail_samples or not segment_intervals:
+        return {}
+
+    useful_samples = [
+        s for s in detail_samples
+        if s.get("time_sec") is not None and s.get("distance_m") is not None
+    ]
+    if len(useful_samples) < 2:
+        return {}
+
+    step_by_discipline = {
+        "swim": 500.0,
+        "bike": 5000.0,
+        "run": 1000.0,
+    }
+
+    result = {}
+    cumulative_start_sec = 0.0
+
+    for segment in segment_intervals:
+        segment_type = segment.get("segment_type")
+        duration_min = segment.get("time_min")
+        expected_distance_km = segment.get("distance_km")
+
+        if duration_min is None:
+            continue
+
+        segment_duration_sec = float(duration_min) * 60.0
+        segment_end_sec = cumulative_start_sec + segment_duration_sec
+
+        if (
+            segment_type not in step_by_discipline
+            or expected_distance_km is None
+            or expected_distance_km <= 0
+        ):
+            cumulative_start_sec = segment_end_sec
+            continue
+
+        seg_samples = [
+            dict(s)
+            for s in useful_samples
+            if cumulative_start_sec <= s["time_sec"] <= segment_end_sec
+        ]
+
+        if len(seg_samples) < 2:
+            cumulative_start_sec = segment_end_sec
+            continue
+
+        # Use the first/last recorded cumulative distance in the segment.
+        first_distance = seg_samples[0]["distance_m"]
+        last_distance = seg_samples[-1]["distance_m"]
+        observed_distance = last_distance - first_distance
+        expected_distance = float(expected_distance_km) * 1000.0
+
+        if observed_distance <= 0:
+            cumulative_start_sec = segment_end_sec
+            continue
+
+        # Detail samples at segment boundaries can be a little early/late.
+        # Rescale only when observed distance is reasonably close to Garmin's
+        # segment summary. Otherwise keep raw distance and flag the mismatch.
+        ratio = expected_distance / observed_distance
+        use_scale = ratio if 0.80 <= ratio <= 1.20 else 1.0
+
+        for s in seg_samples:
+            s["local_distance_m"] = (s["distance_m"] - first_distance) * use_scale
+
+        available_distance = seg_samples[-1]["local_distance_m"]
+        split_step = step_by_discipline[segment_type]
+
+        # Prefer the known Garmin segment distance when the rescaling was safe.
+        usable_total = expected_distance if use_scale != 1.0 else min(
+            expected_distance,
+            available_distance,
+        )
+
+        boundaries = []
+        target = split_step
+        while target < usable_total - 1e-6:
+            boundaries.append(target)
+            target += split_step
+
+        # Include the exact final segment distance as the final boundary.
+        boundaries.append(usable_total)
+
+        segment_output = []
+        prev_target = 0.0
+        prev_time = cumulative_start_sec
+
+        for split_number, boundary in enumerate(boundaries, start=1):
+            boundary_time = interpolated_boundary_time(seg_samples, boundary)
+            if boundary_time is None or boundary_time <= prev_time:
+                continue
+
+            split_distance_m = boundary - prev_target
+            split_time_sec = boundary_time - prev_time
+            if split_distance_m <= 0 or split_time_sec <= 0:
+                continue
+
+            speed_mps = split_distance_m / split_time_sec
+            split_metrics = discipline_metrics(speed_mps, segment_type)
+
+            avg_hr = average_metric_between(seg_samples, "hr", prev_time, boundary_time)
+            max_hr = max_metric_between(seg_samples, "hr", prev_time, boundary_time)
+            avg_power = average_metric_between(seg_samples, "power", prev_time, boundary_time)
+            max_power = max_metric_between(seg_samples, "power", prev_time, boundary_time)
+            avg_cadence = average_metric_between(seg_samples, "cadence", prev_time, boundary_time)
+
+            segment_output.append({
+                "split_number": split_number,
+                "source": "derived_from_activity_details",
+                "distance_km": round(split_distance_m / 1000.0, 3),
+                "cumulative_distance_km": round(boundary / 1000.0, 3),
+                "time_min": round(split_time_sec / 60.0, 2),
+                "avg_speed_kph": split_metrics["avg_speed_kph"],
+                "avg_pace": split_metrics["avg_pace"],
+                "avg_pace_sec_per_km": split_metrics["avg_pace_sec_per_km"],
+                "avg_swim_pace_per_100m": split_metrics["avg_swim_pace_per_100m"],
+                "avg_swim_pace_sec_per_100m": split_metrics["avg_swim_pace_sec_per_100m"],
+                "pace_unit": split_metrics["pace_unit"],
+                "avg_hr": safe_int(avg_hr),
+                "max_hr": safe_int(max_hr),
+                "avg_power_w": safe_int(avg_power),
+                "max_power_w": safe_int(max_power),
+                "avg_cadence": safe_float(avg_cadence, 1),
+                "cadence_unit": (
+                    "spm" if segment_type == "run"
+                    else "rpm" if segment_type == "bike"
+                    else None
+                ),
+            })
+
+            prev_target = boundary
+            prev_time = boundary_time
+
+        if segment_output:
+            result[segment_type] = {
+                "split_definition": (
+                    "500m" if segment_type == "swim"
+                    else "5km" if segment_type == "bike"
+                    else "1km"
+                ),
+                "source": "derived_from_activity_details",
+                "distance_scaling_applied": round(use_scale, 6),
+                "observed_detail_distance_km": round(observed_distance / 1000.0, 3),
+                "garmin_segment_distance_km": round(expected_distance / 1000.0, 3),
+                "splits": segment_output,
+            }
+
+        cumulative_start_sec = segment_end_sec
+
+    return result
+
+
+def safe_get_activity_details(api, activity_id):
+    """
+    Fetch higher-resolution activity detail samples.
+    Falls back to library defaults if Garmin rejects a larger chart request.
+    """
+    try:
+        return api.get_activity_details(activity_id, maxchart=12000, maxpoly=0)
+    except Exception:
+        try:
+            return api.get_activity_details(activity_id)
+        except Exception:
+            return None
+
+
+def endpoint_shape(value):
+    """Compact diagnostics without dumping large raw Garmin payloads."""
+    if value is None:
+        return {"available": False}
+
+    info = {
+        "available": True,
+        "type": type(value).__name__,
+    }
+
+    if isinstance(value, dict):
+        info["keys"] = list(value.keys())[:30]
+        for key in ("lapDTOs", "splitDTOs", "activityDetailMetrics", "metricDescriptors"):
+            item = value.get(key)
+            if isinstance(item, list):
+                info[f"{key}_count"] = len(item)
+    elif isinstance(value, list):
+        info["count"] = len(value)
+
+    return info
+
+
 def main():
     # Force Philippine Time (UTC+8) so cron jobs running on UTC servers pick up the correct local date
     ph_today = datetime.now(ZoneInfo("Asia/Manila")).strftime("%Y-%m-%d")
@@ -619,6 +1060,74 @@ def main():
             except Exception:
                 pass
 
+        # 5. FETCH DEEPER SPLIT SOURCES + ACTIVITY DETAIL TIME SERIES
+        typed_splits_raw = None
+        split_summaries_raw = None
+        activity_details_raw = None
+
+        if act_id and not is_strength:
+            try:
+                typed_splits_raw = api.get_activity_typed_splits(act_id)
+            except Exception:
+                typed_splits_raw = None
+
+            try:
+                split_summaries_raw = api.get_activity_split_summaries(act_id)
+            except Exception:
+                split_summaries_raw = None
+
+            activity_details_raw = safe_get_activity_details(api, act_id)
+
+        detail_samples = []
+        detail_descriptor_keys = []
+        detail_selected_metrics = {}
+        detail_scale_info = None
+
+        if activity_details_raw:
+            (
+                detail_samples,
+                detail_descriptor_keys,
+                detail_selected_metrics,
+            ) = parse_activity_detail_samples(activity_details_raw)
+
+            expected_duration_sec = (
+                float(summary["total_duration_min"]) * 60.0
+                if summary.get("total_duration_min") is not None
+                else None
+            )
+            expected_distance_m = (
+                float(summary["total_distance_km"]) * 1000.0
+                if summary.get("total_distance_km") is not None
+                else None
+            )
+
+            detail_samples, detail_scale_info = normalize_cumulative_series(
+                detail_samples,
+                total_duration_sec=expected_duration_sec,
+                total_distance_m=expected_distance_m,
+            )
+
+        discipline_splits = (
+            derive_fixed_distance_splits(detail_samples, intervals)
+            if is_multisport
+            else {}
+        )
+
+        split_source_diagnostics = {
+            "regular_splits": {
+                "available": bool(intervals),
+                "count": len(intervals),
+            },
+            "typed_splits": endpoint_shape(typed_splits_raw),
+            "split_summaries": endpoint_shape(split_summaries_raw),
+            "activity_details": endpoint_shape(activity_details_raw),
+            "activity_detail_descriptor_keys": detail_descriptor_keys,
+            "activity_detail_selected_metrics": detail_selected_metrics,
+            "activity_detail_sample_count": len(detail_samples),
+            "activity_detail_scaling": detail_scale_info,
+            "derived_discipline_splits_available": sorted(discipline_splits.keys()),
+        }
+
         # Direct convenience view for standard triathlon segments.
         segments = {}
         if is_multisport:
@@ -630,6 +1139,8 @@ def main():
         activities_list.append({
             "summary": summary,
             "segments": segments if segments else None,
+            "discipline_splits": discipline_splits if discipline_splits else None,
+            "split_source_diagnostics": split_source_diagnostics,
             "intervals": intervals
         })
 
@@ -645,7 +1156,7 @@ def main():
     file_path = os.path.join("data", f"garmin_{target_date_str}.json")
     with open(file_path, "w") as f:
         json.dump(payload, f, indent=4)
-    print(f"Successfully generated multi-sport JSON for {target_date_str} at: {file_path}")
+    print(f"Successfully generated deep multi-sport JSON for {target_date_str} at: {file_path}")
 
 if __name__ == "__main__":
     main()
