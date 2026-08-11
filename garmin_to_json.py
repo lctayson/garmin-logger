@@ -45,6 +45,143 @@ def swim_speed_to_pace_metrics(speed_mps):
     decimal_pace = round(sec_per_100m, 1)
     return formatted_pace, decimal_pace
 
+
+def speed_to_kph(speed_mps):
+    """Convert Garmin m/s to km/h."""
+    if speed_mps is None:
+        return None
+    try:
+        speed_mps = float(speed_mps)
+        if speed_mps < 0:
+            return None
+        return round(speed_mps * 3.6, 2)
+    except (ValueError, TypeError):
+        return None
+
+
+def normalize_discipline(value):
+    """Map Garmin activity/sport strings to stable analysis-friendly names."""
+    if value is None:
+        return None
+    if isinstance(value, dict):
+        value = deep_get(value, ["typeKey", "key", "name"], None)
+    if value is None:
+        return None
+
+    s = str(value).strip().lower().replace("-", "_").replace(" ", "_")
+
+    if "swim" in s:
+        return "swim"
+    if any(x in s for x in ["cycling", "biking", "bike", "cycle"]):
+        return "bike"
+    if "run" in s:
+        return "run"
+    if "walk" in s:
+        return "walk"
+    if any(x in s for x in ["transition", "trans"]):
+        return "transition"
+    if any(x in s for x in ["strength", "weight"]):
+        return "strength"
+    if any(x in s for x in ["multi_sport", "multisport", "triathlon"]):
+        return "multi_sport"
+
+    return s or None
+
+
+def lap_discipline_from_api(lap):
+    """Read per-lap discipline from Garmin when it is available."""
+    raw = deep_get(
+        lap,
+        [
+            "activityType.typeKey",
+            "activityTypeDTO.typeKey",
+            "sportType.typeKey",
+            "sportType",
+            "subSportType.typeKey",
+            "subSportType",
+            "typeKey",
+            "activityType",
+        ],
+        None,
+    )
+    return normalize_discipline(raw)
+
+
+def infer_triathlon_segment_types(lap_dtos):
+    """
+    Conservative fallback for a standard five-part triathlon:
+    swim, T1, bike, T2, run.
+
+    No label is invented unless the lap geometry strongly matches that pattern.
+    """
+    labels = [None] * len(lap_dtos)
+    if len(lap_dtos) != 5:
+        return labels
+
+    def dist_km(lap):
+        value = safe_float(lap.get("distance"), 3)
+        return value / 1000.0 if value is not None else None
+
+    d = [dist_km(lap) for lap in lap_dtos]
+    speeds = [safe_float(lap.get("averageSpeed"), 3) for lap in lap_dtos]
+    durations_min = [
+        safe_float((lap.get("duration") or 0) / 60.0, 2)
+        if lap.get("duration") is not None else None
+        for lap in lap_dtos
+    ]
+
+    checks = [
+        d[0] is not None and 0.2 <= d[0] <= 5.0
+        and speeds[0] is not None and speeds[0] < 2.5,
+
+        d[1] is not None and d[1] <= 2.0
+        and durations_min[1] is not None and durations_min[1] <= 20,
+
+        d[2] is not None and d[2] >= 5.0
+        and speeds[2] is not None and speeds[2] >= 4.0,
+
+        d[3] is not None and d[3] <= 2.0
+        and durations_min[3] is not None and durations_min[3] <= 20,
+
+        d[4] is not None and d[4] >= 1.0
+        and speeds[4] is not None and 1.0 <= speeds[4] <= 7.5,
+    ]
+
+    if all(checks):
+        return ["swim", "transition_1", "bike", "transition_2", "run"]
+
+    return labels
+
+
+def discipline_metrics(speed_mps, discipline):
+    """
+    Return only meaningful pace/speed metrics for the discipline:
+    run/walk -> min/km; swim -> min/100m; bike -> km/h.
+    Multisport parents and transitions do not get fabricated pace values.
+    """
+    result = {
+        "avg_speed_kph": speed_to_kph(speed_mps),
+        "avg_pace": None,
+        "avg_pace_sec_per_km": None,
+        "avg_swim_pace_per_100m": None,
+        "avg_swim_pace_sec_per_100m": None,
+        "pace_unit": None,
+    }
+
+    if discipline in ("run", "walk"):
+        pace, pace_sec = speed_to_pace_metrics(speed_mps)
+        result["avg_pace"] = pace
+        result["avg_pace_sec_per_km"] = pace_sec
+        result["pace_unit"] = "min/km"
+    elif discipline == "swim":
+        pace, pace_sec = swim_speed_to_pace_metrics(speed_mps)
+        result["avg_swim_pace_per_100m"] = pace
+        result["avg_swim_pace_sec_per_100m"] = pace_sec
+        result["pace_unit"] = "min/100m"
+
+    return result
+
+
 def format_stride_length(val):
     if val is None or val == "N/A" or val == "":
         return None
@@ -80,7 +217,7 @@ def main():
     # Force Philippine Time (UTC+8) so cron jobs running on UTC servers pick up the correct local date
     ph_today = datetime.now(ZoneInfo("Asia/Manila")).strftime("%Y-%m-%d")
 
-    parser = argparse.ArgumentParser(description="Fetch multi-sport Garmin telemetry and health metrics matching strict schema.")
+    parser = argparse.ArgumentParser(description="Fetch Garmin health, single-sport, and multisport telemetry with discipline-correct metrics.")
     parser.add_argument("--date", type=str, default=ph_today, help="Date in YYYY-MM-DD format (defaults to today in Manila time)")
     args = parser.parse_args()
     target_date_str = args.date
@@ -242,7 +379,8 @@ def main():
         "leg_soreness_0_10": None,
         "leg_heaviness_0_10": None,
         "overall_fatigue_0_10": None,
-        "motivation_0_10": None
+        "motivation_0_10": None,
+        "notes": None
     }
 
     # 4. FETCH TARGET DATE ACTIVITIES & INTERVALS
@@ -254,49 +392,64 @@ def main():
     activities_list = []
     for act in activities:
         act_id = act.get("activityId")
-        act_type = deep_get(act, ["activityType.typeKey", "activityType"], "running").lower()
-        
-        # Multi-sport classification flags
-        is_running = "run" in act_type
-        is_walking = "walk" in act_type
-        is_cycling = "cycle" in act_type or "bike" in act_type or "biking" in act_type
-        is_swimming = "swim" in act_type
-        is_strength = "strength" in act_type or "weight" in act_type
+        act_type_raw = deep_get(act, ["activityType.typeKey", "activityType"], "running")
+        act_type = str(act_type_raw).lower() if act_type_raw is not None else "running"
+        discipline = normalize_discipline(act_type)
+
+        is_running = discipline == "run"
+        is_walking = discipline == "walk"
+        is_cycling = discipline == "bike"
+        is_swimming = discipline == "swim"
+        is_strength = discipline == "strength"
+        is_multisport = discipline == "multi_sport"
 
         avg_speed_mps = act.get("averageSpeed", None)
-        
-        # Assign appropriate pace conversion based on activity type
-        if is_swimming:
-            avg_pace_str, avg_pace_sec = swim_speed_to_pace_metrics(avg_speed_mps)
-        else:
-            avg_pace_str, avg_pace_sec = speed_to_pace_metrics(avg_speed_mps)
+        parent_metrics = discipline_metrics(avg_speed_mps, discipline)
 
+        # GAP is meaningful for run/walk only.
         avg_gap_mps = deep_get(act, ["averageGradeAdjustedSpeed", "gradeAdjustedSpeed"], None)
-        avg_gap_str, avg_gap_sec = speed_to_pace_metrics(avg_gap_mps) if avg_gap_mps and not is_swimming else (None, None)
+        avg_gap_str, avg_gap_sec = (
+            speed_to_pace_metrics(avg_gap_mps)
+            if avg_gap_mps and discipline in ("run", "walk")
+            else (None, None)
+        )
 
         raw_stride = deep_get(act, ["avgStrideLength", "averageStrideLength", "strideLength"], None)
-        avg_stride_m = format_stride_length(raw_stride) if (is_running or is_walking) else None
+        avg_stride_m = format_stride_length(raw_stride) if discipline in ("run", "walk") else None
 
-        # Cadence handling per discipline (SPM for run/walk, RPM for bike)
-        if is_running or is_walking:
-            avg_cadence = safe_int(deep_get(act, ["averageRunningCadenceInStepsPerMinute", "averageRunCadence", "averageCadence"]))
-        elif is_cycling:
-            avg_cadence = safe_int(deep_get(act, ["averageBikingCadenceInRPM", "averageBikeCadence", "averageCadence"]))
+        # Cadence: SPM for run/walk, RPM for bike.
+        if discipline in ("run", "walk"):
+            avg_cadence = safe_int(deep_get(
+                act,
+                ["averageRunningCadenceInStepsPerMinute", "averageRunCadence", "averageCadence"],
+            ))
+        elif discipline == "bike":
+            avg_cadence = safe_int(deep_get(
+                act,
+                ["averageBikingCadenceInRPM", "averageBikeCadence", "averageCadence"],
+            ))
         else:
             avg_cadence = safe_int(deep_get(act, ["averageCadence"]))
 
         summary = {
             "activity_id": act_id,
             "activity_type": act_type,
+            "discipline": discipline,
             "activity_name": deep_get(act, ["activityName"]),
             "start_time": deep_get(act, ["startTimeLocal"]),
-            "total_distance_km": round(act.get("distance", 0) / 1000.0, 3) if act.get("distance") and not is_swimming else round(act.get("distance", 0), 1) if is_swimming else None,
+            # Garmin distance is meters for every discipline; output is always km.
+            "total_distance_km": round(act.get("distance", 0) / 1000.0, 3) if act.get("distance") is not None else None,
             "total_duration_min": round(act.get("duration", 0) / 60.0, 2) if act.get("duration") else None,
+            "moving_duration_min": round(act.get("movingDuration", 0) / 60.0, 2) if act.get("movingDuration") else None,
             "run_time_min": round(act.get("movingDuration", 0) / 60.0, 2) if is_running and act.get("movingDuration") else None,
             "walk_time_min": round(act.get("movingDuration", 0) / 60.0, 2) if is_walking and act.get("movingDuration") else None,
             "idle_time_min": None,
-            "avg_pace": avg_pace_str,
-            "avg_pace_sec_per_km": avg_pace_sec,
+            "avg_speed_kph": parent_metrics["avg_speed_kph"],
+            "avg_pace": parent_metrics["avg_pace"],
+            "avg_pace_sec_per_km": parent_metrics["avg_pace_sec_per_km"],
+            "avg_swim_pace_per_100m": parent_metrics["avg_swim_pace_per_100m"],
+            "avg_swim_pace_sec_per_100m": parent_metrics["avg_swim_pace_sec_per_100m"],
+            "pace_unit": parent_metrics["pace_unit"],
             "avg_gap": avg_gap_str,
             "avg_gap_sec_per_km": avg_gap_sec,
             "avg_hr": safe_int(deep_get(act, ["averageHR", "avgHR"])),
@@ -327,41 +480,78 @@ def main():
         if act_id and not is_strength:
             try:
                 splits = api.get_activity_splits(act_id)
-                lap_dtos = splits.get("lapDTOs", [])
+                lap_dtos = splits.get("lapDTOs", []) if isinstance(splits, dict) else []
+
+                # Prefer Garmin's per-lap sport metadata. If Garmin omitted it,
+                # infer only an obvious standard five-part triathlon.
+                inferred_segments = (
+                    infer_triathlon_segment_types(lap_dtos)
+                    if is_multisport
+                    else [None] * len(lap_dtos)
+                )
+
                 for idx, lap in enumerate(lap_dtos, start=1):
-                    l_dist = round(lap.get("distance", 0) / 1000.0, 3) if lap.get("distance") and not is_swimming else round(lap.get("distance", 0), 1) if is_swimming else None
+                    l_dist = (
+                        round(lap.get("distance", 0) / 1000.0, 3)
+                        if lap.get("distance") is not None
+                        else None
+                    )
                     l_speed = lap.get("averageSpeed", None)
-                    
-                    if is_swimming:
-                        l_pace, l_pace_sec = swim_speed_to_pace_metrics(l_speed)
-                    else:
-                        l_pace, l_pace_sec = speed_to_pace_metrics(l_speed)
-                    
+
+                    api_lap_discipline = lap_discipline_from_api(lap)
+                    inferred_segment = (
+                        inferred_segments[idx - 1]
+                        if idx - 1 < len(inferred_segments)
+                        else None
+                    )
+
+                    segment_type = api_lap_discipline or inferred_segment
+                    metric_discipline = (
+                        "transition"
+                        if segment_type in ("transition", "transition_1", "transition_2")
+                        else segment_type
+                    )
+
+                    # Single-sport laps often omit their sport metadata.
+                    if metric_discipline is None and not is_multisport:
+                        metric_discipline = discipline
+                        segment_type = discipline
+
+                    lap_metrics = discipline_metrics(l_speed, metric_discipline)
+
                     l_gap_speed = deep_get(lap, ["averageGradeAdjustedSpeed", "gradeAdjustedSpeed"], None)
-                    l_gap_pace, l_gap_sec = speed_to_pace_metrics(l_gap_speed) if l_gap_speed and not is_swimming else (None, None)
+                    l_gap_pace, l_gap_sec = (
+                        speed_to_pace_metrics(l_gap_speed)
+                        if l_gap_speed and metric_discipline in ("run", "walk")
+                        else (None, None)
+                    )
 
                     raw_lap_stride = deep_get(lap, ["avgStrideLength", "strideLength", "averageStrideLength"], None)
-                    lap_stride_m = format_stride_length(raw_lap_stride) if (is_running or is_walking) else None
+                    lap_stride_m = (
+                        format_stride_length(raw_lap_stride)
+                        if metric_discipline in ("run", "walk")
+                        else None
+                    )
 
-                    # Discipline-specific interval cadence
-                    if is_running or is_walking:
-                        lap_cadence = safe_int(deep_get(lap, ["averageRunningCadenceInStepsPerMinute", "averageRunCadence", "averageCadence"]))
-                    elif is_cycling:
-                        lap_cadence = safe_int(deep_get(lap, ["averageBikingCadenceInRPM", "averageBikeCadence", "averageCadence"]))
+                    if metric_discipline in ("run", "walk"):
+                        lap_cadence = safe_int(deep_get(
+                            lap,
+                            ["averageRunningCadenceInStepsPerMinute", "averageRunCadence", "averageCadence"],
+                        ))
+                    elif metric_discipline == "bike":
+                        lap_cadence = safe_int(deep_get(
+                            lap,
+                            ["averageBikingCadenceInRPM", "averageBikeCadence", "averageCadence"],
+                        ))
                     else:
                         lap_cadence = safe_int(deep_get(lap, ["averageCadence"]))
 
-                    # Safe Step Type handling without false assumptions
+                    # Workout step type is separate from multisport segment type.
                     raw_step_type = lap.get("stepType")
-                    lap_trigger = str(lap.get("lapTrigger", "")).upper()
-                    
-                    if lap_trigger in ["DISTANCE", "MANUAL", "TIME"] and not raw_step_type:
-                        step_type = None
-                        step_type_raw = raw_step_type
-                    elif raw_step_type is not None:
+                    if raw_step_type is not None:
                         step_type_raw = str(raw_step_type)
                         clean_raw = step_type_raw.strip().capitalize()
-                        if is_walking and clean_raw in ["Run", "Interval"]:
+                        if metric_discipline == "walk" and clean_raw in ["Run", "Interval"]:
                             step_type = "Walk"
                         else:
                             step_type = clean_raw
@@ -371,32 +561,75 @@ def main():
 
                     intervals.append({
                         "interval_number": idx,
+                        "segment_type": segment_type,
+                        "discipline": metric_discipline,
+                        "segment_type_source": (
+                            "garmin"
+                            if api_lap_discipline is not None
+                            else "inferred"
+                            if inferred_segment is not None
+                            else "parent_activity"
+                            if not is_multisport
+                            else None
+                        ),
                         "step_type": step_type,
                         "step_type_raw": step_type_raw,
+                        "lap_trigger": deep_get(lap, ["lapTrigger"]),
                         "time_min": round(lap.get("duration", 0) / 60.0, 2) if lap.get("duration") else None,
+                        "moving_time_min": round(lap.get("movingDuration", 0) / 60.0, 2) if lap.get("movingDuration") else None,
                         "distance_km": l_dist,
-                        "avg_pace": l_pace,
-                        "avg_pace_sec_per_km": l_pace_sec,
+                        "avg_speed_kph": lap_metrics["avg_speed_kph"],
+                        "avg_pace": lap_metrics["avg_pace"],
+                        "avg_pace_sec_per_km": lap_metrics["avg_pace_sec_per_km"],
+                        "avg_swim_pace_per_100m": lap_metrics["avg_swim_pace_per_100m"],
+                        "avg_swim_pace_sec_per_100m": lap_metrics["avg_swim_pace_sec_per_100m"],
+                        "pace_unit": lap_metrics["pace_unit"],
                         "avg_gap": l_gap_pace,
                         "avg_gap_sec_per_km": l_gap_sec,
                         "avg_hr": safe_int(deep_get(lap, ["averageHR", "avgHR"])),
                         "max_hr": safe_int(deep_get(lap, ["maxHR", "maximumHR"])),
                         "power_w": safe_int(deep_get(lap, ["averagePower", "avgPower", "power"])),
                         "max_power_w": safe_int(deep_get(lap, ["maxPower", "maximumPower"])),
+                        "normalized_power_w": safe_int(deep_get(lap, ["normalizedPower", "normPower"])),
                         "cadence": lap_cadence,
-                        "avg_gct_ms": safe_int(deep_get(lap, ["avgGroundContactTime", "averageGroundContactTime", "groundContactTime"])) if is_running else None,
+                        "cadence_unit": (
+                            "spm"
+                            if metric_discipline in ("run", "walk")
+                            else "rpm"
+                            if metric_discipline == "bike"
+                            else None
+                        ),
+                        "avg_gct_ms": safe_int(deep_get(
+                            lap,
+                            ["avgGroundContactTime", "averageGroundContactTime", "groundContactTime"],
+                        )) if metric_discipline == "run" else None,
                         "avg_stride_length_m": lap_stride_m,
-                        "vertical_oscillation_cm": safe_float(deep_get(lap, ["verticalOscillation", "avgVerticalOscillation"])) if is_running else None,
-                        "vertical_ratio_pct": safe_float(deep_get(lap, ["verticalRatio", "avgVerticalRatio"])) if is_running else None,
+                        "vertical_oscillation_cm": safe_float(deep_get(
+                            lap,
+                            ["verticalOscillation", "avgVerticalOscillation"],
+                        )) if metric_discipline == "run" else None,
+                        "vertical_ratio_pct": safe_float(deep_get(
+                            lap,
+                            ["verticalRatio", "avgVerticalRatio"],
+                        )) if metric_discipline == "run" else None,
                         "elevation_gain_m": safe_float(deep_get(lap, ["elevationGain", "totalAscent"])),
                         "elevation_loss_m": safe_float(deep_get(lap, ["elevationLoss", "totalDescent"])),
-                        "avg_temperature_c": safe_float(deep_get(lap, ["averageTemperature", "temperature"]))
+                        "avg_temperature_c": safe_float(deep_get(lap, ["averageTemperature", "temperature"])),
                     })
             except Exception:
                 pass
 
+        # Direct convenience view for standard triathlon segments.
+        segments = {}
+        if is_multisport:
+            for item in intervals:
+                seg = item.get("segment_type")
+                if seg in ("swim", "transition_1", "bike", "transition_2", "run"):
+                    segments[seg] = item
+
         activities_list.append({
             "summary": summary,
+            "segments": segments if segments else None,
             "intervals": intervals
         })
 
