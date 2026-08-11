@@ -2,6 +2,7 @@ import os
 import json
 import argparse
 from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 from garminconnect import Garmin
 
 def safe_float(val, decimals=2):
@@ -67,8 +68,11 @@ def deep_get(source_dict, keys, default=None):
     return default
 
 def main():
+    # Force Philippine Time (UTC+8) so cron jobs running on UTC servers pick up the correct local date
+    ph_today = datetime.now(ZoneInfo("Asia/Manila")).strftime("%Y-%m-%d")
+
     parser = argparse.ArgumentParser(description="Fetch Garmin telemetry and health metrics matching strict schema.")
-    parser.add_argument("--date", type=str, default=datetime.today().strftime("%Y-%m-%d"), help="Date in YYYY-MM-DD format (defaults to today)")
+    parser.add_argument("--date", type=str, default=ph_today, help="Date in YYYY-MM-DD format (defaults to today in Manila time)")
     args = parser.parse_args()
     target_date_str = args.date
 
@@ -135,6 +139,7 @@ def main():
     rhr = safe_int(deep_get(stats, ["restingHeartRate", "rhr"]))
     total_steps = safe_int(deep_get(stats, ["totalSteps", "steps"]))
     body_battery_morning = safe_int(deep_get(stats, ["bodyBatteryMostRecent", "bodyBatteryMorning", "bodyBatteryValues"]))
+    recovery_time_hours = safe_float(deep_get(stats, ["recoveryTime", "recoveryTimeHours"]))
     
     sleep_data = api.get_sleep_data(target_date_str)
     sleep_dto = sleep_data.get("dailySleepDTO", {}) if isinstance(sleep_data, dict) else {}
@@ -210,6 +215,7 @@ def main():
         "sleep_stages_hours": sleep_stages_hours,
         "respiration_rate_sleep": safe_float(deep_get(sleep_dto, ["averageRespiration", "respiration"])),
         "body_battery_morning": body_battery_morning,
+        "recovery_time_hours": recovery_time_hours,
         "training_readiness": safe_int(deep_get(stats, ["trainingReadiness"])),
         "training_status": {
             "acute_load": acute_load,
@@ -252,6 +258,7 @@ def main():
         avg_stride_m = format_stride_length(raw_stride) if is_running else None
 
         summary = {
+            "activity_id": act_id,
             "activity_type": act_type,
             "activity_name": deep_get(act, ["activityName"]),
             "start_time": deep_get(act, ["startTimeLocal"]),
