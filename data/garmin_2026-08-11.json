@@ -31,6 +31,7 @@
         },
         "respiration_rate_sleep": null,
         "body_battery_morning": null,
+        "recovery_time_hours": null,
         "training_readiness": null,
         "training_status": {
             "acute_load": null,
@@ -51,6 +52,7 @@
     "activities": [
         {
             "summary": {
+                "activity_id": 23929134788,
                 "activity_type": "walking",
                 "activity_name": "Malolos Walking",
                 "start_time": "2026-08-11 06:06:51",
