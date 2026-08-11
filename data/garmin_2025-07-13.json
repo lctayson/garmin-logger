@@ -271,6 +271,8 @@
                 "swim": {
                     "split_definition": "500m",
                     "source": "derived_from_activity_details",
+                    "detail_chunk_index": 0,
+                    "detail_chunk_match_score": 0.0003,
                     "distance_scaling_applied": 1.000213,
                     "observed_detail_distance_km": 1.408,
                     "garmin_segment_distance_km": 1.408,
@@ -291,7 +293,7 @@
                             "max_hr": 164,
                             "avg_power_w": null,
                             "max_power_w": null,
-                            "avg_cadence": 0.0,
+                            "avg_cadence": null,
                             "cadence_unit": null
                         },
                         {
@@ -310,7 +312,7 @@
                             "max_hr": 167,
                             "avg_power_w": null,
                             "max_power_w": null,
-                            "avg_cadence": 0.0,
+                            "avg_cadence": null,
                             "cadence_unit": null
                         },
                         {
@@ -329,7 +331,7 @@
                             "max_hr": 161,
                             "avg_power_w": null,
                             "max_power_w": null,
-                            "avg_cadence": 0.0,
+                            "avg_cadence": null,
                             "cadence_unit": null
                         }
                     ]
@@ -403,6 +405,49 @@
                 "activity_detail_scaling": {
                     "time_scale": 1.0,
                     "distance_scale": 1.0
+                },
+                "typed_splits_preview": {
+                    "activityId": 19715571043,
+                    "activityUUID": {
+                        "uuid": "2cb6acd5-19d1-4b0e-9b56-90cfae9714c2"
+                    },
+                    "splits": []
+                },
+                "split_summaries_preview": {
+                    "activityId": 19715571043,
+                    "activityUUID": {
+                        "uuid": "2cb6acd5-19d1-4b0e-9b56-90cfae9714c2"
+                    },
+                    "splitSummaries": []
+                },
+                "detail_chunk_diagnostics": {
+                    "detail_chunk_count": 1,
+                    "detail_chunks": [
+                        {
+                            "sample_count": 2270,
+                            "duration_sec": 2269.0,
+                            "distance_m": 1407.7,
+                            "start_time_sec": 0.0,
+                            "end_time_sec": 2269.0,
+                            "start_distance_m": 0.0,
+                            "end_distance_m": 1407.7
+                        }
+                    ],
+                    "segment_chunk_matches": {
+                        "swim": {
+                            "chunk_index": 0,
+                            "match_score": 0.0003,
+                            "chunk_summary": {
+                                "sample_count": 2270,
+                                "duration_sec": 2269.0,
+                                "distance_m": 1407.7,
+                                "start_time_sec": 0.0,
+                                "end_time_sec": 2269.0,
+                                "start_distance_m": 0.0,
+                                "end_distance_m": 1407.7
+                            }
+                        }
+                    }
                 },
                 "derived_discipline_splits_available": [
                     "swim"
