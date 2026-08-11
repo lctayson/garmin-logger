@@ -267,6 +267,147 @@
                     "avg_temperature_c": null
                 }
             },
+            "discipline_splits": {
+                "swim": {
+                    "split_definition": "500m",
+                    "source": "derived_from_activity_details",
+                    "distance_scaling_applied": 1.000213,
+                    "observed_detail_distance_km": 1.408,
+                    "garmin_segment_distance_km": 1.408,
+                    "splits": [
+                        {
+                            "split_number": 1,
+                            "source": "derived_from_activity_details",
+                            "distance_km": 0.5,
+                            "cumulative_distance_km": 0.5,
+                            "time_min": 12.78,
+                            "avg_speed_kph": 2.35,
+                            "avg_pace": null,
+                            "avg_pace_sec_per_km": null,
+                            "avg_swim_pace_per_100m": "2:33",
+                            "avg_swim_pace_sec_per_100m": 153.4,
+                            "pace_unit": "min/100m",
+                            "avg_hr": 142,
+                            "max_hr": 164,
+                            "avg_power_w": null,
+                            "max_power_w": null,
+                            "avg_cadence": 0.0,
+                            "cadence_unit": null
+                        },
+                        {
+                            "split_number": 2,
+                            "source": "derived_from_activity_details",
+                            "distance_km": 0.5,
+                            "cumulative_distance_km": 1.0,
+                            "time_min": 15.15,
+                            "avg_speed_kph": 1.98,
+                            "avg_pace": null,
+                            "avg_pace_sec_per_km": null,
+                            "avg_swim_pace_per_100m": "3:01",
+                            "avg_swim_pace_sec_per_100m": 181.8,
+                            "pace_unit": "min/100m",
+                            "avg_hr": 157,
+                            "max_hr": 167,
+                            "avg_power_w": null,
+                            "max_power_w": null,
+                            "avg_cadence": 0.0,
+                            "cadence_unit": null
+                        },
+                        {
+                            "split_number": 3,
+                            "source": "derived_from_activity_details",
+                            "distance_km": 0.408,
+                            "cumulative_distance_km": 1.408,
+                            "time_min": 9.89,
+                            "avg_speed_kph": 2.48,
+                            "avg_pace": null,
+                            "avg_pace_sec_per_km": null,
+                            "avg_swim_pace_per_100m": "2:25",
+                            "avg_swim_pace_sec_per_100m": 145.4,
+                            "pace_unit": "min/100m",
+                            "avg_hr": 142,
+                            "max_hr": 161,
+                            "avg_power_w": null,
+                            "max_power_w": null,
+                            "avg_cadence": 0.0,
+                            "cadence_unit": null
+                        }
+                    ]
+                }
+            },
+            "split_source_diagnostics": {
+                "regular_splits": {
+                    "available": true,
+                    "count": 5
+                },
+                "typed_splits": {
+                    "available": true,
+                    "type": "dict",
+                    "keys": [
+                        "activityId",
+                        "activityUUID",
+                        "splits"
+                    ]
+                },
+                "split_summaries": {
+                    "available": true,
+                    "type": "dict",
+                    "keys": [
+                        "activityId",
+                        "activityUUID",
+                        "splitSummaries"
+                    ]
+                },
+                "activity_details": {
+                    "available": true,
+                    "type": "dict",
+                    "keys": [
+                        "activityId",
+                        "measurementCount",
+                        "metricsCount",
+                        "totalMetricsCount",
+                        "metricDescriptors",
+                        "activityDetailMetrics",
+                        "geoPolylineDTO",
+                        "heartRateDTOs",
+                        "pendingData",
+                        "detailsAvailable"
+                    ],
+                    "activityDetailMetrics_count": 2270,
+                    "metricDescriptors_count": 12
+                },
+                "activity_detail_descriptor_keys": [
+                    "directBodyBattery",
+                    "sumDuration",
+                    "sumElapsedDuration",
+                    "sumMovingDuration",
+                    "directLongitude",
+                    "directAirTemperature",
+                    "directLatitude",
+                    "directSpeed",
+                    "sumDistance",
+                    "directTimestamp",
+                    "directHeartRate",
+                    "directFractionalCadence"
+                ],
+                "activity_detail_selected_metrics": {
+                    "time": "sumDuration",
+                    "distance": "sumDistance",
+                    "hr": "directHeartRate",
+                    "power": null,
+                    "cadence": "directFractionalCadence",
+                    "speed": "directSpeed",
+                    "temperature": "directAirTemperature"
+                },
+                "activity_detail_sample_count": 2270,
+                "activity_detail_scaling": {
+                    "time_scale": 1.0,
+                    "distance_scale": 1.0
+                },
+                "derived_discipline_splits_available": [
+                    "swim"
+                ]
+            },
             "intervals": [
                 {
                     "interval_number": 1,
