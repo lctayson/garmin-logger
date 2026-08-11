@@ -247,6 +247,7 @@ def main():
         act_id = act.get("activityId")
         act_type = deep_get(act, ["activityType.typeKey", "activityType"], "running").lower()
         is_running = "run" in act_type
+        is_walking = "walk" in act_type
 
         avg_speed_mps = act.get("averageSpeed", None)
         avg_pace_str, avg_pace_sec = speed_to_pace_metrics(avg_speed_mps)
@@ -265,7 +266,7 @@ def main():
             "total_distance_km": round(act.get("distance", 0) / 1000.0, 3) if act.get("distance") else None,
             "total_duration_min": round(act.get("duration", 0) / 60.0, 2) if act.get("duration") else None,
             "run_time_min": round(act.get("movingDuration", 0) / 60.0, 2) if is_running and act.get("movingDuration") else None,
-            "walk_time_min": None,
+            "walk_time_min": round(act.get("movingDuration", 0) / 60.0, 2) if is_walking and act.get("movingDuration") else None,
             "idle_time_min": None,
             "avg_pace": avg_pace_str,
             "avg_pace_sec_per_km": avg_pace_sec,
@@ -311,9 +312,30 @@ def main():
                     raw_lap_stride = deep_get(lap, ["avgStrideLength", "strideLength", "averageStrideLength"], None)
                     lap_stride_m = format_stride_length(raw_lap_stride) if is_running else None
 
+                    # Step Type handling without false "Run" defaults
+                    raw_step_type = lap.get("stepType")
+                    lap_trigger = str(lap.get("lapTrigger", "")).upper()
+                    
+                    # If it's a standard auto-lap (e.g. distance/manual trigger) with no genuine structured step type, keep it null
+                    if lap_trigger in ["DISTANCE", "MANUAL", "TIME"] and not raw_step_type:
+                        step_type = None
+                        step_type_raw = raw_step_type
+                    elif raw_step_type is not None:
+                        step_type_raw = str(raw_step_type)
+                        # Normalize coaching value based on activity type if Garmin defaults improperly
+                        clean_raw = step_type_raw.strip().capitalize()
+                        if is_walking and clean_raw in ["Run", "Interval"]:
+                            step_type = "Walk"
+                        else:
+                            step_type = clean_raw
+                    else:
+                        step_type = None
+                        step_type_raw = None
+
                     intervals.append({
                         "interval_number": idx,
-                        "step_type": deep_get(lap, ["stepType"], "Run"),
+                        "step_type": step_type,
+                        "step_type_raw": step_type_raw,
                         "time_min": round(lap.get("duration", 0) / 60.0, 2) if lap.get("duration") else None,
                         "distance_km": l_dist,
                         "avg_pace": l_pace,
