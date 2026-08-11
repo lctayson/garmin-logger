@@ -452,27 +452,195 @@ def max_metric_between(samples, key, start_time, end_time):
     return round(max(vals), 1)
 
 
+
+def split_detail_stream_on_resets(samples):
+    """
+    Split Garmin activity-detail samples into child-activity chunks.
+
+    Garmin multisport detail streams may reset cumulative distance and/or
+    cumulative duration at discipline boundaries. We detect clear backward
+    jumps rather than assuming the whole triathlon is one cumulative series.
+    """
+    valid = [
+        dict(s) for s in samples
+        if s.get("time_sec") is not None and s.get("distance_m") is not None
+    ]
+    if not valid:
+        return []
+
+    chunks = []
+    current = [valid[0]]
+    prev = valid[0]
+
+    for s in valid[1:]:
+        time_reset = s["time_sec"] + 2.0 < prev["time_sec"]
+        distance_reset = s["distance_m"] + 25.0 < prev["distance_m"]
+
+        if time_reset or distance_reset:
+            if current:
+                chunks.append(current)
+            current = [s]
+        else:
+            current.append(s)
+
+        prev = s
+
+    if current:
+        chunks.append(current)
+
+    # Remove tiny noise chunks.
+    return [c for c in chunks if len(c) >= 3]
+
+
+def chunk_summary(chunk):
+    if not chunk:
+        return None
+
+    first = chunk[0]
+    last = chunk[-1]
+
+    duration = None
+    if first.get("time_sec") is not None and last.get("time_sec") is not None:
+        duration = max(0.0, last["time_sec"] - first["time_sec"])
+
+    distance = None
+    if first.get("distance_m") is not None and last.get("distance_m") is not None:
+        distance = max(0.0, last["distance_m"] - first["distance_m"])
+
+    return {
+        "sample_count": len(chunk),
+        "duration_sec": duration,
+        "distance_m": distance,
+        "start_time_sec": first.get("time_sec"),
+        "end_time_sec": last.get("time_sec"),
+        "start_distance_m": first.get("distance_m"),
+        "end_distance_m": last.get("distance_m"),
+    }
+
+
+def match_detail_chunks_to_segments(chunks, segment_intervals):
+    """
+    Sequentially match reset-delimited detail chunks to known Garmin
+    Swim/T1/Bike/T2/Run segments using duration + distance similarity.
+    """
+    if not chunks or not segment_intervals:
+        return {}
+
+    segment_candidates = [
+        s for s in segment_intervals
+        if s.get("segment_type") in (
+            "swim", "transition_1", "bike", "transition_2", "run"
+        )
+    ]
+
+    chunk_infos = [chunk_summary(c) for c in chunks]
+    mapping = {}
+    used = set()
+    start_idx = 0
+
+    for seg in segment_candidates:
+        seg_type = seg.get("segment_type")
+        expected_d = (
+            float(seg["distance_km"]) * 1000.0
+            if seg.get("distance_km") is not None else None
+        )
+        expected_t = (
+            float(seg["time_min"]) * 60.0
+            if seg.get("time_min") is not None else None
+        )
+
+        best_idx = None
+        best_score = float("inf")
+
+        # Preserve order: search only from the last accepted chunk onward.
+        for idx in range(start_idx, len(chunks)):
+            if idx in used:
+                continue
+
+            info = chunk_infos[idx]
+            if not info:
+                continue
+
+            score = 0.0
+            parts = 0
+
+            if expected_d and info.get("distance_m") is not None:
+                score += abs(info["distance_m"] - expected_d) / max(expected_d, 1.0)
+                parts += 1
+
+            if expected_t and info.get("duration_sec") is not None:
+                score += abs(info["duration_sec"] - expected_t) / max(expected_t, 1.0)
+                parts += 1
+
+            if parts == 0:
+                continue
+
+            score /= parts
+
+            if score < best_score:
+                best_score = score
+                best_idx = idx
+
+        # Be conservative. If no reasonably similar chunk exists, don't invent.
+        if best_idx is not None and best_score <= 0.35:
+            mapping[seg_type] = {
+                "chunk_index": best_idx,
+                "match_score": round(best_score, 4),
+                "chunk": chunks[best_idx],
+                "chunk_summary": chunk_infos[best_idx],
+            }
+            used.add(best_idx)
+            start_idx = best_idx + 1
+
+    return mapping
+
+
+def compact_endpoint_preview(value, max_items=8):
+    """
+    Preserve enough of Garmin's typed-split/split-summary structure for
+    debugging without dumping an enormous payload.
+    """
+    if value is None:
+        return None
+
+    if isinstance(value, list):
+        return value[:max_items]
+
+    if isinstance(value, dict):
+        preview = {}
+        for key, item in value.items():
+            if isinstance(item, list):
+                preview[key] = item[:max_items]
+            elif isinstance(item, dict):
+                preview[key] = {
+                    k: v for k, v in list(item.items())[:20]
+                    if not isinstance(v, (list, dict))
+                }
+            else:
+                preview[key] = item
+        return preview
+
+    return value
+
+
 def derive_fixed_distance_splits(detail_samples, segment_intervals):
     """
-    Build analysis-friendly distance splits from Garmin activity-detail samples.
+    Build analysis-friendly fixed-distance splits from Garmin activity details.
 
-    These are NOT Garmin laps. They are explicitly marked derived:
+    Garmin multisport recordings often reset cumulative metrics at child
+    activity boundaries, so this version first detects those resets and matches
+    detail chunks to Garmin's known Swim/T1/Bike/T2/Run segment summaries.
+
+    Derived split definitions:
       swim -> 500 m
       bike -> 5 km
       run  -> 1 km
-
-    Segment boundaries come from the multisport segment durations already
-    returned by Garmin.
     """
     if not detail_samples or not segment_intervals:
-        return {}
+        return {}, {}
 
-    useful_samples = [
-        s for s in detail_samples
-        if s.get("time_sec") is not None and s.get("distance_m") is not None
-    ]
-    if len(useful_samples) < 2:
-        return {}
+    chunks = split_detail_stream_on_resets(detail_samples)
+    mapping = match_detail_chunks_to_segments(chunks, segment_intervals)
 
     step_by_discipline = {
         "swim": 500.0,
@@ -481,109 +649,110 @@ def derive_fixed_distance_splits(detail_samples, segment_intervals):
     }
 
     result = {}
-    cumulative_start_sec = 0.0
 
-    for segment in segment_intervals:
-        segment_type = segment.get("segment_type")
-        duration_min = segment.get("time_min")
-        expected_distance_km = segment.get("distance_km")
-
-        if duration_min is None:
+    for segment_type in ("swim", "bike", "run"):
+        mapped = mapping.get(segment_type)
+        if not mapped:
             continue
 
-        segment_duration_sec = float(duration_min) * 60.0
-        segment_end_sec = cumulative_start_sec + segment_duration_sec
-
-        if (
-            segment_type not in step_by_discipline
-            or expected_distance_km is None
-            or expected_distance_km <= 0
-        ):
-            cumulative_start_sec = segment_end_sec
+        seg = next(
+            (
+                x for x in segment_intervals
+                if x.get("segment_type") == segment_type
+            ),
+            None,
+        )
+        if not seg:
             continue
 
-        seg_samples = [
-            dict(s)
-            for s in useful_samples
-            if cumulative_start_sec <= s["time_sec"] <= segment_end_sec
-        ]
-
-        if len(seg_samples) < 2:
-            cumulative_start_sec = segment_end_sec
+        raw_chunk = [dict(s) for s in mapped["chunk"]]
+        if len(raw_chunk) < 2:
             continue
 
-        # Use the first/last recorded cumulative distance in the segment.
-        first_distance = seg_samples[0]["distance_m"]
-        last_distance = seg_samples[-1]["distance_m"]
-        observed_distance = last_distance - first_distance
-        expected_distance = float(expected_distance_km) * 1000.0
-
-        if observed_distance <= 0:
-            cumulative_start_sec = segment_end_sec
+        # Rebase time and distance to the child activity.
+        first_time = raw_chunk[0].get("time_sec")
+        first_distance = raw_chunk[0].get("distance_m")
+        if first_time is None or first_distance is None:
             continue
 
-        # Detail samples at segment boundaries can be a little early/late.
-        # Rescale only when observed distance is reasonably close to Garmin's
-        # segment summary. Otherwise keep raw distance and flag the mismatch.
+        local = []
+        for s in raw_chunk:
+            if s.get("time_sec") is None or s.get("distance_m") is None:
+                continue
+            x = dict(s)
+            x["time_sec"] = s["time_sec"] - first_time
+            x["local_distance_m"] = s["distance_m"] - first_distance
+            local.append(x)
+
+        if len(local) < 2:
+            continue
+
+        observed_distance = local[-1]["local_distance_m"]
+        expected_distance = (
+            float(seg["distance_km"]) * 1000.0
+            if seg.get("distance_km") is not None
+            else observed_distance
+        )
+
+        if observed_distance <= 0 or expected_distance <= 0:
+            continue
+
         ratio = expected_distance / observed_distance
         use_scale = ratio if 0.80 <= ratio <= 1.20 else 1.0
 
-        for s in seg_samples:
-            s["local_distance_m"] = (s["distance_m"] - first_distance) * use_scale
+        for s in local:
+            s["local_distance_m"] *= use_scale
 
-        available_distance = seg_samples[-1]["local_distance_m"]
-        split_step = step_by_discipline[segment_type]
-
-        # Prefer the known Garmin segment distance when the rescaling was safe.
-        usable_total = expected_distance if use_scale != 1.0 else min(
-            expected_distance,
-            available_distance,
-        )
+        available_distance = local[-1]["local_distance_m"]
+        usable_total = min(expected_distance, available_distance)
+        step = step_by_discipline[segment_type]
 
         boundaries = []
-        target = split_step
+        target = step
         while target < usable_total - 1e-6:
             boundaries.append(target)
-            target += split_step
-
-        # Include the exact final segment distance as the final boundary.
+            target += step
         boundaries.append(usable_total)
 
-        segment_output = []
-        prev_target = 0.0
-        prev_time = cumulative_start_sec
+        split_rows = []
+        prev_distance = 0.0
+        prev_time = 0.0
 
         for split_number, boundary in enumerate(boundaries, start=1):
-            boundary_time = interpolated_boundary_time(seg_samples, boundary)
+            boundary_time = interpolated_boundary_time(local, boundary)
             if boundary_time is None or boundary_time <= prev_time:
                 continue
 
-            split_distance_m = boundary - prev_target
-            split_time_sec = boundary_time - prev_time
-            if split_distance_m <= 0 or split_time_sec <= 0:
+            split_distance = boundary - prev_distance
+            split_time = boundary_time - prev_time
+            if split_distance <= 0 or split_time <= 0:
                 continue
 
-            speed_mps = split_distance_m / split_time_sec
-            split_metrics = discipline_metrics(speed_mps, segment_type)
+            speed_mps = split_distance / split_time
+            metrics = discipline_metrics(speed_mps, segment_type)
 
-            avg_hr = average_metric_between(seg_samples, "hr", prev_time, boundary_time)
-            max_hr = max_metric_between(seg_samples, "hr", prev_time, boundary_time)
-            avg_power = average_metric_between(seg_samples, "power", prev_time, boundary_time)
-            max_power = max_metric_between(seg_samples, "power", prev_time, boundary_time)
-            avg_cadence = average_metric_between(seg_samples, "cadence", prev_time, boundary_time)
+            avg_hr = average_metric_between(local, "hr", prev_time, boundary_time)
+            max_hr = max_metric_between(local, "hr", prev_time, boundary_time)
+            avg_power = average_metric_between(local, "power", prev_time, boundary_time)
+            max_power = max_metric_between(local, "power", prev_time, boundary_time)
+            avg_cadence = average_metric_between(local, "cadence", prev_time, boundary_time)
 
-            segment_output.append({
+            # Fractional cadence may be zero/not applicable during swim.
+            if segment_type == "swim":
+                avg_cadence = None
+
+            split_rows.append({
                 "split_number": split_number,
                 "source": "derived_from_activity_details",
-                "distance_km": round(split_distance_m / 1000.0, 3),
+                "distance_km": round(split_distance / 1000.0, 3),
                 "cumulative_distance_km": round(boundary / 1000.0, 3),
-                "time_min": round(split_time_sec / 60.0, 2),
-                "avg_speed_kph": split_metrics["avg_speed_kph"],
-                "avg_pace": split_metrics["avg_pace"],
-                "avg_pace_sec_per_km": split_metrics["avg_pace_sec_per_km"],
-                "avg_swim_pace_per_100m": split_metrics["avg_swim_pace_per_100m"],
-                "avg_swim_pace_sec_per_100m": split_metrics["avg_swim_pace_sec_per_100m"],
-                "pace_unit": split_metrics["pace_unit"],
+                "time_min": round(split_time / 60.0, 2),
+                "avg_speed_kph": metrics["avg_speed_kph"],
+                "avg_pace": metrics["avg_pace"],
+                "avg_pace_sec_per_km": metrics["avg_pace_sec_per_km"],
+                "avg_swim_pace_per_100m": metrics["avg_swim_pace_per_100m"],
+                "avg_swim_pace_sec_per_100m": metrics["avg_swim_pace_sec_per_100m"],
+                "pace_unit": metrics["pace_unit"],
                 "avg_hr": safe_int(avg_hr),
                 "max_hr": safe_int(max_hr),
                 "avg_power_w": safe_int(avg_power),
@@ -596,10 +765,10 @@ def derive_fixed_distance_splits(detail_samples, segment_intervals):
                 ),
             })
 
-            prev_target = boundary
+            prev_distance = boundary
             prev_time = boundary_time
 
-        if segment_output:
+        if split_rows:
             result[segment_type] = {
                 "split_definition": (
                     "500m" if segment_type == "swim"
@@ -607,15 +776,28 @@ def derive_fixed_distance_splits(detail_samples, segment_intervals):
                     else "1km"
                 ),
                 "source": "derived_from_activity_details",
+                "detail_chunk_index": mapped["chunk_index"],
+                "detail_chunk_match_score": mapped["match_score"],
                 "distance_scaling_applied": round(use_scale, 6),
                 "observed_detail_distance_km": round(observed_distance / 1000.0, 3),
                 "garmin_segment_distance_km": round(expected_distance / 1000.0, 3),
-                "splits": segment_output,
+                "splits": split_rows,
             }
 
-        cumulative_start_sec = segment_end_sec
+    chunk_diagnostics = {
+        "detail_chunk_count": len(chunks),
+        "detail_chunks": [chunk_summary(c) for c in chunks],
+        "segment_chunk_matches": {
+            key: {
+                "chunk_index": value["chunk_index"],
+                "match_score": value["match_score"],
+                "chunk_summary": value["chunk_summary"],
+            }
+            for key, value in mapping.items()
+        },
+    }
 
-    return result
+    return result, chunk_diagnostics
 
 
 def safe_get_activity_details(api, activity_id):
@@ -1107,11 +1289,14 @@ def main():
                 total_distance_m=expected_distance_m,
             )
 
-        discipline_splits = (
-            derive_fixed_distance_splits(detail_samples, intervals)
-            if is_multisport
-            else {}
-        )
+        if is_multisport:
+            discipline_splits, detail_chunk_diagnostics = derive_fixed_distance_splits(
+                detail_samples,
+                intervals,
+            )
+        else:
+            discipline_splits = {}
+            detail_chunk_diagnostics = {}
 
         split_source_diagnostics = {
             "regular_splits": {
@@ -1125,6 +1310,9 @@ def main():
             "activity_detail_selected_metrics": detail_selected_metrics,
             "activity_detail_sample_count": len(detail_samples),
             "activity_detail_scaling": detail_scale_info,
+            "typed_splits_preview": compact_endpoint_preview(typed_splits_raw),
+            "split_summaries_preview": compact_endpoint_preview(split_summaries_raw),
+            "detail_chunk_diagnostics": detail_chunk_diagnostics,
             "derived_discipline_splits_available": sorted(discipline_splits.keys()),
         }
 
