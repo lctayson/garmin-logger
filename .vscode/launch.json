@@ -1,0 +1,17 @@
+    {
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Garmin Script (Custom Date)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}", // Runs the currently active python file
+            "console": "integratedTerminal",
+            "args": [
+                // "--date",
+                // "2025-07-13" // YYYY-MM-DD, change this date as needed, or remove the args array if you want it to default to today
+            ],
+            "justMyCode": true
+        }
+    ]
+}

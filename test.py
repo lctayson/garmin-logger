@@ -338,7 +338,7 @@ def main():
     }
 
     os.makedirs("data", exist_ok=True)
-    file_path = os.path.join("data", f"garmin_{target_date_str}.json")
+    file_path = os.path.join("data", f"garmin_data_{target_date_str}.json")
     with open(file_path, "w") as f:
         json.dump(payload, f, indent=2)
     print(f"Successfully generated Garmin JSON at: {file_path}")
