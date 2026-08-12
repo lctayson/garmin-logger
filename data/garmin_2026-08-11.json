@@ -1,48 +1,125 @@
 {
-    "date": "2026-08-11",
-    "training_history": {
-        "7_day_distance_km": 34.9,
-        "28_day_avg_weekly_distance_km": 38.5,
-        "weekly_distance_last_4_weeks_km": [
-            32.8,
-            48.1,
-            38.2,
-            34.9
-        ]
-    },
-    "health_metrics": {
-        "resting_hr": 61,
-        "hrv": {
-            "last_night_avg_ms": 45,
-            "seven_day_avg_ms": 47,
-            "status": "UNBALANCED",
-            "baseline_balanced_range": {
-                "balanced_low": 48,
-                "balanced_upper": 58
-            }
-        },
-        "sleep_score": 57,
-        "total_sleep_hours": 5.82
-    },
-    "subjective": {
-        "leg_soreness_0_10": null,
-        "leg_heaviness_0_10": null,
-        "overall_fatigue_0_10": null,
-        "motivation_0_10": null,
-        "notes": null
-    },
-    "activities": [
-        {
-            "summary": {
-                "activity_id": 23929134788,
-                "activity_type": "walking",
-                "activity_name": "Malolos Walking",
-                "start_time": "2026-08-11 06:06:51",
-                "duration_min": 47.49,
-                "avg_hr": 93,
-                "max_hr": 104,
-                "exercise_load": 5
-            }
-        }
+  "date": "2026-08-11",
+  "training_history": {
+    "7_day_distance_km": 34.9,
+    "28_day_avg_weekly_distance_km": 38.5,
+    "weekly_distance_last_4_weeks_km": [
+      32.8,
+      48.1,
+      38.2,
+      34.9
     ]
+  },
+  "health_metrics": {
+    "resting_heart_rate": 58,
+    "hrv": {
+      "last_night_avg_ms": 45,
+      "seven_day_avg_ms": 47,
+      "status": "UNBALANCED",
+      "baseline_balanced_range": {
+        "lowUpper": 45,
+        "balancedLow": 48,
+        "balancedUpper": 58,
+        "markerValue": 0.2242737
+      }
+    },
+    "training_status": {
+      "vo2_max": null
+    },
+    "sleep_score": 57,
+    "total_sleep_hours": 5.82,
+    "sleep_stages_hours": {
+      "deep": 0.63,
+      "light": 5.18,
+      "rem": 0.0,
+      "awake": 0.22
+    },
+    "total_steps": 6567
+  },
+  "activities": [
+    {
+      "activityId": 23929134788,
+      "name": "Malolos Walking",
+      "type": "walking",
+      "distance_km": 3.03,
+      "duration_mins": 47.49,
+      "avg_pace": "15:42",
+      "average_hr": 93.0,
+      "max_hr": 104.0,
+      "aerobic_training_effect": 0.4,
+      "anaerobic_training_effect": 0.0,
+      "activity_splits": [
+        {
+          "lap": 1,
+          "distance_km": 1.0,
+          "time_min": 15.44,
+          "cumulative_time_min": 15.44,
+          "moving_time_min": 15.38,
+          "avg_pace": "15:26",
+          "avg_moving_pace": "15:23",
+          "best_pace": "13:20",
+          "avg_hr": 90,
+          "max_hr": 99,
+          "calories": 58,
+          "cadence_spm": 98,
+          "max_cadence_spm": 115,
+          "elevation_gain_m": 2.0,
+          "elevation_loss_m": 1.0,
+          "intensityType": "ACTIVE"
+        },
+        {
+          "lap": 2,
+          "distance_km": 1.0,
+          "time_min": 16.5,
+          "cumulative_time_min": 31.94,
+          "moving_time_min": 16.5,
+          "avg_pace": "16:30",
+          "avg_moving_pace": "16:30",
+          "best_pace": "13:32",
+          "avg_hr": 93,
+          "max_hr": 101,
+          "calories": 59,
+          "cadence_spm": 87,
+          "max_cadence_spm": 111,
+          "elevation_gain_m": 2.0,
+          "elevation_loss_m": 2.0,
+          "intensityType": "ACTIVE"
+        },
+        {
+          "lap": 3,
+          "distance_km": 1.0,
+          "time_min": 15.18,
+          "cumulative_time_min": 47.12,
+          "moving_time_min": 15.18,
+          "avg_pace": "15:11",
+          "avg_moving_pace": "15:11",
+          "best_pace": "13:58",
+          "avg_hr": 95,
+          "max_hr": 104,
+          "calories": 57,
+          "cadence_spm": 95,
+          "max_cadence_spm": 110,
+          "elevation_gain_m": 2.0,
+          "elevation_loss_m": 3.0,
+          "intensityType": "ACTIVE"
+        },
+        {
+          "lap": 4,
+          "distance_km": 0.025,
+          "time_min": 0.37,
+          "cumulative_time_min": 47.49,
+          "moving_time_min": 0.35,
+          "avg_pace": "14:33",
+          "avg_moving_pace": "13:51",
+          "best_pace": "15:57",
+          "avg_hr": 99,
+          "max_hr": 102,
+          "calories": 1,
+          "cadence_spm": 105,
+          "max_cadence_spm": 107,
+          "intensityType": "ACTIVE"
+        }
+      ]
+    }
+  ]
 }
