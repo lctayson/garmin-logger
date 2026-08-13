@@ -105,8 +105,9 @@ def get_training_history(api, target_date):
         "weekly_distance_last_4_weeks_km": weekly_distances
     }
 
-def get_health_metrics(api, target_date_str):
-    """Fetch and format health metrics including HRV weekly average and VO2 max."""
+def get_health_stats(api, target_date_str):
+    """Fetch and format daily health stats: resting HR, HRV, sleep. (VO2max
+    moved to the training_status block — see get_training_status_details.)"""
     stats = {}
     try:
         stats = api.get_stats(target_date_str)
@@ -166,15 +167,16 @@ def get_health_metrics(api, target_date_str):
     except Exception:
         pass
 
-    vo2_max = None
-    try:
-        max_metrics = api.get_max_metrics(target_date_str)
-        if isinstance(max_metrics, list) and len(max_metrics) > 0:
-            m_item = max_metrics[0]
-            vo2_max = safe_float(deep_get(m_item, ["vo2MaxValue", "vo2Max", "generic.vo2MaxValue"]))
-    except Exception:
-        pass
-
+    # Note: VO2max now lives exclusively under the top-level "training_status"
+    # block (see get_training_status_details), grouped with its qualitative
+    # label (e.g. "Excellent") to match how Garmin Connect itself groups it,
+    # and pulled from the training-status endpoint's own vo2MaxValue field
+    # rather than a separate get_max_metrics() call — one less API round trip
+    # and no duplicate source of truth for the same number.
+    #
+    # Note: HRV stays here (not duplicated into training_status) because
+    # get_hrv_data() — called above — is the API call that actually returns
+    # it; the training-status endpoint doesn't carry HRV in what it returns.
     return {
         "resting_heart_rate": rhr,
         "hrv": {
@@ -183,14 +185,183 @@ def get_health_metrics(api, target_date_str):
             "status": hrv_status,
             "baseline_balanced_range": baseline_balanced_range
         },
-        "training_status": {
-            "vo2_max": vo2_max
-        },
         "sleep_score": sleep_score,
         "total_sleep_hours": total_sleep_hours,
         "sleep_stages_hours": {k: v for k, v in sleep_stages_hours.items() if v is not None},
         "total_steps": total_steps
     }
+
+def humanize_enum(s):
+    """Turn a Garmin ALL_CAPS_ENUM string (e.g. 'ANAEROBIC_DEFICIENT') into a
+    human-readable label ('Anaerobic Deficient'). Leaves already-readable
+    strings untouched."""
+    if not isinstance(s, str) or not s:
+        return None
+    return s.replace("_", " ").strip().title()
+
+# Best-effort numeric -> label map for the overall Training Status widget
+# (Productive / Recovery / Maintaining / etc). Garmin's aggregated training
+# status endpoint sometimes returns this as an int code rather than a
+# string. Reconstructed from community documentation of this endpoint;
+# if it doesn't match your account's actual values, the raw code is kept
+# under "status" as a fallback rather than silently dropped, and a debug
+# note is printed to stderr (see get_training_status_details).
+TRAINING_STATUS_CODE_MAP = {
+    0: "No Status",
+    1: "Detraining",
+    2: "Recovery",
+    3: "Maintaining",
+    4: "Productive",
+    5: "Peaking",
+    6: "Overreaching",
+    7: "Unproductive",
+    8: "Strained",
+}
+
+def _label_training_status(raw):
+    if raw is None:
+        return None
+    if isinstance(raw, str):
+        return humanize_enum(raw)
+    code = safe_int(raw)
+    if code is not None and code in TRAINING_STATUS_CODE_MAP:
+        return TRAINING_STATUS_CODE_MAP[code]
+    return raw  # unmapped/unknown shape — surface it as-is instead of hiding it
+
+def get_training_status_details(api, target_date_str):
+    """Fetch the Garmin Connect 'Training Status' widget: overall status
+    (e.g. Productive), Load Focus (e.g. Anaerobic Shortage), Acute Training
+    Load, Heat/Altitude Acclimation, and Recovery time.
+
+    Deliberately does NOT include HRV — that stays under health_stats.hrv,
+    since get_hrv_data() (not this endpoint) is what actually returns it.
+    VO2max (value + qualitative label, e.g. "Excellent") lives here instead
+    of health_stats, matching how Garmin Connect itself groups it, and is
+    sourced from this same response rather than a separate API call.
+    """
+    try:
+        raw = api.get_training_status(target_date_str)
+    except Exception as e:
+        print(f"[training_status] Warning: could not fetch training status: {e}", file=sys.stderr)
+        return {}
+
+    if not isinstance(raw, dict):
+        return {}
+
+    result = {}
+
+    # --- Overall training status (e.g. "Productive") ---
+    status_block = raw.get("mostRecentTrainingStatus", {}) or {}
+    device_map = status_block.get("latestTrainingStatusData", {}) or {}
+    device_entry = next(iter(device_map.values()), {}) if isinstance(device_map, dict) else {}
+
+    overall_status_raw = deep_get(device_entry, ["trainingStatus", "trainingStatusFeedbackPhrase"])
+    result["status"] = _label_training_status(overall_status_raw)
+
+    # --- Acute training load (e.g. 582, "Optimal") ---
+    acute_load = device_entry.get("dailyTrainingLoadAcute") or device_entry.get("dailyAcuteTrainingLoad")
+    acwr_status = device_entry.get("acwrStatus") or device_entry.get("dailyAcuteChronicWorkloadRatioStatus")
+    if acute_load is not None or acwr_status:
+        result["acute_training_load"] = {
+            "value": safe_int(acute_load),
+            "status": humanize_enum(acwr_status) if isinstance(acwr_status, str) else acwr_status
+        }
+
+    # --- Recovery time (hours until recovered, as shown on the watch) ---
+    recovery_hours = (
+        device_entry.get("recoveryTime")
+        or device_entry.get("recoveryTimeHours")
+        or deep_get(raw, ["mostRecentTrainingLoadBalance.recoveryTime"])
+    )
+    if recovery_hours is not None:
+        result["recovery_time_hours"] = safe_int(recovery_hours)
+
+    # --- Load focus (e.g. "Anaerobic Shortage") ---
+    balance_block = raw.get("mostRecentTrainingLoadBalance", {}) or {}
+    balance_map = balance_block.get("metricsTrainingLoadBalanceDTOMap", {}) or {}
+    balance_entry = next(iter(balance_map.values()), {}) if isinstance(balance_map, dict) else {}
+    load_focus_raw = (
+        balance_entry.get("trainingLoadBalanceFeedbackPhrase")
+        or balance_entry.get("trainingBalanceFeedbackPhrase")
+    )
+    if load_focus_raw:
+        result["load_focus"] = humanize_enum(load_focus_raw) if isinstance(load_focus_raw, str) else load_focus_raw
+
+    # --- VO2max (value, + qualitative label like "Excellent" IF Garmin's API
+    # actually includes it). Grouped together to match how Garmin Connect
+    # presents it, sourced from this same training-status response — no
+    # separate get_max_metrics() call needed.
+    #
+    # Note: Garmin's app/web UI appears to compute the "Excellent"-style
+    # label client-side from age/gender VO2max norm tables rather than
+    # returning it as a field here. We check a few plausible field names in
+    # case it IS present for some accounts, but we deliberately do NOT try
+    # to reconstruct the label ourselves (would require hardcoding Garmin's
+    # unpublished threshold tables plus your age/sex, with real risk of
+    # mislabeling you) — if it's not in the response, we just omit the key
+    # instead of shipping a null.
+    vo2_block = raw.get("mostRecentVO2Max", {}) or {}
+    vo2_generic = vo2_block.get("generic", {}) if isinstance(vo2_block.get("generic"), dict) else {}
+    vo2_value = safe_float(deep_get(vo2_generic, ["vo2MaxValue", "vo2MaxPreciseValue", "vo2Max"]))
+    vo2_status = (
+        vo2_generic.get("vo2MaxStatus")
+        or vo2_generic.get("fitnessLevel")
+        or vo2_generic.get("vo2MaxCategory")
+        or vo2_generic.get("category")
+        or deep_get(vo2_block, ["vo2MaxStatus", "fitnessLevel"])
+    )
+
+    if vo2_value is not None or vo2_status:
+        vo2_max_obj = {}
+        if vo2_value is not None:
+            vo2_max_obj["value"] = vo2_value
+        if vo2_status:
+            vo2_max_obj["status"] = humanize_enum(vo2_status) if isinstance(vo2_status, str) else vo2_status
+        else:
+            print(
+                f"[training_status] Note: no VO2max qualitative label found "
+                f"(checked vo2MaxStatus/fitnessLevel/vo2MaxCategory/category). "
+                f"Keys actually present under mostRecentVO2Max.generic: "
+                f"{list(vo2_generic.keys())}. Garmin most likely computes this "
+                f"label client-side from age/gender norm tables rather than "
+                f"returning it here — omitting the status field rather than "
+                f"shipping a null. The numeric value is unaffected.",
+                file=sys.stderr
+            )
+        result["vo2_max"] = vo2_max_obj
+
+    # --- Heat / altitude acclimation (e.g. 100%, "Maintaining") ---
+    heat_block = raw.get("heatAltitudeAcclimation", {}) or {}
+    heat_pct = heat_block.get("heatAcclimationPercentage")
+    heat_trend = heat_block.get("heatTrend")
+    altitude_pct = heat_block.get("altitudeAcclimationPercentage")
+    altitude_trend = heat_block.get("altitudeTrend")
+    if heat_pct is not None or heat_trend:
+        result["heat_acclimation"] = {
+            "percentage": safe_int(heat_pct),
+            "trend": humanize_enum(heat_trend) if isinstance(heat_trend, str) else heat_trend
+        }
+    if altitude_pct is not None or altitude_trend:
+        result["altitude_acclimation"] = {
+            "percentage": safe_int(altitude_pct),
+            "trend": humanize_enum(altitude_trend) if isinstance(altitude_trend, str) else altitude_trend
+        }
+
+    cleaned = {k: v for k, v in result.items() if v is not None}
+    cleaned = {
+        k: v for k, v in cleaned.items()
+        if not (isinstance(v, dict) and not any(vv is not None for vv in v.values()))
+    }
+
+    if not cleaned:
+        print(
+            f"[training_status] Warning: no recognizable fields extracted from "
+            f"get_training_status() response. Top-level keys returned: "
+            f"{list(raw.keys())}. Field-name mapping may need adjustment.",
+            file=sys.stderr
+        )
+
+    return cleaned
 
 def get_activity_splits(api, activity_id, activity_type="run"):
     """Fetch and format activity splits lap list aligned with Garmin Connect export headers."""
@@ -490,13 +661,15 @@ def main():
     api.login(token_dir)
 
     training_history = get_training_history(api, target_date)
-    health_metrics = get_health_metrics(api, target_date_str)
+    health_stats = get_health_stats(api, target_date_str)
+    training_status = get_training_status_details(api, target_date_str)
     activities = get_activities(api, target_date_str)
 
     payload = {
         "date": target_date_str,
         "training_history": training_history,
-        "health_metrics": health_metrics,
+        "health_stats": health_stats,
+        "training_status": training_status,
         "activities": activities
     }
 
