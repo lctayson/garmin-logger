@@ -10,7 +10,7 @@
       35.9
     ]
   },
-  "health_metrics": {
+  "health_stats": {
     "resting_heart_rate": 59,
     "hrv": {
       "last_night_avg_ms": 43,
@@ -23,9 +23,6 @@
         "markerValue": 0.1377716
       }
     },
-    "training_status": {
-      "vo2_max": 45.0
-    },
     "sleep_score": 78,
     "total_sleep_hours": 5.77,
     "sleep_stages_hours": {
@@ -34,7 +31,14 @@
       "rem": 1.05,
       "awake": 0.18
     },
-    "total_steps": 83
+    "total_steps": 9417
+  },
+  "training_status": {
+    "status": "Unproductive",
+    "load_focus": "Anaerobic Shortage",
+    "vo2_max": {
+      "value": 45.0
+    }
   },
   "activities": [
     {
