@@ -1,0 +1,33 @@
+{
+  "date": "2026-08-14",
+  "training_history": {
+    "7_day_distance_km": 35.9,
+    "28_day_avg_weekly_distance_km": 38.5,
+    "weekly_distance_last_4_weeks_km": [
+      36.8,
+      45.1,
+      36.2,
+      35.9
+    ]
+  },
+  "health_stats": {
+    "resting_heart_rate": null,
+    "hrv": {
+      "last_night_avg_ms": null,
+      "seven_day_avg_ms": null,
+      "status": null,
+      "baseline_balanced_range": {
+        "lowUpper": null,
+        "balancedLow": null,
+        "balancedUpper": null,
+        "markerValue": null
+      }
+    },
+    "sleep_score": null,
+    "total_sleep_hours": null,
+    "sleep_stages_hours": {},
+    "total_steps": null
+  },
+  "training_status": {},
+  "activities": []
+}
