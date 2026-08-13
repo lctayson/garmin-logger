@@ -11,23 +11,34 @@
     ]
   },
   "health_stats": {
-    "resting_heart_rate": null,
+    "resting_heart_rate": 60,
     "hrv": {
-      "last_night_avg_ms": null,
-      "seven_day_avg_ms": null,
-      "status": null,
+      "last_night_avg_ms": 47,
+      "seven_day_avg_ms": 46,
+      "status": "UNBALANCED",
       "baseline_balanced_range": {
-        "lowUpper": null,
-        "balancedLow": null,
-        "balancedUpper": null,
-        "markerValue": null
+        "lowUpper": 45,
+        "balancedLow": 47,
+        "balancedUpper": 58,
+        "markerValue": 0.1743469
       }
     },
-    "sleep_score": null,
-    "total_sleep_hours": null,
-    "sleep_stages_hours": {},
+    "sleep_score": 74,
+    "total_sleep_hours": 7.15,
+    "sleep_stages_hours": {
+      "deep": 0.52,
+      "light": 5.4,
+      "rem": 1.23,
+      "awake": 0.85
+    },
     "total_steps": null
   },
-  "training_status": {},
+  "training_status": {
+    "status": "Unproductive",
+    "load_focus": "Anaerobic Shortage",
+    "vo2_max": {
+      "value": 45.0
+    }
+  },
   "activities": []
 }
