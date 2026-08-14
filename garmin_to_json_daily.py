@@ -190,8 +190,7 @@ def humanize_enum(s):
 
 def get_training_status_details(api, target_date_str):
     """Fetch the Garmin Connect 'Training Status' widget: overall status,
-    Load Focus, Acute/Chronic Training Load + ACWR, Heat/Altitude
-    Acclimation, VO2max, and Recovery time."""
+    Load Focus, Acute Training Load, Heat/Altitude Acclimation, and Recovery time."""
     try:
         raw = api.get_training_status(target_date_str)
     except Exception as e:
@@ -203,7 +202,7 @@ def get_training_status_details(api, target_date_str):
 
     result = {}
 
-    # --- Overall training status (e.g. "Productive 5") ---
+    # --- Overall training status (e.g. "Productive") ---
     status_block = raw.get("mostRecentTrainingStatus", {}) or {}
     device_map = status_block.get("latestTrainingStatusData", {}) or {}
     device_entry = next(iter(device_map.values()), {}) if isinstance(device_map, dict) else {}
@@ -227,33 +226,14 @@ def get_training_status_details(api, target_date_str):
         else:
             result["status"] = raw_code
 
-    # --- Acute/Chronic training load + ACWR ---
-    # BUGFIX: Garmin nests these fields under device_entry["acuteTrainingLoadDTO"],
-    # NOT directly on device_entry. The previous version looked at the wrong
-    # level and silently returned nothing for acute_training_load in most cases.
-    acute_dto = device_entry.get("acuteTrainingLoadDTO", {}) or {}
-
-    acute_load = acute_dto.get("dailyTrainingLoadAcute")
-    chronic_load = acute_dto.get("dailyTrainingLoadChronic")
-    chronic_load_min = acute_dto.get("minTrainingLoadChronic")
-    chronic_load_max = acute_dto.get("maxTrainingLoadChronic")
-    acwr_ratio = acute_dto.get("dailyAcuteChronicWorkloadRatio")
-    acwr_percent = acute_dto.get("acwrPercent")
-    acwr_status = acute_dto.get("acwrStatus")
-
-    if any(v is not None for v in [acute_load, chronic_load, acwr_ratio, acwr_status]):
-        result["training_load"] = {
-            "acute_load": safe_int(acute_load),
-            "chronic_load": safe_int(chronic_load),
-            "chronic_load_range": {
-                "min": safe_float(chronic_load_min, 1),
-                "max": safe_float(chronic_load_max, 1)
-            } if (chronic_load_min is not None or chronic_load_max is not None) else None,
-            "acwr": safe_float(acwr_ratio, 2),
-            "acwr_percent": safe_int(acwr_percent),
-            "acwr_status": humanize_enum(acwr_status) if isinstance(acwr_status, str) else acwr_status
+    # --- Acute training load (e.g. 582, "Optimal") ---
+    acute_load = device_entry.get("dailyTrainingLoadAcute") or device_entry.get("dailyAcuteTrainingLoad")
+    acwr_status = device_entry.get("acwrStatus") or device_entry.get("dailyAcuteChronicWorkloadRatioStatus")
+    if acute_load is not None or acwr_status:
+        result["acute_training_load"] = {
+            "value": safe_int(acute_load),
+            "status": humanize_enum(acwr_status) if isinstance(acwr_status, str) else acwr_status
         }
-        result["training_load"] = {k: v for k, v in result["training_load"].items() if v is not None}
 
     # --- Recovery time (hours until recovered, as shown on the watch) ---
     recovery_hours = (
@@ -275,29 +255,19 @@ def get_training_status_details(api, target_date_str):
     if load_focus_raw:
         result["load_focus"] = humanize_enum(load_focus_raw) if isinstance(load_focus_raw, str) else load_focus_raw
 
-    # Also surface the monthly aerobic/anaerobic load targets vs actuals from
-    # the same balance block -- this is what tells you e.g. "0 anaerobic load
-    # this month against a 217-652 target", which the old script dropped.
-    if balance_entry:
-        monthly_load = {
-            "aerobic_low": safe_float(balance_entry.get("monthlyLoadAerobicLow"), 1),
-            "aerobic_low_target_min": safe_int(balance_entry.get("monthlyLoadAerobicLowTargetMin")),
-            "aerobic_low_target_max": safe_int(balance_entry.get("monthlyLoadAerobicLowTargetMax")),
-            "aerobic_high": safe_float(balance_entry.get("monthlyLoadAerobicHigh"), 1),
-            "aerobic_high_target_min": safe_int(balance_entry.get("monthlyLoadAerobicHighTargetMin")),
-            "aerobic_high_target_max": safe_int(balance_entry.get("monthlyLoadAerobicHighTargetMax")),
-            "anaerobic": safe_float(balance_entry.get("monthlyLoadAnaerobic"), 1),
-            "anaerobic_target_min": safe_int(balance_entry.get("monthlyLoadAnaerobicTargetMin")),
-            "anaerobic_target_max": safe_int(balance_entry.get("monthlyLoadAnaerobicTargetMax")),
-        }
-        monthly_load = {k: v for k, v in monthly_load.items() if v is not None}
-        if monthly_load:
-            result["monthly_load_balance"] = monthly_load
-
     # --- VO2max (value, + qualitative label like "Excellent" IF Garmin's API
     # actually includes it). Grouped together to match how Garmin Connect
-    # presents it, sourced from this same training-status response -- no
+    # presents it, sourced from this same training-status response — no
     # separate get_max_metrics() call needed.
+    #
+    # Note: Garmin's app/web UI appears to compute the "Excellent"-style
+    # label client-side from age/gender VO2max norm tables rather than
+    # returning it as a field here. We check a few plausible field names in
+    # case it IS present for some accounts, but we deliberately do NOT try
+    # to reconstruct the label ourselves (would require hardcoding Garmin's
+    # unpublished threshold tables plus your age/sex, with real risk of
+    # mislabeling you) — if it's not in the response, we just omit the key
+    # instead of shipping a null.
     vo2_block = raw.get("mostRecentVO2Max", {}) or {}
     vo2_generic = vo2_block.get("generic", {}) if isinstance(vo2_block.get("generic"), dict) else {}
     vo2_value = safe_float(deep_get(vo2_generic, ["vo2MaxValue", "vo2MaxPreciseValue", "vo2Max"]))
@@ -315,13 +285,24 @@ def get_training_status_details(api, target_date_str):
             vo2_max_obj["value"] = vo2_value
         if vo2_status:
             vo2_max_obj["status"] = humanize_enum(vo2_status) if isinstance(vo2_status, str) else vo2_status
+        else:
+            print(
+                f"[training_status] Note: no VO2max qualitative label found "
+                f"(checked vo2MaxStatus/fitnessLevel/vo2MaxCategory/category). "
+                f"Keys actually present under mostRecentVO2Max.generic: "
+                f"{list(vo2_generic.keys())}. Garmin most likely computes this "
+                f"label client-side from age/gender norm tables rather than "
+                f"returning it here — omitting the status field rather than "
+                f"shipping a null. The numeric value is unaffected.",
+                file=sys.stderr
+            )
         result["vo2_max"] = vo2_max_obj
 
-    # --- Heat / altitude acclimation (e.g. 100%, "Acclimatized") ---
-    heat_block = raw.get("mostRecentVO2Max", {}).get("heatAltitudeAcclimation", {}) or raw.get("heatAltitudeAcclimation", {}) or {}
+    # --- Heat / altitude acclimation (e.g. 100%, "Maintaining") ---
+    heat_block = raw.get("heatAltitudeAcclimation", {}) or {}
     heat_pct = heat_block.get("heatAcclimationPercentage")
     heat_trend = heat_block.get("heatTrend")
-    altitude_pct = heat_block.get("altitudeAcclimationPercentage") or heat_block.get("acclimationPercentage")
+    altitude_pct = heat_block.get("altitudeAcclimationPercentage")
     altitude_trend = heat_block.get("altitudeTrend")
     if heat_pct is not None or heat_trend:
         result["heat_acclimation"] = {
@@ -349,96 +330,6 @@ def get_training_status_details(api, target_date_str):
         )
 
     return cleaned
-
-def get_metric_trend(api, target_date, days=14, interval=1):
-    """Build a trend series (RHR, HRV, sleep, VO2max, training load/ACWR,
-    training status) sampled every `interval` days over the trailing `days`
-    days. This is what lets a coach see direction of travel -- e.g. is
-    VO2max rising or flat, is chronic load actually where it should be, is
-    HRV trending down across a week -- rather than a single noisy snapshot.
-
-    `interval` controls resolution vs. API call cost:
-    - interval=1 (daily): needed for genuinely noisy day-to-day metrics
-      like HRV/RHR/sleep over a short window (5-14 days).
-    - interval=7 (weekly): appropriate for slow-moving metrics like VO2max
-      and 28-day-rolling chronic load over a long window (8-12+ weeks) --
-      daily sampling there just measures a smooth number with more calls
-      than the data actually has resolution to support.
-
-    Note: this makes ~2 API calls per SAMPLED day, so days=84, interval=7
-    makes ~24 calls (12 weekly points), not ~168.
-    """
-    sample_offsets = list(range(0, days, interval))
-    if sample_offsets and sample_offsets[-1] != days - 1:
-        sample_offsets.append(days - 1)  # always include the most recent day
-
-    trend = []
-    for offset in sample_offsets:
-        d = target_date - timedelta(days=days - 1 - offset)
-        d_str = d.isoformat()
-        try:
-            health = get_health_stats(api, d_str)
-        except Exception:
-            health = {}
-        try:
-            status = get_training_status_details(api, d_str)
-        except Exception:
-            status = {}
-
-        entry = {
-            "date": d_str,
-            "resting_heart_rate": health.get("resting_heart_rate"),
-            "hrv_last_night_avg_ms": deep_get(health, ["hrv.last_night_avg_ms"]),
-            "hrv_seven_day_avg_ms": deep_get(health, ["hrv.seven_day_avg_ms"]),
-            "total_sleep_hours": health.get("total_sleep_hours"),
-            "sleep_score": health.get("sleep_score"),
-            "vo2_max": deep_get(status, ["vo2_max.value"]),
-            "training_status": status.get("status"),
-            "acute_load": deep_get(status, ["training_load.acute_load"]),
-            "chronic_load": deep_get(status, ["training_load.chronic_load"]),
-            "acwr": deep_get(status, ["training_load.acwr"]),
-            "acwr_status": deep_get(status, ["training_load.acwr_status"]),
-        }
-        trend.append({k: v for k, v in entry.items() if v is not None})
-
-    return trend
-
-def get_body_battery_trend(api, target_date, days=7):
-    """Fetch daily Body Battery high/low and charged/drained values over the
-    trailing `days` days -- a proxy for how well you're actually recovering
-    day to day, complementary to HRV/RHR."""
-    start_date = target_date - timedelta(days=days - 1)
-    try:
-        bb_data = api.get_body_battery(start_date.isoformat(), target_date.isoformat())
-    except Exception as e:
-        print(f"[body_battery] Warning: could not fetch body battery trend: {e}", file=sys.stderr)
-        return []
-
-    trend = []
-    if isinstance(bb_data, list):
-        for day_entry in bb_data:
-            if not isinstance(day_entry, dict):
-                continue
-            cal_date = day_entry.get("date") or day_entry.get("calendarDate")
-            charged = safe_int(day_entry.get("charged"))
-            drained = safe_int(day_entry.get("drained"))
-
-            values = day_entry.get("bodyBatteryValuesArray") or []
-            levels = [
-                v[1] for v in values
-                if isinstance(v, (list, tuple)) and len(v) > 1 and v[1] is not None
-            ]
-
-            entry = {
-                "date": cal_date,
-                "charged": charged,
-                "drained": drained,
-                "high": max(levels) if levels else None,
-                "low": min(levels) if levels else None
-            }
-            trend.append({k: v for k, v in entry.items() if v is not None})
-
-    return trend
 
 def get_activity_splits(api, activity_id, activity_type="run"):
     """Fetch and format activity splits lap list aligned with Garmin Connect export headers."""
@@ -571,6 +462,7 @@ def get_child_activity_ids(api, parent_activity_id):
         or []
     )
 
+    # Normalize to a flat list of ints/strings, filtering out falsy values.
     if isinstance(child_ids, dict):
         child_ids = list(child_ids.values())
     child_ids = [c for c in (child_ids or []) if c]
@@ -645,6 +537,8 @@ def expand_multisport_activity(api, parent_act):
     for child_id in child_ids:
         child_obj = get_child_activity_summary(api, child_id)
 
+        # Give transitions a friendlier, distinguishable label (T1/T2) since
+        # Garmin typically types both the same way (e.g. "transition").
         if "transition" in (child_obj.get("type") or "").lower():
             transition_count += 1
             child_obj["name"] = f"Transition {transition_count} (T{transition_count})"
@@ -678,6 +572,8 @@ def get_activities(api, target_date_str):
             if legs:
                 formatted_activities.extend(legs)
                 continue
+            # else: no children resolved, fall through and keep old behavior
+            # so at least something is still written to the output file.
 
         distance_m = act.get("distance", 0) or 0
         distance_km = round(distance_m / 1000.0, 2) if distance_m else 0.0
@@ -707,30 +603,11 @@ def get_activities(api, target_date_str):
         formatted_activities.append({k: v for k, v in activity_obj.items() if v is not None})
     return formatted_activities
 
-def strip_volatile_fields(payload):
-    """Return a copy of payload with fields that intentionally change on every
-    run but don't reflect any real new data (e.g. the run timestamp) removed,
-    so two payloads can be compared for MEANINGFUL change."""
-    stripped = dict(payload)
-    stripped.pop("generated_at_local", None)
-    return stripped
-
 def main():
     ph_today = datetime.now(ZoneInfo("Asia/Manila")).strftime("%Y-%m-%d")
 
     parser = argparse.ArgumentParser(description="Fetch Garmin data with Garmin export-aligned lap splits.")
     parser.add_argument("--date", type=str, default=ph_today, help="Date in YYYY-MM-DD format")
-    parser.add_argument("--trend-days", type=int, default=7,
-                         help="Number of trailing days for the DAILY trend series "
-                              "(RHR/HRV/sleep -- noisy metrics that need daily resolution). "
-                              "Set to 0 to skip.")
-    parser.add_argument("--trend-weeks", type=int, default=12,
-                         help="Number of trailing weeks for the WEEKLY-sampled long-range trend "
-                              "(VO2max/chronic load -- slow-moving metrics, weekly resolution is "
-                              "sufficient and far cheaper on API calls). Set to 0 to skip.")
-    parser.add_argument("--body-battery-days", type=int, default=7,
-                         help="Number of trailing days to include in the Body Battery trend. "
-                              "Set to 0 to skip.")
     args = parser.parse_args()
     target_date_str = args.date
 
@@ -758,44 +635,17 @@ def main():
 
     payload = {
         "date": target_date_str,
-        "generated_at_local": datetime.now(ZoneInfo("Asia/Manila")).isoformat(timespec="minutes"),
         "training_history": training_history,
         "health_stats": health_stats,
         "training_status": training_status,
         "activities": activities
     }
 
-    if args.trend_days > 0:
-        payload["trend_recent_daily"] = get_metric_trend(api, target_date, days=args.trend_days, interval=1)
-
-    if args.trend_weeks > 0:
-        payload["trend_long_range_weekly"] = get_metric_trend(
-            api, target_date, days=args.trend_weeks * 7, interval=7
-        )
-
-    if args.body_battery_days > 0:
-        payload["body_battery_trend"] = get_body_battery_trend(api, target_date, days=args.body_battery_days)
-
     os.makedirs("data", exist_ok=True)
     file_path = os.path.join("data", f"garmin_{target_date_str}.json")
-
-    existing_payload = None
-    if os.path.exists(file_path):
-        try:
-            with open(file_path) as f:
-                existing_payload = json.load(f)
-        except Exception:
-            existing_payload = None  # corrupt/partial file from a prior run -- just overwrite it
-
-    if existing_payload is not None and strip_volatile_fields(existing_payload) == strip_volatile_fields(payload):
-        print(
-            f"No meaningful change since last run (only generated_at_local would differ) -- "
-            f"skipping write to keep git history clean: {file_path}"
-        )
-    else:
-        with open(file_path, "w") as f:
-            json.dump(payload, f, indent=2)
-        print(f"Successfully generated Garmin JSON at: {file_path}")
+    with open(file_path, "w") as f:
+        json.dump(payload, f, indent=2)
+    print(f"Successfully generated Garmin JSON at: {file_path}")
 
 if __name__ == "__main__":
     main()
