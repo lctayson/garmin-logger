@@ -1,0 +1,410 @@
+{
+  "date": "2026-08-15",
+  "generated_at_local": "2026-08-15T07:00+08:00",
+  "training_history": {
+    "7_day_distance_km": 32.4,
+    "28_day_avg_weekly_distance_km": 37.6,
+    "weekly_distance_last_4_weeks_km": [
+      51.3,
+      41.1,
+      25.6,
+      32.4
+    ]
+  },
+  "health_stats": {
+    "resting_heart_rate": 56,
+    "hrv": {
+      "last_night_avg_ms": 54,
+      "seven_day_avg_ms": 46,
+      "status": "UNBALANCED",
+      "baseline_balanced_range": {
+        "lowUpper": 45,
+        "balancedLow": 47,
+        "balancedUpper": 58,
+        "markerValue": 0.2147675
+      }
+    },
+    "sleep_score": 75,
+    "total_sleep_hours": 5.82,
+    "sleep_stages_hours": {
+      "deep": 0.8,
+      "light": 4.4,
+      "rem": 0.62,
+      "awake": 0.1
+    },
+    "total_steps": 136
+  },
+  "training_status": {
+    "status": "Peaking 1",
+    "training_load": {
+      "acute_load": 328,
+      "chronic_load": 573,
+      "chronic_load_range": {
+        "min": 458.4,
+        "max": 859.5
+      },
+      "acwr": 0.5,
+      "acwr_percent": 20,
+      "acwr_status": "Low"
+    },
+    "load_focus": "Anaerobic Shortage",
+    "monthly_load_balance": {
+      "aerobic_low": 419.6,
+      "aerobic_low_target_min": 380,
+      "aerobic_low_target_max": 1033,
+      "aerobic_high": 2026.2,
+      "aerobic_high_target_min": 816,
+      "aerobic_high_target_max": 1468,
+      "anaerobic": 0.0,
+      "anaerobic_target_min": 217,
+      "anaerobic_target_max": 652
+    },
+    "vo2_max": {
+      "value": 45.0
+    },
+    "heat_acclimation": {
+      "percentage": 100,
+      "trend": "Acclimatized"
+    },
+    "altitude_acclimation": {
+      "percentage": 0,
+      "trend": null
+    }
+  },
+  "activities": [],
+  "trend_recent_daily": [
+    {
+      "date": "2026-08-09",
+      "resting_heart_rate": 61,
+      "hrv_last_night_avg_ms": 40,
+      "hrv_seven_day_avg_ms": 49,
+      "total_sleep_hours": 4.65,
+      "sleep_score": 56,
+      "vo2_max": 45.0,
+      "training_status": "Productive 3",
+      "acute_load": 842,
+      "chronic_load": 689,
+      "acwr": 1.2,
+      "acwr_status": "Optimal"
+    },
+    {
+      "date": "2026-08-10",
+      "resting_heart_rate": 60,
+      "hrv_last_night_avg_ms": 48,
+      "hrv_seven_day_avg_ms": 49,
+      "total_sleep_hours": 7.3,
+      "sleep_score": 82,
+      "vo2_max": 45.0,
+      "training_status": "Productive 3",
+      "acute_load": 717,
+      "chronic_load": 667,
+      "acwr": 1.0,
+      "acwr_status": "Optimal"
+    },
+    {
+      "date": "2026-08-11",
+      "resting_heart_rate": 58,
+      "hrv_last_night_avg_ms": 45,
+      "hrv_seven_day_avg_ms": 47,
+      "total_sleep_hours": 5.82,
+      "sleep_score": 57,
+      "vo2_max": 45.0,
+      "training_status": "Productive 5",
+      "acute_load": 598,
+      "chronic_load": 646,
+      "acwr": 0.9,
+      "acwr_status": "Optimal"
+    },
+    {
+      "date": "2026-08-12",
+      "resting_heart_rate": 59,
+      "hrv_last_night_avg_ms": 48,
+      "hrv_seven_day_avg_ms": 46,
+      "total_sleep_hours": 6.55,
+      "sleep_score": 70,
+      "vo2_max": 45.0,
+      "training_status": "Productive 5",
+      "acute_load": 582,
+      "chronic_load": 637,
+      "acwr": 0.9,
+      "acwr_status": "Optimal"
+    },
+    {
+      "date": "2026-08-13",
+      "resting_heart_rate": 57,
+      "hrv_last_night_avg_ms": 43,
+      "hrv_seven_day_avg_ms": 45,
+      "total_sleep_hours": 5.77,
+      "sleep_score": 78,
+      "vo2_max": 45.0,
+      "training_status": "Productive 5",
+      "acute_load": 520,
+      "chronic_load": 620,
+      "acwr": 0.8,
+      "acwr_status": "Optimal"
+    },
+    {
+      "date": "2026-08-14",
+      "resting_heart_rate": 59,
+      "hrv_last_night_avg_ms": 47,
+      "hrv_seven_day_avg_ms": 46,
+      "total_sleep_hours": 7.15,
+      "sleep_score": 74,
+      "vo2_max": 45.0,
+      "training_status": "Productive 5",
+      "acute_load": 416,
+      "chronic_load": 598,
+      "acwr": 0.6,
+      "acwr_status": "Low"
+    },
+    {
+      "date": "2026-08-15",
+      "resting_heart_rate": 56,
+      "hrv_last_night_avg_ms": 54,
+      "hrv_seven_day_avg_ms": 46,
+      "total_sleep_hours": 5.82,
+      "sleep_score": 75,
+      "vo2_max": 45.0,
+      "training_status": "Peaking 1",
+      "acute_load": 328,
+      "chronic_load": 573,
+      "acwr": 0.5,
+      "acwr_status": "Low"
+    }
+  ],
+  "trend_long_range_weekly": [
+    {
+      "date": "2026-05-24",
+      "resting_heart_rate": 60,
+      "hrv_last_night_avg_ms": 48,
+      "hrv_seven_day_avg_ms": 47,
+      "total_sleep_hours": 3.7,
+      "sleep_score": 48,
+      "vo2_max": 45.0,
+      "training_status": "Maintaining 2",
+      "acute_load": 851,
+      "chronic_load": 670,
+      "acwr": 1.2,
+      "acwr_status": "Optimal"
+    },
+    {
+      "date": "2026-05-31",
+      "resting_heart_rate": 56,
+      "hrv_last_night_avg_ms": 51,
+      "hrv_seven_day_avg_ms": 52,
+      "total_sleep_hours": 4.92,
+      "sleep_score": 71,
+      "vo2_max": 44.0,
+      "training_status": "Maintaining 2",
+      "acute_load": 709,
+      "chronic_load": 695,
+      "acwr": 1.0,
+      "acwr_status": "Optimal"
+    },
+    {
+      "date": "2026-06-07",
+      "resting_heart_rate": 58,
+      "hrv_last_night_avg_ms": 54,
+      "hrv_seven_day_avg_ms": 51,
+      "total_sleep_hours": 6.23,
+      "sleep_score": 71,
+      "vo2_max": 44.0,
+      "training_status": "Maintaining 2",
+      "acute_load": 707,
+      "chronic_load": 713,
+      "acwr": 0.9,
+      "acwr_status": "Optimal"
+    },
+    {
+      "date": "2026-06-14",
+      "resting_heart_rate": 56,
+      "hrv_last_night_avg_ms": 51,
+      "hrv_seven_day_avg_ms": 52,
+      "total_sleep_hours": 4.15,
+      "sleep_score": 62,
+      "vo2_max": 45.0,
+      "training_status": "Maintaining 2",
+      "acute_load": 628,
+      "chronic_load": 664,
+      "acwr": 0.9,
+      "acwr_status": "Optimal"
+    },
+    {
+      "date": "2026-06-21",
+      "resting_heart_rate": 58,
+      "hrv_last_night_avg_ms": 51,
+      "hrv_seven_day_avg_ms": 47,
+      "total_sleep_hours": 5.4,
+      "sleep_score": 59,
+      "vo2_max": 45.0,
+      "training_status": "Maintaining 2",
+      "acute_load": 627,
+      "chronic_load": 617,
+      "acwr": 1.0,
+      "acwr_status": "Optimal"
+    },
+    {
+      "date": "2026-06-28",
+      "resting_heart_rate": 58,
+      "hrv_last_night_avg_ms": 49,
+      "hrv_seven_day_avg_ms": 50,
+      "total_sleep_hours": 5.58,
+      "sleep_score": 56,
+      "vo2_max": 44.0,
+      "training_status": "Maintaining 2",
+      "acute_load": 588,
+      "chronic_load": 599,
+      "acwr": 0.9,
+      "acwr_status": "Optimal"
+    },
+    {
+      "date": "2026-07-05",
+      "resting_heart_rate": 58,
+      "hrv_last_night_avg_ms": 50,
+      "hrv_seven_day_avg_ms": 49,
+      "total_sleep_hours": 5.42,
+      "sleep_score": 59,
+      "vo2_max": 44.0,
+      "training_status": "Maintaining 2",
+      "acute_load": 617,
+      "chronic_load": 608,
+      "acwr": 1.0,
+      "acwr_status": "Optimal"
+    },
+    {
+      "date": "2026-07-12",
+      "resting_heart_rate": 56,
+      "hrv_last_night_avg_ms": 53,
+      "hrv_seven_day_avg_ms": 50,
+      "total_sleep_hours": 5.17,
+      "sleep_score": 56,
+      "vo2_max": 44.0,
+      "training_status": "Maintaining 2",
+      "acute_load": 697,
+      "chronic_load": 638,
+      "acwr": 1.0,
+      "acwr_status": "Optimal"
+    },
+    {
+      "date": "2026-07-19",
+      "resting_heart_rate": 59,
+      "hrv_last_night_avg_ms": 41,
+      "hrv_seven_day_avg_ms": 48,
+      "total_sleep_hours": 3.9,
+      "sleep_score": 47,
+      "vo2_max": 45.0,
+      "training_status": "Maintaining 2",
+      "acute_load": 720,
+      "chronic_load": 640,
+      "acwr": 1.1,
+      "acwr_status": "Optimal"
+    },
+    {
+      "date": "2026-07-26",
+      "resting_heart_rate": 56,
+      "hrv_last_night_avg_ms": 53,
+      "hrv_seven_day_avg_ms": 50,
+      "total_sleep_hours": 4.93,
+      "sleep_score": 64,
+      "vo2_max": 45.0,
+      "training_status": "Maintaining 2",
+      "acute_load": 788,
+      "chronic_load": 663,
+      "acwr": 1.1,
+      "acwr_status": "Optimal"
+    },
+    {
+      "date": "2026-08-02",
+      "resting_heart_rate": 57,
+      "hrv_last_night_avg_ms": 52,
+      "hrv_seven_day_avg_ms": 50,
+      "total_sleep_hours": 4.03,
+      "sleep_score": 54,
+      "vo2_max": 45.0,
+      "training_status": "Productive 3",
+      "acute_load": 690,
+      "chronic_load": 684,
+      "acwr": 1.0,
+      "acwr_status": "Optimal"
+    },
+    {
+      "date": "2026-08-09",
+      "resting_heart_rate": 61,
+      "hrv_last_night_avg_ms": 40,
+      "hrv_seven_day_avg_ms": 49,
+      "total_sleep_hours": 4.65,
+      "sleep_score": 56,
+      "vo2_max": 45.0,
+      "training_status": "Productive 3",
+      "acute_load": 842,
+      "chronic_load": 689,
+      "acwr": 1.2,
+      "acwr_status": "Optimal"
+    },
+    {
+      "date": "2026-08-15",
+      "resting_heart_rate": 56,
+      "hrv_last_night_avg_ms": 54,
+      "hrv_seven_day_avg_ms": 46,
+      "total_sleep_hours": 5.82,
+      "sleep_score": 75,
+      "vo2_max": 45.0,
+      "training_status": "Peaking 1",
+      "acute_load": 328,
+      "chronic_load": 573,
+      "acwr": 0.5,
+      "acwr_status": "Low"
+    }
+  ],
+  "body_battery_trend": [
+    {
+      "date": "2026-08-09",
+      "charged": 18,
+      "drained": 26,
+      "high": 31,
+      "low": 5
+    },
+    {
+      "date": "2026-08-10",
+      "charged": 65,
+      "drained": 58,
+      "high": 64,
+      "low": 5
+    },
+    {
+      "date": "2026-08-11",
+      "charged": 66,
+      "drained": 51,
+      "high": 53,
+      "low": 9
+    },
+    {
+      "date": "2026-08-12",
+      "charged": 56,
+      "drained": 68,
+      "high": 73,
+      "low": 5
+    },
+    {
+      "date": "2026-08-13",
+      "charged": 64,
+      "drained": 56,
+      "high": 61,
+      "low": 7
+    },
+    {
+      "date": "2026-08-14",
+      "charged": 70,
+      "drained": 65,
+      "high": 80,
+      "low": 17
+    },
+    {
+      "date": "2026-08-15",
+      "charged": 58,
+      "drained": 7,
+      "high": 86,
+      "low": 28
+    }
+  ]
+}
