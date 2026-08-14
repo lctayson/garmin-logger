@@ -106,8 +106,7 @@ def get_training_history(api, target_date):
     }
 
 def get_health_stats(api, target_date_str):
-    """Fetch and format daily health stats: resting HR, HRV, sleep. (VO2max
-    moved to the training_status block — see get_training_status_details.)"""
+    """Fetch and format daily health stats: resting HR, HRV, sleep."""
     stats = {}
     try:
         stats = api.get_stats(target_date_str)
@@ -167,16 +166,6 @@ def get_health_stats(api, target_date_str):
     except Exception:
         pass
 
-    # Note: VO2max now lives exclusively under the top-level "training_status"
-    # block (see get_training_status_details), grouped with its qualitative
-    # label (e.g. "Excellent") to match how Garmin Connect itself groups it,
-    # and pulled from the training-status endpoint's own vo2MaxValue field
-    # rather than a separate get_max_metrics() call — one less API round trip
-    # and no duplicate source of truth for the same number.
-    #
-    # Note: HRV stays here (not duplicated into training_status) because
-    # get_hrv_data() — called above — is the API call that actually returns
-    # it; the training-status endpoint doesn't carry HRV in what it returns.
     return {
         "resting_heart_rate": rhr,
         "hrv": {
@@ -199,46 +188,9 @@ def humanize_enum(s):
         return None
     return s.replace("_", " ").strip().title()
 
-# Best-effort numeric -> label map for the overall Training Status widget
-# (Productive / Recovery / Maintaining / etc). Garmin's aggregated training
-# status endpoint sometimes returns this as an int code rather than a
-# string. Reconstructed from community documentation of this endpoint;
-# if it doesn't match your account's actual values, the raw code is kept
-# under "status" as a fallback rather than silently dropped, and a debug
-# note is printed to stderr (see get_training_status_details).
-TRAINING_STATUS_CODE_MAP = {
-    0: "No Status",
-    1: "Detraining",
-    2: "Recovery",
-    3: "Maintaining",
-    4: "Productive",
-    5: "Peaking",
-    6: "Overreaching",
-    7: "Unproductive",
-    8: "Strained",
-}
-
-def _label_training_status(raw):
-    if raw is None:
-        return None
-    if isinstance(raw, str):
-        return humanize_enum(raw)
-    code = safe_int(raw)
-    if code is not None and code in TRAINING_STATUS_CODE_MAP:
-        return TRAINING_STATUS_CODE_MAP[code]
-    return raw  # unmapped/unknown shape — surface it as-is instead of hiding it
-
 def get_training_status_details(api, target_date_str):
-    """Fetch the Garmin Connect 'Training Status' widget: overall status
-    (e.g. Productive), Load Focus (e.g. Anaerobic Shortage), Acute Training
-    Load, Heat/Altitude Acclimation, and Recovery time.
-
-    Deliberately does NOT include HRV — that stays under health_stats.hrv,
-    since get_hrv_data() (not this endpoint) is what actually returns it.
-    VO2max (value + qualitative label, e.g. "Excellent") lives here instead
-    of health_stats, matching how Garmin Connect itself groups it, and is
-    sourced from this same response rather than a separate API call.
-    """
+    """Fetch the Garmin Connect 'Training Status' widget: overall status,
+    Load Focus, Acute Training Load, Heat/Altitude Acclimation, and Recovery time."""
     try:
         raw = api.get_training_status(target_date_str)
     except Exception as e:
@@ -255,8 +207,24 @@ def get_training_status_details(api, target_date_str):
     device_map = status_block.get("latestTrainingStatusData", {}) or {}
     device_entry = next(iter(device_map.values()), {}) if isinstance(device_map, dict) else {}
 
-    overall_status_raw = deep_get(device_entry, ["trainingStatus", "trainingStatusFeedbackPhrase"])
-    result["status"] = _label_training_status(overall_status_raw)
+    feedback_phrase = device_entry.get("trainingStatusFeedbackPhrase")
+    if feedback_phrase:
+        parts = feedback_phrase.split("_")
+        status_base = parts[0].title()
+        status_level = parts[1] if len(parts) > 1 else ""
+        result["status"] = f"{status_base} {status_level}".strip()
+    else:
+        # Fallback numeric code map if feedback phrase is missing
+        TRAINING_STATUS_CODE_MAP = {
+            0: "No Status", 1: "Detraining", 2: "Recovery", 3: "Maintaining",
+            4: "Productive", 5: "Peaking", 6: "Overreaching", 7: "Unproductive", 8: "Strained"
+        }
+        raw_code = device_entry.get("trainingStatus")
+        code = safe_int(raw_code)
+        if code is not None and code in TRAINING_STATUS_CODE_MAP:
+            result["status"] = TRAINING_STATUS_CODE_MAP[code]
+        else:
+            result["status"] = raw_code
 
     # --- Acute training load (e.g. 582, "Optimal") ---
     acute_load = device_entry.get("dailyTrainingLoadAcute") or device_entry.get("dailyAcuteTrainingLoad")
