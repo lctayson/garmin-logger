@@ -31,7 +31,7 @@
       "rem": 1.23,
       "awake": 0.85
     },
-    "total_steps": null
+    "total_steps": 6
   },
   "training_status": {
     "status": "Unproductive",
