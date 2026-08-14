@@ -1,6 +1,6 @@
 {
   "date": "2026-08-14",
-  "generated_at_local": "2026-08-14T12:37+08:00",
+  "generated_at_local": "2026-08-14T17:02+08:00",
   "training_history": {
     "7_day_distance_km": 35.9,
     "28_day_avg_weekly_distance_km": 38.5,
@@ -32,7 +32,7 @@
       "rem": 1.23,
       "awake": 0.85
     },
-    "total_steps": 24
+    "total_steps": 396
   },
   "training_status": {
     "status": "Productive 5",
@@ -401,8 +401,8 @@
     },
     {
       "date": "2026-08-14",
-      "charged": 57,
-      "drained": 10,
+      "charged": 59,
+      "drained": 48,
       "high": 80,
       "low": 23
     }
