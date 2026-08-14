@@ -25,21 +25,23 @@ def safe_int(val):
 def deep_get(source_dict, keys, default=None):
     if not isinstance(source_dict, dict):
         return default
-
     for key in keys:
-        val = source_dict
-        success = True
-        
-        for part in key.split("."):
-            if isinstance(val, dict) and part in val:
-                val = val[part]
-            else:
-                success = False
-                break
-        
-        if success and val is not None and val != "":
-            return val
-
+        if "." in key:
+            parts = key.split(".")
+            val = source_dict
+            for part in parts:
+                if isinstance(val, dict) and part in val:
+                    val = val.get(part)
+                else:
+                    val = None
+                    break
+            if val is not None and val != "":
+                return val
+        else:
+            if key in source_dict:
+                val = source_dict.get(key)
+                if val is not None and val != "":
+                    return val
     return default
 
 def format_pace(distance_m, duration_sec, activity_type="run"):
