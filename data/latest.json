@@ -1,6 +1,6 @@
 {
   "date": "2026-08-16",
-  "generated_at_local": "2026-08-16T05:25+08:00",
+  "generated_at_local": "2026-08-16T06:18+08:00",
   "training_history": {
     "7_day_distance_km": 21.1,
     "28_day_avg_weekly_distance_km": 37.6,
@@ -27,7 +27,7 @@
     "sleep_score": null,
     "total_sleep_hours": null,
     "sleep_stages_hours": {},
-    "total_steps": 33
+    "total_steps": 94
   },
   "training_status": {},
   "activities": [],
@@ -340,8 +340,8 @@
     },
     {
       "date": "2026-08-16",
-      "charged": 2,
-      "drained": 0,
+      "charged": 51,
+      "drained": 3,
       "high": 56,
       "low": 5
     }
