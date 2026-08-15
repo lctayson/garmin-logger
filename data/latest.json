@@ -1,6 +1,6 @@
 {
   "date": "2026-08-16",
-  "generated_at_local": "2026-08-16T06:18+08:00",
+  "generated_at_local": "2026-08-16T06:20+08:00",
   "training_history": {
     "7_day_distance_km": 21.1,
     "28_day_avg_weekly_distance_km": 37.6,
@@ -14,22 +14,63 @@
   "health_stats": {
     "resting_heart_rate": 57,
     "hrv": {
-      "last_night_avg_ms": null,
-      "seven_day_avg_ms": null,
-      "status": null,
+      "last_night_avg_ms": 50,
+      "seven_day_avg_ms": 48,
+      "status": "BALANCED",
       "baseline_balanced_range": {
-        "lowUpper": null,
-        "balancedLow": null,
-        "balancedUpper": null,
-        "markerValue": null
+        "lowUpper": 44,
+        "balancedLow": 47,
+        "balancedUpper": 58,
+        "markerValue": 0.2954407
       }
     },
-    "sleep_score": null,
-    "total_sleep_hours": null,
-    "sleep_stages_hours": {},
-    "total_steps": 94
+    "sleep_score": 56,
+    "total_sleep_hours": 4.95,
+    "sleep_stages_hours": {
+      "deep": 1.0,
+      "light": 3.95,
+      "rem": 0.0,
+      "awake": 0.13
+    },
+    "total_steps": 144
   },
-  "training_status": {},
+  "training_status": {
+    "status": "Recovery 2",
+    "training_load": {
+      "acute_load": 361,
+      "chronic_load": 575,
+      "chronic_load_range": {
+        "min": 460.0,
+        "max": 862.5
+      },
+      "acwr": 0.6,
+      "acwr_percent": 25,
+      "acwr_status": "Low"
+    },
+    "load_focus": "Anaerobic Shortage",
+    "monthly_load_balance": {
+      "aerobic_low": 419.6,
+      "aerobic_low_target_min": 380,
+      "aerobic_low_target_max": 1033,
+      "aerobic_high": 1827.8,
+      "aerobic_high_target_min": 816,
+      "aerobic_high_target_max": 1468,
+      "anaerobic": 0.0,
+      "anaerobic_target_min": 217,
+      "anaerobic_target_max": 652
+    },
+    "vo2_max": {
+      "value": 45.0
+    },
+    "heat_acclimation": {
+      "percentage": 100,
+      "trend": "Acclimatized"
+    },
+    "altitude_acclimation": {
+      "percentage": 0,
+      "trend": null
+    }
+  },
   "activities": [],
   "trend_recent_daily": [
     {
@@ -118,7 +159,17 @@
     },
     {
       "date": "2026-08-16",
-      "resting_heart_rate": 57
+      "resting_heart_rate": 57,
+      "hrv_last_night_avg_ms": 50,
+      "hrv_seven_day_avg_ms": 48,
+      "total_sleep_hours": 4.95,
+      "sleep_score": 56,
+      "vo2_max": 45.0,
+      "training_status": "Recovery 2",
+      "acute_load": 361,
+      "chronic_load": 575,
+      "acwr": 0.6,
+      "acwr_status": "Low"
     }
   ],
   "trend_long_range_weekly": [
@@ -292,7 +343,17 @@
     },
     {
       "date": "2026-08-16",
-      "resting_heart_rate": 57
+      "resting_heart_rate": 57,
+      "hrv_last_night_avg_ms": 50,
+      "hrv_seven_day_avg_ms": 48,
+      "total_sleep_hours": 4.95,
+      "sleep_score": 56,
+      "vo2_max": 45.0,
+      "training_status": "Recovery 2",
+      "acute_load": 361,
+      "chronic_load": 575,
+      "acwr": 0.6,
+      "acwr_status": "Low"
     }
   ],
   "body_battery_trend": [
