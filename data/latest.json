@@ -1,6 +1,6 @@
 {
   "date": "2026-08-16",
-  "generated_at_local": "2026-08-16T06:20+08:00",
+  "generated_at_local": "2026-08-16T07:00+08:00",
   "training_history": {
     "7_day_distance_km": 21.1,
     "28_day_avg_weekly_distance_km": 37.6,
@@ -32,7 +32,7 @@
       "rem": 0.0,
       "awake": 0.13
     },
-    "total_steps": 144
+    "total_steps": 388
   },
   "training_status": {
     "status": "Recovery 2",
