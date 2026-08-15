@@ -777,7 +777,7 @@ def main():
         payload["body_battery_trend"] = get_body_battery_trend(api, target_date, days=args.body_battery_days)
 
     os.makedirs("data", exist_ok=True)
-    file_path = os.path.join("data", f"garmin_{target_date_str}.json")
+    file_path = os.path.join("data", f"{target_date_str}.json")
 
     existing_payload = None
     if os.path.exists(file_path):
@@ -796,6 +796,14 @@ def main():
         with open(file_path, "w") as f:
             json.dump(payload, f, indent=2)
         print(f"Successfully generated Garmin JSON at: {file_path}")
+
+    # Always refresh data/latest.json, regardless of whether the dated file
+    # changed -- this is the one file you always point to for "what does
+    # Garmin say right now."
+    latest_path = os.path.join("data", "latest.json")
+    with open(latest_path, "w") as f:
+        json.dump(payload, f, indent=2) 
+    print(f"Successfully generated latet Garmin data at: {latest_path}")
 
 if __name__ == "__main__":
     main()
