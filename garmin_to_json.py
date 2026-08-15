@@ -5,6 +5,13 @@ import argparse
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from garminconnect import Garmin
+from garmin_helpers import (
+    get_training_status_details,
+    get_metric_trend,
+    get_body_battery_trend,
+    get_activities,
+)
+
 
 def safe_float(val, decimals=2):
     if val is None or val == "N/A" or val == "":
@@ -14,6 +21,7 @@ def safe_float(val, decimals=2):
     except (ValueError, TypeError):
         return None
 
+
 def safe_int(val):
     if val is None or val == "N/A" or val == "":
         return None
@@ -21,6 +29,7 @@ def safe_int(val):
         return int(float(val))
     except (ValueError, TypeError):
         return None
+
 
 def deep_get(source_dict, keys, default=None):
     if not isinstance(source_dict, dict):
@@ -44,6 +53,7 @@ def deep_get(source_dict, keys, default=None):
                     return val
     return default
 
+
 def format_pace(distance_m, duration_sec, activity_type="run"):
     """Format pace as MM:SS (per km for run/walk, per 100m for swim). Returns None for cycling/others."""
     if not distance_m or not duration_sec or distance_m <= 0 or duration_sec <= 0:
@@ -62,6 +72,7 @@ def format_pace(distance_m, duration_sec, activity_type="run"):
     mins = total_sec // 60
     secs = total_sec % 60
     return f"{mins}:{secs:02d}"
+
 
 def get_training_history(api, target_date):
     """Fetch and calculate training history distance metrics over the past 28 days."""
@@ -104,6 +115,7 @@ def get_training_history(api, target_date):
         "28_day_avg_weekly_distance_km": avg_28_day_weekly,
         "weekly_distance_last_4_weeks_km": weekly_distances
     }
+
 
 def get_health_stats(api, target_date_str):
     """Fetch and format daily health stats: resting HR, HRV, sleep."""
@@ -180,35 +192,22 @@ def get_health_stats(api, target_date_str):
         "total_steps": total_steps
     }
 
-# ... existing helper functions unchanged ...
-
-# The remainder of the file is preserved verbatim except for the latest.json
-# handling in main().
 
 def strip_volatile_fields(payload):
-    """Return a copy of payload with fields that intentionally change on every
-    run but don't reflect any real new data (e.g. the run timestamp) removed,
-    so two payloads can be compared for MEANINGFUL change."""
+    """Return a copy of payload with fields that intentionally change on every run but don't reflect any real new data."""
     stripped = dict(payload)
     stripped.pop("generated_at_local", None)
     return stripped
+
 
 def main():
     ph_today = datetime.now(ZoneInfo("Asia/Manila")).strftime("%Y-%m-%d")
 
     parser = argparse.ArgumentParser(description="Fetch Garmin data with Garmin export-aligned lap splits.")
     parser.add_argument("--date", type=str, default=ph_today, help="Date in YYYY-MM-DD format")
-    parser.add_argument("--trend-days", type=int, default=7,
-                         help="Number of trailing days for the DAILY trend series "
-                              "(RHR/HRV/sleep -- noisy metrics that need daily resolution). "
-                              "Set to 0 to skip.")
-    parser.add_argument("--trend-weeks", type=int, default=12,
-                         help="Number of trailing weeks for the WEEKLY-sampled long-range trend "
-                              "(VO2max/chronic load -- slow-moving metrics, weekly resolution is "
-                              "sufficient and far cheaper on API calls). Set to 0 to skip.")
-    parser.add_argument("--body-battery-days", type=int, default=7,
-                         help="Number of trailing days to include in the Body Battery trend. "
-                              "Set to 0 to skip.")
+    parser.add_argument("--trend-days", type=int, default=7)
+    parser.add_argument("--trend-weeks", type=int, default=12)
+    parser.add_argument("--body-battery-days", type=int, default=7)
     args = parser.parse_args()
     target_date_str = args.date
 
@@ -247,9 +246,7 @@ def main():
         payload["trend_recent_daily"] = get_metric_trend(api, target_date, days=args.trend_days, interval=1)
 
     if args.trend_weeks > 0:
-        payload["trend_long_range_weekly"] = get_metric_trend(
-            api, target_date, days=args.trend_weeks * 7, interval=7
-        )
+        payload["trend_long_range_weekly"] = get_metric_trend(api, target_date, days=args.trend_weeks * 7, interval=7)
 
     if args.body_battery_days > 0:
         payload["body_battery_trend"] = get_body_battery_trend(api, target_date, days=args.body_battery_days)
@@ -266,28 +263,20 @@ def main():
             existing_payload = None
 
     if existing_payload is not None and strip_volatile_fields(existing_payload) == strip_volatile_fields(payload):
-        print(
-            f"No meaningful change since last run (only generated_at_local would differ) -- "
-            f"skipping write to keep git history clean: {file_path}"
-        )
+        print(f"No meaningful change since last run -- skipping write: {file_path}")
     else:
         with open(file_path, "w") as f:
             json.dump(payload, f, indent=2)
         print(f"Successfully generated Garmin JSON at: {file_path}")
 
-    # Only refresh data/latest.json when generating data for the current
-    # calendar date in the Philippines. Historical requests must NEVER
-    # overwrite the current/latest snapshot.
     if target_date_str == ph_today:
         latest_path = os.path.join("data", "latest.json")
         with open(latest_path, "w") as f:
             json.dump(payload, f, indent=2)
         print(f"Successfully generated latest Garmin data at: {latest_path}")
     else:
-        print(
-            f"Historical date {target_date_str} != current Philippines date {ph_today}; "
-            "skipping data/latest.json update."
-        )
+        print(f"Historical date {target_date_str} != current Philippines date {ph_today}; skipping data/latest.json update.")
+
 
 if __name__ == "__main__":
     main()
