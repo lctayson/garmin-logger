@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       date:
-        description: 'Date to ensure (YYYY-MM-DD). Leave blank for today in Asia/Manila.'
+        description: 'Date to refresh (YYYY-MM-DD). Leave blank for today in Asia/Manila.'
         required: false
         default: ''
         type: string
@@ -52,32 +52,108 @@ jobs:
           echo "date=$DATE" >> "$GITHUB_OUTPUT"
           echo "Target date: $DATE"
 
-      - name: Generate Garmin JSON only if missing
+      - name: Generate fresh Garmin JSON and compare
         id: generate
         env:
           GARMIN_TOKENS_JSON: ${{ secrets.GARMIN_TOKENS_JSON }}
         shell: bash
         run: |
+          set -euo pipefail
           DATE="${{ steps.target.outputs.date }}"
           FILE="data/${DATE}.json"
+          TEMP="data/.${DATE}.json.new"
 
-          if [ -f "$FILE" ]; then
-            echo "already_exists=true" >> "$GITHUB_OUTPUT"
-            echo "Garmin data already exists: $FILE"
-            exit 0
+          echo "Generating fresh Garmin data for $DATE"
+          python run_garmin_to_json.py --date "$DATE" --output "$TEMP"
+
+          if [ ! -f "$TEMP" ]; then
+            echo "Generator did not create $TEMP"
+            exit 1
           fi
 
-          echo "Missing Garmin data: $FILE"
-          python run_garmin_to_json.py --date "$DATE"
-          echo "already_exists=false" >> "$GITHUB_OUTPUT"
+          python - "$FILE" "$TEMP" <<'PY'
+          import json
+          import os
+          import sys
 
-      - name: Commit generated Garmin data
-        if: steps.generate.outputs.already_exists == 'false'
+          existing_path, new_path = sys.argv[1:]
+
+          def load(path):
+              if not os.path.exists(path):
+                  return None
+              with open(path, encoding="utf-8") as f:
+                  return json.load(f)
+
+          def normalize(value):
+              if isinstance(value, dict):
+                  ignored = {
+                      "generated_at",
+                      "generation_timestamp",
+                      "retrieved_at",
+                      "retrieval_timestamp",
+                  }
+                  return {
+                      k: normalize(v)
+                      for k, v in value.items()
+                      if k not in ignored
+                  }
+              if isinstance(value, list):
+                  return [normalize(v) for v in value]
+              return value
+
+          existing = load(existing_path)
+          new = load(new_path)
+          changed = existing is None or normalize(existing) != normalize(new)
+          print(f"JSON changed: {changed}")
+
+          if changed:
+              os.replace(new_path, existing_path)
+              print(f"Updated {existing_path}")
+              with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+                  out.write("changed=true\n")
+          else:
+              os.remove(new_path)
+              print(f"No Garmin data changes; {existing_path} unchanged")
+              with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+                  out.write("changed=false\n")
+          PY
+
+      - name: Update latest.json for today's Philippines date
+        id: latest
+        if: steps.generate.outputs.changed == 'true'
         shell: bash
         run: |
+          set -euo pipefail
+          DATE="${{ steps.target.outputs.date }}"
+          TODAY_PH="$(TZ=Asia/Manila date +%Y-%m-%d)"
+
+          if [ "$DATE" = "$TODAY_PH" ]; then
+            cp "data/${DATE}.json" data/latest.json
+            echo "Updated data/latest.json for current Philippines date: $DATE"
+            echo "updated=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Historical date ($DATE); latest.json unchanged"
+            echo "updated=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit changes only when data changed
+        if: steps.generate.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
           DATE="${{ steps.target.outputs.date }}"
           git config user.name "GitHub Action Bot"
           git config user.email "bot@github.com"
-          git add "data/${DATE}.json" data/latest.json
-          git commit -m "Ensure Garmin data for ${DATE}"
+          git add "data/${DATE}.json"
+
+          if [ "${{ steps.latest.outputs.updated }}" = "true" ]; then
+            git add data/latest.json
+          fi
+
+          if git diff --cached --quiet; then
+            echo "No staged changes; nothing to commit."
+            exit 0
+          fi
+
+          git commit -m "Refresh Garmin data for ${DATE}"
           git push
