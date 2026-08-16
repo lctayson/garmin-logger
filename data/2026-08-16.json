@@ -1,15 +1,128 @@
 {
   "date": "2026-08-16",
-  "generated_at_local": "2026-08-16T08:30+08:00",
+  "generated_at_local": "2026-08-16T08:45+08:00",
   "training_history": {
-    "7_day_distance_km": 27.1,
-    "28_day_avg_weekly_distance_km": 39.1,
-    "weekly_distance_last_4_weeks_km": [
-      47.1,
-      41.2,
-      40.9,
-      27.1
-    ]
+    "7_day": {
+      "total_endurance": {
+        "activity_count": 7,
+        "distance_km": 31.16,
+        "duration_hours": 4.64,
+        "exercise_load": 256.7
+      },
+      "sports": {
+        "running": {
+          "activity_count": 4,
+          "distance_km": 27.14,
+          "duration_hours": 3.61,
+          "exercise_load": 242.5
+        },
+        "other": {
+          "activity_count": 3,
+          "distance_km": 4.03,
+          "duration_hours": 1.03,
+          "exercise_load": 14.2
+        }
+      }
+    },
+    "28_day": {
+      "avg_weekly_running_distance_km": 39.1,
+      "weekly_total_endurance": [
+        {
+          "week_start": "2026-07-20",
+          "week_end": "2026-07-26",
+          "total_endurance": {
+            "activity_count": 6,
+            "distance_km": 47.14,
+            "duration_hours": 6.13,
+            "exercise_load": 710.9
+          },
+          "sports": {
+            "running": {
+              "activity_count": 5,
+              "distance_km": 47.14,
+              "duration_hours": 5.71,
+              "exercise_load": 708.3
+            },
+            "other": {
+              "activity_count": 1,
+              "distance_km": 0.0,
+              "duration_hours": 0.43,
+              "exercise_load": 2.6
+            }
+          }
+        },
+        {
+          "week_start": "2026-07-27",
+          "week_end": "2026-08-02",
+          "total_endurance": {
+            "activity_count": 6,
+            "distance_km": 41.15,
+            "duration_hours": 4.81,
+            "exercise_load": 662.7
+          },
+          "sports": {
+            "running": {
+              "activity_count": 6,
+              "distance_km": 41.15,
+              "duration_hours": 4.81,
+              "exercise_load": 662.7
+            }
+          }
+        },
+        {
+          "week_start": "2026-08-03",
+          "week_end": "2026-08-09",
+          "total_endurance": {
+            "activity_count": 5,
+            "distance_km": 40.92,
+            "duration_hours": 4.76,
+            "exercise_load": 714.9
+          },
+          "sports": {
+            "running": {
+              "activity_count": 5,
+              "distance_km": 40.92,
+              "duration_hours": 4.76,
+              "exercise_load": 714.9
+            }
+          }
+        },
+        {
+          "week_start": "2026-08-10",
+          "week_end": "2026-08-16",
+          "total_endurance": {
+            "activity_count": 7,
+            "distance_km": 31.16,
+            "duration_hours": 4.64,
+            "exercise_load": 256.7
+          },
+          "sports": {
+            "running": {
+              "activity_count": 4,
+              "distance_km": 27.14,
+              "duration_hours": 3.61,
+              "exercise_load": 242.5
+            },
+            "other": {
+              "activity_count": 3,
+              "distance_km": 4.03,
+              "duration_hours": 1.03,
+              "exercise_load": 14.2
+            }
+          }
+        }
+      ]
+    },
+    "legacy_running_summary": {
+      "7_day_distance_km": 27.14,
+      "28_day_avg_weekly_distance_km": 39.1,
+      "weekly_distance_last_4_weeks_km": [
+        47.14,
+        41.15,
+        40.92,
+        27.14
+      ]
+    }
   },
   "health_stats": {
     "resting_heart_rate": 57,
@@ -738,7 +851,7 @@
           "activity_count": 5,
           "distance_km": 47.14,
           "duration_hours": 5.79,
-          "exercise_load": 718.4
+          "exercise_load": 718.5
         },
         "other": {
           "activity_count": 2,
@@ -747,7 +860,7 @@
           "exercise_load": 12.3
         }
       },
-      "total_exercise_load": 730.7
+      "total_exercise_load": 730.8
     },
     {
       "date": "2026-06-14",
@@ -773,7 +886,7 @@
           "activity_count": 5,
           "distance_km": 27.14,
           "duration_hours": 3.15,
-          "exercise_load": 532.1
+          "exercise_load": 532.0
         },
         "other": {
           "activity_count": 2,
@@ -782,7 +895,7 @@
           "exercise_load": 6.1
         }
       },
-      "total_exercise_load": 538.2
+      "total_exercise_load": 538.1
     },
     {
       "date": "2026-06-21",
@@ -808,7 +921,7 @@
           "activity_count": 5,
           "distance_km": 41.15,
           "duration_hours": 5.11,
-          "exercise_load": 542.6
+          "exercise_load": 542.7
         },
         "other": {
           "activity_count": 2,
@@ -817,7 +930,7 @@
           "exercise_load": 8.3
         }
       },
-      "total_exercise_load": 550.9
+      "total_exercise_load": 551.0
     },
     {
       "date": "2026-06-28",
@@ -843,7 +956,7 @@
           "activity_count": 5,
           "distance_km": 45.15,
           "duration_hours": 5.63,
-          "exercise_load": 578.7
+          "exercise_load": 578.6
         },
         "other": {
           "activity_count": 2,
@@ -852,7 +965,7 @@
           "exercise_load": 14.7
         }
       },
-      "total_exercise_load": 593.4
+      "total_exercise_load": 593.3
     },
     {
       "date": "2026-07-05",
@@ -878,7 +991,7 @@
           "activity_count": 5,
           "distance_km": 46.43,
           "duration_hours": 5.72,
-          "exercise_load": 631.4
+          "exercise_load": 631.3
         },
         "other": {
           "activity_count": 2,
@@ -922,7 +1035,7 @@
           "exercise_load": 11.5
         }
       },
-      "total_exercise_load": 701.2
+      "total_exercise_load": 701.1
     },
     {
       "date": "2026-07-19",
@@ -1070,7 +1183,7 @@
           "activity_count": 4,
           "distance_km": 27.14,
           "duration_hours": 3.61,
-          "exercise_load": 242.5
+          "exercise_load": 242.6
         },
         "other": {
           "activity_count": 3,
@@ -1079,7 +1192,7 @@
           "exercise_load": 14.2
         }
       },
-      "total_exercise_load": 256.7
+      "total_exercise_load": 256.8
     }
   ],
   "body_battery_trend": [
