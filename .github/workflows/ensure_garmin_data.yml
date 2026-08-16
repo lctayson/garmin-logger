@@ -68,7 +68,7 @@ jobs:
           fi
 
           echo "Missing Garmin data: $FILE"
-          python garmin_to_json.py --date "$DATE"
+          python run_garmin_to_json.py --date "$DATE"
           echo "already_exists=false" >> "$GITHUB_OUTPUT"
 
       - name: Commit generated Garmin data
