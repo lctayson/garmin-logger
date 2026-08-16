@@ -7,10 +7,10 @@ from zoneinfo import ZoneInfo
 from garminconnect import Garmin
 from garmin_helpers import (
     get_training_status_details,
-    get_metric_trend,
     get_body_battery_trend,
     get_activities,
 )
+from sport_trends import get_metric_trend
 
 
 def safe_float(val, decimals=2):
@@ -132,23 +132,14 @@ def _history_add(bucket, act):
 
 
 def _history_finalize(bucket):
-    out = {
-        "activity_count": bucket["activity_count"],
-        "distance_km": round(bucket["distance_km"], 2),
-        "duration_hours": round(bucket["duration_hours"], 2),
-    }
+    out = {"activity_count": bucket["activity_count"], "distance_km": round(bucket["distance_km"], 2), "duration_hours": round(bucket["duration_hours"], 2)}
     if bucket.get("exercise_load_available"):
         out["exercise_load"] = round(bucket["exercise_load"], 1)
     return out
 
 
 def _history_expand_multisport(api, activities):
-    """Expand multisport parents into child legs for sport-specific volume.
-
-    Parent multisport records are not counted when child legs are available,
-    preventing double counting. If Garmin does not expose child IDs, the parent
-    remains as a multisport activity so the training session is not lost.
-    """
+    """Expand multisport parents into child legs for sport-specific volume."""
     expanded = []
     for act in activities or []:
         if _history_sport(act) != "multisport" or not act.get("activityId"):
@@ -183,30 +174,18 @@ def _history_expand_multisport(api, activities):
 
 
 def get_training_history(api, target_date):
-    """Build sport-aware 7-day/28-day training history.
-
-    Running mileage is retained as a sport-specific metric, but cycling,
-    swimming and multisport are tracked separately. Total endurance volume is
-    represented by duration and Garmin exercise load rather than pretending
-    that kilometers from different sports are equivalent.
-    """
+    """Build sport-aware 7-day/28-day training history."""
     start_history_date = target_date - timedelta(days=27)
     try:
         historical_activities = api.get_activities_by_date(start_history_date.isoformat(), target_date.isoformat())
     except Exception:
         historical_activities = []
-
     historical_activities = _history_expand_multisport(api, historical_activities)
     by_date = {}
     for act in historical_activities:
         d = _history_date(act, target_date)
         by_date.setdefault(d, []).append(act)
-
     sports = ("running", "cycling", "swimming", "multisport", "other", "transition")
-    all_sport_buckets = {s: _history_empty() for s in sports}
-    for acts in by_date.values():
-        for act in acts:
-            _history_add(all_sport_buckets[_history_sport(act)], act)
 
     def window(start_date, end_date):
         buckets = {s: _history_empty() for s in sports}
@@ -226,34 +205,27 @@ def get_training_history(api, target_date):
 
     seven_start = target_date - timedelta(days=6)
     seven_sport, seven_total = window(seven_start, target_date)
-
     weekly = []
     for i in range(4):
         week_end = target_date - timedelta(days=i * 7)
         week_start = week_end - timedelta(days=6)
         buckets, total = window(week_start, week_end)
-        entry = {"week_start": week_start.isoformat(), "week_end": week_end.isoformat(), "total_endurance": _history_finalize(total)}
-        entry["sports"] = {s: _history_finalize(buckets[s]) for s in sports if buckets[s]["activity_count"] > 0}
-        weekly.append(entry)
+        weekly.append({
+            "week_start": week_start.isoformat(),
+            "week_end": week_end.isoformat(),
+            "total_endurance": _history_finalize(total),
+            "sports": {s: _history_finalize(buckets[s]) for s in sports if buckets[s]["activity_count"] > 0}
+        })
     weekly.reverse()
-
     sport_7 = {s: _history_finalize(seven_sport[s]) for s in sports if seven_sport[s]["activity_count"] > 0}
     total_7 = _history_finalize(seven_total)
-
     running_weekly = [w["sports"].get("running", {}).get("distance_km", 0.0) for w in weekly]
     running_avg = round(sum(running_weekly) / len(running_weekly), 1) if running_weekly else 0.0
-
     return {
-        "7_day": {
-            "total_endurance": total_7,
-            "sports": sport_7
-        },
-        "28_day": {
-            "avg_weekly_running_distance_km": running_avg,
-            "weekly_total_endurance": weekly
-        },
+        "7_day": {"total_endurance": total_7, "sports": sport_7},
+        "28_day": {"avg_weekly_running_distance_km": running_avg, "weekly_total_endurance": weekly},
         "legacy_running_summary": {
-            "7_day_distance_km": total_7.get("distance_km", 0.0) if list(sport_7.keys()) == ["running"] else sport_7.get("running", {}).get("distance_km", 0.0),
+            "7_day_distance_km": sport_7.get("running", {}).get("distance_km", 0.0),
             "28_day_avg_weekly_distance_km": running_avg,
             "weekly_distance_last_4_weeks_km": running_weekly
         }
@@ -279,12 +251,7 @@ def get_health_stats(api, target_date_str):
     sleep_duration_sec = sleep_dto.get("sleepTimeSeconds") or sleep_dto.get("durationInSeconds")
     total_sleep_hours = round(sleep_duration_sec / 3600.0, 2) if sleep_duration_sec else None
     deep_sec = sleep_dto.get("deepSleepSeconds"); light_sec = sleep_dto.get("lightSleepSeconds"); rem_sec = sleep_dto.get("remSleepSeconds"); awake_sec = sleep_dto.get("awakeSleepSeconds")
-    sleep_stages_hours = {
-        "deep": round(deep_sec / 3600.0, 2) if deep_sec is not None else None,
-        "light": round(light_sec / 3600.0, 2) if light_sec is not None else None,
-        "rem": round(rem_sec / 3600.0, 2) if rem_sec is not None else None,
-        "awake": round(awake_sec / 3600.0, 2) if awake_sec is not None else None
-    }
+    sleep_stages_hours = {"deep": round(deep_sec / 3600.0, 2) if deep_sec is not None else None, "light": round(light_sec / 3600.0, 2) if light_sec is not None else None, "rem": round(rem_sec / 3600.0, 2) if rem_sec is not None else None, "awake": round(awake_sec / 3600.0, 2) if awake_sec is not None else None}
     hrv_last, hrv_weekly_avg, hrv_status, baseline_balanced_range = None, None, None, None
     try:
         hrv_data = api.get_hrv_data(target_date_str)
@@ -294,26 +261,13 @@ def get_health_stats(api, target_date_str):
         hrv_weekly_avg = safe_int(hrv_summary.get("weeklyAvg") or hrv_summary.get("sevenDayAvg") or hrv_summary.get("lastSevenDaysAvg"))
         baseline_obj = hrv_summary.get("baseline", {})
         if isinstance(baseline_obj, dict):
-            baseline_balanced_range = {
-                "lowUpper": safe_int(baseline_obj.get("lowUpper")),
-                "balancedLow": safe_int(baseline_obj.get("balancedLow")),
-                "balancedUpper": safe_int(baseline_obj.get("balancedUpper")),
-                "markerValue": safe_float(baseline_obj.get("markerValue"), 7)
-            }
+            baseline_balanced_range = {"lowUpper": safe_int(baseline_obj.get("lowUpper")), "balancedLow": safe_int(baseline_obj.get("balancedLow")), "balancedUpper": safe_int(baseline_obj.get("balancedUpper")), "markerValue": safe_float(baseline_obj.get("markerValue"), 7)}
     except Exception:
         pass
-    return {
-        "resting_heart_rate": rhr,
-        "hrv": {"last_night_avg_ms": hrv_last, "seven_day_avg_ms": hrv_weekly_avg, "status": hrv_status, "baseline_balanced_range": baseline_balanced_range},
-        "sleep_score": sleep_score,
-        "total_sleep_hours": total_sleep_hours,
-        "sleep_stages_hours": {k: v for k, v in sleep_stages_hours.items() if v is not None},
-        "total_steps": total_steps
-    }
+    return {"resting_heart_rate": rhr, "hrv": {"last_night_avg_ms": hrv_last, "seven_day_avg_ms": hrv_weekly_avg, "status": hrv_status, "baseline_balanced_range": baseline_balanced_range}, "sleep_score": sleep_score, "total_sleep_hours": total_sleep_hours, "sleep_stages_hours": {k: v for k, v in sleep_stages_hours.items() if v is not None}, "total_steps": total_steps}
 
 
 def strip_volatile_fields(payload):
-    """Return a copy of payload with fields that intentionally change on every run but don't reflect any real new data."""
     stripped = dict(payload)
     stripped.pop("generated_at_local", None)
     return stripped
@@ -345,14 +299,7 @@ def main():
     health_stats = get_health_stats(api, target_date_str)
     training_status = get_training_status_details(api, target_date_str)
     activities = get_activities(api, target_date_str)
-    payload = {
-        "date": target_date_str,
-        "generated_at_local": datetime.now(ZoneInfo("Asia/Manila")).isoformat(timespec="minutes"),
-        "training_history": training_history,
-        "health_stats": health_stats,
-        "training_status": training_status,
-        "activities": activities
-    }
+    payload = {"date": target_date_str, "generated_at_local": datetime.now(ZoneInfo("Asia/Manila")).isoformat(timespec="minutes"), "training_history": training_history, "health_stats": health_stats, "training_status": training_status, "activities": activities}
     if args.trend_days > 0:
         payload["trend_recent_daily"] = get_metric_trend(api, target_date, days=args.trend_days, interval=1)
     if args.trend_weeks > 0:
