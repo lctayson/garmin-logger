@@ -67,13 +67,15 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if git diff --quiet -- "data/${{ steps.target.outputs.date }}.json" data/latest.json; then
+          DATE="${{ steps.target.outputs.date }}"
+          STATUS="$(git status --porcelain -- "data/${DATE}.json" data/latest.json)"
+          if [ -z "$STATUS" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No meaningful Garmin data changes detected. Nothing to commit."
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
             echo "Garmin data changed. A commit will be created."
-            git status --short -- "data/${{ steps.target.outputs.date }}.json" data/latest.json
+            printf '%s\n' "$STATUS"
           fi
 
       - name: Commit changed Garmin data
