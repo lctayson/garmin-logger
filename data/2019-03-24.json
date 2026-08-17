@@ -1,6 +1,6 @@
 {
   "date": "2019-03-24",
-  "generated_at_local": "2026-08-18T02:56+08:00",
+  "generated_at_local": "2026-08-18T03:40+08:00",
   "training_history": {
     "7_day": {
       "total_endurance": {
@@ -1379,6 +1379,7 @@
       "window_end": "2019-02-03",
       "window_days": 7,
       "resting_heart_rate": 61,
+      "total_sleep_hours": 6.57,
       "vo2_max": 48.0,
       "training_status": "Productive",
       "activity_count": 7,
