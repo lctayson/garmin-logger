@@ -1,6 +1,6 @@
 {
   "date": "2026-08-17",
-  "generated_at_local": "2026-08-17T07:15+08:00",
+  "generated_at_local": "2026-08-17T08:00+08:00",
   "training_history": {
     "7_day": {
       "total_endurance": {
@@ -145,7 +145,7 @@
       "rem": 0.32,
       "awake": 1.25
     },
-    "total_steps": 17
+    "total_steps": 26
   },
   "training_status": {
     "status": "Recovery 2",
