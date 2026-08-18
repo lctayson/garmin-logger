@@ -1,6 +1,6 @@
 {
   "date": "2026-08-19",
-  "generated_at_local": "2026-08-19T07:43+08:00",
+  "generated_at_local": "2026-08-19T07:45+08:00",
   "training_history": {
     "7_day": {
       "total_endurance": {
@@ -797,8 +797,8 @@
     },
     {
       "date": "2026-08-19",
-      "charged": 23,
-      "drained": 0,
+      "charged": 60,
+      "drained": 2,
       "high": 92,
       "low": 32
     }
