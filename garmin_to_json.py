@@ -322,29 +322,35 @@ def main():
         f.write(garmin_tokens_json)
     api = Garmin()
     api.login(token_dir)
-    training_history = get_training_history(api, target_date)
+
+    # Fetch today's/current-date information separately from the longer history.
+    # This keeps the JSON organized around what a person is most likely to inspect first.
     health_stats = get_health_stats(api, target_date_str)
     training_status = get_training_status_details(api, target_date_str)
     activities = get_activities(api, target_date_str)
-
-    # Keep the most useful, manually scannable metrics first. Everything else
-    # remains available below without changing the underlying data collection.
     priority_metrics = build_priority_metrics(health_stats, training_status)
+
+    # Current-day data comes first. Historical/trend data comes afterward.
     payload = {
         "date": target_date_str,
         "priority_metrics": priority_metrics,
+        "activities": activities,
         "health_stats": health_stats,
         "training_status": training_status,
-        "training_history": training_history,
-        "activities": activities,
-        "generated_at_local": datetime.now(ZoneInfo("Asia/Manila")).isoformat(timespec="minutes"),
     }
+
+    # Historical context is intentionally below the current-day information.
+    training_history = get_training_history(api, target_date)
+    payload["training_history"] = training_history
+
     if args.trend_days > 0:
         payload["trend_recent_daily"] = get_metric_trend(api, target_date, days=args.trend_days, interval=1)
     if args.trend_weeks > 0:
         payload["trend_long_range_weekly"] = get_metric_trend(api, target_date, days=args.trend_weeks * 7, interval=7)
     if args.body_battery_days > 0:
         payload["body_battery_trend"] = get_body_battery_trend(api, target_date, days=args.body_battery_days)
+
+    payload["generated_at_local"] = datetime.now(ZoneInfo("Asia/Manila")).isoformat(timespec="minutes")
 
     os.makedirs("data", exist_ok=True)
     file_path = os.path.join("data", f"{target_date_str}.json")
