@@ -35,7 +35,7 @@
       "rem": 0.0,
       "awake": 0.78
     },
-    "total_steps": 79
+    "total_steps": 112
   },
   "training_status": {
     "status": "Recovery 2",
@@ -803,10 +803,10 @@
     {
       "date": "2026-08-20",
       "charged": 38,
-      "drained": 4,
+      "drained": 6,
       "high": 68,
       "low": 30
     }
   ],
-  "generated_at_local": "2026-08-20T05:58+08:00"
+  "generated_at_local": "2026-08-20T07:00+08:00"
 }
