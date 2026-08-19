@@ -248,98 +248,84 @@ def get_health_stats(api, target_date_str):
         pass
     sleep_dto = sleep_data.get("dailySleepDTO", {}) if isinstance(sleep_data, dict) else {}
     sleep_score = safe_int(sleep_dto.get("sleepScores", {}).get("overall", {}).get("value") or sleep_dto.get("overallSleepScore") or sleep_dto.get("sleepScore"))
-    sleep_duration_sec = sleep_dto.get("sleepTimeSeconds") or sleep_dto.get("durationInSeconds")
-    total_sleep_hours = round(sleep_duration_sec / 3600.0, 2) if sleep_duration_sec else None
-    deep_sec = sleep_dto.get("deepSleepSeconds"); light_sec = sleep_dto.get("lightSleepSeconds"); rem_sec = sleep_dto.get("remSleepSeconds"); awake_sec = sleep_dto.get("awakeSleepSeconds")
-    sleep_stages_hours = {"deep": round(deep_sec / 3600.0, 2) if deep_sec is not None else None, "light": round(light_sec / 3600.0, 2) if light_sec is not None else None, "rem": round(rem_sec / 3600.0, 2) if rem_sec is not None else None, "awake": round(awake_sec / 3600.0, 2) if awake_sec is not None else None}
-    hrv_last, hrv_weekly_avg, hrv_status, baseline_balanced_range = None, None, None, None
+    sleep_seconds = sleep_dto.get("sleepTimeSeconds")
+    sleep_hours = safe_float((sleep_seconds or 0) / 3600 if sleep_seconds else None, 2)
+    hrv_data = {}
     try:
         hrv_data = api.get_hrv_data(target_date_str)
-        hrv_summary = hrv_data.get("hrvSummary", {}) if isinstance(hrv_data, dict) else {}
-        hrv_status = hrv_summary.get("status") or hrv_summary.get("hrvStatus")
-        hrv_last = safe_int(hrv_summary.get("lastNightAvg") or hrv_summary.get("weeklyAvg"))
-        hrv_weekly_avg = safe_int(hrv_summary.get("weeklyAvg") or hrv_summary.get("sevenDayAvg") or hrv_summary.get("lastSevenDaysAvg"))
-        baseline_obj = hrv_summary.get("baseline", {})
-        if isinstance(baseline_obj, dict):
-            baseline_balanced_range = {"lowUpper": safe_int(baseline_obj.get("lowUpper")), "balancedLow": safe_int(baseline_obj.get("balancedLow")), "balancedUpper": safe_int(baseline_obj.get("balancedUpper")), "markerValue": safe_float(baseline_obj.get("markerValue"), 7)}
     except Exception:
         pass
-    return {"resting_heart_rate": rhr, "hrv": {"last_night_avg_ms": hrv_last, "seven_day_avg_ms": hrv_weekly_avg, "status": hrv_status, "baseline_balanced_range": baseline_balanced_range}, "sleep_score": sleep_score, "total_sleep_hours": total_sleep_hours, "sleep_stages_hours": {k: v for k, v in sleep_stages_hours.items() if v is not None}, "total_steps": total_steps}
+    hrv_summary = hrv_data.get("hrvSummary", {}) if isinstance(hrv_data, dict) else {}
+    hrv_last_night = safe_float(hrv_summary.get("lastNightAvg") or hrv_summary.get("lastNight5MinHigh") or hrv_summary.get("weeklyAvg"), 1)
+    hrv_weekly = safe_float(hrv_summary.get("weeklyAvg"), 1)
+    hrv_status = hrv_summary.get("status")
+    return {
+        "resting_heart_rate": rhr,
+        "total_steps": total_steps,
+        "sleep_score": sleep_score,
+        "sleep_hours": sleep_hours,
+        "hrv_last_night_avg_ms": hrv_last_night,
+        "hrv_7_day_avg_ms": hrv_weekly,
+        "hrv_status": hrv_status,
+    }
 
 
 def build_priority_metrics(health_stats, training_status):
-    """Create a compact, human-first summary from data already fetched.
-
-    This deliberately makes no additional Garmin requests. Keep it near the top
-    of the JSON so manual inspection starts with the same metrics used in coaching
-    assessments, while the complete raw/structured data remains below.
-    """
-    hrv = health_stats.get("hrv", {}) if isinstance(health_stats, dict) else {}
-    load = training_status.get("training_load", {}) if isinstance(training_status, dict) else {}
-    vo2 = training_status.get("vo2_max", {}) if isinstance(training_status, dict) else {}
+    """Build a compact, high-priority snapshot from already-fetched data."""
+    ts = training_status or {}
     return {
         "resting_hr_bpm": health_stats.get("resting_heart_rate"),
-        "hrv_last_night_avg_ms": hrv.get("last_night_avg_ms"),
-        "hrv_7_day_avg_ms": hrv.get("seven_day_avg_ms"),
-        "hrv_status": hrv.get("status"),
-        "sleep_hours": health_stats.get("total_sleep_hours"),
+        "hrv_last_night_avg_ms": health_stats.get("hrv_last_night_avg_ms"),
+        "hrv_7_day_avg_ms": health_stats.get("hrv_7_day_avg_ms"),
+        "hrv_status": health_stats.get("hrv_status"),
+        "sleep_hours": health_stats.get("sleep_hours"),
         "sleep_score": health_stats.get("sleep_score"),
-        "training_status": training_status.get("status"),
-        "acute_load": load.get("acute_load"),
-        "chronic_load": load.get("chronic_load"),
-        "acwr": load.get("acwr"),
-        "acwr_status": load.get("acwr_status"),
-        "vo2_max": vo2.get("value"),
-        "recovery_time_hours": training_status.get("recovery_time_hours"),
+        "training_status": ts.get("training_status"),
+        "acute_load": ts.get("acute_load"),
+        "chronic_load": ts.get("chronic_load"),
+        "acwr": ts.get("acwr"),
+        "vo2_max": ts.get("vo2_max"),
+        "recovery_time_hours": ts.get("recovery_time_hours"),
     }
 
 
 def strip_volatile_fields(payload):
-    stripped = dict(payload)
-    stripped.pop("generated_at_local", None)
-    return stripped
+    """Return payload without generation timestamp for meaningful-change comparison."""
+    if not isinstance(payload, dict):
+        return payload
+    cleaned = dict(payload)
+    cleaned.pop("generated_at_local", None)
+    return cleaned
 
 
 def main():
-    ph_today = datetime.now(ZoneInfo("Asia/Manila")).strftime("%Y-%m-%d")
-    parser = argparse.ArgumentParser(description="Fetch Garmin data with Garmin export-aligned lap splits.")
-    parser.add_argument("--date", type=str, default=ph_today, help="Date in YYYY-MM-DD format")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--date", dest="date", default=None, help="Target date YYYY-MM-DD")
     parser.add_argument("--trend-days", type=int, default=7)
     parser.add_argument("--trend-weeks", type=int, default=12)
     parser.add_argument("--body-battery-days", type=int, default=7)
     args = parser.parse_args()
-    target_date_str = args.date
-    try:
-        target_date = datetime.strptime(target_date_str, "%Y-%m-%d").date()
-    except ValueError as e:
-        raise ValueError(f"Invalid date format provided: '{target_date_str}'. Please use YYYY-MM-DD format.") from e
-    garmin_tokens_json = os.environ.get("GARMIN_TOKENS_JSON")
-    if not garmin_tokens_json:
-        raise ValueError("GARMIN_TOKENS_JSON environment variable is missing.")
-    token_dir = "./.garminconnect"
-    os.makedirs(token_dir, exist_ok=True)
-    with open(os.path.join(token_dir, "garmin_tokens.json"), "w") as f:
-        f.write(garmin_tokens_json)
-    api = Garmin()
-    api.login(token_dir)
 
-    # Fetch today's/current-date information separately from the longer history.
-    # This keeps the JSON organized around what a person is most likely to inspect first.
+    ph_today = datetime.now(ZoneInfo("Asia/Manila")).date().isoformat()
+    target_date_str = args.date or ph_today
+    target_date = datetime.strptime(target_date_str, "%Y-%m-%d").date()
+
+    api = Garmin(os.getenv("GARMIN_EMAIL"), os.getenv("GARMIN_PASSWORD"))
+    api.login()
+
     health_stats = get_health_stats(api, target_date_str)
     training_status = get_training_status_details(api, target_date_str)
     activities = get_activities(api, target_date_str)
     priority_metrics = build_priority_metrics(health_stats, training_status)
 
-    # Current-day data comes first. Historical/trend data comes afterward.
     payload = {
         "date": target_date_str,
         "priority_metrics": priority_metrics,
-        "activities": activities,
         "health_stats": health_stats,
         "training_status": training_status,
+        "activities": activities,
     }
 
-    # Historical context is intentionally below the current-day information.
     training_history = get_training_history(api, target_date)
     payload["training_history"] = training_history
 
