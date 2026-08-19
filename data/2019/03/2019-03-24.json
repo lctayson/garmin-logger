@@ -1,6 +1,6 @@
 {
   "date": "2019-03-24",
-  "priority_metrics": {
+  "daily_readiness": {
     "resting_hr_bpm": 63,
     "hrv_last_night_avg_ms": null,
     "hrv_7_day_avg_ms": null,
@@ -11,24 +11,12 @@
     "acute_load": null,
     "chronic_load": null,
     "acwr": null,
-    "acwr_status": null,
     "vo2_max": 49.0,
     "recovery_time_hours": null
   },
   "health_stats": {
     "resting_heart_rate": 63,
-    "hrv": {
-      "last_night_avg_ms": null,
-      "seven_day_avg_ms": null,
-      "status": null,
-      "baseline_balanced_range": {
-        "lowUpper": null,
-        "balancedLow": null,
-        "balancedUpper": null,
-        "markerValue": null
-      }
-    },
-    "sleep_score": null,
+    "hrv": {},
     "total_sleep_hours": 4.98,
     "sleep_stages_hours": {
       "deep": 0.72,
@@ -42,186 +30,6 @@
     "status": "Recovery",
     "vo2_max": {
       "value": 49.0
-    }
-  },
-  "training_history": {
-    "7_day": {
-      "total_endurance": {
-        "activity_count": 9,
-        "distance_km": 178.4,
-        "duration_hours": 10.01
-      },
-      "total_training": {
-        "activity_count": 11,
-        "distance_km": 178.76,
-        "duration_hours": 10.07
-      },
-      "sports": {
-        "running": {
-          "activity_count": 2,
-          "distance_km": 26.04,
-          "duration_hours": 2.52
-        },
-        "cycling": {
-          "activity_count": 4,
-          "distance_km": 145.59,
-          "duration_hours": 5.27
-        },
-        "swimming": {
-          "activity_count": 3,
-          "distance_km": 6.77,
-          "duration_hours": 2.22
-        },
-        "transition": {
-          "activity_count": 2,
-          "distance_km": 0.37,
-          "duration_hours": 0.06
-        }
-      }
-    },
-    "28_day": {
-      "avg_weekly_running_distance_km": 25.9,
-      "weekly_total_endurance": [
-        {
-          "week_start": "2019-02-25",
-          "week_end": "2019-03-03",
-          "total_endurance": {
-            "activity_count": 12,
-            "distance_km": 252.48,
-            "duration_hours": 14.76
-          },
-          "total_training": {
-            "activity_count": 12,
-            "distance_km": 252.48,
-            "duration_hours": 14.76
-          },
-          "sports": {
-            "running": {
-              "activity_count": 2,
-              "distance_km": 25.28,
-              "duration_hours": 2.49
-            },
-            "cycling": {
-              "activity_count": 6,
-              "distance_km": 219.64,
-              "duration_hours": 8.36
-            },
-            "swimming": {
-              "activity_count": 4,
-              "distance_km": 7.55,
-              "duration_hours": 3.9
-            }
-          }
-        },
-        {
-          "week_start": "2019-03-04",
-          "week_end": "2019-03-10",
-          "total_endurance": {
-            "activity_count": 11,
-            "distance_km": 208.32,
-            "duration_hours": 12.95
-          },
-          "total_training": {
-            "activity_count": 11,
-            "distance_km": 208.32,
-            "duration_hours": 12.95
-          },
-          "sports": {
-            "running": {
-              "activity_count": 2,
-              "distance_km": 22.43,
-              "duration_hours": 2.18
-            },
-            "cycling": {
-              "activity_count": 5,
-              "distance_km": 178.3,
-              "duration_hours": 6.72
-            },
-            "swimming": {
-              "activity_count": 4,
-              "distance_km": 7.59,
-              "duration_hours": 4.05
-            }
-          }
-        },
-        {
-          "week_start": "2019-03-11",
-          "week_end": "2019-03-17",
-          "total_endurance": {
-            "activity_count": 12,
-            "distance_km": 205.73,
-            "duration_hours": 11.66
-          },
-          "total_training": {
-            "activity_count": 12,
-            "distance_km": 205.73,
-            "duration_hours": 11.66
-          },
-          "sports": {
-            "running": {
-              "activity_count": 4,
-              "distance_km": 30.03,
-              "duration_hours": 3.14
-            },
-            "cycling": {
-              "activity_count": 5,
-              "distance_km": 172.35,
-              "duration_hours": 6.47
-            },
-            "swimming": {
-              "activity_count": 3,
-              "distance_km": 3.35,
-              "duration_hours": 2.05
-            }
-          }
-        },
-        {
-          "week_start": "2019-03-18",
-          "week_end": "2019-03-24",
-          "total_endurance": {
-            "activity_count": 9,
-            "distance_km": 178.4,
-            "duration_hours": 10.01
-          },
-          "total_training": {
-            "activity_count": 11,
-            "distance_km": 178.76,
-            "duration_hours": 10.07
-          },
-          "sports": {
-            "running": {
-              "activity_count": 2,
-              "distance_km": 26.04,
-              "duration_hours": 2.52
-            },
-            "cycling": {
-              "activity_count": 4,
-              "distance_km": 145.59,
-              "duration_hours": 5.27
-            },
-            "swimming": {
-              "activity_count": 3,
-              "distance_km": 6.77,
-              "duration_hours": 2.22
-            },
-            "transition": {
-              "activity_count": 2,
-              "distance_km": 0.37,
-              "duration_hours": 0.06
-            }
-          }
-        }
-      ]
-    },
-    "legacy_running_summary": {
-      "7_day_distance_km": 26.04,
-      "28_day_avg_weekly_distance_km": 25.9,
-      "weekly_distance_last_4_weeks_km": [
-        25.28,
-        22.43,
-        30.03,
-        26.04
-      ]
     }
   },
   "activities": [
@@ -1115,7 +923,186 @@
       "parentActivityId": 3489801339
     }
   ],
-  "generated_at_local": "2026-08-19T09:52+08:00",
+  "training_history": {
+    "7_day": {
+      "total_endurance": {
+        "activity_count": 9,
+        "distance_km": 178.4,
+        "duration_hours": 10.01
+      },
+      "total_training": {
+        "activity_count": 11,
+        "distance_km": 178.76,
+        "duration_hours": 10.07
+      },
+      "sports": {
+        "running": {
+          "activity_count": 2,
+          "distance_km": 26.04,
+          "duration_hours": 2.52
+        },
+        "cycling": {
+          "activity_count": 4,
+          "distance_km": 145.59,
+          "duration_hours": 5.27
+        },
+        "swimming": {
+          "activity_count": 3,
+          "distance_km": 6.77,
+          "duration_hours": 2.22
+        },
+        "transition": {
+          "activity_count": 2,
+          "distance_km": 0.37,
+          "duration_hours": 0.06
+        }
+      }
+    },
+    "28_day": {
+      "avg_weekly_running_distance_km": 25.9,
+      "weekly_total_endurance": [
+        {
+          "week_start": "2019-02-25",
+          "week_end": "2019-03-03",
+          "total_endurance": {
+            "activity_count": 12,
+            "distance_km": 252.48,
+            "duration_hours": 14.76
+          },
+          "total_training": {
+            "activity_count": 12,
+            "distance_km": 252.48,
+            "duration_hours": 14.76
+          },
+          "sports": {
+            "running": {
+              "activity_count": 2,
+              "distance_km": 25.28,
+              "duration_hours": 2.49
+            },
+            "cycling": {
+              "activity_count": 6,
+              "distance_km": 219.64,
+              "duration_hours": 8.36
+            },
+            "swimming": {
+              "activity_count": 4,
+              "distance_km": 7.55,
+              "duration_hours": 3.9
+            }
+          }
+        },
+        {
+          "week_start": "2019-03-04",
+          "week_end": "2019-03-10",
+          "total_endurance": {
+            "activity_count": 11,
+            "distance_km": 208.32,
+            "duration_hours": 12.95
+          },
+          "total_training": {
+            "activity_count": 11,
+            "distance_km": 208.32,
+            "duration_hours": 12.95
+          },
+          "sports": {
+            "running": {
+              "activity_count": 2,
+              "distance_km": 22.43,
+              "duration_hours": 2.18
+            },
+            "cycling": {
+              "activity_count": 5,
+              "distance_km": 178.3,
+              "duration_hours": 6.72
+            },
+            "swimming": {
+              "activity_count": 4,
+              "distance_km": 7.59,
+              "duration_hours": 4.05
+            }
+          }
+        },
+        {
+          "week_start": "2019-03-11",
+          "week_end": "2019-03-17",
+          "total_endurance": {
+            "activity_count": 12,
+            "distance_km": 205.73,
+            "duration_hours": 11.66
+          },
+          "total_training": {
+            "activity_count": 12,
+            "distance_km": 205.73,
+            "duration_hours": 11.66
+          },
+          "sports": {
+            "running": {
+              "activity_count": 4,
+              "distance_km": 30.03,
+              "duration_hours": 3.14
+            },
+            "cycling": {
+              "activity_count": 5,
+              "distance_km": 172.35,
+              "duration_hours": 6.47
+            },
+            "swimming": {
+              "activity_count": 3,
+              "distance_km": 3.35,
+              "duration_hours": 2.05
+            }
+          }
+        },
+        {
+          "week_start": "2019-03-18",
+          "week_end": "2019-03-24",
+          "total_endurance": {
+            "activity_count": 9,
+            "distance_km": 178.4,
+            "duration_hours": 10.01
+          },
+          "total_training": {
+            "activity_count": 11,
+            "distance_km": 178.76,
+            "duration_hours": 10.07
+          },
+          "sports": {
+            "running": {
+              "activity_count": 2,
+              "distance_km": 26.04,
+              "duration_hours": 2.52
+            },
+            "cycling": {
+              "activity_count": 4,
+              "distance_km": 145.59,
+              "duration_hours": 5.27
+            },
+            "swimming": {
+              "activity_count": 3,
+              "distance_km": 6.77,
+              "duration_hours": 2.22
+            },
+            "transition": {
+              "activity_count": 2,
+              "distance_km": 0.37,
+              "duration_hours": 0.06
+            }
+          }
+        }
+      ]
+    },
+    "legacy_running_summary": {
+      "7_day_distance_km": 26.04,
+      "28_day_avg_weekly_distance_km": 25.9,
+      "weekly_distance_last_4_weeks_km": [
+        25.28,
+        22.43,
+        30.03,
+        26.04
+      ]
+    }
+  },
   "trend_recent_daily": [
     {
       "date": "2019-03-18",
@@ -1659,5 +1646,6 @@
     {
       "date": "2019-03-24"
     }
-  ]
+  ],
+  "generated_at_local": "2026-08-19T13:45+08:00"
 }
