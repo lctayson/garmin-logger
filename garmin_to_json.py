@@ -301,7 +301,7 @@ def get_health_stats(api, target_date_str):
     return {k: v for k, v in result.items() if v is not None}
 
 
-def build_priority_metrics(health_stats, training_status):
+def build_daily_readiness(health_stats, training_status):
     """Build the compact snapshot from the detailed structures already fetched."""
     ts = training_status or {}
     load = ts.get("training_load") or {}
@@ -348,11 +348,11 @@ def main():
     health_stats = get_health_stats(api, target_date_str)
     training_status = get_training_status_details(api, target_date_str)
     activities = get_activities(api, target_date_str)
-    priority_metrics = build_priority_metrics(health_stats, training_status)
+    daily_readiness = build_daily_readiness(health_stats, training_status)
 
     payload = {
         "date": target_date_str,
-        "priority_metrics": priority_metrics,
+        "daily_readiness": daily_readiness,
         "health_stats": health_stats,
         "training_status": training_status,
         "activities": activities,
