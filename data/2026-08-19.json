@@ -1,6 +1,6 @@
 {
   "date": "2026-08-19",
-  "priority_metrics": {
+  "daily_readiness": {
     "resting_hr_bpm": 56,
     "hrv_last_night_avg_ms": 49.0,
     "hrv_7_day_avg_ms": 49.0,
@@ -816,5 +816,5 @@
       "low": 32
     }
   ],
-  "generated_at_local": "2026-08-19T10:41+08:00"
+  "generated_at_local": "2026-08-19T12:21+08:00"
 }
