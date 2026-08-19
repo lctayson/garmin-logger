@@ -55,7 +55,6 @@ def deep_get(source_dict, keys, default=None):
 
 
 def format_pace(distance_m, duration_sec, activity_type="run"):
-    """Format pace as MM:SS (per km for run/walk, per 100m for swim). Returns None for cycling/others."""
     if not distance_m or not duration_sec or distance_m <= 0 or duration_sec <= 0:
         return None
     activity_type_lower = (activity_type or "").lower()
@@ -139,7 +138,6 @@ def _history_finalize(bucket):
 
 
 def _history_expand_multisport(api, activities):
-    """Expand multisport parents into child legs for sport-specific volume."""
     expanded = []
     for act in activities or []:
         if _history_sport(act) != "multisport" or not act.get("activityId"):
@@ -174,7 +172,6 @@ def _history_expand_multisport(api, activities):
 
 
 def get_training_history(api, target_date):
-    """Build sport-aware 7-day/28-day training history."""
     start_history_date = target_date - timedelta(days=27)
     try:
         historical_activities = api.get_activities_by_date(start_history_date.isoformat(), target_date.isoformat())
@@ -233,64 +230,99 @@ def get_training_history(api, target_date):
 
 
 def get_health_stats(api, target_date_str):
-    """Fetch and format daily health stats: resting HR, HRV, sleep."""
+    """Fetch detailed daily health data without discarding Garmin-provided detail."""
     stats = {}
     try:
-        stats = api.get_stats(target_date_str)
+        stats = api.get_stats(target_date_str) or {}
     except Exception:
         pass
+
     rhr = safe_int(stats.get("restingHeartRate") or stats.get("rhr"))
     total_steps = safe_int(stats.get("totalSteps") or stats.get("steps"))
+
     sleep_data = {}
     try:
-        sleep_data = api.get_sleep_data(target_date_str)
+        sleep_data = api.get_sleep_data(target_date_str) or {}
     except Exception:
         pass
     sleep_dto = sleep_data.get("dailySleepDTO", {}) if isinstance(sleep_data, dict) else {}
-    sleep_score = safe_int(sleep_dto.get("sleepScores", {}).get("overall", {}).get("value") or sleep_dto.get("overallSleepScore") or sleep_dto.get("sleepScore"))
+    sleep_scores = sleep_dto.get("sleepScores", {}) or {}
+    overall_score = sleep_scores.get("overall", {}) or {}
+    sleep_score = safe_int(overall_score.get("value") or sleep_dto.get("overallSleepScore") or sleep_dto.get("sleepScore"))
     sleep_seconds = sleep_dto.get("sleepTimeSeconds")
-    sleep_hours = safe_float((sleep_seconds or 0) / 3600 if sleep_seconds else None, 2)
+
+    def hours(seconds):
+        return safe_float((seconds or 0) / 3600 if seconds is not None else None, 2)
+
+    sleep_stages = {
+        "deep": hours(sleep_dto.get("deepSleepSeconds")),
+        "light": hours(sleep_dto.get("lightSleepSeconds")),
+        "rem": hours(sleep_dto.get("remSleepSeconds")),
+        "awake": hours(sleep_dto.get("awakeSleepSeconds")),
+    }
+    sleep_stages = {k: v for k, v in sleep_stages.items() if v is not None}
+
     hrv_data = {}
     try:
-        hrv_data = api.get_hrv_data(target_date_str)
+        hrv_data = api.get_hrv_data(target_date_str) or {}
     except Exception:
         pass
     hrv_summary = hrv_data.get("hrvSummary", {}) if isinstance(hrv_data, dict) else {}
-    hrv_last_night = safe_float(hrv_summary.get("lastNightAvg") or hrv_summary.get("lastNight5MinHigh") or hrv_summary.get("weeklyAvg"), 1)
+    hrv_last_night = safe_float(hrv_summary.get("lastNightAvg") or hrv_summary.get("lastNight5MinHigh"), 1)
     hrv_weekly = safe_float(hrv_summary.get("weeklyAvg"), 1)
     hrv_status = hrv_summary.get("status")
-    return {
-        "resting_heart_rate": rhr,
-        "total_steps": total_steps,
-        "sleep_score": sleep_score,
-        "sleep_hours": sleep_hours,
-        "hrv_last_night_avg_ms": hrv_last_night,
-        "hrv_7_day_avg_ms": hrv_weekly,
-        "hrv_status": hrv_status,
+
+    baseline = hrv_summary.get("baseline") or hrv_summary.get("baselineBalancedRange") or hrv_summary.get("baselineBalancedRangeDTO") or {}
+    baseline_range = {
+        "lowUpper": safe_float(baseline.get("lowUpper"), 2),
+        "balancedLow": safe_float(baseline.get("balancedLow"), 2),
+        "balancedUpper": safe_float(baseline.get("balancedUpper"), 2),
+        "markerValue": baseline.get("markerValue"),
     }
+    baseline_range = {k: v for k, v in baseline_range.items() if v is not None}
+
+    hrv = {
+        "last_night_avg_ms": hrv_last_night,
+        "seven_day_avg_ms": hrv_weekly,
+        "status": hrv_status,
+    }
+    if baseline_range:
+        hrv["baseline_balanced_range"] = baseline_range
+    hrv = {k: v for k, v in hrv.items() if v is not None}
+
+    result = {
+        "resting_heart_rate": rhr,
+        "hrv": hrv,
+        "sleep_score": sleep_score,
+        "total_sleep_hours": hours(sleep_seconds),
+        "sleep_stages_hours": sleep_stages,
+        "total_steps": total_steps,
+    }
+    return {k: v for k, v in result.items() if v is not None}
 
 
 def build_priority_metrics(health_stats, training_status):
-    """Build a compact, high-priority snapshot from already-fetched data."""
+    """Build the compact snapshot from the detailed structures already fetched."""
     ts = training_status or {}
+    load = ts.get("training_load") or {}
+    vo2 = ts.get("vo2_max") or {}
     return {
         "resting_hr_bpm": health_stats.get("resting_heart_rate"),
-        "hrv_last_night_avg_ms": health_stats.get("hrv_last_night_avg_ms"),
-        "hrv_7_day_avg_ms": health_stats.get("hrv_7_day_avg_ms"),
-        "hrv_status": health_stats.get("hrv_status"),
-        "sleep_hours": health_stats.get("sleep_hours"),
+        "hrv_last_night_avg_ms": deep_get(health_stats, ["hrv.last_night_avg_ms"]),
+        "hrv_7_day_avg_ms": deep_get(health_stats, ["hrv.seven_day_avg_ms"]),
+        "hrv_status": deep_get(health_stats, ["hrv.status"]),
+        "sleep_hours": health_stats.get("total_sleep_hours"),
         "sleep_score": health_stats.get("sleep_score"),
-        "training_status": ts.get("training_status"),
-        "acute_load": ts.get("acute_load"),
-        "chronic_load": ts.get("chronic_load"),
-        "acwr": ts.get("acwr"),
-        "vo2_max": ts.get("vo2_max"),
+        "training_status": ts.get("status"),
+        "acute_load": load.get("acute_load"),
+        "chronic_load": load.get("chronic_load"),
+        "acwr": load.get("acwr"),
+        "vo2_max": vo2.get("value"),
         "recovery_time_hours": ts.get("recovery_time_hours"),
     }
 
 
 def strip_volatile_fields(payload):
-    """Return payload without generation timestamp for meaningful-change comparison."""
     if not isinstance(payload, dict):
         return payload
     cleaned = dict(payload)
