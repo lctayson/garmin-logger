@@ -267,6 +267,33 @@ def get_health_stats(api, target_date_str):
     return {"resting_heart_rate": rhr, "hrv": {"last_night_avg_ms": hrv_last, "seven_day_avg_ms": hrv_weekly_avg, "status": hrv_status, "baseline_balanced_range": baseline_balanced_range}, "sleep_score": sleep_score, "total_sleep_hours": total_sleep_hours, "sleep_stages_hours": {k: v for k, v in sleep_stages_hours.items() if v is not None}, "total_steps": total_steps}
 
 
+def build_priority_metrics(health_stats, training_status):
+    """Create a compact, human-first summary from data already fetched.
+
+    This deliberately makes no additional Garmin requests. Keep it near the top
+    of the JSON so manual inspection starts with the same metrics used in coaching
+    assessments, while the complete raw/structured data remains below.
+    """
+    hrv = health_stats.get("hrv", {}) if isinstance(health_stats, dict) else {}
+    load = training_status.get("training_load", {}) if isinstance(training_status, dict) else {}
+    vo2 = training_status.get("vo2_max", {}) if isinstance(training_status, dict) else {}
+    return {
+        "resting_hr_bpm": health_stats.get("resting_heart_rate"),
+        "hrv_last_night_avg_ms": hrv.get("last_night_avg_ms"),
+        "hrv_7_day_avg_ms": hrv.get("seven_day_avg_ms"),
+        "hrv_status": hrv.get("status"),
+        "sleep_hours": health_stats.get("total_sleep_hours"),
+        "sleep_score": health_stats.get("sleep_score"),
+        "training_status": training_status.get("status"),
+        "acute_load": load.get("acute_load"),
+        "chronic_load": load.get("chronic_load"),
+        "acwr": load.get("acwr"),
+        "acwr_status": load.get("acwr_status"),
+        "vo2_max": vo2.get("value"),
+        "recovery_time_hours": training_status.get("recovery_time_hours"),
+    }
+
+
 def strip_volatile_fields(payload):
     stripped = dict(payload)
     stripped.pop("generated_at_local", None)
@@ -299,7 +326,19 @@ def main():
     health_stats = get_health_stats(api, target_date_str)
     training_status = get_training_status_details(api, target_date_str)
     activities = get_activities(api, target_date_str)
-    payload = {"date": target_date_str, "generated_at_local": datetime.now(ZoneInfo("Asia/Manila")).isoformat(timespec="minutes"), "training_history": training_history, "health_stats": health_stats, "training_status": training_status, "activities": activities}
+
+    # Keep the most useful, manually scannable metrics first. Everything else
+    # remains available below without changing the underlying data collection.
+    priority_metrics = build_priority_metrics(health_stats, training_status)
+    payload = {
+        "date": target_date_str,
+        "priority_metrics": priority_metrics,
+        "health_stats": health_stats,
+        "training_status": training_status,
+        "training_history": training_history,
+        "activities": activities,
+        "generated_at_local": datetime.now(ZoneInfo("Asia/Manila")).isoformat(timespec="minutes"),
+    }
     if args.trend_days > 0:
         payload["trend_recent_daily"] = get_metric_trend(api, target_date, days=args.trend_days, interval=1)
     if args.trend_weeks > 0:
