@@ -1,5 +1,4 @@
 import os
-import sys
 import json
 import argparse
 from datetime import datetime, timedelta
@@ -330,6 +329,29 @@ def strip_volatile_fields(payload):
     return cleaned
 
 
+def migrate_legacy_data_files(data_dir="data"):
+    """Move legacy flat YYYY-MM-DD.json files into data/YYYY/MM/ once."""
+    if not os.path.isdir(data_dir):
+        return
+    for filename in os.listdir(data_dir):
+        if not filename.endswith(".json") or filename == "000-latest.json":
+            continue
+        stem = filename[:-5]
+        try:
+            target_date = datetime.strptime(stem, "%Y-%m-%d").date()
+        except ValueError:
+            continue
+        source = os.path.join(data_dir, filename)
+        month_dir = os.path.join(data_dir, f"{target_date.year:04d}", f"{target_date.month:02d}")
+        destination = os.path.join(month_dir, filename)
+        os.makedirs(month_dir, exist_ok=True)
+        if not os.path.exists(destination):
+            os.replace(source, destination)
+        else:
+            # Keep the existing organized copy and remove the obsolete flat duplicate.
+            os.remove(source)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--date", dest="date", default=None, help="Target date YYYY-MM-DD")
@@ -370,8 +392,13 @@ def main():
 
     payload["generated_at_local"] = datetime.now(ZoneInfo("Asia/Manila")).isoformat(timespec="minutes")
 
-    os.makedirs("data", exist_ok=True)
-    file_path = os.path.join("data", f"{target_date_str}.json")
+    data_dir = "data"
+    os.makedirs(data_dir, exist_ok=True)
+    migrate_legacy_data_files(data_dir)
+
+    year_dir = os.path.join(data_dir, f"{target_date.year:04d}", f"{target_date.month:02d}")
+    os.makedirs(year_dir, exist_ok=True)
+    file_path = os.path.join(year_dir, f"{target_date_str}.json")
     existing_payload = None
     if os.path.exists(file_path):
         try:
@@ -389,7 +416,7 @@ def main():
         print(f"No meaningful change since last run -- leaving {file_path} unchanged")
 
     if target_date_str == ph_today:
-        latest_path = os.path.join("data", "000-latest.json")
+        latest_path = os.path.join(data_dir, "000-latest.json")
         existing_latest = None
         if os.path.exists(latest_path):
             try:
