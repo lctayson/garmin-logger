@@ -334,7 +334,7 @@ def migrate_legacy_data_files(data_dir="data"):
     if not os.path.isdir(data_dir):
         return
     for filename in os.listdir(data_dir):
-        if not filename.endswith(".json") or filename == "000-latest.json":
+        if not filename.endswith(".json") or filename == "latest.json":
             continue
         stem = filename[:-5]
         try:
@@ -416,7 +416,7 @@ def main():
         print(f"No meaningful change since last run -- leaving {file_path} unchanged")
 
     if target_date_str == ph_today:
-        latest_path = os.path.join(data_dir, "000-latest.json")
+        latest_path = os.path.join(data_dir, "latest.json")
         existing_latest = None
         if os.path.exists(latest_path):
             try:
@@ -432,7 +432,7 @@ def main():
         else:
             print(f"No meaningful change since last run -- leaving {latest_path} unchanged")
     else:
-        print(f"Historical date {target_date_str} != current Philippines date {ph_today}; skipping data/000-latest.json update.")
+        print(f"Historical date {target_date_str} != current Philippines date {ph_today}; skipping data/latest.json update.")
 
 
 if __name__ == "__main__":
