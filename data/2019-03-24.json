@@ -1,6 +1,49 @@
 {
   "date": "2019-03-24",
-  "generated_at_local": "2026-08-18T03:40+08:00",
+  "priority_metrics": {
+    "resting_hr_bpm": 63,
+    "hrv_last_night_avg_ms": null,
+    "hrv_7_day_avg_ms": null,
+    "hrv_status": null,
+    "sleep_hours": 4.98,
+    "sleep_score": null,
+    "training_status": "Recovery",
+    "acute_load": null,
+    "chronic_load": null,
+    "acwr": null,
+    "acwr_status": null,
+    "vo2_max": 49.0,
+    "recovery_time_hours": null
+  },
+  "health_stats": {
+    "resting_heart_rate": 63,
+    "hrv": {
+      "last_night_avg_ms": null,
+      "seven_day_avg_ms": null,
+      "status": null,
+      "baseline_balanced_range": {
+        "lowUpper": null,
+        "balancedLow": null,
+        "balancedUpper": null,
+        "markerValue": null
+      }
+    },
+    "sleep_score": null,
+    "total_sleep_hours": 4.98,
+    "sleep_stages_hours": {
+      "deep": 0.72,
+      "light": 3.55,
+      "rem": 0.72,
+      "awake": 0.27
+    },
+    "total_steps": 35916
+  },
+  "training_status": {
+    "status": "Recovery",
+    "vo2_max": {
+      "value": 49.0
+    }
+  },
   "training_history": {
     "7_day": {
       "total_endurance": {
@@ -179,35 +222,6 @@
         30.03,
         26.04
       ]
-    }
-  },
-  "health_stats": {
-    "resting_heart_rate": 63,
-    "hrv": {
-      "last_night_avg_ms": null,
-      "seven_day_avg_ms": null,
-      "status": null,
-      "baseline_balanced_range": {
-        "lowUpper": null,
-        "balancedLow": null,
-        "balancedUpper": null,
-        "markerValue": null
-      }
-    },
-    "sleep_score": null,
-    "total_sleep_hours": 4.98,
-    "sleep_stages_hours": {
-      "deep": 0.72,
-      "light": 3.55,
-      "rem": 0.72,
-      "awake": 0.27
-    },
-    "total_steps": 35916
-  },
-  "training_status": {
-    "status": "Recovery",
-    "vo2_max": {
-      "value": 49.0
     }
   },
   "activities": [
@@ -1101,6 +1115,7 @@
       "parentActivityId": 3489801339
     }
   ],
+  "generated_at_local": "2026-08-19T09:52+08:00",
   "trend_recent_daily": [
     {
       "date": "2019-03-18",
