@@ -3,15 +3,14 @@ name: Garmin to JSON Pipeline
 on:
   repository_dispatch:
     types: [trigger-garmin-sync]
-  workflow_dispatch: # Allows manual runs as well
+  workflow_dispatch:
     inputs:
       date:
         description: 'Date to fetch metrics for (YYYY-MM-DD)'
         required: false
-        default: '' # Leaves it blank so python defaults to today if not provided
+        default: ''
         type: string
 
-# Add this permissions block so the bot is allowed to push changes
 permissions:
   contents: write
 
@@ -34,11 +33,8 @@ jobs:
 
       - name: Run garmin_to_json.py
         env:
-          # garminconnect.login() automatically reads GARMINTOKENS when present.
-          # GARMIN_TOKENS_JSON should contain the Garmin token-store JSON.
           GARMINTOKENS: ${{ secrets.GARMIN_TOKENS_JSON }}
         run: |
-          # If a date was inputted in workflow_dispatch, pass it as an argument
           if [ -n "${{ inputs.date }}" ]; then
             python garmin_to_json.py --date "${{ inputs.date }}"
           else
@@ -49,10 +45,6 @@ jobs:
         run: |
           git config --global user.name "GitHub Action Bot"
           git config --global user.email "bot@github.com"
-
-          # Stage files inside the data directory
-          git add data/*.json
-
-          # Commit only if there are changes, otherwise exit gracefully
+          git add data/
           git commit -m "Auto-export daily telemetry JSON for $(date +%Y-%m-%d)" || echo "No changes to commit"
           git push
