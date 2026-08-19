@@ -27,12 +27,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.12'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install garminconnect requests gspread oauth2client
+          pip install 'garminconnect>=0.3.5' requests gspread oauth2client
 
       - name: Determine target date
         id: target
@@ -54,6 +54,7 @@ jobs:
 
       - name: Generate fresh Garmin JSON
         env:
+          GARMINTOKENS: ${{ secrets.GARMIN_TOKENS_JSON }}
           GARMIN_TOKENS_JSON: ${{ secrets.GARMIN_TOKENS_JSON }}
         shell: bash
         run: |
@@ -67,8 +68,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          DATE="${{ steps.target.outputs.date }}"
-          STATUS="$(git status --porcelain -- "data/${DATE}.json" data/latest.json)"
+          STATUS="$(git status --porcelain -- data/)"
           if [ -z "$STATUS" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No meaningful Garmin data changes detected. Nothing to commit."
@@ -86,12 +86,7 @@ jobs:
           DATE="${{ steps.target.outputs.date }}"
           git config user.name "GitHub Action Bot"
           git config user.email "bot@github.com"
-          git add "data/${DATE}.json"
-
-          TODAY_PH="$(TZ=Asia/Manila date +%Y-%m-%d)"
-          if [ "$DATE" = "$TODAY_PH" ] && [ -f data/latest.json ]; then
-            git add data/latest.json
-          fi
+          git add data/
 
           if git diff --cached --quiet; then
             echo "No staged changes; nothing to commit."
