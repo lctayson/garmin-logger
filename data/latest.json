@@ -803,10 +803,10 @@
     {
       "date": "2026-08-22",
       "charged": 40,
-      "drained": 5,
+      "drained": 7,
       "high": 67,
       "low": 27
     }
   ],
-  "generated_at_local": "2026-08-22T06:12+08:00"
+  "generated_at_local": "2026-08-22T07:00+08:00"
 }
