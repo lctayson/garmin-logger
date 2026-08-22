@@ -69,11 +69,11 @@ def main():
     
     sleep_data = api.get_sleep_data(today).get("dailySleepDTO", {})
     sleep_score = sleep_data.get("sleepScores", {}).get("overall", {}).get("value", "N/A")
-    sleep_hours = round(sleep_data.get("sleepTimeSeconds") or 0) / 3600, 2)
-    deep_hours = round(sleep_data.get("deepSleepSeconds") or 0) / 3600, 2)
-    light_hours = round(sleep_data.get("lightSleepSeconds") or 0) / 3600, 2)
-    rem_hours = round(sleep_data.get("remSleepSeconds") or 0) / 3600, 2)
-    awake_hours = round(sleep_data.get("awakeSleepSeconds") or 0) / 3600, 2)
+    sleep_hours = round((sleep_data.get("sleepTimeSeconds") or 0) / 3600, 2)
+    deep_hours = round((sleep_data.get("deepSleepSeconds") or 0) / 3600, 2)
+    light_hours = round((sleep_data.get("lightSleepSeconds") or 0) / 3600, 2)
+    rem_hours = round((sleep_data.get("remSleepSeconds") or 0) / 3600, 2)
+    awake_hours = round((sleep_data.get("awakeSleepSeconds") or 0) / 3600, 2)
 
     try:
         hrv_summary = api.get_hrv_data(today).get("hrvSummary", {})
