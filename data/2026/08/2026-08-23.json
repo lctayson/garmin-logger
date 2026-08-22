@@ -35,7 +35,7 @@
       "rem": 1.42,
       "awake": 0.15
     },
-    "total_steps": 58
+    "total_steps": 83
   },
   "training_status": {
     "status": "Maintaining 2",
@@ -808,5 +808,5 @@
       "low": 13
     }
   ],
-  "generated_at_local": "2026-08-23T05:54+08:00"
+  "generated_at_local": "2026-08-23T07:00+08:00"
 }
