@@ -2,23 +2,77 @@
   "date": "2026-08-24",
   "daily_readiness": {
     "resting_hr_bpm": 60,
-    "hrv_last_night_avg_ms": null,
-    "hrv_7_day_avg_ms": null,
-    "hrv_status": null,
-    "sleep_hours": null,
-    "sleep_score": null,
-    "training_status": null,
-    "acute_load": null,
-    "chronic_load": null,
-    "acwr": null,
-    "vo2_max": null,
+    "hrv_last_night_avg_ms": 49.0,
+    "hrv_7_day_avg_ms": 48.0,
+    "hrv_status": "BALANCED",
+    "sleep_hours": 7.62,
+    "sleep_score": 81,
+    "training_status": "Maintaining 2",
+    "acute_load": 451,
+    "chronic_load": 511,
+    "acwr": 0.8,
+    "vo2_max": 45.0,
     "recovery_hours": null
   },
   "health_stats": {
     "resting_hr": 60,
-    "hrv": {},
-    "sleep_stages_hours": {}
+    "hrv": {
+      "last_night_avg_ms": 49.0,
+      "7d_avg_ms": 48.0,
+      "status": "BALANCED",
+      "baseline_balanced_range": {
+        "lowUpper": 44.0,
+        "balancedLow": 47.0,
+        "balancedUpper": 57.0,
+        "markerValue": 0.2999878
+      }
+    },
+    "sleep_score": 81,
+    "sleep_hours": 7.62,
+    "sleep_stages_hours": {
+      "deep": 0.97,
+      "light": 4.88,
+      "rem": 1.77,
+      "awake": 0.57
+    },
+    "steps": 10
   },
-  "training_status": {},
-  "generated_at_local": "2026-08-24T07:15+08:00"
+  "training_status": {
+    "status": "Maintaining 2",
+    "training_load": {
+      "acute_load": 451,
+      "chronic_load": 511,
+      "chronic_load_range": {
+        "min": 408.8,
+        "max": 766.5
+      },
+      "acwr": 0.8,
+      "acwr_percent": 33,
+      "acwr_status": "Optimal"
+    },
+    "load_focus": "Anaerobic Shortage",
+    "monthly_load_balance": {
+      "aerobic_low": 423.3,
+      "aerobic_low_target_min": 380,
+      "aerobic_low_target_max": 1033,
+      "aerobic_high": 1658.9,
+      "aerobic_high_target_min": 816,
+      "aerobic_high_target_max": 1468,
+      "anaerobic": 27.5,
+      "anaerobic_target_min": 217,
+      "anaerobic_target_max": 652
+    },
+    "vo2_max": {
+      "value": 45.0
+    },
+    "heat_acclimation": {
+      "percentage": 100,
+      "trend": "Acclimatized"
+    },
+    "altitude_acclimation": {
+      "percentage": 0,
+      "trend": null
+    }
+  },
+  "generated_at_local": "2026-08-24T07:30+08:00"
 }
