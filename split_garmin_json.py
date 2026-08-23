@@ -10,35 +10,17 @@ ACTIVITY_KEYS = ("activities", "activity_data", "activityData")
 TREND_KEYS = ("training_history", "trend_recent_daily", "trend_long_range_weekly", "body_battery_trend")
 
 KEY_MAP = {
-    "resting_heart_rate": "resting_hr",
-    "total_steps": "steps",
-    "total_sleep_hours": "sleep_hours",
-    "7_day_distance_km": "7d_distance_km",
-    "28_day_avg_weekly_distance_km": "28d_avg_weekly_distance_km",
-    "weekly_distance_last_4_weeks_km": "weekly_distance_4w_km",
-    "last_night_avg_ms": "last_night_avg_ms",
-    "seven_day_avg_ms": "7d_avg_ms",
-    "acute_training_load": "acute_load",
-    "recovery_time_hours": "recovery_hours",
-    "activityId": "activity_id",
-    "distance_km": "distance_km",
-    "duration_mins": "duration_min",
-    "average_heart_rate": "avg_hr",
-    "average_hr": "avg_hr",
-    "max_hr": "max_hr",
-    "aerobic_training_effect": "aerobic_te",
-    "anaerobic_training_effect": "anaerobic_te",
-    "exercise_load": "load",
-    "activity_splits": "splits",
-    "parentActivityId": "parent_activity_id",
-    "avg_gct_ms": "ground_contact_ms",
-    "avg_stride_length_m": "stride_length_m",
-    "vertical_oscillation_cm": "vertical_oscillation_cm",
-    "vertical_ratio_pct": "vertical_ratio_pct",
-    "elevation_gain_m": "elevation_gain_m",
-    "elevation_loss_m": "elevation_loss_m",
-    "normalized_power_w": "normalized_power_w",
-    "intensityType": "intensity",
+    "resting_heart_rate": "resting_hr", "total_steps": "steps", "total_sleep_hours": "sleep_hours",
+    "7_day_distance_km": "7d_distance_km", "28_day_avg_weekly_distance_km": "28d_avg_weekly_distance_km",
+    "weekly_distance_last_4_weeks_km": "weekly_distance_4w_km", "last_night_avg_ms": "last_night_avg_ms",
+    "seven_day_avg_ms": "7d_avg_ms", "acute_training_load": "acute_load", "recovery_time_hours": "recovery_hours",
+    "activityId": "activity_id", "distance_km": "distance_km", "duration_mins": "duration_min",
+    "average_heart_rate": "avg_hr", "average_hr": "avg_hr", "max_hr": "max_hr",
+    "aerobic_training_effect": "aerobic_te", "anaerobic_training_effect": "anaerobic_te", "exercise_load": "load",
+    "activity_splits": "splits", "parentActivityId": "parent_activity_id", "avg_gct_ms": "ground_contact_ms",
+    "avg_stride_length_m": "stride_length_m", "vertical_oscillation_cm": "vertical_oscillation_cm",
+    "vertical_ratio_pct": "vertical_ratio_pct", "elevation_gain_m": "elevation_gain_m",
+    "elevation_loss_m": "elevation_loss_m", "normalized_power_w": "normalized_power_w", "intensityType": "intensity",
 }
 
 def compact_keys(obj):
@@ -98,37 +80,40 @@ def split_payload(payload):
     trends = {"date": payload.get("date"), **{key: compact_trends(payload[key]) for key in trend_keys_present}}
     return compact_keys(daily), activities, compact_keys(trends)
 
-def write_json(path, payload, minified=False, compact_rows=False):
+def write_json(path, payload, minified=False, activity_compact=False):
     tmp = f"{path}.tmp"
-    with open(tmp, "w", encoding="utf-8") as fh:
-        if minified:
+    if minified:
+        with open(tmp, "w", encoding="utf-8") as fh:
             json.dump(payload, fh, ensure_ascii=False, separators=(",", ":"))
-        elif compact_rows:
-            # Keep the file human-readable, but put each activity data row on one line.
-            text = json.dumps(payload, ensure_ascii=False, indent=2)
-            lines = text.splitlines()
-            out = []
-            in_data = False
-            for line in lines:
-                stripped = line.strip()
-                if stripped == '"data": [':
-                    in_data = True
-                    out.append(line)
-                    continue
-                if in_data and stripped.startswith("[") and stripped.endswith("],"):
-                    out.append(" " * (len(line) - len(line.lstrip())) + " " + stripped)
-                    continue
-                if in_data and stripped.startswith("[") and stripped.endswith("]"):
-                    out.append(" " * (len(line) - len(line.lstrip())) + " " + stripped)
-                    continue
-                if in_data and stripped == "]":
-                    in_data = False
-                out.append(line)
-            fh.write("\n".join(out) + "\n")
-        else:
+            fh.write("\n")
+    elif activity_compact:
+        # Pretty JSON everywhere except split/lap data: each lap is one line.
+        text = json.dumps(payload, ensure_ascii=False, indent=2)
+        marker = '"data": ['
+        start = text.find(marker)
+        if start >= 0:
+            data_start = start + len(marker)
+            end = text.find('\n' + ' ' * 10 + ']', data_start)
+            if end < 0:
+                end = text.find('\n]', data_start)
+            if end >= 0:
+                prefix = text[:data_start]
+                body = text[data_start:end]
+                suffix = text[end:]
+                rows = []
+                for line in body.splitlines():
+                    s = line.strip()
+                    if s.startswith('[') and s.endswith(('],', ']')):
+                        rows.append(' ' * 10 + s)
+                    elif s:
+                        rows.append(line)
+                text = prefix + '\n' + '\n'.join(rows) + suffix
+        with open(tmp, "w", encoding="utf-8") as fh:
+            fh.write(text + ("\n" if not text.endswith("\n") else ""))
+    else:
+        with open(tmp, "w", encoding="utf-8") as fh:
             json.dump(payload, fh, ensure_ascii=False, indent=2)
             fh.write("\n")
-            return
     os.replace(tmp, path)
 
 def main():
@@ -153,7 +138,7 @@ def main():
     dated_activities = os.path.join(month_dir, f"{target_date.isoformat()}_activities.json")
     dated_trends = os.path.join(month_dir, f"{target_date.isoformat()}_trends.json")
     write_json(dated_daily, daily)
-    write_json(dated_activities, activities, compact_rows=True)
+    write_json(dated_activities, activities, activity_compact=True)
     write_json(dated_trends, trends, minified=True)
     shutil.copyfile(dated_daily, os.path.join(args.data_dir, "latest_daily.json"))
     shutil.copyfile(dated_activities, os.path.join(args.data_dir, "latest_activities.json"))
