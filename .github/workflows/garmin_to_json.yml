@@ -41,6 +41,14 @@ jobs:
             python garmin_to_json.py
           fi
 
+      - name: Split daily and activity JSON
+        run: |
+          if [ -n "${{ inputs.date }}" ]; then
+            python split_garmin_json.py --date "${{ inputs.date }}"
+          else
+            python split_garmin_json.py
+          fi
+
       - name: Commit and Push Generated JSON
         run: |
           git config --global user.name "GitHub Action Bot"
