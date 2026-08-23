@@ -80,40 +80,62 @@ def split_payload(payload):
     trends = {"date": payload.get("date"), **{key: compact_trends(payload[key]) for key in trend_keys_present}}
     return compact_keys(daily), activities, compact_keys(trends)
 
+def _compact_data_arrays(text):
+    """In an activity JSON document, put every splits.data row on one line."""
+    marker = '"data": ['
+    search_from = 0
+    while True:
+        marker_pos = text.find(marker, search_from)
+        if marker_pos < 0:
+            break
+        array_start = marker_pos + len('"data": ')
+        depth = 0
+        in_string = False
+        escaped = False
+        array_end = None
+        for i in range(array_start, len(text)):
+            ch = text[i]
+            if in_string:
+                if escaped:
+                    escaped = False
+                elif ch == "\\":
+                    escaped = True
+                elif ch == '"':
+                    in_string = False
+                continue
+            if ch == '"':
+                in_string = True
+            elif ch == '[':
+                depth += 1
+            elif ch == ']':
+                depth -= 1
+                if depth == 0:
+                    array_end = i
+                    break
+        if array_end is None:
+            break
+        block = text[array_start:array_end + 1]
+        rows = json.loads(block)
+        indent = len(text[:marker_pos].rsplit("\n", 1)[-1])
+        row_indent = " " * (indent + 2)
+        row_text = "[\n" + ",\n".join(
+            row_indent + json.dumps(row, ensure_ascii=False, separators=(", ", ": "))
+            for row in rows
+        ) + "\n" + " " * indent + "]"
+        text = text[:array_start] + row_text + text[array_end + 1:]
+        search_from = array_start + len(row_text)
+    return text
+
 def write_json(path, payload, minified=False, activity_compact=False):
     tmp = f"{path}.tmp"
     if minified:
-        with open(tmp, "w", encoding="utf-8") as fh:
-            json.dump(payload, fh, ensure_ascii=False, separators=(",", ":"))
-            fh.write("\n")
-    elif activity_compact:
-        # Pretty JSON everywhere except split/lap data: each lap is one line.
-        text = json.dumps(payload, ensure_ascii=False, indent=2)
-        marker = '"data": ['
-        start = text.find(marker)
-        if start >= 0:
-            data_start = start + len(marker)
-            end = text.find('\n' + ' ' * 10 + ']', data_start)
-            if end < 0:
-                end = text.find('\n]', data_start)
-            if end >= 0:
-                prefix = text[:data_start]
-                body = text[data_start:end]
-                suffix = text[end:]
-                rows = []
-                for line in body.splitlines():
-                    s = line.strip()
-                    if s.startswith('[') and s.endswith(('],', ']')):
-                        rows.append(' ' * 10 + s)
-                    elif s:
-                        rows.append(line)
-                text = prefix + '\n' + '\n'.join(rows) + suffix
-        with open(tmp, "w", encoding="utf-8") as fh:
-            fh.write(text + ("\n" if not text.endswith("\n") else ""))
+        text = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
     else:
-        with open(tmp, "w", encoding="utf-8") as fh:
-            json.dump(payload, fh, ensure_ascii=False, indent=2)
-            fh.write("\n")
+        text = json.dumps(payload, ensure_ascii=False, indent=2)
+        if activity_compact:
+            text = _compact_data_arrays(text)
+    with open(tmp, "w", encoding="utf-8") as fh:
+        fh.write(text + "\n")
     os.replace(tmp, path)
 
 def main():
