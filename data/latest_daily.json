@@ -12,7 +12,7 @@
     "chronic_load": 533,
     "acwr": 1.0,
     "vo2_max": 45.0,
-    "recovery_h": null
+    "recovery_hours": null
   },
   "health_stats": {
     "resting_hr": 59,
@@ -20,7 +20,7 @@
       "last_night_avg_ms": 48.0,
       "7d_avg_ms": 47.0,
       "status": "BALANCED",
-      "baseline_balanced": {
+      "baseline_balanced_range": {
         "lowUpper": 45.0,
         "balancedLow": 47.0,
         "balancedUpper": 57.0,
@@ -28,14 +28,14 @@
       }
     },
     "sleep_score": 81,
-    "sleep_h": 6.63,
-    "sleep_stages_h": {
+    "sleep_hours": 6.63,
+    "sleep_stages_hours": {
       "deep": 1.12,
       "light": 4.1,
       "rem": 1.42,
       "awake": 0.15
     },
-    "steps": 9569
+    "steps": 9659
   },
   "training_status": {
     "status": "Maintaining 2",
@@ -65,14 +65,14 @@
     "vo2_max": {
       "value": 45.0
     },
-    "heat_acclim": {
-      "pct": 100,
+    "heat_acclimation": {
+      "percentage": 100,
       "trend": "Acclimatized"
     },
-    "altitude_acclim": {
-      "pct": 0,
+    "altitude_acclimation": {
+      "percentage": 0,
       "trend": null
     }
   },
-  "generated_at_local": "2026-08-23T13:25+08:00"
+  "generated_at_local": "2026-08-23T18:07+08:00"
 }
