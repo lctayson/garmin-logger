@@ -3,11 +3,13 @@
 Outputs for target date YYYY-MM-DD:
   data/YYYY/MM/YYYY-MM-DD_daily.json
   data/YYYY/MM/YYYY-MM-DD_activities.json
+  data/YYYY/MM/YYYY-MM-DD_trends.json
   data/latest_daily.json
   data/latest_activities.json
+  data/latest_trends.json
 
-Field names are intentionally shortened but remain human-readable. This keeps
-GitHub retrieval smaller without making the files cryptic.
+Field names are intentionally shortened but remain human-readable. Historical
+trend series are kept separate so the daily and activity files stay small.
 """
 
 from __future__ import annotations
@@ -20,6 +22,12 @@ from datetime import datetime
 
 
 ACTIVITY_KEYS = ("activities", "activity_data", "activityData")
+TREND_KEYS = (
+    "training_history",
+    "trend_recent_daily",
+    "trend_long_range_weekly",
+    "body_battery_trend",
+)
 
 # Long Garmin/export names -> concise, still-readable names.
 KEY_MAP = {
@@ -92,7 +100,6 @@ def compact_keys(obj):
         out = {}
         for key, value in obj.items():
             new_key = KEY_MAP.get(key, key)
-            # Preserve the source if a mapping would collide with another key.
             if new_key in out and new_key != key:
                 raise ValueError(f"Key collision while compacting: {key} -> {new_key}")
             out[new_key] = compact_keys(value)
@@ -110,7 +117,7 @@ def load_json(path: str) -> dict:
     return payload
 
 
-def split_payload(payload: dict) -> tuple[dict, dict]:
+def split_payload(payload: dict) -> tuple[dict, dict, dict]:
     activity_key = next((key for key in ACTIVITY_KEYS if key in payload), None)
     if activity_key is None:
         raise KeyError(
@@ -118,12 +125,21 @@ def split_payload(payload: dict) -> tuple[dict, dict]:
             + ", ".join(ACTIVITY_KEYS)
         )
 
-    daily = {key: value for key, value in payload.items() if key != activity_key}
+    trend_keys_present = [key for key in TREND_KEYS if key in payload]
+    daily = {
+        key: value
+        for key, value in payload.items()
+        if key != activity_key and key not in trend_keys_present
+    }
     activities = {
         "date": payload.get("date"),
         activity_key: payload.get(activity_key),
     }
-    return compact_keys(daily), compact_keys(activities)
+    trends = {
+        "date": payload.get("date"),
+        **{key: payload[key] for key in trend_keys_present},
+    }
+    return compact_keys(daily), compact_keys(activities), compact_keys(trends)
 
 
 def write_json(path: str, payload: dict) -> None:
@@ -156,7 +172,7 @@ def main() -> None:
             f"Date mismatch: --date={target_date.isoformat()} but JSON date={payload_date}"
         )
 
-    daily, activities = split_payload(payload)
+    daily, activities, trends = split_payload(payload)
 
     month_dir = os.path.join(
         args.data_dir,
@@ -167,14 +183,18 @@ def main() -> None:
 
     dated_daily = os.path.join(month_dir, f"{target_date.isoformat()}_daily.json")
     dated_activities = os.path.join(month_dir, f"{target_date.isoformat()}_activities.json")
+    dated_trends = os.path.join(month_dir, f"{target_date.isoformat()}_trends.json")
     latest_daily = os.path.join(args.data_dir, "latest_daily.json")
     latest_activities = os.path.join(args.data_dir, "latest_activities.json")
+    latest_trends = os.path.join(args.data_dir, "latest_trends.json")
 
     write_json(dated_daily, daily)
     write_json(dated_activities, activities)
+    write_json(dated_trends, trends)
 
     shutil.copyfile(dated_daily, latest_daily)
     shutil.copyfile(dated_activities, latest_activities)
+    shutil.copyfile(dated_trends, latest_trends)
 
     old_dated = os.path.join(month_dir, f"{target_date.isoformat()}.json")
     if os.path.exists(old_dated):
@@ -183,8 +203,10 @@ def main() -> None:
 
     print(f"Created {dated_daily}")
     print(f"Created {dated_activities}")
+    print(f"Created {dated_trends}")
     print(f"Updated {latest_daily}")
     print(f"Updated {latest_activities}")
+    print(f"Updated {latest_trends}")
 
 
 if __name__ == "__main__":
