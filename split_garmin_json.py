@@ -1,17 +1,4 @@
-"""Split and compact the generated Garmin snapshot.
-
-Outputs for target date YYYY-MM-DD:
-  data/YYYY/MM/YYYY-MM-DD_daily.json
-  data/YYYY/MM/YYYY-MM-DD_activities.json
-  data/YYYY/MM/YYYY-MM-DD_trends.json
-  data/latest_daily.json
-  data/latest_activities.json
-  data/latest_trends.json
-
-Repeated trend rows and activity splits are stored as columnar {"columns": [...],
-"data": [[...], ...]}. Trends are additionally minified because they are archival
-machine-readable data rather than a file intended for frequent manual inspection.
-"""
+"""Split and compact the generated Garmin snapshot."""
 from __future__ import annotations
 import argparse
 import json
@@ -22,7 +9,6 @@ from datetime import datetime
 ACTIVITY_KEYS = ("activities", "activity_data", "activityData")
 TREND_KEYS = ("training_history", "trend_recent_daily", "trend_long_range_weekly", "body_battery_trend")
 
-# Shorten repeated Garmin/export names, but keep names understandable to a human.
 KEY_MAP = {
     "resting_heart_rate": "resting_hr",
     "total_steps": "steps",
@@ -69,7 +55,6 @@ def compact_keys(obj):
     return obj
 
 def to_columnar(rows):
-    """Represent repeated dict rows as {columns: [...], data: [[...], ...]}."""
     if not isinstance(rows, list) or not rows or not all(isinstance(row, dict) for row in rows):
         return rows
     columns = []
@@ -113,14 +98,37 @@ def split_payload(payload):
     trends = {"date": payload.get("date"), **{key: compact_trends(payload[key]) for key in trend_keys_present}}
     return compact_keys(daily), activities, compact_keys(trends)
 
-def write_json(path, payload, minified=False):
+def write_json(path, payload, minified=False, compact_rows=False):
     tmp = f"{path}.tmp"
     with open(tmp, "w", encoding="utf-8") as fh:
         if minified:
             json.dump(payload, fh, ensure_ascii=False, separators=(",", ":"))
+        elif compact_rows:
+            # Keep the file human-readable, but put each activity data row on one line.
+            text = json.dumps(payload, ensure_ascii=False, indent=2)
+            lines = text.splitlines()
+            out = []
+            in_data = False
+            for line in lines:
+                stripped = line.strip()
+                if stripped == '"data": [':
+                    in_data = True
+                    out.append(line)
+                    continue
+                if in_data and stripped.startswith("[") and stripped.endswith("],"):
+                    out.append(" " * (len(line) - len(line.lstrip())) + " " + stripped)
+                    continue
+                if in_data and stripped.startswith("[") and stripped.endswith("]"):
+                    out.append(" " * (len(line) - len(line.lstrip())) + " " + stripped)
+                    continue
+                if in_data and stripped == "]":
+                    in_data = False
+                out.append(line)
+            fh.write("\n".join(out) + "\n")
         else:
             json.dump(payload, fh, ensure_ascii=False, indent=2)
-        fh.write("\n")
+            fh.write("\n")
+            return
     os.replace(tmp, path)
 
 def main():
@@ -145,7 +153,7 @@ def main():
     dated_activities = os.path.join(month_dir, f"{target_date.isoformat()}_activities.json")
     dated_trends = os.path.join(month_dir, f"{target_date.isoformat()}_trends.json")
     write_json(dated_daily, daily)
-    write_json(dated_activities, activities)
+    write_json(dated_activities, activities, compact_rows=True)
     write_json(dated_trends, trends, minified=True)
     shutil.copyfile(dated_daily, os.path.join(args.data_dir, "latest_daily.json"))
     shutil.copyfile(dated_activities, os.path.join(args.data_dir, "latest_activities.json"))
