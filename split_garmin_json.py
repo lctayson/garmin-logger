@@ -126,9 +126,23 @@ def _compact_data_arrays(text):
         search_from = array_start + len(row_text)
     return text
 
-def write_json(path, payload, minified=False, activity_compact=False):
+def _minified_root_lines(payload):
+    """Keep each top-level trend element on its own line, with its value minified."""
+    lines = ["{"]
+    items = list(payload.items())
+    for index, (key, value) in enumerate(items):
+        comma = "," if index < len(items) - 1 else ""
+        key_json = json.dumps(key, ensure_ascii=False)
+        value_json = json.dumps(value, ensure_ascii=False, separators=(",", ":"))
+        lines.append(f"  {key_json}: {value_json}{comma}")
+    lines.append("}")
+    return "\n".join(lines)
+
+def write_json(path, payload, minified=False, activity_compact=False, root_minified=False):
     tmp = f"{path}.tmp"
-    if minified:
+    if root_minified:
+        text = _minified_root_lines(payload)
+    elif minified:
         text = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
     else:
         text = json.dumps(payload, ensure_ascii=False, indent=2)
@@ -161,7 +175,7 @@ def main():
     dated_trends = os.path.join(month_dir, f"{target_date.isoformat()}_trends.json")
     write_json(dated_daily, daily)
     write_json(dated_activities, activities, activity_compact=True)
-    write_json(dated_trends, trends, minified=True)
+    write_json(dated_trends, trends, root_minified=True)
     shutil.copyfile(dated_daily, os.path.join(args.data_dir, "latest_daily.json"))
     shutil.copyfile(dated_activities, os.path.join(args.data_dir, "latest_activities.json"))
     shutil.copyfile(dated_trends, os.path.join(args.data_dir, "latest_trends.json"))
