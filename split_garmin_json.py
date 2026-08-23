@@ -8,94 +8,58 @@ Outputs for target date YYYY-MM-DD:
   data/latest_activities.json
   data/latest_trends.json
 
-Field names are intentionally shortened but remain human-readable. Historical
-trend series are kept separate so the daily and activity files stay small.
+Repeated trend rows and activity splits are stored as columnar {"columns": [...],
+"data": [[...], ...]} to reduce duplication while keeping field names readable.
 """
-
 from __future__ import annotations
-
 import argparse
 import json
 import os
 import shutil
 from datetime import datetime
 
-
 ACTIVITY_KEYS = ("activities", "activity_data", "activityData")
-TREND_KEYS = (
-    "training_history",
-    "trend_recent_daily",
-    "trend_long_range_weekly",
-    "body_battery_trend",
-)
+TREND_KEYS = ("training_history", "trend_recent_daily", "trend_long_range_weekly", "body_battery_trend")
 
-# Long Garmin/export names -> concise, still-readable names.
+# Shorten repeated Garmin/export names, but keep names understandable to a human.
 KEY_MAP = {
-    # General / daily
     "resting_heart_rate": "resting_hr",
     "total_steps": "steps",
-    "total_sleep_hours": "sleep_h",
-    "sleep_stages_hours": "sleep_stages_h",
-    "training_history": "training_history",
-    "7_day_distance_km": "7d_dist_km",
-    "28_day_avg_weekly_distance_km": "28d_avg_weekly_km",
-    "weekly_distance_last_4_weeks_km": "weekly_km_4w",
+    "total_sleep_hours": "sleep_hours",
+    "sleep_stages_hours": "sleep_stages_hours",
+    "7_day_distance_km": "7d_distance_km",
+    "28_day_avg_weekly_distance_km": "28d_avg_weekly_distance_km",
+    "weekly_distance_last_4_weeks_km": "weekly_distance_4w_km",
     "last_night_avg_ms": "last_night_avg_ms",
     "seven_day_avg_ms": "7d_avg_ms",
-    "baseline_balanced_range": "baseline_balanced",
-    "balanced_low": "balanced_low",
-    "balanced_upper": "balanced_upper",
-    "low_upper": "low_upper",
-    "marker_value": "marker",
-    "sleep_score": "sleep_score",
-    "health_stats": "health_stats",
-    "training_status": "training_status",
+    "baseline_balanced_range": "baseline_balanced_range",
     "acute_training_load": "acute_load",
-    "recovery_time_hours": "recovery_h",
-    "load_focus": "load_focus",
+    "recovery_time_hours": "recovery_hours",
     "vo2_max": "vo2_max",
-    "heat_acclimation": "heat_acclim",
-    "altitude_acclimation": "altitude_acclim",
-    "percentage": "pct",
-    "trend": "trend",
-    "value": "value",
-    "status": "status",
-
-    # Activity summary
-    "activityId": "id",
-    "distance_km": "dist_km",
+    "heat_acclimation": "heat_acclimation",
+    "altitude_acclimation": "altitude_acclimation",
+    "activityId": "activity_id",
+    "distance_km": "distance_km",
     "duration_mins": "duration_min",
+    "average_heart_rate": "avg_hr",
     "average_hr": "avg_hr",
     "max_hr": "max_hr",
     "aerobic_training_effect": "aerobic_te",
     "anaerobic_training_effect": "anaerobic_te",
     "exercise_load": "load",
     "activity_splits": "splits",
-    "parentActivityId": "parent_id",
-
-    # Activity lap/split fields
-    "time_min": "time_min",
-    "cumulative_time_min": "cum_time_min",
-    "moving_time_min": "moving_time_min",
-    "avg_moving_pace": "avg_moving_pace",
-    "best_pace": "best_pace",
-    "calories": "cal",
-    "avg_power_w": "avg_power_w",
-    "normalized_power_w": "norm_power_w",
-    "cadence_spm": "cadence_spm",
-    "max_cadence_spm": "max_cadence_spm",
-    "avg_gct_ms": "gct_ms",
-    "avg_stride_length_m": "stride_m",
-    "vertical_oscillation_cm": "vertical_cm",
+    "parentActivityId": "parent_activity_id",
+    "avg_gct_ms": "ground_contact_ms",
+    "avg_stride_length_m": "stride_length_m",
+    "vertical_oscillation_cm": "vertical_oscillation_cm",
     "vertical_ratio_pct": "vertical_ratio_pct",
-    "elevation_gain_m": "elev_gain_m",
-    "elevation_loss_m": "elev_loss_m",
+    "elevation_gain_m": "elevation_gain_m",
+    "elevation_loss_m": "elevation_loss_m",
+    "normalized_power_w": "normalized_power_w",
     "intensityType": "intensity",
 }
 
-
 def compact_keys(obj):
-    """Recursively shorten known keys while leaving values and unknown keys intact."""
     if isinstance(obj, dict):
         out = {}
         for key, value in obj.items():
@@ -108,106 +72,89 @@ def compact_keys(obj):
         return [compact_keys(item) for item in obj]
     return obj
 
+def to_columnar(rows):
+    """Represent repeated dict rows as {columns: [...], data: [[...], ...]}."""
+    if not isinstance(rows, list) or not rows or not all(isinstance(row, dict) for row in rows):
+        return rows
+    columns = []
+    for row in rows:
+        for key in row:
+            if key not in columns:
+                columns.append(key)
+    return {"columns": columns, "data": [[row.get(column) for column in columns] for row in rows]}
 
-def load_json(path: str) -> dict:
+def compact_activity(activity):
+    activity = compact_keys(activity)
+    split_key = next((key for key in ("splits", "laps") if key in activity), None)
+    if split_key:
+        activity[split_key] = to_columnar(activity[split_key])
+    return activity
+
+def compact_activities(value):
+    if not isinstance(value, list):
+        return value
+    return [compact_activity(activity) if isinstance(activity, dict) else activity for activity in value]
+
+def compact_trends(value):
+    if isinstance(value, list):
+        return to_columnar(compact_keys(value))
+    return compact_keys(value)
+
+def load_json(path):
     with open(path, "r", encoding="utf-8") as fh:
         payload = json.load(fh)
     if not isinstance(payload, dict):
         raise ValueError(f"Expected a JSON object in {path}")
     return payload
 
-
-def split_payload(payload: dict) -> tuple[dict, dict, dict]:
+def split_payload(payload):
     activity_key = next((key for key in ACTIVITY_KEYS if key in payload), None)
     if activity_key is None:
-        raise KeyError(
-            "Could not find the activity section. Expected one of: "
-            + ", ".join(ACTIVITY_KEYS)
-        )
-
+        raise KeyError("Could not find the activity section")
     trend_keys_present = [key for key in TREND_KEYS if key in payload]
-    daily = {
-        key: value
-        for key, value in payload.items()
-        if key != activity_key and key not in trend_keys_present
-    }
-    activities = {
-        "date": payload.get("date"),
-        activity_key: payload.get(activity_key),
-    }
-    trends = {
-        "date": payload.get("date"),
-        **{key: payload[key] for key in trend_keys_present},
-    }
-    return compact_keys(daily), compact_keys(activities), compact_keys(trends)
+    daily = {key: value for key, value in payload.items() if key != activity_key and key not in trend_keys_present}
+    activities = {"date": payload.get("date"), "activities": compact_activities(payload.get(activity_key))}
+    trends = {"date": payload.get("date"), **{key: compact_trends(payload[key]) for key in trend_keys_present}}
+    return compact_keys(daily), activities, compact_keys(trends)
 
-
-def write_json(path: str, payload: dict) -> None:
+def write_json(path, payload):
     tmp = f"{path}.tmp"
     with open(tmp, "w", encoding="utf-8") as fh:
         json.dump(payload, fh, ensure_ascii=False, indent=2)
         fh.write("\n")
     os.replace(tmp, path)
 
-
-def main() -> None:
+def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--date", default=None, help="Target date YYYY-MM-DD")
+    parser.add_argument("--date", default=None)
     parser.add_argument("--data-dir", default="data")
     args = parser.parse_args()
-
     latest_path = os.path.join(args.data_dir, "latest.json")
     if not os.path.isfile(latest_path):
         raise FileNotFoundError(f"Missing generated file: {latest_path}")
-
     payload = load_json(latest_path)
     target_date = args.date or payload.get("date")
     if not target_date:
-        raise ValueError("Target date is missing from --date and generated JSON")
+        raise ValueError("Target date is missing")
     target_date = datetime.strptime(target_date, "%Y-%m-%d").date()
-
-    payload_date = payload.get("date")
-    if payload_date and payload_date != target_date.isoformat():
-        raise ValueError(
-            f"Date mismatch: --date={target_date.isoformat()} but JSON date={payload_date}"
-        )
-
+    if payload.get("date") and payload["date"] != target_date.isoformat():
+        raise ValueError(f"Date mismatch: --date={target_date.isoformat()} but JSON date={payload['date']}")
     daily, activities, trends = split_payload(payload)
-
-    month_dir = os.path.join(
-        args.data_dir,
-        f"{target_date.year:04d}",
-        f"{target_date.month:02d}",
-    )
+    month_dir = os.path.join(args.data_dir, f"{target_date.year:04d}", f"{target_date.month:02d}")
     os.makedirs(month_dir, exist_ok=True)
-
     dated_daily = os.path.join(month_dir, f"{target_date.isoformat()}_daily.json")
     dated_activities = os.path.join(month_dir, f"{target_date.isoformat()}_activities.json")
     dated_trends = os.path.join(month_dir, f"{target_date.isoformat()}_trends.json")
-    latest_daily = os.path.join(args.data_dir, "latest_daily.json")
-    latest_activities = os.path.join(args.data_dir, "latest_activities.json")
-    latest_trends = os.path.join(args.data_dir, "latest_trends.json")
-
     write_json(dated_daily, daily)
     write_json(dated_activities, activities)
     write_json(dated_trends, trends)
-
-    shutil.copyfile(dated_daily, latest_daily)
-    shutil.copyfile(dated_activities, latest_activities)
-    shutil.copyfile(dated_trends, latest_trends)
-
+    shutil.copyfile(dated_daily, os.path.join(args.data_dir, "latest_daily.json"))
+    shutil.copyfile(dated_activities, os.path.join(args.data_dir, "latest_activities.json"))
+    shutil.copyfile(dated_trends, os.path.join(args.data_dir, "latest_trends.json"))
     old_dated = os.path.join(month_dir, f"{target_date.isoformat()}.json")
     if os.path.exists(old_dated):
         os.remove(old_dated)
     os.remove(latest_path)
-
-    print(f"Created {dated_daily}")
-    print(f"Created {dated_activities}")
-    print(f"Created {dated_trends}")
-    print(f"Updated {latest_daily}")
-    print(f"Updated {latest_activities}")
-    print(f"Updated {latest_trends}")
-
 
 if __name__ == "__main__":
     main()
