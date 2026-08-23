@@ -9,7 +9,8 @@ Outputs for target date YYYY-MM-DD:
   data/latest_trends.json
 
 Repeated trend rows and activity splits are stored as columnar {"columns": [...],
-"data": [[...], ...]} to reduce duplication while keeping field names readable.
+"data": [[...], ...]}. Trends are additionally minified because they are archival
+machine-readable data rather than a file intended for frequent manual inspection.
 """
 from __future__ import annotations
 import argparse
@@ -26,18 +27,13 @@ KEY_MAP = {
     "resting_heart_rate": "resting_hr",
     "total_steps": "steps",
     "total_sleep_hours": "sleep_hours",
-    "sleep_stages_hours": "sleep_stages_hours",
     "7_day_distance_km": "7d_distance_km",
     "28_day_avg_weekly_distance_km": "28d_avg_weekly_distance_km",
     "weekly_distance_last_4_weeks_km": "weekly_distance_4w_km",
     "last_night_avg_ms": "last_night_avg_ms",
     "seven_day_avg_ms": "7d_avg_ms",
-    "baseline_balanced_range": "baseline_balanced_range",
     "acute_training_load": "acute_load",
     "recovery_time_hours": "recovery_hours",
-    "vo2_max": "vo2_max",
-    "heat_acclimation": "heat_acclimation",
-    "altitude_acclimation": "altitude_acclimation",
     "activityId": "activity_id",
     "distance_km": "distance_km",
     "duration_mins": "duration_min",
@@ -117,10 +113,13 @@ def split_payload(payload):
     trends = {"date": payload.get("date"), **{key: compact_trends(payload[key]) for key in trend_keys_present}}
     return compact_keys(daily), activities, compact_keys(trends)
 
-def write_json(path, payload):
+def write_json(path, payload, minified=False):
     tmp = f"{path}.tmp"
     with open(tmp, "w", encoding="utf-8") as fh:
-        json.dump(payload, fh, ensure_ascii=False, indent=2)
+        if minified:
+            json.dump(payload, fh, ensure_ascii=False, separators=(",", ":"))
+        else:
+            json.dump(payload, fh, ensure_ascii=False, indent=2)
         fh.write("\n")
     os.replace(tmp, path)
 
@@ -147,7 +146,7 @@ def main():
     dated_trends = os.path.join(month_dir, f"{target_date.isoformat()}_trends.json")
     write_json(dated_daily, daily)
     write_json(dated_activities, activities)
-    write_json(dated_trends, trends)
+    write_json(dated_trends, trends, minified=True)
     shutil.copyfile(dated_daily, os.path.join(args.data_dir, "latest_daily.json"))
     shutil.copyfile(dated_activities, os.path.join(args.data_dir, "latest_activities.json"))
     shutil.copyfile(dated_trends, os.path.join(args.data_dir, "latest_trends.json"))
