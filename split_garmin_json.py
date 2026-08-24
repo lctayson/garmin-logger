@@ -67,8 +67,9 @@ def split_payload(payload):
     activity_key = next((key for key in ACTIVITY_KEYS if key in payload), None)
     if activity_key is None: raise KeyError("Could not find the activity section")
     trend_keys_present = [key for key in TREND_KEYS if key in payload]
-    daily = {key: value for key, value in payload.items() if key != activity_key and key not in trend_keys_present and key != "date"}
-    metrics = {"date": payload.get("date"), "daily": compact_keys(daily)}
+    daily = {key: value for key, value in payload.items() if key != activity_key and key not in trend_keys_present}
+    # Keep date, daily readiness, health stats, training status, etc. all at the same root level.
+    metrics = {key: compact_keys(value) for key, value in daily.items()}
     metrics.update({key: compact_trends(payload[key]) for key in trend_keys_present})
     activities = {"date": payload.get("date"), "activities": compact_activities(payload.get(activity_key))}
     return metrics, activities
@@ -103,15 +104,15 @@ def _compact_data_arrays(text):
     return text
 
 def _metrics_text(payload):
-    """Readable date/daily section; historical/trend sections stay minified."""
+    """Readable top-level current metrics; historical/trend sections stay minified."""
     lines = ["{"]
     items = list(payload.items())
     for index, (key, value) in enumerate(items):
         comma = "," if index < len(items) - 1 else ""
-        if key == "daily":
+        if key in {"date", "daily_readiness", "health_stats", "training_status"}:
             value_text = json.dumps(value, ensure_ascii=False, indent=2)
             value_lines = value_text.splitlines()
-            lines.append(f'  "daily": {value_lines[0]}')
+            lines.append(f'  {json.dumps(key, ensure_ascii=False)}: {value_lines[0]}')
             lines.extend(value_lines[1:])
             if comma: lines[-1] += comma
         else:
