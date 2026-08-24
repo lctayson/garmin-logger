@@ -72,9 +72,10 @@ def get_training_status_details(api, target_date_str):
             'acwr_status': humanize_enum(acute.get('acwrStatus')) if isinstance(acute.get('acwrStatus'),str) else acute.get('acwrStatus')
         }
         result['training_load'] = {k:v for k,v in result['training_load'].items() if v is not None}
-    recovery = device.get('recoveryTime') or device.get('recoveryTimeHours') or _deep_get(raw,['mostRecentTrainingLoadBalance.recoveryTime'])
-    if recovery is not None:
-        result['recovery_time_hours'] = _safe_int(recovery)
+    # Prefer Garmin Training Readiness: recoveryTime is reported in minutes.
+    recovery_hours = get_recovery_time_hours(api, target_date_str, raw)
+    if recovery_hours is not None:
+        result['recovery_time_hours'] = recovery_hours
     balance = raw.get('mostRecentTrainingLoadBalance',{}) or {}
     bmap = balance.get('metricsTrainingLoadBalanceDTOMap',{}) or {}
     be = next(iter(bmap.values()),{}) if isinstance(bmap,dict) else {}
@@ -109,6 +110,54 @@ def get_training_status_details(api, target_date_str):
     if ap is not None or at:
         result['altitude_acclimation'] = {'percentage':_safe_int(ap),'trend':humanize_enum(at) if isinstance(at,str) else at}
     return {k:v for k,v in result.items() if v is not None}
+
+
+def _find_first_key(obj, keys):
+    """Recursively find the first non-null value for any key."""
+    if isinstance(obj, dict):
+        for key in keys:
+            if key in obj and obj[key] is not None and obj[key] != "":
+                return obj[key]
+        for value in obj.values():
+            found = _find_first_key(value, keys)
+            if found is not None:
+                return found
+    elif isinstance(obj, list):
+        for value in obj:
+            found = _find_first_key(value, keys)
+            if found is not None:
+                return found
+    return None
+
+
+def get_recovery_time_hours(api, target_date_str, training_status_raw=None):
+    """Return Garmin recovery time in hours."""
+    readiness = None
+    try:
+        readiness = api.get_training_readiness(target_date_str)
+    except Exception as e:
+        print(f'[training_readiness] Warning: {e}', file=sys.stderr)
+
+    recovery_minutes = _find_first_key(readiness, ('recoveryTime', 'recovery_time'))
+    if recovery_minutes is not None:
+        value = _safe_float(recovery_minutes, 1)
+        if value is not None:
+            return round(value / 60.0, 1)
+
+    recovery_hours = _find_first_key(readiness, ('recoveryTimeHours', 'recovery_time_hours'))
+    if recovery_hours is not None:
+        return _safe_float(recovery_hours, 1)
+
+    recovery_hours = _find_first_key(training_status_raw, ('recoveryTimeHours', 'recovery_time_hours'))
+    if recovery_hours is not None:
+        return _safe_float(recovery_hours, 1)
+
+    recovery_minutes = _find_first_key(training_status_raw, ('recoveryTime', 'recovery_time'))
+    if recovery_minutes is not None:
+        value = _safe_float(recovery_minutes, 1)
+        if value is not None:
+            return round(value / 60.0, 1)
+    return None
 
 
 def _activity_sport(activity):
