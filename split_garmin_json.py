@@ -51,28 +51,23 @@ def compact_activity(activity):
     return activity
 
 def compact_activities(value):
-    if not isinstance(value, list):
-        return value
+    if not isinstance(value, list): return value
     return [compact_activity(activity) if isinstance(activity, dict) else activity for activity in value]
 
 def compact_trends(value):
-    if isinstance(value, list):
-        return to_columnar(compact_keys(value))
+    if isinstance(value, list): return to_columnar(compact_keys(value))
     return compact_keys(value)
 
 def load_json(path):
-    with open(path, "r", encoding="utf-8") as fh:
-        payload = json.load(fh)
-    if not isinstance(payload, dict):
-        raise ValueError(f"Expected a JSON object in {path}")
+    with open(path, "r", encoding="utf-8") as fh: payload = json.load(fh)
+    if not isinstance(payload, dict): raise ValueError(f"Expected a JSON object in {path}")
     return payload
 
 def split_payload(payload):
     activity_key = next((key for key in ACTIVITY_KEYS if key in payload), None)
-    if activity_key is None:
-        raise KeyError("Could not find the activity section")
+    if activity_key is None: raise KeyError("Could not find the activity section")
     trend_keys_present = [key for key in TREND_KEYS if key in payload]
-    daily = {key: value for key, value in payload.items() if key != activity_key and key not in trend_keys_present}
+    daily = {key: value for key, value in payload.items() if key != activity_key and key not in trend_keys_present and key != "date"}
     metrics = {"date": payload.get("date"), "daily": compact_keys(daily)}
     metrics.update({key: compact_trends(payload[key]) for key in trend_keys_present})
     activities = {"date": payload.get("date"), "activities": compact_activities(payload.get(activity_key))}
@@ -83,13 +78,9 @@ def _compact_data_arrays(text):
     search_from = 0
     while True:
         marker_pos = text.find(marker, search_from)
-        if marker_pos < 0:
-            break
+        if marker_pos < 0: break
         array_start = marker_pos + len('"data": ')
-        depth = 0
-        in_string = False
-        escaped = False
-        array_end = None
+        depth = 0; in_string = False; escaped = False; array_end = None
         for i in range(array_start, len(text)):
             ch = text[i]
             if in_string:
@@ -101,9 +92,7 @@ def _compact_data_arrays(text):
             elif ch == '[': depth += 1
             elif ch == ']':
                 depth -= 1
-                if depth == 0:
-                    array_end = i
-                    break
+                if depth == 0: array_end = i; break
         if array_end is None: break
         rows = json.loads(text[array_start:array_end + 1])
         indent = len(text[:marker_pos].rsplit("\n", 1)[-1])
@@ -113,17 +102,8 @@ def _compact_data_arrays(text):
         search_from = array_start + len(row_text)
     return text
 
-def _minified_root_lines(payload):
-    lines = ["{"]
-    items = list(payload.items())
-    for index, (key, value) in enumerate(items):
-        comma = "," if index < len(items) - 1 else ""
-        lines.append(f"  {json.dumps(key, ensure_ascii=False)}: {json.dumps(value, ensure_ascii=False, separators=(",", ":"))}{comma}")
-    lines.append("}")
-    return "\n".join(lines)
-
 def _metrics_text(payload):
-    """Readable date + daily section; keep all historical/trend sections minified."""
+    """Readable date/daily section; historical/trend sections stay minified."""
     lines = ["{"]
     items = list(payload.items())
     for index, (key, value) in enumerate(items):
@@ -133,8 +113,7 @@ def _metrics_text(payload):
             value_lines = value_text.splitlines()
             lines.append(f'  "daily": {value_lines[0]}')
             lines.extend(value_lines[1:])
-            if comma:
-                lines[-1] += comma
+            if comma: lines[-1] += comma
         else:
             value_text = json.dumps(value, ensure_ascii=False, separators=(",", ":"))
             lines.append(f"  {json.dumps(key, ensure_ascii=False)}: {value_text}{comma}")
@@ -143,39 +122,26 @@ def _metrics_text(payload):
 
 def write_json(path, payload, activity_compact=False, metrics=False):
     tmp = f"{path}.tmp"
-    if metrics:
-        text = _metrics_text(payload)
-    else:
-        text = json.dumps(payload, ensure_ascii=False, indent=2)
-        if activity_compact:
-            text = _compact_data_arrays(text)
-    with open(tmp, "w", encoding="utf-8") as fh:
-        fh.write(text + "\n")
+    text = _metrics_text(payload) if metrics else json.dumps(payload, ensure_ascii=False, indent=2)
+    if activity_compact and not metrics: text = _compact_data_arrays(text)
+    with open(tmp, "w", encoding="utf-8") as fh: fh.write(text + "\n")
     os.replace(tmp, path)
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--date", default=None)
-    parser.add_argument("--data-dir", default="data")
-    args = parser.parse_args()
+    parser = argparse.ArgumentParser(); parser.add_argument("--date", default=None); parser.add_argument("--data-dir", default="data"); args = parser.parse_args()
     latest_path = os.path.join(args.data_dir, "latest.json")
-    if not os.path.isfile(latest_path):
-        raise FileNotFoundError(f"Missing generated file: {latest_path}")
+    if not os.path.isfile(latest_path): raise FileNotFoundError(f"Missing generated file: {latest_path}")
     payload = load_json(latest_path)
     target_date = args.date or payload.get("date")
     if not target_date: raise ValueError("Target date is missing")
     target_date = datetime.strptime(target_date, "%Y-%m-%d").date()
-    if payload.get("date") and payload["date"] != target_date.isoformat():
-        raise ValueError(f"Date mismatch: --date={target_date.isoformat()} but JSON date={payload['date']}")
+    if payload.get("date") and payload["date"] != target_date.isoformat(): raise ValueError(f"Date mismatch: --date={target_date.isoformat()} but JSON date={payload['date']}")
     metrics, activities = split_payload(payload)
-    month_dir = os.path.join(args.data_dir, f"{target_date.year:04d}", f"{target_date.month:02d}")
-    os.makedirs(month_dir, exist_ok=True)
+    month_dir = os.path.join(args.data_dir, f"{target_date.year:04d}", f"{target_date.month:02d}"); os.makedirs(month_dir, exist_ok=True)
     dated_metrics = os.path.join(month_dir, f"{target_date.isoformat()}_metrics.json")
     dated_activities = os.path.join(month_dir, f"{target_date.isoformat()}_activities.json")
-    write_json(dated_metrics, metrics, metrics=True)
-    write_json(dated_activities, activities, activity_compact=True)
-    shutil.copyfile(dated_metrics, os.path.join(args.data_dir, "latest_metrics.json"))
-    shutil.copyfile(dated_activities, os.path.join(args.data_dir, "latest_activities.json"))
+    write_json(dated_metrics, metrics, metrics=True); write_json(dated_activities, activities, activity_compact=True)
+    shutil.copyfile(dated_metrics, os.path.join(args.data_dir, "latest_metrics.json")); shutil.copyfile(dated_activities, os.path.join(args.data_dir, "latest_activities.json"))
     for old_name in ("latest_daily.json", "latest_trends.json"):
         old_path = os.path.join(args.data_dir, old_name)
         if os.path.exists(old_path): os.remove(old_path)
