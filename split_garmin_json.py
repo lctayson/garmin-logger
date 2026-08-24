@@ -10,7 +10,7 @@ ACTIVITY_KEYS = ("activities", "activity_data", "activityData")
 TREND_KEYS = ("training_history", "trend_recent_daily", "trend_long_range_weekly", "body_battery_trend")
 
 KEY_MAP = {
-    "resting_heart_rate": "resting_hr", "total_steps": "steps", "total_sleep_hours": "sleep_hours",
+    "resting_heart_rate": "resting_hr", "resting_hr_bpm": "resting_hr", "total_steps": "steps", "total_sleep_hours": "sleep_hours",
     "7_day_distance_km": "7d_distance_km", "28_day_avg_weekly_distance_km": "28d_avg_weekly_distance_km",
     "weekly_distance_last_4_weeks_km": "weekly_distance_4w_km", "last_night_avg_ms": "last_night_avg_ms",
     "seven_day_avg_ms": "7d_avg_ms", "acute_training_load": "acute_load", "recovery_time_hours": "recovery_hours",
@@ -122,10 +122,29 @@ def _minified_root_lines(payload):
     lines.append("}")
     return "\n".join(lines)
 
-def write_json(path, payload, activity_compact=False, root_minified=False):
+def _metrics_text(payload):
+    """Readable date + daily section; keep all historical/trend sections minified."""
+    lines = ["{"]
+    items = list(payload.items())
+    for index, (key, value) in enumerate(items):
+        comma = "," if index < len(items) - 1 else ""
+        if key == "daily":
+            value_text = json.dumps(value, ensure_ascii=False, indent=2)
+            value_lines = value_text.splitlines()
+            lines.append(f'  "daily": {value_lines[0]}')
+            lines.extend(value_lines[1:])
+            if comma:
+                lines[-1] += comma
+        else:
+            value_text = json.dumps(value, ensure_ascii=False, separators=(",", ":"))
+            lines.append(f"  {json.dumps(key, ensure_ascii=False)}: {value_text}{comma}")
+    lines.append("}")
+    return "\n".join(lines)
+
+def write_json(path, payload, activity_compact=False, metrics=False):
     tmp = f"{path}.tmp"
-    if root_minified:
-        text = _minified_root_lines(payload)
+    if metrics:
+        text = _metrics_text(payload)
     else:
         text = json.dumps(payload, ensure_ascii=False, indent=2)
         if activity_compact:
@@ -153,7 +172,7 @@ def main():
     os.makedirs(month_dir, exist_ok=True)
     dated_metrics = os.path.join(month_dir, f"{target_date.isoformat()}_metrics.json")
     dated_activities = os.path.join(month_dir, f"{target_date.isoformat()}_activities.json")
-    write_json(dated_metrics, metrics, root_minified=True)
+    write_json(dated_metrics, metrics, metrics=True)
     write_json(dated_activities, activities, activity_compact=True)
     shutil.copyfile(dated_metrics, os.path.join(args.data_dir, "latest_metrics.json"))
     shutil.copyfile(dated_activities, os.path.join(args.data_dir, "latest_activities.json"))
