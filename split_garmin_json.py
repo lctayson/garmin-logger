@@ -143,17 +143,23 @@ def main():
     target_date = datetime.strptime(target_date, "%Y-%m-%d").date()
     if payload.get("date") and payload["date"] != target_date.isoformat(): raise ValueError(f"Date mismatch: --date={target_date.isoformat()} but JSON date={payload['date']}")
     metrics, activities = split_payload(payload)
+    has_activities = isinstance(activities.get("activities"), list) and len(activities["activities"]) > 0
     month_dir = os.path.join(args.data_dir, f"{target_date.year:04d}", f"{target_date.month:02d}"); os.makedirs(month_dir, exist_ok=True)
     dated_metrics = os.path.join(month_dir, f"{target_date.isoformat()}_metrics.json")
     dated_activities = os.path.join(month_dir, f"{target_date.isoformat()}_activities.json")
-    write_json(dated_metrics, metrics, metrics=True); write_json(dated_activities, activities, activity_compact=True)
-    shutil.copyfile(dated_metrics, os.path.join(args.data_dir, "latest_metrics.json")); shutil.copyfile(dated_activities, os.path.join(args.data_dir, "latest_activities.json"))
+    write_json(dated_metrics, metrics, metrics=True)
+    shutil.copyfile(dated_metrics, os.path.join(args.data_dir, "latest_metrics.json"))
+    if has_activities:
+        write_json(dated_activities, activities, activity_compact=True)
+        shutil.copyfile(dated_activities, os.path.join(args.data_dir, "latest_activities.json"))
     for old_name in ("latest_daily.json", "latest_trends.json"):
         old_path = os.path.join(args.data_dir, old_name)
         if os.path.exists(old_path): os.remove(old_path)
     for old_suffix in ("_daily.json", "_trends.json"):
         old_path = os.path.join(month_dir, f"{target_date.isoformat()}{old_suffix}")
         if os.path.exists(old_path): os.remove(old_path)
+    if not has_activities and os.path.exists(dated_activities):
+        os.remove(dated_activities)
     old_dated = os.path.join(month_dir, f"{target_date.isoformat()}.json")
     if os.path.exists(old_dated): os.remove(old_dated)
     os.remove(latest_path)
