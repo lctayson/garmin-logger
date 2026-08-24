@@ -12,7 +12,7 @@
     "chronic_load": 511,
     "acwr": 0.8,
     "vo2_max": 45.0,
-    "recovery_hours": null
+    "recovery_hours": 0.0
   },
   "health_stats": {
     "resting_hr": 60,
@@ -50,6 +50,7 @@
       "acwr_percent": 33,
       "acwr_status": "Optimal"
     },
+    "recovery_hours": 0.0,
     "load_focus": "Anaerobic Shortage",
     "monthly_load_balance": {
       "aerobic_low": 423.3,
