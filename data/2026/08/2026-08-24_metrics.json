@@ -1,7 +1,6 @@
 {
   "date": "2026-08-24",
   "daily": {
-  "date": "2026-08-24",
   "daily_readiness": {
     "resting_hr": 60,
     "hrv_last_night_avg_ms": 49.0,
@@ -76,7 +75,7 @@
       "trend": null
     }
   },
-  "generated_at_local": "2026-08-24T08:30+08:00"
+  "generated_at_local": "2026-08-24T08:33+08:00"
 },
   "training_history": {"7_day":{"total_endurance":{"activity_count":4,"distance_km":29.15,"duration_hours":3.48,"load":522.4},"sports":{"running":{"activity_count":4,"distance_km":29.15,"duration_hours":3.48,"load":522.4}}},"28_day":{"avg_weekly_running_distance_km":34.6,"weekly_total_endurance":[{"week_start":"2026-07-28","week_end":"2026-08-03","total_endurance":{"activity_count":6,"distance_km":41.15,"duration_hours":4.81,"load":662.7},"sports":{"running":{"activity_count":6,"distance_km":41.15,"duration_hours":4.81,"load":662.7}}},{"week_start":"2026-08-04","week_end":"2026-08-10","total_endurance":{"activity_count":5,"distance_km":40.92,"duration_hours":4.76,"load":714.9},"sports":{"running":{"activity_count":5,"distance_km":40.92,"duration_hours":4.76,"load":714.9}}},{"week_start":"2026-08-11","week_end":"2026-08-17","total_endurance":{"activity_count":7,"distance_km":31.16,"duration_hours":4.64,"load":256.7},"sports":{"running":{"activity_count":4,"distance_km":27.14,"duration_hours":3.61,"load":242.5},"other":{"activity_count":3,"distance_km":4.03,"duration_hours":1.03,"load":14.2}}},{"week_start":"2026-08-18","week_end":"2026-08-24","total_endurance":{"activity_count":4,"distance_km":29.15,"duration_hours":3.48,"load":522.4},"sports":{"running":{"activity_count":4,"distance_km":29.15,"duration_hours":3.48,"load":522.4}}}]},"legacy_running_summary":{"7d_distance_km":29.15,"28d_avg_weekly_distance_km":34.6,"weekly_distance_4w_km":[41.15,40.92,27.14,29.15]}},
   "trend_recent_daily": {"columns":["date","window_start","window_end","window_days","resting_hr","hrv_last_night_avg_ms","hrv_seven_day_avg_ms","sleep_hours","sleep_score","vo2_max","training_status","acute_load","chronic_load","acwr","acwr_status","activity_count","total_endurance_duration_hours","total_endurance_distance_km","sport_volume","total_exercise_load"],"data":[["2026-08-18","2026-08-18","2026-08-18",1,57,56.0,49.0,6.8,85,45.0,"Recovery 2",429,574,0.7,"Low",1,0.74,6.03,{"running":{"activity_count":1,"distance_km":6.03,"duration_hours":0.74,"load":139.2}},139.2],["2026-08-19","2026-08-19","2026-08-19",1,56,49.0,49.0,7.5,71,45.0,"Recovery 2",327,553,0.5,"Low",0,0.0,0.0,{},null],["2026-08-20","2026-08-20","2026-08-20",1,60,44.0,49.0,5.52,52,45.0,"Maintaining 2",504,565,0.8,"Optimal",1,0.76,7.03,{"running":{"activity_count":1,"distance_km":7.03,"duration_hours":0.76,"load":178.9}},178.9],["2026-08-21","2026-08-21","2026-08-21",1,59,47.0,49.0,7.05,58,45.0,"Maintaining 2",431,538,0.8,"Optimal",0,0.0,0.0,{},null],["2026-08-22","2026-08-22","2026-08-22",1,61,42.0,48.0,6.27,76,45.0,"Maintaining 2",528,542,0.9,"Optimal",1,1.19,10.03,{"running":{"activity_count":1,"distance_km":10.03,"duration_hours":1.19,"load":133.1}},133.1],["2026-08-23","2026-08-23","2026-08-23",1,59,48.0,47.0,6.63,81,45.0,"Maintaining 2",538,533,1.0,"Optimal",1,0.8,6.06,{"running":{"activity_count":1,"distance_km":6.06,"duration_hours":0.8,"load":71.2}},71.2],["2026-08-24","2026-08-24","2026-08-24",1,60,49.0,48.0,7.62,81,45.0,"Maintaining 2",451,511,0.8,"Optimal",0,0.0,0.0,{},null]]},
