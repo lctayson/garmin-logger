@@ -8,6 +8,7 @@ from datetime import datetime
 
 ACTIVITY_KEYS = ("activities", "activity_data", "activityData")
 TREND_KEYS = ("training_history", "trend_recent_daily", "trend_long_range_weekly", "body_battery_trend")
+GENERATED_METADATA_KEYS = ("generated_at_local",)
 
 KEY_MAP = {
     "resting_heart_rate": "resting_hr", "resting_hr_bpm": "resting_hr", "total_steps": "steps", "total_sleep_hours": "sleep_hours",
@@ -67,8 +68,11 @@ def split_payload(payload):
     activity_key = next((key for key in ACTIVITY_KEYS if key in payload), None)
     if activity_key is None: raise KeyError("Could not find the activity section")
     trend_keys_present = [key for key in TREND_KEYS if key in payload]
-    daily = {key: value for key, value in payload.items() if key != activity_key and key not in trend_keys_present}
-    metrics = {key: compact_keys(value) for key, value in daily.items()}
+    metrics = {
+        key: compact_keys(value)
+        for key, value in payload.items()
+        if key != activity_key and key not in trend_keys_present and key not in GENERATED_METADATA_KEYS
+    }
     metrics.update({key: compact_trends(payload[key]) for key in trend_keys_present})
     activities = {"date": payload.get("date"), "activities": compact_activities(payload.get(activity_key))}
     return metrics, activities
@@ -112,8 +116,6 @@ def _metrics_text(payload):
         if key in readable:
             value_text = json.dumps(value, ensure_ascii=False, indent=2)
             value_lines = value_text.splitlines()
-            # The first line is the opening brace; subsequent lines need the
-            # two-space indentation of the top-level property added to them.
             lines.append(f'  {json.dumps(key, ensure_ascii=False)}: {value_lines[0]}')
             lines.extend("  " + line for line in value_lines[1:])
             if comma:
