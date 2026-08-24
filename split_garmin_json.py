@@ -68,7 +68,6 @@ def split_payload(payload):
     if activity_key is None: raise KeyError("Could not find the activity section")
     trend_keys_present = [key for key in TREND_KEYS if key in payload]
     daily = {key: value for key, value in payload.items() if key != activity_key and key not in trend_keys_present}
-    # Keep date, daily readiness, health stats, training status, etc. all at the same root level.
     metrics = {key: compact_keys(value) for key, value in daily.items()}
     metrics.update({key: compact_trends(payload[key]) for key in trend_keys_present})
     activities = {"date": payload.get("date"), "activities": compact_activities(payload.get(activity_key))}
@@ -104,20 +103,21 @@ def _compact_data_arrays(text):
     return text
 
 def _metrics_text(payload):
-    """Readable top-level current metrics; historical/trend sections stay minified."""
+    """Readable current metrics; historical/trend sections stay minified."""
     lines = ["{"]
     items = list(payload.items())
+    readable = {"date", "daily_readiness", "health_stats", "training_status"}
     for index, (key, value) in enumerate(items):
         comma = "," if index < len(items) - 1 else ""
-        if key in {"date", "daily_readiness", "health_stats", "training_status"}:
+        if key in readable:
             value_text = json.dumps(value, ensure_ascii=False, indent=2)
             value_lines = value_text.splitlines()
+            # The first line is the opening brace; subsequent lines need the
+            # two-space indentation of the top-level property added to them.
             lines.append(f'  {json.dumps(key, ensure_ascii=False)}: {value_lines[0]}')
-            # json.dumps(indent=2) assumes the object starts at column 0. Since
-            # the property itself is indented two spaces, shift every following
-            # line by two spaces so nested fields line up correctly.
             lines.extend("  " + line for line in value_lines[1:])
-            if comma: lines[-1] += comma
+            if comma:
+                lines[-1] += comma
         else:
             value_text = json.dumps(value, ensure_ascii=False, separators=(",", ":"))
             lines.append(f"  {json.dumps(key, ensure_ascii=False)}: {value_text}{comma}")
