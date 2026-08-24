@@ -113,7 +113,10 @@ def _metrics_text(payload):
             value_text = json.dumps(value, ensure_ascii=False, indent=2)
             value_lines = value_text.splitlines()
             lines.append(f'  {json.dumps(key, ensure_ascii=False)}: {value_lines[0]}')
-            lines.extend(value_lines[1:])
+            # json.dumps(indent=2) assumes the object starts at column 0. Since
+            # the property itself is indented two spaces, shift every following
+            # line by two spaces so nested fields line up correctly.
+            lines.extend("  " + line for line in value_lines[1:])
             if comma: lines[-1] += comma
         else:
             value_text = json.dumps(value, ensure_ascii=False, separators=(",", ":"))
