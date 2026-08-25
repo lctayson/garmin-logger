@@ -52,10 +52,19 @@ jobs:
           echo "date=$DATE" >> "$GITHUB_OUTPUT"
           echo "Target date: $DATE"
 
+      - name: Prepare Garmin token store
+        env:
+          GARMIN_TOKENS_JSON: ${{ secrets.GARMIN_TOKENS_JSON }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$HOME/.garminconnect"
+          printf '%s' "$GARMIN_TOKENS_JSON" > "$HOME/.garminconnect/garmin_tokens.json"
+          chmod 600 "$HOME/.garminconnect/garmin_tokens.json"
+
       - name: Generate fresh Garmin JSON
         env:
-          GARMINTOKENS: ${{ secrets.GARMIN_TOKENS_JSON }}
-          GARMIN_TOKENS_JSON: ${{ secrets.GARMIN_TOKENS_JSON }}
+          GARMIN_TOKENSTORE: ~/.garminconnect
         shell: bash
         run: |
           set -euo pipefail
