@@ -8,7 +8,7 @@
     "sleep_hours": 5.62,
     "sleep_hours_including_previous_day_nap": 5.62,
     "sleep_score": 73,
-    "nap_minutes": 0.0,
+    "nap_minutes": 0,
     "previous_day_nap": null,
     "training_status": "Maintaining 2",
     "acute_load": 547,
@@ -37,8 +37,9 @@
       "rem": 0.63,
       "awake": 0.32
     },
-    "nap_minutes": 0.0,
-    "steps": 357
+    "nap_minutes": 0,
+    "steps": 357,
+    "previous_day_nap": null
   },
   "training_status": {
     "status": "Maintaining 2",
