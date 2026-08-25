@@ -97,14 +97,12 @@ def main():
             if not record:
                 continue
 
-            # Garmin's target-date sleep response is treated as the primary
-            # source for target-date naps. The previous-date response is used
-            # to catch naps that Garmin attaches to the previous sleep record;
-            # those are included only when their actual timestamp proves they
-            # occurred on the previous calendar date.
+            # Keep every nap returned by the target-date sleep record. For the
+            # previous-date lookup, keep only naps whose actual timestamp proves
+            # they occurred on the previous calendar date. This lets tomorrow's
+            # metrics retain yesterday's nap when Garmin attaches it to today's
+            # sleep record, while avoiding accidental cross-day duplicates.
             if day == previous and record["actual_date"] != previous.isoformat():
-                continue
-            if day == target and record["actual_date"] != target.isoformat():
                 continue
 
             key = (record["start"], record["end"], record["duration_min"])
