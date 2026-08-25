@@ -31,9 +31,18 @@ jobs:
           python -m pip install --upgrade pip
           pip install 'garminconnect>=0.3.5' requests gspread oauth2client
 
+      - name: Prepare Garmin token store
+        env:
+          GARMIN_TOKENS_JSON: ${{ secrets.GARMIN_TOKENS_JSON }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$HOME/.garminconnect"
+          printf '%s' "$GARMIN_TOKENS_JSON" > "$HOME/.garminconnect/garmin_tokens.json"
+          chmod 600 "$HOME/.garminconnect/garmin_tokens.json"
+
       - name: Run garmin_to_json.py
         env:
-          GARMINTOKENS: ${{ secrets.GARMIN_TOKENS_JSON }}
+          GARMIN_TOKENSTORE: ~/.garminconnect
         run: |
           if [ -n "${{ inputs.date }}" ]; then
             python garmin_to_json.py --date "${{ inputs.date }}"
