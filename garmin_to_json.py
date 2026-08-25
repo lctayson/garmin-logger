@@ -1,7 +1,7 @@
 import os
 import json
 import argparse
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 from garminconnect import Garmin
 from garmin_helpers import (
@@ -10,6 +10,9 @@ from garmin_helpers import (
     get_activities,
 )
 from sport_trends import get_metric_trend
+
+
+LOCAL_TZ = ZoneInfo("Asia/Manila")
 
 
 def safe_float(val, decimals=2):
@@ -221,15 +224,110 @@ def get_training_history(api, target_date):
         "7_day": {"total_endurance": total_7, "sports": sport_7},
         "28_day": {"avg_weekly_running_distance_km": running_avg, "weekly_total_endurance": weekly},
         "legacy_running_summary": {
-            "7_day_distance_km": sport_7.get("running", {}).get("distance_km", 0.0),
-            "28_day_avg_weekly_distance_km": running_avg,
+            "7d_distance_km": sport_7.get("running", {}).get("distance_km", 0.0),
+            "28d_avg_weekly_distance_km": running_avg,
             "weekly_distance_last_4_weeks_km": running_weekly
         }
     }
 
 
-def get_health_stats(api, target_date_str):
-    """Fetch detailed daily health data without discarding Garmin-provided detail."""
+def _epoch_to_local(value):
+    """Convert Garmin epoch seconds/milliseconds to an Asia/Manila ISO timestamp."""
+    if value is None or value == "":
+        return None
+    try:
+        numeric = float(value)
+        if numeric > 10_000_000_000:
+            numeric /= 1000.0
+        return datetime.fromtimestamp(numeric, tz=timezone.utc).astimezone(LOCAL_TZ)
+    except (ValueError, TypeError, OSError, OverflowError):
+        return None
+
+
+def _garmin_timestamp_to_local(value):
+    """Parse Garmin event timestamps, handling epoch and ISO/string forms."""
+    if value is None or value == "":
+        return None
+    if isinstance(value, (int, float)):
+        return _epoch_to_local(value)
+    text = str(value).strip()
+    try:
+        return _epoch_to_local(text)
+    except Exception:
+        pass
+    try:
+        parsed = datetime.fromisoformat(text.replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed.astimezone(LOCAL_TZ)
+    except ValueError:
+        return None
+
+
+def _nap_event_start(event):
+    return deep_get(event, [
+        "eventStartTimeGmt", "eventStartTimeGMT", "eventStartTime", "startTimeGMT",
+        "startTimeGmt", "startTime", "EventStartTimeInSeconds"
+    ])
+
+
+def _nap_event_duration_seconds(event):
+    value = deep_get(event, [
+        "durationInMilliseconds", "durationMilliseconds", "durationMs", "duration", "Duration"
+    ])
+    if value is None:
+        return None
+    try:
+        numeric = float(value)
+        # Garmin body-battery events use milliseconds; exported event data may use seconds.
+        return numeric / 1000.0 if numeric > 10000 else numeric
+    except (ValueError, TypeError):
+        return None
+
+
+def get_previous_day_nap(api, target_date):
+    """Return the most recent nap ending before today's morning, using actual event timestamps."""
+    nap_date = target_date - timedelta(days=1)
+    try:
+        events = api.get_body_battery_events(nap_date.isoformat()) or []
+    except Exception:
+        events = []
+
+    if isinstance(events, dict):
+        events = events.get("bodyBatteryActivityEvent") or events.get("bodyBatteryActivityEvents") or events.get("events") or []
+    if not isinstance(events, list):
+        return None
+
+    candidates = []
+    for event in events:
+        if not isinstance(event, dict):
+            continue
+        event_type = str(deep_get(event, ["eventType", "EventType", "type"], "")).upper()
+        if event_type != "NAP":
+            continue
+        start = _garmin_timestamp_to_local(_nap_event_start(event))
+        duration_seconds = _nap_event_duration_seconds(event)
+        if start is None or duration_seconds is None or duration_seconds <= 0:
+            continue
+        end = start + timedelta(seconds=duration_seconds)
+        if start.date() == nap_date or end.date() == nap_date:
+            candidates.append((start, end))
+
+    if not candidates:
+        return None
+
+    start, end = max(candidates, key=lambda item: item[1])
+    duration_minutes = (end - start).total_seconds() / 60.0
+    return {
+        "date": start.date().isoformat(),
+        "start_local": start.isoformat(timespec="seconds"),
+        "end_local": end.isoformat(timespec="seconds"),
+        "duration_minutes": round(duration_minutes, 1),
+    }
+
+
+def get_health_stats(api, target_date_str, target_date=None):
+    """Fetch detailed daily health data and carry the previous day's actual nap into today's metrics."""
     stats = {}
     try:
         stats = api.get_stats(target_date_str) or {}
@@ -249,7 +347,6 @@ def get_health_stats(api, target_date_str):
     overall_score = sleep_scores.get("overall", {}) or {}
     sleep_score = safe_int(overall_score.get("value") or sleep_dto.get("overallSleepScore") or sleep_dto.get("sleepScore"))
     sleep_seconds = sleep_dto.get("sleepTimeSeconds")
-    nap_seconds = sleep_dto.get("napTimeSeconds")
 
     def hours(seconds):
         return safe_float((seconds or 0) / 3600 if seconds is not None else None, 2)
@@ -290,13 +387,20 @@ def get_health_stats(api, target_date_str):
         hrv["baseline_balanced_range"] = baseline_range
     hrv = {k: v for k, v in hrv.items() if v is not None}
 
+    nap = get_previous_day_nap(api, target_date) if target_date else None
+    nap_minutes = nap.get("duration_minutes") if nap else 0.0
+    total_sleep_hours = hours(sleep_seconds)
+    total_sleep_including_nap_hours = round(total_sleep_hours + (nap_minutes / 60.0), 2) if total_sleep_hours is not None else None
+
     result = {
         "resting_heart_rate": rhr,
         "hrv": hrv,
         "sleep_score": sleep_score,
-        "total_sleep_hours": hours(sleep_seconds),
+        "total_sleep_hours": total_sleep_hours,
+        "sleep_hours_including_previous_day_nap": total_sleep_including_nap_hours,
         "sleep_stages_hours": sleep_stages,
-        "nap_minutes": safe_float((nap_seconds / 60.0) if nap_seconds is not None else None, 1),
+        "nap_minutes": safe_float(nap_minutes, 1),
+        "previous_day_nap": nap,
         "total_steps": total_steps,
     }
     return {k: v for k, v in result.items() if v is not None}
@@ -313,7 +417,10 @@ def build_daily_readiness(health_stats, training_status):
         "hrv_7_day_avg_ms": deep_get(health_stats, ["hrv.seven_day_avg_ms"]),
         "hrv_status": deep_get(health_stats, ["hrv.status"]),
         "sleep_hours": health_stats.get("total_sleep_hours"),
+        "sleep_hours_including_previous_day_nap": health_stats.get("sleep_hours_including_previous_day_nap"),
         "sleep_score": health_stats.get("sleep_score"),
+        "nap_minutes": health_stats.get("nap_minutes"),
+        "previous_day_nap": health_stats.get("previous_day_nap"),
         "training_status": ts.get("status"),
         "acute_load": load.get("acute_load"),
         "chronic_load": load.get("chronic_load"),
@@ -363,11 +470,11 @@ def main():
 
     data_dir = "data"
     tokenstore = os.getenv("GARMIN_TOKENSTORE", "~/.garminconnect")
-    target_date = datetime.strptime(args.date, "%Y-%m-%d").date() if args.date else datetime.now(ZoneInfo("Asia/Manila")).date()
+    target_date = datetime.strptime(args.date, "%Y-%m-%d").date() if args.date else datetime.now(LOCAL_TZ).date()
     api = Garmin()
     api.login(tokenstore=os.path.expanduser(tokenstore))
 
-    health_stats = get_health_stats(api, target_date.isoformat())
+    health_stats = get_health_stats(api, target_date.isoformat(), target_date)
     training_status = get_training_status_details(api, target_date.isoformat())
     training_history = get_training_history(api, target_date)
     activities = get_activities(api, target_date)
