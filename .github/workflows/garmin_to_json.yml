@@ -50,6 +50,16 @@ jobs:
             python garmin_to_json.py
           fi
 
+      - name: Add date-aware Garmin naps
+        env:
+          GARMIN_TOKENSTORE: ~/.garminconnect
+        run: |
+          if [ -n "${{ inputs.date }}" ]; then
+            python add_garmin_naps.py --date "${{ inputs.date }}"
+          else
+            python add_garmin_naps.py --date "$(date +%Y-%m-%d)"
+          fi
+
       - name: Split daily and activity JSON
         run: |
           if [ -n "${{ inputs.date }}" ]; then
