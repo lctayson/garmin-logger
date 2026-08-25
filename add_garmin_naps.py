@@ -97,12 +97,13 @@ def main():
             if not record:
                 continue
 
-            # Keep every nap returned by the target-date sleep record. For the
-            # previous-date lookup, keep only naps whose actual timestamp proves
-            # they occurred on the previous calendar date. This lets tomorrow's
-            # metrics retain yesterday's nap when Garmin attaches it to today's
-            # sleep record, while avoiding accidental cross-day duplicates.
+            # Garmin can attach an afternoon nap to the following sleep record.
+            # Therefore, target-date sleep data may legitimately contain a nap
+            # whose actual date is the previous calendar day. The previous-date
+            # lookup is restricted by actual timestamp to avoid unrelated data.
             if day == previous and record["actual_date"] != previous.isoformat():
+                continue
+            if day == target and record["actual_date"] not in (target.isoformat(), previous.isoformat()):
                 continue
 
             key = (record["start"], record["end"], record["duration_min"])
@@ -119,17 +120,41 @@ def main():
         raise ValueError(f"Expected JSON object in {args.json}")
 
     health = payload.setdefault("health_stats", {})
+    readiness = payload.setdefault("daily_readiness", {})
+
     if records:
         records.sort(key=lambda item: item.get("start", ""))
         health["naps"] = records
     else:
         health.pop("naps", None)
 
+    previous_naps = []
+    for record in records:
+        actual_date = (record.get("start") or record.get("end") or "")[:10]
+        if actual_date == previous.isoformat():
+            previous_naps.append(record)
+    previous_nap = max(previous_naps, key=lambda item: item.get("end", item.get("start", ""))) if previous_naps else None
+    nap_minutes = round(sum(float(record.get("duration_min") or 0) for record in records), 1)
+
+    overnight = health.get("sleep_hours")
+    if overnight is None:
+        overnight = health.get("total_sleep_hours")
+    combined_sleep = overnight
+    if previous_nap and overnight is not None:
+        combined_sleep = round(float(overnight) + float(previous_nap.get("duration_min") or 0) / 60.0, 2)
+
+    health["nap_minutes"] = nap_minutes
+    health["sleep_hours_including_previous_day_nap"] = combined_sleep
+    health["previous_day_nap"] = previous_nap
+    readiness["nap_minutes"] = nap_minutes
+    readiness["sleep_hours_including_previous_day_nap"] = combined_sleep
+    readiness["previous_day_nap"] = previous_nap
+
     with open(args.json, "w", encoding="utf-8") as fh:
         json.dump(payload, fh, indent=2, ensure_ascii=False)
         fh.write("\n")
 
-    print(f"[naps] Added {len(records)} nap(s) for {args.date}")
+    print(f"[naps] Added {len(records)} nap(s) for {args.date}; previous-day nap={previous_nap is not None}")
 
 
 if __name__ == "__main__":
