@@ -249,6 +249,7 @@ def get_health_stats(api, target_date_str):
     overall_score = sleep_scores.get("overall", {}) or {}
     sleep_score = safe_int(overall_score.get("value") or sleep_dto.get("overallSleepScore") or sleep_dto.get("sleepScore"))
     sleep_seconds = sleep_dto.get("sleepTimeSeconds")
+    nap_seconds = sleep_dto.get("napTimeSeconds")
 
     def hours(seconds):
         return safe_float((seconds or 0) / 3600 if seconds is not None else None, 2)
@@ -295,6 +296,7 @@ def get_health_stats(api, target_date_str):
         "sleep_score": sleep_score,
         "total_sleep_hours": hours(sleep_seconds),
         "sleep_stages_hours": sleep_stages,
+        "nap_minutes": safe_float((nap_seconds / 60.0) if nap_seconds is not None else None, 1),
         "total_steps": total_steps,
     }
     return {k: v for k, v in result.items() if v is not None}
@@ -348,7 +350,6 @@ def migrate_legacy_data_files(data_dir="data"):
         if not os.path.exists(destination):
             os.replace(source, destination)
         else:
-            # Keep the existing organized copy and remove the obsolete flat duplicate.
             os.remove(source)
 
 
@@ -360,79 +361,38 @@ def main():
     parser.add_argument("--body-battery-days", type=int, default=7)
     args = parser.parse_args()
 
-    ph_today = datetime.now(ZoneInfo("Asia/Manila")).date().isoformat()
-    target_date_str = args.date or ph_today
-    target_date = datetime.strptime(target_date_str, "%Y-%m-%d").date()
+    data_dir = "data"
+    tokenstore = os.getenv("GARMIN_TOKENSTORE", "~/.garminconnect")
+    target_date = datetime.strptime(args.date, "%Y-%m-%d").date() if args.date else datetime.now(ZoneInfo("Asia/Manila")).date()
+    api = Garmin()
+    api.login(tokenstore=os.path.expanduser(tokenstore))
 
-    api = Garmin(os.getenv("GARMIN_EMAIL"), os.getenv("GARMIN_PASSWORD"))
-    api.login()
-
-    health_stats = get_health_stats(api, target_date_str)
-    training_status = get_training_status_details(api, target_date_str)
-    activities = get_activities(api, target_date_str)
-    daily_readiness = build_daily_readiness(health_stats, training_status)
+    health_stats = get_health_stats(api, target_date.isoformat())
+    training_status = get_training_status_details(api, target_date.isoformat())
+    training_history = get_training_history(api, target_date)
+    activities = get_activities(api, target_date)
+    trends = get_metric_trend(api, target_date, days=args.trend_days, interval=1)
+    weekly_trends = get_metric_trend(api, target_date, days=args.trend_weeks * 7, interval=7)
+    body_battery_trend = get_body_battery_trend(api, target_date, days=args.body_battery_days)
 
     payload = {
-        "date": target_date_str,
-        "daily_readiness": daily_readiness,
+        "date": target_date.isoformat(),
+        "daily_readiness": build_daily_readiness(health_stats, training_status),
         "health_stats": health_stats,
         "training_status": training_status,
+        "training_history": training_history,
+        "trend_recent_daily": trends,
+        "trend_long_range_weekly": weekly_trends,
+        "body_battery_trend": body_battery_trend,
         "activities": activities,
     }
+    payload = strip_volatile_fields(payload)
 
-    training_history = get_training_history(api, target_date)
-    payload["training_history"] = training_history
-
-    if args.trend_days > 0:
-        payload["trend_recent_daily"] = get_metric_trend(api, target_date, days=args.trend_days, interval=1)
-    if args.trend_weeks > 0:
-        payload["trend_long_range_weekly"] = get_metric_trend(api, target_date, days=args.trend_weeks * 7, interval=7)
-    if args.body_battery_days > 0:
-        payload["body_battery_trend"] = get_body_battery_trend(api, target_date, days=args.body_battery_days)
-
-    payload["generated_at_local"] = datetime.now(ZoneInfo("Asia/Manila")).isoformat(timespec="minutes")
-
-    data_dir = "data"
     os.makedirs(data_dir, exist_ok=True)
-    migrate_legacy_data_files(data_dir)
-
-    year_dir = os.path.join(data_dir, f"{target_date.year:04d}", f"{target_date.month:02d}")
-    os.makedirs(year_dir, exist_ok=True)
-    file_path = os.path.join(year_dir, f"{target_date_str}.json")
-    existing_payload = None
-    if os.path.exists(file_path):
-        try:
-            with open(file_path) as f:
-                existing_payload = json.load(f)
-        except Exception:
-            existing_payload = None
-
-    changed = existing_payload is None or strip_volatile_fields(existing_payload) != strip_volatile_fields(payload)
-    if changed:
-        with open(file_path, "w") as f:
-            json.dump(payload, f, indent=2)
-        print(f"Successfully generated/updated Garmin JSON at: {file_path}")
-    else:
-        print(f"No meaningful change since last run -- leaving {file_path} unchanged")
-
-    if target_date_str == ph_today:
-        latest_path = os.path.join(data_dir, "latest.json")
-        existing_latest = None
-        if os.path.exists(latest_path):
-            try:
-                with open(latest_path) as f:
-                    existing_latest = json.load(f)
-            except Exception:
-                existing_latest = None
-        latest_changed = existing_latest is None or strip_volatile_fields(existing_latest) != strip_volatile_fields(payload)
-        if latest_changed:
-            with open(latest_path, "w") as f:
-                json.dump(payload, f, indent=2)
-            print(f"Successfully generated/updated latest Garmin data at: {latest_path}")
-        else:
-            print(f"No meaningful change since last run -- leaving {latest_path} unchanged")
-    else:
-        print(f"Historical date {target_date_str} != current Philippines date {ph_today}; skipping data/latest.json update.")
+    latest_path = os.path.join(data_dir, "latest.json")
+    with open(latest_path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+    print(latest_path)
 
 
 if __name__ == "__main__":
