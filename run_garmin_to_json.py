@@ -168,6 +168,19 @@ def get_training_history(api, target_date):
     }
 
 
+# The generator's main() passes a datetime.date to get_activities(), while the
+# Garmin activity helper expects the YYYY-MM-DD string used by Garmin Connect.
+# Keep the existing activity exporter untouched; normalize only this argument.
+_original_get_activities = generator.get_activities
+
+
+def get_activities(api, target_date):
+    date_str = target_date.isoformat() if hasattr(target_date, "isoformat") else str(target_date)
+    return _original_get_activities(api, date_str)
+
+
+generator.get_activities = get_activities
+
 # Replace the legacy run-centric history builder before main() constructs the payload.
 generator.get_training_history = get_training_history
 
