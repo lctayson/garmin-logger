@@ -53,7 +53,7 @@ jobs:
         env:
           GARMIN_TOKENSTORE: ~/.garminconnect
         run: |
-          python garmin_to_json.py --date "$EXPORT_DATE"
+          python run_garmin_to_json.py --date "$EXPORT_DATE"
 
       - name: Add Garmin Sleep Need
         env:
