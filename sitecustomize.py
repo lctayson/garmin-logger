@@ -8,7 +8,7 @@ history from assigning historical swim/bike/run legs to the wrong week.
 """
 
 import builtins
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from garmin_helpers import (
     get_training_status_details,
@@ -75,9 +75,7 @@ if Garmin is not None and not getattr(Garmin, "_garmin_logger_date_patch", False
     def _patched_get_activity(self, activity_id):
         detail = _original_get_activity(self, activity_id)
         activity_key = str(activity_id)
-        # Parent detail: discover its child IDs and remember the parent's date.
         _remember_parent(detail)
-        # Child detail: inject the parent's local date only when Garmin omitted it.
         if isinstance(detail, dict) and activity_key in _child_parent_dates:
             if not detail.get("startTimeLocal") and not detail.get("startTimeGMT") and not detail.get("startTime"):
                 detail["startTimeLocal"] = _child_parent_dates[activity_key]
@@ -85,9 +83,30 @@ if Garmin is not None and not getattr(Garmin, "_garmin_logger_date_patch", False
 
     def _patched_get_activities_by_date(self, start, end):
         activities = _original_get_activities_by_date(self, start, end)
-        # If the date-list endpoint already exposes child IDs, remember the
-        # parent date immediately. Parent details are still handled by
-        # _patched_get_activity when the history code expands them.
+
+        # Garmin's exact-date search can occasionally return an empty list for
+        # an otherwise valid historical activity. Retry with a one-day buffer
+        # on each side and filter by the activity's actual local start date.
+        # This fallback is only used when the normal query returns nothing, so
+        # we do not call the recent-activities endpoint on every export.
+        if not activities and start == end:
+            try:
+                target = datetime.strptime(start, "%Y-%m-%d").date()
+                buffered_start = (target - timedelta(days=1)).isoformat()
+                buffered_end = (target + timedelta(days=1)).isoformat()
+                candidates = _original_get_activities_by_date(self, buffered_start, buffered_end) or []
+                activities = [
+                    act for act in candidates
+                    if isinstance(act, dict)
+                    and (
+                        _extract_date(act.get("startTimeLocal"))
+                        or _extract_date(act.get("startTimeGMT"))
+                        or _extract_date(act.get("startTime"))
+                    ) == start
+                ]
+            except Exception:
+                pass
+
         for act in activities or []:
             if not isinstance(act, dict):
                 continue
