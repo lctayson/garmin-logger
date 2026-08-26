@@ -114,7 +114,7 @@ def get_training_status_details(api, target_date_str):
 def _find_first_key(obj, keys):
     if isinstance(obj, dict):
         for key in keys:
-            if key in obj and obj[key] is not None and obj[key] != "":
+            if key in obj and obj[key] is not None and obj[key] != '':
                 return obj[key]
         for value in obj.values():
             found = _find_first_key(value, keys)
@@ -264,7 +264,8 @@ def get_activity_splits(api,activity_id,activity_type='run'):
     from garmin_to_json import format_pace
     try: splits=api.get_activity_splits(activity_id)
     except Exception: splits={}
-    laps=splits.get('lapDTOs',[]) if isinstance(splits,dict) else []; out=[]; cumulative=0.0
+    laps=splits.get('lapDTOs',[]) if isinstance(splits,dict) else []
+    out=[]; cumulative=0.0
     for lap in laps:
         dist=lap.get('distance',0) or 0; dur=lap.get('duration',0) or lap.get('elapsedDuration',0) or 0; cumulative+=dur
         raw_stride=_safe_float(lap.get('strideLength') or lap.get('avgStrideLength')); stride=round(raw_stride/100,4) if raw_stride and raw_stride>3 else raw_stride
@@ -294,32 +295,44 @@ def _child_summary(api,child_id):
     from garmin_to_json import format_pace
     try: detail=api.get_activity(child_id)
     except Exception: detail={}
-    summary=detail.get('summaryDTO',{}) if isinstance(detail.get('summaryDTO'),dict) else {}; typ=_deep_get(detail,['activityTypeDTO.typeKey','activityType.typeKey','activityType'],''); dist=summary.get('distance') or detail.get('distance') or 0; dur=summary.get('duration') or detail.get('duration') or 0
+    summary=detail.get('summaryDTO',{}) if isinstance(detail.get('summaryDTO'),dict) else {}
+    typ=_deep_get(detail,['activityTypeDTO.typeKey','activityType.typeKey','activityType'],'')
+    dist=summary.get('distance') or detail.get('distance') or 0
+    dur=summary.get('duration') or detail.get('duration') or 0
     load=_deep_get(summary,['trainingLoad','exerciseLoad']) or _deep_get(detail,['trainingLoad','exerciseLoad','activityTrainingLoad'])
     return {'activityId':child_id,'name':detail.get('activityName') or typ or 'Leg','type':typ,'distance_km':round(dist/1000,2) if dist else 0,'duration_mins':round(dur/60,2) if dur else 0,'avg_pace':format_pace(dist,dur,typ),'average_hr':_safe_float(summary.get('averageHR') or detail.get('averageHR')),'max_hr':_safe_float(summary.get('maxHR') or detail.get('maxHR')),'aerobic_training_effect':_safe_float(summary.get('trainingEffect') or summary.get('aerobicTrainingEffect') or detail.get('aerobicTrainingEffect')),'anaerobic_training_effect':_safe_float(summary.get('anaerobicTrainingEffect') or detail.get('anaerobicTrainingEffect')),'exercise_load':_safe_float(load,1)}
 
 
 def get_activities(api,target_date_str):
-    try: acts=api.get_activities_by_date(target_date_str,target_date_str)
-    except Exception: acts=[]
+    """Fetch activities for exactly the requested local calendar date."""
+    try:
+        acts=api.get_activities_by_date(target_date_str,target_date_str)
+    except Exception as e:
+        print(f'[activities] Warning {target_date_str}: {e}', file=sys.stderr)
+        acts=[]
     from garmin_to_json import deep_get, format_pace
     out=[]
-    for act in acts:
-        aid=act.get('activityId'); typ=deep_get(act,['activityType.typeKey','activityType'],'')
+    for act in acts or []:
+        aid=act.get('activityId')
+        typ=deep_get(act,['activityType.typeKey','activityType'],'')
         if _is_multisport(typ) and aid:
             ids=_child_ids(api,aid)
             if ids:
                 transitions=0
                 for cid in ids:
                     obj=_child_summary(api,cid)
-                    if 'transition' in (obj.get('type') or '').lower(): transitions+=1; obj['name']=f'Transition {transitions} (T{transitions})'
+                    if 'transition' in (obj.get('type') or '').lower():
+                        transitions+=1
+                        obj['name']=f'Transition {transitions} (T{transitions})'
                     splits=get_activity_splits(api,cid,obj.get('type'))
                     if splits: obj['activity_splits']=splits
-                    obj['parentActivityId']=aid; out.append({k:v for k,v in obj.items() if v is not None})
+                    obj['parentActivityId']=aid
+                    out.append({k:v for k,v in obj.items() if v is not None})
                 continue
-        dist=act.get('distance',0) or 0; dur=act.get('duration',0) or 0
+        dist=act.get('distance',0) or 0
+        dur=act.get('duration',0) or 0
         load=_deep_get(act,['trainingLoad','exerciseLoad','activityTrainingLoad','summaryDTO.trainingLoad','summaryDTO.exerciseLoad'])
-        obj={'activityId':aid,'name':act.get('activityName'),'type':typ,'distance_km':round(dist/1000,2) if dist else 0,'duration_mins':round(dur/60,2) if dur else 0,'avg_pace':format_pace(dist,dur,typ),'average_hr':_safe_float(act.get('averageHR') or act.get('avgHR')),'max_hr':_safe_int(act.get('maxHR') or act.get('maximumHR')),'aerobic_training_effect':_safe_float(act.get('aerobicTrainingEffect')),'anaerobic_training_effect':_safe_float(act.get('anaerobicTrainingEffect')),'exercise_load':_safe_float(load,1)}
+        obj={'activityId':aid,'name':act.get('activityName'),'type':typ,'distance_km':round(dist/1000,2) if dist else 0,'duration_mins':round(dur/60,2) if dur else 0,'avg_pace':format_pace(dist,dur,typ),'average_hr':_safe_float(act.get('averageHR') or act.get('avgHR')),'max_hr':_safe_float(act.get('maxHR') or act.get('maximumHR')),'aerobic_training_effect':_safe_float(act.get('aerobicTrainingEffect')),'anaerobic_training_effect':_safe_float(act.get('anaerobicTrainingEffect')),'exercise_load':_safe_float(load,1)}
         if aid:
             splits=get_activity_splits(api,aid,typ)
             if splits: obj['activity_splits']=splits
