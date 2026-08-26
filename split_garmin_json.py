@@ -5,11 +5,13 @@ import json
 import os
 import shutil
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 ACTIVITY_KEYS = ("activities", "activity_data", "activityData")
 TREND_KEYS = ("training_history", "trend_recent_daily", "trend_long_range_weekly", "body_battery_trend")
 GENERATED_METADATA_KEYS = ("generated_at_local",)
 DUPLICATE_METRIC_KEYS = {"resting_hr", "sleep_score", "vo2_max", "recovery_hours"}
+LOCAL_TZ = ZoneInfo("Asia/Manila")
 
 KEY_MAP = {
     "resting_heart_rate": "resting_hr", "resting_hr_bpm": "resting_hr", "total_steps": "steps", "total_sleep_hours": "sleep_hours",
@@ -130,6 +132,31 @@ def write_json(path, payload, activity_compact=False, metrics=False):
     with open(tmp, "w", encoding="utf-8") as fh: fh.write(text + "\n")
     os.replace(tmp, path)
 
+def _dated_activity_files(data_dir):
+    """Return dated activity files sorted newest first, without relying on latest_activities."""
+    found = []
+    for root, _, filenames in os.walk(data_dir):
+        for filename in filenames:
+            if not filename.endswith("_activities.json"):
+                continue
+            date_text = filename[:10]
+            try:
+                file_date = datetime.strptime(date_text, "%Y-%m-%d").date()
+            except ValueError:
+                continue
+            found.append((file_date, os.path.join(root, filename)))
+    return sorted(found, key=lambda item: item[0], reverse=True)
+
+def refresh_latest_activities(data_dir):
+    """Point latest_activities at the newest dated activity file, if one exists."""
+    dated_files = _dated_activity_files(data_dir)
+    if not dated_files:
+        return
+    newest_path = dated_files[0][1]
+    latest_path = os.path.join(data_dir, "latest_activities.json")
+    if os.path.abspath(newest_path) != os.path.abspath(latest_path):
+        shutil.copyfile(newest_path, latest_path)
+
 def main():
     parser = argparse.ArgumentParser(); parser.add_argument("--date", default=None); parser.add_argument("--data-dir", default="data"); args = parser.parse_args()
     latest_path = os.path.join(args.data_dir, "latest.json")
@@ -141,16 +168,29 @@ def main():
     metrics, activities = split_payload(payload); has_activities = isinstance(activities.get("activities"), list) and len(activities["activities"]) > 0
     month_dir = os.path.join(args.data_dir, f"{target_date.year:04d}", f"{target_date.month:02d}"); os.makedirs(month_dir, exist_ok=True)
     dated_metrics = os.path.join(month_dir, f"{target_date.isoformat()}_metrics.json"); dated_activities = os.path.join(month_dir, f"{target_date.isoformat()}_activities.json")
-    write_json(dated_metrics, metrics, metrics=True); shutil.copyfile(dated_metrics, os.path.join(args.data_dir, "latest_metrics.json"))
+    write_json(dated_metrics, metrics, metrics=True)
+
+    # latest_metrics is a live/current snapshot, not a pointer to the date requested
+    # for a historical/manual export. Never replace today's snapshot with older data.
+    today_local = datetime.now(LOCAL_TZ).date()
+    if target_date == today_local:
+        shutil.copyfile(dated_metrics, os.path.join(args.data_dir, "latest_metrics.json"))
+
     if has_activities:
-        write_json(dated_activities, activities, activity_compact=True); shutil.copyfile(dated_activities, os.path.join(args.data_dir, "latest_activities.json"))
+        write_json(dated_activities, activities, activity_compact=True)
+    elif os.path.exists(dated_activities):
+        os.remove(dated_activities)
+
+    # latest_activities always points to the newest activity available in the repository.
+    # Therefore a no-activity day keeps yesterday's (or the last available) activity.
+    refresh_latest_activities(args.data_dir)
+
     for old_name in ("latest_daily.json", "latest_trends.json"):
         old_path = os.path.join(args.data_dir, old_name)
         if os.path.exists(old_path): os.remove(old_path)
     for old_suffix in ("_daily.json", "_trends.json"):
         old_path = os.path.join(month_dir, f"{target_date.isoformat()}{old_suffix}")
         if os.path.exists(old_path): os.remove(old_path)
-    if not has_activities and os.path.exists(dated_activities): os.remove(dated_activities)
     old_dated = os.path.join(month_dir, f"{target_date.isoformat()}.json")
     if os.path.exists(old_dated): os.remove(old_dated)
     os.remove(latest_path)
