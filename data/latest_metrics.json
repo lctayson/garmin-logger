@@ -6,10 +6,9 @@
     "hrv_7_day_avg_ms": 47.0,
     "hrv_status": "UNBALANCED",
     "sleep_hours": 5.62,
-    "sleep_hours_including_previous_day_nap": 5.62,
+    "sleep_hours_including_previous_day_nap": 6.4,
     "sleep_score": 73,
-    "nap_minutes": 0.0,
-    "previous_day_nap": null,
+    "previous_day_nap": 47.0,
     "training_status": "Maintaining 2",
     "acute_load": 547,
     "chronic_load": 518,
@@ -30,14 +29,12 @@
       }
     },
     "sleep_hours": 5.62,
-    "sleep_hours_including_previous_day_nap": 6.4,
     "sleep_stages_hours": {
       "deep": 0.92,
       "light": 4.07,
       "rem": 0.63,
       "awake": 0.32
     },
-    "nap_minutes": 47.0,
     "steps": 9723,
     "naps": [
       {
