@@ -3,17 +3,63 @@
 import builtins
 from datetime import datetime
 
+import garmin_helpers as _helpers
 from garmin_helpers import (
     get_training_status_details,
     get_metric_trend,
     get_body_battery_trend,
-    get_activities,
+    get_activities as _original_get_activities,
 )
+
+
+def _get_activities_for_export(api, target_date_str):
+    """Export activities for exactly one date, with a date-specific retry path.
+
+    The primary path remains the existing date-range endpoint. If that endpoint
+    returns no records, use Garmin's dedicated for-date endpoint for the same
+    exact date. No adjacent dates and no recent-activities query are used.
+    """
+    activities = _original_get_activities(api, target_date_str)
+    if activities:
+        return activities
+
+    try:
+        raw = api.get_activities_fordate(target_date_str)
+    except Exception as exc:
+        print(f"[activities] Warning: date-specific lookup failed for {target_date_str}: {exc}")
+        return []
+
+    if isinstance(raw, list):
+        date_activities = raw
+    elif isinstance(raw, dict):
+        date_activities = []
+        for key in ("activityList", "activities", "activityData", "activityDTOs", "activityDTO"):
+            value = raw.get(key)
+            if isinstance(value, list):
+                date_activities = value
+                break
+            if isinstance(value, dict):
+                date_activities = [value]
+                break
+    else:
+        date_activities = []
+
+    if not date_activities:
+        return []
+
+    # Reuse the normal formatter without changing its date-selection behavior.
+    original = api.get_activities_by_date
+    try:
+        api.get_activities_by_date = lambda start, end, *args, **kwargs: date_activities if start == target_date_str and end == target_date_str else []
+        return _original_get_activities(api, target_date_str)
+    finally:
+        api.get_activities_by_date = original
+
 
 builtins.get_training_status_details = get_training_status_details
 builtins.get_metric_trend = get_metric_trend
 builtins.get_body_battery_trend = get_body_battery_trend
-builtins.get_activities = get_activities
+builtins.get_activities = _get_activities_for_export
 
 try:
     from garminconnect import Garmin
