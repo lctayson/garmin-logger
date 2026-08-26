@@ -1,12 +1,20 @@
 import argparse
 import json
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from garminconnect import Garmin
 
 
 def parse_dt(value):
-    if not isinstance(value, str) or not value:
+    """Parse Garmin nap timestamps (ISO strings or epoch milliseconds)."""
+    if value in (None, ""):
+        return None
+    if isinstance(value, (int, float)):
+        try:
+            return datetime.fromtimestamp(float(value) / 1000.0, tz=timezone.utc)
+        except (ValueError, OverflowError, OSError):
+            return None
+    if not isinstance(value, str):
         return None
     text = value.strip().replace("Z", "+00:00")
     for parser in (
@@ -45,8 +53,18 @@ def extract_naps(sleep_data):
 
 
 def nap_record(nap):
-    start_raw = first_value(nap, ("napStartTimeLocal", "startTimeLocal", "startTime", "beginTime"))
-    end_raw = first_value(nap, ("napEndTimeLocal", "endTimeLocal", "endTime", "finishTime"))
+    # Garmin has used both timestamp and datetime field names. Prefer local
+    # timestamps when present; fall back to GMT timestamps when necessary.
+    start_raw = first_value(nap, (
+        "napStartTimeLocal", "napStartTimestampLocal", "startTimeLocal", "startTimestampLocal",
+        "napStartTimeGMT", "napStartTimestampGMT", "startTimeGMT", "startTimestampGMT",
+        "startTime", "beginTime",
+    ))
+    end_raw = first_value(nap, (
+        "napEndTimeLocal", "napEndTimestampLocal", "endTimeLocal", "endTimestampLocal",
+        "napEndTimeGMT", "napEndTimestampGMT", "endTimeGMT", "endTimestampGMT",
+        "endTime", "finishTime",
+    ))
     start = parse_dt(start_raw)
     end = parse_dt(end_raw)
     if start is None and end is None:
@@ -70,6 +88,44 @@ def nap_record(nap):
     }
 
 
+def collect_naps(api, target):
+    """Collect target/previous-day naps using each nap's actual datetime."""
+    previous = target - timedelta(days=1)
+    records = []
+    seen = set()
+
+    for queried_day in (target, previous):
+        try:
+            sleep_data = api.get_sleep_data(queried_day.isoformat())
+        except Exception as exc:
+            print(f"[naps] Warning: could not fetch sleep data for {queried_day}: {exc}")
+            continue
+
+        for nap in extract_naps(sleep_data):
+            record = nap_record(nap)
+            if not record:
+                continue
+
+            # A target-date sleep record can contain yesterday's afternoon nap.
+            # The previous-date lookup is restricted to naps actually occurring
+            # on the previous calendar date. The target lookup accepts either
+            # target or previous date so Garmin's association is not lost.
+            if queried_day == previous and record["actual_date"] != previous.isoformat():
+                continue
+            if queried_day == target and record["actual_date"] not in (target.isoformat(), previous.isoformat()):
+                continue
+
+            key = (record["start"], record["end"], record["duration_min"])
+            if key in seen:
+                continue
+            seen.add(key)
+            record.pop("actual_date", None)
+            records.append({k: v for k, v in record.items() if v is not None})
+
+    records.sort(key=lambda item: item.get("start", ""))
+    return records
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--date", required=True)
@@ -82,37 +138,7 @@ def main():
     token_dir = os.environ.get("GARMIN_TOKENSTORE", "./.garminconnect")
     api = Garmin()
     api.login(token_dir)
-
-    records = []
-    seen = set()
-    for day in (target, previous):
-        try:
-            sleep_data = api.get_sleep_data(day.isoformat())
-        except Exception as exc:
-            print(f"[naps] Warning: could not fetch sleep data for {day}: {exc}")
-            continue
-
-        for nap in extract_naps(sleep_data):
-            record = nap_record(nap)
-            if not record:
-                continue
-
-            # Garmin can attach an afternoon nap to the following sleep record.
-            # Therefore, target-date sleep data may legitimately contain a nap
-            # whose actual date is the previous calendar day. The previous-date
-            # lookup is restricted by actual timestamp to avoid unrelated data.
-            if day == previous and record["actual_date"] != previous.isoformat():
-                continue
-            if day == target and record["actual_date"] not in (target.isoformat(), previous.isoformat()):
-                continue
-
-            key = (record["start"], record["end"], record["duration_min"])
-            if key in seen:
-                continue
-            seen.add(key)
-            record.pop("actual_date", None)
-            record = {k: v for k, v in record.items() if v is not None}
-            records.append(record)
+    records = collect_naps(api, target)
 
     with open(args.json, "r", encoding="utf-8") as fh:
         payload = json.load(fh)
@@ -123,17 +149,19 @@ def main():
     readiness = payload.setdefault("daily_readiness", {})
 
     if records:
-        records.sort(key=lambda item: item.get("start", ""))
         health["naps"] = records
     else:
         health.pop("naps", None)
 
-    previous_naps = []
-    for record in records:
-        actual_date = (record.get("start") or record.get("end") or "")[:10]
-        if actual_date == previous.isoformat():
-            previous_naps.append(record)
-    previous_nap = max(previous_naps, key=lambda item: item.get("end", item.get("start", ""))) if previous_naps else None
+    previous_naps = [
+        record for record in records
+        if (record.get("start") or record.get("end") or "")[:10] == previous.isoformat()
+    ]
+    previous_nap = max(
+        previous_naps,
+        key=lambda item: item.get("end", item.get("start", "")),
+        default=None,
+    )
     nap_minutes = round(sum(float(record.get("duration_min") or 0) for record in records), 1)
 
     overnight = health.get("sleep_hours")
