@@ -55,6 +55,12 @@ jobs:
         run: |
           python garmin_to_json.py --date "$EXPORT_DATE"
 
+      - name: Add Garmin Sleep Need
+        env:
+          GARMIN_TOKENSTORE: ~/.garminconnect
+        run: |
+          python add_garmin_sleep_need.py --date "$EXPORT_DATE"
+
       - name: Add date-aware Garmin naps
         env:
           GARMIN_TOKENSTORE: ~/.garminconnect
