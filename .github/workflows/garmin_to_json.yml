@@ -21,6 +21,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Set export date
+        run: |
+          set -euo pipefail
+          if [ -n "${{ inputs.date }}" ]; then
+            echo "EXPORT_DATE=${{ inputs.date }}" >> "$GITHUB_ENV"
+          else
+            echo "EXPORT_DATE=$(TZ=Asia/Manila date +%Y-%m-%d)" >> "$GITHUB_ENV"
+          fi
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -44,34 +53,41 @@ jobs:
         env:
           GARMIN_TOKENSTORE: ~/.garminconnect
         run: |
-          if [ -n "${{ inputs.date }}" ]; then
-            python garmin_to_json.py --date "${{ inputs.date }}"
-          else
-            python garmin_to_json.py
-          fi
+          python garmin_to_json.py --date "$EXPORT_DATE"
 
       - name: Add date-aware Garmin naps
         env:
           GARMIN_TOKENSTORE: ~/.garminconnect
         run: |
-          if [ -n "${{ inputs.date }}" ]; then
-            python add_garmin_naps.py --date "${{ inputs.date }}"
-          else
-            python add_garmin_naps.py --date "$(date +%Y-%m-%d)"
-          fi
+          python add_garmin_naps.py --date "$EXPORT_DATE"
 
       - name: Split daily and activity JSON
         run: |
-          if [ -n "${{ inputs.date }}" ]; then
-            python split_garmin_json.py --date "${{ inputs.date }}"
-          else
-            python split_garmin_json.py
-          fi
+          python split_garmin_json.py --date "$EXPORT_DATE"
 
       - name: Commit and Push Generated JSON
         run: |
+          set -euo pipefail
           git config --global user.name "GitHub Action Bot"
           git config --global user.email "bot@github.com"
           git add data/
-          git commit -m "Auto-export daily telemetry JSON for $(date +%Y-%m-%d)" || echo "No changes to commit"
-          git push
+          git commit -m "Auto-export daily telemetry JSON for $EXPORT_DATE" || echo "No changes to commit"
+
+          # The repository may receive commits from other automation or manual changes
+          # while this workflow is running. Rebase the generated commit onto the latest
+          # main before pushing so the workflow does not fail with a non-fast-forward error.
+          git fetch origin main
+          git rebase origin/main
+
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo "Failed to push after $attempt attempts."
+              exit 1
+            fi
+            echo "Push rejected; refreshing main and rebasing before retry $((attempt + 1))..."
+            git fetch origin main
+            git rebase origin/main
+          done
