@@ -14,7 +14,17 @@
     "chronic_load": 518,
     "acwr": 1.0,
     "vo2_max": 44.0,
-    "recovery_hours": 18.6
+    "recovery_hours": 18.6,
+    "sleep_need": {
+      "baseline_hours": 7.0,
+      "need_hours": 6.5,
+      "feedback": "Decreased",
+      "training_feedback": "Chronic",
+      "sleep_history_adjustment": "No Change",
+      "hrv_adjustment": "No Change",
+      "nap_adjustment": "Decreasing",
+      "next_need_hours": 7.0
+    }
   },
   "health_stats": {
     "hrv": {
