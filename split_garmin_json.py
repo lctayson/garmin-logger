@@ -29,20 +29,17 @@ def compact_keys(obj):
         out = {}
         for key, value in obj.items():
             new_key = KEY_MAP.get(key, key)
-            if new_key in out and new_key != key:
-                raise ValueError(f"Key collision while compacting: {key} -> {new_key}")
+            if new_key in out and new_key != key: raise ValueError(f"Key collision while compacting: {key} -> {new_key}")
             out[new_key] = compact_keys(value)
         return out
     if isinstance(obj, list): return [compact_keys(item) for item in obj]
     return obj
 
 def remove_duplicate_metrics(obj):
-    """Remove only requested duplicate metrics from health_stats/training_status."""
     if isinstance(obj, dict):
         out = {}
         for key, value in obj.items():
-            if key in DUPLICATE_METRIC_KEYS:
-                continue
+            if key in DUPLICATE_METRIC_KEYS: continue
             out[key] = remove_duplicate_metrics(value)
         return out
     if isinstance(obj, list): return [remove_duplicate_metrics(item) for item in obj]
@@ -83,8 +80,7 @@ def split_payload(payload):
     for key, value in payload.items():
         if key == activity_key or key in trend_keys_present or key in GENERATED_METADATA_KEYS: continue
         value = compact_keys(value)
-        if key in ("health_stats", "training_status"):
-            value = remove_duplicate_metrics(value)
+        if key in ("health_stats", "training_status"): value = remove_duplicate_metrics(value)
         metrics[key] = value
     metrics.update({key: compact_trends(payload[key]) for key in trend_keys_present})
     activities = {"date": payload.get("date"), "activities": compact_activities(payload.get(activity_key))}
@@ -137,25 +133,22 @@ def _dated_activity_files(data_dir):
     found = []
     for root, _, filenames in os.walk(data_dir):
         for filename in filenames:
-            if not filename.endswith("_activities.json"):
-                continue
+            if not filename.endswith("_activities.json"): continue
             date_text = filename[:10]
-            try:
-                file_date = datetime.strptime(date_text, "%Y-%m-%d").date()
-            except ValueError:
-                continue
+            try: file_date = datetime.strptime(date_text, "%Y-%m-%d").date()
+            except ValueError: continue
             found.append((file_date, os.path.join(root, filename)))
     return sorted(found, key=lambda item: item[0], reverse=True)
 
-def refresh_latest_activities(data_dir):
-    """Point latest_activities at the newest dated activity file, if one exists."""
-    dated_files = _dated_activity_files(data_dir)
-    if not dated_files:
-        return
-    newest_path = dated_files[0][1]
+def refresh_latest_activities(data_dir, target_date, dated_activities, has_activities):
+    """Use the current export's activity when present; otherwise keep the newest available activity."""
     latest_path = os.path.join(data_dir, "latest_activities.json")
-    if os.path.abspath(newest_path) != os.path.abspath(latest_path):
-        shutil.copyfile(newest_path, latest_path)
+    if has_activities and os.path.isfile(dated_activities):
+        shutil.copyfile(dated_activities, latest_path)
+        return
+    dated_files = _dated_activity_files(data_dir)
+    if dated_files:
+        shutil.copyfile(dated_files[0][1], latest_path)
 
 def main():
     parser = argparse.ArgumentParser(); parser.add_argument("--date", default=None); parser.add_argument("--data-dir", default="data"); args = parser.parse_args()
@@ -169,22 +162,11 @@ def main():
     month_dir = os.path.join(args.data_dir, f"{target_date.year:04d}", f"{target_date.month:02d}"); os.makedirs(month_dir, exist_ok=True)
     dated_metrics = os.path.join(month_dir, f"{target_date.isoformat()}_metrics.json"); dated_activities = os.path.join(month_dir, f"{target_date.isoformat()}_activities.json")
     write_json(dated_metrics, metrics, metrics=True)
-
-    # latest_metrics is a live/current snapshot, not a pointer to the date requested
-    # for a historical/manual export. Never replace today's snapshot with older data.
     today_local = datetime.now(LOCAL_TZ).date()
-    if target_date == today_local:
-        shutil.copyfile(dated_metrics, os.path.join(args.data_dir, "latest_metrics.json"))
-
-    if has_activities:
-        write_json(dated_activities, activities, activity_compact=True)
-    elif os.path.exists(dated_activities):
-        os.remove(dated_activities)
-
-    # latest_activities always points to the newest activity available in the repository.
-    # Therefore a no-activity day keeps yesterday's (or the last available) activity.
-    refresh_latest_activities(args.data_dir)
-
+    if target_date == today_local: shutil.copyfile(dated_metrics, os.path.join(args.data_dir, "latest_metrics.json"))
+    if has_activities: write_json(dated_activities, activities, activity_compact=True)
+    elif os.path.exists(dated_activities): os.remove(dated_activities)
+    refresh_latest_activities(args.data_dir, target_date, dated_activities, has_activities)
     for old_name in ("latest_daily.json", "latest_trends.json"):
         old_path = os.path.join(args.data_dir, old_name)
         if os.path.exists(old_path): os.remove(old_path)
