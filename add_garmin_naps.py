@@ -96,7 +96,8 @@ def collect_naps(api, target):
             record = nap_record(nap)
             if not record:
                 continue
-            # Garmin may associate a previous-day nap with the target sleep record.
+            # A target-date sleep record may contain a nap from the previous calendar day.
+            # A previous-date sleep record must contain a nap whose actual date is that previous day.
             if queried_day == previous and record["actual_date"] != previous.isoformat():
                 continue
             if queried_day == target and record["actual_date"] not in (target.isoformat(), previous.isoformat()):
@@ -111,13 +112,50 @@ def collect_naps(api, target):
     return records
 
 
+def apply_naps_to_payload(payload, target, records):
+    """Store detailed naps once and expose only the previous-day nap summary in readiness."""
+    previous = target - timedelta(days=1)
+    health = payload.setdefault("health_stats", {})
+    daily = payload.setdefault("daily_readiness", {})
+
+    if records:
+        health["naps"] = records
+    else:
+        health.pop("naps", None)
+
+    # The detailed nap list is authoritative. Do not duplicate its totals in health_stats.
+    health.pop("nap_minutes", None)
+    health.pop("sleep_hours_including_previous_day_nap", None)
+    health.pop("previous_day_nap", None)
+
+    previous_naps = [
+        record for record in records
+        if (record.get("start") or record.get("end") or "")[:10] == previous.isoformat()
+    ]
+    previous_nap_minutes = round(
+        sum(float(record.get("duration_min") or 0) for record in previous_naps), 1
+    )
+
+    # Keep the readiness snapshot useful without duplicating the full nap object.
+    daily["previous_day_nap"] = previous_nap_minutes if previous_naps else None
+    overnight = daily.get("sleep_hours")
+    if overnight is None:
+        overnight = health.get("sleep_hours", health.get("total_sleep_hours"))
+    daily["sleep_hours_including_previous_day_nap"] = (
+        round(float(overnight) + previous_nap_minutes / 60.0, 2)
+        if overnight is not None else None
+    )
+    daily.pop("nap_minutes", None)
+
+    return payload
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--date", required=True)
     parser.add_argument("--json", default="data/latest.json")
     args = parser.parse_args()
     target = datetime.strptime(args.date, "%Y-%m-%d").date()
-    previous = target - timedelta(days=1)
     token_dir = __import__("os").environ.get("GARMIN_TOKENSTORE", "./.garminconnect")
     api = Garmin()
     api.login(token_dir)
@@ -126,23 +164,15 @@ def main():
         payload = json.load(fh)
     if not isinstance(payload, dict):
         raise ValueError(f"Expected JSON object in {args.json}")
-    health = payload.setdefault("health_stats", {})
-    if records:
-        health["naps"] = records
-    else:
-        health.pop("naps", None)
-    previous_naps = [r for r in records if (r.get("start") or r.get("end") or "")[:10] == previous.isoformat()]
-    previous_nap_minutes = round(sum(float(r.get("duration_min") or 0) for r in previous_naps), 1)
-    overnight = health.get("sleep_hours", health.get("total_sleep_hours"))
-    combined_sleep = overnight
-    if previous_naps and overnight is not None:
-        combined_sleep = round(float(overnight) + previous_nap_minutes / 60.0, 2)
-    health["nap_minutes"] = round(sum(float(r.get("duration_min") or 0) for r in records), 1)
-    health["sleep_hours_including_previous_day_nap"] = combined_sleep
-    # Naps belong with health/sleep context only. Do not duplicate them in daily_readiness.
+    payload = apply_naps_to_payload(payload, target, records)
     with open(args.json, "w", encoding="utf-8") as fh:
         json.dump(payload, fh, indent=2, ensure_ascii=False)
         fh.write("\n")
+    previous_naps = [
+        record for record in records
+        if (record.get("start") or record.get("end") or "")[:10] == (target - timedelta(days=1)).isoformat()
+    ]
+    previous_nap_minutes = round(sum(float(r.get("duration_min") or 0) for r in previous_naps), 1)
     print(f"[naps] Added {len(records)} nap(s) for {args.date}; previous-day nap minutes={previous_nap_minutes}")
 
 
