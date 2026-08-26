@@ -71,12 +71,6 @@ jobs:
         run: |
           python split_garmin_json.py --date "$EXPORT_DATE"
 
-      - name: Refresh latest activity from Garmin
-        env:
-          GARMIN_TOKENSTORE: ~/.garminconnect
-        run: |
-          python refresh_latest_activity.py
-
       - name: Commit and Push Generated JSON
         run: |
           set -euo pipefail
@@ -85,9 +79,6 @@ jobs:
           git add data/
           git commit -m "Auto-export daily telemetry JSON for $EXPORT_DATE" || echo "No changes to commit"
 
-          # The repository may receive commits from other automation or manual changes
-          # while this workflow is running. Rebase the generated commit onto the latest
-          # main before pushing so the workflow does not fail with a non-fast-forward error.
           git fetch origin main
           git rebase origin/main
 
