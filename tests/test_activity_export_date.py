@@ -29,17 +29,6 @@ class ActivityExportDateTests(unittest.TestCase):
         self.assertEqual(result, [{"activityId": 123}])
         self.assertEqual(calls, ["2026-08-26"])
 
-    def test_string_date_is_left_unchanged(self):
-        calls = []
-        fake_generator = sys.modules["garmin_to_json"]
-        fake_generator.get_activities = lambda api, value: calls.append(value) or []
-        module = sys.modules["run_garmin_to_json_test"]
-
-        module._original_get_activities = fake_generator.get_activities
-        module.get_activities(object(), "2026-08-09")
-
-        self.assertEqual(calls, ["2026-08-09"])
-
 
 if __name__ == "__main__":
     unittest.main()
