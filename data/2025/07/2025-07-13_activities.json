@@ -1,0 +1,198 @@
+{
+  "date": "2025-07-13",
+  "activities": [
+    {
+      "activity_id": 19715570997,
+      "name": "Bohol 5150 - Open Water Swimming",
+      "type": "open_water_swimming",
+      "distance_km": 1.41,
+      "duration_min": 37.83,
+      "avg_pace": "2:41",
+      "avg_hr": 149.0,
+      "max_hr": 167.0,
+      "aerobic_te": 3.3,
+      "anaerobic_te": 0.8,
+      "splits": {
+        "columns": [
+          "lap",
+          "distance_km",
+          "time_min",
+          "cumulative_time_min",
+          "moving_time_min",
+          "avg_pace",
+          "avg_moving_pace",
+          "best_pace",
+          "avg_hr",
+          "max_hr",
+          "calories",
+          "intensity"
+        ],
+        "data": [
+          [1, 0.25, 4.63, 4.63, 4.63, "1:51", "1:51", "11:07", 134, 154, 48, "ACTIVE"],
+          [2, 0.25, 8.17, 12.8, 7.52, "3:16", "3:00", "20:29", 147, 164, 95, "ACTIVE"],
+          [3, 0.25, 7.57, 20.36, 7.42, "3:02", "2:58", "21:56", 160, 163, 93, "ACTIVE"],
+          [4, 0.25, 7.59, 27.95, 7.43, "3:02", "2:58", "22:22", 155, 167, 90, "ACTIVE"],
+          [5, 0.25, 7.11, 35.06, 7.05, "2:51", "2:49", "18:59", 144, 161, 75, "ACTIVE"],
+          [6, 0.158, 2.78, 37.83, 2.63, "1:46", "1:40", "11:54", 140, 148, 26, "ACTIVE"]
+        ]
+      },
+      "parent_activity_id": 19715571043
+    },
+    {
+      "activity_id": 19715570999,
+      "name": "Transition 1 (T1)",
+      "type": "transition_v2",
+      "distance_km": 0.39,
+      "duration_min": 4.84,
+      "avg_pace": "12:19",
+      "avg_hr": 147.0,
+      "max_hr": 165.0,
+      "aerobic_te": 3.4,
+      "anaerobic_te": 1.1,
+      "splits": {
+        "columns": [
+          "lap",
+          "distance_km",
+          "time_min",
+          "cumulative_time_min",
+          "moving_time_min",
+          "avg_pace",
+          "avg_moving_pace",
+          "best_pace",
+          "avg_hr",
+          "max_hr",
+          "calories",
+          "elevation_gain_m",
+          "intensity"
+        ],
+        "data": [
+          [1, 0.393, 4.84, 4.84, 3.7, "12:19", "9:25", "5:58", 147, 165, 52, 1.0, "ACTIVE"]
+        ]
+      },
+      "parent_activity_id": 19715571043
+    },
+    {
+      "activity_id": 19715571000,
+      "name": "Bohol 5150 - Cycling",
+      "type": "cycling",
+      "distance_km": 40.02,
+      "duration_min": 77.43,
+      "avg_pace": "1:56",
+      "avg_hr": 157.0,
+      "max_hr": 164.0,
+      "aerobic_te": 4.6,
+      "anaerobic_te": 1.1,
+      "splits": {
+        "columns": [
+          "lap",
+          "distance_km",
+          "time_min",
+          "cumulative_time_min",
+          "moving_time_min",
+          "avg_pace",
+          "avg_moving_pace",
+          "best_pace",
+          "avg_hr",
+          "max_hr",
+          "calories",
+          "elevation_gain_m",
+          "elevation_loss_m",
+          "intensity"
+        ],
+        "data": [
+          [1, 10.0, 19.16, 19.16, 19.16, "1:55", "1:55", "1:34", 157, 164, 218, 34.0, 17.0, "ACTIVE"],
+          [2, 10.0, 18.56, 37.72, 18.55, "1:51", "1:51", "1:25", 157, 161, 209, 27.0, 46.0, "ACTIVE"],
+          [3, 10.0, 19.74, 57.46, 19.74, "1:58", "1:58", "1:31", 158, 163, 209, 43.0, 18.0, "ACTIVE"],
+          [4, 10.0, 19.76, 77.22, 19.75, "1:59", "1:58", "1:37", 157, 163, 198, 17.0, 37.0, "ACTIVE"],
+          [5, 0.023, 0.21, 77.43, 0.12, "8:57", "5:03", "4:04", 157, 158, 2, null, null, "ACTIVE"]
+        ]
+      },
+      "parent_activity_id": 19715571043
+    },
+    {
+      "activity_id": 19715571001,
+      "name": "Transition 2 (T2)",
+      "type": "transition_v2",
+      "distance_km": 0.6,
+      "duration_min": 7.55,
+      "avg_pace": "12:30",
+      "avg_hr": 151.0,
+      "max_hr": 163.0,
+      "aerobic_te": 4.6,
+      "anaerobic_te": 1.1,
+      "splits": {
+        "columns": [
+          "lap",
+          "distance_km",
+          "time_min",
+          "cumulative_time_min",
+          "moving_time_min",
+          "avg_pace",
+          "avg_moving_pace",
+          "best_pace",
+          "avg_hr",
+          "max_hr",
+          "calories",
+          "elevation_gain_m",
+          "elevation_loss_m",
+          "intensity"
+        ],
+        "data": [
+          [1, 0.603, 7.55, 7.55, 5.62, "12:30", "9:19", "5:50", 151, 163, 50, 2.0, 4.0, "ACTIVE"]
+        ]
+      },
+      "parent_activity_id": 19715571043
+    },
+    {
+      "activity_id": 19715571003,
+      "name": "Bohol 5150 - Running",
+      "type": "running",
+      "distance_km": 9.99,
+      "duration_min": 62.04,
+      "avg_pace": "6:13",
+      "avg_hr": 165.0,
+      "max_hr": 173.0,
+      "aerobic_te": 5.0,
+      "anaerobic_te": 1.1,
+      "splits": {
+        "columns": [
+          "lap",
+          "distance_km",
+          "time_min",
+          "cumulative_time_min",
+          "moving_time_min",
+          "avg_pace",
+          "avg_moving_pace",
+          "best_pace",
+          "avg_hr",
+          "max_hr",
+          "calories",
+          "avg_power_w",
+          "normalized_power_w",
+          "cadence_spm",
+          "max_cadence_spm",
+          "ground_contact_ms",
+          "stride_length_m",
+          "vertical_oscillation_cm",
+          "vertical_ratio_pct",
+          "elevation_gain_m",
+          "elevation_loss_m",
+          "intensity"
+        ],
+        "data": [
+          [1, 1.0, 5.57, 5.57, 5.57, "5:34", "5:34", "5:12", 165, 169, 68, 293, 300, 171, 181, 250.9, 1.0258, 8.56, 8.34, 1.0, 3.0, "ACTIVE"],
+          [2, 1.0, 5.86, 11.42, 5.85, "5:51", "5:51", "5:18", 167, 172, 70, 284, 288, 170, 177, 254.5, 0.9977, 8.43, 8.49, 1.0, 2.0, "ACTIVE"],
+          [3, 1.0, 6.3, 17.72, 6.3, "6:18", "6:18", "5:27", 167, 172, 75, 270, 280, 163, 176, 261.9, 0.9869, 8.43, 8.73, 6.0, 2.0, "ACTIVE"],
+          [4, 1.0, 6.45, 24.17, 6.45, "6:27", "6:27", "5:39", 165, 170, 75, 266, 279, 161, 176, 265.0, 0.9606, 8.5, 8.93, 4.0, null, "ACTIVE"],
+          [5, 1.0, 6.59, 30.77, 6.59, "6:36", "6:36", "5:57", 163, 168, 73, 257, 264, 164, 174, 270.7, 0.9294, 8.37, 9.0, null, 1.0, "ACTIVE"],
+          [6, 1.0, 6.3, 37.07, 6.3, "6:18", "6:18", "5:49", 163, 167, 71, 269, 275, 165, 174, 264.3, 0.9666, 8.51, 8.83, 1.0, 2.0, "ACTIVE"],
+          [7, 1.0, 6.54, 43.6, 6.53, "6:32", "6:32", "5:45", 162, 165, 71, 261, 268, 165, 228, 265.6, 0.9463, 8.39, 8.93, 1.0, 3.0, "ACTIVE"],
+          [8, 1.0, 6.48, 50.08, 6.45, "6:29", "6:27", "5:55", 163, 167, 71, 259, 268, 160, 174, 268.6, 0.9486, 8.52, 9.01, 3.0, 5.0, "ACTIVE"],
+          [9, 1.0, 6.28, 56.36, 6.23, "6:17", "6:14", "5:22", 166, 171, 74, 264, 279, 160, 231, 261.5, 0.9771, 8.47, 8.72, 1.0, null, "ACTIVE"],
+          [10, 0.99, 5.68, 62.04, 5.67, "5:44", "5:43", "5:24", 170, 173, 71, 295, 295, 171, 177, 258.0, 1.019, 8.78, 8.62, 1.0, 2.0, "ACTIVE"]
+        ]
+      },
+      "parent_activity_id": 19715571043
+    }
+  ]
+}
