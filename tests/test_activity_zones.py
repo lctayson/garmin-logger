@@ -11,31 +11,31 @@ class FakeGarmin:
     def get_activity_hr_in_timezones(self, activity_id):
         self.hr_calls.append(activity_id)
         return {"timeInZones": [
-            {"zoneNumber": 1, "secsInZone": 780, "zoneLowBoundary": 110, "zoneHighBoundary": 145, "zoneDescription": "Warm Up"},
-            {"zoneNumber": 2, "secsInZone": 420, "zoneLowBoundary": 146, "zoneHighBoundary": 152},
-            {"zoneNumber": 3, "secsInZone": 720, "zoneLowBoundary": 153, "zoneHighBoundary": 163},
-            {"zoneNumber": 4, "secsInZone": 360, "zoneLowBoundary": 164, "zoneHighBoundary": 169},
+            {"zoneNumber": 1, "secsInZone": 780, "zoneLowBoundary": 110, "zoneDescription": "Warm Up"},
+            {"zoneNumber": 2, "secsInZone": 420, "zoneLowBoundary": 146},
+            {"zoneNumber": 3, "secsInZone": 720, "zoneLowBoundary": 153},
+            {"zoneNumber": 4, "secsInZone": 360, "zoneLowBoundary": 164},
             {"zoneNumber": 5, "secsInZone": 100, "zoneLowBoundary": 170},
         ]}
 
     def get_activity_power_in_timezones(self, activity_id):
         self.power_calls.append(activity_id)
         return {"timeInZones": [
-            {"zoneNumber": 1, "secsInZone": 934, "zoneLowBoundary": 196, "zoneHighBoundary": 240},
-            {"zoneNumber": 2, "secsInZone": 346, "zoneLowBoundary": 241, "zoneHighBoundary": 271},
-            {"zoneNumber": 3, "secsInZone": 383, "zoneLowBoundary": 272, "zoneHighBoundary": 300},
-            {"zoneNumber": 4, "secsInZone": 625, "zoneLowBoundary": 301, "zoneHighBoundary": 346},
+            {"zoneNumber": 1, "secsInZone": 934, "zoneLowBoundary": 196},
+            {"zoneNumber": 2, "secsInZone": 346, "zoneLowBoundary": 241},
+            {"zoneNumber": 3, "secsInZone": 383, "zoneLowBoundary": 272},
+            {"zoneNumber": 4, "secsInZone": 625, "zoneLowBoundary": 301},
             {"zoneNumber": 5, "secsInZone": 0, "zoneLowBoundary": 347},
         ]}
 
 
 class ActivityZoneTests(unittest.TestCase):
-    def test_compact_zones_uses_columns_and_data(self):
+    def test_compact_zones_derives_ranges_from_garmin_lower_boundaries(self):
         payload = [
-            {"zoneNumber": 1, "secsInZone": 60, "zoneLowBoundary": 110, "zoneHighBoundary": 145, "zoneDescription": "Warm Up"},
-            {"zoneNumber": 2, "secsInZone": 120, "zoneLowBoundary": 146, "zoneHighBoundary": 152},
-            {"zoneNumber": 3, "secsInZone": 60, "zoneLowBoundary": 153, "zoneHighBoundary": 163},
-            {"zoneNumber": 4, "secsInZone": 0, "zoneLowBoundary": 164, "zoneHighBoundary": 169},
+            {"zoneNumber": 1, "secsInZone": 60, "zoneLowBoundary": 110, "zoneDescription": "Warm Up"},
+            {"zoneNumber": 2, "secsInZone": 120, "zoneLowBoundary": 146},
+            {"zoneNumber": 3, "secsInZone": 60, "zoneLowBoundary": 153},
+            {"zoneNumber": 4, "secsInZone": 0, "zoneLowBoundary": 164},
             {"zoneNumber": 5, "secsInZone": 0, "zoneLowBoundary": 170},
         ]
         self.assertEqual(
