@@ -14,30 +14,7 @@
       "anaerobic_te": 0.0,
       "load": 119.4,
       "splits": {
-        "columns": [
-          "lap",
-          "distance_km",
-          "time_min",
-          "cumulative_time_min",
-          "moving_time_min",
-          "avg_pace",
-          "avg_moving_pace",
-          "best_pace",
-          "avg_hr",
-          "max_hr",
-          "calories",
-          "avg_power_w",
-          "normalized_power_w",
-          "cadence_spm",
-          "max_cadence_spm",
-          "ground_contact_ms",
-          "stride_length_m",
-          "vertical_oscillation_cm",
-          "vertical_ratio_pct",
-          "elevation_loss_m",
-          "intensity",
-          "elevation_gain_m"
-        ],
+        "columns": ["lap", "distance_km", "time_min", "cumulative_time_min", "moving_time_min", "avg_pace", "avg_moving_pace", "best_pace", "avg_hr", "max_hr", "calories", "avg_power_w", "normalized_power_w", "cadence_spm", "max_cadence_spm", "ground_contact_ms", "stride_length_m", "vertical_oscillation_cm", "vertical_ratio_pct", "elevation_loss_m", "intensity", "elevation_gain_m"],
         "data": [
           [1, 1.312, 10.01, 10.01, 9.98, "7:38", "7:36", "6:08", 129, 138, 87, 227, 227, 173, 190, 270.1, 0.7436, 7.28, 9.82, 2.0, "WARMUP", null],
           [2, 1.437, 8.0, 18.01, 8.0, "5:34", "5:34", "5:20", 157, 165, 97, 301, 299, 185, 190, 240.3, 0.9616, 7.68, 7.98, 4.0, "ACTIVE", 1.0],
@@ -47,32 +24,22 @@
         ]
       },
       "hr_zones": {
-        "columns": [
-          "zone",
-          "range",
-          "time",
-          "percent"
-        ],
+        "columns": ["zone", "range", "time", "percent"],
         "data": [
-          ["Zone 1 - Warm Up", "110-145 bpm", "13:04", 32],
-          ["Zone 2", "146-152 bpm", "7:07", 18],
-          ["Zone 3", "153-163 bpm", "12:16", 30],
-          ["Zone 4", "164-169 bpm", "6:06", 15],
+          ["Zone 1", null, "13:04", 32],
+          ["Zone 2", null, "7:07", 18],
+          ["Zone 3", null, "12:16", 30],
+          ["Zone 4", null, "6:06", 15],
           ["Zone 5", ">169 bpm", "1:41", 4]
         ]
       },
       "power_zones": {
-        "columns": [
-          "zone",
-          "range",
-          "time",
-          "percent"
-        ],
+        "columns": ["zone", "range", "time", "percent"],
         "data": [
-          ["Zone 1", "196-240 W", "15:34", 41],
-          ["Zone 2", "241-271 W", "5:46", 15],
-          ["Zone 3", "272-300 W", "6:23", 17],
-          ["Zone 4", "301-346 W", "10:25", 27],
+          ["Zone 1", null, "15:34", 41],
+          ["Zone 2", null, "5:46", 15],
+          ["Zone 3", null, "6:23", 17],
+          ["Zone 4", null, "10:25", 27],
           ["Zone 5", ">346 W", "0:00", 0]
         ]
       }
