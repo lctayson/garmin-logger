@@ -1,13 +1,9 @@
-"""Entry point for sport-aware Garmin JSON generation.
-
-This wrapper keeps garmin_to_json.py compatible while replacing its training-history
-builder with a broader classification that separates endurance, strength, mobility,
-walking, transition, and other activities.
-"""
+"""Entry point for sport-aware Garmin JSON generation."""
 
 from datetime import timedelta
 
 import garmin_to_json as generator
+from activity_zones import add_activity_zones
 
 
 SPORTS = (
@@ -98,8 +94,6 @@ def get_training_history(api, target_date):
     except Exception:
         historical_activities = []
 
-    # The existing expansion is retained; sitecustomize patches Garmin child dates
-    # so expanded multisport legs inherit the parent's local activity date.
     historical_activities = generator._history_expand_multisport(api, historical_activities)
     by_date = {}
     for act in historical_activities:
@@ -137,51 +131,29 @@ def get_training_history(api, target_date):
         })
     weekly.reverse()
 
-    sport_7 = {
-        s: _history_finalize(seven_sport[s])
-        for s in SPORTS
-        if seven_sport[s]["activity_count"] > 0
-    }
+    sport_7 = {s: _history_finalize(seven_sport[s]) for s in SPORTS if seven_sport[s]["activity_count"] > 0}
     total_7_endurance = _history_finalize(seven_endurance)
     total_7_training = _history_finalize(seven_training)
-    running_weekly = [
-        w["sports"].get("running", {}).get("distance_km", 0.0)
-        for w in weekly
-    ]
+    running_weekly = [w["sports"].get("running", {}).get("distance_km", 0.0) for w in weekly]
     running_avg = round(sum(running_weekly) / len(running_weekly), 1) if running_weekly else 0.0
 
     return {
-        "7_day": {
-            "total_endurance": total_7_endurance,
-            "total_training": total_7_training,
-            "sports": sport_7,
-        },
-        "28_day": {
-            "avg_weekly_running_distance_km": running_avg,
-            "weekly_total_endurance": weekly,
-        },
-        "legacy_running_summary": {
-            "7_day_distance_km": sport_7.get("running", {}).get("distance_km", 0.0),
-            "28_day_avg_weekly_distance_km": running_avg,
-            "weekly_distance_last_4_weeks_km": running_weekly,
-        },
+        "7_day": {"total_endurance": total_7_endurance, "total_training": total_7_training, "sports": sport_7},
+        "28_day": {"avg_weekly_running_distance_km": running_avg, "weekly_total_endurance": weekly},
+        "legacy_running_summary": {"7_day_distance_km": sport_7.get("running", {}).get("distance_km", 0.0), "28_day_avg_weekly_distance_km": running_avg, "weekly_distance_last_4_weeks_km": running_weekly},
     }
 
 
-# The generator's main() passes a datetime.date to get_activities(), while the
-# Garmin activity helper expects the YYYY-MM-DD string used by Garmin Connect.
-# Keep the existing activity exporter untouched; normalize only this argument.
 _original_get_activities = generator.get_activities
 
 
 def get_activities(api, target_date):
     date_str = target_date.isoformat() if hasattr(target_date, "isoformat") else str(target_date)
-    return _original_get_activities(api, date_str)
+    activities = _original_get_activities(api, date_str)
+    return add_activity_zones(api, activities)
 
 
 generator.get_activities = get_activities
-
-# Replace the legacy run-centric history builder before main() constructs the payload.
 generator.get_training_history = get_training_history
 
 
