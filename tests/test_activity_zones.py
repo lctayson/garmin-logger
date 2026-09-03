@@ -30,7 +30,7 @@ class FakeGarmin:
 
 
 class ActivityZoneTests(unittest.TestCase):
-    def test_compact_zones_uses_fixed_z1_to_z5_order_and_percent(self):
+    def test_compact_zones_uses_columns_and_data(self):
         payload = [
             {"zoneNumber": 1, "secsInZone": 60},
             {"zoneNumber": 2, "secsInZone": 120},
@@ -39,8 +39,17 @@ class ActivityZoneTests(unittest.TestCase):
             {"zoneNumber": 5, "secsInZone": 0},
         ]
         self.assertEqual(
-            compact_zones(payload),
-            [["1:00", 25], ["2:00", 50], ["1:00", 25], ["0:00", 0], ["0:00", 0]],
+            compact_zones(payload, "hr"),
+            {
+                "columns": ["zone", "range", "time", "percent"],
+                "data": [
+                    ["Zone 1 - Warm Up", "110-145 bpm", "1:00", 25],
+                    ["Zone 2", "146-152 bpm", "2:00", 50],
+                    ["Zone 3", "153-163 bpm", "1:00", 25],
+                    ["Zone 4", "164-169 bpm", "0:00", 0],
+                    ["Zone 5", ">169 bpm", "0:00", 0],
+                ],
+            },
         )
 
     def test_add_activity_zones_adds_hr_and_power_without_removing_existing_data(self):
@@ -51,10 +60,45 @@ class ActivityZoneTests(unittest.TestCase):
 
         self.assertEqual(result[0]["name"], "Morning Run")
         self.assertEqual(result[0]["distance_km"], 6.06)
-        self.assertEqual(result[0]["hr_zones"], [["13:00", 33], ["7:00", 18], ["12:00", 30], ["6:00", 15], ["1:40", 4]])
-        self.assertEqual(result[0]["power_zones"], [["15:34", 41], ["5:46", 15], ["6:23", 17], ["10:25", 27], ["0:00", 0]])
+        self.assertEqual(
+            result[0]["hr_zones"],
+            {
+                "columns": ["zone", "range", "time", "percent"],
+                "data": [
+                    ["Zone 1 - Warm Up", "110-145 bpm", "13:00", 33],
+                    ["Zone 2", "146-152 bpm", "7:00", 18],
+                    ["Zone 3", "153-163 bpm", "12:00", 30],
+                    ["Zone 4", "164-169 bpm", "6:00", 15],
+                    ["Zone 5", ">169 bpm", "1:40", 4],
+                ],
+            },
+        )
+        self.assertEqual(
+            result[0]["power_zones"],
+            {
+                "columns": ["zone", "range", "time", "percent"],
+                "data": [
+                    ["Zone 1", "196-240 W", "15:34", 41],
+                    ["Zone 2", "241-271 W", "5:46", 15],
+                    ["Zone 3", "272-300 W", "6:23", 17],
+                    ["Zone 4", "301-346 W", "10:25", 27],
+                    ["Zone 5", ">346 W", "0:00", 0],
+                ],
+            },
+        )
         self.assertEqual(api.hr_calls, [123])
         self.assertEqual(api.power_calls, [123])
+
+    def test_garmin_boundaries_are_used_when_present(self):
+        payload = {
+            "timeInZones": [
+                {"zoneNumber": 1, "secsInZone": 60, "zoneLowBoundary": 100, "zoneHighBoundary": 139},
+                {"zoneNumber": 5, "secsInZone": 60, "zoneLowBoundary": 180},
+            ]
+        }
+        result = compact_zones(payload, "hr")
+        self.assertEqual(result["data"][0][1], "100-139 bpm")
+        self.assertEqual(result["data"][4][1], ">179 bpm")
 
     def test_endpoint_failure_does_not_break_activity_export(self):
         class BrokenApi:
