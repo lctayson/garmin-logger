@@ -23,6 +23,13 @@
           [5, 1.608, 12.72, 40.73, 12.72, "7:55", "7:55", "5:22", 151, 171, 124, 213, 231, 157, 187, 272.0, 0.7826, 7.43, 9.71, 9.0, "COOLDOWN", 10.0]
         ]
       },
+      "elevation_gain_m": 17.0,
+      "elevation_loss_m": 17.0,
+      "weather": {
+        "humidity_pct": 86.0,
+        "wind_speed_mps": 2.0,
+        "wind_direction_deg": 190.0
+      },
       "hr_zones": {
         "columns": ["zone", "range", "time", "percent"],
         "data": [
