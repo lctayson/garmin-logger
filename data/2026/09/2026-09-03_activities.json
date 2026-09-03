@@ -14,13 +14,13 @@
       "anaerobic_te": 0.0,
       "load": 119.4,
       "splits": {
-        "columns": ["lap", "distance_km", "time_min", "moving_time_min", "avg_pace", "avg_moving_pace", "best_pace", "avg_hr", "max_hr", "calories", "avg_power_w", "normalized_power_w", "cadence_spm", "max_cadence_spm", "ground_contact_ms", "stride_length_m", "vertical_oscillation_cm", "vertical_ratio_pct", "elevation_loss_m", "intensity", "step_type", "avg_gap", "time", "elevation_gain_m", "avg_run_cadence", "avg_ground_contact_time_ms", "avg_vertical_oscillation_cm", "avg_vertical_ratio_pct", "max_power_w"],
+        "columns": ["step_type", "lap", "time", "distance_km", "avg_pace", "avg_gap", "avg_hr", "max_hr", "elevation_gain_m", "elevation_loss_m", "avg_run_cadence", "avg_ground_contact_time_ms", "stride_length_m", "avg_vertical_oscillation_cm", "avg_vertical_ratio_pct", "normalized_power_w", "avg_power_w", "max_power_w", "calories", "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace", "time_min", "moving_time_min", "cadence_spm", "max_cadence_spm", "ground_contact_ms", "vertical_oscillation_cm", "vertical_ratio_pct"],
         "data": [
-          [1, 1.31, 10.01, 9.98, "7:38", "7:36", "6:08", 129.0, 138.0, 87.0, 227.0, 227.0, 173, 190, 270.1, 0.74, 7.28, 9.82, 2.0, "WARMUP", "WARMUP", "7:44", "10:01", 0.0, 174.0, 270.1, 7.3, 9.8, 333.0],
-          [2, 1.44, 8.0, 8.0, "5:34", "5:34", "5:20", 157.0, 165.0, 97.0, 301.0, 299.0, 185, 190, 240.3, 0.96, 7.68, 7.98, 4.0, "ACTIVE", "ACTIVE", "5:35", "8:00", 1.0, 186.0, 240.3, 7.7, 8.0, 323.0],
-          [3, 0.23, 2.0, 2.0, "8:42", "8:42", "5:22", 157.0, 165.0, 20.0, 211.0, 236.0, 166, 185, 286.8, 0.71, 7.51, 10.66, 0.0, "RECOVERY", "RECOVERY", "8:28", "2:00", 0.0, 167.0, 286.8, 7.5, 10.7, 318.0],
-          [4, 1.44, 8.0, 8.0, "5:33", "5:33", "5:16", 165.0, 171.0, 100.0, 307.0, 305.0, 185, 190, 240.8, 0.97, 7.73, 8.01, 2.0, "ACTIVE", "ACTIVE", "5:33", "8:00", 6.0, 185.0, 240.8, 7.7, 8.0, 333.0],
-          [5, 1.61, 12.72, 12.72, "7:55", "7:55", "5:22", 151.0, 171.0, 124.0, 213.0, 231.0, 157, 187, 272.0, 0.78, 7.43, 9.71, 9.0, "COOLDOWN", "COOLDOWN", "7:56", "12:43", 10.0, 158.0, 272.0, 7.4, 9.7, 313.0]
+          ["WARMUP", 1, "10:01", 1.31, "7:38", "7:44", 129.0, 138.0, 0.0, 2.0, 174.0, 270.1, 0.74, 7.3, 9.8, 227.0, 227.0, 333.0, 87.0, "6:08", 190.0, "9:59", "7:36", 10.01, 9.98, 173, 190, 270.1, 7.28, 9.82],
+          ["ACTIVE", 2, "8:00", 1.44, "5:34", "5:35", 157.0, 165.0, 1.0, 4.0, 186.0, 240.3, 0.96, 7.7, 8.0, 299.0, 301.0, 323.0, 97.0, "5:20", 190.0, "8:00", "5:34", 8.0, 8.0, 185, 190, 240.3, 7.68, 7.98],
+          ["RECOVERY", 3, "2:00", 0.23, "8:42", "8:28", 157.0, 165.0, 0.0, 0.0, 167.0, 286.8, 0.71, 7.5, 10.7, 236.0, 211.0, 318.0, 20.0, "5:22", 185.0, "2:00", "8:42", 2.0, 2.0, 166, 185, 286.8, 7.51, 10.66],
+          ["ACTIVE", 4, "8:00", 1.44, "5:33", "5:33", 165.0, 171.0, 6.0, 2.0, 185.0, 240.8, 0.97, 7.7, 8.0, 305.0, 307.0, 333.0, 100.0, "5:16", 190.0, "8:00", "5:33", 8.0, 8.0, 185, 190, 240.8, 7.73, 8.01],
+          ["COOLDOWN", 5, "12:43", 1.61, "7:55", "7:56", 151.0, 171.0, 10.0, 9.0, 158.0, 272.0, 0.78, 7.4, 9.7, 231.0, 213.0, 313.0, 124.0, "5:22", 187.0, "12:43", "7:55", 12.72, 12.72, 157, 187, 272.0, 7.43, 9.71]
         ]
       },
       "gap": "6:47",
