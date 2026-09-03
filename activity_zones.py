@@ -1,6 +1,26 @@
 """Compact Garmin activity heart-rate and power zone summaries."""
 
 
+# Garmin Connect's standard zone descriptions. These are labels only: zone
+# boundaries always come from the Garmin activity payload when available.
+DEFAULT_ZONE_DESCRIPTIONS = {
+    "hr": {
+        1: "Warm Up",
+        2: "Easy",
+        3: "Aerobic",
+        4: "Threshold",
+        5: "Maximum",
+    },
+    "power": {
+        1: "Easy",
+        2: "Moderate",
+        3: "Tempo",
+        4: "Long Interval",
+        5: "Short Interval",
+    },
+}
+
+
 def _seconds(value):
     try:
         value = float(value)
@@ -116,9 +136,13 @@ def compact_zones(payload, metric="hr"):
     if total <= 0:
         return None
 
+    defaults = DEFAULT_ZONE_DESCRIPTIONS.get(metric, {})
     data = []
     for zone in range(1, 6):
         seconds, zone_range, description, percent = by_zone.get(zone, (0, None, None, None))
+        # Prefer a description returned by Garmin. Fall back only when Garmin
+        # omits it; ranges are never synthesized from these labels.
+        description = description or defaults.get(zone)
         label = f"Zone {zone}"
         if description:
             label += f" - {description}"
