@@ -411,7 +411,7 @@ def build_daily_readiness(health_stats, training_status):
     ts = training_status or {}
     load = ts.get("training_load") or {}
     vo2 = ts.get("vo2_max") or {}
-    return {
+    result = {
         "resting_hr_bpm": health_stats.get("resting_heart_rate"),
         "hrv_last_night_avg_ms": deep_get(health_stats, ["hrv.last_night_avg_ms"]),
         "hrv_7_day_avg_ms": deep_get(health_stats, ["hrv.seven_day_avg_ms"]),
@@ -427,7 +427,9 @@ def build_daily_readiness(health_stats, training_status):
         "acwr": load.get("acwr"),
         "vo2_max": vo2.get("value"),
         "recovery_time_hours": ts.get("recovery_time_hours"),
+        "readiness": ts.get("readiness"),
     }
+    return {k: v for k, v in result.items() if v is not None}
 
 
 def strip_volatile_fields(payload):

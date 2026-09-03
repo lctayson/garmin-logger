@@ -72,9 +72,11 @@ def get_training_status_details(api, target_date_str):
             'acwr_status': humanize_enum(acute.get('acwrStatus')) if isinstance(acute.get('acwrStatus'),str) else acute.get('acwrStatus')
         }
         result['training_load'] = {k:v for k,v in result['training_load'].items() if v is not None}
-    recovery_hours = get_recovery_time_hours(api, target_date_str, raw)
-    if recovery_hours is not None:
-        result['recovery_time_hours'] = recovery_hours
+    readiness_details = get_training_readiness_details(api, target_date_str, raw)
+    if readiness_details.get('recovery_time_hours') is not None:
+        result['recovery_time_hours'] = readiness_details['recovery_time_hours']
+    if readiness_details.get('readiness'):
+        result['readiness'] = readiness_details['readiness']
     balance = raw.get('mostRecentTrainingLoadBalance',{}) or {}
     bmap = balance.get('metricsTrainingLoadBalanceDTOMap',{}) or {}
     be = next(iter(bmap.values()),{}) if isinstance(bmap,dict) else {}
@@ -128,29 +130,84 @@ def _find_first_key(obj, keys):
     return None
 
 
-def get_recovery_time_hours(api, target_date_str, training_status_raw=None):
+def _factor(entry, percent_key, feedback_key):
+    percent = _safe_int(entry.get(percent_key))
+    feedback = entry.get(feedback_key)
+    feedback = humanize_enum(feedback) if isinstance(feedback, str) else feedback
+    obj = {'percent': percent, 'feedback': feedback}
+    return {k: v for k, v in obj.items() if v is not None}
+
+
+def get_training_readiness_details(api, target_date_str, training_status_raw=None):
+    """Fetch the full Training Readiness snapshot: score, level, feedback, and
+    the per-factor breakdown (sleep, recovery time, ACWR, HRV, stress history).
+    Falls back to recovery-time-only extraction from training_status_raw if the
+    readiness endpoint has nothing for this date."""
     readiness = None
     try:
         readiness = api.get_training_readiness(target_date_str)
     except Exception as e:
         print(f'[training_readiness] Warning: {e}', file=sys.stderr)
-    recovery_minutes = _find_first_key(readiness, ('recoveryTime', 'recovery_time'))
+
+    entry = {}
+    if isinstance(readiness, list) and readiness:
+        # Endpoint may return multiple snapshots (e.g. one per wake-up event);
+        # use the one with the latest timestamp.
+        def ts(e):
+            return (e.get('timestamp') or e.get('timestampLocal') or '') if isinstance(e, dict) else ''
+        entry = max(readiness, key=ts) or {}
+    elif isinstance(readiness, dict):
+        entry = readiness
+
+    result = {}
+
+    recovery_minutes = entry.get('recoveryTime')
+    if recovery_minutes is None:
+        recovery_minutes = _find_first_key(readiness, ('recoveryTime', 'recovery_time'))
     if recovery_minutes is not None:
         value = _safe_float(recovery_minutes, 1)
         if value is not None:
-            return round(value / 60.0, 1)
-    recovery_hours = _find_first_key(readiness, ('recoveryTimeHours', 'recovery_time_hours'))
-    if recovery_hours is not None:
-        return _safe_float(recovery_hours, 1)
-    recovery_hours = _find_first_key(training_status_raw, ('recoveryTimeHours', 'recovery_time_hours'))
-    if recovery_hours is not None:
-        return _safe_float(recovery_hours, 1)
-    recovery_minutes = _find_first_key(training_status_raw, ('recoveryTime', 'recovery_time'))
-    if recovery_minutes is not None:
-        value = _safe_float(recovery_minutes, 1)
-        if value is not None:
-            return round(value / 60.0, 1)
-    return None
+            result['recovery_time_hours'] = round(value / 60.0, 1)
+    if 'recovery_time_hours' not in result:
+        recovery_hours = _find_first_key(training_status_raw, ('recoveryTimeHours', 'recovery_time_hours'))
+        if recovery_hours is not None:
+            result['recovery_time_hours'] = _safe_float(recovery_hours, 1)
+        else:
+            recovery_minutes = _find_first_key(training_status_raw, ('recoveryTime', 'recovery_time'))
+            if recovery_minutes is not None:
+                value = _safe_float(recovery_minutes, 1)
+                if value is not None:
+                    result['recovery_time_hours'] = round(value / 60.0, 1)
+
+    score = _safe_int(entry.get('score'))
+    level = entry.get('level')
+    feedback_short = entry.get('feedbackShort')
+    feedback_long = entry.get('feedbackLong')
+    if score is not None or level or feedback_short or feedback_long:
+        readiness_obj = {
+            'score': score,
+            'level': humanize_enum(level) if isinstance(level, str) else level,
+            'feedback_short': humanize_enum(feedback_short) if isinstance(feedback_short, str) else feedback_short,
+            'feedback_long': humanize_enum(feedback_long) if isinstance(feedback_long, str) else feedback_long,
+        }
+        factors = {
+            'sleep_score': _factor(entry, 'sleepScoreFactorPercent', 'sleepScoreFactorFeedback'),
+            'recovery_time': _factor(entry, 'recoveryTimeFactorPercent', 'recoveryTimeFactorFeedback'),
+            'acwr': _factor(entry, 'acwrFactorPercent', 'acwrFactorFeedback'),
+            'hrv': _factor(entry, 'hrvFactorPercent', 'hrvFactorFeedback'),
+            'stress_history': _factor(entry, 'stressHistoryFactorPercent', 'stressHistoryFactorFeedback'),
+        }
+        factors = {k: v for k, v in factors.items() if v}
+        if factors:
+            readiness_obj['factors'] = factors
+        result['readiness'] = {k: v for k, v in readiness_obj.items() if v is not None}
+
+    return result
+
+
+def get_recovery_time_hours(api, target_date_str, training_status_raw=None):
+    """Back-compat shim: recovery time only. Prefer get_training_readiness_details."""
+    return get_training_readiness_details(api, target_date_str, training_status_raw).get('recovery_time_hours')
 
 
 def _activity_sport(activity):
