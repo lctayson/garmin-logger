@@ -18,8 +18,8 @@ def _first_value(obj, keys):
     return next((obj.get(key) for key in keys if obj.get(key) is not None), None)
 
 
-def _zone_metadata(obj, metric, zone):
-    """Extract Garmin-supplied range/description/percentage when available."""
+def _zone_metadata(obj):
+    """Extract Garmin-supplied zone metadata when available."""
     low = _first_value(obj, (
         "zoneLowBoundary", "zoneLowerBoundary", "lowBoundary", "lowerBoundary",
         "zoneLow", "low",
@@ -48,15 +48,16 @@ def _zone_metadata(obj, metric, zone):
     except (TypeError, ValueError):
         percent = None
 
+    return low, high, str(description).strip() if description else None, percent
+
+
+def _format_zone_range(low, high, metric, zone):
     unit = "bpm" if metric == "hr" else "W"
     if low is not None and high is not None:
-        zone_range = f"{low}-{high} {unit}"
-    elif low is not None and zone == 5:
-        zone_range = f">{low - 1} {unit}"
-    else:
-        zone_range = None
-
-    return zone_range, str(description).strip() if description else None, percent
+        return f"{low}-{high} {unit}"
+    if low is not None and zone == 5:
+        return f">{low - 1} {unit}"
+    return None
 
 
 def _find_zone_rows(payload, metric):
@@ -74,8 +75,8 @@ def _find_zone_rows(payload, metric):
                 zone_num = None
             seconds = _seconds(seconds)
             if zone_num is not None and 1 <= zone_num <= 5 and seconds is not None:
-                zone_range, description, percent = _zone_metadata(obj, metric, zone_num)
-                rows.append((zone_num, seconds, zone_range, description, percent))
+                low, high, description, percent = _zone_metadata(obj)
+                rows.append((zone_num, seconds, low, high, description, percent))
             for value in obj.values():
                 walk(value)
         elif isinstance(obj, list):
@@ -86,8 +87,21 @@ def _find_zone_rows(payload, metric):
     # Garmin payloads can contain the same zone list in more than one wrapper.
     # Keep the last occurrence for each zone, preserving the API's values.
     by_zone = {}
-    for zone, seconds, zone_range, description, percent in rows:
+    for zone, seconds, low, high, description, percent in rows:
+        by_zone[zone] = (seconds, low, high, description, percent)
+
+    # The activity zone endpoint normally returns zoneLowBoundary but not an
+    # explicit upper boundary. Derive each zone's upper bound from the next
+    # zone's lower boundary, which preserves the user's Garmin-configured zones.
+    for zone in sorted(by_zone):
+        seconds, low, high, description, percent = by_zone[zone]
+        if high is None:
+            next_low = by_zone.get(zone + 1, (None, None, None, None, None))[1]
+            if next_low is not None:
+                high = next_low - 1
+        zone_range = _format_zone_range(low, high, metric, zone)
         by_zone[zone] = (seconds, zone_range, description, percent)
+
     return [(zone, *by_zone[zone]) for zone in sorted(by_zone)]
 
 
