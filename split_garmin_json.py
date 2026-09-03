@@ -86,7 +86,39 @@ def split_payload(payload):
     activities = {"date": payload.get("date"), "activities": compact_activities(payload.get(activity_key))}
     return metrics, activities
 
+def _compact_array_property(text, property_name):
+    """Render a small JSON array property on one line."""
+    marker = f'"{property_name}": ['
+    search_from = 0
+    while True:
+        marker_pos = text.find(marker, search_from)
+        if marker_pos < 0: break
+        array_start = marker_pos + len(f'"{property_name}": ')
+        depth = 0; in_string = False; escaped = False; array_end = None
+        for i in range(array_start, len(text)):
+            ch = text[i]
+            if in_string:
+                if escaped: escaped = False
+                elif ch == "\\": escaped = True
+                elif ch == '"': in_string = False
+                continue
+            if ch == '"': in_string = True
+            elif ch == '[': depth += 1
+            elif ch == ']':
+                depth -= 1
+                if depth == 0: array_end = i; break
+        if array_end is None: break
+        values = json.loads(text[array_start:array_end + 1])
+        compact = json.dumps(values, ensure_ascii=False, separators=(", ", ": "))
+        text = text[:array_start] + compact + text[array_end + 1:]
+        search_from = array_start + len(compact)
+    return text
+
 def _compact_data_arrays(text):
+    # Zone/split tables have a small fixed column list; keep that header on one
+    # line and keep each data row on one line for readability and compactness.
+    text = _compact_array_property(text, "columns")
+
     marker = '"data": ['; search_from = 0
     while True:
         marker_pos = text.find(marker, search_from)
