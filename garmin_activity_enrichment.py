@@ -54,13 +54,7 @@ def _running_tolerance(api, target_date):
             pass
     percent = round(acute_km / tolerance_km * 100.0, 1)
     status = "Exceeded" if percent > 100 else "High" if percent >= 75 else "Medium" if percent >= 50 else "Low"
-    return {
-        "acute_impact_load_km": acute_km,
-        "weekly_tolerance_km": tolerance_km,
-        "actual_7_day_distance_km": generator.safe_float(actual_7d_m / 1000.0, 1),
-        "status": status,
-        "percent_of_tolerance": percent,
-    }
+    return {"acute_impact_load_km": acute_km, "weekly_tolerance_km": tolerance_km, "actual_7_day_distance_km": generator.safe_float(actual_7d_m / 1000.0, 1), "status": status, "percent_of_tolerance": percent}
 
 
 def enrich_activity_splits(api, activity):
@@ -76,21 +70,7 @@ def enrich_activity_splits(api, activity):
     if not isinstance(existing, list):
         existing = []
     by_lap = {x.get("lap"): x for x in existing if isinstance(x, dict) and x.get("lap") is not None}
-
-    fields = (
-        ("elevationGain", "elevation_gain_m", 1),
-        ("elevationLoss", "elevation_loss_m", 1),
-        ("averageHR", "avg_hr", 0),
-        ("maxHR", "max_hr", 0),
-        ("averageRunCadence", "avg_run_cadence", 0),
-        ("groundContactTime", "avg_ground_contact_time_ms", 1),
-        ("verticalOscillation", "avg_vertical_oscillation_cm", 1),
-        ("verticalRatio", "avg_vertical_ratio_pct", 1),
-        ("normalizedPower", "normalized_power_w", 0),
-        ("averagePower", "avg_power_w", 0),
-        ("maxPower", "max_power_w", 0),
-        ("calories", "calories", 0),
-    )
+    fields = (("elevationGain", "elevation_gain_m", 1), ("elevationLoss", "elevation_loss_m", 1), ("averageHR", "avg_hr", 0), ("maxHR", "max_hr", 0), ("averageRunCadence", "avg_run_cadence", 0), ("groundContactTime", "avg_ground_contact_time_ms", 1), ("verticalOscillation", "avg_vertical_oscillation_cm", 1), ("verticalRatio", "avg_vertical_ratio_pct", 1), ("normalizedPower", "normalized_power_w", 0), ("averagePower", "avg_power_w", 0), ("maxPower", "max_power_w", 0), ("calories", "calories", 0))
     for lap in laps:
         if not isinstance(lap, dict):
             continue
@@ -102,97 +82,53 @@ def enrich_activity_splits(api, activity):
         item.pop("intensity", None)
         pace = _pace_from_speed(lap.get("averageSpeed"))
         gap = _pace_from_speed(lap.get("avgGradeAdjustedSpeed"))
-        if pace is not None:
-            item["avg_pace"] = pace
-        if gap is not None:
-            item["avg_gap"] = gap
+        if pace is not None: item["avg_pace"] = pace
+        if gap is not None: item["avg_gap"] = gap
         duration = _duration(lap.get("duration"))
-        if duration is not None:
-            item["time"] = duration
+        if duration is not None: item["time"] = duration
         if lap.get("distance") is not None:
-            try:
-                item["distance_km"] = round(float(lap["distance"]) / 1000.0, 2)
-            except (TypeError, ValueError):
-                pass
+            try: item["distance_km"] = round(float(lap["distance"]) / 1000.0, 2)
+            except (TypeError, ValueError): pass
         for src, dst, decimals in fields:
-            if lap.get(src) is not None:
-                item[dst] = generator.safe_float(lap[src], decimals)
+            if lap.get(src) is not None: item[dst] = generator.safe_float(lap[src], decimals)
         if lap.get("strideLength") is not None:
-            try:
-                item["avg_stride_length_m"] = round(float(lap["strideLength"]) / 100.0, 2)
-            except (TypeError, ValueError):
-                pass
-        if lap.get("wktStepIndex") is not None:
-            item["interval"] = lap["wktStepIndex"]
+            try: item["avg_stride_length_m"] = round(float(lap["strideLength"]) / 100.0, 2)
+            except (TypeError, ValueError): pass
+        item.pop("interval", None)
         item.pop("cumulative_time_min", None)
 
 
 def enrich_activity(api, activity):
     if not isinstance(activity, dict) or not activity.get("activityId"):
         return activity
-    try:
-        detail = api.get_activity(activity["activityId"]) or {}
-    except Exception:
-        detail = {}
+    try: detail = api.get_activity(activity["activityId"]) or {}
+    except Exception: detail = {}
     summary = detail.get("summaryDTO", {}) if isinstance(detail, dict) else {}
-    if not isinstance(summary, dict):
-        summary = {}
-
+    if not isinstance(summary, dict): summary = {}
     def pick(keys):
         value = generator.deep_get(summary, keys, None)
         return value if value is not None else generator.deep_get(detail, keys, None)
-
     gap = pick(("avgGradeAdjustedSpeed", "averageGradeAdjustedSpeed", "avgGradeAdjustedPace", "averageGAP", "avgGAP", "gap"))
-    if gap is not None:
-        activity["gap"] = _pace_from_speed(gap) if isinstance(gap, (int, float)) else gap
+    if gap is not None: activity["gap"] = _pace_from_speed(gap) if isinstance(gap, (int, float)) else gap
     gain = pick(("elevationGain", "totalElevationGain", "sumElevationGain", "ascent", "elevationAscent"))
     loss = pick(("elevationLoss", "totalElevationLoss", "sumElevationLoss", "descent", "elevationDescent"))
-    if gain is not None:
-        activity["elevation_gain_m"] = generator.safe_float(gain, 1)
-    if loss is not None:
-        activity["elevation_loss_m"] = generator.safe_float(loss, 1)
-
+    if gain is not None: activity["elevation_gain_m"] = generator.safe_float(gain, 1)
+    if loss is not None: activity["elevation_loss_m"] = generator.safe_float(loss, 1)
     weather = None
     get_weather = getattr(api, "get_activity_weather", None)
     if callable(get_weather):
         try:
             raw_weather = get_weather(activity["activityId"])
             weather = raw_weather[0] if isinstance(raw_weather, list) and raw_weather else raw_weather if isinstance(raw_weather, dict) else None
-        except Exception:
-            weather = None
-    if weather is None:
-        weather = detail.get("weatherDTO") or detail.get("weather") or summary.get("weatherDTO") or summary.get("weather")
+        except Exception: weather = None
+    if weather is None: weather = detail.get("weatherDTO") or detail.get("weather") or summary.get("weatherDTO") or summary.get("weather")
     if isinstance(weather, dict):
         weather_out = {}
-        for dst, keys, decimals in (
-            ("temperature_c", ("temperature", "temperatureC", "avgTemperature", "averageTemperature"), 1),
-            ("humidity_pct", ("humidity", "relativeHumidity", "humidityPercent"), 1),
-            ("wind_speed_mps", ("windSpeed", "windSpeedMps", "averageWindSpeed"), 1),
-            ("wind_direction_deg", ("windDirection", "windDirectionDegrees"), 0),
-            ("feels_like_c", ("feelsLike", "feelsLikeTemperature", "apparentTemperature"), 1),
-            ("precipitation_mm", ("precipitation", "precipitationMm", "rainfall"), 1),
-        ):
+        for dst, keys, decimals in (("temperature_c", ("temperature", "temperatureC", "avgTemperature", "averageTemperature"), 1), ("humidity_pct", ("humidity", "relativeHumidity", "humidityPercent"), 1), ("wind_speed_mps", ("windSpeed", "windSpeedMps", "averageWindSpeed"), 1), ("wind_direction_deg", ("windDirection", "windDirectionDegrees"), 0), ("feels_like_c", ("feelsLike", "feelsLikeTemperature", "apparentTemperature"), 1), ("precipitation_mm", ("precipitation", "precipitationMm", "rainfall"), 1)):
             value = generator.deep_get(weather, keys, None)
-            if value is not None:
-                weather_out[dst] = generator.safe_float(value, decimals)
+            if value is not None: weather_out[dst] = generator.safe_float(value, decimals)
         condition = generator.deep_get(weather, ("condition", "weatherCondition", "description", "weatherType"), None)
-        if condition is not None:
-            weather_out["condition"] = condition
-        if weather_out:
-            activity["weather"] = weather_out
+        if condition is not None: weather_out["condition"] = condition
+        if weather_out: activity["weather"] = weather_out
     enrich_activity_splits(api, activity)
     return activity
-
-
-def get_activities(api, target_date):
-    date_str = target_date.isoformat() if hasattr(target_date, "isoformat") else str(target_date)
-    activities = generator.get_activities(api, date_str)
-    return add_activity_zones(api, [enrich_activity(api, dict(a)) for a in activities or []])
-
-
-def get_training_history(api, target_date):
-    history = generator.get_training_history(api, target_date)
-    tolerance = _running_tolerance(api, target_date)
-    if tolerance is not None:
-        history["running_tolerance"] = tolerance
-    return history
