@@ -1,7 +1,41 @@
+from collections import OrderedDict
 from datetime import timedelta
 
 import garmin_to_json as generator
 from activity_zones import add_activity_zones
+
+
+# Activity-split JSON order follows the user's Garmin Connect export header:
+# important performance fields first, with pace/HR/mechanics grouped together.
+SPLIT_COLUMN_ORDER = (
+    "interval",
+    "step_type",
+    "lap",
+    "time",
+    "cumulative_time",
+    "distance_km",
+    "avg_pace",
+    "avg_gap",
+    "avg_hr",
+    "max_hr",
+    "elevation_gain_m",
+    "elevation_loss_m",
+    "avg_run_cadence",
+    "avg_ground_contact_time_ms",
+    "avg_stride_length_m",
+    "avg_vertical_oscillation_cm",
+    "avg_vertical_ratio_pct",
+    "normalized_power_w",
+    "avg_power_w",
+    "avg_w_kg",
+    "max_power_w",
+    "max_w_kg",
+    "calories",
+    "best_pace",
+    "max_run_cadence",
+    "moving_time",
+    "avg_moving_pace",
+)
 
 
 def _pace_from_speed(speed):
@@ -54,7 +88,33 @@ def _running_tolerance(api, target_date):
             pass
     percent = round(acute_km / tolerance_km * 100.0, 1)
     status = "Exceeded" if percent > 100 else "High" if percent >= 75 else "Medium" if percent >= 50 else "Low"
-    return {"acute_impact_load_km": acute_km, "weekly_tolerance_km": tolerance_km, "actual_7_day_distance_km": generator.safe_float(actual_7d_m / 1000.0, 1), "status": status, "percent_of_tolerance": percent}
+    return {
+        "acute_impact_load_km": acute_km,
+        "weekly_tolerance_km": tolerance_km,
+        "actual_7_day_distance_km": generator.safe_float(actual_7d_m / 1000.0, 1),
+        "status": status,
+        "percent_of_tolerance": percent,
+    }
+
+
+def _reorder_split(item):
+    """Return a split with Garmin-export-style column ordering.
+
+    Only fields actually present are emitted. In particular, Interval is not
+    invented from wktStepIndex, and Cumulative Time is calculated only when
+    we have the real lap duration sequence.
+    """
+    ordered = OrderedDict()
+    for key in SPLIT_COLUMN_ORDER:
+        if key in item and item[key] is not None:
+            ordered[key] = item[key]
+
+    # Preserve any genuinely supplied fields that are not part of the display
+    # header rather than silently deleting API data.
+    for key, value in item.items():
+        if key not in ordered and value is not None:
+            ordered[key] = value
+    return dict(ordered)
 
 
 def enrich_activity_splits(api, activity):
@@ -69,66 +129,171 @@ def enrich_activity_splits(api, activity):
     existing = activity.get("activity_splits") or []
     if not isinstance(existing, list):
         existing = []
-    by_lap = {x.get("lap"): x for x in existing if isinstance(x, dict) and x.get("lap") is not None}
-    fields = (("elevationGain", "elevation_gain_m", 1), ("elevationLoss", "elevation_loss_m", 1), ("averageHR", "avg_hr", 0), ("maxHR", "max_hr", 0), ("averageRunCadence", "avg_run_cadence", 0), ("groundContactTime", "avg_ground_contact_time_ms", 1), ("verticalOscillation", "avg_vertical_oscillation_cm", 1), ("verticalRatio", "avg_vertical_ratio_pct", 1), ("normalizedPower", "normalized_power_w", 0), ("averagePower", "avg_power_w", 0), ("maxPower", "max_power_w", 0), ("calories", "calories", 0))
+    by_lap = {
+        x.get("lap"): x
+        for x in existing
+        if isinstance(x, dict) and x.get("lap") is not None
+    }
+
+    # Actual Garmin API field -> compact JSON field.
+    fields = (
+        ("elevationGain", "elevation_gain_m", 1),
+        ("elevationLoss", "elevation_loss_m", 1),
+        ("averageHR", "avg_hr", 0),
+        ("maxHR", "max_hr", 0),
+        ("averageRunCadence", "avg_run_cadence", 0),
+        ("groundContactTime", "avg_ground_contact_time_ms", 1),
+        ("verticalOscillation", "avg_vertical_oscillation_cm", 1),
+        ("verticalRatio", "avg_vertical_ratio_pct", 1),
+        ("normalizedPower", "normalized_power_w", 0),
+        ("averagePower", "avg_power_w", 0),
+        ("maxPower", "max_power_w", 0),
+        ("calories", "calories", 0),
+    )
+
+    cumulative_seconds = 0.0
     for lap in laps:
         if not isinstance(lap, dict):
             continue
-        item = by_lap.get(lap.get("lapIndex"))
+        lap_number = lap.get("lapIndex")
+        item = by_lap.get(lap_number)
         if item is None:
             continue
+
+        # Preserve actual Garmin intensityType as Step Type. Do not fabricate
+        # Interval from wktStepIndex.
         if lap.get("intensityType") is not None:
             item["step_type"] = lap["intensityType"]
         item.pop("intensity", None)
+
+        # Garmin returns GAP as speed in avgGradeAdjustedSpeed, so convert
+        # that m/s value to min/km just like Avg Pace.
         pace = _pace_from_speed(lap.get("averageSpeed"))
         gap = _pace_from_speed(lap.get("avgGradeAdjustedSpeed"))
-        if pace is not None: item["avg_pace"] = pace
-        if gap is not None: item["avg_gap"] = gap
-        duration = _duration(lap.get("duration"))
-        if duration is not None: item["time"] = duration
+        if pace is not None:
+            item["avg_pace"] = pace
+        if gap is not None:
+            item["avg_gap"] = gap
+
+        duration_seconds = lap.get("duration")
+        try:
+            duration_seconds = float(duration_seconds) if duration_seconds is not None else 0.0
+        except (TypeError, ValueError):
+            duration_seconds = 0.0
+        cumulative_seconds += max(duration_seconds, 0.0)
+
+        duration = _duration(duration_seconds)
+        if duration is not None:
+            item["time"] = duration
+            item["cumulative_time"] = _duration(cumulative_seconds)
+
         if lap.get("distance") is not None:
-            try: item["distance_km"] = round(float(lap["distance"]) / 1000.0, 2)
-            except (TypeError, ValueError): pass
+            try:
+                item["distance_km"] = round(float(lap["distance"]) / 1000.0, 2)
+            except (TypeError, ValueError):
+                pass
+
         for src, dst, decimals in fields:
-            if lap.get(src) is not None: item[dst] = generator.safe_float(lap[src], decimals)
+            if lap.get(src) is not None:
+                item[dst] = generator.safe_float(lap[src], decimals)
+
         if lap.get("strideLength") is not None:
-            try: item["avg_stride_length_m"] = round(float(lap["strideLength"]) / 100.0, 2)
-            except (TypeError, ValueError): pass
+            try:
+                item["avg_stride_length_m"] = round(float(lap["strideLength"]) / 100.0, 2)
+            except (TypeError, ValueError):
+                pass
+
+        # Fields in the requested header that are directly available from the
+        # Garmin lapDTO. Keep them near their related power/cadence fields.
+        if lap.get("averagePower") is not None and lap.get("weight") is not None:
+            try:
+                item["avg_w_kg"] = round(float(lap["averagePower"]) / float(lap["weight"]), 2)
+            except (TypeError, ValueError, ZeroDivisionError):
+                pass
+        if lap.get("maxPower") is not None and lap.get("weight") is not None:
+            try:
+                item["max_w_kg"] = round(float(lap["maxPower"]) / float(lap["weight"]), 2)
+            except (TypeError, ValueError, ZeroDivisionError):
+                pass
+
+        moving_duration = lap.get("movingDuration")
+        moving_time = _duration(moving_duration)
+        if moving_time is not None:
+            item["moving_time"] = moving_time
+        moving_pace = _pace_from_speed(lap.get("averageMovingSpeed"))
+        if moving_pace is not None:
+            item["avg_moving_pace"] = moving_pace
+        best_pace = _pace_from_speed(lap.get("maxSpeed"))
+        if best_pace is not None:
+            item["best_pace"] = best_pace
+        if lap.get("maxRunCadence") is not None:
+            item["max_run_cadence"] = generator.safe_float(lap["maxRunCadence"], 0)
+
+        # These were previously generated/kept despite not being needed.
+        # wktStepIndex is not an interval number, so do not invent Interval.
         item.pop("interval", None)
         item.pop("cumulative_time_min", None)
+
+        # Rebuild the dict in the requested header order after all values have
+        # been populated.
+        replacement = _reorder_split(item)
+        item.clear()
+        item.update(replacement)
 
 
 def enrich_activity(api, activity):
     if not isinstance(activity, dict) or not activity.get("activityId"):
         return activity
-    try: detail = api.get_activity(activity["activityId"]) or {}
-    except Exception: detail = {}
+    try:
+        detail = api.get_activity(activity["activityId"]) or {}
+    except Exception:
+        detail = {}
     summary = detail.get("summaryDTO", {}) if isinstance(detail, dict) else {}
-    if not isinstance(summary, dict): summary = {}
+    if not isinstance(summary, dict):
+        summary = {}
+
     def pick(keys):
         value = generator.deep_get(summary, keys, None)
         return value if value is not None else generator.deep_get(detail, keys, None)
+
     gap = pick(("avgGradeAdjustedSpeed", "averageGradeAdjustedSpeed", "avgGradeAdjustedPace", "averageGAP", "avgGAP", "gap"))
-    if gap is not None: activity["gap"] = _pace_from_speed(gap) if isinstance(gap, (int, float)) else gap
+    if gap is not None:
+        activity["gap"] = _pace_from_speed(gap) if isinstance(gap, (int, float)) else gap
     gain = pick(("elevationGain", "totalElevationGain", "sumElevationGain", "ascent", "elevationAscent"))
     loss = pick(("elevationLoss", "totalElevationLoss", "sumElevationLoss", "descent", "elevationDescent"))
-    if gain is not None: activity["elevation_gain_m"] = generator.safe_float(gain, 1)
-    if loss is not None: activity["elevation_loss_m"] = generator.safe_float(loss, 1)
+    if gain is not None:
+        activity["elevation_gain_m"] = generator.safe_float(gain, 1)
+    if loss is not None:
+        activity["elevation_loss_m"] = generator.safe_float(loss, 1)
+
     weather = None
     get_weather = getattr(api, "get_activity_weather", None)
     if callable(get_weather):
         try:
             raw_weather = get_weather(activity["activityId"])
             weather = raw_weather[0] if isinstance(raw_weather, list) and raw_weather else raw_weather if isinstance(raw_weather, dict) else None
-        except Exception: weather = None
-    if weather is None: weather = detail.get("weatherDTO") or detail.get("weather") or summary.get("weatherDTO") or summary.get("weather")
+        except Exception:
+            weather = None
+    if weather is None:
+        weather = detail.get("weatherDTO") or detail.get("weather") or summary.get("weatherDTO") or summary.get("weather")
     if isinstance(weather, dict):
         weather_out = {}
-        for dst, keys, decimals in (("temperature_c", ("temperature", "temperatureC", "avgTemperature", "averageTemperature"), 1), ("humidity_pct", ("humidity", "relativeHumidity", "humidityPercent"), 1), ("wind_speed_mps", ("windSpeed", "windSpeedMps", "averageWindSpeed"), 1), ("wind_direction_deg", ("windDirection", "windDirectionDegrees"), 0), ("feels_like_c", ("feelsLike", "feelsLikeTemperature", "apparentTemperature"), 1), ("precipitation_mm", ("precipitation", "precipitationMm", "rainfall"), 1)):
+        for dst, keys, decimals in (
+            ("temperature_c", ("temperature", "temperatureC", "avgTemperature", "averageTemperature"), 1),
+            ("humidity_pct", ("humidity", "relativeHumidity", "humidityPercent"), 1),
+            ("wind_speed_mps", ("windSpeed", "windSpeedMps", "averageWindSpeed"), 1),
+            ("wind_direction_deg", ("windDirection", "windDirectionDegrees"), 0),
+            ("feels_like_c", ("feelsLike", "feelsLikeTemperature", "apparentTemperature"), 1),
+            ("precipitation_mm", ("precipitation", "precipitationMm", "rainfall"), 1),
+        ):
             value = generator.deep_get(weather, keys, None)
-            if value is not None: weather_out[dst] = generator.safe_float(value, decimals)
+            if value is not None:
+                weather_out[dst] = generator.safe_float(value, decimals)
         condition = generator.deep_get(weather, ("condition", "weatherCondition", "description", "weatherType"), None)
-        if condition is not None: weather_out["condition"] = condition
-        if weather_out: activity["weather"] = weather_out
+        if condition is not None:
+            weather_out["condition"] = condition
+        if weather_out:
+            activity["weather"] = weather_out
+
     enrich_activity_splits(api, activity)
     return activity
