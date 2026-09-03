@@ -1,25 +1,6 @@
 """Compact Garmin activity heart-rate and power zone summaries."""
 
 
-# Current zone boundaries used by the runner's Garmin profile.  Garmin's
-# time-in-zone endpoints provide duration but do not consistently include the
-# display range, so these are used when the endpoint payload has no boundary.
-HR_ZONE_RANGES = {
-    1: "110-145 bpm",
-    2: "146-152 bpm",
-    3: "153-163 bpm",
-    4: "164-169 bpm",
-    5: ">169 bpm",
-}
-POWER_ZONE_RANGES = {
-    1: "196-240 W",
-    2: "241-271 W",
-    3: "272-300 W",
-    4: "301-346 W",
-    5: ">346 W",
-}
-
-
 def _seconds(value):
     try:
         value = float(value)
@@ -33,27 +14,26 @@ def _time_text(seconds):
     return f"{seconds // 60}:{seconds % 60:02d}"
 
 
-def _zone_range(obj, metric, zone):
-    """Read a zone boundary from Garmin when available, otherwise use defaults."""
-    low_keys = (
-        "zoneLowBoundary",
-        "zoneLowerBoundary",
-        "lowBoundary",
-        "lowerBoundary",
-        "zoneLow",
-        "low",
-    )
-    high_keys = (
-        "zoneHighBoundary",
-        "zoneUpperBoundary",
-        "highBoundary",
-        "upperBoundary",
-        "zoneHigh",
-        "high",
-    )
+def _first_value(obj, keys):
+    return next((obj.get(key) for key in keys if obj.get(key) is not None), None)
 
-    low = next((obj.get(key) for key in low_keys if obj.get(key) is not None), None)
-    high = next((obj.get(key) for key in high_keys if obj.get(key) is not None), None)
+
+def _zone_metadata(obj, metric, zone):
+    """Extract Garmin-supplied range/description/percentage when available."""
+    low = _first_value(obj, (
+        "zoneLowBoundary", "zoneLowerBoundary", "lowBoundary", "lowerBoundary",
+        "zoneLow", "low",
+    ))
+    high = _first_value(obj, (
+        "zoneHighBoundary", "zoneUpperBoundary", "highBoundary", "upperBoundary",
+        "zoneHigh", "high",
+    ))
+    description = _first_value(obj, (
+        "zoneDescription", "zoneName", "description", "name", "displayName",
+    ))
+    percent = _first_value(obj, (
+        "zonePercentage", "percentage", "percent", "percentInZone",
+    ))
 
     try:
         low = int(round(float(low)))
@@ -63,16 +43,20 @@ def _zone_range(obj, metric, zone):
         high = int(round(float(high)))
     except (TypeError, ValueError):
         high = None
+    try:
+        percent = round(float(percent))
+    except (TypeError, ValueError):
+        percent = None
 
+    unit = "bpm" if metric == "hr" else "W"
     if low is not None and high is not None:
-        unit = "bpm" if metric == "hr" else "W"
-        return f"{low}-{high} {unit}"
-    if low is not None and zone == 5:
-        unit = "bpm" if metric == "hr" else "W"
-        return f">{low - 1} {unit}"
+        zone_range = f"{low}-{high} {unit}"
+    elif low is not None and zone == 5:
+        zone_range = f">{low - 1} {unit}"
+    else:
+        zone_range = None
 
-    defaults = HR_ZONE_RANGES if metric == "hr" else POWER_ZONE_RANGES
-    return defaults[zone]
+    return zone_range, str(description).strip() if description else None, percent
 
 
 def _find_zone_rows(payload, metric):
@@ -90,7 +74,8 @@ def _find_zone_rows(payload, metric):
                 zone_num = None
             seconds = _seconds(seconds)
             if zone_num is not None and 1 <= zone_num <= 5 and seconds is not None:
-                rows.append((zone_num, seconds, _zone_range(obj, metric, zone_num)))
+                zone_range, description, percent = _zone_metadata(obj, metric, zone_num)
+                rows.append((zone_num, seconds, zone_range, description, percent))
             for value in obj.values():
                 walk(value)
         elif isinstance(obj, list):
@@ -101,8 +86,8 @@ def _find_zone_rows(payload, metric):
     # Garmin payloads can contain the same zone list in more than one wrapper.
     # Keep the last occurrence for each zone, preserving the API's values.
     by_zone = {}
-    for zone, seconds, zone_range in rows:
-        by_zone[zone] = (seconds, zone_range)
+    for zone, seconds, zone_range, description, percent in rows:
+        by_zone[zone] = (seconds, zone_range, description, percent)
     return [(zone, *by_zone[zone]) for zone in sorted(by_zone)]
 
 
@@ -112,23 +97,22 @@ def compact_zones(payload, metric="hr"):
     if not rows:
         return None
 
-    by_zone = {zone: (seconds, zone_range) for zone, seconds, zone_range in rows}
-    total = sum(seconds for seconds, _ in by_zone.values())
+    by_zone = {zone: (seconds, zone_range, description, percent) for zone, seconds, zone_range, description, percent in rows}
+    total = sum(seconds for seconds, _, _, _ in by_zone.values())
     if total <= 0:
         return None
 
-    unit_label = "Warm Up" if metric == "hr" else None
     data = []
     for zone in range(1, 6):
-        seconds, zone_range = by_zone.get(zone, (0, (HR_ZONE_RANGES if metric == "hr" else POWER_ZONE_RANGES)[zone]))
+        seconds, zone_range, description, percent = by_zone.get(zone, (0, None, None, None))
         label = f"Zone {zone}"
-        if zone == 1 and unit_label:
-            label += f" - {unit_label}"
+        if description:
+            label += f" - {description}"
         data.append([
             label,
             zone_range,
             _time_text(seconds),
-            round(seconds / total * 100),
+            percent if percent is not None else round(seconds / total * 100),
         ])
 
     return {
@@ -152,8 +136,6 @@ def add_activity_zones(api, activities):
         except Exception:
             pass
 
-        # Power zones are relevant when Garmin has power data. Do not fail the
-        # activity export when this endpoint is unavailable for a sport/device.
         try:
             power_payload = api.get_activity_power_in_timezones(activity_id)
             power_zones = compact_zones(power_payload, "power")
