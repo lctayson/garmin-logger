@@ -14,13 +14,13 @@
       "anaerobic_te": 0.0,
       "load": 119.4,
       "splits": {
-        "columns": ["lap", "distance_km", "time_min", "cumulative_time_min", "moving_time_min", "avg_pace", "avg_moving_pace", "best_pace", "avg_hr", "max_hr", "calories", "avg_power_w", "normalized_power_w", "cadence_spm", "max_cadence_spm", "ground_contact_ms", "stride_length_m", "vertical_oscillation_cm", "vertical_ratio_pct", "elevation_loss_m", "intensity", "elevation_gain_m"],
+        "columns": ["lap", "distance_km", "time_min", "moving_time_min", "avg_pace", "avg_moving_pace", "best_pace", "avg_hr", "max_hr", "calories", "avg_power_w", "normalized_power_w", "cadence_spm", "max_cadence_spm", "ground_contact_ms", "stride_length_m", "vertical_oscillation_cm", "vertical_ratio_pct", "elevation_loss_m", "intensity", "step_type", "elevation_gain_m"],
         "data": [
-          [1, 1.312, 10.01, 10.01, 9.98, "7:38", "7:36", "6:08", 129, 138, 87, 227, 227, 173, 190, 270.1, 0.7436, 7.28, 9.82, 2.0, "WARMUP", null],
-          [2, 1.437, 8.0, 18.01, 8.0, "5:34", "5:34", "5:20", 157, 165, 97, 301, 299, 185, 190, 240.3, 0.9616, 7.68, 7.98, 4.0, "ACTIVE", 1.0],
-          [3, 0.23, 2.0, 20.01, 2.0, "8:42", "8:42", "5:22", 157, 165, 20, 211, 236, 166, 185, 286.8, 0.7123, 7.51, 10.66, null, "RECOVERY", null],
-          [4, 1.442, 8.0, 28.01, 8.0, "5:33", "5:33", "5:16", 165, 171, 100, 307, 305, 185, 190, 240.8, 0.9652, 7.73, 8.01, 2.0, "ACTIVE", 6.0],
-          [5, 1.608, 12.72, 40.73, 12.72, "7:55", "7:55", "5:22", 151, 171, 124, 213, 231, 157, 187, 272.0, 0.7826, 7.43, 9.71, 9.0, "COOLDOWN", 10.0]
+          [1, 1.312, 10.01, 9.98, "7:38", "7:36", "6:08", 129, 138, 87, 227, 227, 173, 190, 270.1, 0.7436, 7.28, 9.82, 2.0, "WARMUP", "WARMUP", null],
+          [2, 1.437, 8.0, 8.0, "5:34", "5:34", "5:20", 157, 165, 97, 301, 299, 185, 190, 240.3, 0.9616, 7.68, 7.98, 4.0, "ACTIVE", "ACTIVE", 1.0],
+          [3, 0.23, 2.0, 2.0, "8:42", "8:42", "5:22", 157, 165, 20, 211, 236, 166, 185, 286.8, 0.7123, 7.51, 10.66, null, "RECOVERY", "RECOVERY", null],
+          [4, 1.442, 8.0, 8.0, "5:33", "5:33", "5:16", 165, 171, 100, 307, 305, 185, 190, 240.8, 0.9652, 7.73, 8.01, 2.0, "ACTIVE", "ACTIVE", 6.0],
+          [5, 1.608, 12.72, 12.72, "7:55", "7:55", "5:22", 151, 171, 124, 213, 231, 157, 187, 272.0, 0.7826, 7.43, 9.71, 9.0, "COOLDOWN", "COOLDOWN", 10.0]
         ]
       },
       "elevation_gain_m": 17.0,
