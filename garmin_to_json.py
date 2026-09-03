@@ -279,7 +279,6 @@ def _nap_event_duration_seconds(event):
         return None
     try:
         numeric = float(value)
-        # Garmin body-battery events use milliseconds; exported event data may use seconds.
         return numeric / 1000.0 if numeric > 10000 else numeric
     except (ValueError, TypeError):
         return None
@@ -292,12 +291,10 @@ def get_previous_day_nap(api, target_date):
         events = api.get_body_battery_events(nap_date.isoformat()) or []
     except Exception:
         events = []
-
     if isinstance(events, dict):
         events = events.get("bodyBatteryActivityEvent") or events.get("bodyBatteryActivityEvents") or events.get("events") or []
     if not isinstance(events, list):
         return None
-
     candidates = []
     for event in events:
         if not isinstance(event, dict):
@@ -312,10 +309,8 @@ def get_previous_day_nap(api, target_date):
         end = start + timedelta(seconds=duration_seconds)
         if start.date() == nap_date or end.date() == nap_date:
             candidates.append((start, end))
-
     if not candidates:
         return None
-
     start, end = max(candidates, key=lambda item: item[1])
     duration_minutes = (end - start).total_seconds() / 60.0
     return {
@@ -333,10 +328,8 @@ def get_health_stats(api, target_date_str, target_date=None):
         stats = api.get_stats(target_date_str) or {}
     except Exception:
         pass
-
     rhr = safe_int(stats.get("restingHeartRate") or stats.get("rhr"))
     total_steps = safe_int(stats.get("totalSteps") or stats.get("steps"))
-
     sleep_data = {}
     try:
         sleep_data = api.get_sleep_data(target_date_str) or {}
@@ -347,10 +340,8 @@ def get_health_stats(api, target_date_str, target_date=None):
     overall_score = sleep_scores.get("overall", {}) or {}
     sleep_score = safe_int(overall_score.get("value") or sleep_dto.get("overallSleepScore") or sleep_dto.get("sleepScore"))
     sleep_seconds = sleep_dto.get("sleepTimeSeconds")
-
     def hours(seconds):
         return safe_float((seconds or 0) / 3600 if seconds is not None else None, 2)
-
     sleep_stages = {
         "deep": hours(sleep_dto.get("deepSleepSeconds")),
         "light": hours(sleep_dto.get("lightSleepSeconds")),
@@ -358,7 +349,6 @@ def get_health_stats(api, target_date_str, target_date=None):
         "awake": hours(sleep_dto.get("awakeSleepSeconds")),
     }
     sleep_stages = {k: v for k, v in sleep_stages.items() if v is not None}
-
     hrv_data = {}
     try:
         hrv_data = api.get_hrv_data(target_date_str) or {}
@@ -368,7 +358,6 @@ def get_health_stats(api, target_date_str, target_date=None):
     hrv_last_night = safe_float(hrv_summary.get("lastNightAvg") or hrv_summary.get("lastNight5MinHigh"), 1)
     hrv_weekly = safe_float(hrv_summary.get("weeklyAvg"), 1)
     hrv_status = hrv_summary.get("status")
-
     baseline = hrv_summary.get("baseline") or hrv_summary.get("baselineBalancedRange") or hrv_summary.get("baselineBalancedRangeDTO") or {}
     baseline_range = {
         "lowUpper": safe_float(baseline.get("lowUpper"), 2),
@@ -377,21 +366,14 @@ def get_health_stats(api, target_date_str, target_date=None):
         "markerValue": baseline.get("markerValue"),
     }
     baseline_range = {k: v for k, v in baseline_range.items() if v is not None}
-
-    hrv = {
-        "last_night_avg_ms": hrv_last_night,
-        "seven_day_avg_ms": hrv_weekly,
-        "status": hrv_status,
-    }
+    hrv = {"last_night_avg_ms": hrv_last_night, "seven_day_avg_ms": hrv_weekly, "status": hrv_status}
     if baseline_range:
         hrv["baseline_balanced_range"] = baseline_range
     hrv = {k: v for k, v in hrv.items() if v is not None}
-
     nap = get_previous_day_nap(api, target_date) if target_date else None
     nap_minutes = nap.get("duration_minutes") if nap else 0.0
     total_sleep_hours = hours(sleep_seconds)
     total_sleep_including_nap_hours = round(total_sleep_hours + (nap_minutes / 60.0), 2) if total_sleep_hours is not None else None
-
     result = {
         "resting_heart_rate": rhr,
         "hrv": hrv,
@@ -407,10 +389,12 @@ def get_health_stats(api, target_date_str, target_date=None):
 
 
 def build_daily_readiness(health_stats, training_status):
-    """Build the compact snapshot from the detailed structures already fetched."""
+    """Build the compact readiness snapshot from the detailed structures already fetched."""
     ts = training_status or {}
     load = ts.get("training_load") or {}
     vo2 = ts.get("vo2_max") or {}
+    readiness = dict(ts.get("readiness") or {})
+    readiness.pop("feedback_long", None)
     result = {
         "resting_hr_bpm": health_stats.get("resting_heart_rate"),
         "hrv_last_night_avg_ms": deep_get(health_stats, ["hrv.last_night_avg_ms"]),
@@ -427,7 +411,7 @@ def build_daily_readiness(health_stats, training_status):
         "acwr": load.get("acwr"),
         "vo2_max": vo2.get("value"),
         "recovery_time_hours": ts.get("recovery_time_hours"),
-        "readiness": ts.get("readiness"),
+        "readiness": readiness or None,
     }
     return {k: v for k, v in result.items() if v is not None}
 
@@ -469,13 +453,11 @@ def main():
     parser.add_argument("--trend-weeks", type=int, default=12)
     parser.add_argument("--body-battery-days", type=int, default=7)
     args = parser.parse_args()
-
     data_dir = "data"
     tokenstore = os.getenv("GARMIN_TOKENSTORE", "~/.garminconnect")
     target_date = datetime.strptime(args.date, "%Y-%m-%d").date() if args.date else datetime.now(LOCAL_TZ).date()
     api = Garmin()
     api.login(tokenstore=os.path.expanduser(tokenstore))
-
     health_stats = get_health_stats(api, target_date.isoformat(), target_date)
     training_status = get_training_status_details(api, target_date.isoformat())
     training_history = get_training_history(api, target_date)
@@ -484,11 +466,16 @@ def main():
     weekly_trends = get_metric_trend(api, target_date, days=args.trend_weeks * 7, interval=7)
     body_battery_trend = get_body_battery_trend(api, target_date, days=args.body_battery_days)
 
+    # Keep the detailed readiness data available internally for the compact
+    # daily_readiness snapshot, but do not duplicate it inside training_status.
+    training_status_output = dict(training_status)
+    training_status_output.pop("readiness", None)
+
     payload = {
         "date": target_date.isoformat(),
         "daily_readiness": build_daily_readiness(health_stats, training_status),
         "health_stats": health_stats,
-        "training_status": training_status,
+        "training_status": training_status_output,
         "training_history": training_history,
         "trend_recent_daily": trends,
         "trend_long_range_weekly": weekly_trends,
@@ -496,7 +483,6 @@ def main():
         "activities": activities,
     }
     payload = strip_volatile_fields(payload)
-
     os.makedirs(data_dir, exist_ok=True)
     latest_path = os.path.join(data_dir, "latest.json")
     with open(latest_path, "w", encoding="utf-8") as f:
@@ -504,5 +490,4 @@ def main():
     print(latest_path)
 
 
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__": main()
