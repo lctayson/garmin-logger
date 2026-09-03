@@ -8,13 +8,40 @@
     "sleep_hours": 6.62,
     "sleep_hours_including_previous_day_nap": 7.74,
     "sleep_score": 82,
-    "previous_day_nap": 67.0,
     "training_status": "Maintaining 2",
     "acute_load": 654,
     "chronic_load": 533,
     "acwr": 1.2,
     "vo2_max": 45.0,
     "recovery_hours": 24.2,
+    "readiness": {
+      "score": 51,
+      "level": "Moderate",
+      "feedback_short": "Well Rested",
+      "feedback_long": "Mod Rt Mod Or Low Ss Good Stress History Neg",
+      "factors": {
+        "sleep_score": {
+          "percent": 74,
+          "feedback": "Good"
+        },
+        "recovery_time": {
+          "percent": 61,
+          "feedback": "Moderate"
+        },
+        "acwr": {
+          "percent": 81,
+          "feedback": "Good"
+        },
+        "hrv": {
+          "percent": 98,
+          "feedback": "Good"
+        },
+        "stress_history": {
+          "percent": 58,
+          "feedback": "Moderate"
+        }
+      }
+    },
     "sleep_need": {
       "baseline_hours": 7.0,
       "need_hours": 6.5,
@@ -24,7 +51,8 @@
       "hrv_adjustment": "No Change",
       "nap_adjustment": "Decreasing",
       "next_need_hours": 7.0
-    }
+    },
+    "previous_day_nap": 67.0
   },
   "health_stats": {
     "hrv": {
@@ -66,6 +94,30 @@
       "acwr": 1.2,
       "acwr_percent": 52,
       "acwr_status": "Optimal"
+    },
+    "readiness": {
+      "score": 51,
+      "level": "Moderate",
+      "feedback_short": "Well Rested",
+      "feedback_long": "Mod Rt Mod Or Low Ss Good Stress History Neg",
+      "factors": {
+        "recovery_time": {
+          "percent": 61,
+          "feedback": "Moderate"
+        },
+        "acwr": {
+          "percent": 81,
+          "feedback": "Good"
+        },
+        "hrv": {
+          "percent": 98,
+          "feedback": "Good"
+        },
+        "stress_history": {
+          "percent": 58,
+          "feedback": "Moderate"
+        }
+      }
     },
     "load_focus": "Aerobic Low Shortage",
     "monthly_load_balance": {
