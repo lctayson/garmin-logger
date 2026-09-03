@@ -94,6 +94,61 @@ def _first(source, keys):
     return generator.deep_get(source, keys, None)
 
 
+def _format_api_pace(value):
+    """Format Garmin's numeric seconds/km pace without replacing the API value."""
+    if isinstance(value, (int, float)) and 100 <= float(value) <= 1000:
+        seconds = float(value)
+        return f"{int(seconds // 60)}:{int(round(seconds % 60)):02d}"
+    return value
+
+
+def _enrich_activity_splits(api, activity):
+    """Add fields that Garmin exposes on lapDTOs but the compact exporter omits."""
+    activity_id = activity.get("activityId") if isinstance(activity, dict) else None
+    if not activity_id:
+        return
+    try:
+        raw = api.get_activity_splits(activity_id) or {}
+    except Exception:
+        return
+    laps = raw.get("lapDTOs", []) if isinstance(raw, dict) else []
+    existing = activity.get("activity_splits") or []
+    if not isinstance(existing, list):
+        existing = []
+    by_lap = {item.get("lap"): item for item in existing if isinstance(item, dict) and item.get("lap") is not None}
+
+    for lap in laps:
+        if not isinstance(lap, dict):
+            continue
+        lap_no = lap.get("lapIndex") or lap.get("splitIndex") or lap.get("lap")
+        item = by_lap.get(lap_no)
+        if item is None:
+            continue
+
+        # Keep Garmin's intensity value exactly as returned. No Active->Run mapping.
+        step_type = lap.get("intensityType")
+        if step_type is None:
+            step_type = lap.get("stepType")
+        if step_type is not None:
+            item["step_type"] = step_type
+
+        # Only expose an interval number when Garmin actually supplies one.
+        interval = _first(lap, ("interval", "intervalNumber", "intervalIndex", "workoutStepIndex"))
+        if interval is not None:
+            item["interval"] = interval
+
+        lap_trigger = _first(lap, ("lapTrigger", "triggerType"))
+        if lap_trigger is not None:
+            item["lap_trigger"] = lap_trigger
+
+        gap = _first(lap, ("averageGradeAdjustedPace", "avgGradeAdjustedPace", "gradeAdjustedPace", "averageGAP", "avgGAP", "gap"))
+        if gap is not None:
+            item["avg_gap"] = _format_api_pace(gap)
+
+        # Cumulative time is derivable from the ordered laps and adds no coaching value.
+        item.pop("cumulative_time_min", None)
+
+
 def _enrich_activity_environment(api, activity):
     if not isinstance(activity, dict) or not activity.get("activityId"): return activity
     try: detail = api.get_activity(activity["activityId"]) or {}
@@ -106,13 +161,7 @@ def _enrich_activity_environment(api, activity):
 
     gap = pick(("averageGradeAdjustedPace", "avgGradeAdjustedPace", "gradeAdjustedPace", "averageGAP", "avgGAP", "gap"))
     if gap is not None:
-        try:
-            if isinstance(gap, (int, float)):
-                # Garmin pace values are commonly seconds/km; convert them to M:SS.
-                seconds = float(gap)
-                if 100 <= seconds <= 1000: gap = f"{int(seconds // 60)}:{int(round(seconds % 60)):02d}"
-            activity["gap"] = gap
-        except Exception: activity["gap"] = gap
+        activity["gap"] = _format_api_pace(gap)
 
     gain = pick(("elevationGain", "totalElevationGain", "sumElevationGain", "ascent", "elevationAscent"))
     loss = pick(("elevationLoss", "totalElevationLoss", "sumElevationLoss", "descent", "elevationDescent"))
@@ -135,6 +184,8 @@ def _enrich_activity_environment(api, activity):
         condition = _first(weather, ("condition", "weatherCondition", "description", "weatherType"))
         if condition is not None: weather_out["condition"] = condition
         if weather_out: activity["weather"] = weather_out
+
+    _enrich_activity_splits(api, activity)
     return activity
 
 
