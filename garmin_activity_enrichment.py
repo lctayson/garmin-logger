@@ -155,6 +155,8 @@ def enrich_activity_splits(api, activity):
             item["step_type"] = lap["intensityType"]
         item.pop("intensity", None)
         item.pop("cumulative_time", None)
+        item.pop("cumulative_time_min", None)
+        item.pop("intensityType", None)
 
         pace = _pace_from_speed(lap.get("averageSpeed"))
         gap = _pace_from_speed(lap.get("avgGradeAdjustedSpeed"))
@@ -205,21 +207,81 @@ def enrich_activity_splits(api, activity):
             if moving_time is not None:
                 item["moving_time"] = moving_time
 
-        moving_speed = lap.get("averageMovingSpeed")
-        moving_pace = _pace_from_speed(moving_speed)
+        moving_pace = _pace_from_speed(lap.get("averageMovingSpeed"))
         if moving_pace is not None:
             item["avg_moving_pace"] = moving_pace
 
-        max_speed = lap.get("maxSpeed")
-        best_pace = _pace_from_speed(max_speed)
+        best_pace = _pace_from_speed(lap.get("maxSpeed"))
         if best_pace is not None:
             item["best_pace"] = best_pace
 
-        max_cadence = lap.get("maxRunCadence")
-        if max_cadence is not None:
-            item["max_run_cadence"] = generator.safe_float(max_cadence, 0)
+        if lap.get("maxRunCadence") is not None:
+            item["max_run_cadence"] = generator.safe_float(lap["maxRunCadence"], 0)
 
-        item = _reorder_split(item)
-        by_lap[lap_number] = item
+        by_lap[lap_number] = _reorder_split(item)
 
     activity["activity_splits"] = list(by_lap.values())
+
+
+def enrich_activity(api, activity):
+    """Enrich one activity with detail, GAP, elevation, weather and API splits."""
+    if not isinstance(activity, dict) or not activity.get("activityId"):
+        return activity
+
+    try:
+        detail = api.get_activity(activity["activityId"]) or {}
+    except Exception:
+        detail = {}
+
+    summary = detail.get("summaryDTO", {}) if isinstance(detail, dict) else {}
+    if not isinstance(summary, dict):
+        summary = {}
+
+    def pick(keys):
+        value = generator.deep_get(summary, keys, None)
+        return value if value is not None else generator.deep_get(detail, keys, None)
+
+    gap = pick(("avgGradeAdjustedSpeed", "averageGradeAdjustedSpeed", "avgGradeAdjustedPace", "averageGAP", "avgGAP", "gap"))
+    if gap is not None:
+        activity["gap"] = _pace_from_speed(gap) if isinstance(gap, (int, float)) else gap
+
+    gain = pick(("elevationGain", "totalElevationGain", "sumElevationGain", "ascent", "elevationAscent"))
+    loss = pick(("elevationLoss", "totalElevationLoss", "sumElevationLoss", "descent", "elevationDescent"))
+    if gain is not None:
+        activity["elevation_gain_m"] = generator.safe_float(gain, 1)
+    if loss is not None:
+        activity["elevation_loss_m"] = generator.safe_float(loss, 1)
+
+    weather = None
+    get_weather = getattr(api, "get_activity_weather", None)
+    if callable(get_weather):
+        try:
+            raw_weather = get_weather(activity["activityId"])
+            weather = raw_weather[0] if isinstance(raw_weather, list) and raw_weather else raw_weather if isinstance(raw_weather, dict) else None
+        except Exception:
+            weather = None
+
+    if weather is None:
+        weather = detail.get("weatherDTO") or detail.get("weather") or summary.get("weatherDTO") or summary.get("weather")
+
+    if isinstance(weather, dict):
+        weather_out = {}
+        for dst, keys, decimals in (
+            ("temperature_c", ("temperature", "temperatureC", "avgTemperature", "averageTemperature"), 1),
+            ("humidity_pct", ("humidity", "relativeHumidity", "humidityPercent"), 1),
+            ("wind_speed_mps", ("windSpeed", "windSpeedMps", "averageWindSpeed"), 1),
+            ("wind_direction_deg", ("windDirection", "windDirectionDegrees"), 0),
+            ("feels_like_c", ("feelsLike", "feelsLikeTemperature", "apparentTemperature"), 1),
+            ("precipitation_mm", ("precipitation", "precipitationMm", "rainfall"), 1),
+        ):
+            value = generator.deep_get(weather, keys, None)
+            if value is not None:
+                weather_out[dst] = generator.safe_float(value, decimals)
+        condition = generator.deep_get(weather, ("condition", "weatherCondition", "description", "weatherType"), None)
+        if condition is not None:
+            weather_out["condition"] = condition
+        if weather_out:
+            activity["weather"] = weather_out
+
+    enrich_activity_splits(api, activity)
+    return activity
