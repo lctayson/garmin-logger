@@ -51,7 +51,7 @@ class ActivityZoneTests(unittest.TestCase):
 
         self.assertEqual(result[0]["name"], "Morning Run")
         self.assertEqual(result[0]["distance_km"], 6.06)
-        self.assertEqual(result[0]["hr_zones"], [["13:00", 32], ["7:00", 17], ["12:00", 30], ["6:00", 15], ["1:40", 4]])
+        self.assertEqual(result[0]["hr_zones"], [["13:00", 33], ["7:00", 18], ["12:00", 30], ["6:00", 15], ["1:40", 4]])
         self.assertEqual(result[0]["power_zones"], [["15:34", 41], ["5:46", 15], ["6:23", 17], ["10:25", 27], ["0:00", 0]])
         self.assertEqual(api.hr_calls, [123])
         self.assertEqual(api.power_calls, [123])
