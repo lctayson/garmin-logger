@@ -1,5 +1,7 @@
 """Add recovery-interval HR metrics from Garmin activity detail samples."""
 
+from collections import OrderedDict
+
 
 def _safe_float(value):
     try:
@@ -85,6 +87,24 @@ def _recovery_type(value):
     return value in {"RECOVERY", "REST", "RESTING"}
 
 
+def _place_recovery_fields(item, recovery_end, recovery_min):
+    """Insert recovery HR beside the normal HR fields without disturbing schema."""
+    ordered = OrderedDict()
+    inserted = False
+    for key, value in item.items():
+        if key in {"recovery_hr_end", "recovery_hr_min"}:
+            continue
+        ordered[key] = value
+        if key == "max_hr":
+            ordered["recovery_hr_end"] = recovery_end
+            ordered["recovery_hr_min"] = recovery_min
+            inserted = True
+    if not inserted:
+        ordered["recovery_hr_end"] = recovery_end
+        ordered["recovery_hr_min"] = recovery_min
+    return dict(ordered)
+
+
 def add_recovery_hr(api, activity):
     """Add recovery_hr_end and recovery_hr_min to Garmin recovery/rest laps.
 
@@ -115,15 +135,15 @@ def add_recovery_hr(api, activity):
         if isinstance(item, dict) and item.get("lap") is not None
     }
 
-    total_duration = 0.0
-    for lap in sorted(
+    ordered_laps = sorted(
         (x for x in laps if isinstance(x, dict)),
         key=lambda x: x.get("lapIndex", 0),
-    ):
+    )
+    total_duration = 0.0
+    for lap in ordered_laps:
         duration = _safe_float(lap.get("duration"))
-        if duration is None or duration < 0:
-            continue
-        total_duration += duration
+        if duration is not None and duration >= 0:
+            total_duration += duration
 
     if total_duration <= 0:
         return activity
@@ -146,10 +166,7 @@ def add_recovery_hr(api, activity):
         return activity
 
     elapsed = 0.0
-    for lap in sorted(
-        (x for x in laps if isinstance(x, dict)),
-        key=lambda x: x.get("lapIndex", 0),
-    ):
+    for lap in ordered_laps:
         lap_number = lap.get("lapIndex")
         duration = _safe_float(lap.get("duration"))
         if lap_number is None or duration is None or duration <= 0:
@@ -166,33 +183,20 @@ def add_recovery_hr(api, activity):
         if not _recovery_type(step_type):
             continue
 
-        values = [
-            hr for time_sec, hr in samples
-            if start <= time_sec <= end and hr is not None and 30 <= hr <= 240
-        ]
-        if not values:
-            continue
-
-        # The endpoint can omit the exact boundary sample. Prefer the last
-        # valid sample at or before the boundary; allow a small pre-boundary
-        # gap but never use a sample from the following repetition.
-        end_candidates = [
+        valid = [
             (time_sec, hr)
             for time_sec, hr in samples
             if start <= time_sec <= end and hr is not None and 30 <= hr <= 240
         ]
-        if end_candidates:
-            recovery_end = end_candidates[-1][1]
-        else:
-            recovery_end = None
+        if not valid:
+            continue
+
+        recovery_end = valid[-1][1]
+        recovery_min = min(hr for _, hr in valid)
 
         item = by_lap.get(lap_number)
         if item is None:
             continue
-        item["recovery_hr_end"] = round(recovery_end) if recovery_end is not None else None
-        item["recovery_hr_min"] = round(min(values))
+        item.update(_place_recovery_fields(item, round(recovery_end), round(recovery_min)))
 
-    activity["activity_splits"] = [
-        item for item in activity["activity_splits"]
-    ]
     return activity
