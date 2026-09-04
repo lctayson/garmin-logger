@@ -1,6 +1,7 @@
 """Add per-lap HR extrema and trajectory metrics from Garmin activity detail samples."""
 
 from collections import OrderedDict
+from datetime import datetime
 
 
 def _safe_float(value):
@@ -8,6 +9,25 @@ def _safe_float(value):
         return float(value)
     except (TypeError, ValueError):
         return None
+
+
+def _parse_gmt_time(val):
+    """Safely parse Garmin startTimeGMT into epoch seconds."""
+    if val is None:
+        return None
+    if isinstance(val, (int, float)):
+        return float(val)
+    if isinstance(val, str):
+        try:
+            v = val.rstrip('Z')
+            return datetime.fromisoformat(v).timestamp()
+        except Exception:
+            for fmt in ("%Y-%m-%dT%H:%M:%S.%f", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d %H:%M:%S"):
+                try:
+                    return datetime.strptime(v, fmt).timestamp()
+                except ValueError:
+                    continue
+    return None
 
 
 def _metric_indexes(details):
@@ -165,16 +185,30 @@ def add_recovery_hr(api, activity):
     if not samples:
         return activity
 
-    elapsed = 0.0
+    # Determine baseline start time from the first lap for absolute offset anchoring
+    first_start_sec = None
+    for lap in ordered_laps:
+        s_time = _parse_gmt_time(lap.get("startTimeGMT") or lap.get("startTime"))
+        if s_time is not None:
+            first_start_sec = s_time
+            break
+
+    fallback_elapsed = 0.0
     for lap in ordered_laps:
         lap_number = lap.get("lapIndex")
         duration = _safe_float((lap.get("duration") or lap.get("elapsedDuration")))
         if lap_number is None or duration is None or duration <= 0:
             continue
 
-        start = elapsed
-        end = elapsed + duration
-        elapsed = end
+        # Use startTimeGMT absolute offset if available, otherwise fall back to cumulative sum
+        lap_start_gmt = _parse_gmt_time(lap.get("startTimeGMT") or lap.get("startTime"))
+        if first_start_sec is not None and lap_start_gmt is not None:
+            start = lap_start_gmt - first_start_sec
+            end = start + duration
+        else:
+            start = fallback_elapsed
+            end = fallback_elapsed + duration
+            fallback_elapsed = end
 
         valid = [
             (time_sec, hr)
