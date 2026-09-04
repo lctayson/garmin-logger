@@ -125,6 +125,8 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
         ("level", "level"),
         ("feedback_short", "feedback"),
         ("resting_hr", "resting_hr"),
+        ("resting_hr_bpm", "resting_hr"),
+        ("resting_heart_rate", "resting_hr"),
         ("hrv_last_night_avg_ms", "hrv_last_night_avg_ms"),
         ("hrv_7_day_avg_ms", "hrv_7_day_avg_ms"),
         ("hrv_status", "hrv_status"),
@@ -132,6 +134,7 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
         ("sleep_hours_including_previous_day_nap", "sleep_hours_including_previous_day_nap"),
         ("sleep_score", "sleep_score"),
         ("recovery_hours", "recovery_hours"),
+        ("recovery_time_hours", "recovery_hours"),
     )
     for old, new in direct:
         if daily.get(old) is not None:
@@ -143,14 +146,14 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
 
     hrv = health.get("hrv") or {}
     fallbacks = (
-        ("resting_hr", health.get("resting_hr")),
+        ("resting_hr", health.get("resting_hr", health.get("resting_heart_rate"))),
         ("hrv_last_night_avg_ms", hrv.get("last_night_avg_ms")),
         ("hrv_7_day_avg_ms", hrv.get("7d_avg_ms", hrv.get("seven_day_avg_ms"))),
         ("hrv_status", hrv.get("status")),
-        ("sleep_hours", health.get("sleep_hours")),
+        ("sleep_hours", health.get("sleep_hours", health.get("total_sleep_hours"))),
         ("sleep_hours_including_previous_day_nap", health.get("sleep_hours_including_previous_day_nap")),
         ("sleep_score", health.get("sleep_score")),
-        ("recovery_hours", health.get("recovery_hours")),
+        ("recovery_hours", health.get("recovery_hours", health.get("recovery_time_hours"))),
     )
     for key, value in fallbacks:
         if readiness.get(key) is None and value is not None:
@@ -164,6 +167,15 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
         readiness["factor_details"] = factors
     if readiness:
         out["readiness"] = readiness
+
+    # Keep daily step count as an explicit health measurement. It should not
+    # be hidden in a trend row or inferred from activity data.
+    health_out: dict[str, Any] = {}
+    steps = health.get("steps", health.get("total_steps"))
+    if steps is not None:
+        health_out["steps"] = steps
+    if health_out:
+        out["health"] = health_out
 
     sleep: dict[str, Any] = {}
     stages = health.get("sleep_stages_hours")
@@ -184,10 +196,8 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
     ):
         if need.get(old) is not None:
             sleep[new] = need[old]
-    if daily.get("previous_day_nap") is not None:
+    if "previous_day_nap" in daily:
         sleep["previous_day_nap"] = daily["previous_day_nap"]
-    if health.get("steps") is not None:
-        sleep["steps"] = health["steps"]
     if sleep:
         out["sleep"] = sleep
 
@@ -232,7 +242,7 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
         if key in source:
             out[key] = _compact_trend(source[key], key)
 
-    known = {"date", "daily_readiness", "health_stats", "training_status", "training_history", "legacy_running_summary"} | set(_TREND_KEYS) | _ACTIVITY_KEYS
+    known = {"date", "daily_readiness", "health_stats", "training_status", "training_history", "legacy_running_summary"} | _TREND_KEYS | _ACTIVITY_KEYS
     for key, value in source.items():
         if key not in known and key not in out:
             out[key] = value
