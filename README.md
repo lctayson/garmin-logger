@@ -62,7 +62,7 @@ data/latest_metrics.json
 data/latest_activities.json
 ```
 
-`latest_metrics.json` is intentionally compacted after generation. The compaction removes duplicated readiness/load sections, the legacy running summary, derivable trend metadata, and other redundant representations. It does **not** replace Garmin API values with estimates.
+`latest_metrics.json` is canonicalized in memory during the split step. The pipeline avoids a separate post-generation compaction pass, removes redundant representations, and preserves Garmin API values rather than replacing them with estimates.
 
 ## Project structure
 
@@ -113,8 +113,15 @@ Garmin Connect
       │
       ├── activity enrichment
       ├── activity zones
-      ├── running tolerance
-      └── metrics compaction
+      └── running tolerance
+             │
+             ▼
+ add sleep need / naps
+             │
+             ▼
+ split_garmin_json.py
+      │
+      └── single-pass canonical metrics + activity formatting
              │
              ▼
        data/*.json
@@ -123,7 +130,7 @@ Garmin Connect
              └── latest_activities.json
 ```
 
-`run_garmin_to_json.py` wraps the standard exporter and adds API-based enrichment before compacting the current metrics snapshot.
+`run_garmin_to_json.py` is the recommended user-facing workflow because it provides the complete API-based enrichment and timezone support. `split_garmin_json.py` performs the canonical metrics transformation once, in memory, after sleep-need and nap data have been added.
 
 ## Authentication
 
@@ -221,7 +228,8 @@ This adds:
 1. Activity enrichment
 2. Activity zones
 3. Running Tolerance
-4. Metrics compaction
+4. Sleep need and date-aware naps
+5. Canonical metrics/activity formatting
 
 The base exporter can be run directly with:
 
@@ -229,7 +237,7 @@ The base exporter can be run directly with:
 python garmin_to_json.py
 ```
 
-The base exporter remains useful for raw generation, while `run_garmin_to_json.py` is the recommended user-facing workflow because it provides the complete enriched export, timezone override support, and canonical metrics compaction.
+The base exporter remains useful for raw generation, while `run_garmin_to_json.py` is the recommended user-facing workflow because it provides the complete enriched export and timezone override support.
 
 ## Metrics compaction
 
@@ -245,7 +253,9 @@ The base exporter remains useful for raw generation, while `run_garmin_to_json.p
 - Body Battery trend
 - Additional generated fields such as Running Tolerance
 
-It removes information that is duplicated or deterministically derivable, including `legacy_running_summary` and repeated trend window metadata. Trend data remains in a `columns` + `data` representation so it is both compact and easy for scripts/AI systems to interpret.
+It removes information that is duplicated or deterministically derivable, including `legacy_running_summary` and redundant daily trend window metadata. Daily and weekly trend data uses a `columns` + `data` representation so field names are stored once instead of being repeated in every row. Weekly window start/end dates and Garmin interpretation fields such as ACWR status are retained where they remain useful for analysis.
+
+VO2 max is stored as a scalar value (`"vo2_max": 45.0`) rather than an unnecessary `{"value": 45.0}` wrapper.
 
 The compactor preserves unknown top-level fields so future Garmin additions are not silently discarded.
 
@@ -254,6 +264,8 @@ To compact an existing metrics file manually:
 ```bash
 python compact_metrics.py data/latest_metrics.json
 ```
+
+The normal GitHub Actions pipeline does **not** run this as a separate post-processing step; it calls the same canonical transformation in memory during `split_garmin_json.py`.
 
 ## Running Tolerance
 
@@ -328,52 +340,7 @@ The exporter is designed for longitudinal training analysis:
 
 - Prefer Garmin API values over guesses or manually entered values.
 - Preserve Garmin activity/sport classification.
-- Convert units explicitly and consistently.
-- Keep daily health data separate from activity-level data.
-- Avoid redundant fields that can be deterministically calculated.
-- Handle missing Garmin fields gracefully.
-- Keep authentication data out of generated JSON and source control.
-- Use IANA timezone names rather than ambiguous abbreviations such as `PST` or `EST`.
-
-## Testing
-
-Tests are located in `tests/` and cover areas such as activity export behavior, historical activity lookup, and latest-activity handling.
-
-Run the suite with:
-
-```bash
-python -m unittest discover -s tests
-```
-
-Where practical, tests should not require live Garmin authentication.
-
-## Google Sheets
-
-`garmin_to_sheets.py` provides a separate path for publishing Garmin data to Google Sheets. JSON remains the preferred machine-readable intermediate format.
-
-## Downstream / AI analysis
-
-For a coaching or AI workflow, load the current snapshots in this order:
-
-1. `data/latest_metrics.json` — recovery, readiness, training load, history, trends, and overall context.
-2. `data/latest_activities.json` — activity and split-level execution data.
-
-Use the activity file to evaluate workout execution (pace, HR, cadence, power, mechanics, and interval consistency). Use the metrics file to evaluate readiness and training context before recommending the next session.
-
-## Privacy and security
-
-Garmin exports can contain sensitive health and location-related information. Treat generated JSON as private personal data.
-
-Do not commit:
-
-- Garmin passwords
-- Authentication tokens
-- Token-store contents
-- Private credentials
-- Unnecessary raw personal data
-
-Review `data/` before making the repository public.
-
-## License
-
-No license is currently specified. Unless a license is added, all rights remain with the repository owner.
+- Preserve useful Garmin interpretation fields rather than silently replacing them.
+- Use explicit units in field names where practical.
+- Remove only duplicated or deterministically derivable representations.
+- Keep current canonical files stable so downstream analysis does not need to understand every historical/raw schema.
