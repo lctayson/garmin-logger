@@ -1,22 +1,30 @@
-"""Compact Garmin metrics JSON without removing analysis-critical information."""
-
+"""Build the canonical, analysis-friendly Garmin metrics JSON."""
 from __future__ import annotations
 
 import json
 from pathlib import Path
 from typing import Any
 
-
 _DROP_TREND_COLUMNS = {"window_start", "window_end", "window_days", "acwr_status"}
+_ACTIVITY_KEYS = {"activities", "activity_data", "activityData"}
+_TREND_KEYS = {"trend_recent_daily", "trend_long_range_weekly", "body_battery_trend"}
 
 
 def _compact_factors(factors: Any) -> dict[str, Any] | None:
     if not isinstance(factors, dict):
         return None
-    out = {}
+    out: dict[str, Any] = {}
     for key, value in factors.items():
-        if isinstance(value, dict) and "percent" in value:
-            out[key] = value.get("percent")
+        if isinstance(value, dict):
+            # Keep both the numeric score and Garmin's interpretation. Both are
+            # useful when deciding whether readiness is being limited by sleep,
+            # recovery, HRV, etc.
+            item: dict[str, Any] = {}
+            if value.get("percent") is not None:
+                item["percent"] = value["percent"]
+            if value.get("feedback") is not None:
+                item["feedback"] = value["feedback"]
+            out[key] = item or value
         elif value is not None:
             out[key] = value
     return out or None
@@ -38,53 +46,59 @@ def _compact_trend(trend: Any) -> Any:
     }
 
 
-def _compact_training_history(history: Any) -> dict[str, Any] | Any:
-    if not isinstance(history, dict):
-        return history
-    out = dict(history)
-    out.pop("legacy_running_summary", None)
-    return out
+def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
+    """Convert a raw/intermediate Garmin payload into the canonical metrics shape.
 
-
-def compact_metrics(data: dict[str, Any]) -> dict[str, Any]:
-    """Remove redundant representations while retaining coaching-relevant data."""
-    if not isinstance(data, dict):
+    This is intentionally structural rather than lossy: duplicated representations
+    are consolidated, but analysis-relevant Garmin values and interpretations remain.
+    """
+    if not isinstance(source, dict):
         raise TypeError("metrics data must be a dictionary")
 
-    source = dict(data)
-    out: dict[str, Any] = {"date": source.get("date")}
+    out: dict[str, Any] = {}
+    if source.get("date") is not None:
+        out["date"] = source["date"]
+
     daily = source.get("daily_readiness") or {}
     health = source.get("health_stats") or {}
     status = source.get("training_status") or {}
 
     readiness: dict[str, Any] = {}
-    for key in ("score", "level", "feedback_short", "resting_hr", "hrv_last_night_avg_ms", "sleep_hours", "sleep_score", "recovery_hours"):
-        if daily.get(key) is not None:
-            readiness[key] = daily[key]
-    if readiness.get("resting_hr") is None and health.get("resting_hr") is not None:
-        readiness["resting_hr"] = health["resting_hr"]
-    if readiness.get("hrv_last_night_avg_ms") is None and (health.get("hrv") or {}).get("last_night_avg_ms") is not None:
-        readiness["hrv_last_night_avg_ms"] = health["hrv"]["last_night_avg_ms"]
-    if readiness.get("sleep_hours") is None and health.get("sleep_hours") is not None:
-        readiness["sleep_hours"] = health["sleep_hours"]
-    if readiness.get("sleep_score") is None and health.get("sleep_score") is not None:
-        readiness["sleep_score"] = health["sleep_score"]
-    if daily.get("hrv_status") is not None:
-        readiness["hrv_status"] = daily["hrv_status"]
-    elif (health.get("hrv") or {}).get("status") is not None:
-        readiness["hrv_status"] = health["hrv"]["status"]
-    if daily.get("hrv_7_day_avg_ms") is not None:
-        readiness["hrv_7_day_avg_ms"] = daily["hrv_7_day_avg_ms"]
-    elif (health.get("hrv") or {}).get("7d_avg_ms") is not None:
-        readiness["hrv_7_day_avg_ms"] = health["hrv"]["7d_avg_ms"]
-    elif (health.get("hrv") or {}).get("seven_day_avg_ms") is not None:
-        readiness["hrv_7_day_avg_ms"] = health["hrv"]["seven_day_avg_ms"]
-    baseline = (health.get("hrv") or {}).get("baseline_balanced_range")
+    direct = (
+        ("score", "score"),
+        ("level", "level"),
+        ("feedback_short", "feedback"),
+        ("resting_hr", "resting_hr"),
+        ("hrv_last_night_avg_ms", "hrv_last_night_avg_ms"),
+        ("hrv_7_day_avg_ms", "hrv_7_day_avg_ms"),
+        ("hrv_status", "hrv_status"),
+        ("sleep_hours", "sleep_hours"),
+        ("sleep_score", "sleep_score"),
+        ("recovery_hours", "recovery_hours"),
+    )
+    for old, new in direct:
+        if daily.get(old) is not None:
+            readiness[new] = daily[old]
+
+    hrv = health.get("hrv") or {}
+    fallbacks = (
+        ("resting_hr", health.get("resting_hr")),
+        ("hrv_last_night_avg_ms", hrv.get("last_night_avg_ms")),
+        ("hrv_7_day_avg_ms", hrv.get("7d_avg_ms", hrv.get("seven_day_avg_ms"))),
+        ("hrv_status", hrv.get("status")),
+        ("sleep_hours", health.get("sleep_hours")),
+        ("sleep_score", health.get("sleep_score")),
+    )
+    for key, value in fallbacks:
+        if readiness.get(key) is None and value is not None:
+            readiness[key] = value
+
+    baseline = hrv.get("baseline_balanced_range")
     if baseline:
         readiness["hrv_baseline"] = baseline
     factors = _compact_factors((daily.get("readiness") or {}).get("factors"))
     if factors:
-        readiness["factor_pct"] = factors
+        readiness["factor_details"] = factors
     if readiness:
         out["readiness"] = readiness
 
@@ -95,7 +109,16 @@ def compact_metrics(data: dict[str, Any]) -> dict[str, Any]:
             if value is not None:
                 sleep[f"{key}_h"] = value
     need = daily.get("sleep_need") or {}
-    for old, new in (("baseline_hours", "baseline_h"), ("need_hours", "need_h"), ("next_need_hours", "next_need_h")):
+    for old, new in (
+        ("baseline_hours", "baseline_h"),
+        ("need_hours", "need_h"),
+        ("next_need_hours", "next_need_h"),
+        ("feedback", "feedback"),
+        ("training_feedback", "training_feedback"),
+        ("sleep_history_adjustment", "sleep_history_adjustment"),
+        ("hrv_adjustment", "hrv_adjustment"),
+        ("nap_adjustment", "nap_adjustment"),
+    ):
         if need.get(old) is not None:
             sleep[new] = need[old]
     if daily.get("previous_day_nap") is not None:
@@ -107,12 +130,18 @@ def compact_metrics(data: dict[str, Any]) -> dict[str, Any]:
 
     load: dict[str, Any] = {}
     tl = status.get("training_load") or {}
-    for old, new in (("acute_load", "acute"), ("chronic_load", "chronic"), ("acwr", "acwr"), ("acwr_percent", "acwr_percent"), ("acwr_status", "acwr_status")):
+    for old, new in (
+        ("acute_load", "acute_load"),
+        ("chronic_load", "chronic_load"),
+        ("acwr", "acwr"),
+        ("acwr_percent", "acwr_percent"),
+        ("acwr_status", "acwr_status"),
+    ):
         if tl.get(old) is not None:
             load[new] = tl[old]
     if tl.get("chronic_load_range") is not None:
-        load["chronic_range"] = tl["chronic_load_range"]
-    for old, new in (("vo2_max", "vo2max"), ("status", "status"), ("load_focus", "focus")):
+        load["chronic_load_range"] = tl["chronic_load_range"]
+    for old, new in (("vo2_max", "vo2max"), ("status", "training_status"), ("load_focus", "load_focus")):
         if status.get(old) is not None:
             load[new] = status[old]
     if load:
@@ -120,32 +149,34 @@ def compact_metrics(data: dict[str, Any]) -> dict[str, Any]:
 
     balance = status.get("monthly_load_balance")
     if isinstance(balance, dict):
-        compact_balance = {}
-        for name in ("aerobic_low", "aerobic_high", "anaerobic"):
+        compact_balance: dict[str, Any] = {}
+        for name, label in (("aerobic_low", "aerobic_low"), ("aerobic_high", "aerobic_high"), ("anaerobic", "anaerobic")):
             if name in balance:
-                compact_balance[name] = balance[name]
-                lo, hi = balance.get(f"{name}_target_min"), balance.get(f"{name}_target_max")
+                compact_balance[label] = balance[name]
+                lo = balance.get(f"{name}_target_min")
+                hi = balance.get(f"{name}_target_max")
                 if lo is not None or hi is not None:
-                    compact_balance[f"{name}_target"] = [lo, hi]
+                    compact_balance[f"{label}_target"] = [lo, hi]
         if compact_balance:
             out["load_balance"] = compact_balance
 
-    heat = status.get("heat_acclimation")
-    if isinstance(heat, dict) and heat:
-        out["heat_acclimation"] = heat
-    altitude = status.get("altitude_acclimation")
-    if isinstance(altitude, dict) and (altitude.get("percentage") or altitude.get("trend")):
-        out["altitude_acclimation"] = altitude
+    for source_key, output_key in (("heat_acclimation", "heat_acclimation"), ("altitude_acclimation", "altitude_acclimation")):
+        value = status.get(source_key)
+        if isinstance(value, dict) and value:
+            out[output_key] = value
 
-    history = _compact_training_history(source.get("training_history"))
+    history = source.get("training_history")
     if isinstance(history, dict):
+        history = dict(history)
+        history.pop("legacy_running_summary", None)
         out["training_history"] = history
 
-    for key in ("trend_recent_daily", "trend_long_range_weekly", "body_battery_trend"):
+    for key in _TREND_KEYS:
         if key in source:
             out[key] = _compact_trend(source[key])
 
-    known = {"date", "daily_readiness", "health_stats", "training_status", "training_history", "trend_recent_daily", "trend_long_range_weekly", "body_battery_trend", "legacy_running_summary"}
+    # Preserve genuinely new top-level metrics rather than silently dropping them.
+    known = {"date", "daily_readiness", "health_stats", "training_status", "training_history", "legacy_running_summary"} | _TREND_KEYS | _ACTIVITY_KEYS
     for key, value in source.items():
         if key not in known and key not in out:
             out[key] = value
@@ -153,7 +184,7 @@ def compact_metrics(data: dict[str, Any]) -> dict[str, Any]:
 
 
 def compact_file(path: str | Path) -> bool:
-    """Compact one JSON file in place. Return True when it changed."""
+    """Compact one JSON file in place. Kept for manual use; the pipeline calls compact_metrics in memory."""
     file_path = Path(path)
     original = file_path.read_text(encoding="utf-8")
     compacted = json.dumps(compact_metrics(json.loads(original)), ensure_ascii=False, indent=2) + "\n"
@@ -169,4 +200,4 @@ if __name__ == "__main__":
     parser.add_argument("path", nargs="?", default="data/latest_metrics.json")
     args = parser.parse_args()
     changed = compact_file(args.path)
-    print(f"Compacted {args.path}" if changed else f"Already compact: {args.path}")
+    print(f"Compacted {args.path}" if changed else f"Already canonical: {args.path}")
