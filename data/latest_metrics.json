@@ -5,7 +5,11 @@
     "hrv_7_day_avg_ms": 48.0,
     "hrv_status": "BALANCED",
     "sleep_hours": 7.22,
+    "sleep_hours_including_previous_day_nap": 7.22,
     "sleep_score": 71,
+    "score": 57,
+    "level": "Moderate",
+    "feedback": "Balance Stress And Recovery",
     "hrv_baseline": {
       "lowUpper": 44.0,
       "balancedLow": 47.0,
