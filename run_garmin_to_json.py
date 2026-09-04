@@ -5,6 +5,7 @@ import sys
 import garmin_to_json as generator
 from activity_zones import add_activity_zones
 from garmin_activity_enrichment import enrich_activity, _running_tolerance
+from recovery_hr import add_recovery_hr
 from config import get_timezone, resolve_timezone
 
 _original_get_activities = generator.get_activities
@@ -14,7 +15,9 @@ _original_get_training_history = generator.get_training_history
 def get_activities(api, target_date):
     date_str = target_date.isoformat() if hasattr(target_date, "isoformat") else str(target_date)
     activities = _original_get_activities(api, date_str)
-    return add_activity_zones(api, [enrich_activity(api, dict(a)) for a in activities or []])
+    enriched = [enrich_activity(api, dict(a)) for a in activities or []]
+    enriched = [add_recovery_hr(api, a) for a in enriched]
+    return add_activity_zones(api, enriched)
 
 
 def get_training_history(api, target_date):
