@@ -117,8 +117,6 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
     status = source.get("training_status") or {}
     daily_readiness = daily.get("readiness") or {}
 
-    # Keep the composite readiness signal as well as the component factors.
-    # The composite is the fastest day-to-day coaching indicator.
     readiness: dict[str, Any] = {}
     direct = (
         ("score", "score"),
@@ -168,8 +166,6 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
     if readiness:
         out["readiness"] = readiness
 
-    # Keep daily step count as an explicit health measurement. It should not
-    # be hidden in a trend row or inferred from activity data.
     health_out: dict[str, Any] = {}
     steps = health.get("steps", health.get("total_steps"))
     if steps is not None:
@@ -242,7 +238,7 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
         if key in source:
             out[key] = _compact_trend(source[key], key)
 
-    known = {"date", "daily_readiness", "health_stats", "training_status", "training_history", "legacy_running_summary"} | _TREND_KEYS | _ACTIVITY_KEYS
+    known = {"date", "daily_readiness", "health_stats", "training_status", "training_history", "legacy_running_summary"} | set(_TREND_KEYS) | _ACTIVITY_KEYS
     for key, value in source.items():
         if key not in known and key not in out:
             out[key] = value
