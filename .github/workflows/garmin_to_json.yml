@@ -21,19 +21,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
       - name: Set export date
         run: |
           set -euo pipefail
           if [ -n "${{ inputs.date }}" ]; then
             echo "EXPORT_DATE=${{ inputs.date }}" >> "$GITHUB_ENV"
           else
-            echo "EXPORT_DATE=$(TZ=Asia/Manila date +%Y-%m-%d)" >> "$GITHUB_ENV"
+            echo "EXPORT_DATE=$(python -c 'from datetime import datetime; from config import get_timezone; print(datetime.now(get_timezone()).date())')" >> "$GITHUB_ENV"
           fi
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
 
       - name: Install Dependencies
         run: |
