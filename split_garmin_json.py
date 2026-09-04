@@ -193,13 +193,47 @@ def _compact_data_arrays(text):
     return text
 
 
+def _render_metrics_json(payload):
+    """Pretty-print the important top section, then compact the large tail.
+
+    Training history and the columnar trend/body-battery tables contain lots of
+    repeated structure, so keeping each top-level section on one line saves
+    substantial space while leaving readiness/load/sleep easy to scan.
+    """
+    items = list(payload.items())
+    lines = ["{"]
+    compact_tail = False
+
+    for index, (key, value) in enumerate(items):
+        if key == "training_history":
+            compact_tail = True
+
+        if compact_tail:
+            rendered = json.dumps(value, ensure_ascii=False, separators=(",", ":"))
+            line = "  " + json.dumps(key, ensure_ascii=False) + ": " + rendered
+        else:
+            block = json.dumps(
+                {key: value}, ensure_ascii=False, indent=2
+            ).splitlines()
+            line = "\n".join(block[1:-1])
+
+        if index < len(items) - 1:
+            line += ","
+        lines.append(line)
+
+    lines.append("}")
+    return "\n".join(lines) + "\n"
+
+
 def write_json(path, payload, activity_compact=False):
     tmp = f"{path}.tmp"
-    text = json.dumps(payload, ensure_ascii=False, indent=2)
     if activity_compact:
+        text = json.dumps(payload, ensure_ascii=False, indent=2)
         text = _compact_data_arrays(text)
+    else:
+        text = _render_metrics_json(payload)
     with open(tmp, "w", encoding="utf-8") as fh:
-        fh.write(text + "\n")
+        fh.write(text)
     os.replace(tmp, path)
 
 
