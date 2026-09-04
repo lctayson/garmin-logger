@@ -1,4 +1,4 @@
-"""Add recovery-interval HR metrics from Garmin activity detail samples."""
+"""Add per-lap HR extrema and trajectory metrics from Garmin activity detail samples."""
 
 from collections import OrderedDict
 
@@ -77,40 +77,42 @@ def _detail_samples(details, expected_duration):
         return []
 
     factor = _scale(raw_times, expected_duration)
-    return [(time_value * factor, hr_value) for time_value, hr_value in parsed]
+    samples = [(time_value * factor, hr_value) for time_value, hr_value in parsed]
+    samples.sort(key=lambda sample: sample[0])
+    return samples
 
 
-def _recovery_type(value):
-    if value is None:
-        return False
-    value = str(value).upper()
-    return value in {"RECOVERY", "REST", "RESTING"}
-
-
-def _place_recovery_fields(item, recovery_end, recovery_min):
-    """Insert recovery HR beside the normal HR fields without disturbing schema."""
+def _place_hr_fields(item, min_hr, start_hr, end_hr):
+    """Place derived HR fields immediately after Garmin avg/max HR fields."""
     ordered = OrderedDict()
     inserted = False
     for key, value in item.items():
-        if key in {"recovery_hr_end", "recovery_hr_min"}:
+        if key in {"recovery_hr_end", "recovery_hr_min", "min_hr", "start_hr", "end_hr"}:
             continue
         ordered[key] = value
         if key == "max_hr":
-            ordered["recovery_hr_end"] = recovery_end
-            ordered["recovery_hr_min"] = recovery_min
+            ordered["min_hr"] = min_hr
+            ordered["start_hr"] = start_hr
+            ordered["end_hr"] = end_hr
             inserted = True
     if not inserted:
-        ordered["recovery_hr_end"] = recovery_end
-        ordered["recovery_hr_min"] = recovery_min
+        ordered["min_hr"] = min_hr
+        ordered["start_hr"] = start_hr
+        ordered["end_hr"] = end_hr
     return dict(ordered)
 
 
 def add_recovery_hr(api, activity):
-    """Add recovery_hr_end and recovery_hr_min to Garmin recovery/rest laps.
+    """Add min_hr/start_hr/end_hr to every Garmin activity lap.
 
     Lap boundaries come from the activity's lapDTOs. Raw HR samples come from
     get_activity_details(), whose metric rows are positional and described by
     metricDescriptors. Nothing from the raw time series is written to JSON.
+
+    The derived fields are deliberately lap-agnostic: recovery/rest laps are
+    not treated specially. This lets the same schema describe warm-up, work,
+    recovery, and cooldown laps while preserving the native Garmin avg_hr and
+    max_hr fields first.
     """
     if not isinstance(activity, dict):
         return activity
@@ -152,8 +154,6 @@ def add_recovery_hr(api, activity):
     if not callable(get_details):
         return activity
     try:
-        # Use a high chart size because recovery intervals are short and the
-        # endpoint otherwise downsamples the whole activity too aggressively.
         try:
             details = get_details(activity_id, maxchart=10000, maxpoly=0) or {}
         except TypeError:
@@ -176,13 +176,6 @@ def add_recovery_hr(api, activity):
         end = elapsed + duration
         elapsed = end
 
-        step_type = lap.get("intensityType")
-        if not _recovery_type(step_type):
-            item = by_lap.get(lap_number)
-            step_type = item.get("step_type") if isinstance(item, dict) else None
-        if not _recovery_type(step_type):
-            continue
-
         valid = [
             (time_sec, hr)
             for time_sec, hr in samples
@@ -191,13 +184,14 @@ def add_recovery_hr(api, activity):
         if not valid:
             continue
 
-        recovery_end = valid[-1][1]
-        recovery_min = min(hr for _, hr in valid)
+        min_hr = min(hr for _, hr in valid)
+        start_hr = valid[0][1]
+        end_hr = valid[-1][1]
 
         item = by_lap.get(lap_number)
         if item is None:
             continue
-        ordered = _place_recovery_fields(item, round(recovery_end), round(recovery_min))
+        ordered = _place_hr_fields(item, round(min_hr), round(start_hr), round(end_hr))
         item.clear()
         item.update(ordered)
 
