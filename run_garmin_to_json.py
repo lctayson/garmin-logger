@@ -1,10 +1,12 @@
 """Run the normal Garmin JSON generator with API-based enrichment."""
 import argparse
 import sys
+from pathlib import Path
 
 import garmin_to_json as generator
 from activity_zones import add_activity_zones
 from garmin_activity_enrichment import enrich_activity, _running_tolerance
+from compact_metrics import compact_file
 from config import get_timezone, resolve_timezone
 
 _original_get_activities = generator.get_activities
@@ -40,6 +42,14 @@ def main():
 
     print(f"Using timezone: {timezone_name}")
     generator.main()
+
+    # Keep the generated metrics canonical and analysis-friendly. The normal
+    # generator remains the Garmin API source-of-truth; this only removes
+    # redundant representations from the saved JSON.
+    latest_metrics = Path("data/latest_metrics.json")
+    if latest_metrics.exists():
+        changed = compact_file(latest_metrics)
+        print("Compacted data/latest_metrics.json" if changed else "Metrics already compact")
 
 
 if __name__ == "__main__":
