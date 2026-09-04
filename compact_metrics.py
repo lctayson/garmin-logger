@@ -8,8 +8,6 @@ from typing import Any
 _ACTIVITY_KEYS = {"activities", "activity_data", "activityData"}
 _TREND_KEYS = ("trend_recent_daily", "trend_long_range_weekly", "body_battery_trend")
 
-# Historical trend rows repeat the same keys many times. Store them once as
-# column headers, while retaining the actual Garmin values in row order.
 _TREND_KEY_MAP = {
     "resting_heart_rate": "resting_hr",
     "hrv_seven_day_avg_ms": "hrv_7_day_avg_ms",
@@ -19,8 +17,6 @@ _TREND_KEY_MAP = {
     "total_exercise_load": "exercise_load",
 }
 
-# Daily trend windows are identical to their date. Weekly windows are retained
-# because their start/end dates are useful when interpreting rolling history.
 _DAILY_DROP = {"window_start", "window_end", "window_days"}
 _WEEKLY_DROP = {"window_days"}
 
@@ -43,14 +39,11 @@ def _compact_factors(factors: Any) -> dict[str, Any] | None:
 
 
 def _normalize_trend_row(row: dict[str, Any]) -> dict[str, Any]:
-    """Normalize trend aliases without discarding unknown Garmin fields."""
     out: dict[str, Any] = {}
     for key, value in row.items():
         new_key = _TREND_KEY_MAP.get(key, key)
         if new_key in out and new_key != key:
             raise ValueError(f"Trend key collision while compacting: {key} -> {new_key}")
-        # Garmin Connect sometimes exposes VO2 max as {"value": 45}; the
-        # canonical metrics file uses the scalar because no information is lost.
         if new_key == "vo2_max" and isinstance(value, dict) and "value" in value:
             value = value["value"]
         out[new_key] = value
@@ -76,15 +69,11 @@ def _columnarize_rows(rows: list[dict[str, Any]], drop: set[str]) -> dict[str, A
 
 
 def _compact_trend(trend: Any, trend_name: str = "") -> Any:
-    """Canonicalize a trend whether it arrives as rows or columnar data."""
     drop = _DAILY_DROP if trend_name == "trend_recent_daily" else _WEEKLY_DROP if trend_name == "trend_long_range_weekly" else set()
 
-    # Raw/intermediate Garmin output: list of row objects.
     if isinstance(trend, list) and all(isinstance(row, dict) for row in trend):
         return _columnarize_rows(trend, drop)
 
-    # Already columnar: normalize column names and remove only intentionally
-    # redundant columns. This keeps the function idempotent.
     if isinstance(trend, dict):
         columns, rows = trend.get("columns"), trend.get("data")
         if isinstance(columns, list) and isinstance(rows, list):
@@ -109,8 +98,6 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
     if not isinstance(source, dict):
         raise TypeError("metrics data must be a dictionary")
 
-    # Protect against accidentally running this helper on an already-canonical
-    # file. Re-normalize tables so the operation remains safe and idempotent.
     if "readiness" in source and "daily_readiness" not in source:
         out = dict(source)
         if "load" in out and isinstance(out["load"], dict) and "vo2_max" in out["load"]:
@@ -128,7 +115,10 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
     daily = source.get("daily_readiness") or {}
     health = source.get("health_stats") or {}
     status = source.get("training_status") or {}
+    daily_readiness = daily.get("readiness") or {}
 
+    # Keep the composite readiness signal as well as the component factors.
+    # The composite is the fastest day-to-day coaching indicator.
     readiness: dict[str, Any] = {}
     direct = (
         ("score", "score"),
@@ -139,12 +129,17 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
         ("hrv_7_day_avg_ms", "hrv_7_day_avg_ms"),
         ("hrv_status", "hrv_status"),
         ("sleep_hours", "sleep_hours"),
+        ("sleep_hours_including_previous_day_nap", "sleep_hours_including_previous_day_nap"),
         ("sleep_score", "sleep_score"),
         ("recovery_hours", "recovery_hours"),
     )
     for old, new in direct:
         if daily.get(old) is not None:
             readiness[new] = daily[old]
+
+    for old, new in (("score", "score"), ("level", "level"), ("feedback_short", "feedback")):
+        if readiness.get(new) is None and daily_readiness.get(old) is not None:
+            readiness[new] = daily_readiness[old]
 
     hrv = health.get("hrv") or {}
     fallbacks = (
@@ -153,7 +148,9 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
         ("hrv_7_day_avg_ms", hrv.get("7d_avg_ms", hrv.get("seven_day_avg_ms"))),
         ("hrv_status", hrv.get("status")),
         ("sleep_hours", health.get("sleep_hours")),
+        ("sleep_hours_including_previous_day_nap", health.get("sleep_hours_including_previous_day_nap")),
         ("sleep_score", health.get("sleep_score")),
+        ("recovery_hours", health.get("recovery_hours")),
     )
     for key, value in fallbacks:
         if readiness.get(key) is None and value is not None:
@@ -162,7 +159,7 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
     baseline = hrv.get("baseline_balanced_range")
     if baseline:
         readiness["hrv_baseline"] = baseline
-    factors = _compact_factors((daily.get("readiness") or {}).get("factors"))
+    factors = _compact_factors(daily_readiness.get("factors"))
     if factors:
         readiness["factor_details"] = factors
     if readiness:
@@ -235,7 +232,6 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
         if key in source:
             out[key] = _compact_trend(source[key], key)
 
-    # Preserve genuinely new top-level metrics rather than silently dropping them.
     known = {"date", "daily_readiness", "health_stats", "training_status", "training_history", "legacy_running_summary"} | set(_TREND_KEYS) | _ACTIVITY_KEYS
     for key, value in source.items():
         if key not in known and key not in out:
