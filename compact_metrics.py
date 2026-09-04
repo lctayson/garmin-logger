@@ -5,9 +5,24 @@ import json
 from pathlib import Path
 from typing import Any
 
-_DROP_TREND_COLUMNS = {"window_start", "window_end", "window_days", "acwr_status"}
 _ACTIVITY_KEYS = {"activities", "activity_data", "activityData"}
 _TREND_KEYS = ("trend_recent_daily", "trend_long_range_weekly", "body_battery_trend")
+
+# Historical trend rows repeat the same keys many times. Store them once as
+# column headers, while retaining the actual Garmin values in row order.
+_TREND_KEY_MAP = {
+    "resting_heart_rate": "resting_hr",
+    "hrv_seven_day_avg_ms": "hrv_7_day_avg_ms",
+    "total_sleep_hours": "sleep_hours",
+    "total_endurance_duration_hours": "duration_hours",
+    "total_endurance_distance_km": "distance_km",
+    "total_exercise_load": "exercise_load",
+}
+
+# Daily trend windows are identical to their date. Weekly windows are retained
+# because their start/end dates are useful when interpreting rolling history.
+_DAILY_DROP = {"window_start", "window_end", "window_days"}
+_WEEKLY_DROP = {"window_days"}
 
 
 def _compact_factors(factors: Any) -> dict[str, Any] | None:
@@ -27,20 +42,66 @@ def _compact_factors(factors: Any) -> dict[str, Any] | None:
     return out or None
 
 
-def _compact_trend(trend: Any) -> Any:
-    if not isinstance(trend, dict):
-        return trend
-    columns, rows = trend.get("columns"), trend.get("data")
-    if not isinstance(columns, list) or not isinstance(rows, list):
-        return trend
-    keep = [i for i, column in enumerate(columns) if column not in _DROP_TREND_COLUMNS]
+def _normalize_trend_row(row: dict[str, Any]) -> dict[str, Any]:
+    """Normalize trend aliases without discarding unknown Garmin fields."""
+    out: dict[str, Any] = {}
+    for key, value in row.items():
+        new_key = _TREND_KEY_MAP.get(key, key)
+        if new_key in out and new_key != key:
+            raise ValueError(f"Trend key collision while compacting: {key} -> {new_key}")
+        # Garmin Connect sometimes exposes VO2 max as {"value": 45}; the
+        # canonical metrics file uses the scalar because no information is lost.
+        if new_key == "vo2_max" and isinstance(value, dict) and "value" in value:
+            value = value["value"]
+        out[new_key] = value
+    return out
+
+
+def _columnarize_rows(rows: list[dict[str, Any]], drop: set[str]) -> dict[str, Any]:
+    normalized = []
+    for row in rows:
+        item = _normalize_trend_row(row)
+        normalized.append({key: value for key, value in item.items() if key not in drop})
+
+    columns: list[str] = []
+    for row in normalized:
+        for key in row:
+            if key not in columns:
+                columns.append(key)
+
     return {
-        "columns": [columns[i] for i in keep],
-        "data": [
-            [row[i] if i < len(row) else None for i in keep] if isinstance(row, list) else row
-            for row in rows
-        ],
+        "columns": columns,
+        "data": [[row.get(column) for column in columns] for row in normalized],
     }
+
+
+def _compact_trend(trend: Any, trend_name: str = "") -> Any:
+    """Canonicalize a trend whether it arrives as rows or columnar data."""
+    drop = _DAILY_DROP if trend_name == "trend_recent_daily" else _WEEKLY_DROP if trend_name == "trend_long_range_weekly" else set()
+
+    # Raw/intermediate Garmin output: list of row objects.
+    if isinstance(trend, list) and all(isinstance(row, dict) for row in trend):
+        return _columnarize_rows(trend, drop)
+
+    # Already columnar: normalize column names and remove only intentionally
+    # redundant columns. This keeps the function idempotent.
+    if isinstance(trend, dict):
+        columns, rows = trend.get("columns"), trend.get("data")
+        if isinstance(columns, list) and isinstance(rows, list):
+            row_dicts = []
+            for row in rows:
+                if isinstance(row, list):
+                    row_dicts.append({column: row[i] if i < len(row) else None for i, column in enumerate(columns)})
+                elif isinstance(row, dict):
+                    row_dicts.append(row)
+            return _columnarize_rows(row_dicts, drop)
+    return trend
+
+
+def _compact_current_vo2(value: Any) -> Any:
+    if isinstance(value, dict) and "value" in value:
+        return value["value"]
+    return value
 
 
 def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
@@ -48,12 +109,16 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
     if not isinstance(source, dict):
         raise TypeError("metrics data must be a dictionary")
 
-    # Protect against accidentally running this helper on an already-canonical file.
+    # Protect against accidentally running this helper on an already-canonical
+    # file. Re-normalize tables so the operation remains safe and idempotent.
     if "readiness" in source and "daily_readiness" not in source:
         out = dict(source)
+        if "load" in out and isinstance(out["load"], dict) and "vo2_max" in out["load"]:
+            out["load"] = dict(out["load"])
+            out["load"]["vo2_max"] = _compact_current_vo2(out["load"]["vo2_max"])
         for key in _TREND_KEYS:
             if key in out:
-                out[key] = _compact_trend(out[key])
+                out[key] = _compact_trend(out[key], key)
         return out
 
     out: dict[str, Any] = {}
@@ -138,7 +203,7 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
         load["chronic_load_range"] = tl["chronic_load_range"]
     for old, new in (("vo2_max", "vo2_max"), ("status", "training_status"), ("load_focus", "load_focus")):
         if status.get(old) is not None:
-            load[new] = status[old]
+            load[new] = _compact_current_vo2(status[old]) if old == "vo2_max" else status[old]
     if load:
         out["load"] = load
 
@@ -168,7 +233,7 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
 
     for key in _TREND_KEYS:
         if key in source:
-            out[key] = _compact_trend(source[key])
+            out[key] = _compact_trend(source[key], key)
 
     # Preserve genuinely new top-level metrics rather than silently dropping them.
     known = {"date", "daily_readiness", "health_stats", "training_status", "training_history", "legacy_running_summary"} | set(_TREND_KEYS) | _ACTIVITY_KEYS
