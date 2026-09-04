@@ -71,17 +71,6 @@ jobs:
         run: |
           python split_garmin_json.py --date "$EXPORT_DATE"
 
-      - name: Compact metrics JSON
-        run: |
-          set -euo pipefail
-          YEAR="${EXPORT_DATE:0:4}"
-          MONTH="${EXPORT_DATE:5:2}"
-          DATED_METRICS="data/${YEAR}/${MONTH}/${EXPORT_DATE}_metrics.json"
-          python compact_metrics.py "$DATED_METRICS"
-          if [ -f data/latest_metrics.json ]; then
-            python compact_metrics.py data/latest_metrics.json
-          fi
-
       - name: Commit and Push Generated JSON
         run: |
           set -euo pipefail
