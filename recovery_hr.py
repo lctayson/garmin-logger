@@ -197,6 +197,8 @@ def add_recovery_hr(api, activity):
         item = by_lap.get(lap_number)
         if item is None:
             continue
-        item.update(_place_recovery_fields(item, round(recovery_end), round(recovery_min)))
+        ordered = _place_recovery_fields(item, round(recovery_end), round(recovery_min))
+        item.clear()
+        item.update(ordered)
 
     return activity
