@@ -1,12 +1,14 @@
 {
   "date": "2026-09-04",
   "readiness": {
+    "resting_hr": 59,
     "hrv_last_night_avg_ms": 51.0,
     "hrv_7_day_avg_ms": 48.0,
     "hrv_status": "BALANCED",
     "sleep_hours": 7.22,
     "sleep_hours_including_previous_day_nap": 7.22,
     "sleep_score": 71,
+    "recovery_hours": 0.2,
     "score": 57,
     "level": "Moderate",
     "feedback": "Balance Stress And Recovery",
@@ -39,6 +41,9 @@
       }
     }
   },
+  "health": {
+    "steps": 112
+  },
   "sleep": {
     "deep_h": 1.0,
     "light_h": 4.87,
@@ -51,7 +56,8 @@
     "training_feedback": "No Change",
     "sleep_history_adjustment": "No Change",
     "hrv_adjustment": "No Change",
-    "nap_adjustment": "No Change"
+    "nap_adjustment": "No Change",
+    "previous_day_nap": null
   },
   "load": {
     "acute_load": 538,
@@ -858,8 +864,8 @@
       ],
       [
         "2026-09-04",
-        63,
-        27,
+        65,
+        45,
         84,
         23
       ]
