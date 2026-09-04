@@ -36,6 +36,7 @@ A Python-based Garmin Connect data exporter and enrichment pipeline. It retrieve
   - Moving time and pace
   - Activity zones
 - Garmin Running Tolerance integration
+- Analysis-friendly metrics compaction that removes redundant/legacy representations while retaining coaching-relevant information
 - Configurable IANA timezone with CLI, environment-variable, and config-file support
 - Regression tests for export behavior
 
@@ -51,7 +52,7 @@ The `data/` directory contains dated exports and current snapshots:
 
 | File | Purpose |
 |---|---|
-| `data/latest_metrics.json` | Latest health, recovery, readiness, training status/load, and training-history data |
+| `data/latest_metrics.json` | Latest compact health, recovery, readiness, training status/load, trends, and training-history data |
 | `data/latest_activities.json` | Latest activity data with enriched details and splits |
 
 For downstream Garmin/training analysis, these are the **canonical current files**:
@@ -60,6 +61,8 @@ For downstream Garmin/training analysis, these are the **canonical current files
 data/latest_metrics.json
 data/latest_activities.json
 ```
+
+`latest_metrics.json` is intentionally compacted after generation. The compaction removes duplicated readiness/load sections, the legacy running summary, derivable trend metadata, and other redundant representations. It does **not** replace Garmin API values with estimates.
 
 ## Project structure
 
@@ -73,6 +76,7 @@ data/latest_activities.json
 ├── config.py
 ├── garmin_to_json.py
 ├── run_garmin_to_json.py
+├── compact_metrics.py
 ├── garmin_helpers.py
 ├── garmin_activity_enrichment.py
 ├── activity_zones.py
@@ -109,7 +113,8 @@ Garmin Connect
       │
       ├── activity enrichment
       ├── activity zones
-      └── running tolerance
+      ├── running tolerance
+      └── metrics compaction
              │
              ▼
        data/*.json
@@ -118,7 +123,7 @@ Garmin Connect
              └── latest_activities.json
 ```
 
-`run_garmin_to_json.py` wraps the standard exporter and adds API-based enrichment before the final JSON is written.
+`run_garmin_to_json.py` wraps the standard exporter and adds API-based enrichment before compacting the current metrics snapshot.
 
 ## Authentication
 
@@ -216,6 +221,7 @@ This adds:
 1. Activity enrichment
 2. Activity zones
 3. Running Tolerance
+4. Metrics compaction
 
 The base exporter can be run directly with:
 
@@ -223,7 +229,31 @@ The base exporter can be run directly with:
 python garmin_to_json.py
 ```
 
-For the recommended user-facing workflow, use `run_garmin_to_json.py` because it provides the complete enriched export and timezone override support.
+The base exporter remains useful for raw generation, while `run_garmin_to_json.py` is the recommended user-facing workflow because it provides the complete enriched export, timezone override support, and canonical metrics compaction.
+
+## Metrics compaction
+
+`compact_metrics.py` keeps the metrics snapshot small without making it opaque to analysis. The canonical output retains:
+
+- Readiness score/level, HRV, resting HR, sleep score, recovery time, and readiness-factor percentages
+- Sleep stages and sleep need
+- Acute/chronic load, ACWR, VO2 max, training status, and load focus
+- Monthly aerobic-low, aerobic-high, and anaerobic load balance with targets
+- Heat/altitude acclimation when relevant
+- 7-day and 28-day training history, including sport-specific volume
+- Recent daily and long-range weekly trends
+- Body Battery trend
+- Additional generated fields such as Running Tolerance
+
+It removes information that is duplicated or deterministically derivable, including `legacy_running_summary` and repeated trend window metadata. Trend data remains in a `columns` + `data` representation so it is both compact and easy for scripts/AI systems to interpret.
+
+The compactor preserves unknown top-level fields so future Garmin additions are not silently discarded.
+
+To compact an existing metrics file manually:
+
+```bash
+python compact_metrics.py data/latest_metrics.json
+```
 
 ## Running Tolerance
 
@@ -325,7 +355,7 @@ Where practical, tests should not require live Garmin authentication.
 
 For a coaching or AI workflow, load the current snapshots in this order:
 
-1. `data/latest_metrics.json` — recovery, readiness, training load, history, and overall context.
+1. `data/latest_metrics.json` — recovery, readiness, training load, history, trends, and overall context.
 2. `data/latest_activities.json` — activity and split-level execution data.
 
 Use the activity file to evaluate workout execution (pace, HR, cadence, power, mechanics, and interval consistency). Use the metrics file to evaluate readiness and training context before recommending the next session.
