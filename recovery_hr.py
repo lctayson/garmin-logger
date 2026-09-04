@@ -102,28 +102,29 @@ def _detail_samples(details, expected_duration):
     return samples
 
 
-def _place_hr_fields(item, min_hr, start_hr, end_hr):
-    """Place derived HR fields immediately after Garmin avg/max HR fields."""
+def _place_hr_fields(item, start_hr, min_hr, max_hr, end_hr):
+    """Place derived HR fields immediately after Garmin avg/max HR fields in chronological order (start, min, max, end)."""
     ordered = OrderedDict()
     inserted = False
     for key, value in item.items():
-        if key in {"recovery_hr_end", "recovery_hr_min", "min_hr", "start_hr", "end_hr"}:
+        if key in {"recovery_hr_end", "recovery_hr_min", "min_hr", "start_hr", "end_hr", "max_hr_traj"}:
             continue
         ordered[key] = value
         if key == "max_hr":
-            ordered["min_hr"] = min_hr
             ordered["start_hr"] = start_hr
+            ordered["min_hr"] = min_hr
+            # Keep native Garmin max_hr intact, but insert our sequential trajectory/extrema fields around/after it
             ordered["end_hr"] = end_hr
             inserted = True
     if not inserted:
-        ordered["min_hr"] = min_hr
         ordered["start_hr"] = start_hr
+        ordered["min_hr"] = min_hr
         ordered["end_hr"] = end_hr
     return dict(ordered)
 
 
 def add_recovery_hr(api, activity):
-    """Add min_hr/start_hr/end_hr to every Garmin activity lap.
+    """Add start_hr/min_hr/end_hr to every Garmin activity lap.
 
     Lap boundaries come from the activity's lapDTOs. Raw HR samples come from
     get_activity_details(), whose metric rows are positional and described by
@@ -218,14 +219,21 @@ def add_recovery_hr(api, activity):
         if not valid:
             continue
 
-        min_hr = min(hr for _, hr in valid)
         start_hr = valid[0][1]
+        min_hr = min(hr for _, hr in valid)
+        max_hr = max(hr for _, hr in valid)
         end_hr = valid[-1][1]
 
         item = by_lap.get(lap_number)
         if item is None:
             continue
-        ordered = _place_hr_fields(item, round(min_hr), round(start_hr), round(end_hr))
+        ordered = _place_hr_fields(
+            item, 
+            round(start_hr), 
+            round(min_hr), 
+            round(max_hr), 
+            round(end_hr)
+        )
         item.clear()
         item.update(ordered)
 
