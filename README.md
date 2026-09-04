@@ -36,7 +36,7 @@ A Python-based Garmin Connect data exporter and enrichment pipeline. It retrieve
   - Moving time and pace
   - Activity zones
 - Garmin Running Tolerance integration
-- `Asia/Manila` local-time normalization
+- Configurable IANA timezone with CLI, environment-variable, and config-file support
 - Regression tests for export behavior
 
 ## Data source
@@ -70,6 +70,7 @@ data/latest_activities.json
 │   ├── latest_activities.json
 │   └── dated JSON exports...
 │
+├── config.py
 ├── garmin_to_json.py
 ├── run_garmin_to_json.py
 ├── garmin_helpers.py
@@ -131,6 +132,77 @@ python gen_garmin_token.py
 
 Never commit Garmin passwords, authentication tokens, or token-store contents.
 
+## Time zone configuration
+
+The exporter uses an **IANA timezone** for local-date calculations and for normalizing Garmin timestamps where appropriate. Examples include:
+
+```text
+Asia/Manila
+America/New_York
+Europe/London
+Europe/Berlin
+Australia/Sydney
+Asia/Tokyo
+UTC
+```
+
+### Easiest setup: edit `config.py`
+
+For a normal installation, edit one line in `config.py`:
+
+```python
+TIMEZONE = "Asia/Manila"
+```
+
+Then run the exporter normally:
+
+```bash
+python run_garmin_to_json.py
+```
+
+No environment variables, YAML files, or command-line options are required.
+
+### Configuration precedence
+
+The effective timezone is selected in this order:
+
+1. `--timezone` command-line option
+2. `GARMIN_TIMEZONE` environment variable
+3. `TIMEZONE` in `config.py`
+4. `UTC` fallback if the configured value is empty
+
+This allows the same codebase to work cleanly for local use, cron jobs, CI/CD, containers, and other automated environments.
+
+### Command line
+
+Override the configured timezone for a single run:
+
+```bash
+python run_garmin_to_json.py --timezone America/New_York
+```
+
+### Environment variable
+
+Useful for cron, Docker, CI, or GitHub Actions:
+
+```bash
+GARMIN_TIMEZONE=Europe/London python run_garmin_to_json.py
+```
+
+Example cron entry:
+
+```cron
+30 1 * * * cd /path/to/garmin-logger && GARMIN_TIMEZONE=Asia/Manila /usr/bin/python3 run_garmin_to_json.py
+```
+
+The environment-variable approach avoids having to edit the repository when the deployment environment needs a different timezone.
+
+### Important timestamp rule
+
+Garmin API timestamps remain the source data. The configured timezone is used to interpret timestamps locally and determine local dates; it does not alter the underlying Garmin data.
+
+For the full enriched pipeline, `run_garmin_to_json.py` applies the configured timezone to the base generator before running it.
+
 ## Running the exporter
 
 For the full enriched export:
@@ -150,6 +222,8 @@ The base exporter can be run directly with:
 ```bash
 python garmin_to_json.py
 ```
+
+For the recommended user-facing workflow, use `run_garmin_to_json.py` because it provides the complete enriched export and timezone override support.
 
 ## Running Tolerance
 
@@ -218,16 +292,6 @@ avg_moving_pace
 
 Cumulative time is intentionally not required as a split field because it can be calculated from split durations. This avoids redundant data while retaining all information needed for analysis.
 
-## Time zone
-
-The exporter uses:
-
-```text
-Asia/Manila
-```
-
-Garmin timestamps are normalized to Philippine local time where appropriate. This is important for interpreting activities, sleep, naps, and daily readiness.
-
 ## Data quality principles
 
 The exporter is designed for longitudinal training analysis:
@@ -239,6 +303,7 @@ The exporter is designed for longitudinal training analysis:
 - Avoid redundant fields that can be deterministically calculated.
 - Handle missing Garmin fields gracefully.
 - Keep authentication data out of generated JSON and source control.
+- Use IANA timezone names rather than ambiguous abbreviations such as `PST` or `EST`.
 
 ## Testing
 
