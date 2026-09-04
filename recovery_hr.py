@@ -143,7 +143,7 @@ def add_recovery_hr(api, activity):
     )
     total_duration = 0.0
     for lap in ordered_laps:
-        duration = _safe_float(lap.get("duration"))
+        duration = _safe_float((lap.get("duration") or lap.get("elapsedDuration")))
         if duration is not None and duration >= 0:
             total_duration += duration
 
@@ -168,7 +168,7 @@ def add_recovery_hr(api, activity):
     elapsed = 0.0
     for lap in ordered_laps:
         lap_number = lap.get("lapIndex")
-        duration = _safe_float(lap.get("duration"))
+        duration = _safe_float((lap.get("duration") or lap.get("elapsedDuration")))
         if lap_number is None or duration is None or duration <= 0:
             continue
 
