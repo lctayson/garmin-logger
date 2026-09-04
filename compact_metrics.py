@@ -223,22 +223,28 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
         if compact_balance:
             out["load_balance"] = compact_balance
 
+    history = source.get("training_history")
+    if isinstance(history, dict):
+        history = dict(history)
+        history.pop("legacy_running_summary", None)
+        # Running tolerance is injected by the Garmin API enrichment wrapper.
+        # Keep it inside training_history so the existing schema stays stable.
+        if history.get("running_tolerance") is None and source.get("running_tolerance") is not None:
+            history["running_tolerance"] = source["running_tolerance"]
+        out["training_history"] = history
+
+    # Keep these simple sections after training_history so the metrics renderer
+    # minifies them along with the compact tail, without changing their data.
     for key in ("heat_acclimation", "altitude_acclimation"):
         value = status.get(key)
         if isinstance(value, dict) and value:
             out[key] = value
 
-    history = source.get("training_history")
-    if isinstance(history, dict):
-        history = dict(history)
-        history.pop("legacy_running_summary", None)
-        out["training_history"] = history
-
     for key in _TREND_KEYS:
         if key in source:
             out[key] = _compact_trend(source[key], key)
 
-    known = {"date", "daily_readiness", "health_stats", "training_status", "training_history", "legacy_running_summary"} | set(_TREND_KEYS) | _ACTIVITY_KEYS
+    known = {"date", "daily_readiness", "health_stats", "training_status", "training_history", "legacy_running_summary", "running_tolerance"} | set(_TREND_KEYS) | _ACTIVITY_KEYS
     for key, value in source.items():
         if key not in known and key not in out:
             out[key] = value
