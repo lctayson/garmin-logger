@@ -7,7 +7,7 @@ from typing import Any
 
 _DROP_TREND_COLUMNS = {"window_start", "window_end", "window_days", "acwr_status"}
 _ACTIVITY_KEYS = {"activities", "activity_data", "activityData"}
-_TREND_KEYS = {"trend_recent_daily", "trend_long_range_weekly", "body_battery_trend"}
+_TREND_KEYS = ("trend_recent_daily", "trend_long_range_weekly", "body_battery_trend")
 
 
 def _compact_factors(factors: Any) -> dict[str, Any] | None:
@@ -16,9 +16,6 @@ def _compact_factors(factors: Any) -> dict[str, Any] | None:
     out: dict[str, Any] = {}
     for key, value in factors.items():
         if isinstance(value, dict):
-            # Keep both the numeric score and Garmin's interpretation. Both are
-            # useful when deciding whether readiness is being limited by sleep,
-            # recovery, HRV, etc.
             item: dict[str, Any] = {}
             if value.get("percent") is not None:
                 item["percent"] = value["percent"]
@@ -47,13 +44,17 @@ def _compact_trend(trend: Any) -> Any:
 
 
 def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
-    """Convert a raw/intermediate Garmin payload into the canonical metrics shape.
-
-    This is intentionally structural rather than lossy: duplicated representations
-    are consolidated, but analysis-relevant Garmin values and interpretations remain.
-    """
+    """Convert a raw/intermediate Garmin payload into one canonical metrics shape."""
     if not isinstance(source, dict):
         raise TypeError("metrics data must be a dictionary")
+
+    # Protect against accidentally running this helper on an already-canonical file.
+    if "readiness" in source and "daily_readiness" not in source:
+        out = dict(source)
+        for key in _TREND_KEYS:
+            if key in out:
+                out[key] = _compact_trend(out[key])
+        return out
 
     out: dict[str, Any] = {}
     if source.get("date") is not None:
@@ -130,18 +131,12 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
 
     load: dict[str, Any] = {}
     tl = status.get("training_load") or {}
-    for old, new in (
-        ("acute_load", "acute_load"),
-        ("chronic_load", "chronic_load"),
-        ("acwr", "acwr"),
-        ("acwr_percent", "acwr_percent"),
-        ("acwr_status", "acwr_status"),
-    ):
-        if tl.get(old) is not None:
-            load[new] = tl[old]
+    for key in ("acute_load", "chronic_load", "acwr", "acwr_percent", "acwr_status"):
+        if tl.get(key) is not None:
+            load[key] = tl[key]
     if tl.get("chronic_load_range") is not None:
         load["chronic_load_range"] = tl["chronic_load_range"]
-    for old, new in (("vo2_max", "vo2max"), ("status", "training_status"), ("load_focus", "load_focus")):
+    for old, new in (("vo2_max", "vo2_max"), ("status", "training_status"), ("load_focus", "load_focus")):
         if status.get(old) is not None:
             load[new] = status[old]
     if load:
@@ -150,20 +145,20 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
     balance = status.get("monthly_load_balance")
     if isinstance(balance, dict):
         compact_balance: dict[str, Any] = {}
-        for name, label in (("aerobic_low", "aerobic_low"), ("aerobic_high", "aerobic_high"), ("anaerobic", "anaerobic")):
+        for name in ("aerobic_low", "aerobic_high", "anaerobic"):
             if name in balance:
-                compact_balance[label] = balance[name]
+                compact_balance[name] = balance[name]
                 lo = balance.get(f"{name}_target_min")
                 hi = balance.get(f"{name}_target_max")
                 if lo is not None or hi is not None:
-                    compact_balance[f"{label}_target"] = [lo, hi]
+                    compact_balance[f"{name}_target"] = [lo, hi]
         if compact_balance:
             out["load_balance"] = compact_balance
 
-    for source_key, output_key in (("heat_acclimation", "heat_acclimation"), ("altitude_acclimation", "altitude_acclimation")):
-        value = status.get(source_key)
+    for key in ("heat_acclimation", "altitude_acclimation"):
+        value = status.get(key)
         if isinstance(value, dict) and value:
-            out[output_key] = value
+            out[key] = value
 
     history = source.get("training_history")
     if isinstance(history, dict):
@@ -176,7 +171,7 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
             out[key] = _compact_trend(source[key])
 
     # Preserve genuinely new top-level metrics rather than silently dropping them.
-    known = {"date", "daily_readiness", "health_stats", "training_status", "training_history", "legacy_running_summary"} | _TREND_KEYS | _ACTIVITY_KEYS
+    known = {"date", "daily_readiness", "health_stats", "training_status", "training_history", "legacy_running_summary"} | set(_TREND_KEYS) | _ACTIVITY_KEYS
     for key, value in source.items():
         if key not in known and key not in out:
             out[key] = value
@@ -184,7 +179,7 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
 
 
 def compact_file(path: str | Path) -> bool:
-    """Compact one JSON file in place. Kept for manual use; the pipeline calls compact_metrics in memory."""
+    """Compact one JSON file in place; the normal pipeline calls compact_metrics in memory."""
     file_path = Path(path)
     original = file_path.read_text(encoding="utf-8")
     compacted = json.dumps(compact_metrics(json.loads(original)), ensure_ascii=False, indent=2) + "\n"
