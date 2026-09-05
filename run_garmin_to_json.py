@@ -13,10 +13,33 @@ _original_get_activities = generator.get_activities
 _original_get_training_history = generator.get_training_history
 
 
+def _add_activity_recovery_hr(api, activity):
+    """Copy Garmin's stored two-minute recovery-HR drop when available."""
+    if not isinstance(activity, dict) or not activity.get("activityId"):
+        return activity
+    try:
+        detail = api.get_activity(activity["activityId"]) or {}
+    except Exception:
+        return activity
+    summary = detail.get("summaryDTO", {}) if isinstance(detail, dict) else {}
+    if not isinstance(summary, dict):
+        summary = {}
+    value = summary.get("recoveryHeartRate")
+    if value is None and isinstance(detail, dict):
+        value = detail.get("recoveryHeartRate")
+    if value is not None:
+        try:
+            activity["recovery_hr"] = round(float(value))
+        except (TypeError, ValueError):
+            pass
+    return activity
+
+
 def get_activities(api, target_date):
     date_str = target_date.isoformat() if hasattr(target_date, "isoformat") else str(target_date)
     activities = _original_get_activities(api, date_str)
     enriched = [enrich_activity(api, dict(a)) for a in activities or []]
+    enriched = [_add_activity_recovery_hr(api, a) for a in enriched]
     enriched = [add_recovery_hr(api, a) for a in enriched]
     enriched = add_activity_zones(api, enriched)
     # Keep internal calculations in canonical metric units, then convert only
