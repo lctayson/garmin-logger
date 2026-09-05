@@ -161,6 +161,14 @@ def _convert_activity(activity, api):
     weather = out.get("weather")
     if isinstance(weather, dict):
         weather = dict(weather)
+        # Garmin's generic activity-weather temperature field is returned as
+        # Fahrenheit in the payload we receive, even for a metric account.
+        # Normalize it here before exposing the account-preferred Celsius unit.
+        if not imperial and weather.get("temperature") is not None:
+            try:
+                weather["temperature"] = round((float(weather["temperature"]) - 32.0) * 5.0 / 9.0, 1)
+            except (TypeError, ValueError):
+                pass
         for key in ("temperature_unit", "wind_speed_unit", "feels_like_unit", "precipitation_unit"):
             weather.pop(key, None)
         out["weather"] = weather
