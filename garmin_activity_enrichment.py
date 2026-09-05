@@ -224,6 +224,27 @@ def _find_weather_value(source, aliases):
     return None
 
 
+def _find_weather_field(source, aliases):
+    """Return (matched_key, value) so explicit C/F fields can be normalized safely."""
+    aliases = {str(alias).lower() for alias in aliases}
+    if isinstance(source, dict):
+        for key, value in source.items():
+            if str(key).lower() in aliases:
+                value = _unwrap_weather_value(value)
+                if value is not None and value != "":
+                    return str(key).lower(), value
+        for value in source.values():
+            found = _find_weather_field(value, aliases)
+            if found is not None:
+                return found
+    elif isinstance(source, list):
+        for value in source:
+            found = _find_weather_field(value, aliases)
+            if found is not None:
+                return found
+    return None
+
+
 def _weather_observation(raw_weather):
     """Normalize Garmin weather endpoint variants to one observation dict."""
     if isinstance(raw_weather, list):
@@ -242,9 +263,29 @@ def _weather_observation(raw_weather):
     for candidate in candidates:
         if not isinstance(candidate, dict):
             continue
-        if any(_find_weather_value(candidate, aliases) is not None for aliases in (("temperature", "temp", "airTemperature", "currentTemperature"), ("humidity", "relativeHumidity", "humidityPercent"), ("windSpeed", "windSpeedMps", "averageWindSpeed"))):
+        if any(_find_weather_value(candidate, aliases) is not None for aliases in (("temperature", "temp", "airTemperature", "currentTemperature", "temperatureC", "temperatureF"), ("humidity", "relativeHumidity", "humidityPercent"), ("windSpeed", "windSpeedMps", "averageWindSpeed"))):
             return candidate
     return candidates[0] if candidates and isinstance(candidates[0], dict) else None
+
+
+def _normalize_temperature(value, source_key, account_unit):
+    """Normalize Garmin weather temperature to the account-preferred unit.
+
+    Garmin's weather endpoint can return explicit temperatureC/temperatureF
+    fields, but generic temp/temperature values have no reliable unit marker.
+    For generic fields we therefore trust Garmin's account measurement system;
+    we only convert when the payload itself explicitly identifies C or F.
+    """
+    try:
+        value = float(value)
+    except (TypeError, ValueError):
+        return None
+    key = str(source_key or "").lower()
+    if key in {"temperaturef", "tempf", "fahrenheit"} and account_unit == "°C":
+        value = (value - 32.0) * 5.0 / 9.0
+    elif key in {"temperaturec", "tempc", "celsius"} and account_unit == "°F":
+        value = value * 9.0 / 5.0 + 32.0
+    return round(value, 1)
 
 
 def enrich_activity(api, activity):
@@ -299,10 +340,13 @@ def enrich_activity(api, activity):
     if isinstance(weather, dict):
         temperature_unit, wind_speed_unit = _weather_units(api)
         weather_out = {}
-        temperature = _find_weather_value(weather, ("temperature", "temp", "airTemperature", "currentTemperature", "temperatureC", "temperatureF"))
-        if temperature is not None:
-            weather_out["temperature"] = generator.safe_float(temperature, 1)
-            weather_out["temperature_unit"] = temperature_unit
+        temperature_field = _find_weather_field(weather, ("temperature", "temp", "airTemperature", "currentTemperature", "temperatureC", "temperatureF", "tempC", "tempF"))
+        if temperature_field is not None:
+            source_key, raw_temperature = temperature_field
+            temperature = _normalize_temperature(raw_temperature, source_key, temperature_unit)
+            if temperature is not None:
+                weather_out["temperature"] = temperature
+                weather_out["temperature_unit"] = temperature_unit
         humidity = _find_weather_value(weather, ("humidity", "relativeHumidity", "humidityPercent"))
         if humidity is not None:
             weather_out["humidity_pct"] = generator.safe_float(humidity, 1)
@@ -313,10 +357,13 @@ def enrich_activity(api, activity):
         wind_direction = _find_weather_value(weather, ("windDirection", "windDirectionDegrees", "windDirectionDeg"))
         if wind_direction is not None:
             weather_out["wind_direction_deg"] = generator.safe_float(wind_direction, 0)
-        feels_like = _find_weather_value(weather, ("feelsLike", "feelsLikeTemperature", "apparentTemperature"))
-        if feels_like is not None:
-            weather_out["feels_like"] = generator.safe_float(feels_like, 1)
-            weather_out["feels_like_unit"] = temperature_unit
+        feels_like_field = _find_weather_field(weather, ("feelsLike", "feelsLikeTemperature", "apparentTemperature"))
+        if feels_like_field is not None:
+            _, raw_feels_like = feels_like_field
+            feels_like = _normalize_temperature(raw_feels_like, feels_like_field[0], temperature_unit)
+            if feels_like is not None:
+                weather_out["feels_like"] = feels_like
+                weather_out["feels_like_unit"] = temperature_unit
         precipitation = _find_weather_value(weather, ("precipitation", "precipitationMm", "rainfall"))
         if precipitation is not None:
             weather_out["precipitation"] = generator.safe_float(precipitation, 1)
