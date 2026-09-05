@@ -241,6 +241,18 @@ def enrich_activity(api, activity):
         value = generator.deep_get(summary, keys, None)
         return value if value is not None else generator.deep_get(detail, keys, None)
 
+    # Preserve existing output and add only the requested activity-level
+    # Training Effect / Exercise Load metrics when Garmin actually returns them.
+    aerobic_te = pick(("trainingEffect", "aerobicTrainingEffect"))
+    anaerobic_te = pick(("anaerobicTrainingEffect",))
+    exercise_load = pick(("exerciseLoad", "trainingLoad", "activityTrainingLoad"))
+    if aerobic_te is not None:
+        activity["aerobic_te"] = generator.safe_float(aerobic_te, 1)
+    if anaerobic_te is not None:
+        activity["anaerobic_te"] = generator.safe_float(anaerobic_te, 1)
+    if exercise_load is not None:
+        activity["exercise_load"] = generator.safe_float(exercise_load, 1)
+
     gap = pick(("avgGradeAdjustedSpeed", "averageGradeAdjustedSpeed", "avgGradeAdjustedPace", "averageGAP", "avgGAP", "gap"))
     if gap is not None:
         activity["gap"] = _pace_from_speed(gap) if isinstance(gap, (int, float)) else gap
