@@ -36,6 +36,20 @@ SPLIT_COLUMN_ORDER = (
     "avg_moving_pace",
 )
 
+# Garmin/base-generator names that duplicate the canonical split fields above.
+# Remove them at the enrichment stage so every newly generated JSON file stays clean.
+DUPLICATE_SPLIT_FIELDS = (
+    "time_min",
+    "moving_time_min",
+    "cadence_spm",
+    "max_cadence_spm",
+    "ground_contact_ms",
+    "vertical_oscillation_cm",
+    "vertical_ratio_pct",
+    "avg_gct_ms",
+    "avg_stride_length_m",  # canonical output is normalized to stride_length_m later
+)
+
 
 def _pace_from_speed(speed):
     try:
@@ -150,6 +164,12 @@ def enrich_activity_splits(api, activity):
         item = by_lap.get(lap_number)
         if item is None:
             continue
+
+        # Remove duplicate/legacy names before writing the canonical names.
+        # This is intentionally done in the generator, not by post-processing
+        # an already-generated JSON file.
+        for key in DUPLICATE_SPLIT_FIELDS:
+            item.pop(key, None)
 
         if lap.get("intensityType") is not None:
             item["step_type"] = lap["intensityType"]
