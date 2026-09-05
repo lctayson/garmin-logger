@@ -32,8 +32,12 @@ def compact_keys(obj):
         out = {}
         for key, value in obj.items():
             new_key = KEY_MAP.get(key, key)
+            # Enrichment can already add the canonical short key while the raw
+            # Garmin payload still contains the long-form source key. In that
+            # case the short key is the preferred representation, so discard the
+            # duplicate long-form value instead of failing the whole export.
             if new_key in out and new_key != key:
-                raise ValueError(f"Key collision while compacting: {key} -> {new_key}")
+                continue
             out[new_key] = compact_keys(value)
         return out
     if isinstance(obj, list):
