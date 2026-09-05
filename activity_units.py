@@ -92,6 +92,36 @@ def _convert_split(split, imperial):
     return out
 
 
+def _reorder_activity(out):
+    """Put activity fields in analysis priority order while preserving all data."""
+    priority = (
+        # Identity / title
+        "activity_id", "name", "type",
+        # Primary Garmin Connect-style summary
+        "distance", "duration_min", "avg_pace", "elevation_gain", "elevation_loss", "calories",
+        # Core performance metrics
+        "avg_hr", "max_hr", "gap", "avg_power", "normalized_power", "max_power",
+        "avg_run_cadence", "max_run_cadence", "avg_ground_contact_time", "stride_length",
+        "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
+        # Training / recovery metrics
+        "aerobic_te", "anaerobic_te", "load", "exercise_load", "recovery_time_hours",
+        # Context
+        "start_time_local", "weather",
+        # Detailed analysis
+        "hr_zones", "power_zones", "activity_splits", "splits",
+        # Metadata / conversion information
+        "parent_activity_id", "units",
+    )
+    ordered = {}
+    for key in priority:
+        if key in out and out[key] is not None:
+            ordered[key] = out[key]
+    for key, value in out.items():
+        if key not in ordered and value is not None:
+            ordered[key] = value
+    return ordered
+
+
 def _convert_activity(activity, api):
     if not isinstance(activity, dict):
         return activity
@@ -104,13 +134,6 @@ def _convert_activity(activity, api):
     vertical_unit = "in" if imperial else "cm"
 
     out = dict(activity)
-    out["units"] = {
-        "distance": distance_unit,
-        "pace": pace_unit,
-        "elevation": elevation_unit,
-        "stride_length": stride_unit,
-        "vertical_oscillation": vertical_unit,
-    }
 
     if "distance_km" in out:
         try:
@@ -141,16 +164,31 @@ def _convert_activity(activity, api):
         for key in ("temperature_unit", "wind_speed_unit", "feels_like_unit", "precipitation_unit"):
             weather.pop(key, None)
         out["weather"] = weather
-        out["units"]["temperature"] = "°F" if imperial and system == "statute_us" else "°C"
-        out["units"]["wind_speed"] = "mph" if imperial else "m/s"
-        out["units"]["precipitation"] = "in" if system == "statute_us" else "mm"
+        out["units"] = {
+            "distance": distance_unit,
+            "pace": pace_unit,
+            "elevation": elevation_unit,
+            "stride_length": stride_unit,
+            "vertical_oscillation": vertical_unit,
+            "temperature": "°F" if imperial and system == "statute_us" else "°C",
+            "wind_speed": "mph" if imperial else "m/s",
+            "precipitation": "in" if system == "statute_us" else "mm",
+        }
+    else:
+        out["units"] = {
+            "distance": distance_unit,
+            "pace": pace_unit,
+            "elevation": elevation_unit,
+            "stride_length": stride_unit,
+            "vertical_oscillation": vertical_unit,
+        }
 
     if isinstance(out.get("activity_splits"), list):
         out["activity_splits"] = [_convert_split(s, imperial) for s in out["activity_splits"]]
 
-    return out
+    return _reorder_activity(out)
 
 
 def apply_user_units(api, activities):
-    """Apply Garmin account measurement preferences to exported activities."""
+    """Apply Garmin account measurement preferences and stable field ordering."""
     return [_convert_activity(activity, api) for activity in (activities or [])]
