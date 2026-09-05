@@ -5,6 +5,7 @@ import sys
 import garmin_to_json as generator
 from activity_zones import add_activity_zones
 from garmin_activity_enrichment import enrich_activity, _running_tolerance
+from activity_units import apply_user_units
 from recovery_hr import add_recovery_hr
 from config import get_timezone, resolve_timezone
 
@@ -17,7 +18,12 @@ def get_activities(api, target_date):
     activities = _original_get_activities(api, date_str)
     enriched = [enrich_activity(api, dict(a)) for a in activities or []]
     enriched = [add_recovery_hr(api, a) for a in enriched]
-    return add_activity_zones(api, enriched)
+    enriched = add_activity_zones(api, enriched)
+    # Keep internal calculations in canonical metric units, then convert only
+    # the final activity/split representation to the Garmin account's
+    # measurement preference. Unit metadata is stored once per activity and
+    # applies to both the activity-level values and its splits.
+    return apply_user_units(api, enriched)
 
 
 def get_training_history(api, target_date):
