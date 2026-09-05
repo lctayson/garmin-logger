@@ -46,6 +46,443 @@ A Python-based Garmin Connect data exporter and enrichment pipeline. It retrieve
 
 Activity splits are retrieved from Garmin Connect and normalized into a consistent schema. Garmin's grade-adjusted speed (`avgGradeAdjustedSpeed`) is converted to GAP pace during enrichment.
 
+## Quick start
+
+There are two common ways to use this project:
+
+1. **Local machine** — best for development, testing, and one-off exports.
+2. **GitHub Actions** — best for a hands-off daily Garmin data pipeline.
+
+For a new user, the recommended path is:
+
+```text
+Fork repo → clone fork → install Python/dependencies → configure timezone
+→ generate Garmin token locally → add token JSON as GitHub secret
+→ enable GitHub Actions → run the workflow manually once → verify data/
+```
+
+**You do not need to give your Garmin password to GitHub.** `gen_garmin_token.py` is run locally and produces the token store. Only the token-store JSON is placed in GitHub Secrets.
+
+---
+
+## 1. Create your own copy of the repository
+
+The repository is designed so each Garmin user has their **own copy** of the data repository. Do not write your personal Garmin data into someone else's repository.
+
+### Recommended: Fork the repository
+
+Open the repository on GitHub and click **Fork**. This creates your own GitHub repository, for example:
+
+```text
+https://github.com/YOUR_USERNAME/garmin-logger
+```
+
+Then clone **your fork**, not the original repository:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/garmin-logger.git
+cd garmin-logger
+```
+
+Add the original repository as `upstream` if you want to pull future code improvements:
+
+```bash
+git remote add upstream https://github.com/lctayson/garmin-logger.git
+git remote -v
+```
+
+To update your local copy later:
+
+```bash
+git fetch upstream
+git checkout main
+git merge upstream/main
+git push origin main
+```
+
+You generally **do not need to pull/clone the original repository separately** if you fork it. Forking creates the GitHub copy; cloning downloads your fork to your computer.
+
+### Alternative: clone without forking
+
+If you only want to run the exporter locally and do not need GitHub Actions or your own GitHub data repository:
+
+```bash
+git clone https://github.com/lctayson/garmin-logger.git
+cd garmin-logger
+```
+
+For automated Actions, however, use a fork or another repository you control because the workflow needs permission to write generated JSON back to `data/`.
+
+---
+
+## 2. Install Python and dependencies
+
+The GitHub Actions workflows currently use Python 3.12 for the main Garmin JSON pipeline. Use Python 3.10+ locally.
+
+Create a virtual environment (recommended):
+
+### Windows
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install "garminconnect>=0.3.5" requests gspread oauth2client
+```
+
+### macOS / Linux
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install 'garminconnect>=0.3.5' requests gspread oauth2client
+```
+
+There is currently no `requirements.txt` in the repository, so install the dependencies explicitly as shown above.
+
+---
+
+## 3. Configure your timezone
+
+Edit `config.py` and set the user's local IANA timezone:
+
+```python
+TIMEZONE = "Asia/Manila"
+```
+
+Examples:
+
+```text
+Asia/Manila
+America/New_York
+Europe/London
+Europe/Berlin
+Australia/Sydney
+Asia/Tokyo
+UTC
+```
+
+The timezone is used for local-date calculations and interpretation. It does **not** rewrite the underlying Garmin timestamps.
+
+Configuration precedence is:
+
+1. `--timezone` command-line option
+2. `GARMIN_TIMEZONE` environment variable
+3. `TIMEZONE` in `config.py`
+4. `UTC` fallback
+
+Examples:
+
+```bash
+python run_garmin_to_json.py --timezone Asia/Manila
+```
+
+or:
+
+```bash
+GARMIN_TIMEZONE=Asia/Manila python run_garmin_to_json.py
+```
+
+For a normal personal installation, editing `config.py` is sufficient.
+
+---
+
+## 4. Connect the user's Garmin Connect account
+
+The exporter authenticates directly against the user's Garmin Connect account using `garminconnect`.
+
+### Important security rule
+
+**Never put a Garmin email, password, MFA code, or token JSON directly into Python source code, `config.py`, GitHub Actions YAML, or a committed file.**
+
+The authentication flow is:
+
+```text
+Garmin account
+      │
+      │ email + password + MFA (if requested)
+      ▼
+ gen_garmin_token.py   ← run this LOCALLY
+      │
+      ▼
+ ~/.garminconnect/garmin_tokens.json
+      │
+      ├── local runs use this token store directly
+      │
+      └── GitHub Actions: copy its JSON into a GitHub Secret
+```
+
+### Generate the Garmin token locally
+
+From the repository directory, after installing dependencies, run:
+
+```bash
+python gen_garmin_token.py
+```
+
+The script will ask for:
+
+```text
+Enter your Garmin email:
+Enter your Garmin password:
+Enter MFA verification code:   # only if Garmin requests MFA
+```
+
+If authentication succeeds, it saves the Garmin session token store under:
+
+```text
+~/.garminconnect/
+```
+
+The exact token-store contents are managed by `garminconnect`; do not manually edit them.
+
+### When should `gen_garmin_token.py` be run?
+
+Run it **once during initial setup**, locally, before the first export.
+
+You normally do **not** run it before every Garmin export. The generated token store is reused by `garminconnect` and can be refreshed when necessary.
+
+If the token store becomes invalid or authentication starts failing, run the generator again locally and replace the GitHub secret with the newly generated token JSON.
+
+### Test authentication locally
+
+After generating the token, run:
+
+```bash
+python run_garmin_to_json.py
+```
+
+If the exporter can authenticate and create/update files under `data/`, the Garmin connection is working.
+
+For local use, the exporter looks for the token store in the normal `garminconnect` location. GitHub Actions instead reconstructs that token store from the `GARMIN_TOKENS_JSON` secret.
+
+---
+
+## 5. Set up GitHub Actions authentication
+
+If you want the repository to update automatically on GitHub, add the generated token JSON to your fork as a **GitHub Actions secret**.
+
+In your fork:
+
+```text
+Settings
+  → Secrets and variables
+  → Actions
+  → New repository secret
+```
+
+Create this secret:
+
+```text
+Name:
+GARMIN_TOKENS_JSON
+```
+
+For the value, paste the **complete contents** of the token-store JSON file generated under:
+
+```text
+~/.garminconnect/garmin_tokens.json
+```
+
+Do not commit that file to the repository.
+
+The Actions workflow creates the token store at runtime from this secret and restricts its file permissions. The secret itself is never written to `data/`.
+
+### GitHub repository permissions
+
+The main JSON workflow uses:
+
+```yaml
+permissions:
+  contents: write
+```
+
+because it commits generated JSON back into the repository. If Actions cannot push changes, check that Actions are enabled and that the workflow is allowed to write repository contents.
+
+---
+
+## 6. Run the complete pipeline manually
+
+The recommended user-facing workflow is:
+
+```bash
+python run_garmin_to_json.py
+```
+
+For GitHub Actions, the complete pipeline is defined in:
+
+```text
+.github/workflows/garmin_to_json.yml
+```
+
+It can be started manually from:
+
+```text
+GitHub repository
+→ Actions
+→ Garmin to JSON Pipeline
+→ Run workflow
+```
+
+You can optionally supply a target date in `YYYY-MM-DD` format.
+
+The workflow then:
+
+1. Checks out the repository.
+2. Installs Python dependencies.
+3. Determines the export date.
+4. Reconstructs the Garmin token store from `GARMIN_TOKENS_JSON`.
+5. Runs `run_garmin_to_json.py`.
+6. Adds Garmin sleep need.
+7. Adds date-aware Garmin naps.
+8. Splits/compacts the daily and activity JSON.
+9. Commits changed files under `data/`.
+10. Pushes the generated data to `main`.
+
+The workflow also rebases/retries if another update reaches `main` while the job is running.
+
+---
+
+## 7. GitHub Actions automation and cron jobs
+
+There are currently multiple workflows, and they have different purposes.
+
+### A. `garmin_to_json.yml` — complete enriched pipeline
+
+File:
+
+```text
+.github/workflows/garmin_to_json.yml
+```
+
+It supports:
+
+- `workflow_dispatch` — manual execution
+- `repository_dispatch` with event type `trigger-garmin-sync` — external/API-triggered execution
+
+It currently does **not** contain its own `schedule`/cron trigger.
+
+If you want this complete pipeline to run automatically every day, add a schedule trigger to the workflow, for example:
+
+```yaml
+on:
+  schedule:
+    - cron: '20 0 * * *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Date to fetch metrics for (YYYY-MM-DD)'
+        required: false
+        default: ''
+        type: string
+  repository_dispatch:
+    types: [trigger-garmin-sync]
+```
+
+GitHub Actions cron uses **UTC**, not the user's local timezone. For example:
+
+```text
+20 0 * * *
+```
+
+runs at **00:20 UTC**, which is **08:20 Asia/Manila**.
+
+A scheduled run does not guarantee that Garmin data is already available at that exact minute. If a watch sync happens later, use another scheduled time or manually rerun the workflow.
+
+### B. `ensure_garmin_data.yml` — hourly data refresh
+
+File:
+
+```text
+.github/workflows/ensure_garmin_data.yml
+```
+
+The current workflow runs hourly:
+
+```cron
+17 * * * *
+```
+
+It also supports manual execution and a `.github/garmin_requests/date.txt` request mechanism.
+
+**Important:** this workflow currently runs `run_garmin_to_json.py` directly and commits refreshed `data/`. It does not run the separate sleep-need, nap, and split steps used by the complete `garmin_to_json.yml` workflow. If you need the full enriched pipeline, use `garmin_to_json.yml` or update the hourly workflow to include those additional stages.
+
+### C. `sync.yml` — legacy Garmin-to-Sheets workflow
+
+File:
+
+```text
+.github/workflows/sync.yml
+```
+
+This workflow is separate from the JSON pipeline. It runs daily at:
+
+```cron
+20 0 * * *
+```
+
+and uses `GARMIN_TOKENS_JSON` plus `GOOGLE_CREDENTIALS_JSON` to run `garmin_to_sheets.py`.
+
+If you only want the JSON exporter, this workflow is not required.
+
+---
+
+## 8. Local cron instead of GitHub Actions
+
+You can also run the exporter from a Linux/macOS machine with system cron.
+
+Example:
+
+```cron
+20 0 * * * cd /path/to/garmin-logger && /path/to/garmin-logger/.venv/bin/python run_garmin_to_json.py >> /path/to/garmin-logger/garmin.log 2>&1
+```
+
+For a local cron job, the Garmin token store remains on that machine under:
+
+```text
+~/.garminconnect/
+```
+
+Set the timezone explicitly if the machine's timezone differs from the Garmin user's timezone:
+
+```cron
+20 0 * * * cd /path/to/garmin-logger && GARMIN_TIMEZONE=Asia/Manila /path/to/garmin-logger/.venv/bin/python run_garmin_to_json.py >> /path/to/garmin-logger/garmin.log 2>&1
+```
+
+Cron also uses the machine's scheduler timezone, so make sure the scheduled time is converted correctly.
+
+---
+
+## 9. Repository update strategy for new users
+
+After initial setup, there are two kinds of updates:
+
+### Update your Garmin data
+
+The Actions workflow normally handles this automatically. Locally:
+
+```bash
+python run_garmin_to_json.py
+```
+
+### Update the exporter code from upstream
+
+If you forked the repository:
+
+```bash
+git fetch upstream
+git checkout main
+git merge upstream/main
+git push origin main
+```
+
+Review conflicts carefully if you have modified the same Python files or workflow files.
+
+Your generated `data/` files are personal data. Before merging upstream changes, make sure you understand any conflicts in that directory.
+
+---
+
 ## Output
 
 The `data/` directory contains dated exports and current snapshots:
@@ -63,6 +500,8 @@ data/latest_activities.json
 ```
 
 `latest_metrics.json` is canonicalized in memory during the split step. The pipeline avoids a separate post-generation compaction pass, removes redundant representations, and preserves Garmin API values rather than replacing them with estimates.
+
+---
 
 ## Project structure
 
@@ -90,6 +529,13 @@ data/latest_activities.json
 ├── garmin_to_json_daily.py
 ├── tri_to_json.py
 ├── garmin_to_sheets.py
+│
+├── .github/
+│   ├── workflows/
+│   │   ├── garmin_to_json.yml
+│   │   ├── ensure_garmin_data.yml
+│   │   └── sync.yml
+│   └── garmin_requests/
 │
 ├── tests/
 └── README.md
