@@ -7,7 +7,8 @@ fields that the normalized output does not currently use.
 
 import argparse
 import json
-from datetime import date, timedelta
+import os
+from datetime import date
 from pathlib import Path
 
 from garminconnect import Garmin
@@ -87,14 +88,9 @@ def main():
     get_timezone(args.timezone)  # validate configured timezone using the existing project hierarchy
     target_date = date.fromisoformat(args.date) if args.date else date.today()
 
-    email = __import__("os").environ.get("GARMIN_EMAIL")
-    password = __import__("os").environ.get("GARMIN_PASSWORD")
-    if not email or not password:
-        raise SystemExit("Set GARMIN_EMAIL and GARMIN_PASSWORD before running the raw exporter.")
-
-    api = Garmin(email=email, password=password)
-    token_store = Path("~/.garminconnect").expanduser()
-    api.login(str(token_store))
+    tokenstore = os.environ.get("GARMIN_TOKENSTORE", "~/.garminconnect")
+    api = Garmin()
+    api.login(tokenstore=os.path.expanduser(tokenstore))
 
     print(f"Using timezone: {timezone_name}")
     paths = export_date(api, target_date, Path(args.output_root))
