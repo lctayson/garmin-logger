@@ -96,21 +96,21 @@ def _reorder_activity(out):
     """Put activity fields in Garmin Connect-style analysis priority order."""
     priority = (
         # Identity / title
-        "activity_id", "name", "type",
-        # Primary summary: keep the headline Garmin Connect metrics together.
-        "distance", "duration_min", "avg_hr", "avg_pace", "elevation_gain", "elevation_loss", "calories",
+        "name", "activity_id", "type",
+        # Primary summary: the headline Garmin Connect metrics.
+        "distance", "duration_min", "avg_pace", "elevation_gain", "elevation_loss", "calories",
+        # Heart-rate metrics stay together.
+        "avg_hr", "max_hr",
         # Core performance metrics
-        "max_hr", "gap", "avg_power", "normalized_power", "max_power",
+        "gap", "avg_power", "normalized_power", "max_power",
         "avg_run_cadence", "max_run_cadence", "avg_ground_contact_time", "stride_length",
         "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
         # Training / recovery metrics
         "aerobic_te", "anaerobic_te", "load", "exercise_load", "recovery_time_hours",
-        # Detailed activity data should come before environmental/context metadata.
-        "activity_splits", "splits",
         # Context / environment
         "start_time_local", "weather",
-        # Zone breakdowns
-        "hr_zones", "power_zones",
+        # Zone breakdowns / detailed activity data
+        "hr_zones", "power_zones", "activity_splits", "splits",
         # Metadata / conversion information
         "parent_activity_id", "units",
     )
