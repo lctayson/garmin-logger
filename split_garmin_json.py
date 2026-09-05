@@ -56,12 +56,37 @@ def to_columnar(rows):
     return {"columns": columns, "data": [[row.get(column) for column in columns] for row in rows]}
 
 
+def _reorder_activity(activity):
+    """Put compact activity fields in stable Garmin Connect-style priority order."""
+    priority = (
+        "name", "activity_id", "type",
+        "distance", "duration_min", "avg_pace",
+        "elevation_gain", "elevation_loss", "calories",
+        "avg_hr", "max_hr", "gap",
+        "avg_power", "normalized_power", "max_power",
+        "avg_run_cadence", "max_run_cadence", "avg_ground_contact_time", "stride_length",
+        "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
+        "aerobic_te", "anaerobic_te", "load", "exercise_load", "recovery_time_hours",
+        "start_time_local", "weather",
+        "hr_zones", "power_zones", "splits",
+        "parent_activity_id", "units",
+    )
+    ordered = {}
+    for key in priority:
+        if key in activity and activity[key] is not None:
+            ordered[key] = activity[key]
+    for key, value in activity.items():
+        if key not in ordered and value is not None:
+            ordered[key] = value
+    return ordered
+
+
 def compact_activity(activity):
     activity = compact_keys(activity)
     split_key = next((key for key in ("splits", "laps") if key in activity), None)
     if split_key:
         activity[split_key] = to_columnar(activity[split_key])
-    return activity
+    return _reorder_activity(activity)
 
 
 def compact_activities(value):
