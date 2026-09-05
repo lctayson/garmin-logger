@@ -39,18 +39,6 @@ def _pace_convert(value, to_miles=False):
     return f"{total // 60}:{total % 60:02d}"
 
 
-def _pace_from_distance_duration(distance_km, duration_min, to_miles=False):
-    try:
-        distance_km = float(distance_km)
-        duration_min = float(duration_min)
-    except (TypeError, ValueError):
-        return None
-    if distance_km <= 0 or duration_min <= 0:
-        return None
-    sec_per_km = duration_min * 60.0 / distance_km
-    return _pace_convert(f"{int(sec_per_km // 60)}:{int(round(sec_per_km % 60)):02d}", to_miles)
-
-
 def _convert_split(split, imperial):
     if not isinstance(split, dict):
         return split
@@ -130,13 +118,11 @@ def _convert_activity(activity, api):
         except (TypeError, ValueError):
             out.pop("distance_km", None)
 
-    # Recalculate activity pace from the canonical metric distance/time before
-    # converting it, avoiding conversion of an already-rounded display value.
-    if "distance" in out and "duration_mins" in out:
-        metric_distance = float(out["distance"]) / (KM_TO_MI if imperial else 1.0)
-        pace = _pace_from_distance_duration(metric_distance, out["duration_mins"], to_miles=imperial)
-        if pace is not None:
-            out["avg_pace"] = pace
+    # Preserve the canonical activity pace produced by the generator/enrichment.
+    # Do not recalculate it from duration_mins: Garmin payloads can expose
+    # duration fields with different semantics, which previously caused a pace regression.
+    if "avg_pace" in out and imperial:
+        out["avg_pace"] = _pace_convert(out["avg_pace"], to_miles=True)
 
     if "gap" in out and imperial:
         out["gap"] = _pace_convert(out["gap"], to_miles=True)
