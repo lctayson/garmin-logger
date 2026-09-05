@@ -6,7 +6,7 @@
       "name": "Malolos Running",
       "type": "running",
       "duration_min": 75.42,
-      "avg_pace": "4:41",
+      "avg_pace": "7:31",
       "avg_hr": 148.0,
       "max_hr": 167.0,
       "aerobic_te": 3.1,
@@ -31,6 +31,7 @@
       "start_time_local": "2026-09-05T06:36:39.0",
       "gap": "7:32",
       "weather": {
+        "temperature": 78.0,
         "humidity_pct": 95.0,
         "wind_speed": 0.0,
         "wind_direction_deg": 0.0
