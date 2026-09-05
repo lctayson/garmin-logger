@@ -243,6 +243,27 @@ def enrich_activity_splits(api, activity):
     activity["activity_splits"] = list(by_lap.values())
 
 
+def _get_user_unit_system(api):
+    """Return Garmin's account measurement system without making another API call."""
+    get_unit_system = getattr(api, "get_unit_system", None)
+    if callable(get_unit_system):
+        try:
+            return get_unit_system()
+        except Exception:
+            pass
+    return getattr(api, "unit_system", None)
+
+
+def _weather_units(api):
+    """Return the units Garmin uses for weather values for this account."""
+    system = str(_get_user_unit_system(api) or "metric").lower()
+    if system == "statute_us":
+        return "°F", "mph"
+    if system in ("statute_uk", "statute"):
+        return "°C", "mph"
+    return "°C", "m/s"
+
+
 def enrich_activity(api, activity):
     """Enrich one activity with detail, GAP, elevation, weather and API splits."""
     if not isinstance(activity, dict) or not activity.get("activityId"):
@@ -260,6 +281,11 @@ def enrich_activity(api, activity):
     def pick(keys):
         value = generator.deep_get(summary, keys, None)
         return value if value is not None else generator.deep_get(detail, keys, None)
+
+    # Preserve the activity's actual local start timestamp from Garmin.
+    start_local = pick(("startTimeLocal", "startTimeLocalFormatted"))
+    if start_local is not None:
+        activity["start_time_local"] = start_local
 
     # Preserve existing output and add only the requested activity-level
     # Training Effect / Exercise Load metrics when Garmin actually returns them.
@@ -297,18 +323,36 @@ def enrich_activity(api, activity):
         weather = detail.get("weatherDTO") or detail.get("weather") or summary.get("weatherDTO") or summary.get("weather")
 
     if isinstance(weather, dict):
+        temperature_unit, wind_speed_unit = _weather_units(api)
         weather_out = {}
-        for dst, keys, decimals in (
-            ("temperature_c", ("temperature", "temperatureC", "avgTemperature", "averageTemperature"), 1),
-            ("humidity_pct", ("humidity", "relativeHumidity", "humidityPercent"), 1),
-            ("wind_speed_mps", ("windSpeed", "windSpeedMps", "averageWindSpeed"), 1),
-            ("wind_direction_deg", ("windDirection", "windDirectionDegrees"), 0),
-            ("feels_like_c", ("feelsLike", "feelsLikeTemperature", "apparentTemperature"), 1),
-            ("precipitation_mm", ("precipitation", "precipitationMm", "rainfall"), 1),
-        ):
-            value = generator.deep_get(weather, keys, None)
-            if value is not None:
-                weather_out[dst] = generator.safe_float(value, decimals)
+        temperature = generator.deep_get(weather, ("temperature", "temperatureC", "avgTemperature", "averageTemperature"), None)
+        if temperature is not None:
+            weather_out["temperature"] = generator.safe_float(temperature, 1)
+            weather_out["temperature_unit"] = temperature_unit
+
+        humidity = generator.deep_get(weather, ("humidity", "relativeHumidity", "humidityPercent"), None)
+        if humidity is not None:
+            weather_out["humidity_pct"] = generator.safe_float(humidity, 1)
+
+        wind_speed = generator.deep_get(weather, ("windSpeed", "windSpeedMps", "averageWindSpeed"), None)
+        if wind_speed is not None:
+            weather_out["wind_speed"] = generator.safe_float(wind_speed, 1)
+            weather_out["wind_speed_unit"] = wind_speed_unit
+
+        wind_direction = generator.deep_get(weather, ("windDirection", "windDirectionDegrees"), None)
+        if wind_direction is not None:
+            weather_out["wind_direction_deg"] = generator.safe_float(wind_direction, 0)
+
+        feels_like = generator.deep_get(weather, ("feelsLike", "feelsLikeTemperature", "apparentTemperature"), None)
+        if feels_like is not None:
+            weather_out["feels_like"] = generator.safe_float(feels_like, 1)
+            weather_out["feels_like_unit"] = temperature_unit
+
+        precipitation = generator.deep_get(weather, ("precipitation", "precipitationMm", "rainfall"), None)
+        if precipitation is not None:
+            weather_out["precipitation"] = generator.safe_float(precipitation, 1)
+            weather_out["precipitation_unit"] = "in" if str(_get_user_unit_system(api) or "metric").lower() == "statute_us" else "mm"
+
         condition = generator.deep_get(weather, ("condition", "weatherCondition", "description", "weatherType"), None)
         if condition is not None:
             weather_out["condition"] = condition
