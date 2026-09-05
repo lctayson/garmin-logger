@@ -60,9 +60,9 @@ def _reorder_activity(activity):
     """Put compact activity fields in stable Garmin Connect-style priority order."""
     priority = (
         "name", "activity_id", "type",
-        "distance", "duration_min", "avg_pace",
+        "distance", "duration_min", "avg_pace", "gap",
+        "avg_hr", "max_hr", "recovery_hr",
         "elevation_gain", "elevation_loss", "calories",
-        "avg_hr", "max_hr", "gap",
         "avg_power", "normalized_power", "max_power",
         "avg_run_cadence", "max_run_cadence", "avg_ground_contact_time", "stride_length",
         "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
