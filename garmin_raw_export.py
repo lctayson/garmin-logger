@@ -1,14 +1,14 @@
 """Export raw Garmin activity API responses without interpretation.
 
 This module is intentionally independent from the analysis-oriented JSON
-pipeline. It preserves the Garmin API payload so future analysis can inspect
+pipeline. It preserves the Garmin API payloads so future analysis can inspect
 fields that the normalized output does not currently use.
 """
 
 import argparse
 import json
 import os
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 from garminconnect import Garmin
@@ -17,6 +17,18 @@ from config import get_timezone, resolve_timezone
 
 
 RAW_ROOT = Path("data/raw")
+
+# Activity-specific endpoints exposed by the installed garminconnect client.
+# Each response is stored independently and untouched apart from JSON-safe
+# serialization. Optional endpoints are allowed to fail because availability
+# varies by activity type/device/account.
+_ACTIVITY_ENDPOINTS = (
+    ("activity", "get_activity"),
+    ("activity_splits", "get_activity_splits"),
+    ("activity_details", "get_activity_details"),
+    ("activity_weather", "get_activity_weather"),
+    ("activity_hr_in_timezones", "get_activity_hr_in_timezones"),
+)
 
 
 def _json_safe(value):
@@ -39,27 +51,61 @@ def _activity_date(activity, fallback):
     return fallback.isoformat()
 
 
+def _fetch_endpoint(api, activity_id, method_name):
+    """Call one Garmin endpoint and return its raw response or an error record."""
+    method = getattr(api, method_name, None)
+    if method is None:
+        return {
+            "available": False,
+            "error": f"Garmin client has no method {method_name}",
+        }
+
+    try:
+        if method_name == "get_activity_details":
+            # Request a large chart payload while disabling the polyline here;
+            # GPS/polyline data is not required for the time-series metrics and
+            # can make the response unnecessarily large.
+            response = method(activity_id, maxchart=10000, maxpoly=0)
+        else:
+            response = method(activity_id)
+        return {"available": True, "data": _json_safe(response)}
+    except Exception as exc:
+        # Keep the raw export useful even when Garmin does not expose an
+        # endpoint for a particular activity. Do not invent or normalize data.
+        return {
+            "available": True,
+            "error": f"{type(exc).__name__}: {exc}",
+        }
+
+
 def export_activity(api, activity, output_root=RAW_ROOT):
-    """Save the complete get_activity() response for one activity."""
+    """Save separate raw responses for all supported activity endpoints."""
     activity_id = activity.get("activityId")
     if not activity_id:
         return None
 
-    detail = api.get_activity(activity_id) or {}
     activity_date = _activity_date(activity, date.today())
     out_dir = Path(output_root) / "activity_details" / activity_date[:4] / activity_date[5:7]
     out_dir.mkdir(parents=True, exist_ok=True)
     path = out_dir / f"{activity_id}.json"
 
+    endpoints = {
+        "activities_by_date": {"available": True, "data": _json_safe(activity)},
+    }
+    for endpoint_name, method_name in _ACTIVITY_ENDPOINTS:
+        endpoints[endpoint_name] = _fetch_endpoint(api, activity_id, method_name)
+
     payload = {
         "source": "Garmin Connect API",
-        "retrieved_at": date.today().isoformat(),
+        "retrieved_at": datetime.now(timezone.utc).isoformat(),
         "activity_id": activity_id,
         "activity_date": activity_date,
-        "activity_summary": _json_safe(activity),
-        "activity_detail": _json_safe(detail),
+        "endpoints": endpoints,
     }
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
     return path
 
 
