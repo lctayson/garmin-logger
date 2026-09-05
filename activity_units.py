@@ -4,11 +4,9 @@ Internal calculations remain metric; this module only changes the exported
 activity representation after enrichment/analysis has finished.
 """
 
-M_TO_KM = 1.0 / 1000.0
-M_TO_MI = 1.0 / 1609.344
 M_TO_FT = 3.280839895013123
 CM_TO_IN = 0.3937007874015748
-M_TO_FT = 3.280839895013123
+KM_TO_MI = 0.621371192237334
 
 
 def _unit_system(api):
@@ -60,7 +58,7 @@ def _convert_split(split, imperial):
 
     if "distance_km" in out:
         try:
-            out["distance"] = round(float(out.pop("distance_km")) * (1.0 if not imperial else 0.621371192237334), 3)
+            out["distance"] = round(float(out.pop("distance_km")) * (KM_TO_MI if imperial else 1.0), 3)
         except (TypeError, ValueError):
             out.pop("distance_km", None)
 
@@ -76,12 +74,13 @@ def _convert_split(split, imperial):
             except (TypeError, ValueError):
                 out.pop(old, None)
 
-    if "avg_stride_length_m" in out:
-        try:
-            value = float(out.pop("avg_stride_length_m"))
-            out["stride_length"] = round(value * (M_TO_FT if imperial else 1.0), 2)
-        except (TypeError, ValueError):
-            out.pop("avg_stride_length_m", None)
+    for old in ("avg_stride_length_m", "stride_length_m"):
+        if old in out:
+            try:
+                value = float(out.pop(old))
+                out["stride_length"] = round(value * (M_TO_FT if imperial else 1.0), 2)
+            except (TypeError, ValueError):
+                out.pop(old, None)
 
     if "avg_vertical_oscillation_cm" in out:
         try:
@@ -90,13 +89,15 @@ def _convert_split(split, imperial):
         except (TypeError, ValueError):
             out.pop("avg_vertical_oscillation_cm", None)
 
-    # Unit-neutral names for universally fixed units as well.
-    for old, new in (("avg_ground_contact_time_ms", "avg_ground_contact_time"),
-                     ("normalized_power_w", "normalized_power"),
-                     ("avg_power_w", "avg_power"),
-                     ("max_power_w", "max_power"),
-                     ("avg_w_kg", "avg_power_w_kg"),
-                     ("max_w_kg", "max_power_w_kg")):
+    for old, new in (
+        ("avg_ground_contact_time_ms", "avg_ground_contact_time"),
+        ("normalized_power_w", "normalized_power"),
+        ("avg_power_w", "avg_power"),
+        ("max_power_w", "max_power"),
+        ("avg_w_kg", "avg_power_to_weight"),
+        ("max_w_kg", "max_power_to_weight"),
+        ("avg_vertical_ratio_pct", "avg_vertical_ratio"),
+    ):
         if old in out:
             out[new] = out.pop(old)
 
@@ -106,7 +107,8 @@ def _convert_split(split, imperial):
 def _convert_activity(activity, api):
     if not isinstance(activity, dict):
         return activity
-    imperial = _is_imperial(_unit_system(api))
+    system = _unit_system(api)
+    imperial = _is_imperial(system)
     distance_unit = "mi" if imperial else "km"
     pace_unit = "min/mi" if imperial else "min/km"
     elevation_unit = "ft" if imperial else "m"
@@ -124,18 +126,15 @@ def _convert_activity(activity, api):
 
     if "distance_km" in out:
         try:
-            out["distance"] = round(float(out.pop("distance_km")) * (0.621371192237334 if imperial else 1.0), 2)
+            out["distance"] = round(float(out.pop("distance_km")) * (KM_TO_MI if imperial else 1.0), 2)
         except (TypeError, ValueError):
             out.pop("distance_km", None)
 
-    # Recalculate activity pace from the already-canonical metric distance/time,
-    # avoiding a second conversion of an already formatted string.
+    # Recalculate activity pace from the canonical metric distance/time before
+    # converting it, avoiding conversion of an already-rounded display value.
     if "distance" in out and "duration_mins" in out:
-        pace = _pace_from_distance_duration(
-            float(out["distance"]) / (0.621371192237334 if imperial else 1.0),
-            out["duration_mins"],
-            to_miles=imperial,
-        )
+        metric_distance = float(out["distance"]) / (KM_TO_MI if imperial else 1.0)
+        pace = _pace_from_distance_duration(metric_distance, out["duration_mins"], to_miles=imperial)
         if pace is not None:
             out["avg_pace"] = pace
 
@@ -156,9 +155,9 @@ def _convert_activity(activity, api):
         for key in ("temperature_unit", "wind_speed_unit", "feels_like_unit", "precipitation_unit"):
             weather.pop(key, None)
         out["weather"] = weather
-        out["units"]["temperature"] = "°F" if imperial and _unit_system(api) == "statute_us" else "°C"
+        out["units"]["temperature"] = "°F" if imperial and system == "statute_us" else "°C"
         out["units"]["wind_speed"] = "mph" if imperial else "m/s"
-        out["units"]["precipitation"] = "in" if _unit_system(api) == "statute_us" else "mm"
+        out["units"]["precipitation"] = "in" if system == "statute_us" else "mm"
 
     if isinstance(out.get("activity_splits"), list):
         out["activity_splits"] = [_convert_split(s, imperial) for s in out["activity_splits"]]
