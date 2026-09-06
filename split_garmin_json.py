@@ -32,10 +32,6 @@ def compact_keys(obj):
         out = {}
         for key, value in obj.items():
             new_key = KEY_MAP.get(key, key)
-            # Enrichment can already add the canonical short key while the raw
-            # Garmin payload still contains the long-form source key. In that
-            # case the short key is the preferred representation, so discard the
-            # duplicate long-form value instead of failing the whole export.
             if new_key in out and new_key != key:
                 continue
             out[new_key] = compact_keys(value)
@@ -64,7 +60,7 @@ def _pace_to_speed_kmh(pace):
         pace_seconds = float(minutes) * 60.0 + float(seconds)
     except (TypeError, ValueError):
         return None
-    return 60.0 / (pace_seconds / 60.0) if pace_seconds > 0 else None
+    return 3600.0 / pace_seconds if pace_seconds > 0 else None
 
 
 def _split_duration_seconds(row):
@@ -84,10 +80,10 @@ def _split_duration_seconds(row):
 def _calculate_interval_drift(activity):
     """Add normalized first-to-last work-rep efficiency drift.
 
-    This is deliberately separate from continuous-run ``decoupling``. It is
-    only calculated for structured running workouts with ACTIVE work reps and
-    RECOVERY/REST structure (or sufficiently long ACTIVE reps). Pace EF is
-    speed/HR; power EF uses average power/HR, never normalized power.
+    This is deliberately separate from continuous-run ``decoupling``. It uses
+    ACTIVE work reps of at least 90 seconds, which excludes short strides and
+    transition laps while covering the user's 3-12 minute interval work.
+    Pace EF is speed/HR; power EF uses average power/HR, never normalized power.
     """
     if not isinstance(activity, dict) or str(activity.get("type", "")).lower() != "running":
         return
@@ -100,20 +96,17 @@ def _calculate_interval_drift(activity):
     if not rows:
         return
 
-    step_types = {str(row.get("step_type", "")).upper() for row in rows}
-    has_recovery_structure = bool(step_types & {"RECOVERY", "REST"})
-    active_rows = [row for row in rows if str(row.get("step_type", "")).upper() == "ACTIVE"]
+    active_rows = []
+    for row in rows:
+        if str(row.get("step_type", "")).upper() != "ACTIVE":
+            continue
+        duration = _split_duration_seconds(row)
+        if duration is None or duration < 90.0:
+            continue
+        active_rows.append(row)
 
     if len(active_rows) < 2:
         return
-
-    # A recovery/rest marker is the strongest signal that ACTIVE laps are
-    # actual programmed work reps. If there is no recovery marker, only allow
-    # long ACTIVE reps; this prevents short strides from being treated as reps.
-    if not has_recovery_structure:
-        durations = [_split_duration_seconds(row) for row in active_rows]
-        if any(duration is None or duration < 90.0 for duration in durations):
-            return
 
     reps = []
     for row in active_rows:
@@ -391,9 +384,9 @@ def main():
         write_json(dated_activities, activities, activity_compact=True)
     elif os.path.exists(dated_activities):
         os.remove(dated_activities)
-    refresh_latest_activities(data_dir, target_date, dated_activities, has_activities, today_local)
+    refresh_latest_activities(args.data_dir, target_date, dated_activities, has_activities, today_local)
     for old_name in ("latest_daily.json", "latest_trends.json"):
-        old_path = os.path.join(data_dir, old_name)
+        old_path = os.path.join(args.data_dir, old_name)
         if os.path.exists(old_path):
             os.remove(old_path)
     for old_suffix in ("_daily.json", "_trends.json"):
