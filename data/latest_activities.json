@@ -28,13 +28,6 @@
       "anaerobic_te": 0.7,
       "load": 68.3,
       "start_time_local": "2026-09-06T06:25:51.0",
-      "interval_drift": {
-        "work_reps": 5,
-        "pace_ef_drift_pct": 11.9,
-        "hr_delta_bpm": 23.0,
-        "power_ef_drift_pct": 11.0,
-        "power_delta_w": 11.0
-      },
       "splits": {
         "columns": ["step_type", "lap", "time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr", "min_hr", "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace", "distance", "elevation_gain", "elevation_loss", "stride_length", "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power", "avg_power", "max_power", "avg_vertical_ratio"],
         "data": [
