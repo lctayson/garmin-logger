@@ -80,10 +80,13 @@ def _split_duration_seconds(row):
 def _calculate_interval_drift(activity):
     """Add normalized first-to-last work-rep efficiency drift.
 
-    This is deliberately separate from continuous-run ``decoupling``. It uses
-    ACTIVE work reps of at least 90 seconds, which excludes short strides and
-    transition laps while covering the user's 3-12 minute interval work.
-    Pace EF is speed/HR; power EF uses average power/HR, never normalized power.
+    Workout-step semantics matter here: Garmin auto-laps are measurement
+    splits, not separate workout repetitions. Consecutive ACTIVE splits with
+    no RECOVERY/REST boundary are therefore treated as one continuous block.
+    A block qualifies as interval work only when it is 90 seconds to 20 minutes
+    long and there are at least two such work blocks separated by recovery/rest.
+    This excludes easy-run auto-laps and short strides while preserving the
+    user's structured 3-12 minute interval workouts.
     """
     if not isinstance(activity, dict) or str(activity.get("type", "")).lower() != "running":
         return
@@ -96,58 +99,93 @@ def _calculate_interval_drift(activity):
     if not rows:
         return
 
-    active_rows = []
+    # Group consecutive ACTIVE split records into continuous workout blocks.
+    # Auto-laps (e.g. 1 km laps) stay inside the same block until Garmin marks
+    # an actual RECOVERY/REST/non-ACTIVE workout boundary.
+    blocks = []
+    current = []
     for row in rows:
-        if str(row.get("step_type", "")).upper() != "ACTIVE":
-            continue
-        duration = _split_duration_seconds(row)
-        if duration is None or duration < 90.0:
-            continue
-        active_rows.append(row)
+        step_type = str(row.get("step_type", "")).upper()
+        if step_type == "ACTIVE":
+            current.append(row)
+        else:
+            if current:
+                blocks.append(current)
+                current = []
+    if current:
+        blocks.append(current)
 
-    if len(active_rows) < 2:
-        return
-
-    reps = []
-    for row in active_rows:
-        hr = row.get("avg_hr")
-        speed = _pace_to_speed_kmh(row.get("avg_pace"))
-        if speed is None:
+    # A valid interval session needs at least two sustained ACTIVE blocks.
+    # Short ACTIVE blocks (e.g. 20 s strides) are intentionally excluded.
+    candidates = []
+    for block in blocks:
+        durations = [_split_duration_seconds(row) for row in block]
+        if any(duration is None for duration in durations):
             continue
-        try:
-            hr = float(hr)
-        except (TypeError, ValueError):
-            continue
-        if hr <= 0:
+        duration = sum(durations)
+        if duration < 90.0 or duration > 20.0 * 60.0:
             continue
 
-        rep = {
-            "hr": hr,
-            "speed_kmh": speed,
-            "ef": speed / hr,
-            "lap": row.get("lap"),
+        total_distance = 0.0
+        weighted_hr = 0.0
+        weighted_power = 0.0
+        power_time = 0.0
+        valid_hr = True
+        for row, row_duration in zip(block, durations):
+            hr = row.get("avg_hr")
+            try:
+                hr = float(hr)
+            except (TypeError, ValueError):
+                valid_hr = False
+                break
+            if hr <= 0:
+                valid_hr = False
+                break
+            weighted_hr += hr * row_duration
+
+            distance = row.get("distance")
+            try:
+                distance = float(distance) if distance is not None else 0.0
+            except (TypeError, ValueError):
+                distance = 0.0
+            total_distance += distance
+
+            power = row.get("avg_power")
+            try:
+                power = float(power) if power is not None else None
+            except (TypeError, ValueError):
+                power = None
+            if power is not None and power > 0:
+                weighted_power += power * row_duration
+                power_time += row_duration
+
+        if not valid_hr or total_distance <= 0:
+            continue
+
+        avg_hr = weighted_hr / duration
+        speed_kmh = total_distance / duration * 3600.0
+        candidate = {
+            "hr": avg_hr,
+            "speed_kmh": speed_kmh,
+            "ef": speed_kmh / avg_hr,
         }
-        power = row.get("avg_power")
-        try:
-            power = float(power) if power is not None else None
-        except (TypeError, ValueError):
-            power = None
-        if power is not None and power > 0:
-            rep["power"] = power
-            rep["ef_power"] = power / hr
-        reps.append(rep)
+        if power_time > 0:
+            avg_power = weighted_power / power_time
+            candidate["power"] = avg_power
+            candidate["ef_power"] = avg_power / avg_hr
+        candidates.append(candidate)
 
-    if len(reps) < 2:
+    if len(candidates) < 2:
         return
 
-    first = reps[0]
-    last = reps[-1]
+    first = candidates[0]
+    last = candidates[-1]
     first_ef = first["ef"]
     if first_ef <= 0:
         return
 
     result = {
-        "work_reps": len(reps),
+        "work_reps": len(candidates),
         "pace_ef_drift_pct": round((first_ef - last["ef"]) / first_ef * 100.0, 1),
         "hr_delta_bpm": round(last["hr"] - first["hr"], 1),
     }
