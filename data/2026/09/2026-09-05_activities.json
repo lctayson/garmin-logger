@@ -8,11 +8,12 @@
       "distance": 10.02,
       "duration_min": 75.42,
       "avg_pace": "7:31",
-      "elevation_gain": 8.0,
-      "elevation_loss": 9.0,
+      "gap": "7:32",
       "avg_hr": 148.0,
       "max_hr": 167.0,
-      "gap": "7:32",
+      "recovery_hr": 21,
+      "elevation_gain": 8.0,
+      "elevation_loss": 9.0,
       "aerobic_te": 3.1,
       "anaerobic_te": 0.0,
       "load": 89.7,
@@ -68,6 +69,10 @@
         "temperature": "°C",
         "wind_speed": "m/s",
         "precipitation": "mm"
+      },
+      "decoupling": {
+        "pace_pct": 5.3,
+        "power_pct": 3.9
       }
     }
   ]
