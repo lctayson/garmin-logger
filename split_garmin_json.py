@@ -56,6 +56,119 @@ def to_columnar(rows):
     return {"columns": columns, "data": [[row.get(column) for column in columns] for row in rows]}
 
 
+def _pace_to_speed_kmh(pace):
+    if not isinstance(pace, str) or ":" not in pace:
+        return None
+    try:
+        minutes, seconds = pace.split(":", 1)
+        pace_seconds = float(minutes) * 60.0 + float(seconds)
+    except (TypeError, ValueError):
+        return None
+    return 60.0 / (pace_seconds / 60.0) if pace_seconds > 0 else None
+
+
+def _split_duration_seconds(row):
+    value = row.get("time")
+    if isinstance(value, str) and ":" in value:
+        try:
+            parts = [float(part) for part in value.split(":")]
+            if len(parts) == 2:
+                return parts[0] * 60.0 + parts[1]
+            if len(parts) == 3:
+                return parts[0] * 3600.0 + parts[1] * 60.0 + parts[2]
+        except (TypeError, ValueError):
+            pass
+    return None
+
+
+def _calculate_interval_drift(activity):
+    """Add normalized first-to-last work-rep efficiency drift.
+
+    This is deliberately separate from continuous-run ``decoupling``. It is
+    only calculated for structured running workouts with ACTIVE work reps and
+    RECOVERY/REST structure (or sufficiently long ACTIVE reps). Pace EF is
+    speed/HR; power EF uses average power/HR, never normalized power.
+    """
+    if not isinstance(activity, dict) or str(activity.get("type", "")).lower() != "running":
+        return
+
+    splits = activity.get("splits")
+    if not isinstance(splits, list):
+        return
+
+    rows = [row for row in splits if isinstance(row, dict)]
+    if not rows:
+        return
+
+    step_types = {str(row.get("step_type", "")).upper() for row in rows}
+    has_recovery_structure = bool(step_types & {"RECOVERY", "REST"})
+    active_rows = [row for row in rows if str(row.get("step_type", "")).upper() == "ACTIVE"]
+
+    if len(active_rows) < 2:
+        return
+
+    # A recovery/rest marker is the strongest signal that ACTIVE laps are
+    # actual programmed work reps. If there is no recovery marker, only allow
+    # long ACTIVE reps; this prevents short strides from being treated as reps.
+    if not has_recovery_structure:
+        durations = [_split_duration_seconds(row) for row in active_rows]
+        if any(duration is None or duration < 90.0 for duration in durations):
+            return
+
+    reps = []
+    for row in active_rows:
+        hr = row.get("avg_hr")
+        speed = _pace_to_speed_kmh(row.get("avg_pace"))
+        if speed is None:
+            continue
+        try:
+            hr = float(hr)
+        except (TypeError, ValueError):
+            continue
+        if hr <= 0:
+            continue
+
+        rep = {
+            "hr": hr,
+            "speed_kmh": speed,
+            "ef": speed / hr,
+            "lap": row.get("lap"),
+        }
+        power = row.get("avg_power")
+        try:
+            power = float(power) if power is not None else None
+        except (TypeError, ValueError):
+            power = None
+        if power is not None and power > 0:
+            rep["power"] = power
+            rep["ef_power"] = power / hr
+        reps.append(rep)
+
+    if len(reps) < 2:
+        return
+
+    first = reps[0]
+    last = reps[-1]
+    first_ef = first["ef"]
+    if first_ef <= 0:
+        return
+
+    result = {
+        "work_reps": len(reps),
+        "pace_ef_drift_pct": round((first_ef - last["ef"]) / first_ef * 100.0, 1),
+        "hr_delta_bpm": round(last["hr"] - first["hr"], 1),
+    }
+
+    if "ef_power" in first and "ef_power" in last and first["ef_power"] > 0:
+        result["power_ef_drift_pct"] = round(
+            (first["ef_power"] - last["ef_power"]) / first["ef_power"] * 100.0,
+            1,
+        )
+        result["power_delta_w"] = round(last["power"] - first["power"], 1)
+
+    activity["interval_drift"] = result
+
+
 def _reorder_activity(activity):
     """Put compact activity fields in stable Garmin Connect-style priority order."""
     priority = (
@@ -66,6 +179,7 @@ def _reorder_activity(activity):
         "avg_power", "normalized_power", "max_power",
         "avg_run_cadence", "max_run_cadence", "avg_ground_contact_time", "stride_length",
         "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
+        "interval_drift",
         "aerobic_te", "anaerobic_te", "load", "exercise_load", "recovery_time_hours",
         "start_time_local", "weather",
         "hr_zones", "power_zones", "splits",
@@ -83,6 +197,7 @@ def _reorder_activity(activity):
 
 def compact_activity(activity):
     activity = compact_keys(activity)
+    _calculate_interval_drift(activity)
     split_key = next((key for key in ("splits", "laps") if key in activity), None)
     if split_key:
         splits = activity[split_key]
@@ -276,9 +391,9 @@ def main():
         write_json(dated_activities, activities, activity_compact=True)
     elif os.path.exists(dated_activities):
         os.remove(dated_activities)
-    refresh_latest_activities(args.data_dir, target_date, dated_activities, has_activities, today_local)
+    refresh_latest_activities(data_dir, target_date, dated_activities, has_activities, today_local)
     for old_name in ("latest_daily.json", "latest_trends.json"):
-        old_path = os.path.join(args.data_dir, old_name)
+        old_path = os.path.join(data_dir, old_name)
         if os.path.exists(old_path):
             os.remove(old_path)
     for old_suffix in ("_daily.json", "_trends.json"):
