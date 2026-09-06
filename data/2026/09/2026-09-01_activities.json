@@ -14,6 +14,13 @@
       "recovery_hr": 24,
       "elevation_gain": 10.0,
       "elevation_loss": 10.0,
+      "interval_drift": {
+        "work_reps": 5,
+        "pace_ef_drift_pct": 5.1,
+        "hr_delta_bpm": 9.0,
+        "power_ef_drift_pct": 8.1,
+        "power_delta_w": -10.0
+      },
       "aerobic_te": 3.8,
       "anaerobic_te": 1.1,
       "load": 160.7,
