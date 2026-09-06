@@ -1,5 +1,15 @@
 {
   "date": "2026-09-03",
+  "units": {
+    "distance": "km",
+    "pace": "min/km",
+    "elevation": "m",
+    "stride_length": "m",
+    "vertical_oscillation": "cm",
+    "temperature": "°C",
+    "wind_speed": "m/s",
+    "precipitation": "mm"
+  },
   "activities": [
     {
       "name": "Malolos - 2 × 8min Threshold",
@@ -14,6 +24,10 @@
       "recovery_hr": 24,
       "elevation_gain": 17.0,
       "elevation_loss": 17.0,
+      "aerobic_te": 3.5,
+      "anaerobic_te": 0.0,
+      "load": 119.4,
+      "start_time_local": "2026-09-03T06:18:27.0",
       "interval_drift": {
         "work_reps": 2,
         "pace_ef_drift_pct": 4.6,
@@ -21,10 +35,6 @@
         "power_ef_drift_pct": 3.0,
         "power_delta_w": 6.0
       },
-      "aerobic_te": 3.5,
-      "anaerobic_te": 0.0,
-      "load": 119.4,
-      "start_time_local": "2026-09-03T06:18:27.0",
       "weather": {
         "temperature": 27.8,
         "humidity_pct": 86.0,
@@ -60,16 +70,6 @@
           ["ACTIVE", 4, "8:00", "5:33", "5:33", 165.0, 171.0, 149, 149, 170, 185.0, 100.0, "5:16", 190.0, "8:00", "5:33", 1.44, 6.0, 2.0, 0.97, 7.7, 240.8, 305.0, 307.0, 333.0, 8.0],
           ["COOLDOWN", 5, "12:43", "7:55", "7:56", 151.0, 171.0, 170, 139, 154, 158.0, 124.0, "5:22", 187.0, "12:43", "7:55", 1.61, 10.0, 9.0, 0.78, 7.4, 272.0, 231.0, 213.0, 313.0, 9.7]
         ]
-      },
-      "units": {
-        "distance": "km",
-        "pace": "min/km",
-        "elevation": "m",
-        "stride_length": "m",
-        "vertical_oscillation": "cm",
-        "temperature": "°C",
-        "wind_speed": "m/s",
-        "precipitation": "mm"
       }
     }
   ]
