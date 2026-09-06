@@ -85,7 +85,10 @@ def compact_activity(activity):
     activity = compact_keys(activity)
     split_key = next((key for key in ("splits", "laps") if key in activity), None)
     if split_key:
-        activity[split_key] = to_columnar(activity[split_key])
+        splits = activity[split_key]
+        if isinstance(splits, list):
+            splits = [{key: value for key, value in row.items() if key != "time_seconds"} if isinstance(row, dict) else row for row in splits]
+        activity[split_key] = to_columnar(splits)
     return _reorder_activity(activity)
 
 
