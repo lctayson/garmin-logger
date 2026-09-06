@@ -172,11 +172,10 @@ def _reorder_activity(activity):
         "avg_power", "normalized_power", "max_power",
         "avg_run_cadence", "max_run_cadence", "avg_ground_contact_time", "stride_length",
         "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
-        "interval_drift",
         "aerobic_te", "anaerobic_te", "load", "exercise_load", "recovery_time_hours",
-        "start_time_local", "weather",
+        "start_time_local", "decoupling", "interval_drift", "weather",
         "hr_zones", "power_zones", "splits",
-        "parent_activity_id", "units",
+        "parent_activity_id",
     )
     ordered = {}
     for key in priority:
@@ -197,6 +196,7 @@ def compact_activity(activity):
         if isinstance(splits, list):
             splits = [{key: value for key, value in row.items() if key != "time_seconds"} if isinstance(row, dict) else row for row in splits]
         activity[split_key] = to_columnar(splits)
+    activity.pop("units", None)
     return _reorder_activity(activity)
 
 
@@ -204,6 +204,22 @@ def compact_activities(value):
     if not isinstance(value, list):
         return value
     return [compact_activity(activity) if isinstance(activity, dict) else activity for activity in value]
+
+
+def _activity_units(measurement_system):
+    """Return one shared unit declaration for the complete activity snapshot."""
+    system = str(measurement_system or "metric").lower()
+    imperial = system in ("statute_us", "statute_uk", "statute")
+    return {
+        "distance": "mi" if imperial else "km",
+        "pace": "min/mi" if imperial else "min/km",
+        "elevation": "ft" if imperial else "m",
+        "stride_length": "ft" if imperial else "m",
+        "vertical_oscillation": "in" if imperial else "cm",
+        "temperature": "°F" if imperial and system == "statute_us" else "°C",
+        "wind_speed": "mph" if imperial else "m/s",
+        "precipitation": "in" if system == "statute_us" else "mm",
+    }
 
 
 def load_json(path):
@@ -225,6 +241,7 @@ def split_payload(payload):
     metrics = apply_metrics_units(metrics, measurement_system)
     activities = {
         "date": payload.get("date"),
+        "units": _activity_units(measurement_system),
         "activities": compact_activities(payload.get(activity_key)),
     }
     return metrics, activities
