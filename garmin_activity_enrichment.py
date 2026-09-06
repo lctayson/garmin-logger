@@ -89,6 +89,120 @@ def _reorder_split(item):
     return dict(ordered)
 
 
+def _split_seconds(item):
+    value = item.get("time_seconds")
+    if value is not None:
+        try:
+            return float(value)
+        except (TypeError, ValueError):
+            pass
+    text = item.get("time")
+    if isinstance(text, str) and ":" in text:
+        try:
+            minutes, seconds = text.split(":", 1)
+            return float(minutes) * 60.0 + float(seconds)
+        except (TypeError, ValueError):
+            pass
+    return None
+
+
+def _speed_from_pace(pace):
+    if not isinstance(pace, str) or ":" not in pace:
+        return None
+    try:
+        minutes, seconds = pace.split(":", 1)
+        sec = float(minutes) * 60.0 + float(seconds)
+    except (TypeError, ValueError):
+        return None
+    return 1000.0 / sec if sec > 0 else None
+
+
+def _calculate_decoupling(activity):
+    """Calculate Pa:HR and Pw:HR decoupling for continuous aerobic runs.
+
+    The calculation intentionally skips structured interval/stride workouts
+    containing recovery splits. Existing activity fields are untouched; this
+    only adds a decoupling object when there is enough continuous split data.
+    Calculations remain in canonical metric units before final unit conversion.
+    """
+    if not isinstance(activity, dict) or str(activity.get("type", "")).lower() != "running":
+        return
+    splits = activity.get("activity_splits")
+    if not isinstance(splits, list):
+        return
+    valid = [s for s in splits if isinstance(s, dict)]
+    if len(valid) < 3:
+        return
+    if any(str(s.get("step_type", "")).upper() in {"RECOVERY", "REST"} for s in valid):
+        return
+
+    rows = []
+    for split in valid:
+        seconds = _split_seconds(split)
+        hr = split.get("avg_hr")
+        pace = split.get("avg_pace")
+        speed = _speed_from_pace(pace)
+        try:
+            hr = float(hr)
+        except (TypeError, ValueError):
+            hr = None
+        if seconds is None or seconds <= 0 or speed is None or hr is None or hr <= 0:
+            continue
+        power = split.get("avg_power_w")
+        try:
+            power = float(power) if power is not None else None
+        except (TypeError, ValueError):
+            power = None
+        rows.append((seconds, speed, hr, power))
+
+    total_seconds = sum(row[0] for row in rows)
+    if len(rows) < 3 or total_seconds < 20 * 60:
+        return
+
+    midpoint = total_seconds / 2.0
+    first = []
+    second = []
+    elapsed = 0.0
+    for row in rows:
+        target = first if elapsed < midpoint else second
+        target.append(row)
+        elapsed += row[0]
+    if not first or not second:
+        return
+
+    def weighted_avg(items, index):
+        weight = sum(row[0] for row in items)
+        return sum(row[index] * row[0] for row in items) / weight if weight else None
+
+    first_speed = weighted_avg(first, 1)
+    second_speed = weighted_avg(second, 1)
+    first_hr = weighted_avg(first, 2)
+    second_hr = weighted_avg(second, 2)
+    if not all(value is not None for value in (first_speed, second_speed, first_hr, second_hr)):
+        return
+
+    first_ef = first_speed / first_hr
+    second_ef = second_speed / second_hr
+    pace_decoupling = (first_ef - second_ef) / first_ef * 100.0 if first_ef else None
+
+    result = {}
+    if pace_decoupling is not None:
+        result["pace_pct"] = round(pace_decoupling, 1)
+
+    power_rows_first = [row for row in first if row[3] is not None]
+    power_rows_second = [row for row in second if row[3] is not None]
+    if power_rows_first and power_rows_second:
+        first_power = weighted_avg(power_rows_first, 3)
+        second_power = weighted_avg(power_rows_second, 3)
+        first_pwr_ef = first_power / first_hr
+        second_pwr_ef = second_power / second_hr
+        if first_pwr_ef:
+            result["power_pct"] = round((first_pwr_ef - second_pwr_ef) / first_pwr_ef * 100.0, 1)
+
+    if result:
+        activity["decoupling"] = result
+
+
 def enrich_activity_splits(api, activity):
     activity_id = activity.get("activityId") if isinstance(activity, dict) else None
     if not activity_id:
@@ -136,6 +250,7 @@ def enrich_activity_splits(api, activity):
         duration = _duration(duration_seconds)
         if duration is not None:
             item["time"] = duration
+        item["time_seconds"] = duration_seconds
         if lap.get("distance") is not None:
             try:
                 item["distance_km"] = round(float(lap["distance"]) / 1000.0, 2)
@@ -174,6 +289,7 @@ def enrich_activity_splits(api, activity):
             item["max_run_cadence"] = generator.safe_float(lap["maxRunCadence"], 0)
         by_lap[lap_number] = _reorder_split(item)
     activity["activity_splits"] = list(by_lap.values())
+    _calculate_decoupling(activity)
 
 
 def _get_user_unit_system(api):
