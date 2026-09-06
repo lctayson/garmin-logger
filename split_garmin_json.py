@@ -173,8 +173,8 @@ def _reorder_activity(activity):
         "avg_run_cadence", "max_run_cadence", "avg_ground_contact_time", "stride_length",
         "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
         "aerobic_te", "anaerobic_te", "load", "exercise_load", "recovery_time_hours",
-        "start_time_local", "decoupling", "interval_drift", "weather",
-        "hr_zones", "power_zones", "splits",
+        "start_time_local", "interval_drift", "decoupling", "splits", "weather",
+        "hr_zones", "power_zones",
         "parent_activity_id",
     )
     ordered = {}
