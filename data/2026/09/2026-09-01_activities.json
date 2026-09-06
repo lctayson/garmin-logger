@@ -1,5 +1,15 @@
 {
   "date": "2026-09-01",
+  "units": {
+    "distance": "km",
+    "pace": "min/km",
+    "elevation": "m",
+    "stride_length": "m",
+    "vertical_oscillation": "cm",
+    "temperature": "°C",
+    "wind_speed": "m/s",
+    "precipitation": "mm"
+  },
   "activities": [
     {
       "name": "Malolos - 5 × 3min VO₂ Intervals",
@@ -14,6 +24,10 @@
       "recovery_hr": 24,
       "elevation_gain": 10.0,
       "elevation_loss": 10.0,
+      "aerobic_te": 3.8,
+      "anaerobic_te": 1.1,
+      "load": 160.7,
+      "start_time_local": "2026-09-01T06:35:41.0",
       "interval_drift": {
         "work_reps": 5,
         "pace_ef_drift_pct": 5.1,
@@ -21,10 +35,6 @@
         "power_ef_drift_pct": 8.1,
         "power_delta_w": -10.0
       },
-      "aerobic_te": 3.8,
-      "anaerobic_te": 1.1,
-      "load": 160.7,
-      "start_time_local": "2026-09-01T06:35:41.0",
       "weather": {
         "temperature": 27.8,
         "humidity_pct": 80.0,
@@ -66,16 +76,6 @@
           ["ACTIVE", 10, "3:00", "5:12", "5:21", 168.0, 176.0, 143, 143, 177, 184.0, 38.0, "4:41", 190.0, "3:00", "5:12", 0.58, 0.0, 1.0, 1.02, 7.9, 236.3, 330.0, 338.0, 424.0, 7.8],
           ["COOLDOWN", 11, "7:46", "8:11", "8:06", 158.0, 177.0, 177, 143, 162, 150.0, 79.0, "5:06", 187.0, "7:46", "8:11", 0.95, 3.0, 1.0, 0.79, 7.4, 274.7, 233.0, 205.0, 346.0, 9.6]
         ]
-      },
-      "units": {
-        "distance": "km",
-        "pace": "min/km",
-        "elevation": "m",
-        "stride_length": "m",
-        "vertical_oscillation": "cm",
-        "temperature": "°C",
-        "wind_speed": "m/s",
-        "precipitation": "mm"
       }
     },
     {
@@ -104,16 +104,6 @@
         "data": [
           ["ACTIVE", 1, "11:16", "15:57", 100.0, 115.0, 93, 93, 98, 91.0, 49.0, "11:54", 158.0, "10:39", "15:04", 0.71, 9.0, 8.0]
         ]
-      },
-      "units": {
-        "distance": "km",
-        "pace": "min/km",
-        "elevation": "m",
-        "stride_length": "m",
-        "vertical_oscillation": "cm",
-        "temperature": "°C",
-        "wind_speed": "m/s",
-        "precipitation": "mm"
       }
     }
   ]
