@@ -26,7 +26,6 @@
       "avg_hr": 152.0,
       "max_hr": 176.0,
       "recovery_hr": 24,
-      "avg_power": 249.0,
       "load": 138.2,
       "training_effect": {
         "label": "VO2MAX",
