@@ -11,6 +11,21 @@ from zoneinfo import ZoneInfo
 
 LOCAL_TZ = ZoneInfo("Asia/Manila")
 
+ACTIVITY_KEY_ORDER = (
+    "name", "activity_id", "type", "distance", "time", "elapsed_time", "moving_time",
+    "avg_pace", "gap", "avg_hr", "max_hr", "recovery_hr", "elevation_gain", "elevation_loss",
+    "load", "start_time_local", "training_effect", "interval_drift", "splits", "weather",
+    "hr_zones", "power_zones", "lap_count",
+)
+
+SPLIT_COLUMN_ORDER = (
+    "step_type", "lap", "time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr",
+    "min_hr", "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence",
+    "moving_time", "avg_moving_pace", "distance", "elevation_gain", "elevation_loss",
+    "stride_length", "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power",
+    "avg_power", "max_power", "avg_vertical_ratio",
+)
+
 
 def load_json(path):
     with open(path, "r", encoding="utf-8") as fh:
@@ -36,29 +51,60 @@ def split_payload(payload):
     return metrics, activities
 
 
+def _normalize_splits(activity):
+    """Convert enriched split dicts to the stable columns/data representation."""
+    splits = activity.get("splits")
+    if isinstance(splits, dict) and isinstance(splits.get("columns"), list) and isinstance(splits.get("data"), list):
+        source_columns = splits["columns"]
+        source_rows = splits["data"]
+        rows = []
+        for row in source_rows:
+            if not isinstance(row, list):
+                continue
+            values = dict(zip(source_columns, row))
+            rows.append([values.get(column) for column in SPLIT_COLUMN_ORDER])
+        return {"columns": list(SPLIT_COLUMN_ORDER), "data": rows}
+
+    raw_splits = activity.get("activity_splits")
+    if not isinstance(raw_splits, list):
+        return None
+
+    rows = []
+    for split in raw_splits:
+        if not isinstance(split, dict):
+            continue
+        rows.append([split.get(column) for column in SPLIT_COLUMN_ORDER])
+    return {"columns": list(SPLIT_COLUMN_ORDER), "data": rows}
+
+
 def normalize_activity(activity):
-    """Remove legacy root fields and put the activity in stable output order."""
+    """Normalize one activity to the stable output schema and element order."""
     if not isinstance(activity, dict):
         return activity
 
     out = dict(activity)
+
+    # Normalize common source aliases to the public schema.
+    if "activity_id" not in out and out.get("activityId") is not None:
+        out["activity_id"] = out["activityId"]
+    if "load" not in out and out.get("exercise_load") is not None:
+        out["load"] = out["exercise_load"]
+    out.pop("activityId", None)
+    out.pop("exercise_load", None)
+
+    # Legacy/redundant root fields are not part of the target schema.
     for key in ("duration_min", "aerobic_te", "anaerobic_te", "training_effect_label"):
         out.pop(key, None)
 
-    priority = (
-        "name", "activity_id", "type",
-        "distance", "time", "elapsed_time", "moving_time", "avg_pace", "gap",
-        "avg_hr", "max_hr", "recovery_hr", "elevation_gain", "elevation_loss",
-        "load", "start_time_local", "training_effect", "interval_drift", "decoupling",
-        "splits", "weather", "hr_zones", "power_zones", "lap_count",
-    )
+    normalized_splits = _normalize_splits(out)
+    out.pop("activity_splits", None)
+    if normalized_splits is not None:
+        out["splits"] = normalized_splits
+
     ordered = {}
-    for key in priority:
+    for key in ACTIVITY_KEY_ORDER:
         if key in out and out[key] is not None:
             ordered[key] = out[key]
-    for key, value in out.items():
-        if key not in ordered and value is not None:
-            ordered[key] = value
     return ordered
 
 
