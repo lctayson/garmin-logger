@@ -74,6 +74,15 @@ def format_time(seconds):
         return f"{hours}:{mins:02d}:{secs:02d}"
     return f"{mins}:{secs:02d}"
 
+def normalize_training_effect_message(value):
+    """Remove Garmin's trailing numeric message variant while preserving the enum."""
+    if not isinstance(value, str) or not value:
+        return None
+    parts = value.split("_")
+    if len(parts) > 1 and parts[-1].isdigit():
+        return "_".join(parts[:-1])
+    return value
+
 def get_training_history(api, target_date):
     """Fetch and calculate training history distance metrics over the past 28 days."""
     start_history_date = target_date - timedelta(days=27)
@@ -213,7 +222,6 @@ def get_training_status_details(api, target_date_str):
 
     result = {}
 
-    # --- Overall training status (e.g. "Productive") ---
     status_block = raw.get("mostRecentTrainingStatus", {}) or {}
     device_map = status_block.get("latestTrainingStatusData", {}) or {}
     device_entry = next(iter(device_map.values()), {}) if isinstance(device_map, dict) else {}
@@ -225,7 +233,6 @@ def get_training_status_details(api, target_date_str):
         status_level = parts[1] if len(parts) > 1 else ""
         result["status"] = f"{status_base} {status_level}".strip()
     else:
-        # Fallback numeric code map if feedback phrase is missing
         TRAINING_STATUS_CODE_MAP = {
             0: "No Status", 1: "Detraining", 2: "Recovery", 3: "Maintaining",
             4: "Productive", 5: "Peaking", 6: "Overreaching", 7: "Unproductive", 8: "Strained"
@@ -237,7 +244,6 @@ def get_training_status_details(api, target_date_str):
         else:
             result["status"] = raw_code
 
-    # --- Acute training load (e.g. 582, "Optimal") ---
     acute_load = device_entry.get("dailyTrainingLoadAcute") or device_entry.get("dailyAcuteTrainingLoad")
     acwr_status = device_entry.get("acwrStatus") or device_entry.get("dailyAcuteChronicWorkloadRatioStatus")
     if acute_load is not None or acwr_status:
@@ -246,7 +252,6 @@ def get_training_status_details(api, target_date_str):
             "status": humanize_enum(acwr_status) if isinstance(acwr_status, str) else acwr_status
         }
 
-    # --- Recovery time (hours until recovered, as shown on the watch) ---
     recovery_hours = (
         device_entry.get("recoveryTime")
         or device_entry.get("recoveryTimeHours")
@@ -255,7 +260,6 @@ def get_training_status_details(api, target_date_str):
     if recovery_hours is not None:
         result["recovery_time_hours"] = safe_int(recovery_hours)
 
-    # --- Load focus (e.g. "Anaerobic Shortage") ---
     balance_block = raw.get("mostRecentTrainingLoadBalance", {}) or {}
     balance_map = balance_block.get("metricsTrainingLoadBalanceDTOMap", {}) or {}
     balance_entry = next(iter(balance_map.values()), {}) if isinstance(balance_map, dict) else {}
@@ -266,19 +270,6 @@ def get_training_status_details(api, target_date_str):
     if load_focus_raw:
         result["load_focus"] = humanize_enum(load_focus_raw) if isinstance(load_focus_raw, str) else load_focus_raw
 
-    # --- VO2max (value, + qualitative label like "Excellent" IF Garmin's API
-    # actually includes it). Grouped together to match how Garmin Connect
-    # presents it, sourced from this same training-status response — no
-    # separate get_max_metrics() call needed.
-    #
-    # Note: Garmin's app/web UI appears to compute the "Excellent"-style
-    # label client-side from age/gender VO2max norm tables rather than
-    # returning it as a field here. We check a few plausible field names in
-    # case it IS present for some accounts, but we deliberately do NOT try
-    # to reconstruct the label ourselves (would require hardcoding Garmin's
-    # unpublished threshold tables plus your age/sex, with real risk of
-    # mislabeling you) — if it's not in the response, we just omit the key
-    # instead of shipping a null.
     vo2_block = raw.get("mostRecentVO2Max", {}) or {}
     vo2_generic = vo2_block.get("generic", {}) if isinstance(vo2_block.get("generic"), dict) else {}
     vo2_value = safe_float(deep_get(vo2_generic, ["vo2MaxValue", "vo2MaxPreciseValue", "vo2Max"]))
@@ -296,20 +287,8 @@ def get_training_status_details(api, target_date_str):
             vo2_max_obj["value"] = vo2_value
         if vo2_status:
             vo2_max_obj["status"] = humanize_enum(vo2_status) if isinstance(vo2_status, str) else vo2_status
-        else:
-            print(
-                f"[training_status] Note: no VO2max qualitative label found "
-                f"(checked vo2MaxStatus/fitnessLevel/vo2MaxCategory/category). "
-                f"Keys actually present under mostRecentVO2Max.generic: "
-                f"{list(vo2_generic.keys())}. Garmin most likely computes this "
-                f"label client-side from age/gender norm tables rather than "
-                f"returning it here — omitting the status field rather than "
-                f"shipping a null. The numeric value is unaffected.",
-                file=sys.stderr
-            )
         result["vo2_max"] = vo2_max_obj
 
-    # --- Heat / altitude acclimation (e.g. 100%, "Maintaining") ---
     heat_block = raw.get("heatAltitudeAcclimation", {}) or {}
     heat_pct = heat_block.get("heatAcclimationPercentage")
     heat_trend = heat_block.get("heatTrend")
@@ -421,7 +400,7 @@ def get_activity_splits(api, activity_id, activity_type="run"):
 # Garmin stores a multisport session as ONE parent activity (activityType
 # typeKey == "multi_sport") plus a separate CHILD activity for every leg
 # (Swim, Transition 1, Bike, Transition 2, Run), each with its own
-# activityId. Calling get_activity_splits() on the *parent* id (what the
+# activityId. Calling get_activity_splits() on the parent id (what the
 # original script did implicitly, since it treated the parent like any
 # other activity) returns Garmin's internal lapDTOs for the whole session,
 # which is why each leg showed up as a flat "lap" instead of its own activity
@@ -448,7 +427,7 @@ def _find_id_like_lists(obj, path=""):
                 found.append((new_path, v))
             found.extend(_find_id_like_lists(v, new_path))
     elif isinstance(obj, list):
-        for i, item in enumerate(obj[:3]):  # sample only, avoid huge dumps
+        for i, item in enumerate(obj[:3]):
             found.extend(_find_id_like_lists(item, f"{path}[{i}]"))
     return found
 
@@ -475,7 +454,6 @@ def get_child_activity_ids(api, parent_activity_id):
         or []
     )
 
-    # Normalize to a flat list of ints/strings, filtering out falsy values.
     if isinstance(child_ids, dict):
         child_ids = list(child_ids.values())
     child_ids = [c for c in (child_ids or []) if c]
@@ -524,9 +502,18 @@ def get_child_activity_summary(api, child_id):
     aerobic_te = summary.get("trainingEffect") or summary.get("aerobicTrainingEffect") or detail.get("aerobicTrainingEffect")
     anaerobic_te = summary.get("anaerobicTrainingEffect") or detail.get("anaerobicTrainingEffect")
     training_effect_label = summary.get("trainingEffectLabel") or detail.get("trainingEffectLabel")
-    aerobic_message = summary.get("aerobicTrainingEffectMessage") or detail.get("aerobicTrainingEffectMessage")
-    anaerobic_message = summary.get("anaerobicTrainingEffectMessage") or detail.get("anaerobicTrainingEffectMessage")
+    aerobic_message = normalize_training_effect_message(summary.get("aerobicTrainingEffectMessage") or detail.get("aerobicTrainingEffectMessage"))
+    anaerobic_message = normalize_training_effect_message(summary.get("anaerobicTrainingEffectMessage") or detail.get("anaerobicTrainingEffectMessage"))
     activity_vo2max = summary.get("vO2MaxValue") or summary.get("vo2MaxValue") or detail.get("vO2MaxValue") or detail.get("vo2MaxValue")
+
+    training_effect = {
+        "label": training_effect_label,
+        "aerobic": safe_float(aerobic_te),
+        "aerobic_message": aerobic_message,
+        "anaerobic": safe_float(anaerobic_te),
+        "anaerobic_message": anaerobic_message
+    }
+    training_effect = {k: v for k, v in training_effect.items() if v is not None}
 
     return {
         "activityId": child_id,
@@ -540,12 +527,8 @@ def get_child_activity_summary(api, child_id):
         "avg_pace": format_pace(distance_m, duration_sec, act_type),
         "average_hr": safe_float(avg_hr),
         "max_hr": safe_float(max_hr),
-        "aerobic_training_effect": safe_float(aerobic_te),
-        "anaerobic_training_effect": safe_float(anaerobic_te),
-        "trainingEffectLabel": training_effect_label,
-        "aerobicTrainingEffectMessage": aerobic_message,
-        "anaerobicTrainingEffectMessage": anaerobic_message,
-        "vO2MaxValue": safe_float(activity_vo2max)
+        "training_effect": training_effect,
+        "activity_vo2max": safe_float(activity_vo2max)
     }
 
 def expand_multisport_activity(api, parent_act):
@@ -563,13 +546,12 @@ def expand_multisport_activity(api, parent_act):
     for child_id in child_ids:
         child_obj = get_child_activity_summary(api, child_id)
 
-        # Give transitions a friendlier, distinguishable label (T1/T2) since
-        # Garmin typically types both the same way (e.g. "transition").
         if "transition" in (child_obj.get("type") or "").lower():
             transition_count += 1
             child_obj["name"] = f"Transition {transition_count} (T{transition_count})"
 
         child_splits = get_activity_splits(api, child_id, child_obj.get("type"))
+        child_obj["lapCount"] = len(child_splits)
         if child_splits:
             child_obj["activity_splits"] = child_splits
 
@@ -598,8 +580,6 @@ def get_activities(api, target_date_str):
             if legs:
                 formatted_activities.extend(legs)
                 continue
-            # else: no children resolved, fall through and keep old behavior
-            # so at least something is still written to the output file.
 
         distance_m = act.get("distance", 0) or 0
         distance_km = round(distance_m / 1000.0, 2) if distance_m else 0.0
@@ -609,10 +589,14 @@ def get_activities(api, target_date_str):
         moving_duration_sec = act.get("movingDuration") or duration_sec
 
         activity_pace = format_pace(distance_m, duration_sec, act_type)
-        training_effect_label = act.get("trainingEffectLabel")
-        aerobic_message = act.get("aerobicTrainingEffectMessage")
-        anaerobic_message = act.get("anaerobicTrainingEffectMessage")
-        activity_vo2max = act.get("vO2MaxValue") or act.get("vo2MaxValue")
+        training_effect = {
+            "label": act.get("trainingEffectLabel"),
+            "aerobic": safe_float(act.get("aerobicTrainingEffect")),
+            "aerobic_message": normalize_training_effect_message(act.get("aerobicTrainingEffectMessage")),
+            "anaerobic": safe_float(act.get("anaerobicTrainingEffect")),
+            "anaerobic_message": normalize_training_effect_message(act.get("anaerobicTrainingEffectMessage"))
+        }
+        training_effect = {k: v for k, v in training_effect.items() if v is not None}
 
         activity_obj = {
             "activityId": act_id,
@@ -626,18 +610,15 @@ def get_activities(api, target_date_str):
             "avg_pace": activity_pace,
             "average_hr": safe_float(act.get("averageHR") or act.get("avgHR")),
             "max_hr": safe_float(act.get("maxHR") or act.get("maximumHR")),
-            "aerobic_training_effect": safe_float(act.get("aerobicTrainingEffect")),
-            "anaerobic_training_effect": safe_float(act.get("anaerobicTrainingEffect")),
-            "trainingEffectLabel": training_effect_label,
-            "aerobicTrainingEffectMessage": aerobic_message,
-            "anaerobicTrainingEffectMessage": anaerobic_message,
-            "vO2MaxValue": safe_float(activity_vo2max),
-            "lapCount": None
+            "training_effect": training_effect,
+            "activity_vo2max": safe_float(act.get("vO2MaxValue") or act.get("vo2MaxValue")),
+            "lap_count": safe_int(act.get("lapCount"))
         }
 
         if act_id:
             splits = get_activity_splits(api, act_id, act_type)
-            activity_obj["lapCount"] = len(splits)
+            if activity_obj["lap_count"] is None:
+                activity_obj["lap_count"] = len(splits)
             if splits:
                 activity_obj["activity_splits"] = splits
 
