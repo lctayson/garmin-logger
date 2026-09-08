@@ -42,6 +42,22 @@ def _deep_get(d, keys, default=None):
     return default
 
 
+def _format_elapsed_time(seconds):
+    if seconds is None:
+        return None
+    try:
+        total = int(round(float(seconds)))
+    except (TypeError, ValueError):
+        return None
+    if total < 0:
+        return None
+    hours, remainder = divmod(total, 3600)
+    minutes, secs = divmod(remainder, 60)
+    if hours:
+        return f'{hours}:{minutes:02d}:{secs:02d}'
+    return f'{minutes}:{secs:02d}'
+
+
 def get_training_status_details(api, target_date_str):
     try:
         raw = api.get_training_status(target_date_str)
@@ -139,16 +155,11 @@ def _factor(entry, percent_key, feedback_key):
 
 
 def get_training_readiness_details(api, target_date_str, training_status_raw=None):
-    """Fetch the full Training Readiness snapshot: score, level, feedback, and
-    the per-factor breakdown (sleep, recovery time, ACWR, HRV, stress history).
-    Falls back to recovery-time-only extraction from training_status_raw if the
-    readiness endpoint has nothing for this date."""
     readiness = None
     try:
         readiness = api.get_training_readiness(target_date_str)
     except Exception as e:
         print(f'[training_readiness] Warning: {e}', file=sys.stderr)
-
     entry = {}
     if isinstance(readiness, list) and readiness:
         def ts(e):
@@ -156,7 +167,6 @@ def get_training_readiness_details(api, target_date_str, training_status_raw=Non
         entry = max(readiness, key=ts) or {}
     elif isinstance(readiness, dict):
         entry = readiness
-
     result = {}
     recovery_minutes = entry.get('recoveryTime')
     if recovery_minutes is None:
@@ -175,51 +185,31 @@ def get_training_readiness_details(api, target_date_str, training_status_raw=Non
                 value = _safe_float(recovery_minutes, 1)
                 if value is not None:
                     result['recovery_time_hours'] = round(value / 60.0, 1)
-
     score = _safe_int(entry.get('score'))
     level = entry.get('level')
     feedback_short = entry.get('feedbackShort')
     feedback_long = entry.get('feedbackLong')
     if score is not None or level or feedback_short or feedback_long:
-        readiness_obj = {
-            'score': score,
-            'level': humanize_enum(level) if isinstance(level, str) else level,
-            'feedback_short': humanize_enum(feedback_short) if isinstance(feedback_short, str) else feedback_short,
-            'feedback_long': humanize_enum(feedback_long) if isinstance(feedback_long, str) else feedback_long,
-        }
-        factors = {
-            'sleep_score': _factor(entry, 'sleepScoreFactorPercent', 'sleepScoreFactorFeedback'),
-            'recovery_time': _factor(entry, 'recoveryTimeFactorPercent', 'recoveryTimeFactorFeedback'),
-            'acwr': _factor(entry, 'acwrFactorPercent', 'acwrFactorFeedback'),
-            'hrv': _factor(entry, 'hrvFactorPercent', 'hrvFactorFeedback'),
-            'stress_history': _factor(entry, 'stressHistoryFactorPercent', 'stressHistoryFactorFeedback'),
-        }
+        readiness_obj = {'score': score,'level': humanize_enum(level) if isinstance(level, str) else level,'feedback_short': humanize_enum(feedback_short) if isinstance(feedback_short, str) else feedback_short,'feedback_long': humanize_enum(feedback_long) if isinstance(feedback_long, str) else feedback_long}
+        factors = {'sleep_score': _factor(entry, 'sleepScoreFactorPercent', 'sleepScoreFactorFeedback'),'recovery_time': _factor(entry, 'recoveryTimeFactorPercent', 'recoveryTimeFactorFeedback'),'acwr': _factor(entry, 'acwrFactorPercent', 'acwrFactorFeedback'),'hrv': _factor(entry, 'hrvFactorPercent', 'hrvFactorFeedback'),'stress_history': _factor(entry, 'stressHistoryFactorPercent', 'stressHistoryFactorFeedback')}
         factors = {k: v for k, v in factors.items() if v}
-        if factors:
-            readiness_obj['factors'] = factors
+        if factors: readiness_obj['factors'] = factors
         result['readiness'] = {k: v for k, v in readiness_obj.items() if v is not None}
-
     return result
 
 
 def get_recovery_time_hours(api, target_date_str, training_status_raw=None):
-    """Back-compat shim: recovery time only. Prefer get_training_readiness_details."""
     return get_training_readiness_details(api, target_date_str, training_status_raw).get('recovery_time_hours')
 
 
 def _activity_sport(activity):
     raw = _deep_get(activity, ['activityType.typeKey','activityType','sport','sportType'], '') or ''
     raw = str(raw).lower()
-    if 'run' in raw or 'jog' in raw:
-        return 'running'
-    if any(x in raw for x in ('cycl','bike','biking')):
-        return 'cycling'
-    if 'swim' in raw:
-        return 'swimming'
-    if 'multi' in raw or 'triathlon' in raw or 'duathlon' in raw or 'aquathlon' in raw:
-        return 'multisport'
-    if 'transition' in raw:
-        return 'transition'
+    if 'run' in raw or 'jog' in raw: return 'running'
+    if any(x in raw for x in ('cycl','bike','biking')): return 'cycling'
+    if 'swim' in raw: return 'swimming'
+    if 'multi' in raw or 'triathlon' in raw or 'duathlon' in raw or 'aquathlon' in raw: return 'multisport'
+    if 'transition' in raw: return 'transition'
     return 'other'
 
 
@@ -230,17 +220,13 @@ def _activity_date(activity):
 
 def _activity_duration_hours(activity):
     duration = activity.get('duration') or activity.get('elapsedDuration') or activity.get('movingDuration') or 0
-    try:
-        return float(duration) / 3600.0
-    except (ValueError, TypeError):
-        return 0.0
+    try: return float(duration) / 3600.0
+    except (ValueError, TypeError): return 0.0
 
 
 def _activity_distance_km(activity):
-    try:
-        return float(activity.get('distance') or 0) / 1000.0
-    except (ValueError, TypeError):
-        return 0.0
+    try: return float(activity.get('distance') or 0) / 1000.0
+    except (ValueError, TypeError): return 0.0
 
 
 def _activity_load(activity):
@@ -257,8 +243,7 @@ def _aggregate_activities(activities):
     total = _empty_sport_totals()
     for activity in activities:
         sport = _activity_sport(activity)
-        if sport == 'multisport':
-            continue
+        if sport == 'multisport': continue
         bucket = sports.setdefault(sport, _empty_sport_totals())
         dist = _activity_distance_km(activity); hours = _activity_duration_hours(activity); load = _activity_load(activity)
         bucket['activity_count'] += 1; bucket['distance_km'] += dist; bucket['duration_hours'] += hours
@@ -268,10 +253,8 @@ def _aggregate_activities(activities):
             total['exercise_load'] += load; total['exercise_load_available'] = True
     for bucket in list(sports.values()) + [total]:
         bucket['distance_km'] = round(bucket['distance_km'],2); bucket['duration_hours'] = round(bucket['duration_hours'],2)
-        if not bucket['exercise_load_available']:
-            bucket.pop('exercise_load',None); bucket.pop('exercise_load_available',None)
-        else:
-            bucket['exercise_load'] = round(bucket['exercise_load'],1); bucket.pop('exercise_load_available',None)
+        if not bucket['exercise_load_available']: bucket.pop('exercise_load',None); bucket.pop('exercise_load_available',None)
+        else: bucket['exercise_load'] = round(bucket['exercise_load'],1); bucket.pop('exercise_load_available',None)
     return sports, total
 
 
@@ -279,8 +262,7 @@ def get_metric_trend(api, target_date, days=14, interval=1):
     from garmin_to_json import get_health_stats
     if days <= 0: return []
     trend=[]
-    if interval == 1:
-        windows=[(target_date-timedelta(days=i),target_date-timedelta(days=i)) for i in reversed(range(days))]
+    if interval == 1: windows=[(target_date-timedelta(days=i),target_date-timedelta(days=i)) for i in reversed(range(days))]
     else:
         windows=[]; end=target_date; remaining=days
         while remaining>0:
@@ -321,13 +303,16 @@ def get_activity_splits(api,activity_id,activity_type='run'):
     laps=splits.get('lapDTOs',[]) if isinstance(splits,dict) else []
     out=[]; cumulative=0.0
     for lap in laps:
-        dist=lap.get('distance',0) or 0; dur=lap.get('duration',0) or lap.get('elapsedDuration',0) or 0; cumulative+=dur
+        dist=lap.get('distance',0) or 0
+        dur=lap.get('duration',0) or lap.get('elapsedDuration',0) or 0
+        elapsed_dur=lap.get('elapsedDuration')
+        cumulative+=dur
         raw_stride=_safe_float(lap.get('strideLength') or lap.get('avgStrideLength')); stride=round(raw_stride/100,4) if raw_stride and raw_stride>3 else raw_stride
         raw_vo=_safe_float(lap.get('verticalOscillation') or lap.get('avgVerticalOscillation')); vo=round(raw_vo/10,2) if raw_vo and raw_vo>20 else raw_vo
         max_speed=lap.get('maxSpeed') or lap.get('maximumSpeed'); best=None
         if max_speed and max_speed>0:
             sec=1000/float(max_speed); best=f'{int(sec//60)}:{int(round(sec%60)):02d}'
-        obj={'lap':_safe_int(lap.get('lapIndex') or lap.get('splitIndex') or lap.get('lap')),'distance_km':round(dist/1000,3),'time_min':round(dur/60,2),'cumulative_time_min':round(cumulative/60,2),'moving_time_min':round((lap.get('movingDuration') or dur)/60,2),'avg_pace':format_pace(dist,dur,activity_type),'avg_moving_pace':format_pace(dist,lap.get('movingDuration') or dur,activity_type),'best_pace':best,'avg_hr':_safe_int(lap.get('averageHR') or lap.get('avgHR')),'max_hr':_safe_int(lap.get('maxHR') or lap.get('maximumHR')),'calories':_safe_int(lap.get('calories')),'avg_power_w':_safe_int(lap.get('averagePower') or lap.get('avgPower') or lap.get('power')),'normalized_power_w':_safe_int(lap.get('normalizedPower') or lap.get('normPower') or lap.get('averagePower') or lap.get('avgPower')),'cadence_spm':_safe_int(lap.get('averageRunCadence') or lap.get('avgRunCadence') or lap.get('cadence') or lap.get('avgCadence')),'max_cadence_spm':_safe_int(lap.get('maxRunCadence') or lap.get('maximumRunCadence') or lap.get('maxCadence')),'avg_gct_ms':_safe_float(lap.get('groundContactTime') or lap.get('avgGroundContactTime') or lap.get('gct'),1),'avg_stride_length_m':stride,'vertical_oscillation_cm':vo,'vertical_ratio_pct':_safe_float(lap.get('verticalRatio') or lap.get('avgVerticalRatio') or lap.get('vertRatio'),2),'elevation_gain_m':_safe_float(lap.get('elevationGain') or lap.get('sumElevationGain') or lap.get('ascent'),1),'elevation_loss_m':_safe_float(lap.get('elevationLoss') or lap.get('sumElevationLoss') or lap.get('descent'),1),'intensityType':lap.get('intensityType') or lap.get('stepType')}
+        obj={'lap':_safe_int(lap.get('lapIndex') or lap.get('splitIndex') or lap.get('lap')),'distance_km':round(dist/1000,3),'time_min':round(dur/60,2),'elapsed_time':_format_elapsed_time(elapsed_dur if elapsed_dur is not None else dur),'cumulative_time_min':round(cumulative/60,2),'moving_time_min':round((lap.get('movingDuration') or dur)/60,2),'avg_pace':format_pace(dist,dur,activity_type),'avg_moving_pace':format_pace(dist,lap.get('movingDuration') or dur,activity_type),'best_pace':best,'avg_hr':_safe_int(lap.get('averageHR') or lap.get('avgHR')),'max_hr':_safe_int(lap.get('maxHR') or lap.get('maximumHR')),'calories':_safe_int(lap.get('calories')),'avg_power_w':_safe_int(lap.get('averagePower') or lap.get('avgPower') or lap.get('power')),'normalized_power_w':_safe_int(lap.get('normalizedPower') or lap.get('normPower') or lap.get('averagePower') or lap.get('avgPower')),'cadence_spm':_safe_int(lap.get('averageRunCadence') or lap.get('avgRunCadence') or lap.get('cadence') or lap.get('avgCadence')),'max_cadence_spm':_safe_int(lap.get('maxRunCadence') or lap.get('maximumRunCadence') or lap.get('maxCadence')),'avg_gct_ms':_safe_float(lap.get('groundContactTime') or lap.get('avgGroundContactTime') or lap.get('gct'),1),'avg_stride_length_m':stride,'vertical_oscillation_cm':vo,'vertical_ratio_pct':_safe_float(lap.get('verticalRatio') or lap.get('avgVerticalRatio') or lap.get('vertRatio'),2),'elevation_gain_m':_safe_float(lap.get('elevationGain') or lap.get('sumElevationGain') or lap.get('ascent'),1),'elevation_loss_m':_safe_float(lap.get('elevationLoss') or lap.get('sumElevationLoss') or lap.get('descent'),1),'intensityType':lap.get('intensityType') or lap.get('stepType')}
         out.append({k:v for k,v in obj.items() if v is not None})
     return out
 
@@ -358,7 +343,6 @@ def _child_summary(api,child_id):
 
 
 def get_activities(api,target_date_str):
-    """Fetch activities for exactly the requested local calendar date."""
     try:
         acts=api.get_activities_by_date(target_date_str,target_date_str)
     except Exception as e:
@@ -386,7 +370,7 @@ def get_activities(api,target_date_str):
         dist=act.get('distance',0) or 0
         dur=act.get('duration',0) or 0
         load=_deep_get(act,['trainingLoad','exerciseLoad','activityTrainingLoad','summaryDTO.trainingLoad','summaryDTO.exerciseLoad'])
-        obj={'activityId':aid,'name':act.get('activityName'),'type':typ,'distance_km':round(dist/1000,2) if dist else 0,'duration_mins':round(dur/60,2) if dur else 0,'avg_pace':format_pace(dist,dur,typ),'average_hr':_safe_float(act.get('averageHR') or act.get('avgHR')),'max_hr':_safe_float(act.get('maxHR') or act.get('maximumHR')),'aerobic_training_effect':_safe_float(act.get('aerobicTrainingEffect')),'anaerobic_training_effect':_safe_float(act.get('anaerobicTrainingEffect')),'exercise_load':_safe_float(load,1)}
+        obj={'activityId':aid,'name':act.get('activityName'),'type':typ,'distance_km':round(dist/1000,2) if dist else 0,'duration_mins':round(dur/60,2) if dur else 0,'avg_pace':format_pace(dist,dur,typ),'average_hr':_safe_float(act.get('averageHR') or act.get('avgHR')),'max_hr':_safe_int(act.get('maxHR') or act.get('maximumHR')),'aerobic_training_effect':_safe_float(act.get('aerobicTrainingEffect')),'anaerobic_training_effect':_safe_float(act.get('anaerobicTrainingEffect')),'exercise_load':_safe_float(load,1)}
         if aid:
             splits=get_activity_splits(api,aid,typ)
             if splits: obj['activity_splits']=splits
