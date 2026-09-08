@@ -32,7 +32,7 @@ ZONE_KEY_ORDER = ("columns", "data")
 DEFAULT_UNITS = {"distance": "km", "pace": "min/km", "elevation": "m", "stride_length": "m", "vertical_oscillation": "cm", "temperature": "°C", "wind_speed": "m/s", "precipitation": "mm"}
 
 SPLIT_COLUMN_ORDER = (
-    "step_type", "lap", "time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr", "min_hr",
+    "step_type", "lap", "time", "elapsed_time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr", "min_hr",
     "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence", "moving_time",
     "avg_moving_pace", "distance", "elevation_gain", "elevation_loss", "stride_length",
     "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power", "avg_power",
