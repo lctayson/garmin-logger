@@ -99,9 +99,6 @@ def _calculate_interval_drift(activity):
     if not rows:
         return
 
-    # Group consecutive ACTIVE split records into continuous workout blocks.
-    # Auto-laps (e.g. 1 km laps) stay inside the same block until Garmin marks
-    # an actual RECOVERY/REST/non-ACTIVE workout boundary.
     blocks = []
     current = []
     for row in rows:
@@ -115,8 +112,6 @@ def _calculate_interval_drift(activity):
     if current:
         blocks.append(current)
 
-    # A valid interval session needs at least two sustained ACTIVE blocks.
-    # Short ACTIVE blocks (e.g. 20 s strides) are intentionally excluded.
     candidates = []
     for block in blocks:
         durations = [_split_duration_seconds(row) for row in block]
@@ -164,11 +159,7 @@ def _calculate_interval_drift(activity):
 
         avg_hr = weighted_hr / duration
         speed_kmh = total_distance / duration * 3600.0
-        candidate = {
-            "hr": avg_hr,
-            "speed_kmh": speed_kmh,
-            "ef": speed_kmh / avg_hr,
-        }
+        candidate = {"hr": avg_hr, "speed_kmh": speed_kmh, "ef": speed_kmh / avg_hr}
         if power_time > 0:
             avg_power = weighted_power / power_time
             candidate["power"] = avg_power
@@ -191,29 +182,27 @@ def _calculate_interval_drift(activity):
     }
 
     if "ef_power" in first and "ef_power" in last and first["ef_power"] > 0:
-        result["power_ef_drift_pct"] = round(
-            (first["ef_power"] - last["ef_power"]) / first["ef_power"] * 100.0,
-            1,
-        )
+        result["power_ef_drift_pct"] = round((first["ef_power"] - last["ef_power"]) / first["ef_power"] * 100.0, 1)
         result["power_delta_w"] = round(last["power"] - first["power"], 1)
 
     activity["interval_drift"] = result
 
 
 def _reorder_activity(activity):
-    """Put compact activity fields in stable Garmin Connect-style priority order."""
+    """Put compact activity fields in stable analysis-priority order."""
     priority = (
         "name", "activity_id", "type",
-        "distance", "duration_min", "avg_pace", "gap",
+        "distance", "time", "elapsed_time", "moving_time", "avg_pace", "gap",
         "avg_hr", "max_hr", "recovery_hr",
         "elevation_gain", "elevation_loss", "calories",
         "avg_power", "normalized_power", "max_power",
         "avg_run_cadence", "max_run_cadence", "avg_ground_contact_time", "stride_length",
         "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
-        "aerobic_te", "anaerobic_te", "load", "exercise_load", "recovery_time_hours",
-        "start_time_local", "interval_drift", "decoupling", "splits", "weather",
-        "hr_zones", "power_zones",
-        "parent_activity_id",
+        "training_effect", "activity_vo2max", "load", "exercise_load", "recovery_time_hours",
+        "interval_drift", "decoupling",
+        "start_time_local", "weather",
+        "hr_zones", "power_zones", "lap_count", "splits",
+        "parent_activity_id", "units",
     )
     ordered = {}
     for key in priority:
@@ -227,6 +216,8 @@ def _reorder_activity(activity):
 
 def compact_activity(activity):
     activity = compact_keys(activity)
+    for key in ("duration_min", "aerobic_te", "anaerobic_te", "training_effect_label"):
+        activity.pop(key, None)
     _calculate_interval_drift(activity)
     split_key = next((key for key in ("splits", "laps") if key in activity), None)
     if split_key:
@@ -414,44 +405,20 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--date", default=None)
     parser.add_argument("--data-dir", default="data")
+    parser.add_argument("--input", default=None)
     args = parser.parse_args()
-    latest_path = os.path.join(args.data_dir, "latest.json")
-    if not os.path.isfile(latest_path):
-        raise FileNotFoundError(f"Missing generated file: {latest_path}")
-    payload = load_json(latest_path)
-    target_date = args.date or payload.get("date")
-    if not target_date:
-        raise ValueError("Target date is missing")
-    target_date = datetime.strptime(target_date, "%Y-%m-%d").date()
-    if payload.get("date") and payload["date"] != target_date.isoformat():
-        raise ValueError(f"Date mismatch: --date={target_date.isoformat()} but JSON date={payload['date']}")
+
+    today = datetime.now(LOCAL_TZ).date()
+    target_date = datetime.strptime(args.date, "%Y-%m-%d").date() if args.date else today
+    input_path = args.input or os.path.join(args.data_dir, "garmin_latest.json")
+    payload = load_json(input_path)
     metrics, activities = split_payload(payload)
-    has_activities = isinstance(activities.get("activities"), list) and len(activities["activities"]) > 0
-    month_dir = os.path.join(args.data_dir, f"{target_date.year:04d}", f"{target_date.month:02d}")
-    os.makedirs(month_dir, exist_ok=True)
-    dated_metrics = os.path.join(month_dir, f"{target_date.isoformat()}_metrics.json")
-    dated_activities = os.path.join(month_dir, f"{target_date.isoformat()}_activities.json")
+
+    dated_metrics = os.path.join(args.data_dir, f"metrics_{target_date:%Y-%m-%d}.json")
+    dated_activities = os.path.join(args.data_dir, f"activities_{target_date:%Y-%m-%d}.json")
     write_json(dated_metrics, metrics)
-    today_local = datetime.now(LOCAL_TZ).date()
-    if target_date == today_local:
-        shutil.copyfile(dated_metrics, os.path.join(args.data_dir, "latest_metrics.json"))
-    if has_activities:
-        write_json(dated_activities, activities, activity_compact=True)
-    elif os.path.exists(dated_activities):
-        os.remove(dated_activities)
-    refresh_latest_activities(args.data_dir, target_date, dated_activities, has_activities, today_local)
-    for old_name in ("latest_daily.json", "latest_trends.json"):
-        old_path = os.path.join(args.data_dir, old_name)
-        if os.path.exists(old_path):
-            os.remove(old_path)
-    for old_suffix in ("_daily.json", "_trends.json"):
-        old_path = os.path.join(month_dir, f"{target_date.isoformat()}{old_suffix}")
-        if os.path.exists(old_path):
-            os.remove(old_path)
-    old_dated = os.path.join(month_dir, f"{target_date.isoformat()}.json")
-    if os.path.exists(old_dated):
-        os.remove(old_dated)
-    os.remove(latest_path)
+    write_json(dated_activities, activities, activity_compact=True)
+    refresh_latest_activities(args.data_dir, target_date, dated_activities, bool(activities.get("activities")), today)
 
 
 if __name__ == "__main__":
