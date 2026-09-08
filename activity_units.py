@@ -82,7 +82,7 @@ def _reorder_activity(out):
         "distance", "time", "elapsed_time", "moving_time", "avg_pace", "gap",
         "avg_hr", "max_hr", "recovery_hr",
         "elevation_gain", "elevation_loss", "calories", "load", "start_time_local",
-        "training_effect", "activity_vo2max", "exercise_load", "recovery_time_hours",
+        "activity_vo2max", "training_effect", "exercise_load", "recovery_time_hours",
         "avg_power", "normalized_power", "max_power",
         "avg_run_cadence", "max_run_cadence", "avg_ground_contact_time", "stride_length",
         "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
@@ -102,11 +102,6 @@ def _convert_activity(activity, api):
         return activity
     system = _unit_system(api)
     imperial = _is_imperial(system)
-    distance_unit = "mi" if imperial else "km"
-    pace_unit = "min/mi" if imperial else "min/km"
-    elevation_unit = "ft" if imperial else "m"
-    stride_unit = "ft" if imperial else "m"
-    vertical_unit = "in" if imperial else "cm"
     out = dict(activity)
 
     if "activity_id" not in out and out.get("activityId") is not None:
