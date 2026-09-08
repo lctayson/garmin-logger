@@ -13,8 +13,8 @@ def test_split_elapsed_time_is_inserted_after_time():
     class FakeApi:
         def get_activity_splits(self, activity_id):
             return {"lapDTOs": [
-                {"elapsedDuration": 601},
-                {"elapsedDuration": 711},
+                {"duration": 601, "elapsedDuration": 612},
+                {"duration": 110, "elapsedDuration": 113},
             ]}
 
     activity = {
@@ -29,8 +29,8 @@ def test_split_elapsed_time_is_inserted_after_time():
     rows = activity["activity_splits"]
 
     assert list(rows[0])[:4] == ["step_type", "lap", "time", "elapsed_time"]
-    assert rows[0]["elapsed_time"] == "10:01"
-    assert rows[1]["elapsed_time"] == "11:51"
+    assert rows[0]["elapsed_time"] == "10:12"
+    assert rows[1]["elapsed_time"] == "1:53"
 
 
 def test_latest_activities_has_no_legacy_duration_fields():
