@@ -18,6 +18,24 @@ ACTIVITY_KEY_ORDER = (
     "hr_zones", "power_zones", "lap_count",
 )
 
+TRAINING_EFFECT_KEY_ORDER = (
+    "label", "aerobic", "aerobic_message", "anaerobic", "anaerobic_message",
+)
+
+INTERVAL_DRIFT_KEY_ORDER = (
+    "work_reps", "pace_ef_drift_pct", "hr_delta_bpm", "power_ef_drift_pct", "power_delta_w",
+)
+
+WEATHER_KEY_ORDER = (
+    "temperature", "humidity_pct", "wind_speed", "wind_direction_deg",
+)
+
+ZONE_KEY_ORDER = ("columns", "data")
+ROOT_UNIT_ORDER = (
+    "distance", "pace", "elevation", "stride_length", "vertical_oscillation",
+    "temperature", "wind_speed", "precipitation",
+)
+
 SPLIT_COLUMN_ORDER = (
     "step_type", "lap", "time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr",
     "min_hr", "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence",
@@ -27,28 +45,10 @@ SPLIT_COLUMN_ORDER = (
 )
 
 
-def load_json(path):
-    with open(path, "r", encoding="utf-8") as fh:
-        payload = json.load(fh)
-    if not isinstance(payload, dict):
-        raise ValueError(f"Expected a JSON object in {path}")
-    return payload
-
-
-def write_json(path, payload, activity_compact=False):
-    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
-    with open(path, "w", encoding="utf-8") as fh:
-        if activity_compact:
-            json.dump(payload, fh, ensure_ascii=False, separators=(",", ":"))
-        else:
-            json.dump(payload, fh, ensure_ascii=False, indent=2)
-        fh.write("\n")
-
-
-def split_payload(payload):
-    metrics = {k: v for k, v in payload.items() if k != "activities"}
-    activities = payload.get("activities", [])
-    return metrics, activities
+def _ordered_dict(source, key_order):
+    if not isinstance(source, dict):
+        return source
+    return {key: source[key] for key in key_order if key in source and source[key] is not None}
 
 
 def _normalize_splits(activity):
@@ -77,6 +77,20 @@ def _normalize_splits(activity):
     return {"columns": list(SPLIT_COLUMN_ORDER), "data": rows}
 
 
+def _normalize_nested(activity):
+    for key, order in (
+        ("training_effect", TRAINING_EFFECT_KEY_ORDER),
+        ("interval_drift", INTERVAL_DRIFT_KEY_ORDER),
+        ("weather", WEATHER_KEY_ORDER),
+    ):
+        if isinstance(activity.get(key), dict):
+            activity[key] = _ordered_dict(activity[key], order)
+
+    for key in ("hr_zones", "power_zones"):
+        if isinstance(activity.get(key), dict):
+            activity[key] = _ordered_dict(activity[key], ZONE_KEY_ORDER)
+
+
 def normalize_activity(activity):
     """Normalize one activity to the stable output schema and element order."""
     if not isinstance(activity, dict):
@@ -101,6 +115,8 @@ def normalize_activity(activity):
     if normalized_splits is not None:
         out["splits"] = normalized_splits
 
+    _normalize_nested(out)
+
     ordered = {}
     for key in ACTIVITY_KEY_ORDER:
         if key in out and out[key] is not None:
@@ -110,6 +126,12 @@ def normalize_activity(activity):
 
 def normalize_activities(activities):
     return [normalize_activity(activity) for activity in (activities or [])]
+
+
+def _normalize_root_units(units):
+    if not isinstance(units, dict):
+        return {}
+    return _ordered_dict(units, ROOT_UNIT_ORDER)
 
 
 def refresh_latest_activities(data_dir, target_date, current_path, has_activity, today):
@@ -141,7 +163,15 @@ def main():
     dated_metrics = os.path.join(args.data_dir, f"metrics_{target_date:%Y-%m-%d}.json")
     dated_activities = os.path.join(args.data_dir, f"activities_{target_date:%Y-%m-%d}.json")
     write_json(dated_metrics, metrics)
-    write_json(dated_activities, {"date": target_date.isoformat(), "units": payload.get("units", {}), "activities": activities}, activity_compact=False)
+    activity_units = payload.get("units", {})
+    if not activity_units and activities:
+        activity_units = activities[0].get("units", {})
+    root_units = _normalize_root_units(activity_units)
+    write_json(
+        dated_activities,
+        {"date": target_date.isoformat(), "units": root_units, "activities": activities},
+        activity_compact=False,
+    )
     refresh_latest_activities(args.data_dir, target_date, dated_activities, bool(activities), today)
 
 
