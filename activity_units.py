@@ -26,7 +26,6 @@ def _is_imperial(system):
 
 
 def _pace_convert(value, to_miles=False):
-    """Convert a pace string between min/km and min/mi."""
     if value is None or not isinstance(value, str) or ":" not in value:
         return value
     try:
@@ -78,14 +77,11 @@ def _convert_split(split, imperial):
 
 
 def _reorder_activity(out):
-    priority = ("name", "activity_id", "type", "distance", "time", "elapsed_time", "moving_time", "avg_pace", "gap", "avg_hr", "max_hr", "recovery_hr", "elevation_gain", "elevation_loss", "load", "start_time_local", "training_effect", "activity_vo2max", "interval_drift", "decoupling", "splits", "weather", "hr_zones", "power_zones", "lap_count", "activity_splits", "parent_activity_id", "units")
+    priority = ("name", "activity_id", "type", "distance", "time", "elapsed_time", "moving_time", "avg_pace", "gap", "avg_hr", "max_hr", "recovery_hr", "elevation_gain", "elevation_loss", "load", "start_time_local", "training_effect", "interval_drift", "splits", "weather", "hr_zones", "power_zones", "lap_count")
     ordered = {}
     for key in priority:
         if key in out and out[key] is not None:
             ordered[key] = out[key]
-    for key, value in out.items():
-        if key not in ordered and value is not None:
-            ordered[key] = value
     return ordered
 
 
@@ -100,7 +96,7 @@ def _convert_activity(activity, api):
     stride_unit = "ft" if imperial else "m"
     vertical_unit = "in" if imperial else "cm"
     out = dict(activity)
-    for key in ("duration_min", "aerobic_te", "anaerobic_te", "training_effect_label"):
+    for key in ("duration_min", "aerobic_te", "anaerobic_te", "training_effect_label", "activity_vo2max", "decoupling"):
         out.pop(key, None)
     if "distance_km" in out:
         try:
