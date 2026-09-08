@@ -93,24 +93,25 @@ def _convert_split(split, imperial):
 
 
 def _reorder_activity(out):
-    """Put activity fields in Garmin Connect-style analysis priority order."""
+    """Put activity fields in analysis-priority order, keeping related fields together."""
     priority = (
-        # Identity / title
+        # Identity
         "name", "activity_id", "type",
-        # Primary summary: the headline Garmin Connect metrics.
-        "distance", "duration_min", "avg_pace", "elevation_gain", "elevation_loss", "calories",
-        # Heart-rate metrics stay together.
-        "avg_hr", "max_hr",
+        # Primary workout information: distance and time first.
+        "distance", "time", "elapsed_time", "moving_time", "avg_pace", "gap",
+        "elevation_gain", "elevation_loss", "calories",
+        # Heart-rate metrics
+        "avg_hr", "max_hr", "recovery_hr",
         # Core performance metrics
-        "gap", "avg_power", "normalized_power", "max_power",
+        "avg_power", "normalized_power", "max_power",
         "avg_run_cadence", "max_run_cadence", "avg_ground_contact_time", "stride_length",
         "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
-        # Training / recovery metrics
-        "aerobic_te", "anaerobic_te", "load", "exercise_load", "recovery_time_hours",
+        # Training effect and related training metrics.
+        "training_effect", "training_effect_label", "activity_vo2max", "load", "exercise_load", "recovery_time_hours",
         # Context / environment
         "start_time_local", "weather",
         # Zone breakdowns / detailed activity data
-        "hr_zones", "power_zones", "activity_splits", "splits",
+        "hr_zones", "power_zones", "lap_count", "activity_splits", "splits",
         # Metadata / conversion information
         "parent_activity_id", "units",
     )
@@ -136,6 +137,12 @@ def _convert_activity(activity, api):
     vertical_unit = "in" if imperial else "cm"
 
     out = dict(activity)
+
+    # These legacy/root-level fields are now represented by the more useful
+    # formatted time and nested training_effect fields.
+    out.pop("duration_min", None)
+    out.pop("aerobic_te", None)
+    out.pop("anaerobic_te", None)
 
     if "distance_km" in out:
         try:
