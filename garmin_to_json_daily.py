@@ -63,6 +63,17 @@ def format_pace(distance_m, duration_sec, activity_type="run"):
     secs = total_sec % 60
     return f"{mins}:{secs:02d}"
 
+def format_time(seconds):
+    """Format seconds as M:SS or H:MM:SS for compact activity/lap timing."""
+    if seconds is None or seconds < 0:
+        return None
+    total_sec = int(round(float(seconds)))
+    hours, remainder = divmod(total_sec, 3600)
+    mins, secs = divmod(remainder, 60)
+    if hours:
+        return f"{hours}:{mins:02d}:{secs:02d}"
+    return f"{mins}:{secs:02d}"
+
 def get_training_history(api, target_date):
     """Fetch and calculate training history distance metrics over the past 28 days."""
     start_history_date = target_date - timedelta(days=27)
@@ -345,6 +356,7 @@ def get_activity_splits(api, activity_id, activity_type="run"):
     for lap in lap_dtos_raw:
         lap_distance_m = lap.get("distance", 0) or 0
         lap_duration_sec = lap.get("duration", 0) or lap.get("elapsedDuration", 0) or 0
+        lap_elapsed_sec = lap.get("elapsedDuration") or lap_duration_sec
         cumulative_sec += lap_duration_sec
 
         distance_km = round(lap_distance_m / 1000.0, 3) if lap_distance_m else 0.0
@@ -378,9 +390,10 @@ def get_activity_splits(api, activity_id, activity_type="run"):
         lap_obj = {
             "lap": safe_int(lap.get("lapIndex") or lap.get("splitIndex") or lap.get("lap")),
             "distance_km": distance_km,
-            "time_min": time_min,
+            "time": format_time(lap_duration_sec),
+            "elapsed_time": format_time(lap_elapsed_sec),
             "cumulative_time_min": cumulative_time_min,
-            "moving_time_min": moving_time_min,
+            "moving_time": format_time(moving_duration_sec),
             "avg_pace": lap_pace,
             "avg_moving_pace": avg_moving_pace,
             "best_pace": best_pace,
@@ -411,8 +424,8 @@ def get_activity_splits(api, activity_id, activity_type="run"):
 # activityId. Calling get_activity_splits() on the *parent* id (what the
 # original script did implicitly, since it treated the parent like any
 # other activity) returns Garmin's internal lapDTOs for the whole session,
-# which is why each leg showed up as a flat "lap" instead of its own
-# activity with its own splits.
+# which is why each leg showed up as a flat "lap" instead of its own activity
+# with its own splits.
 #
 # The fix: detect multi_sport parents, resolve their child activity ids via
 # api.get_activity(parent_id) -> metadataDTO.childIds (the documented shape
@@ -503,11 +516,17 @@ def get_child_activity_summary(api, child_id):
 
     distance_m = summary.get("distance") or detail.get("distance") or 0
     duration_sec = summary.get("duration") or detail.get("duration") or 0
+    elapsed_duration_sec = summary.get("elapsedDuration") or detail.get("elapsedDuration") or duration_sec
+    moving_duration_sec = summary.get("movingDuration") or detail.get("movingDuration") or duration_sec
 
     avg_hr = summary.get("averageHR") or detail.get("averageHR")
     max_hr = summary.get("maxHR") or detail.get("maxHR")
     aerobic_te = summary.get("trainingEffect") or summary.get("aerobicTrainingEffect") or detail.get("aerobicTrainingEffect")
     anaerobic_te = summary.get("anaerobicTrainingEffect") or detail.get("anaerobicTrainingEffect")
+    training_effect_label = summary.get("trainingEffectLabel") or detail.get("trainingEffectLabel")
+    aerobic_message = summary.get("aerobicTrainingEffectMessage") or detail.get("aerobicTrainingEffectMessage")
+    anaerobic_message = summary.get("anaerobicTrainingEffectMessage") or detail.get("anaerobicTrainingEffectMessage")
+    activity_vo2max = summary.get("vO2MaxValue") or summary.get("vo2MaxValue") or detail.get("vO2MaxValue") or detail.get("vo2MaxValue")
 
     return {
         "activityId": child_id,
@@ -515,11 +534,18 @@ def get_child_activity_summary(api, child_id):
         "type": act_type,
         "distance_km": round(distance_m / 1000.0, 2) if distance_m else 0.0,
         "duration_mins": round(duration_sec / 60.0, 2) if duration_sec else 0.0,
+        "time": format_time(duration_sec),
+        "elapsed_time": format_time(elapsed_duration_sec),
+        "moving_time": format_time(moving_duration_sec),
         "avg_pace": format_pace(distance_m, duration_sec, act_type),
         "average_hr": safe_float(avg_hr),
         "max_hr": safe_float(max_hr),
         "aerobic_training_effect": safe_float(aerobic_te),
         "anaerobic_training_effect": safe_float(anaerobic_te),
+        "trainingEffectLabel": training_effect_label,
+        "aerobicTrainingEffectMessage": aerobic_message,
+        "anaerobicTrainingEffectMessage": anaerobic_message,
+        "vO2MaxValue": safe_float(activity_vo2max)
     }
 
 def expand_multisport_activity(api, parent_act):
@@ -579,8 +605,14 @@ def get_activities(api, target_date_str):
         distance_km = round(distance_m / 1000.0, 2) if distance_m else 0.0
         duration_sec = act.get("duration", 0) or 0
         duration_mins = round(duration_sec / 60.0, 2) if duration_sec else 0.0
+        elapsed_duration_sec = act.get("elapsedDuration") or duration_sec
+        moving_duration_sec = act.get("movingDuration") or duration_sec
 
         activity_pace = format_pace(distance_m, duration_sec, act_type)
+        training_effect_label = act.get("trainingEffectLabel")
+        aerobic_message = act.get("aerobicTrainingEffectMessage")
+        anaerobic_message = act.get("anaerobicTrainingEffectMessage")
+        activity_vo2max = act.get("vO2MaxValue") or act.get("vo2MaxValue")
 
         activity_obj = {
             "activityId": act_id,
@@ -588,15 +620,24 @@ def get_activities(api, target_date_str):
             "type": act_type,
             "distance_km": distance_km,
             "duration_mins": duration_mins,
+            "time": format_time(duration_sec),
+            "elapsed_time": format_time(elapsed_duration_sec),
+            "moving_time": format_time(moving_duration_sec),
             "avg_pace": activity_pace,
             "average_hr": safe_float(act.get("averageHR") or act.get("avgHR")),
             "max_hr": safe_float(act.get("maxHR") or act.get("maximumHR")),
             "aerobic_training_effect": safe_float(act.get("aerobicTrainingEffect")),
-            "anaerobic_training_effect": safe_float(act.get("anaerobicTrainingEffect"))
+            "anaerobic_training_effect": safe_float(act.get("anaerobicTrainingEffect")),
+            "trainingEffectLabel": training_effect_label,
+            "aerobicTrainingEffectMessage": aerobic_message,
+            "anaerobicTrainingEffectMessage": anaerobic_message,
+            "vO2MaxValue": safe_float(activity_vo2max),
+            "lapCount": None
         }
 
         if act_id:
             splits = get_activity_splits(api, act_id, act_type)
+            activity_obj["lapCount"] = len(splits)
             if splits:
                 activity_obj["activity_splits"] = splits
 
