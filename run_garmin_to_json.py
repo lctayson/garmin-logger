@@ -223,30 +223,36 @@ def _add_activity_detail_fields(api, activity):
             else:
                 insert_at = len(columns)
             columns.insert(insert_at, "elapsed_time")
-            elapsed_values = []
-            if not lap_dtos:
-                try:
-                    split_payload = api.get_activity_splits(activity_id) or {}
-                    lap_dtos = split_payload.get("lapDTOs", []) if isinstance(split_payload, dict) else []
-                except Exception:
-                    lap_dtos = []
-            for index, row in enumerate(rows):
-                elapsed_value = None
-                if index < len(lap_dtos) and isinstance(lap_dtos[index], dict):
-                    raw = lap_dtos[index].get("elapsedDuration")
-                    if raw is None:
-                        raw = lap_dtos[index].get("duration")
-                    elapsed_value = _format_time(raw)
-                elapsed_values.append(elapsed_value)
-            for row, elapsed_value in zip(rows, elapsed_values):
-                if isinstance(row, list):
-                    row.insert(insert_at, elapsed_value)
-            splits["columns"] = columns
-            splits["data"] = rows
-            if "activity_splits" in activity:
-                activity["activity_splits"] = splits
+        else:
+            insert_at = columns.index("elapsed_time")
+
+        if not lap_dtos:
+            try:
+                split_payload = api.get_activity_splits(activity_id) or {}
+                lap_dtos = split_payload.get("lapDTOs", []) if isinstance(split_payload, dict) else []
+            except Exception:
+                lap_dtos = []
+
+        for index, row in enumerate(rows):
+            if not isinstance(row, list) or index >= len(lap_dtos) or not isinstance(lap_dtos[index], dict):
+                continue
+            raw = lap_dtos[index].get("elapsedDuration")
+            if raw is None:
+                raw = lap_dtos[index].get("duration")
+            if raw is None:
+                continue
+            elapsed_value = _format_time(raw)
+            if insert_at < len(row):
+                row[insert_at] = elapsed_value
             else:
-                activity["splits"] = splits
+                row.append(elapsed_value)
+
+        splits["columns"] = columns
+        splits["data"] = rows
+        if "activity_splits" in activity:
+            activity["activity_splits"] = splits
+        else:
+            activity["splits"] = splits
 
     return activity
 
