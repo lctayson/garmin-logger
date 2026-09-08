@@ -88,7 +88,7 @@ def _reorder_activity(out):
         "training_effect", "activity_vo2max", "load", "exercise_load", "recovery_time_hours",
         "interval_drift", "splits", "activity_splits",
         "start_time_local", "weather", "hr_zones", "power_zones", "lap_count",
-        "parent_activity_id", "units",
+        "parent_activity_id",
     )
     ordered = {}
     for key in priority:
@@ -108,6 +108,14 @@ def _convert_activity(activity, api):
     stride_unit = "ft" if imperial else "m"
     vertical_unit = "in" if imperial else "cm"
     out = dict(activity)
+
+    # Canonicalize Garmin's native activityId before the activity is reordered.
+    # This keeps the stable Garmin ID in the activity object and places it
+    # immediately after name via _reorder_activity().
+    if "activity_id" not in out and out.get("activityId") is not None:
+        out["activity_id"] = out["activityId"]
+    out.pop("activityId", None)
+
     if "avg_hr" not in out and out.get("average_hr") is not None:
         out["avg_hr"] = out.pop("average_hr")
     else:
@@ -141,9 +149,6 @@ def _convert_activity(activity, api):
         for key in ("temperature_unit", "wind_speed_unit", "feels_like_unit", "precipitation_unit"):
             weather.pop(key, None)
         out["weather"] = weather
-        out["units"] = {"distance": distance_unit, "pace": pace_unit, "elevation": elevation_unit, "stride_length": stride_unit, "vertical_oscillation": vertical_unit, "temperature": "°F" if imperial and system == "statute_us" else "°C", "wind_speed": "mph" if imperial else "m/s", "precipitation": "in" if system == "statute_us" else "mm"}
-    else:
-        out["units"] = {"distance": distance_unit, "pace": pace_unit, "elevation": elevation_unit, "stride_length": stride_unit, "vertical_oscillation": vertical_unit}
     if isinstance(out.get("activity_splits"), list):
         out["activity_splits"] = [_convert_split(s, imperial) for s in out["activity_splits"]]
     return _reorder_activity(out)
