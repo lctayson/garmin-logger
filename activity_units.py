@@ -95,26 +95,17 @@ def _convert_split(split, imperial):
 def _reorder_activity(out):
     """Put activity fields in analysis-priority order, keeping related fields together."""
     priority = (
-        # Identity
         "name", "activity_id", "type",
-        # Primary workout information: distance and time first.
         "distance", "time", "elapsed_time", "moving_time", "avg_pace", "gap",
         "elevation_gain", "elevation_loss", "calories",
-        # Heart-rate metrics
         "avg_hr", "max_hr", "recovery_hr",
-        # Core performance metrics
         "avg_power", "normalized_power", "max_power",
         "avg_run_cadence", "max_run_cadence", "avg_ground_contact_time", "stride_length",
         "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
-        # Training effect and related training metrics.
-        "training_effect", "training_effect_label", "activity_vo2max", "load", "exercise_load", "recovery_time_hours",
-        # Derived workout-analysis objects.
+        "training_effect", "activity_vo2max", "load", "exercise_load", "recovery_time_hours",
         "interval_drift", "decoupling",
-        # Context / environment
         "start_time_local", "weather",
-        # Zone breakdowns / detailed activity data
         "hr_zones", "power_zones", "lap_count", "activity_splits", "splits",
-        # Metadata / conversion information
         "parent_activity_id", "units",
     )
     ordered = {}
@@ -140,11 +131,9 @@ def _convert_activity(activity, api):
 
     out = dict(activity)
 
-    # These legacy/root-level fields are now represented by the more useful
-    # formatted time and nested training_effect fields.
-    out.pop("duration_min", None)
-    out.pop("aerobic_te", None)
-    out.pop("anaerobic_te", None)
+    # Legacy/redundant root-level fields are intentionally omitted.
+    for key in ("duration_min", "aerobic_te", "anaerobic_te", "training_effect_label"):
+        out.pop(key, None)
 
     if "distance_km" in out:
         try:
@@ -152,9 +141,6 @@ def _convert_activity(activity, api):
         except (TypeError, ValueError):
             out.pop("distance_km", None)
 
-    # Preserve the canonical activity pace produced by the generator/enrichment.
-    # Do not recalculate it from duration_mins: Garmin payloads can expose
-    # duration fields with different semantics, which previously caused a pace regression.
     if "avg_pace" in out and imperial:
         out["avg_pace"] = _pace_convert(out["avg_pace"], to_miles=True)
 
@@ -172,9 +158,6 @@ def _convert_activity(activity, api):
     weather = out.get("weather")
     if isinstance(weather, dict):
         weather = dict(weather)
-        # Garmin's generic activity-weather temperature field is returned as
-        # Fahrenheit in the payload we receive, even for a metric account.
-        # Normalize it here before exposing the account-preferred Celsius unit.
         if not imperial and weather.get("temperature") is not None:
             try:
                 weather["temperature"] = round((float(weather["temperature"]) - 32.0) * 5.0 / 9.0, 1)
