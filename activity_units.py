@@ -81,13 +81,13 @@ def _reorder_activity(out):
         "name", "activity_id", "type",
         "distance", "time", "elapsed_time", "moving_time", "avg_pace", "gap",
         "avg_hr", "max_hr", "recovery_hr",
-        "elevation_gain", "elevation_loss", "calories",
+        "elevation_gain", "elevation_loss", "calories", "load", "start_time_local",
+        "training_effect", "activity_vo2max", "exercise_load", "recovery_time_hours",
         "avg_power", "normalized_power", "max_power",
         "avg_run_cadence", "max_run_cadence", "avg_ground_contact_time", "stride_length",
         "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
-        "training_effect", "activity_vo2max", "load", "exercise_load", "recovery_time_hours",
         "interval_drift", "splits", "activity_splits",
-        "start_time_local", "weather", "hr_zones", "power_zones", "lap_count",
+        "weather", "hr_zones", "power_zones", "lap_count",
         "parent_activity_id",
     )
     ordered = {}
@@ -109,9 +109,6 @@ def _convert_activity(activity, api):
     vertical_unit = "in" if imperial else "cm"
     out = dict(activity)
 
-    # Canonicalize Garmin's native activityId before the activity is reordered.
-    # This keeps the stable Garmin ID in the activity object and places it
-    # immediately after name via _reorder_activity().
     if "activity_id" not in out and out.get("activityId") is not None:
         out["activity_id"] = out["activityId"]
     out.pop("activityId", None)
