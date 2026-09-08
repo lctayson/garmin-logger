@@ -34,6 +34,30 @@ SPLIT_COLUMN_ORDER = (
 )
 
 
+def load_json(path):
+    with open(path, "r", encoding="utf-8") as fh:
+        payload = json.load(fh)
+    if not isinstance(payload, dict):
+        raise ValueError(f"Expected a JSON object in {path}")
+    return payload
+
+
+def write_json(path, payload, activity_compact=False):
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    with open(path, "w", encoding="utf-8") as fh:
+        if activity_compact:
+            json.dump(payload, fh, ensure_ascii=False, separators=(",", ":"))
+        else:
+            json.dump(payload, fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
+
+
+def split_payload(payload):
+    metrics = {k: v for k, v in payload.items() if k != "activities"}
+    activities = payload.get("activities", [])
+    return metrics, activities
+
+
 def _ordered_dict(source, key_order):
     if not isinstance(source, dict):
         return source
