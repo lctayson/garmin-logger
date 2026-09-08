@@ -60,59 +60,6 @@ def _normalize_training_effect_message(value):
     return value
 
 
-def _insert_elapsed_after_time(row, elapsed_value):
-    """Insert elapsed_time immediately after time while preserving all other fields."""
-    if not isinstance(row, dict):
-        return row
-    ordered = {}
-    for key, value in row.items():
-        ordered[key] = value
-        if key == "time":
-            ordered["elapsed_time"] = elapsed_value
-    if "elapsed_time" not in ordered:
-        ordered["elapsed_time"] = elapsed_value
-    return ordered
-
-
-def _add_split_elapsed_times(api, activity):
-    """Add Garmin lap elapsedDuration to every activity split."""
-    splits = activity.get("activity_splits") or activity.get("splits")
-    if not isinstance(splits, list):
-        return
-    activity_id = activity.get("activityId")
-    if not activity_id:
-        return
-    try:
-        split_payload = api.get_activity_splits(activity_id) or {}
-        lap_dtos = split_payload.get("lapDTOs", []) if isinstance(split_payload, dict) else []
-    except Exception:
-        lap_dtos = []
-    if not isinstance(lap_dtos, list):
-        lap_dtos = []
-
-    updated = []
-    for index, row in enumerate(splits):
-        if not isinstance(row, dict):
-            updated.append(row)
-            continue
-        raw = None
-        if index < len(lap_dtos) and isinstance(lap_dtos[index], dict):
-            raw = lap_dtos[index].get("elapsedDuration")
-            if raw is None:
-                raw = lap_dtos[index].get("duration")
-        if raw is None:
-            raw = row.get("time")
-            if isinstance(raw, str) and ":" in raw:
-                minutes, seconds = raw.split(":", 1)
-                try:
-                    raw = float(minutes) * 60.0 + float(seconds)
-                except ValueError:
-                    raw = None
-        elapsed_value = _format_time(raw)
-        updated.append(_insert_elapsed_after_time(row, elapsed_value))
-    activity["activity_splits"] = updated
-
-
 def _add_activity_detail_fields(api, activity):
     """Add high-value Garmin detail fields without changing the raw exporter."""
     activity_id = activity.get("activityId")
@@ -135,8 +82,8 @@ def _add_activity_detail_fields(api, activity):
         return None
 
     duration = first(summary.get("duration"), detail.get("duration"), activity.get("duration"))
-    elapsed = first(summary.get("elapsedDuration"), detail.get("elapsedDuration"), activity.get("elapsedDuration"), duration)
-    moving = first(summary.get("movingDuration"), detail.get("movingDuration"), activity.get("movingDuration"), duration)
+    elapsed = first(summary.get("elapsedDuration"), detail.get("elapsedDuration"), duration)
+    moving = first(summary.get("movingDuration"), detail.get("movingDuration"), duration)
 
     if duration is not None:
         activity["time"] = _format_time(duration)
@@ -187,8 +134,6 @@ def _add_activity_detail_fields(api, activity):
             activity["lap_count"] = int(float(lap_count))
         except (TypeError, ValueError):
             pass
-
-    _add_split_elapsed_times(api, activity)
 
     splits = activity.get("activity_splits") or activity.get("splits")
     if isinstance(splits, dict) and isinstance(splits.get("columns"), list) and isinstance(splits.get("data"), list):
