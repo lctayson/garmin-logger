@@ -77,7 +77,19 @@ def _convert_split(split, imperial):
 
 
 def _reorder_activity(out):
-    priority = ("name", "activity_id", "type", "distance", "time", "elapsed_time", "moving_time", "avg_pace", "gap", "avg_hr", "max_hr", "recovery_hr", "elevation_gain", "elevation_loss", "load", "start_time_local", "training_effect", "interval_drift", "splits", "weather", "hr_zones", "power_zones", "lap_count")
+    priority = (
+        "name", "activity_id", "type",
+        "distance", "time", "elapsed_time", "moving_time", "avg_pace", "gap",
+        "avg_hr", "max_hr", "recovery_hr",
+        "elevation_gain", "elevation_loss", "calories",
+        "avg_power", "normalized_power", "max_power",
+        "avg_run_cadence", "max_run_cadence", "avg_ground_contact_time", "stride_length",
+        "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
+        "training_effect", "activity_vo2max", "load", "exercise_load", "recovery_time_hours",
+        "interval_drift", "splits",
+        "start_time_local", "weather", "hr_zones", "power_zones", "lap_count",
+        "parent_activity_id", "units",
+    )
     ordered = {}
     for key in priority:
         if key in out and out[key] is not None:
@@ -96,7 +108,12 @@ def _convert_activity(activity, api):
     stride_unit = "ft" if imperial else "m"
     vertical_unit = "in" if imperial else "cm"
     out = dict(activity)
-    for key in ("duration_min", "aerobic_te", "anaerobic_te", "training_effect_label", "activity_vo2max", "decoupling"):
+    # Canonicalize the names produced by garmin_helpers.py.
+    if "avg_hr" not in out and out.get("average_hr") is not None:
+        out["avg_hr"] = out.pop("average_hr")
+    else:
+        out.pop("average_hr", None)
+    for key in ("duration_min", "aerobic_te", "anaerobic_te", "training_effect_label", "decoupling"):
         out.pop(key, None)
     if "distance_km" in out:
         try:
