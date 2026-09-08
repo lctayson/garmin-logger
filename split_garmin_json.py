@@ -36,6 +36,48 @@ def split_payload(payload):
     return metrics, activities
 
 
+def normalize_activity(activity):
+    """Remove legacy root fields and put the activity in stable output order."""
+    if not isinstance(activity, dict):
+        return activity
+
+    out = dict(activity)
+    for key in ("duration_min", "aerobic_te", "anaerobic_te", "training_effect_label"):
+        out.pop(key, None)
+
+    priority = (
+        "name", "activity_id", "type",
+        "distance", "time", "elapsed_time", "moving_time", "avg_pace", "gap",
+        "avg_hr", "max_hr", "recovery_hr", "elevation_gain", "elevation_loss",
+        "load", "start_time_local", "training_effect", "interval_drift", "decoupling",
+        "splits", "weather", "hr_zones", "power_zones", "lap_count",
+    )
+    ordered = {}
+    for key in priority:
+        if key in out and out[key] is not None:
+            ordered[key] = out[key]
+    for key, value in out.items():
+        if key not in ordered and value is not None:
+            ordered[key] = value
+    return ordered
+
+
+def normalize_activities(activities):
+    return [normalize_activity(activity) for activity in (activities or [])]
+
+
+def refresh_latest_activities(data_dir, target_date, current_path, has_activity, today):
+    """Refresh latest_activities.json only when today's export contains an activity."""
+    if not has_activity or target_date != today:
+        return False
+
+    latest_path = os.path.join(data_dir, "latest_activities.json")
+    with open(current_path, "r", encoding="utf-8") as src:
+        payload = json.load(src)
+    write_json(latest_path, payload, activity_compact=False)
+    return True
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--date", default=None)
@@ -48,11 +90,13 @@ def main():
     input_path = args.input or os.path.join(args.data_dir, "latest.json")
     payload = load_json(input_path)
     metrics, activities = split_payload(payload)
+    activities = normalize_activities(activities)
 
     dated_metrics = os.path.join(args.data_dir, f"metrics_{target_date:%Y-%m-%d}.json")
     dated_activities = os.path.join(args.data_dir, f"activities_{target_date:%Y-%m-%d}.json")
     write_json(dated_metrics, metrics)
-    write_json(dated_activities, activities, activity_compact=True)
+    write_json(dated_activities, {"date": target_date.isoformat(), "units": payload.get("units", {}), "activities": activities}, activity_compact=False)
+    refresh_latest_activities(args.data_dir, target_date, dated_activities, bool(activities), today)
 
 
 if __name__ == "__main__":
