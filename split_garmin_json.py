@@ -12,17 +12,23 @@ from zoneinfo import ZoneInfo
 LOCAL_TZ = ZoneInfo("Asia/Manila")
 
 ACTIVITY_KEY_ORDER = (
-    "name", "activity_id", "type", "distance", "time", "elapsed_time", "moving_time",
-    "avg_pace", "gap", "avg_hr", "max_hr", "recovery_hr", "elevation_gain", "elevation_loss",
-    "load", "start_time_local", "training_effect", "interval_drift", "splits", "weather",
-    "hr_zones", "power_zones", "lap_count",
+    "name", "activity_id", "type",
+    "distance", "time", "elapsed_time", "moving_time", "avg_pace", "gap",
+    "avg_hr", "max_hr", "recovery_hr",
+    "elevation_gain", "elevation_loss", "calories",
+    "avg_power", "normalized_power", "max_power",
+    "avg_run_cadence", "max_run_cadence", "avg_ground_contact_time", "stride_length",
+    "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
+    "training_effect", "activity_vo2max", "load", "exercise_load", "recovery_time_hours",
+    "interval_drift", "splits",
+    "start_time_local", "weather", "hr_zones", "power_zones", "lap_count",
+    "parent_activity_id", "units",
 )
 
 TRAINING_EFFECT_KEY_ORDER = ("label", "aerobic", "aerobic_message", "anaerobic", "anaerobic_message")
 INTERVAL_DRIFT_KEY_ORDER = ("work_reps", "pace_ef_drift_pct", "hr_delta_bpm", "power_ef_drift_pct", "power_delta_w")
 WEATHER_KEY_ORDER = ("temperature", "humidity_pct", "wind_speed", "wind_direction_deg")
 ZONE_KEY_ORDER = ("columns", "data")
-ROOT_UNIT_ORDER = ("distance", "pace", "elevation", "stride_length", "vertical_oscillation", "temperature", "wind_speed", "precipitation")
 DEFAULT_UNITS = {"distance": "km", "pace": "min/km", "elevation": "m", "stride_length": "m", "vertical_oscillation": "cm", "temperature": "°C", "wind_speed": "m/s", "precipitation": "mm"}
 
 SPLIT_COLUMN_ORDER = (
@@ -79,7 +85,10 @@ def _normalize_splits(activity):
     raw_splits = activity.get("activity_splits")
     if not isinstance(raw_splits, list):
         return None
-    return {"columns": list(SPLIT_COLUMN_ORDER), "data": [[split.get(column) for column in SPLIT_COLUMN_ORDER] for split in raw_splits if isinstance(split, dict)]}
+    return {
+        "columns": list(SPLIT_COLUMN_ORDER),
+        "data": [[split.get(column) for column in SPLIT_COLUMN_ORDER] for split in raw_splits if isinstance(split, dict)],
+    }
 
 
 def _normalize_nested(activity):
@@ -98,11 +107,14 @@ def normalize_activity(activity):
     out = dict(activity)
     if "activity_id" not in out and out.get("activityId") is not None:
         out["activity_id"] = out["activityId"]
+    if "avg_hr" not in out and out.get("average_hr") is not None:
+        out["avg_hr"] = out["average_hr"]
     if "load" not in out and out.get("exercise_load") is not None:
         out["load"] = out["exercise_load"]
     out.pop("activityId", None)
+    out.pop("average_hr", None)
     out.pop("exercise_load", None)
-    for key in ("duration_min", "aerobic_te", "anaerobic_te", "training_effect_label", "activity_vo2max", "decoupling"):
+    for key in ("duration_min", "aerobic_te", "anaerobic_te", "training_effect_label", "decoupling"):
         out.pop(key, None)
     normalized_splits = _normalize_splits(out)
     out.pop("activity_splits", None)
