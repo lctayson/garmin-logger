@@ -15,14 +15,14 @@ ACTIVITY_KEY_ORDER = (
     "name", "activity_id", "type",
     "distance", "time", "elapsed_time", "moving_time", "avg_pace", "gap",
     "avg_hr", "max_hr", "recovery_hr",
-    "elevation_gain", "elevation_loss", "calories",
+    "elevation_gain", "elevation_loss", "calories", "load", "start_time_local",
+    "activity_vo2max", "training_effect", "exercise_load", "recovery_time_hours",
     "avg_power", "normalized_power", "max_power",
     "avg_run_cadence", "max_run_cadence", "avg_ground_contact_time", "stride_length",
     "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
-    "training_effect", "activity_vo2max", "load", "exercise_load", "recovery_time_hours",
     "interval_drift", "splits",
-    "start_time_local", "weather", "hr_zones", "power_zones", "lap_count",
-    "parent_activity_id", "units",
+    "weather", "hr_zones", "power_zones", "lap_count",
+    "parent_activity_id",
 )
 
 TRAINING_EFFECT_KEY_ORDER = ("label", "aerobic", "aerobic_message", "anaerobic", "anaerobic_message")
