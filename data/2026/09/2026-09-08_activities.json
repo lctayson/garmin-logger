@@ -77,7 +77,19 @@
           ["Zone 4 - Long Interval", "315-362 W", "13:26", 40],
           ["Zone 5 - Short Interval", ">362 W", "0:05", 0]
         ]
-      }
+      },
+      "time": "42:23",
+      "elapsed_time": "50:07",
+      "moving_time": "42:20",
+      "training_effect": {
+        "label": "VO2MAX",
+        "aerobic": 3.6,
+        "aerobic_message": "IMPROVING_VO2_MAX",
+        "anaerobic": 0.5,
+        "anaerobic_message": "NO_ANAEROBIC_BENEFIT"
+      },
+      "training_effect_label": "VO2MAX",
+      "lap_count": 12
     }
   ]
 }
