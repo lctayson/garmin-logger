@@ -19,7 +19,7 @@
     "resting_heart_rate": 56,
     "hrv": {},
     "sleep_stages_hours": {},
-    "total_steps": 18
+    "total_steps": 103
   },
   "training_status": {},
   "training_history": {
@@ -726,7 +726,7 @@
     {
       "date": "2026-09-09",
       "charged": 53,
-      "drained": 0,
+      "drained": 4,
       "high": 73,
       "low": 20
     }
