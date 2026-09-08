@@ -88,7 +88,6 @@
         "anaerobic": 0.5,
         "anaerobic_message": "NO_ANAEROBIC_BENEFIT"
       },
-      "training_effect_label": "VO2MAX",
       "lap_count": 12
     }
   ]
