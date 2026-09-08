@@ -880,6 +880,7 @@
   "activities": [
     {
       "name": "Malolos - 5 × 3min VO₂ Intervals",
+      "activity_id": 24277674810,
       "type": "running",
       "distance": 6.13,
       "time": "42:23",
@@ -1337,17 +1338,7 @@
           ]
         ]
       },
-      "lap_count": 12,
-      "units": {
-        "distance": "km",
-        "pace": "min/km",
-        "elevation": "m",
-        "stride_length": "m",
-        "vertical_oscillation": "cm",
-        "temperature": "°C",
-        "wind_speed": "m/s",
-        "precipitation": "mm"
-      }
+      "lap_count": 12
     }
   ]
 }
