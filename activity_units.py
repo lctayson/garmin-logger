@@ -86,7 +86,7 @@ def _reorder_activity(out):
         "avg_run_cadence", "max_run_cadence", "avg_ground_contact_time", "stride_length",
         "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
         "training_effect", "activity_vo2max", "load", "exercise_load", "recovery_time_hours",
-        "interval_drift", "splits",
+        "interval_drift", "splits", "activity_splits",
         "start_time_local", "weather", "hr_zones", "power_zones", "lap_count",
         "parent_activity_id", "units",
     )
@@ -108,7 +108,6 @@ def _convert_activity(activity, api):
     stride_unit = "ft" if imperial else "m"
     vertical_unit = "in" if imperial else "cm"
     out = dict(activity)
-    # Canonicalize the names produced by garmin_helpers.py.
     if "avg_hr" not in out and out.get("average_hr") is not None:
         out["avg_hr"] = out.pop("average_hr")
     else:
