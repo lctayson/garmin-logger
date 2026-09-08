@@ -35,6 +35,16 @@ ROOT_UNIT_ORDER = (
     "distance", "pace", "elevation", "stride_length", "vertical_oscillation",
     "temperature", "wind_speed", "precipitation",
 )
+DEFAULT_UNITS = {
+    "distance": "km",
+    "pace": "min/km",
+    "elevation": "m",
+    "stride_length": "m",
+    "vertical_oscillation": "cm",
+    "temperature": "°C",
+    "wind_speed": "m/s",
+    "precipitation": "mm",
+}
 
 SPLIT_COLUMN_ORDER = (
     "step_type", "lap", "time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr",
@@ -98,7 +108,6 @@ def normalize_activity(activity):
 
     out = dict(activity)
 
-    # Normalize common source aliases to the public schema.
     if "activity_id" not in out and out.get("activityId") is not None:
         out["activity_id"] = out["activityId"]
     if "load" not in out and out.get("exercise_load") is not None:
@@ -106,7 +115,6 @@ def normalize_activity(activity):
     out.pop("activityId", None)
     out.pop("exercise_load", None)
 
-    # Legacy/redundant root fields are not part of the target schema.
     for key in ("duration_min", "aerobic_te", "anaerobic_te", "training_effect_label"):
         out.pop(key, None)
 
@@ -117,11 +125,11 @@ def normalize_activity(activity):
 
     _normalize_nested(out)
 
-    ordered = {}
-    for key in ACTIVITY_KEY_ORDER:
-        if key in out and out[key] is not None:
-            ordered[key] = out[key]
-    return ordered
+    return {
+        key: out[key]
+        for key in ACTIVITY_KEY_ORDER
+        if key in out and out[key] is not None
+    }
 
 
 def normalize_activities(activities):
@@ -129,8 +137,8 @@ def normalize_activities(activities):
 
 
 def _normalize_root_units(units):
-    if not isinstance(units, dict):
-        return {}
+    if not isinstance(units, dict) or not units:
+        return dict(DEFAULT_UNITS)
     return _ordered_dict(units, ROOT_UNIT_ORDER)
 
 
@@ -163,10 +171,7 @@ def main():
     dated_metrics = os.path.join(args.data_dir, f"metrics_{target_date:%Y-%m-%d}.json")
     dated_activities = os.path.join(args.data_dir, f"activities_{target_date:%Y-%m-%d}.json")
     write_json(dated_metrics, metrics)
-    activity_units = payload.get("units", {})
-    if not activity_units and activities:
-        activity_units = activities[0].get("units", {})
-    root_units = _normalize_root_units(activity_units)
+    root_units = _normalize_root_units(payload.get("units", {}))
     write_json(
         dated_activities,
         {"date": target_date.isoformat(), "units": root_units, "activities": activities},
