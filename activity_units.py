@@ -108,6 +108,8 @@ def _reorder_activity(out):
         "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
         # Training effect and related training metrics.
         "training_effect", "training_effect_label", "activity_vo2max", "load", "exercise_load", "recovery_time_hours",
+        # Derived workout-analysis objects.
+        "interval_drift", "decoupling",
         # Context / environment
         "start_time_local", "weather",
         # Zone breakdowns / detailed activity data
