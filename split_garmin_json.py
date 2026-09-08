@@ -48,13 +48,46 @@ def load_json(path):
     return payload
 
 
+def _dump_pretty(value, level=0, table=False):
+    """Pretty-print JSON while keeping table columns and rows on single lines."""
+    indent = "  " * level
+    child_indent = "  " * (level + 1)
+
+    if isinstance(value, dict):
+        if not value:
+            return "{}"
+        parts = []
+        for key, val in value.items():
+            key_json = json.dumps(key, ensure_ascii=False)
+            if key in ("columns", "data") and isinstance(val, list):
+                if key == "columns":
+                    val_json = json.dumps(val, ensure_ascii=False, separators=(", ", ": "))
+                else:
+                    rows = []
+                    for row in val:
+                        rows.append(child_indent + json.dumps(row, ensure_ascii=False, separators=(", ", ": ")))
+                    val_json = "[\n" + ",\n".join(rows) + "\n" + indent + "]"
+            else:
+                val_json = _dump_pretty(val, level + 1)
+            parts.append(f"{child_indent}{key_json}: {val_json}")
+        return "{\n" + ",\n".join(parts) + "\n" + indent + "}"
+
+    if isinstance(value, list):
+        if not value:
+            return "[]"
+        parts = [_dump_pretty(item, level + 1) for item in value]
+        return "[\n" + ",\n".join(child_indent + item for item in parts) + "\n" + indent + "]"
+
+    return json.dumps(value, ensure_ascii=False)
+
+
 def write_json(path, payload, activity_compact=False):
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     with open(path, "w", encoding="utf-8") as fh:
         if activity_compact:
             json.dump(payload, fh, ensure_ascii=False, separators=(",", ":"))
         else:
-            json.dump(payload, fh, ensure_ascii=False, indent=2)
+            fh.write(_dump_pretty(payload))
         fh.write("\n")
 
 
