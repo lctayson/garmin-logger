@@ -1,254 +1,15 @@
-"""Split the generated Garmin snapshot into canonical metrics and activity JSON."""
-from __future__ import annotations
+#!/usr/bin/env python3
+"""
+Split the consolidated Garmin JSON into the dated metrics and activities files.
+"""
 
 import argparse
 import json
 import os
-import shutil
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from compact_metrics import compact_metrics
-from metrics_units import apply_metrics_units
-
-ACTIVITY_KEYS = ("activities", "activity_data", "activityData")
 LOCAL_TZ = ZoneInfo("Asia/Manila")
-
-KEY_MAP = {
-    "resting_heart_rate": "resting_hr", "resting_hr_bpm": "resting_hr", "total_steps": "steps",
-    "total_sleep_hours": "sleep_hours", "7_day_distance_km": "7d_distance_km",
-    "28_day_avg_weekly_distance_km": "28d_avg_weekly_distance_km", "weekly_distance_last_4_weeks_km": "weekly_distance_4w_km",
-    "last_night_avg_ms": "last_night_avg_ms", "seven_day_avg_ms": "7d_avg_ms", "acute_training_load": "acute_load",
-    "recovery_time_hours": "recovery_hours", "activityId": "activity_id", "duration_mins": "duration_min",
-    "average_heart_rate": "avg_hr", "average_hr": "avg_hr", "aerobic_training_effect": "aerobic_te",
-    "anaerobic_training_effect": "anaerobic_te", "exercise_load": "load", "activity_splits": "splits",
-    "parentActivityId": "parent_activity_id", "avg_gct_ms": "ground_contact_ms", "avg_stride_length_m": "stride_length_m",
-    "intensityType": "intensity",
-}
-
-
-def compact_keys(obj):
-    if isinstance(obj, dict):
-        out = {}
-        for key, value in obj.items():
-            new_key = KEY_MAP.get(key, key)
-            if new_key in out and new_key != key:
-                continue
-            out[new_key] = compact_keys(value)
-        return out
-    if isinstance(obj, list):
-        return [compact_keys(item) for item in obj]
-    return obj
-
-
-def to_columnar(rows):
-    if not isinstance(rows, list) or not rows or not all(isinstance(row, dict) for row in rows):
-        return rows
-    columns = []
-    for row in rows:
-        for key in row:
-            if key not in columns:
-                columns.append(key)
-    return {"columns": columns, "data": [[row.get(column) for column in columns] for row in rows]}
-
-
-def _pace_to_speed_kmh(pace):
-    if not isinstance(pace, str) or ":" not in pace:
-        return None
-    try:
-        minutes, seconds = pace.split(":", 1)
-        pace_seconds = float(minutes) * 60.0 + float(seconds)
-    except (TypeError, ValueError):
-        return None
-    return 3600.0 / pace_seconds if pace_seconds > 0 else None
-
-
-def _split_duration_seconds(row):
-    value = row.get("time")
-    if isinstance(value, str) and ":" in value:
-        try:
-            parts = [float(part) for part in value.split(":")]
-            if len(parts) == 2:
-                return parts[0] * 60.0 + parts[1]
-            if len(parts) == 3:
-                return parts[0] * 3600.0 + parts[1] * 60.0 + parts[2]
-        except (TypeError, ValueError):
-            pass
-    return None
-
-
-def _calculate_interval_drift(activity):
-    """Add normalized first-to-last work-rep efficiency drift.
-
-    Workout-step semantics matter here: Garmin auto-laps are measurement
-    splits, not separate workout repetitions. Consecutive ACTIVE splits with
-    no RECOVERY/REST boundary are therefore treated as one continuous block.
-    A block qualifies as interval work only when it is 90 seconds to 20 minutes
-    long and there are at least two such work blocks separated by recovery/rest.
-    This excludes easy-run auto-laps and short strides while preserving the
-    user's structured 3-12 minute interval workouts.
-    """
-    if not isinstance(activity, dict) or str(activity.get("type", "")).lower() != "running":
-        return
-
-    splits = activity.get("splits")
-    if not isinstance(splits, list):
-        return
-
-    rows = [row for row in splits if isinstance(row, dict)]
-    if not rows:
-        return
-
-    blocks = []
-    current = []
-    for row in rows:
-        step_type = str(row.get("step_type", "")).upper()
-        if step_type == "ACTIVE":
-            current.append(row)
-        else:
-            if current:
-                blocks.append(current)
-                current = []
-    if current:
-        blocks.append(current)
-
-    candidates = []
-    for block in blocks:
-        durations = [_split_duration_seconds(row) for row in block]
-        if any(duration is None for duration in durations):
-            continue
-        duration = sum(durations)
-        if duration < 90.0 or duration > 20.0 * 60.0:
-            continue
-
-        total_distance = 0.0
-        weighted_hr = 0.0
-        weighted_power = 0.0
-        power_time = 0.0
-        valid_hr = True
-        for row, row_duration in zip(block, durations):
-            hr = row.get("avg_hr")
-            try:
-                hr = float(hr)
-            except (TypeError, ValueError):
-                valid_hr = False
-                break
-            if hr <= 0:
-                valid_hr = False
-                break
-            weighted_hr += hr * row_duration
-
-            distance = row.get("distance")
-            try:
-                distance = float(distance) if distance is not None else 0.0
-            except (TypeError, ValueError):
-                distance = 0.0
-            total_distance += distance
-
-            power = row.get("avg_power")
-            try:
-                power = float(power) if power is not None else None
-            except (TypeError, ValueError):
-                power = None
-            if power is not None and power > 0:
-                weighted_power += power * row_duration
-                power_time += row_duration
-
-        if not valid_hr or total_distance <= 0:
-            continue
-
-        avg_hr = weighted_hr / duration
-        speed_kmh = total_distance / duration * 3600.0
-        candidate = {"hr": avg_hr, "speed_kmh": speed_kmh, "ef": speed_kmh / avg_hr}
-        if power_time > 0:
-            avg_power = weighted_power / power_time
-            candidate["power"] = avg_power
-            candidate["ef_power"] = avg_power / avg_hr
-        candidates.append(candidate)
-
-    if len(candidates) < 2:
-        return
-
-    first = candidates[0]
-    last = candidates[-1]
-    first_ef = first["ef"]
-    if first_ef <= 0:
-        return
-
-    result = {
-        "work_reps": len(candidates),
-        "pace_ef_drift_pct": round((first_ef - last["ef"]) / first_ef * 100.0, 1),
-        "hr_delta_bpm": round(last["hr"] - first["hr"], 1),
-    }
-
-    if "ef_power" in first and "ef_power" in last and first["ef_power"] > 0:
-        result["power_ef_drift_pct"] = round((first["ef_power"] - last["ef_power"]) / first["ef_power"] * 100.0, 1)
-        result["power_delta_w"] = round(last["power"] - first["power"], 1)
-
-    activity["interval_drift"] = result
-
-
-def _reorder_activity(activity):
-    """Put compact activity fields in stable analysis-priority order."""
-    priority = (
-        "name", "activity_id", "type",
-        "distance", "time", "elapsed_time", "moving_time", "avg_pace", "gap",
-        "avg_hr", "max_hr", "recovery_hr",
-        "elevation_gain", "elevation_loss", "calories",
-        "avg_power", "normalized_power", "max_power",
-        "avg_run_cadence", "max_run_cadence", "avg_ground_contact_time", "stride_length",
-        "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
-        "training_effect", "activity_vo2max", "load", "exercise_load", "recovery_time_hours",
-        "interval_drift", "decoupling",
-        "start_time_local", "weather",
-        "hr_zones", "power_zones", "lap_count", "splits",
-        "parent_activity_id", "units",
-    )
-    ordered = {}
-    for key in priority:
-        if key in activity and activity[key] is not None:
-            ordered[key] = activity[key]
-    for key, value in activity.items():
-        if key not in ordered and value is not None:
-            ordered[key] = value
-    return ordered
-
-
-def compact_activity(activity):
-    activity = compact_keys(activity)
-    for key in ("duration_min", "aerobic_te", "anaerobic_te", "training_effect_label"):
-        activity.pop(key, None)
-    _calculate_interval_drift(activity)
-    split_key = next((key for key in ("splits", "laps") if key in activity), None)
-    if split_key:
-        splits = activity[split_key]
-        if isinstance(splits, list):
-            splits = [{key: value for key, value in row.items() if key != "time_seconds"} if isinstance(row, dict) else row for row in splits]
-        activity[split_key] = to_columnar(splits)
-    activity.pop("units", None)
-    return _reorder_activity(activity)
-
-
-def compact_activities(value):
-    if not isinstance(value, list):
-        return value
-    return [compact_activity(activity) if isinstance(activity, dict) else activity for activity in value]
-
-
-def _activity_units(measurement_system):
-    """Return one shared unit declaration for the complete activity snapshot."""
-    system = str(measurement_system or "metric").lower()
-    imperial = system in ("statute_us", "statute_uk", "statute")
-    return {
-        "distance": "mi" if imperial else "km",
-        "pace": "min/mi" if imperial else "min/km",
-        "elevation": "ft" if imperial else "m",
-        "stride_length": "ft" if imperial else "m",
-        "vertical_oscillation": "in" if imperial else "cm",
-        "temperature": "°F" if imperial and system == "statute_us" else "°C",
-        "wind_speed": "mph" if imperial else "m/s",
-        "precipitation": "in" if system == "statute_us" else "mm",
-    }
 
 
 def load_json(path):
@@ -259,146 +20,20 @@ def load_json(path):
     return payload
 
 
-def split_payload(payload):
-    """Build both outputs without writing an intermediate metrics representation."""
-    activity_key = next((key for key in ACTIVITY_KEYS if key in payload), None)
-    if activity_key is None:
-        raise KeyError("Could not find the activity section")
-
-    metrics = compact_metrics(payload)
-    measurement_system = payload.get("_measurement_system", "metric")
-    metrics = apply_metrics_units(metrics, measurement_system)
-    activities = {
-        "date": payload.get("date"),
-        "units": _activity_units(measurement_system),
-        "activities": compact_activities(payload.get(activity_key)),
-    }
-    return metrics, activities
-
-
-def _compact_array_property(text, property_name):
-    marker = f'"{property_name}": ['
-    search_from = 0
-    while True:
-        marker_pos = text.find(marker, search_from)
-        if marker_pos < 0:
-            break
-        array_start = marker_pos + len(f'"{property_name}": ')
-        depth = 0
-        in_string = False
-        escaped = False
-        array_end = None
-        for i in range(array_start, len(text)):
-            ch = text[i]
-            if in_string:
-                if escaped:
-                    escaped = False
-                elif ch == "\\":
-                    escaped = True
-                elif ch == '"':
-                    in_string = False
-                continue
-            if ch == '"':
-                in_string = True
-            elif ch == '[':
-                depth += 1
-            elif ch == ']':
-                depth -= 1
-                if depth == 0:
-                    array_end = i
-                    break
-        if array_end is None:
-            break
-        values = json.loads(text[array_start:array_end + 1])
-        compact = json.dumps(values, ensure_ascii=False, separators=(", ", ": "))
-        text = text[:array_start] + compact + text[array_end + 1:]
-        search_from = array_start + len(compact)
-    return text
-
-
-def _compact_data_arrays(text):
-    text = _compact_array_property(text, "columns")
-    marker = '"data": ['
-    search_from = 0
-    while True:
-        marker_pos = text.find(marker, search_from)
-        if marker_pos < 0:
-            break
-        array_start = marker_pos + len('"data": ')
-        depth = 0
-        in_string = False
-        escaped = False
-        array_end = None
-        for i in range(array_start, len(text)):
-            ch = text[i]
-            if in_string:
-                if escaped:
-                    escaped = False
-                elif ch == "\\":
-                    escaped = True
-                elif ch == '"':
-                    in_string = False
-                continue
-            if ch == '"':
-                in_string = True
-            elif ch == '[':
-                depth += 1
-            elif ch == ']':
-                depth -= 1
-                if depth == 0:
-                    array_end = i
-                    break
-        if array_end is None:
-            break
-        rows = json.loads(text[array_start:array_end + 1])
-        indent = len(text[:marker_pos].rsplit("\n", 1)[-1])
-        row_indent = " " * (indent + 2)
-        row_text = "[\n" + ",\n".join(row_indent + json.dumps(row, ensure_ascii=False, separators=(", ", ": ")) for row in rows) + "\n" + " " * indent + "]"
-        text = text[:array_start] + row_text + text[array_end + 1:]
-        search_from = array_start + len(row_text)
-    return text
-
-
-def _render_metrics_json(payload):
-    items = list(payload.items())
-    lines = ["{"]
-    compact_tail = False
-    for index, (key, value) in enumerate(items):
-        if key == "training_history":
-            compact_tail = True
-        if compact_tail:
-            rendered = json.dumps(value, ensure_ascii=False, separators=(",", ":"))
-            line = "  " + json.dumps(key, ensure_ascii=False) + ": " + rendered
-        else:
-            block = json.dumps({key: value}, ensure_ascii=False, indent=2).splitlines()
-            line = "\n".join(block[1:-1])
-        if index < len(items) - 1:
-            line += ","
-        lines.append(line)
-    lines.append("}")
-    return "\n".join(lines) + "\n"
-
-
 def write_json(path, payload, activity_compact=False):
-    tmp = f"{path}.tmp"
-    if activity_compact:
-        text = json.dumps(payload, ensure_ascii=False, indent=2)
-        text = _compact_data_arrays(text)
-    else:
-        text = _render_metrics_json(payload)
-    with open(tmp, "w", encoding="utf-8") as fh:
-        fh.write(text)
-    os.replace(tmp, path)
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    with open(path, "w", encoding="utf-8") as fh:
+        if activity_compact:
+            json.dump(payload, fh, ensure_ascii=False, separators=(",", ":"))
+        else:
+            json.dump(payload, fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
 
 
-def refresh_latest_activities(data_dir, target_date, dated_activities, has_activities, today_date=None):
-    if today_date is None:
-        today_date = datetime.now(LOCAL_TZ).date()
-    if target_date != today_date or not has_activities or not os.path.isfile(dated_activities):
-        return False
-    latest_path = os.path.join(data_dir, "latest_activities.json")
-    shutil.copyfile(dated_activities, latest_path)
-    return True
+def split_payload(payload):
+    metrics = {k: v for k, v in payload.items() if k != "activities"}
+    activities = payload.get("activities", [])
+    return metrics, activities
 
 
 def main():
@@ -410,7 +45,7 @@ def main():
 
     today = datetime.now(LOCAL_TZ).date()
     target_date = datetime.strptime(args.date, "%Y-%m-%d").date() if args.date else today
-    input_path = args.input or os.path.join(args.data_dir, "garmin_latest.json")
+    input_path = args.input or os.path.join(args.data_dir, "latest.json")
     payload = load_json(input_path)
     metrics, activities = split_payload(payload)
 
@@ -418,7 +53,6 @@ def main():
     dated_activities = os.path.join(args.data_dir, f"activities_{target_date:%Y-%m-%d}.json")
     write_json(dated_metrics, metrics)
     write_json(dated_activities, activities, activity_compact=True)
-    refresh_latest_activities(args.data_dir, target_date, dated_activities, bool(activities.get("activities")), today)
 
 
 if __name__ == "__main__":
