@@ -16,7 +16,9 @@
       "activity_id": 24277674810,
       "type": "running",
       "distance": 6.13,
-      "duration_min": 42.38,
+      "time": "42:23",
+      "elapsed_time": "50:07",
+      "moving_time": "42:20",
       "avg_pace": "6:55",
       "gap": "6:57",
       "avg_hr": 152.0,
@@ -24,10 +26,15 @@
       "recovery_hr": 24,
       "elevation_gain": 6.0,
       "elevation_loss": 9.0,
-      "aerobic_te": 3.6,
-      "anaerobic_te": 0.5,
       "load": 138.2,
       "start_time_local": "2026-09-08T06:31:13.0",
+      "training_effect": {
+        "label": "VO2MAX",
+        "aerobic": 3.6,
+        "aerobic_message": "IMPROVING_VO2_MAX",
+        "anaerobic": 0.5,
+        "anaerobic_message": "NO_ANAEROBIC_BENEFIT"
+      },
       "interval_drift": {
         "work_reps": 5,
         "pace_ef_drift_pct": -19.7,
@@ -77,16 +84,6 @@
           ["Zone 4 - Long Interval", "315-362 W", "13:26", 40],
           ["Zone 5 - Short Interval", ">362 W", "0:05", 0]
         ]
-      },
-      "time": "42:23",
-      "elapsed_time": "50:07",
-      "moving_time": "42:20",
-      "training_effect": {
-        "label": "VO2MAX",
-        "aerobic": 3.6,
-        "aerobic_message": "IMPROVING_VO2_MAX",
-        "anaerobic": 0.5,
-        "anaerobic_message": "NO_ANAEROBIC_BENEFIT"
       },
       "lap_count": 12
     }
