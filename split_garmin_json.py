@@ -103,6 +103,14 @@ def _ordered_dict(source, key_order):
     return {key: source[key] for key in key_order if key in source and source[key] is not None}
 
 
+def _duration(seconds):
+    try:
+        total = int(round(float(seconds)))
+    except (TypeError, ValueError):
+        return None
+    return f"{total // 60}:{total % 60:02d}" if total >= 0 else None
+
+
 def _normalize_splits(activity):
     splits = activity.get("splits")
     if isinstance(splits, dict) and isinstance(splits.get("columns"), list) and isinstance(splits.get("data"), list):
@@ -118,10 +126,18 @@ def _normalize_splits(activity):
     raw_splits = activity.get("activity_splits")
     if not isinstance(raw_splits, list):
         return None
-    return {
-        "columns": list(SPLIT_COLUMN_ORDER),
-        "data": [[split.get(column) for column in SPLIT_COLUMN_ORDER] for split in raw_splits if isinstance(split, dict)],
-    }
+    rows = []
+    for split in raw_splits:
+        if not isinstance(split, dict):
+            continue
+        row = []
+        for column in SPLIT_COLUMN_ORDER:
+            value = split.get(column)
+            if column == "elapsed_time" and value is None:
+                value = _duration(split.get("elapsedDuration"))
+            row.append(value)
+        rows.append(row)
+    return {"columns": list(SPLIT_COLUMN_ORDER), "data": rows}
 
 
 def _normalize_nested(activity):
