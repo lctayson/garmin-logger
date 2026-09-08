@@ -85,8 +85,6 @@ def _add_activity_detail_fields(api, activity):
     elapsed = first(summary.get("elapsedDuration"), detail.get("elapsedDuration"), duration)
     moving = first(summary.get("movingDuration"), detail.get("movingDuration"), duration)
 
-    # Keep duration_min for backward compatibility, but add the explicit
-    # three timing values so stopped/paused time is analytically visible.
     if duration is not None:
         activity["time"] = _format_time(duration)
     if elapsed is not None:
@@ -110,8 +108,6 @@ def _add_activity_detail_fields(api, activity):
     training_effect = {k: v for k, v in training_effect.items() if v is not None}
     if training_effect:
         activity["training_effect"] = training_effect
-        if label is not None:
-            activity["training_effect_label"] = label
 
     activity_vo2max = first(
         summary.get("vO2MaxValue"), summary.get("vo2MaxValue"),
@@ -139,8 +135,6 @@ def _add_activity_detail_fields(api, activity):
         except (TypeError, ValueError):
             pass
 
-    # The existing split representation is columnar. Insert elapsed_time as a
-    # sibling of time while preserving the existing column/data format.
     splits = activity.get("activity_splits") or activity.get("splits")
     if isinstance(splits, dict) and isinstance(splits.get("columns"), list) and isinstance(splits.get("data"), list):
         columns = list(splits["columns"])
@@ -187,10 +181,6 @@ def get_activities(api, target_date):
     enriched = [_add_activity_detail_fields(api, a) for a in enriched]
     enriched = [add_recovery_hr(api, a) for a in enriched]
     enriched = add_activity_zones(api, enriched)
-    # Keep internal calculations in canonical metric units, then convert only
-    # the final activity/split representation to the Garmin account's
-    # measurement preference. Unit metadata is stored once per activity and
-    # applies to both the activity-level values and its splits.
     return apply_user_units(api, enriched)
 
 
