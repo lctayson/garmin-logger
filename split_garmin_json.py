@@ -114,7 +114,7 @@ def normalize_activity(activity):
     out.pop("activityId", None)
     out.pop("average_hr", None)
     out.pop("exercise_load", None)
-    for key in ("duration_min", "aerobic_te", "anaerobic_te", "training_effect_label", "decoupling"):
+    for key in ("duration_min", "aerobic_te", "anaerobic_te", "training_effect_label"):
         out.pop(key, None)
     normalized_splits = _normalize_splits(out)
     out.pop("activity_splits", None)
