@@ -112,7 +112,7 @@ def _convert_activity(activity, api):
         out["avg_hr"] = out.pop("average_hr")
     else:
         out.pop("average_hr", None)
-    for key in ("duration_min", "aerobic_te", "anaerobic_te", "training_effect_label", "decoupling"):
+    for key in ("duration_min", "aerobic_te", "anaerobic_te", "training_effect_label"):
         out.pop(key, None)
     if "distance_km" in out:
         try:
