@@ -60,6 +60,84 @@ def _normalize_training_effect_message(value):
     return value
 
 
+def _add_interval_drift(activity):
+    """Add interval-to-interval drift metrics from Garmin lap splits.
+
+    Work reps are ACTIVE splits lasting at least two minutes. The first and
+    last work rep are compared so the metric reflects progression across the
+    structured workout without changing the underlying split data.
+    """
+    if not isinstance(activity, dict) or str(activity.get("type", "")).lower() != "running":
+        return activity
+    splits = activity.get("activity_splits")
+    if not isinstance(splits, list):
+        return activity
+
+    work = []
+    for split in splits:
+        if not isinstance(split, dict) or str(split.get("step_type", "")).upper() != "ACTIVE":
+            continue
+        try:
+            seconds = float(split.get("time_seconds", 0))
+        except (TypeError, ValueError):
+            seconds = 0.0
+        if seconds < 120:
+            continue
+        if split.get("avg_pace") is None or split.get("avg_hr") is None:
+            continue
+        work.append(split)
+
+    if len(work) < 2:
+        return activity
+
+    def pace_seconds(value):
+        if not isinstance(value, str) or ":" not in value:
+            return None
+        try:
+            minutes, seconds = value.split(":", 1)
+            total = float(minutes) * 60.0 + float(seconds)
+            return total if total > 0 else None
+        except (TypeError, ValueError):
+            return None
+
+    first = work[0]
+    last = work[-1]
+    first_pace = pace_seconds(first.get("avg_pace"))
+    last_pace = pace_seconds(last.get("avg_pace"))
+    try:
+        first_hr = float(first.get("avg_hr"))
+        last_hr = float(last.get("avg_hr"))
+    except (TypeError, ValueError):
+        return activity
+    if first_pace is None or last_pace is None or first_hr <= 0 or last_hr <= 0:
+        return activity
+
+    # Pace efficiency is speed/HR. Positive drift means efficiency worsened.
+    first_ef = (1.0 / first_pace) / first_hr
+    last_ef = (1.0 / last_pace) / last_hr
+    pace_drift = (last_ef / first_ef - 1.0) * 100.0
+
+    result = {
+        "work_reps": len(work),
+        "pace_ef_drift_pct": round(pace_drift, 1),
+        "hr_delta_bpm": round(last_hr - first_hr, 1),
+    }
+
+    try:
+        first_power = float(first.get("avg_power_w"))
+        last_power = float(last.get("avg_power_w"))
+    except (TypeError, ValueError):
+        first_power = last_power = None
+    if first_power is not None and last_power is not None and first_power > 0:
+        first_power_ef = first_power / first_hr
+        last_power_ef = last_power / last_hr
+        result["power_ef_drift_pct"] = round((last_power_ef / first_power_ef - 1.0) * 100.0, 1)
+        result["power_delta_w"] = round(last_power - first_power, 1)
+
+    activity["interval_drift"] = result
+    return activity
+
+
 def _add_activity_detail_fields(api, activity):
     """Add high-value Garmin detail fields without changing the raw exporter."""
     activity_id = activity.get("activityId")
@@ -177,6 +255,7 @@ def get_activities(api, target_date):
     date_str = target_date.isoformat() if hasattr(target_date, "isoformat") else str(target_date)
     activities = _original_get_activities(api, date_str)
     enriched = [enrich_activity(api, dict(a)) for a in activities or []]
+    enriched = [_add_interval_drift(a) for a in enriched]
     enriched = [_add_activity_recovery_hr(api, a) for a in enriched]
     enriched = [_add_activity_detail_fields(api, a) for a in enriched]
     enriched = [add_recovery_hr(api, a) for a in enriched]
