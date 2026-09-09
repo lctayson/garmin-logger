@@ -74,22 +74,19 @@ def _normalize_training_effect_message(value):
     return value
 
 def _add_interval_drift(activity):
-    """Add interval-to-interval drift metrics from Garmin lap splits.
-
-    Work reps are ACTIVE splits lasting at least two minutes. The first and
-    last work rep are compared so the metric reflects progression across the
-    structured workout without changing the underlying split data.
-    """
+    """Add interval-to-interval drift metrics from Garmin lap splits."""
     if not isinstance(activity, dict) or str(activity.get("type", "")).lower() != "running":
         return activity
+
     splits = activity.get("activity_splits")
-    if not isinstance(splits, list):
+    if not isinstance(splits, list) or not splits:
+        split_table = activity.get("splits")
+        if isinstance(split_table, dict) and isinstance(split_table.get("columns"), list) and isinstance(split_table.get("data"), list):
+            columns = split_table["columns"]
+            splits = [dict(zip(columns, row)) for row in split_table["data"] if isinstance(row, list)]
+    if not isinstance(splits, list) or not splits:
         return activity
 
-    # A recovery split followed by short ACTIVE reps is the characteristic
-    # pattern of an easy run with strides/hills. Do not mistake the preceding
-    # long easy laps for interval work. Genuine long-interval sessions still
-    # qualify because their ACTIVE work reps are all >= 2 minutes.
     has_recovery = any(
         isinstance(split, dict)
         and str(split.get("step_type", "")).upper() in {"RECOVERY", "REST"}
@@ -143,7 +140,6 @@ def _add_interval_drift(activity):
     if first_pace is None or last_pace is None or first_hr <= 0 or last_hr <= 0:
         return activity
 
-    # Pace efficiency is speed/HR. Positive drift means efficiency worsened.
     first_ef = (1.0 / first_pace) / first_hr
     last_ef = (1.0 / last_pace) / last_hr
     pace_drift = (last_ef / first_ef - 1.0) * 100.0
@@ -277,9 +273,9 @@ def get_activities(api, target_date):
     date_str = target_date.isoformat() if hasattr(target_date, "isoformat") else str(target_date)
     activities = _original_get_activities(api, date_str)
     enriched = [enrich_activity(api, dict(a)) for a in activities or []]
+    enriched = [_add_activity_detail_fields(api, a) for a in enriched]
     enriched = [_add_interval_drift(a) for a in enriched]
     enriched = [_add_activity_recovery_hr(api, a) for a in enriched]
-    enriched = [_add_activity_detail_fields(api, a) for a in enriched]
     enriched = [add_recovery_hr(api, a) for a in enriched]
     enriched = add_activity_zones(api, enriched)
     return apply_user_units(api, enriched)
