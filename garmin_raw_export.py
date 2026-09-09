@@ -8,7 +8,7 @@ fields that the normalized output does not currently use.
 import argparse
 import json
 import os
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from garminconnect import Garmin
@@ -124,6 +124,45 @@ def export_date(api, target_date, output_root=RAW_ROOT):
     return paths
 
 
+# Daily (non-activity-specific) endpoints. Each entry captures the raw,
+# untouched response so field-name mismatches in the analysis pipeline
+# (e.g. garmin_activity_enrichment._running_tolerance) can be debugged
+# against real data instead of guessed at.
+_RUNNING_TOLERANCE_LOOKBACK_DAYS = 6  # matches _running_tolerance()'s 7-day window
+
+
+def export_running_tolerance(api, target_date, output_root=RAW_ROOT):
+    """Save the raw Running Tolerance response for the 7-day window ending on target_date."""
+    start_date = target_date - timedelta(days=_RUNNING_TOLERANCE_LOOKBACK_DAYS)
+    out_dir = Path(output_root) / "daily" / "running_tolerance" / f"{target_date.year:04d}" / f"{target_date.month:02d}"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    path = out_dir / f"{target_date.isoformat()}.json"
+
+    method = getattr(api, "get_running_tolerance", None)
+    if method is None:
+        endpoint = {"available": False, "error": "Garmin client has no method get_running_tolerance"}
+    else:
+        try:
+            response = method(start_date.isoformat(), target_date.isoformat(), aggregation="daily")
+            endpoint = {"available": True, "data": _json_safe(response)}
+        except Exception as exc:
+            endpoint = {"available": True, "error": f"{type(exc).__name__}: {exc}"}
+
+    payload = {
+        "source": "Garmin Connect API",
+        "retrieved_at": datetime.now(timezone.utc).isoformat(),
+        "target_date": target_date.isoformat(),
+        "window_start": start_date.isoformat(),
+        "window_end": target_date.isoformat(),
+        "endpoints": {"running_tolerance": endpoint},
+    }
+    path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    return path
+
+
 def main():
     parser = argparse.ArgumentParser(description="Export raw Garmin activity API responses.")
     parser.add_argument("--date", help="Local Garmin activity date (YYYY-MM-DD); defaults to today")
@@ -144,6 +183,9 @@ def main():
     print(f"Exported {len(paths)} raw activity response(s).")
     for path in paths:
         print(path)
+
+    tolerance_path = export_running_tolerance(api, target_date, Path(args.output_root))
+    print(f"Exported raw running tolerance response: {tolerance_path}")
 
 
 if __name__ == "__main__":
