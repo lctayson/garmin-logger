@@ -240,5 +240,14 @@
     ["2026-09-09", 53, 31, 73, 20]
   ]
   },
-  "_measurement_system": "metric"
+  "units": {
+    "distance": "km",
+    "pace": "min/km",
+    "elevation": "m",
+    "stride_length": "m",
+    "vertical_oscillation": "cm",
+    "temperature": "°C",
+    "wind_speed": "m/s",
+    "precipitation": "mm"
+  }
 }
