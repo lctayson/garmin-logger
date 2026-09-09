@@ -10,6 +10,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from compact_metrics import compact_metrics
+from metrics_units import apply_metrics_units
 
 LOCAL_TZ = ZoneInfo("Asia/Manila")
 
@@ -217,6 +218,7 @@ def main():
     metrics, activities = split_payload(payload)
     activities = normalize_activities(activities)
     metrics = compact_metrics(metrics)
+    metrics = apply_metrics_units(metrics, payload.get("_measurement_system"))
     dated_metrics = os.path.join(args.data_dir, f"metrics_{target_date:%Y-%m-%d}.json")
     dated_activities = os.path.join(args.data_dir, f"activities_{target_date:%Y-%m-%d}.json")
     write_json(dated_metrics, metrics)
