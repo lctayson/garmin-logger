@@ -9,6 +9,8 @@ import os
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
+from compact_metrics import compact_metrics
+
 LOCAL_TZ = ZoneInfo("Asia/Manila")
 
 ACTIVITY_KEY_ORDER = (
@@ -214,6 +216,7 @@ def main():
     payload = load_json(input_path)
     metrics, activities = split_payload(payload)
     activities = normalize_activities(activities)
+    metrics = compact_metrics(metrics)
     dated_metrics = os.path.join(args.data_dir, f"metrics_{target_date:%Y-%m-%d}.json")
     dated_activities = os.path.join(args.data_dir, f"activities_{target_date:%Y-%m-%d}.json")
     write_json(dated_metrics, metrics)
