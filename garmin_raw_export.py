@@ -85,9 +85,10 @@ def export_activity(api, activity, output_root=RAW_ROOT):
         return None
 
     activity_date = _activity_date(activity, date.today())
+    activity_type = activity.get("activityType", {}).get("typeKey") or "unknown"
     out_dir = Path(output_root) / "activity_details" / activity_date[:4] / activity_date[5:7]
     out_dir.mkdir(parents=True, exist_ok=True)
-    path = out_dir / f"{activity_id}.json"
+    path = out_dir / f"{activity_date}_{activity_type}_{activity_id}.json"
 
     endpoints = {
         "activities_by_date": {"available": True, "data": _json_safe(activity)},
