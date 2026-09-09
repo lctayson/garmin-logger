@@ -869,6 +869,9 @@
       "elevation_gain": 2.0,
       "elevation_loss": 4.0,
       "start_time_local": "2026-09-09T06:31:11.0",
+      "performance_condition_start": 0,
+      "performance_condition_end": -3,
+      "performance_condition_avg": -2.2,
       "training_effect": {
         "label": "AEROBIC_BASE",
         "aerobic": 2.8,
@@ -877,6 +880,11 @@
         "anaerobic_message": "MINOR_ANAEROBIC_BENEFIT"
       },
       "exercise_load": 83.5,
+      "begin_stamina_pct": 99.0,
+      "end_stamina_pct": 84.0,
+      "min_stamina_pct": 79.0,
+      "stamina_used_pct": -11.0,
+      "impact_load": 6530.0,
       "interval_drift": {
         "work_reps": 5,
         "pace_ef_drift_pct": -12.7,
@@ -1431,9 +1439,8 @@
         "humidity_pct": 94.0,
         "wind_speed": 2.0,
         "wind_direction_deg": 230.0,
-        "feels_like": 78.0,
-        "dew_point": 76.0,
-        "dew_point_unit": "°C",
+        "feels_like": 25.6,
+        "dew_point": 24.4,
         "condition": "Light Rain"
       },
       "hr_zones": {
