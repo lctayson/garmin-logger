@@ -28,6 +28,7 @@ ACTIVITY_KEY_ORDER = (
 TRAINING_EFFECT_KEY_ORDER = ("label", "aerobic", "aerobic_message", "anaerobic", "anaerobic_message")
 INTERVAL_DRIFT_KEY_ORDER = ("work_reps", "pace_ef_drift_pct", "hr_delta_bpm", "power_ef_drift_pct", "power_delta_w")
 WEATHER_KEY_ORDER = ("temperature", "humidity_pct", "wind_speed", "wind_direction_deg")
+ZONE_KEY_ORDER = ("columns", "data")
 DEFAULT_UNITS = {"distance": "km", "pace": "min/km", "elevation": "m", "stride_length": "m", "vertical_oscillation": "cm", "temperature": "°C", "wind_speed": "m/s", "precipitation": "mm"}
 
 SPLIT_COLUMN_ORDER = (
