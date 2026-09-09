@@ -1,7 +1,7 @@
 from metrics_units import apply_metrics_units
 
 
-def test_metric_units_preserve_canonical_metric_keys():
+def test_metric_units_use_unit_neutral_keys():
     metrics = {
         "date": "2026-09-09",
         "training_history": {"7_day": {"distance_km": 34.32}},
@@ -24,8 +24,8 @@ def test_metric_units_preserve_canonical_metric_keys():
         "wind_speed": "m/s",
         "precipitation": "mm",
     }
-    assert result["training_history"]["7_day"]["distance_km"] == 34.32
-    assert result["trend_recent_daily"]["columns"] == ["date", "distance_km", "elevation_m"]
+    assert result["training_history"]["7_day"]["distance"] == 34.32
+    assert result["trend_recent_daily"]["columns"] == ["date", "distance", "elevation"]
     assert result["trend_recent_daily"]["data"][0][1:] == [6.1, 12.0]
     assert "_measurement_system" not in result
 
