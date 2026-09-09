@@ -3,6 +3,7 @@ from datetime import timedelta
 
 import garmin_to_json as generator
 from activity_zones import add_activity_zones
+from activity_units import KM_TO_MI, _is_imperial, _unit_system
 
 
 SPLIT_COLUMN_ORDER = (
@@ -50,29 +51,45 @@ def _running_tolerance(api, target_date):
     rows = [r for r in rows if isinstance(r, dict)]
     if not rows:
         return None
-    latest = max(rows, key=lambda r: str(r.get("calendarDate") or r.get("date") or ""))
-    acute = generator.deep_get(latest, ["totalImpactLoad", "acuteImpactLoad", "acute_impact_load"])
-    tolerance = generator.deep_get(latest, ["tolerance", "runningTolerance", "weeklyTolerance"])
-    if acute is None or tolerance is None:
+    latest = max(rows, key=lambda r: str(r.get("calendarDate") or ""))
+
+    # Garmin's real fields (confirmed against a raw capture): acuteImpactLoad,
+    # acuteTolerance, and acuteDistance are each already a 7-day rolling value
+    # for that calendar date, expressed in meters -- not a per-day figure to
+    # sum across rows, and not the tolerance/distance key names originally
+    # guessed here.
+    acute_m = generator.deep_get(latest, ["acuteImpactLoad"])
+    tolerance_m = generator.deep_get(latest, ["acuteTolerance"])
+    distance_m = generator.deep_get(latest, ["acuteDistance"])
+    feedback = latest.get("runningToleranceFeedBackPhrase")
+    if acute_m is None or tolerance_m is None:
         return None
-    acute_km = generator.safe_float(acute, 1)
-    tolerance_km = generator.safe_float(tolerance, 1)
-    if acute_km is None or tolerance_km is None or tolerance_km <= 0:
+    try:
+        acute_km = round(float(acute_m) / 1000.0, 1)
+        tolerance_km = round(float(tolerance_m) / 1000.0, 1)
+    except (TypeError, ValueError):
         return None
-    actual_7d_m = 0.0
-    for row in rows:
-        distance = generator.deep_get(row, ["totalDistance", "distance"])
+    if tolerance_km <= 0:
+        return None
+    distance_km = None
+    if distance_m is not None:
         try:
-            if distance is not None:
-                actual_7d_m += float(distance)
+            distance_km = round(float(distance_m) / 1000.0, 1)
         except (TypeError, ValueError):
-            pass
+            distance_km = None
     percent = round(acute_km / tolerance_km * 100.0, 1)
-    status = "Exceeded" if percent > 100 else "High" if percent >= 75 else "Medium" if percent >= 50 else "Low"
+    if isinstance(feedback, str) and feedback:
+        status = feedback.replace("_LOAD", "").replace("_", " ").title()
+    else:
+        status = "Exceeded" if percent > 100 else "High" if percent >= 75 else "Medium" if percent >= 50 else "Low"
+
+    imperial = _is_imperial(_unit_system(api))
+    factor = KM_TO_MI if imperial else 1.0
     return {
-        "acute_impact_load_km": acute_km,
-        "weekly_tolerance_km": tolerance_km,
-        "actual_7_day_distance_km": generator.safe_float(actual_7d_m / 1000.0, 1),
+        "acute_impact_load": round(acute_km * factor, 1),
+        "weekly_tolerance": round(tolerance_km * factor, 1),
+        "actual_7_day_distance": round(distance_km * factor, 1) if distance_km is not None else None,
+        "distance_unit": "mi" if imperial else "km",
         "status": status,
         "percent_of_tolerance": percent,
     }
