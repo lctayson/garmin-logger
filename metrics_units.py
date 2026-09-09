@@ -15,7 +15,7 @@ def _convert_value(key, value, imperial):
         return value
     if key.endswith("_km"):
         return round(value * (KM_TO_MI if imperial else 1.0), 2)
-    if key in {"elevation_gain_m", "elevation_loss_m"} or key.endswith("_elevation_m"):
+    if key in {"elevation_gain_m", "elevation_loss_m"} or key.endswith("_elevation_m") or key == "elevation_m":
         return round(value * (M_TO_FT if imperial else 1.0), 1)
     if key in {"stride_length_m", "avg_stride_length_m"}:
         return round(value * (M_TO_FT if imperial else 1.0), 2)
@@ -25,11 +25,9 @@ def _convert_value(key, value, imperial):
 
 
 def _rename_key(key, imperial):
-    if not imperial:
-        return key
     if key.endswith("_km"):
         return key[:-3]
-    if key in {"elevation_gain_m", "elevation_loss_m"} or key.endswith("_elevation_m"):
+    if key in {"elevation_gain_m", "elevation_loss_m"} or key.endswith("_elevation_m") or key == "elevation_m":
         return key[:-2]
     if key in {"stride_length_m", "avg_stride_length_m"}:
         return "stride_length"
