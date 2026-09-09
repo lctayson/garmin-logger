@@ -1,0 +1,13 @@
+{
+  "endpoints": {
+    "running_tolerance": {
+      "available": true,
+      "data": []
+    }
+  },
+  "retrieved_at": "2026-09-09T12:07:04.406567+00:00",
+  "source": "Garmin Connect API",
+  "target_date": "2019-03-24",
+  "window_end": "2019-03-24",
+  "window_start": "2019-03-18"
+}
