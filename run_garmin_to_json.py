@@ -73,6 +73,24 @@ def _normalize_training_effect_message(value):
         return "_".join(parts[:-1])
     return value
 
+def _find_nested_value(source, keys):
+    """Find the first non-empty value for any key recursively."""
+    if isinstance(source, dict):
+        for key in keys:
+            value = source.get(key)
+            if value is not None and value != "":
+                return value
+        for value in source.values():
+            found = _find_nested_value(value, keys)
+            if found is not None:
+                return found
+    elif isinstance(source, list):
+        for value in source:
+            found = _find_nested_value(value, keys)
+            if found is not None:
+                return found
+    return None
+
 def _add_interval_drift(activity):
     """Add interval-to-interval drift metrics from Garmin lap splits."""
     if not isinstance(activity, dict) or str(activity.get("type", "")).lower() != "running":
@@ -85,23 +103,6 @@ def _add_interval_drift(activity):
             columns = split_table["columns"]
             splits = [dict(zip(columns, row)) for row in split_table["data"] if isinstance(row, list)]
     if not isinstance(splits, list) or not splits:
-        return activity
-
-    has_recovery = any(
-        isinstance(split, dict)
-        and str(split.get("step_type", "")).upper() in {"RECOVERY", "REST"}
-        for split in splits
-    )
-    has_short_active = False
-    if has_recovery:
-        for split in splits:
-            if not isinstance(split, dict) or str(split.get("step_type", "")).upper() != "ACTIVE":
-                continue
-            seconds = _split_duration_seconds(split)
-            if seconds is not None and 0 < seconds < 120:
-                has_short_active = True
-                break
-    if has_recovery and has_short_active:
         return activity
 
     work = []
@@ -210,6 +211,10 @@ def _add_activity_detail_fields(api, activity):
         detail.get("vO2MaxValue"), detail.get("vo2MaxValue"),
         activity.get("vO2MaxValue"), activity.get("vo2MaxValue")
     )
+    if activity_vo2max is None:
+        activity_vo2max = _find_nested_value(detail, ("vO2MaxValue", "vo2MaxValue", "vo2MaxPreciseValue"))
+    if activity_vo2max is None:
+        activity_vo2max = _find_nested_value(activity, ("vO2MaxValue", "vo2MaxValue", "vo2MaxPreciseValue"))
     if activity_vo2max is not None:
         try:
             activity["activity_vo2max"] = float(activity_vo2max)
