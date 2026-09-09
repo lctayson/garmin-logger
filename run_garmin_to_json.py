@@ -48,6 +48,23 @@ def _format_time(seconds):
         return f"{hours}:{minutes:02d}:{secs:02d}"
     return f"{minutes}:{secs:02d}"
 
+def _split_duration_seconds(split):
+    """Return split duration in seconds from raw seconds or formatted time."""
+    value = split.get("time_seconds") if isinstance(split, dict) else None
+    if value is not None:
+        try:
+            return float(value)
+        except (TypeError, ValueError):
+            pass
+    text = split.get("time") if isinstance(split, dict) else None
+    if isinstance(text, str) and ":" in text:
+        try:
+            minutes, seconds = text.split(":", 1)
+            return float(minutes) * 60.0 + float(seconds)
+        except (TypeError, ValueError):
+            pass
+    return None
+
 def _normalize_training_effect_message(value):
     if not isinstance(value, str) or not value:
         return None
@@ -83,11 +100,8 @@ def _add_interval_drift(activity):
         for split in splits:
             if not isinstance(split, dict) or str(split.get("step_type", "")).upper() != "ACTIVE":
                 continue
-            try:
-                seconds = float(split.get("time_seconds", 0))
-            except (TypeError, ValueError):
-                seconds = 0.0
-            if 0 < seconds < 120:
+            seconds = _split_duration_seconds(split)
+            if seconds is not None and 0 < seconds < 120:
                 has_short_active = True
                 break
     if has_recovery and has_short_active:
@@ -97,11 +111,8 @@ def _add_interval_drift(activity):
     for split in splits:
         if not isinstance(split, dict) or str(split.get("step_type", "")).upper() != "ACTIVE":
             continue
-        try:
-            seconds = float(split.get("time_seconds", 0))
-        except (TypeError, ValueError):
-            seconds = 0.0
-        if seconds < 120:
+        seconds = _split_duration_seconds(split)
+        if seconds is None or seconds < 120:
             continue
         if split.get("avg_pace") is None or split.get("avg_hr") is None:
             continue
@@ -198,7 +209,11 @@ def _add_activity_detail_fields(api, activity):
     training_effect = {k: v for k, v in training_effect.items() if v is not None}
     if training_effect:
         activity["training_effect"] = training_effect
-    activity_vo2max = first(summary.get("vO2MaxValue"), summary.get("vo2MaxValue"), detail.get("vO2MaxValue"), detail.get("vo2MaxValue"))
+    activity_vo2max = first(
+        summary.get("vO2MaxValue"), summary.get("vo2MaxValue"),
+        detail.get("vO2MaxValue"), detail.get("vo2MaxValue"),
+        activity.get("vO2MaxValue"), activity.get("vo2MaxValue")
+    )
     if activity_vo2max is not None:
         try:
             activity["activity_vo2max"] = float(activity_vo2max)
