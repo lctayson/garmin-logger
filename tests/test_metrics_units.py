@@ -68,6 +68,46 @@ def test_imperial_units_convert_and_rename_variable_unit_metrics():
     assert "_measurement_system" not in result
 
 
+def test_metric_units_normalize_nested_columnar_values():
+    metrics = {
+        "trend_recent_daily": {
+            "columns": ["date", "distance", "sport_volume"],
+            "data": [[
+                "2026-09-09",
+                6.1,
+                {"running": {"activity_count": 1, "distance_km": 6.1, "duration_hours": 0.79}},
+            ]],
+        },
+        "_measurement_system": "metric",
+    }
+
+    result = apply_metrics_units(metrics, "metric")
+
+    running = result["trend_recent_daily"]["data"][0][2]["running"]
+    assert running["distance"] == 6.1
+    assert "distance_km" not in running
+
+
+def test_imperial_units_convert_nested_columnar_values():
+    metrics = {
+        "trend_recent_daily": {
+            "columns": ["date", "distance", "sport_volume"],
+            "data": [[
+                "2026-09-09",
+                6.21,
+                {"running": {"activity_count": 1, "distance_km": 10.0}},
+            ]],
+        },
+        "_measurement_system": "statute_us",
+    }
+
+    result = apply_metrics_units(metrics, "statute_us")
+
+    running = result["trend_recent_daily"]["data"][0][2]["running"]
+    assert running["distance"] == 6.21
+    assert "distance_km" not in running
+
+
 def test_compact_file_normalizes_legacy_metric_keys_using_existing_units(tmp_path):
     path = tmp_path / "latest_metrics.json"
     path.write_text(
