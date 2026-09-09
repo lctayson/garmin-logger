@@ -49,7 +49,13 @@ def _transform(obj, imperial):
             if not isinstance(row, list):
                 data.append(_transform(row, imperial))
                 continue
-            data.append([_convert_value(column, value, imperial) for column, value in zip(original_columns, row)] + row[len(original_columns):])
+            transformed = []
+            for column, value in zip(original_columns, row):
+                if isinstance(value, (dict, list)):
+                    transformed.append(_transform(value, imperial))
+                else:
+                    transformed.append(_convert_value(column, value, imperial))
+            data.append(transformed + row[len(original_columns):])
         out = dict(obj)
         out["columns"] = columns
         out["data"] = data
