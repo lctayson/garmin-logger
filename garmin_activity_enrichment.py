@@ -433,6 +433,23 @@ def enrich_activity(api, activity):
     if exercise_load is not None:
         activity["exercise_load"] = generator.safe_float(exercise_load, 1)
 
+    begin_stamina = pick(("beginPotentialStamina",))
+    end_stamina = pick(("endPotentialStamina",))
+    min_stamina = pick(("minAvailableStamina",))
+    stamina_used = pick(("differenceBodyBattery",))
+    if begin_stamina is not None:
+        activity["begin_stamina_pct"] = generator.safe_float(begin_stamina, 0)
+    if end_stamina is not None:
+        activity["end_stamina_pct"] = generator.safe_float(end_stamina, 0)
+    if min_stamina is not None:
+        activity["min_stamina_pct"] = generator.safe_float(min_stamina, 0)
+    if stamina_used is not None:
+        activity["stamina_used_pct"] = generator.safe_float(stamina_used, 0)
+
+    impact_load = pick(("impactLoad",))
+    if impact_load is not None:
+        activity["impact_load"] = generator.safe_float(impact_load, 1)
+
     gap = pick(("avgGradeAdjustedSpeed", "averageGradeAdjustedSpeed", "avgGradeAdjustedPace", "averageGAP", "avgGAP", "gap"))
     if gap is not None:
         activity["gap"] = _pace_from_speed(gap) if isinstance(gap, (int, float)) else gap
@@ -473,18 +490,25 @@ def enrich_activity(api, activity):
         wind_direction = _find_weather_value(weather, ("windDirection", "windDirectionDegrees", "windDirectionDeg"))
         if wind_direction is not None:
             weather_out["wind_direction_deg"] = generator.safe_float(wind_direction, 0)
-        feels_like_field = _find_weather_field(weather, ("feelsLike", "feelsLikeTemperature", "apparentTemperature"))
+        feels_like_field = _find_weather_field(weather, ("feelsLike", "feelsLikeTemperature", "apparentTemperature", "apparentTemp"))
         if feels_like_field is not None:
             _, raw_feels_like = feels_like_field
             feels_like = _normalize_temperature(raw_feels_like, feels_like_field[0], temperature_unit)
             if feels_like is not None:
                 weather_out["feels_like"] = feels_like
                 weather_out["feels_like_unit"] = temperature_unit
+        dew_point_field = _find_weather_field(weather, ("dewPoint", "dewPointTemperature", "dewpointC", "dewpointF"))
+        if dew_point_field is not None:
+            _, raw_dew_point = dew_point_field
+            dew_point = _normalize_temperature(raw_dew_point, dew_point_field[0], temperature_unit)
+            if dew_point is not None:
+                weather_out["dew_point"] = dew_point
+                weather_out["dew_point_unit"] = temperature_unit
         precipitation = _find_weather_value(weather, ("precipitation", "precipitationMm", "rainfall"))
         if precipitation is not None:
             weather_out["precipitation"] = generator.safe_float(precipitation, 1)
             weather_out["precipitation_unit"] = "in" if str(_get_user_unit_system(api) or "metric").lower() == "statute_us" else "mm"
-        condition = _find_weather_value(weather, ("condition", "weatherCondition", "description", "weatherType"))
+        condition = _find_weather_value(weather, ("condition", "weatherCondition", "description", "weatherType", "desc"))
         if condition is not None:
             weather_out["condition"] = condition
         if weather_out:

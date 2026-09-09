@@ -7,6 +7,7 @@ from activity_zones import add_activity_zones
 from garmin_activity_enrichment import enrich_activity, _running_tolerance
 from activity_units import apply_user_units
 from recovery_hr import add_recovery_hr
+from performance_condition import add_performance_condition
 from config import get_timezone, resolve_timezone
 
 _original_get_activities = generator.get_activities
@@ -282,6 +283,7 @@ def get_activities(api, target_date):
     enriched = [_add_interval_drift(a) for a in enriched]
     enriched = [_add_activity_recovery_hr(api, a) for a in enriched]
     enriched = [add_recovery_hr(api, a) for a in enriched]
+    enriched = [add_performance_condition(api, a) for a in enriched]
     enriched = add_activity_zones(api, enriched)
     return apply_user_units(api, enriched)
 
