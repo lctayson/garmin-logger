@@ -5,6 +5,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from metrics_units import apply_metrics_units
+
 _ACTIVITY_KEYS = {"activities", "activity_data", "activityData"}
 _TREND_KEYS = ("trend_recent_daily", "trend_long_range_weekly", "body_battery_trend")
 
@@ -251,14 +253,35 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
     return out
 
 
+def _measurement_system_from_units(units: Any) -> str:
+    """Infer the already-exported unit system for standalone compaction."""
+    if isinstance(units, dict):
+        distance = str(units.get("distance", "")).lower()
+        pace = str(units.get("pace", "")).lower()
+        elevation = str(units.get("elevation", "")).lower()
+        if distance in {"mi", "mile", "miles"} or pace.endswith("/mi") or elevation in {"ft", "feet"}:
+            return "statute_us"
+    return "metric"
+
+
 def compact_file(path: str | Path) -> bool:
-    """Compact one JSON file in place; the normal pipeline calls compact_metrics in memory."""
+    """Compact one JSON file in place and normalize variable-unit fields."""
     file_path = Path(path)
     original = file_path.read_text(encoding="utf-8")
-    compacted = json.dumps(compact_metrics(json.loads(original)), ensure_ascii=False, indent=2) + "\n"
-    if compacted == original:
+    source = json.loads(original)
+    compacted = compact_metrics(source)
+
+    # A canonical metrics file may already have its unit preference expressed
+    # in `units` but still contain legacy keys such as `distance_km`. Normalize
+    # those keys using the file's existing unit preference so manual compaction
+    # cannot reintroduce hard-coded metric field names.
+    measurement_system = source.get("_measurement_system") or _measurement_system_from_units(compacted.get("units"))
+    compacted = apply_metrics_units(compacted, measurement_system)
+
+    serialized = json.dumps(compacted, ensure_ascii=False, indent=2) + "\n"
+    if serialized == original:
         return False
-    file_path.write_text(compacted, encoding="utf-8")
+    file_path.write_text(serialized, encoding="utf-8")
     return True
 
 
