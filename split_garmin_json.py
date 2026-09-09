@@ -28,7 +28,6 @@ ACTIVITY_KEY_ORDER = (
 TRAINING_EFFECT_KEY_ORDER = ("label", "aerobic", "aerobic_message", "anaerobic", "anaerobic_message")
 INTERVAL_DRIFT_KEY_ORDER = ("work_reps", "pace_ef_drift_pct", "hr_delta_bpm", "power_ef_drift_pct", "power_delta_w")
 WEATHER_KEY_ORDER = ("temperature", "humidity_pct", "wind_speed", "wind_direction_deg")
-ZONE_KEY_ORDER = ("columns", "data")
 DEFAULT_UNITS = {"distance": "km", "pace": "min/km", "elevation": "m", "stride_length": "m", "vertical_oscillation": "cm", "temperature": "°C", "wind_speed": "m/s", "precipitation": "mm"}
 
 SPLIT_COLUMN_ORDER = (
@@ -182,6 +181,16 @@ def _normalize_root_units(units):
     return {key: source.get(key, default) for key, default in DEFAULT_UNITS.items()}
 
 
+def refresh_latest_metrics(data_dir, target_date, current_path, today):
+    if target_date != today:
+        return False
+    latest_path = os.path.join(data_dir, "latest_metrics.json")
+    with open(current_path, "r", encoding="utf-8") as src:
+        payload = json.load(src)
+    write_json(latest_path, payload, activity_compact=False)
+    return True
+
+
 def refresh_latest_activities(data_dir, target_date, current_path, has_activity, today):
     if not has_activity or target_date != today:
         return False
@@ -207,10 +216,10 @@ def main():
     dated_metrics = os.path.join(args.data_dir, f"metrics_{target_date:%Y-%m-%d}.json")
     dated_activities = os.path.join(args.data_dir, f"activities_{target_date:%Y-%m-%d}.json")
     write_json(dated_metrics, metrics)
+    refresh_latest_metrics(args.data_dir, target_date, dated_metrics, today)
     root_units = _normalize_root_units(payload.get("units", {}))
     write_json(dated_activities, {"date": target_date.isoformat(), "units": root_units, "activities": activities}, activity_compact=False)
     refresh_latest_activities(args.data_dir, target_date, dated_activities, bool(activities), today)
 
 
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__": main()
