@@ -877,13 +877,6 @@
         "anaerobic_message": "MINOR_ANAEROBIC_BENEFIT"
       },
       "exercise_load": 83.5,
-      "interval_drift": {
-        "work_reps": 5,
-        "pace_ef_drift_pct": -12.7,
-        "hr_delta_bpm": 24.0,
-        "power_ef_drift_pct": -10.5,
-        "power_delta_w": 15.0
-      },
       "activity_splits": [
         {
           "step_type": "ACTIVE",
