@@ -189,6 +189,14 @@
           }
         }
       ]
+    },
+    "running_tolerance": {
+      "acute_impact_load": 40.0,
+      "weekly_tolerance": 65.6,
+      "actual_7_day_distance": 34.3,
+      "distance_unit": "km",
+      "status": "Medium",
+      "percent_of_tolerance": 61.0
     }
   },
   "heat_acclimation": {
