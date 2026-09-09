@@ -35,6 +35,13 @@
         "anaerobic": 1.399999976158142,
         "anaerobic_message": "MINOR_ANAEROBIC_BENEFIT"
       },
+      "interval_drift": {
+        "work_reps": 5,
+        "pace_ef_drift_pct": -12.7,
+        "hr_delta_bpm": 24.0,
+        "power_ef_drift_pct": -10.5,
+        "power_delta_w": 15.0
+      },
       "splits": {
         "columns": ["step_type", "lap", "time", "elapsed_time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr", "min_hr", "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace", "distance", "elevation_gain", "elevation_loss", "stride_length", "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power", "avg_power", "max_power", "avg_vertical_ratio"],
         "data": [
