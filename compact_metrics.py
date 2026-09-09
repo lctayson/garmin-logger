@@ -225,14 +225,23 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
         if compact_balance:
             out["load_balance"] = compact_balance
 
+    # Running tolerance is injected by the Garmin API enrichment wrapper. It's
+    # a current-state load-vs-tolerance risk gauge (like acwr_status in
+    # "load"), not a retrospective tally, so it gets its own top-level key
+    # rather than living inside training_history.
+    running_tolerance = source.get("running_tolerance")
+    if running_tolerance is None:
+        history_source = source.get("training_history")
+        if isinstance(history_source, dict):
+            running_tolerance = history_source.get("running_tolerance")
+    if running_tolerance is not None:
+        out["running_tolerance"] = running_tolerance
+
     history = source.get("training_history")
     if isinstance(history, dict):
         history = dict(history)
         history.pop("legacy_running_summary", None)
-        # Running tolerance is injected by the Garmin API enrichment wrapper.
-        # Keep it inside training_history so the existing schema stays stable.
-        if history.get("running_tolerance") is None and source.get("running_tolerance") is not None:
-            history["running_tolerance"] = source["running_tolerance"]
+        history.pop("running_tolerance", None)
         out["training_history"] = history
 
     # Keep these simple sections after training_history so the metrics renderer
