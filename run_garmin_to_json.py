@@ -12,7 +12,6 @@ from config import get_timezone, resolve_timezone
 _original_get_activities = generator.get_activities
 _original_get_training_history = generator.get_training_history
 
-
 def _add_activity_recovery_hr(api, activity):
     """Copy Garmin's stored two-minute recovery-HR drop when available."""
     if not isinstance(activity, dict) or not activity.get("activityId"):
@@ -34,7 +33,6 @@ def _add_activity_recovery_hr(api, activity):
             pass
     return activity
 
-
 def _format_time(seconds):
     if seconds is None:
         return None
@@ -50,7 +48,6 @@ def _format_time(seconds):
         return f"{hours}:{minutes:02d}:{secs:02d}"
     return f"{minutes}:{secs:02d}"
 
-
 def _normalize_training_effect_message(value):
     if not isinstance(value, str) or not value:
         return None
@@ -58,7 +55,6 @@ def _normalize_training_effect_message(value):
     if len(parts) > 1 and parts[-1].isdigit():
         return "_".join(parts[:-1])
     return value
-
 
 def _add_interval_drift(activity):
     """Add interval-to-interval drift metrics from Garmin lap splits.
@@ -71,6 +67,30 @@ def _add_interval_drift(activity):
         return activity
     splits = activity.get("activity_splits")
     if not isinstance(splits, list):
+        return activity
+
+    # A recovery split followed by short ACTIVE reps is the characteristic
+    # pattern of an easy run with strides/hills. Do not mistake the preceding
+    # long easy laps for interval work. Genuine long-interval sessions still
+    # qualify because their ACTIVE work reps are all >= 2 minutes.
+    has_recovery = any(
+        isinstance(split, dict)
+        and str(split.get("step_type", "")).upper() in {"RECOVERY", "REST"}
+        for split in splits
+    )
+    has_short_active = False
+    if has_recovery:
+        for split in splits:
+            if not isinstance(split, dict) or str(split.get("step_type", "")).upper() != "ACTIVE":
+                continue
+            try:
+                seconds = float(split.get("time_seconds", 0))
+            except (TypeError, ValueError):
+                seconds = 0.0
+            if 0 < seconds < 120:
+                has_short_active = True
+                break
+    if has_recovery and has_short_active:
         return activity
 
     work = []
@@ -137,45 +157,37 @@ def _add_interval_drift(activity):
     activity["interval_drift"] = result
     return activity
 
-
 def _add_activity_detail_fields(api, activity):
     """Add high-value Garmin detail fields without changing the raw exporter."""
     activity_id = activity.get("activityId")
     if not activity_id:
         return activity
-
     try:
         detail = api.get_activity(activity_id) or {}
     except Exception:
         detail = {}
-
     summary = detail.get("summaryDTO", {}) if isinstance(detail, dict) else {}
     if not isinstance(summary, dict):
         summary = {}
-
     def first(*values):
         for value in values:
             if value is not None and value != "":
                 return value
         return None
-
     duration = first(summary.get("duration"), detail.get("duration"), activity.get("duration"))
     elapsed = first(summary.get("elapsedDuration"), detail.get("elapsedDuration"), duration)
     moving = first(summary.get("movingDuration"), detail.get("movingDuration"), duration)
-
     if duration is not None:
         activity["time"] = _format_time(duration)
     if elapsed is not None:
         activity["elapsed_time"] = _format_time(elapsed)
     if moving is not None:
         activity["moving_time"] = _format_time(moving)
-
     label = first(summary.get("trainingEffectLabel"), detail.get("trainingEffectLabel"))
     aerobic = first(summary.get("aerobicTrainingEffect"), detail.get("aerobicTrainingEffect"), activity.get("aerobic_te"))
     anaerobic = first(summary.get("anaerobicTrainingEffect"), detail.get("anaerobicTrainingEffect"), activity.get("anaerobic_te"))
     aerobic_message = first(summary.get("aerobicTrainingEffectMessage"), detail.get("aerobicTrainingEffectMessage"))
     anaerobic_message = first(summary.get("anaerobicTrainingEffectMessage"), detail.get("anaerobicTrainingEffectMessage"))
-
     training_effect = {
         "label": label,
         "aerobic": float(aerobic) if aerobic is not None else None,
@@ -186,17 +198,12 @@ def _add_activity_detail_fields(api, activity):
     training_effect = {k: v for k, v in training_effect.items() if v is not None}
     if training_effect:
         activity["training_effect"] = training_effect
-
-    activity_vo2max = first(
-        summary.get("vO2MaxValue"), summary.get("vo2MaxValue"),
-        detail.get("vO2MaxValue"), detail.get("vo2MaxValue")
-    )
+    activity_vo2max = first(summary.get("vO2MaxValue"), summary.get("vo2MaxValue"), detail.get("vO2MaxValue"), detail.get("vo2MaxValue"))
     if activity_vo2max is not None:
         try:
             activity["activity_vo2max"] = float(activity_vo2max)
         except (TypeError, ValueError):
             pass
-
     lap_count = first(summary.get("lapCount"), detail.get("lapCount"), activity.get("lapCount"))
     if lap_count is None:
         try:
@@ -212,7 +219,6 @@ def _add_activity_detail_fields(api, activity):
             activity["lap_count"] = int(float(lap_count))
         except (TypeError, ValueError):
             pass
-
     splits = activity.get("activity_splits") or activity.get("splits")
     if isinstance(splits, dict) and isinstance(splits.get("columns"), list) and isinstance(splits.get("data"), list):
         columns = list(splits["columns"])
@@ -225,14 +231,12 @@ def _add_activity_detail_fields(api, activity):
             columns.insert(insert_at, "elapsed_time")
         else:
             insert_at = columns.index("elapsed_time")
-
         if not lap_dtos:
             try:
                 split_payload = api.get_activity_splits(activity_id) or {}
                 lap_dtos = split_payload.get("lapDTOs", []) if isinstance(split_payload, dict) else []
             except Exception:
                 lap_dtos = []
-
         for index, row in enumerate(rows):
             if not isinstance(row, list) or index >= len(lap_dtos) or not isinstance(lap_dtos[index], dict):
                 continue
@@ -246,16 +250,13 @@ def _add_activity_detail_fields(api, activity):
                 row[insert_at] = elapsed_value
             else:
                 row.append(elapsed_value)
-
         splits["columns"] = columns
         splits["data"] = rows
         if "activity_splits" in activity:
             activity["activity_splits"] = splits
         else:
             activity["splits"] = splits
-
     return activity
-
 
 def get_activities(api, target_date):
     date_str = target_date.isoformat() if hasattr(target_date, "isoformat") else str(target_date)
@@ -268,7 +269,6 @@ def get_activities(api, target_date):
     enriched = add_activity_zones(api, enriched)
     return apply_user_units(api, enriched)
 
-
 def get_training_history(api, target_date):
     history = _original_get_training_history(api, target_date)
     tolerance = _running_tolerance(api, target_date)
@@ -276,23 +276,18 @@ def get_training_history(api, target_date):
         history["running_tolerance"] = tolerance
     return history
 
-
 generator.get_activities = get_activities
 generator.get_training_history = get_training_history
-
 
 def main():
     parser = argparse.ArgumentParser(add_help=False)
     parser.add_argument("--timezone", help="IANA timezone override, e.g. America/New_York")
     args, remaining = parser.parse_known_args()
-
     timezone_name = resolve_timezone(args.timezone)
     generator.LOCAL_TZ = get_timezone(args.timezone)
     sys.argv = [sys.argv[0], *remaining]
-
     print(f"Using timezone: {timezone_name}")
     generator.main()
-
 
 if __name__ == "__main__":
     main()
