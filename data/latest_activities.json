@@ -67,9 +67,12 @@
       },
       "weather": {
         "temperature": 25.6,
+        "feels_like": 78.0,
+        "dew_point": 76.0,
         "humidity_pct": 94.0,
         "wind_speed": 2.0,
-        "wind_direction_deg": 230.0
+        "wind_direction_deg": 230.0,
+        "condition": "Light Rain"
       },
       "hr_zones": {
         "columns": ["zone", "range", "time", "percent"],
