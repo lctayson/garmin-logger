@@ -82,7 +82,9 @@ def _reorder_activity(out):
         "distance", "time", "elapsed_time", "moving_time", "avg_pace", "gap",
         "avg_hr", "max_hr", "recovery_hr",
         "elevation_gain", "elevation_loss", "calories", "load", "start_time_local",
-        "activity_vo2max", "training_effect", "exercise_load", "recovery_time_hours",
+        "activity_vo2max", "performance_condition_start", "performance_condition_end", "performance_condition_avg",
+        "training_effect", "exercise_load", "recovery_time_hours",
+        "begin_stamina_pct", "end_stamina_pct", "min_stamina_pct", "stamina_used_pct", "impact_load",
         "avg_power", "normalized_power", "max_power",
         "avg_run_cadence", "max_run_cadence", "avg_ground_contact_time", "stride_length",
         "avg_vertical_oscillation", "avg_vertical_ratio", "avg_power_to_weight", "max_power_to_weight",
@@ -133,12 +135,14 @@ def _convert_activity(activity, api):
     weather = out.get("weather")
     if isinstance(weather, dict):
         weather = dict(weather)
-        if not imperial and weather.get("temperature") is not None:
-            try:
-                weather["temperature"] = round((float(weather["temperature"]) - 32.0) * 5.0 / 9.0, 1)
-            except (TypeError, ValueError):
-                pass
-        for key in ("temperature_unit", "wind_speed_unit", "feels_like_unit", "precipitation_unit"):
+        if not imperial:
+            for temp_key in ("temperature", "feels_like", "dew_point"):
+                if weather.get(temp_key) is not None:
+                    try:
+                        weather[temp_key] = round((float(weather[temp_key]) - 32.0) * 5.0 / 9.0, 1)
+                    except (TypeError, ValueError):
+                        pass
+        for key in ("temperature_unit", "wind_speed_unit", "feels_like_unit", "dew_point_unit", "precipitation_unit"):
             weather.pop(key, None)
         out["weather"] = weather
     if isinstance(out.get("activity_splits"), list):
