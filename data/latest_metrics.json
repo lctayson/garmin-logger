@@ -69,10 +69,9 @@
       "min": 431.2,
       "max": 808.5
     },
-    "vo2_max": 44.0,
-    "training_status": "Maintaining 2",
-    "load_focus": "Anaerobic Shortage"
+    "training_status": "Maintaining 2"
   },
+  "vo2_max": 44.0,
   "load_balance": {
     "aerobic_low": 452.9,
     "aerobic_low_target": [
@@ -88,7 +87,8 @@
     "anaerobic_target": [
       217,
       652
-    ]
+    ],
+    "load_focus": "Anaerobic Shortage"
   },
   "running_tolerance": {
     "acute_impact_load": 43.2,
