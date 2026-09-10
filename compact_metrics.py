@@ -206,11 +206,17 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
             load[key] = tl[key]
     if tl.get("chronic_load_range") is not None:
         load["chronic_load_range"] = tl["chronic_load_range"]
-    for old, new in (("vo2_max", "vo2_max"), ("status", "training_status"), ("load_focus", "load_focus")):
-        if status.get(old) is not None:
-            load[new] = _compact_current_vo2(status[old]) if old == "vo2_max" else status[old]
+    if status.get("status") is not None:
+        load["training_status"] = status["status"]
     if load:
         out["load"] = load
+
+    # vo2_max is a fitness/capacity marker, not a load metric -- it only used
+    # to live inside "load" because Garmin's raw training_status response
+    # bundles them together. Same treatment as heat_acclimation /
+    # altitude_acclimation: its own top-level key.
+    if status.get("vo2_max") is not None:
+        out["vo2_max"] = _compact_current_vo2(status["vo2_max"])
 
     balance = status.get("monthly_load_balance")
     if isinstance(balance, dict):
@@ -222,6 +228,11 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
                 hi = balance.get(f"{name}_target_max")
                 if lo is not None or hi is not None:
                     compact_balance[f"{name}_target"] = [lo, hi]
+        # load_focus is a verdict about which load_balance zone is off-target
+        # (e.g. "Anaerobic Shortage"), not about the acute:chronic load ratio
+        # in "load" -- it belongs with the data it's describing.
+        if status.get("load_focus") is not None:
+            compact_balance["load_focus"] = status["load_focus"]
         if compact_balance:
             out["load_balance"] = compact_balance
 
