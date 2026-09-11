@@ -8,10 +8,10 @@
     "sleep_hours": 6.25,
     "sleep_hours_including_previous_day_nap": 8.55,
     "sleep_score": 64,
-    "recovery_hours": 0.0,
-    "score": 68,
-    "level": "Moderate",
-    "feedback": "Good Sleep History",
+    "recovery_hours": 39.9,
+    "score": 37,
+    "level": "Low",
+    "feedback": "High Recovery Needs",
     "hrv_baseline": {
       "lowUpper": 45.0,
       "balancedLow": 47.0,
@@ -24,12 +24,12 @@
         "feedback": "Moderate"
       },
       "recovery_time": {
-        "percent": 99,
-        "feedback": "Good"
+        "percent": 37,
+        "feedback": "Poor"
       },
       "acwr": {
-        "percent": 100,
-        "feedback": "Very Good"
+        "percent": 84,
+        "feedback": "Good"
       },
       "hrv": {
         "percent": 100,
@@ -60,14 +60,14 @@
     "previous_day_nap": 138.0
   },
   "load": {
-    "acute_load": 404,
-    "chronic_load": 507,
-    "acwr": 0.7,
-    "acwr_percent": 29,
-    "acwr_status": "Low",
+    "acute_load": 630,
+    "chronic_load": 547,
+    "acwr": 1.1,
+    "acwr_percent": 47,
+    "acwr_status": "Optimal",
     "chronic_load_range": {
-      "min": 405.6,
-      "max": 760.5
+      "min": 437.6,
+      "max": 820.5
     },
     "training_status": "Maintaining 2"
   },
@@ -75,43 +75,43 @@
   "load_balance": {
     "aerobic_low": 452.9,
     "aerobic_low_target": [
-      303,
-      822
+      380,
+      1033
     ],
-    "aerobic_high": 1417.8,
+    "aerobic_high": 1595.3,
     "aerobic_high_target": [
-      649,
-      1169
+      816,
+      1468
     ],
     "anaerobic": 94.5,
     "anaerobic_target": [
-      173,
-      519
+      217,
+      652
     ],
     "load_focus": "Anaerobic Shortage"
   },
   "running_tolerance": {
-    "acute_impact_load": 30.9,
+    "acute_impact_load": 41.3,
     "weekly_tolerance": 65.9,
-    "actual_7_day_distance": 24.3,
+    "actual_7_day_distance": 34.3,
     "distance_unit": "km",
-    "status": "Low 1Days",
-    "percent_of_tolerance": 46.9
+    "status": "Medium",
+    "percent_of_tolerance": 62.7
   },
   "training_history": {
     "7_day": {
       "total_endurance": {
-        "activity_count": 5,
-        "distance": 25.29,
-        "duration_hours": 3.22,
-        "exercise_load": 427.7
+        "activity_count": 6,
+        "distance": 35.32,
+        "duration_hours": 4.36,
+        "exercise_load": 605.1
       },
       "sports": {
         "running": {
-          "activity_count": 4,
-          "distance": 24.29,
-          "duration_hours": 2.97,
-          "exercise_load": 421.1
+          "activity_count": 5,
+          "distance": 34.32,
+          "duration_hours": 4.1,
+          "exercise_load": 598.5
         },
         "other": {
           "activity_count": 1,
@@ -122,7 +122,7 @@
       }
     },
     "28_day": {
-      "avg_weekly_running_distance": 29.0,
+      "avg_weekly_running_distance": 31.5,
       "weekly_total_endurance": [
         {
           "week_start": "2026-08-16",
@@ -194,17 +194,17 @@
           "week_start": "2026-09-06",
           "week_end": "2026-09-12",
           "total_endurance": {
-            "activity_count": 5,
-            "distance": 25.29,
-            "duration_hours": 3.22,
-            "exercise_load": 427.7
+            "activity_count": 6,
+            "distance": 35.32,
+            "duration_hours": 4.36,
+            "exercise_load": 605.1
           },
           "sports": {
             "running": {
-              "activity_count": 4,
-              "distance": 24.29,
-              "duration_hours": 2.97,
-              "exercise_load": 421.1
+              "activity_count": 5,
+              "distance": 34.32,
+              "duration_hours": 4.1,
+              "exercise_load": 598.5
             },
             "other": {
               "activity_count": 1,
@@ -234,7 +234,7 @@
     ["2026-09-09", 56, 46.0, 49.0, 4.8, 71, 44.0, "Maintaining 2", 529, 525, 1.0, "Optimal", 1, 0.79, 6.1, {"running": {"activity_count": 1, "distance": 6.1, "duration_hours": 0.79, "exercise_load": 83.5}}, 83.5],
     ["2026-09-10", 55, 49.0, 49.0, 6.95, 87, 44.0, "Maintaining 2", 609, 539, 1.1, "Optimal", 2, 0.93, 7.03, {"running": {"activity_count": 1, "distance": 6.03, "duration_hours": 0.68, "exercise_load": 131.1}, "other": {"activity_count": 1, "distance": 1.0, "duration_hours": 0.26, "exercise_load": 6.6}}, 137.7],
     ["2026-09-11", 57, 51.0, 49.0, 7.75, 82, 44.0, "Maintaining 2", 496, 525, 0.9, "Optimal", 0, 0.0, 0.0, {}, null],
-    ["2026-09-12", 58, 52.0, 50.0, 6.25, 64, 44.0, "Maintaining 2", 404, 507, 0.7, "Low", 0, 0.0, 0.0, {}, null]
+    ["2026-09-12", 58, 52.0, 50.0, 6.25, 64, 44.0, "Maintaining 2", 630, 547, 1.1, "Optimal", 1, 1.13, 10.03, {"running": {"activity_count": 1, "distance": 10.03, "duration_hours": 1.13, "exercise_load": 177.4}}, 177.4]
   ]
   },
   "trend_long_range_weekly": {
@@ -251,7 +251,7 @@
     ["2026-08-22", "2026-08-16", "2026-08-22", 61, 42.0, 48.0, 6.27, 76, 45.0, "Maintaining 2", 528, 542, 0.9, "Optimal", 4, 3.53, 29.15, {"running": {"activity_count": 4, "distance": 29.15, "duration_hours": 3.53, "exercise_load": 505.1}}, 505.1],
     ["2026-08-29", "2026-08-23", "2026-08-29", 57, 52.0, 49.0, 6.73, 80, 45.0, "Maintaining 2", 413, 490, 0.8, "Optimal", 5, 3.65, 26.78, {"running": {"activity_count": 4, "distance": 24.2, "duration_hours": 2.98, "exercise_load": 411.6}, "other": {"activity_count": 1, "distance": 2.57, "duration_hours": 0.67, "exercise_load": 4.3}}, 415.9],
     ["2026-09-05", "2026-08-30", "2026-09-05", 58, 50.0, 48.0, 6.45, 64, 44.0, "Maintaining 2", 556, 522, 1.0, "Optimal", 6, 4.7, 38.91, {"running": {"activity_count": 5, "distance": 38.2, "duration_hours": 4.51, "exercise_load": 656.2}, "other": {"activity_count": 1, "distance": 0.71, "duration_hours": 0.19, "exercise_load": 2.9}}, 659.1],
-    ["2026-09-12", "2026-09-06", "2026-09-12", 58, 52.0, 50.0, 6.25, 64, 44.0, "Maintaining 2", 404, 507, 0.7, "Low", 5, 3.22, 25.29, {"running": {"activity_count": 4, "distance": 24.29, "duration_hours": 2.97, "exercise_load": 421.1}, "other": {"activity_count": 1, "distance": 1.0, "duration_hours": 0.26, "exercise_load": 6.6}}, 427.7]
+    ["2026-09-12", "2026-09-06", "2026-09-12", 58, 52.0, 50.0, 6.25, 64, 44.0, "Maintaining 2", 630, 547, 1.1, "Optimal", 6, 4.36, 35.32, {"running": {"activity_count": 5, "distance": 34.32, "duration_hours": 4.1, "exercise_load": 598.5}, "other": {"activity_count": 1, "distance": 1.0, "duration_hours": 0.26, "exercise_load": 6.6}}, 605.1]
   ]
   },
   "body_battery_trend": {
