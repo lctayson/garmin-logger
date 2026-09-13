@@ -199,6 +199,26 @@ def slugify(name):
     return slug or None
 
 
+def _common_leading_text(names):
+    """Return the longest common leading substring of a list of names, with
+    trailing separators trimmed, e.g. ['Bohol 5150 - Swim', 'Bohol 5150 - Bike']
+    -> 'Bohol 5150'. Returns None if there's nothing meaningful in common."""
+    names = [n for n in names if n]
+    if not names:
+        return None
+    prefix = names[0]
+    for other in names[1:]:
+        limit = min(len(prefix), len(other))
+        i = 0
+        while i < limit and prefix[i] == other[i]:
+            i += 1
+        prefix = prefix[:i]
+        if not prefix:
+            break
+    prefix = prefix.rstrip(" \t-\u2013\u2014:|/").strip()
+    return prefix or None
+
+
 def _duration_seconds(value):
     """Parse a 'H:MM:SS' or 'MM:SS' duration string into seconds for comparison."""
     if not value:
@@ -220,18 +240,49 @@ def primary_activity_slug(activities):
     On multi-activity days (e.g. a short walk plus the main workout), this
     picks the one with the longest moving/elapsed time so filenames reflect
     the day's main activity rather than an incidental one.
+
+    Multisport events (triathlons, duathlons) are expanded upstream into
+    individual legs that share a common parent_activity_id, and each leg
+    keeps its own name (e.g. "Bohol 5150 - Cycling") with no leg holding the
+    overall event name. Comparing legs individually would pick whichever leg
+    happens to be longest (usually the bike) and name the file after that
+    leg alone. Instead, legs sharing a parent_activity_id are grouped and
+    compared as one activity using their combined duration, and the event
+    name is recovered from the common prefix shared by the (non-transition)
+    leg names.
     """
     candidates = [a for a in (activities or []) if isinstance(a, dict) and a.get("name")]
     if not candidates:
         return None
-    longest = max(
-        candidates,
-        key=lambda a: max(
+
+    def leg_duration(a):
+        return max(
             _duration_seconds(a.get("moving_time")),
             _duration_seconds(a.get("time")),
             _duration_seconds(a.get("elapsed_time")),
-        ),
-    )
+        )
+
+    def is_transition(a):
+        return "transition" in (a.get("type") or "").lower() or str(a.get("name", "")).lower().startswith("transition")
+
+    groups = {}
+    contenders = []
+    for a in candidates:
+        parent = a.get("parent_activity_id")
+        if parent:
+            groups.setdefault(parent, []).append(a)
+        else:
+            contenders.append({"name": a.get("name"), "duration": leg_duration(a)})
+
+    for legs in groups.values():
+        real_legs = [leg for leg in legs if not is_transition(leg)]
+        names = [leg.get("name") for leg in real_legs] or [leg.get("name") for leg in legs]
+        event_name = _common_leading_text(names) or (names[0] if names else None)
+        contenders.append({"name": event_name, "duration": sum(leg_duration(leg) for leg in legs)})
+
+    if not contenders:
+        return None
+    longest = max(contenders, key=lambda c: c["duration"])
     return slugify(longest.get("name"))
 
 
