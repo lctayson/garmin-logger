@@ -1,15 +1,6 @@
 {
   "date": "2026-09-13",
-  "units": {
-    "distance": "km",
-    "pace": "min/km",
-    "elevation": "m",
-    "stride_length": "m",
-    "vertical_oscillation": "cm",
-    "temperature": "°C",
-    "wind_speed": "m/s",
-    "precipitation": "mm"
-  },
+  "units": {"distance": "km", "pace": "min/km", "elevation": "m", "stride_length": "m", "vertical_oscillation": "cm", "temperature": "°C", "wind_speed": "m/s", "precipitation": "mm"},
   "activities": [
     {
       "name": "Malolos - _Run + Strides/Hills",
@@ -31,25 +22,13 @@
       "performance_condition_start": -4,
       "performance_condition_end": -4,
       "performance_condition_avg": -3.4,
-      "training_effect": {
-        "label": "AEROBIC_BASE",
-        "aerobic": 2.5,
-        "aerobic_message": "MAINTAINING_AEROBIC_BASE",
-        "anaerobic": 0.5,
-        "anaerobic_message": "NO_ANAEROBIC_BENEFIT"
-      },
+      "training_effect": {"label": "AEROBIC_BASE", "aerobic": 2.5, "aerobic_message": "MAINTAINING_AEROBIC_BASE", "anaerobic": 0.5, "anaerobic_message": "NO_ANAEROBIC_BENEFIT"},
       "begin_stamina_pct": 96.0,
       "end_stamina_pct": 86.0,
       "min_stamina_pct": 82.0,
       "stamina_used_pct": -5.0,
       "impact_load": 6340.0,
-      "interval_drift": {
-        "work_reps": 5,
-        "pace_ef_drift_pct": -9.0,
-        "hr_delta_bpm": 21.0,
-        "power_ef_drift_pct": -10.7,
-        "power_delta_w": 9.0
-      },
+      "interval_drift": {"work_reps": 5, "pace_ef_drift_pct": -9.0, "hr_delta_bpm": 21.0, "power_ef_drift_pct": -10.7, "power_delta_w": 9.0},
       "splits": {
         "columns": ["step_type", "lap", "time", "elapsed_time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr", "min_hr", "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace", "distance", "elevation_gain", "elevation_loss", "stride_length", "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power", "avg_power", "max_power", "avg_vertical_ratio"],
         "data": [
@@ -73,15 +52,7 @@
         ["RECOVERY", 18, "0:04", "0:04", "3:49", "5:07", 139.0, 140.0, 138, 138, 140, 187.0, 1.0, "4:51", 188.0, "0:04", "3:49", 0.02, 0.0, 1.0, 1.07, 8.0, 230.4, 244.0, 328.0, 348.0, 7.5]
       ]
       },
-      "weather": {
-        "temperature": 25.6,
-        "feels_like": 25.6,
-        "dew_point": 23.9,
-        "humidity_pct": 89.0,
-        "wind_speed": 2.0,
-        "wind_direction_deg": 360.0,
-        "condition": "Haze"
-      },
+      "weather": {"temperature": 25.6, "feels_like": 25.6, "dew_point": 23.9, "humidity_pct": 89.0, "wind_speed": 2.0, "wind_direction_deg": 360.0, "condition": "Haze"},
       "hr_zones": {
         "columns": ["zone", "range", "time", "percent"],
         "data": [
