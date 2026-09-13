@@ -63,6 +63,11 @@ def _dump_pretty(value, level=0, table=False):
     if isinstance(value, dict):
         if not value:
             return "{}"
+        if all(not isinstance(v, (dict, list)) for v in value.values()):
+            # A small record made entirely of scalars (e.g. a factor's
+            # {percent, feedback} pair) reads fine on one line -- same
+            # reasoning as the scalar-list case below.
+            return json.dumps(value, ensure_ascii=False)
         parts = []
         for key, val in value.items():
             key_json = json.dumps(key, ensure_ascii=False)
@@ -340,4 +345,4 @@ def main():
         refresh_latest_activities(args.data_dir, target_date, dated_activities, True, today)
 
 
-if __name__ == "__main__": main()
+if __name__ == "__main__": main()   

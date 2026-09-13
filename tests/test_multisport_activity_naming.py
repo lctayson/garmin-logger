@@ -154,3 +154,29 @@ def test_scalar_target_arrays_render_inline():
     assert '["2026-09-02", 55],' in rendered
     # content survives a full round-trip unchanged, only whitespace differs
     assert _json.loads(rendered) == payload
+
+
+def test_scalar_only_records_render_inline():
+    """A small dict made entirely of scalars (e.g. a factor's
+    {percent, feedback} pair) should print on one line too -- same
+    reasoning as scalar lists, applied to objects instead of arrays."""
+    from split_garmin_json import _dump_pretty
+    import json as _json
+
+    payload = {
+        "readiness": {
+            "score": 15,
+            "factor_details": {
+                "sleep_score": {"percent": 36, "feedback": "Poor"},
+                "hrv": {"percent": 89, "feedback": "Good"},
+            },
+        }
+    }
+    rendered = _dump_pretty(payload)
+
+    assert '"sleep_score": {"percent": 36, "feedback": "Poor"}' in rendered
+    assert '"hrv": {"percent": 89, "feedback": "Good"}' in rendered
+    # the outer "readiness" dict is NOT all-scalar (factor_details is a dict),
+    # so it must stay multi-line, not collapse to one giant line
+    assert '"readiness": {\n' in rendered
+    assert _json.loads(rendered) == payload
