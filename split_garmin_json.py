@@ -82,6 +82,11 @@ def _dump_pretty(value, level=0, table=False):
     if isinstance(value, list):
         if not value:
             return "[]"
+        if all(not isinstance(item, (dict, list)) for item in value):
+            # A list of plain scalars (e.g. a [min, max] target range) reads
+            # fine on one line and saves space; lists of dicts/rows below
+            # still get one item per line.
+            return json.dumps(value, ensure_ascii=False)
         parts = [_dump_pretty(item, level + 1) for item in value]
         return "[\n" + ",\n".join(child_indent + item for item in parts) + "\n" + indent + "]"
 

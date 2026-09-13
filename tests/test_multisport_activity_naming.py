@@ -1,4 +1,4 @@
-    """
+"""
 Covers a bug where multisport events (triathlons/duathlons) picked the
 longest individual leg's name for the dated activities filename (e.g.
 "bohol-5150-cycling") instead of the overall event name ("bohol-5150").
@@ -127,3 +127,30 @@ def test_single_activity_day_is_unaffected():
 
 def test_no_activity_day_returns_none():
     assert primary_activity_slug([]) is None
+
+
+def test_scalar_target_arrays_render_inline():
+    """Plain scalar lists like a [min, max] target range should print on
+    one line for readability/filesize, without affecting table (columns/
+    data) formatting or lists of dicts."""
+    from split_garmin_json import _dump_pretty
+    import json as _json
+
+    payload = {
+        "load_balance": {
+            "aerobic_low": 458.4,
+            "aerobic_low_target": [303, 822],
+            "load_focus": "Anaerobic Shortage",
+        },
+        "body_battery_trend": {
+            "columns": ["date", "charged"],
+            "data": [["2026-09-02", 55], ["2026-09-03", 68]],
+        },
+    }
+    rendered = _dump_pretty(payload)
+
+    assert '"aerobic_low_target": [303, 822]' in rendered
+    # table rows are lists-of-lists, not pure scalar lists -- must stay one row per line
+    assert '["2026-09-02", 55],' in rendered
+    # content survives a full round-trip unchanged, only whitespace differs
+    assert _json.loads(rendered) == payload
