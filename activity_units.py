@@ -110,6 +110,10 @@ def _convert_activity(activity, api):
         out["activity_id"] = out["activityId"]
     out.pop("activityId", None)
 
+    if "parent_activity_id" not in out and out.get("parentActivityId") is not None:
+        out["parent_activity_id"] = out["parentActivityId"]
+    out.pop("parentActivityId", None)
+
     if "avg_hr" not in out and out.get("average_hr") is not None:
         out["avg_hr"] = out.pop("average_hr")
     else:

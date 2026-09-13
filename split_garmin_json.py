@@ -163,11 +163,14 @@ def normalize_activity(activity):
     out = dict(activity)
     if "activity_id" not in out and out.get("activityId") is not None:
         out["activity_id"] = out["activityId"]
+    if "parent_activity_id" not in out and out.get("parentActivityId") is not None:
+        out["parent_activity_id"] = out["parentActivityId"]
     if "avg_hr" not in out and out.get("average_hr") is not None:
         out["avg_hr"] = out["average_hr"]
     if "load" not in out and out.get("exercise_load") is not None:
         out["load"] = out["exercise_load"]
     out.pop("activityId", None)
+    out.pop("parentActivityId", None)
     out.pop("average_hr", None)
     out.pop("exercise_load", None)
     for key in ("duration_min", "aerobic_te", "anaerobic_te", "training_effect_label"):
