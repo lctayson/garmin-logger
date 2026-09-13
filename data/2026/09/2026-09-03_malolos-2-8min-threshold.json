@@ -1,0 +1,95 @@
+{
+  "date": "2026-09-03",
+  "units": {
+    "distance": "km",
+    "pace": "min/km",
+    "elevation": "m",
+    "stride_length": "m",
+    "vertical_oscillation": "cm",
+    "temperature": "°C",
+    "wind_speed": "m/s",
+    "precipitation": "mm"
+  },
+  "activities": [
+    {
+      "name": "Malolos - 2 × 8min Threshold",
+      "activity_id": 24216832747,
+      "type": "running",
+      "distance": 6.03,
+      "time": "40:44",
+      "elapsed_time": "50:22",
+      "moving_time": "40:42",
+      "avg_pace": "6:45",
+      "gap": "6:47",
+      "avg_hr": 150.0,
+      "max_hr": 171,
+      "recovery_hr": 24,
+      "elevation_gain": 17.0,
+      "elevation_loss": 17.0,
+      "load": 119.4,
+      "start_time_local": "2026-09-03T06:18:27.0",
+      "performance_condition_start": -2,
+      "performance_condition_end": 3,
+      "performance_condition_avg": 3.8,
+      "training_effect": {
+        "label": "LACTATE_THRESHOLD",
+        "aerobic": 3.5,
+        "aerobic_message": "IMPROVING_LACTATE_THRESHOLD",
+        "anaerobic": 0.0,
+        "anaerobic_message": "NO_ANAEROBIC_BENEFIT"
+      },
+      "begin_stamina_pct": 100.0,
+      "end_stamina_pct": 77.0,
+      "min_stamina_pct": 77.0,
+      "stamina_used_pct": -11.0,
+      "impact_load": 7780.0,
+      "interval_drift": {
+        "work_reps": 2,
+        "pace_ef_drift_pct": -4.6,
+        "hr_delta_bpm": 8.0,
+        "power_ef_drift_pct": -3.0,
+        "power_delta_w": 6.0
+      },
+      "splits": {
+        "columns": ["step_type", "lap", "time", "elapsed_time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr", "min_hr", "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace", "distance", "elevation_gain", "elevation_loss", "stride_length", "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power", "avg_power", "max_power", "avg_vertical_ratio"],
+        "data": [
+        ["WARMUP", 1, "10:01", "19:39", "7:38", "7:44", 129.0, 138.0, 96, 95, 138, 174.0, 87.0, "6:08", 190.0, "9:59", "7:36", 1.31, 0.0, 2.0, 0.74, 7.3, 270.1, 227.0, 227.0, 333.0, 9.8],
+        ["ACTIVE", 2, "8:00", "8:00", "5:34", "5:35", 157.0, 165.0, 124, 124, 164, 186.0, 97.0, "5:20", 190.0, "8:00", "5:34", 1.44, 1.0, 4.0, 0.96, 7.7, 240.3, 299.0, 301.0, 323.0, 8.0],
+        ["RECOVERY", 3, "2:00", "2:00", "8:42", "8:28", 157.0, 165.0, 164, 149, 149, 167.0, 20.0, "5:22", 185.0, "2:00", "8:42", 0.23, 0.0, 0.0, 0.71, 7.5, 286.8, 236.0, 211.0, 318.0, 10.7],
+        ["ACTIVE", 4, "8:00", "8:00", "5:33", "5:33", 165.0, 171.0, 149, 149, 170, 185.0, 100.0, "5:16", 190.0, "8:00", "5:33", 1.44, 6.0, 2.0, 0.97, 7.7, 240.8, 305.0, 307.0, 333.0, 8.0],
+        ["COOLDOWN", 5, "12:43", "12:43", "7:55", "7:56", 151.0, 171.0, 170, 139, 154, 158.0, 124.0, "5:22", 187.0, "12:43", "7:55", 1.61, 10.0, 9.0, 0.78, 7.4, 272.0, 231.0, 213.0, 313.0, 9.7]
+      ]
+      },
+      "weather": {
+        "temperature": 27.8,
+        "feels_like": 32.2,
+        "dew_point": 25.0,
+        "humidity_pct": 86.0,
+        "wind_speed": 2.0,
+        "wind_direction_deg": 190.0,
+        "condition": "Light Rain"
+      },
+      "hr_zones": {
+        "columns": ["zone", "range", "time", "percent"],
+        "data": [
+        ["Zone 1 - Warm Up", "110-145 bpm", "13:04", 32],
+        ["Zone 2 - Easy", "146-152 bpm", "7:07", 18],
+        ["Zone 3 - Aerobic", "153-163 bpm", "12:16", 30],
+        ["Zone 4 - Threshold", "164-169 bpm", "6:06", 15],
+        ["Zone 5 - Maximum", ">169 bpm", "1:41", 4]
+      ]
+      },
+      "power_zones": {
+        "columns": ["zone", "range", "time", "percent"],
+        "data": [
+        ["Zone 1 - Easy", "196-240 W", "15:34", 41],
+        ["Zone 2 - Moderate", "241-271 W", "5:46", 15],
+        ["Zone 3 - Tempo", "272-300 W", "6:23", 17],
+        ["Zone 4 - Long Interval", "301-346 W", "10:25", 27],
+        ["Zone 5 - Short Interval", ">346 W", "0:00", 0]
+      ]
+      },
+      "lap_count": 5
+    }
+  ]
+}
