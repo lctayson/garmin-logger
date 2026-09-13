@@ -6,6 +6,8 @@ Split the consolidated Garmin JSON into the dated metrics and activities files.
 import argparse
 import json
 import os
+import re
+import unicodedata
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -187,6 +189,52 @@ def _normalize_root_units(units):
     return {key: source.get(key, default) for key, default in DEFAULT_UNITS.items()}
 
 
+def slugify(name):
+    """Turn an activity name into a filename-safe slug, e.g. 'Bohol 5150' -> 'bohol-5150'."""
+    if not name:
+        return None
+    normalized = unicodedata.normalize("NFKD", name)
+    ascii_str = normalized.encode("ascii", "ignore").decode("ascii")
+    slug = re.sub(r"[^a-zA-Z0-9]+", "-", ascii_str).strip("-").lower()
+    return slug or None
+
+
+def _duration_seconds(value):
+    """Parse a 'H:MM:SS' or 'MM:SS' duration string into seconds for comparison."""
+    if not value:
+        return 0
+    parts = str(value).split(":")
+    try:
+        parts = [int(p) for p in parts]
+    except ValueError:
+        return 0
+    seconds = 0
+    for part in parts:
+        seconds = seconds * 60 + part
+    return seconds
+
+
+def primary_activity_slug(activities):
+    """Pick the longest-duration activity of the day and slugify its name.
+
+    On multi-activity days (e.g. a short walk plus the main workout), this
+    picks the one with the longest moving/elapsed time so filenames reflect
+    the day's main activity rather than an incidental one.
+    """
+    candidates = [a for a in (activities or []) if isinstance(a, dict) and a.get("name")]
+    if not candidates:
+        return None
+    longest = max(
+        candidates,
+        key=lambda a: max(
+            _duration_seconds(a.get("moving_time")),
+            _duration_seconds(a.get("time")),
+            _duration_seconds(a.get("elapsed_time")),
+        ),
+    )
+    return slugify(longest.get("name"))
+
+
 def refresh_latest_metrics(data_dir, target_date, current_path, today):
     if target_date != today:
         return False
@@ -223,12 +271,14 @@ def main():
     metrics = apply_metrics_units(metrics, payload.get("_measurement_system"))
     dated_dir = os.path.join(args.data_dir, f"{target_date:%Y}", f"{target_date:%m}")
     dated_metrics = os.path.join(dated_dir, f"{target_date:%Y-%m-%d}_metrics.json")
-    dated_activities = os.path.join(dated_dir, f"{target_date:%Y-%m-%d}_activities.json")
     write_json(dated_metrics, metrics)
     refresh_latest_metrics(args.data_dir, target_date, dated_metrics, today)
-    root_units = _normalize_root_units(payload.get("units", {}))
-    write_json(dated_activities, {"date": target_date.isoformat(), "units": root_units, "activities": activities}, activity_compact=False)
-    refresh_latest_activities(args.data_dir, target_date, dated_activities, bool(activities), today)
+    slug = primary_activity_slug(activities)
+    if slug:
+        dated_activities = os.path.join(dated_dir, f"{target_date:%Y-%m-%d}_{slug}.json")
+        root_units = _normalize_root_units(payload.get("units", {}))
+        write_json(dated_activities, {"date": target_date.isoformat(), "units": root_units, "activities": activities}, activity_compact=False)
+        refresh_latest_activities(args.data_dir, target_date, dated_activities, True, today)
 
 
 if __name__ == "__main__": main()

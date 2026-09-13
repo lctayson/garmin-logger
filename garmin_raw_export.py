@@ -8,6 +8,8 @@ fields that the normalized output does not currently use.
 import argparse
 import json
 import os
+import re
+import unicodedata
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
@@ -51,6 +53,16 @@ def _activity_date(activity, fallback):
     return fallback.isoformat()
 
 
+def _slugify(name):
+    """Turn an activity name into a filename-safe slug, e.g. 'Bohol 5150' -> 'bohol-5150'."""
+    if not name:
+        return None
+    normalized = unicodedata.normalize("NFKD", name)
+    ascii_str = normalized.encode("ascii", "ignore").decode("ascii")
+    slug = re.sub(r"[^a-zA-Z0-9]+", "-", ascii_str).strip("-").lower()
+    return slug or None
+
+
 def _fetch_endpoint(api, activity_id, method_name):
     """Call one Garmin endpoint and return its raw response or an error record."""
     method = getattr(api, method_name, None)
@@ -86,9 +98,13 @@ def export_activity(api, activity, output_root=RAW_ROOT):
 
     activity_date = _activity_date(activity, date.today())
     activity_type = activity.get("activityType", {}).get("typeKey") or "unknown"
+    slug = _slugify(activity.get("activityName")) or activity_type
     out_dir = Path(output_root) / "activity_details" / activity_date[:4] / activity_date[5:7]
     out_dir.mkdir(parents=True, exist_ok=True)
-    path = out_dir / f"{activity_date}_{activity_type}_{activity_id}.json"
+    # activity_id is kept in the filename (even though the slug carries the
+    # readable name) so two same-day activities sharing a generic Garmin
+    # auto-name (e.g. "Malolos Running") never collide/overwrite each other.
+    path = out_dir / f"{activity_date}_{slug}_{activity_id}.json"
 
     endpoints = {
         "activities_by_date": {"available": True, "data": _json_safe(activity)},
