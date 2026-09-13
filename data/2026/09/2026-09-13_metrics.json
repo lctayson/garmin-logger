@@ -1,6 +1,9 @@
 {
   "date": "2026-09-13",
   "readiness": {
+    "score": 15,
+    "level": "Poor",
+    "feedback": "Time To Recharge",
     "resting_hr": 61,
     "hrv_last_night_avg_ms": 39.0,
     "hrv_7_day_avg_ms": 48.0,
@@ -9,9 +12,6 @@
     "sleep_hours_including_previous_day_nap": 4.27,
     "sleep_score": 53,
     "recovery_hours": 24.0,
-    "score": 15,
-    "level": "Poor",
-    "feedback": "Time To Recharge",
     "hrv_baseline": {
       "lowUpper": 45.0,
       "balancedLow": 47.0,
