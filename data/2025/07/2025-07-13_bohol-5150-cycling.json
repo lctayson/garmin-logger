@@ -1,0 +1,313 @@
+{
+  "date": "2025-07-13",
+  "units": {
+    "distance": "km",
+    "pace": "min/km",
+    "elevation": "m",
+    "stride_length": "m",
+    "vertical_oscillation": "cm",
+    "temperature": "°C",
+    "wind_speed": "m/s",
+    "precipitation": "mm"
+  },
+  "activities": [
+    {
+      "name": "Bohol 5150 - Open Water Swimming",
+      "activity_id": 19715570997,
+      "type": "open_water_swimming",
+      "distance": 1.41,
+      "time": "37:50",
+      "elapsed_time": "37:50",
+      "moving_time": "36:41",
+      "avg_pace": "2:41",
+      "avg_hr": 149.0,
+      "max_hr": 167.0,
+      "load": 123.3,
+      "start_time_local": "2025-07-13T06:26:11.0",
+      "training_effect": {
+        "label": "TEMPO",
+        "aerobic": 3.3,
+        "aerobic_message": "IMPACTING_TEMPO",
+        "anaerobic": 0.800000011920929,
+        "anaerobic_message": "NO_ANAEROBIC_BENEFIT"
+      },
+      "stamina_used_pct": -4.0,
+      "splits": {
+        "columns": ["step_type", "lap", "time", "elapsed_time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr", "min_hr", "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace", "distance", "elevation_gain", "elevation_loss", "stride_length", "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power", "avg_power", "max_power", "avg_vertical_ratio"],
+        "data": [
+        ["ACTIVE", 1, "4:38", "4:38", "18:31", null, 134.0, 154.0, 102, 102, 134, null, 48.0, "11:07", null, "4:38", "18:31", 0.25, null, null, null, null, null, null, null, null, null],
+        ["ACTIVE", 2, "8:10", "8:10", "32:41", null, 147.0, 164.0, 133, 133, 160, null, 95.0, "20:29", null, "7:31", "30:04", 0.25, null, null, null, null, null, null, null, null, null],
+        ["ACTIVE", 3, "7:34", "7:34", "30:15", null, 160.0, 163.0, 160, 153, 154, null, 93.0, "21:56", null, "7:25", "29:40", 0.25, null, null, null, null, null, null, null, null, null],
+        ["ACTIVE", 4, "7:35", "7:35", "30:21", null, 155.0, 167.0, 154, 140, 140, null, 90.0, "22:22", null, "7:26", "29:44", 0.25, null, null, null, null, null, null, null, null, null],
+        ["ACTIVE", 5, "7:07", "7:07", "28:26", null, 144.0, 161.0, 141, 136, 136, null, 75.0, "18:59", null, "7:03", "28:12", 0.25, null, null, null, null, null, null, null, null, null],
+        ["ACTIVE", 6, "2:47", "2:47", "17:36", null, 140.0, 148.0, 136, 129, 146, null, 26.0, "11:54", null, "2:38", "16:42", 0.16, null, null, null, null, null, null, null, null, null]
+      ]
+      },
+      "weather": {
+        "temperature": 27.2,
+        "feels_like": 30.6,
+        "dew_point": 24.4,
+        "humidity_pct": 85.0,
+        "wind_speed": 2.0,
+        "wind_direction_deg": 200.0,
+        "condition": "Cloudy"
+      },
+      "hr_zones": {
+        "columns": ["zone", "range", "time", "percent"],
+        "data": [
+        ["Zone 1 - Warm Up", "147-154 bpm", "2:32", 14],
+        ["Zone 2 - Easy", "155-163 bpm", "15:13", 82],
+        ["Zone 3 - Aerobic", "164-171 bpm", "0:55", 5],
+        ["Zone 4 - Threshold", "172-181 bpm", "0:00", 0],
+        ["Zone 5 - Maximum", ">181 bpm", "0:00", 0]
+      ]
+      },
+      "lap_count": 6
+    },
+    {
+      "name": "Transition 1 (T1)",
+      "activity_id": 19715570999,
+      "type": "transition_v2",
+      "distance": 0.39,
+      "time": "4:50",
+      "elapsed_time": "4:50",
+      "moving_time": "3:42",
+      "avg_pace": "12:19",
+      "avg_hr": 147.0,
+      "max_hr": 165.0,
+      "elevation_gain": 1.0,
+      "elevation_loss": 0.0,
+      "load": 133.2,
+      "start_time_local": "2025-07-13T07:04:01.0",
+      "training_effect": {
+        "label": "AEROBIC_BASE",
+        "aerobic": 3.4,
+        "aerobic_message": "IMPROVING_AEROBIC_BASE",
+        "anaerobic": 1.100000023841858,
+        "anaerobic_message": "MINOR_ANAEROBIC_BENEFIT"
+      },
+      "stamina_used_pct": 0.0,
+      "splits": {
+        "columns": ["step_type", "lap", "time", "elapsed_time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr", "min_hr", "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace", "distance", "elevation_gain", "elevation_loss", "stride_length", "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power", "avg_power", "max_power", "avg_vertical_ratio"],
+        "data": [
+        ["ACTIVE", 1, "4:50", "4:50", "12:19", null, 147.0, 165.0, 146, 136, 145, null, 52.0, "5:58", null, "3:42", "9:25", 0.39, 1.0, 0.0, null, null, null, null, null, null, null]
+      ]
+      },
+      "weather": {
+        "temperature": 27.2,
+        "feels_like": 30.6,
+        "dew_point": 24.4,
+        "humidity_pct": 85.0,
+        "wind_speed": 2.0,
+        "wind_direction_deg": 200.0,
+        "condition": "Cloudy"
+      },
+      "hr_zones": {
+        "columns": ["zone", "range", "time", "percent"],
+        "data": [
+        ["Zone 1 - Warm Up", "147-154 bpm", "1:13", 68],
+        ["Zone 2 - Easy", "155-163 bpm", "0:25", 23],
+        ["Zone 3 - Aerobic", "164-171 bpm", "0:10", 9],
+        ["Zone 4 - Threshold", "172-181 bpm", "0:00", 0],
+        ["Zone 5 - Maximum", ">181 bpm", "0:00", 0]
+      ]
+      },
+      "lap_count": 1
+    },
+    {
+      "name": "Bohol 5150 - Cycling",
+      "activity_id": 19715571000,
+      "type": "cycling",
+      "distance": 40.02,
+      "time": "1:17:26",
+      "elapsed_time": "1:17:26",
+      "moving_time": "1:17:19",
+      "avg_pace": "1:56",
+      "avg_hr": 157.0,
+      "max_hr": 164.0,
+      "elevation_gain": 121.0,
+      "elevation_loss": 118.0,
+      "load": 247.4,
+      "start_time_local": "2025-07-13T07:08:51.0",
+      "training_effect": {
+        "label": "TEMPO",
+        "aerobic": 4.6,
+        "aerobic_message": "HIGHLY_IMPACTING_TEMPO",
+        "anaerobic": 1.100000023841858,
+        "anaerobic_message": "MINOR_ANAEROBIC_BENEFIT"
+      },
+      "begin_stamina_pct": 73.0,
+      "end_stamina_pct": 51.0,
+      "min_stamina_pct": 51.0,
+      "stamina_used_pct": -1.0,
+      "splits": {
+        "columns": ["step_type", "lap", "time", "elapsed_time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr", "min_hr", "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace", "distance", "elevation_gain", "elevation_loss", "stride_length", "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power", "avg_power", "max_power", "avg_vertical_ratio"],
+        "data": [
+        ["ACTIVE", 1, "19:10", "19:10", "1:55", null, 157.0, 164.0, 146, 145, 153, null, 218.0, "1:34", null, "19:10", "1:55", 10.0, 34.0, 17.0, null, null, null, null, null, null, null],
+        ["ACTIVE", 2, "18:34", "18:34", "1:51", null, 157.0, 161.0, 152, 152, 156, null, 209.0, "1:25", null, "18:33", "1:51", 10.0, 27.0, 46.0, null, null, null, null, null, null, null],
+        ["ACTIVE", 3, "19:44", "19:44", "1:58", null, 158.0, 163.0, 156, 154, 156, null, 209.0, "1:31", null, "19:44", "1:58", 10.0, 43.0, 18.0, null, null, null, null, null, null, null],
+        ["ACTIVE", 4, "19:46", "19:46", "1:59", null, 157.0, 163.0, 156, 151, 158, null, 198.0, "1:37", null, "19:45", "1:58", 10.0, 17.0, 37.0, null, null, null, null, null, null, null],
+        ["ACTIVE", 5, "0:12", "0:12", "8:57", null, 157.0, 158.0, 158, 156, 156, null, 2.0, "4:04", null, "0:07", "5:03", 0.02, 0.0, 0.0, null, null, null, null, null, null, null]
+      ]
+      },
+      "weather": {
+        "temperature": 27.2,
+        "feels_like": 30.6,
+        "dew_point": 24.4,
+        "humidity_pct": 85.0,
+        "wind_speed": 2.0,
+        "wind_direction_deg": 200.0,
+        "condition": "Cloudy"
+      },
+      "hr_zones": {
+        "columns": ["zone", "range", "time", "percent"],
+        "data": [
+        ["Zone 1 - Warm Up", "95-113 bpm", "0:00", 0],
+        ["Zone 2 - Easy", "114-132 bpm", "0:00", 0],
+        ["Zone 3 - Aerobic", "133-151 bpm", "2:04", 3],
+        ["Zone 4 - Threshold", "152-170 bpm", "75:21", 97],
+        ["Zone 5 - Maximum", ">170 bpm", "0:00", 0]
+      ]
+      },
+      "lap_count": 5
+    },
+    {
+      "name": "Transition 2 (T2)",
+      "activity_id": 19715571001,
+      "type": "transition_v2",
+      "distance": 0.6,
+      "time": "7:33",
+      "elapsed_time": "7:33",
+      "moving_time": "5:37",
+      "avg_pace": "12:30",
+      "avg_hr": 151.0,
+      "max_hr": 163.0,
+      "elevation_gain": 2.0,
+      "elevation_loss": 4.0,
+      "load": 251.2,
+      "start_time_local": "2025-07-13T08:26:17.0",
+      "training_effect": {
+        "label": "TEMPO",
+        "aerobic": 4.6,
+        "aerobic_message": "HIGHLY_IMPACTING_TEMPO",
+        "anaerobic": 1.100000023841858,
+        "anaerobic_message": "MINOR_ANAEROBIC_BENEFIT"
+      },
+      "stamina_used_pct": 0.0,
+      "splits": {
+        "columns": ["step_type", "lap", "time", "elapsed_time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr", "min_hr", "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace", "distance", "elevation_gain", "elevation_loss", "stride_length", "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power", "avg_power", "max_power", "avg_vertical_ratio"],
+        "data": [
+        ["ACTIVE", 1, "7:33", "7:33", "12:30", null, 151.0, 163.0, 156, 146, 156, null, 50.0, "5:50", null, "5:37", "9:19", 0.6, 2.0, 4.0, null, null, null, null, null, null, null]
+      ]
+      },
+      "weather": {
+        "temperature": 29.4,
+        "feels_like": 33.9,
+        "dew_point": 23.9,
+        "humidity_pct": 74.0,
+        "wind_speed": 4.0,
+        "wind_direction_deg": 220.0,
+        "condition": "Mostly Cloudy"
+      },
+      "hr_zones": {
+        "columns": ["zone", "range", "time", "percent"],
+        "data": [
+        ["Zone 1 - Warm Up", "147-154 bpm", "5:40", 79],
+        ["Zone 2 - Easy", "155-163 bpm", "1:33", 21],
+        ["Zone 3 - Aerobic", "164-171 bpm", "0:00", 0],
+        ["Zone 4 - Threshold", "172-181 bpm", "0:00", 0],
+        ["Zone 5 - Maximum", ">181 bpm", "0:00", 0]
+      ]
+      },
+      "lap_count": 1
+    },
+    {
+      "name": "Bohol 5150 - Running",
+      "activity_id": 19715571003,
+      "type": "running",
+      "distance": 9.99,
+      "time": "1:02:03",
+      "elapsed_time": "1:02:03",
+      "moving_time": "1:01:57",
+      "avg_pace": "6:13",
+      "gap": "6:11",
+      "avg_hr": 165.0,
+      "max_hr": 173.0,
+      "recovery_hr": 24,
+      "elevation_gain": 19.0,
+      "elevation_loss": 21.0,
+      "load": 363.4,
+      "start_time_local": "2025-07-13T08:33:50.0",
+      "performance_condition_start": -2,
+      "performance_condition_end": -4,
+      "performance_condition_avg": -3.0,
+      "training_effect": {
+        "label": "LACTATE_THRESHOLD",
+        "aerobic": 5.0,
+        "aerobic_message": "OVERREACHING",
+        "anaerobic": 1.100000023841858,
+        "anaerobic_message": "MINOR_ANAEROBIC_BENEFIT"
+      },
+      "begin_stamina_pct": 50.0,
+      "end_stamina_pct": 11.0,
+      "min_stamina_pct": 11.0,
+      "stamina_used_pct": 0.0,
+      "interval_drift": {
+        "work_reps": 10,
+        "pace_ef_drift_pct": -5.8,
+        "hr_delta_bpm": 5.0,
+        "power_ef_drift_pct": -2.3,
+        "power_delta_w": 2.0
+      },
+      "decoupling": {
+        "pace_pct": 1.4,
+        "power_pct": 1.4
+      },
+      "splits": {
+        "columns": ["step_type", "lap", "time", "elapsed_time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr", "min_hr", "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace", "distance", "elevation_gain", "elevation_loss", "stride_length", "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power", "avg_power", "max_power", "avg_vertical_ratio"],
+        "data": [
+        ["ACTIVE", 1, "5:34", "5:34", "5:34", "5:35", 165.0, 169.0, 157, 157, 169, 171.0, 68.0, "5:12", 181.0, "5:34", "5:34", 1.0, 1.0, 3.0, 1.03, 8.6, 250.9, 300.0, 293.0, 337.0, 8.3],
+        ["ACTIVE", 2, "5:51", "5:51", "5:51", "5:53", 167.0, 172.0, 169, 161, 170, 170.0, 70.0, "5:18", 177.0, "5:51", "5:51", 1.0, 1.0, 2.0, 1.0, 8.4, 254.5, 288.0, 284.0, 341.0, 8.5],
+        ["ACTIVE", 3, "6:18", "6:18", "6:18", "6:15", 167.0, 172.0, 170, 161, 168, 163.0, 75.0, "5:27", 176.0, "6:18", "6:18", 1.0, 6.0, 2.0, 0.99, 8.4, 261.9, 280.0, 270.0, 336.0, 8.7],
+        ["ACTIVE", 4, "6:27", "6:27", "6:27", "6:21", 165.0, 170.0, 169, 159, 165, 161.0, 75.0, "5:39", 176.0, "6:27", "6:27", 1.0, 4.0, 0.0, 0.96, 8.5, 265.0, 279.0, 266.0, 333.0, 8.9],
+        ["ACTIVE", 5, "6:36", "6:36", "6:36", "6:32", 163.0, 168.0, 165, 155, 163, 164.0, 73.0, "5:57", 174.0, "6:36", "6:36", 1.0, 0.0, 1.0, 0.93, 8.4, 270.7, 264.0, 257.0, 302.0, 9.0],
+        ["ACTIVE", 6, "6:18", "6:18", "6:18", "6:15", 163.0, 167.0, 162, 159, 164, 166.0, 71.0, "5:49", 174.0, "6:18", "6:18", 1.0, 1.0, 2.0, 0.97, 8.5, 264.3, 275.0, 269.0, 303.0, 8.8],
+        ["ACTIVE", 7, "6:32", "6:32", "6:32", "6:29", 162.0, 165.0, 164, 155, 162, 165.0, 71.0, "5:45", 228.0, "6:32", "6:32", 1.0, 1.0, 3.0, 0.95, 8.4, 265.6, 268.0, 261.0, 314.0, 8.9],
+        ["ACTIVE", 8, "6:29", "6:29", "6:29", "6:30", 163.0, 167.0, 162, 158, 163, 161.0, 71.0, "5:55", 174.0, "6:27", "6:27", 1.0, 3.0, 5.0, 0.95, 8.5, 268.6, 268.0, 259.0, 312.0, 9.0],
+        ["ACTIVE", 9, "6:17", "6:17", "6:17", "6:14", 166.0, 171.0, 163, 160, 164, 160.0, 74.0, "5:22", 231.0, "6:14", "6:14", 1.0, 1.0, 0.0, 0.98, 8.5, 261.5, 279.0, 264.0, 349.0, 8.7],
+        ["ACTIVE", 10, "5:41", "5:41", "5:44", "5:45", 170.0, 173.0, 164, 164, 171, 172.0, 71.0, "5:24", 177.0, "5:40", "5:43", 0.99, 1.0, 2.0, 1.02, 8.8, 258.0, 295.0, 295.0, 313.0, 8.6]
+      ]
+      },
+      "weather": {
+        "temperature": 29.4,
+        "feels_like": 33.9,
+        "dew_point": 23.9,
+        "humidity_pct": 74.0,
+        "wind_speed": 4.0,
+        "wind_direction_deg": 220.0,
+        "condition": "Mostly Cloudy"
+      },
+      "hr_zones": {
+        "columns": ["zone", "range", "time", "percent"],
+        "data": [
+        ["Zone 1 - Warm Up", "111-138 bpm", "0:00", 0],
+        ["Zone 2 - Easy", "139-152 bpm", "0:00", 0],
+        ["Zone 3 - Aerobic", "153-161 bpm", "9:21", 15],
+        ["Zone 4 - Threshold", "162-173 bpm", "52:41", 85],
+        ["Zone 5 - Maximum", ">173 bpm", "0:00", 0]
+      ]
+      },
+      "power_zones": {
+        "columns": ["zone", "range", "time", "percent"],
+        "data": [
+        ["Zone 1 - Easy", "214-263 W", "3:03", 5],
+        ["Zone 2 - Moderate", "264-297 W", "41:42", 73],
+        ["Zone 3 - Tempo", "298-329 W", "12:16", 21],
+        ["Zone 4 - Long Interval", "330-379 W", "0:17", 0],
+        ["Zone 5 - Short Interval", ">379 W", "0:00", 0]
+      ]
+      },
+      "lap_count": 10
+    }
+  ]
+}
