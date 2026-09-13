@@ -132,7 +132,7 @@
     ["2026-09-11", 87, 77, 95, 29],
     ["2026-09-12", 45, 82, 87, 5],
     ["2026-09-13", 34, 34, 36, 5],
-    ["2026-09-14", 73, 2, 78, 5]
+    ["2026-09-14", 73, 4, 78, 5]
   ]
   },
   "units": {"distance": "km", "pace": "min/km", "elevation": "m", "stride_length": "m", "vertical_oscillation": "cm", "temperature": "°C", "wind_speed": "m/s", "precipitation": "mm"}
