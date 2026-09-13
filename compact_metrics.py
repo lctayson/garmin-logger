@@ -120,10 +120,16 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
     daily_readiness = daily.get("readiness") or {}
 
     readiness: dict[str, Any] = {}
+
+    # score/level/feedback are the headline summary -- extracted first (from
+    # daily_readiness's nested "readiness" sub-object, where they actually
+    # live) so they land first in the output for anyone reading the file
+    # top to bottom, matching how Garmin's own UI leads with the score.
+    for old, new in (("score", "score"), ("level", "level"), ("feedback_short", "feedback")):
+        if daily_readiness.get(old) is not None:
+            readiness[new] = daily_readiness[old]
+
     direct = (
-        ("score", "score"),
-        ("level", "level"),
-        ("feedback_short", "feedback"),
         ("resting_hr", "resting_hr"),
         ("resting_hr_bpm", "resting_hr"),
         ("resting_heart_rate", "resting_hr"),
@@ -139,10 +145,6 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
     for old, new in direct:
         if daily.get(old) is not None:
             readiness[new] = daily[old]
-
-    for old, new in (("score", "score"), ("level", "level"), ("feedback_short", "feedback")):
-        if readiness.get(new) is None and daily_readiness.get(old) is not None:
-            readiness[new] = daily_readiness[old]
 
     hrv = health.get("hrv") or {}
     fallbacks = (
@@ -311,4 +313,4 @@ if __name__ == "__main__":
     parser.add_argument("path", nargs="?", default="data/latest_metrics.json")
     args = parser.parse_args()
     changed = compact_file(args.path)
-    print(f"Compacted {args.path}" if changed else f"Already canonical: {args.path}")
+    print(f"Compacted {args.path}" if changed else f"Already canonical: {args.path}")   
