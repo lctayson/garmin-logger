@@ -42,7 +42,7 @@
     }
   },
   "health": {
-    "steps": 9468
+    "steps": 9558
   },
   "sleep": {
     "deep_h": 1.13,
@@ -74,20 +74,11 @@
   "vo2_max": 44.0,
   "load_balance": {
     "aerobic_low": 458.4,
-    "aerobic_low_target": [
-      303,
-      822
-    ],
+    "aerobic_low_target": [303, 822],
     "aerobic_high": 1595.3,
-    "aerobic_high_target": [
-      649,
-      1169
-    ],
+    "aerobic_high_target": [649, 1169],
     "anaerobic": 94.5,
-    "anaerobic_target": [
-      173,
-      519
-    ],
+    "anaerobic_target": [173, 519],
     "load_focus": "Anaerobic Shortage"
   },
   "running_tolerance": {
@@ -263,7 +254,7 @@
     ["2026-09-10", 84, 78, 88, 14],
     ["2026-09-11", 87, 77, 95, 29],
     ["2026-09-12", 45, 82, 87, 5],
-    ["2026-09-13", 34, 26, 36, 5]
+    ["2026-09-13", 34, 34, 36, 5]
   ]
   },
   "units": {
