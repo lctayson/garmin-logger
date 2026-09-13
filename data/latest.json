@@ -1321,7 +1321,8 @@
           ]
         ]
       },
-      "lap_count": 6
+      "lap_count": 6,
+      "parent_activity_id": 19715571043
     },
     {
       "name": "Transition 1 (T1)",
@@ -1417,7 +1418,8 @@
           ]
         ]
       },
-      "lap_count": 1
+      "lap_count": 1,
+      "parent_activity_id": 19715571043
     },
     {
       "name": "Bohol 5150 - Cycling",
@@ -1596,7 +1598,8 @@
           ]
         ]
       },
-      "lap_count": 5
+      "lap_count": 5,
+      "parent_activity_id": 19715571043
     },
     {
       "name": "Transition 2 (T2)",
@@ -1692,7 +1695,8 @@
           ]
         ]
       },
-      "lap_count": 1
+      "lap_count": 1,
+      "parent_activity_id": 19715571043
     },
     {
       "name": "Bohol 5150 - Running",
@@ -2127,7 +2131,8 @@
           ]
         ]
       },
-      "lap_count": 10
+      "lap_count": 10,
+      "parent_activity_id": 19715571043
     }
   ]
 }

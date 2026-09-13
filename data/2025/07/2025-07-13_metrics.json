@@ -1,0 +1,341 @@
+{
+  "date": "2025-07-13",
+  "readiness": {
+    "resting_hr": 60,
+    "hrv_last_night_avg_ms": 32.0,
+    "hrv_7_day_avg_ms": 46.0,
+    "hrv_status": "BALANCED",
+    "sleep_hours": 4.72,
+    "sleep_hours_including_previous_day_nap": 4.72,
+    "sleep_score": 39,
+    "recovery_hours": 88.7,
+    "score": 1,
+    "level": "Poor",
+    "feedback": "Well Done",
+    "hrv_baseline": {
+      "lowUpper": 43.0,
+      "balancedLow": 46.0,
+      "balancedUpper": 60.0,
+      "markerValue": 0.25
+    },
+    "factor_details": {
+      "sleep_score": {
+        "percent": 29,
+        "feedback": "Poor"
+      },
+      "recovery_time": {
+        "percent": 10,
+        "feedback": "Poor"
+      },
+      "acwr": {
+        "percent": 86,
+        "feedback": "Good"
+      },
+      "hrv": {
+        "percent": 72,
+        "feedback": "Good"
+      },
+      "stress_history": {
+        "percent": 44,
+        "feedback": "Moderate"
+      }
+    }
+  },
+  "health": {
+    "steps": 17439
+  },
+  "sleep": {
+    "deep_h": 0.62,
+    "light_h": 4.1,
+    "rem_h": 0.0,
+    "awake_h": 1.05,
+    "baseline_h": 7.83,
+    "need_h": 9.0,
+    "next_need_h": 9.0,
+    "feedback": "Highly Increased",
+    "training_feedback": "No Change",
+    "sleep_history_adjustment": "Increasing",
+    "hrv_adjustment": "No Change",
+    "nap_adjustment": "No Change",
+    "previous_day_nap": null
+  },
+  "load": {
+    "acute_load": 822,
+    "chronic_load": 743,
+    "acwr": 1.1,
+    "acwr_percent": 47,
+    "acwr_status": "Optimal",
+    "chronic_load_range": {
+      "min": 594.4,
+      "max": 1114.5
+    },
+    "training_status": "Productive 3"
+  },
+  "vo2_max": 47.0,
+  "load_balance": {
+    "aerobic_low": 899.5,
+    "aerobic_low_target": [
+      399,
+      1097
+    ],
+    "aerobic_high": 1992.6,
+    "aerobic_high_target": [
+      1415,
+      2113
+    ],
+    "anaerobic": 69.8,
+    "anaerobic_target": [
+      558,
+      977
+    ],
+    "load_focus": "Anaerobic Shortage"
+  },
+  "training_history": {
+    "7_day": {
+      "total_endurance": {
+        "activity_count": 14,
+        "distance": 105.45,
+        "duration_hours": 7.36,
+        "exercise_load": 323.7
+      },
+      "sports": {
+        "running": {
+          "activity_count": 3,
+          "distance": 21.68,
+          "duration_hours": 2.45,
+          "exercise_load": 165.8
+        },
+        "cycling": {
+          "activity_count": 4,
+          "distance": 79.62,
+          "duration_hours": 3.04,
+          "exercise_load": 100.4
+        },
+        "swimming": {
+          "activity_count": 3,
+          "distance": 2.45,
+          "duration_hours": 1.13,
+          "exercise_load": 46.2
+        },
+        "other": {
+          "activity_count": 2,
+          "distance": 0.7,
+          "duration_hours": 0.54,
+          "exercise_load": 11.3
+        },
+        "transition": {
+          "activity_count": 2,
+          "distance": 1.0,
+          "duration_hours": 0.21
+        }
+      }
+    },
+    "28_day": {
+      "avg_weekly_running_distance": 27.6,
+      "weekly_total_endurance": [
+        {
+          "week_start": "2025-06-16",
+          "week_end": "2025-06-22",
+          "total_endurance": {
+            "activity_count": 10,
+            "distance": 95.64,
+            "duration_hours": 7.61,
+            "exercise_load": 883.9
+          },
+          "sports": {
+            "running": {
+              "activity_count": 5,
+              "distance": 33.63,
+              "duration_hours": 3.79,
+              "exercise_load": 595.6
+            },
+            "cycling": {
+              "activity_count": 2,
+              "distance": 59.09,
+              "duration_hours": 2.09,
+              "exercise_load": 202.8
+            },
+            "swimming": {
+              "activity_count": 1,
+              "distance": 2.3,
+              "duration_hours": 1.23,
+              "exercise_load": 69.1
+            },
+            "other": {
+              "activity_count": 2,
+              "distance": 0.62,
+              "duration_hours": 0.51,
+              "exercise_load": 16.4
+            }
+          }
+        },
+        {
+          "week_start": "2025-06-23",
+          "week_end": "2025-06-29",
+          "total_endurance": {
+            "activity_count": 7,
+            "distance": 91.47,
+            "duration_hours": 6.86,
+            "exercise_load": 824.8
+          },
+          "sports": {
+            "running": {
+              "activity_count": 4,
+              "distance": 31.1,
+              "duration_hours": 3.5,
+              "exercise_load": 529.6
+            },
+            "cycling": {
+              "activity_count": 2,
+              "distance": 58.37,
+              "duration_hours": 2.12,
+              "exercise_load": 232.1
+            },
+            "swimming": {
+              "activity_count": 1,
+              "distance": 2.0,
+              "duration_hours": 1.23,
+              "exercise_load": 63.1
+            }
+          }
+        },
+        {
+          "week_start": "2025-06-30",
+          "week_end": "2025-07-06",
+          "total_endurance": {
+            "activity_count": 10,
+            "distance": 75.84,
+            "duration_hours": 6.36,
+            "exercise_load": 603.1
+          },
+          "sports": {
+            "running": {
+              "activity_count": 4,
+              "distance": 24.18,
+              "duration_hours": 2.79,
+              "exercise_load": 341.0
+            },
+            "cycling": {
+              "activity_count": 3,
+              "distance": 48.84,
+              "duration_hours": 1.71,
+              "exercise_load": 180.2
+            },
+            "swimming": {
+              "activity_count": 1,
+              "distance": 2.1,
+              "duration_hours": 1.3,
+              "exercise_load": 74.0
+            },
+            "other": {
+              "activity_count": 2,
+              "distance": 0.72,
+              "duration_hours": 0.57,
+              "exercise_load": 7.9
+            }
+          }
+        },
+        {
+          "week_start": "2025-07-07",
+          "week_end": "2025-07-13",
+          "total_endurance": {
+            "activity_count": 14,
+            "distance": 105.45,
+            "duration_hours": 7.36,
+            "exercise_load": 323.7
+          },
+          "sports": {
+            "running": {
+              "activity_count": 3,
+              "distance": 21.68,
+              "duration_hours": 2.45,
+              "exercise_load": 165.8
+            },
+            "cycling": {
+              "activity_count": 4,
+              "distance": 79.62,
+              "duration_hours": 3.04,
+              "exercise_load": 100.4
+            },
+            "swimming": {
+              "activity_count": 3,
+              "distance": 2.45,
+              "duration_hours": 1.13,
+              "exercise_load": 46.2
+            },
+            "other": {
+              "activity_count": 2,
+              "distance": 0.7,
+              "duration_hours": 0.54,
+              "exercise_load": 11.3
+            },
+            "transition": {
+              "activity_count": 2,
+              "distance": 1.0,
+              "duration_hours": 0.21
+            }
+          }
+        }
+      ]
+    }
+  },
+  "heat_acclimation": {
+    "percentage": 90,
+    "trend": "Acclimatizing"
+  },
+  "altitude_acclimation": {
+    "percentage": 0,
+    "trend": null
+  },
+  "trend_recent_daily": {
+    "columns": ["date", "resting_hr", "hrv_last_night_avg_ms", "hrv_7_day_avg_ms", "sleep_hours", "sleep_score", "vo2_max", "training_status", "acute_load", "chronic_load", "acwr", "acwr_status", "activity_count", "duration_hours", "distance", "sport_volume", "exercise_load"],
+    "data": [
+    ["2025-07-07", 56, 60.0, 56.0, 6.52, 76, 47.0, "Productive 3", 595, 770, 0.7, "Low", 1, 0.35, 0.0, {"other": {"activity_count": 1, "distance": 0.0, "duration_hours": 0.35, "exercise_load": 3.7}}, 3.7],
+    ["2025-07-08", 57, 48.0, 55.0, 5.12, 65, 47.0, "Peaking 1", 592, 766, 0.7, "Low", 1, 0.82, 6.66, {"running": {"activity_count": 1, "distance": 6.66, "duration_hours": 0.82, "exercise_load": 105.5}}, 105.5],
+    ["2025-07-09", 56, 53.0, 55.0, 5.9, 72, 47.0, "Peaking 1", 575, 752, 0.7, "Low", 1, 0.5, 15.34, {"cycling": {"activity_count": 1, "distance": 15.34, "duration_hours": 0.5, "exercise_load": 74.2}}, 74.2],
+    ["2025-07-10", 56, 48.0, 54.0, 3.35, 39, 47.0, "Peaking 1", 561, 736, 0.7, "Low", 2, 0.78, 5.73, {"running": {"activity_count": 1, "distance": 5.03, "duration_hours": 0.6, "exercise_load": 60.3}, "other": {"activity_count": 1, "distance": 0.7, "duration_hours": 0.18, "exercise_load": 7.6}}, 67.9],
+    ["2025-07-11", 58, 48.0, 53.0, 4.37, 53, 47.0, "Recovery 1", 461, 707, 0.6, "Low", 1, 0.08, 0.24, {"swimming": {"activity_count": 1, "distance": 0.24, "duration_hours": 0.08, "exercise_load": 6.7}}, 6.7],
+    ["2025-07-12", 60, 40.0, 50.0, 4.62, 48, 47.0, "Recovery 1", 450, 690, 0.6, "Low", 3, 1.66, 25.07, {"cycling": {"activity_count": 2, "distance": 24.27, "duration_hours": 1.24, "exercise_load": 26.2}, "swimming": {"activity_count": 1, "distance": 0.8, "duration_hours": 0.42, "exercise_load": 39.5}}, 65.7],
+    ["2025-07-13", 60, 32.0, 46.0, 4.72, 39, 47.0, "Productive 3", 822, 743, 1.1, "Optimal", 5, 3.16, 52.42, {"running": {"activity_count": 1, "distance": 9.99, "duration_hours": 1.03}, "cycling": {"activity_count": 1, "distance": 40.02, "duration_hours": 1.29}, "swimming": {"activity_count": 1, "distance": 1.41, "duration_hours": 0.63}, "transition": {"activity_count": 2, "distance": 1.0, "duration_hours": 0.21}}, null]
+  ]
+  },
+  "trend_long_range_weekly": {
+    "columns": ["date", "window_start", "window_end", "resting_hr", "hrv_last_night_avg_ms", "hrv_7_day_avg_ms", "sleep_hours", "sleep_score", "vo2_max", "training_status", "acute_load", "chronic_load", "acwr", "acwr_status", "activity_count", "duration_hours", "distance", "sport_volume", "exercise_load"],
+    "data": [
+    ["2025-04-27", "2025-04-21", "2025-04-27", 58, 48.0, 48.0, 4.87, 56, 47.0, "Productive 3", 933, 724, 1.2, "Optimal", 12, 7.52, 65.94, {"running": {"activity_count": 4, "distance": 27.06, "duration_hours": 2.69, "exercise_load": 582.7}, "cycling": {"activity_count": 1, "distance": 19.98, "duration_hours": 0.67, "exercise_load": 53.2}, "swimming": {"activity_count": 2, "distance": 3.1, "duration_hours": 2.2, "exercise_load": 107.1}, "other": {"activity_count": 5, "distance": 15.81, "duration_hours": 1.96, "exercise_load": 85.6}}, 828.5],
+    ["2025-05-04", "2025-04-28", "2025-05-04", 58, 50.0, 49.0, 5.2, 67, 47.0, "Productive 3", 928, 770, 1.2, "Optimal", 11, 8.03, 75.98, {"running": {"activity_count": 4, "distance": 32.11, "duration_hours": 3.57, "exercise_load": 483.3}, "cycling": {"activity_count": 2, "distance": 39.09, "duration_hours": 1.32, "exercise_load": 127.4}, "swimming": {"activity_count": 2, "distance": 3.35, "duration_hours": 2.15, "exercise_load": 169.3}, "other": {"activity_count": 3, "distance": 1.42, "duration_hours": 0.99, "exercise_load": 35.3}}, 815.3],
+    ["2025-05-11", "2025-05-05", "2025-05-11", 62, 27.0, 40.0, 5.53, 58, 47.0, "Productive 4", 543, 752, 0.7, "Low", 8, 5.44, 73.66, {"running": {"activity_count": 4, "distance": 28.23, "duration_hours": 3.27, "exercise_load": 424.3}, "cycling": {"activity_count": 2, "distance": 43.93, "duration_hours": 1.47, "exercise_load": 111.3}, "other": {"activity_count": 2, "distance": 1.5, "duration_hours": 0.7, "exercise_load": 11.4}}, 547.0],
+    ["2025-05-18", "2025-05-12", "2025-05-18", 56, 56.0, 50.0, 6.77, 78, 47.0, "Maintaining 2", 744, 742, 1.0, "Optimal", 10, 8.6, 100.37, {"running": {"activity_count": 4, "distance": 35.6, "duration_hours": 3.98, "exercise_load": 556.2}, "cycling": {"activity_count": 1, "distance": 43.99, "duration_hours": 1.71, "exercise_load": 74.6}, "swimming": {"activity_count": 2, "distance": 2.3, "duration_hours": 1.41, "exercise_load": 95.3}, "other": {"activity_count": 3, "distance": 18.48, "duration_hours": 1.5, "exercise_load": 77.7}}, 803.8],
+    ["2025-05-25", "2025-05-19", "2025-05-25", 59, 42.0, 49.0, 5.07, 61, 47.0, "Maintaining 2", 872, 756, 1.1, "Optimal", 10, 8.49, 93.96, {"running": {"activity_count": 4, "distance": 26.11, "duration_hours": 2.83, "exercise_load": 479.3}, "cycling": {"activity_count": 2, "distance": 64.75, "duration_hours": 2.93, "exercise_load": 171.7}, "swimming": {"activity_count": 2, "distance": 3.1, "duration_hours": 2.05, "exercise_load": 172.3}, "other": {"activity_count": 2, "distance": 0.0, "duration_hours": 0.69, "exercise_load": 9.3}}, 832.6],
+    ["2025-06-01", "2025-05-26", "2025-06-01", 57, 55.0, 50.0, 5.72, 62, 47.0, "Maintaining 2", 781, 747, 1.0, "Optimal", 9, 6.31, 82.37, {"running": {"activity_count": 4, "distance": 26.51, "duration_hours": 2.91, "exercise_load": 462.7}, "cycling": {"activity_count": 2, "distance": 53.66, "duration_hours": 1.75, "exercise_load": 135.5}, "swimming": {"activity_count": 1, "distance": 1.7, "duration_hours": 1.15, "exercise_load": 97.8}, "other": {"activity_count": 2, "distance": 0.5, "duration_hours": 0.5, "exercise_load": 7.6}}, 703.5],
+    ["2025-06-08", "2025-06-02", "2025-06-08", 58, 52.0, 53.0, 5.1, 63, 47.0, "Maintaining 2", 945, 798, 1.1, "Optimal", 11, 8.42, 121.29, {"running": {"activity_count": 4, "distance": 30.18, "duration_hours": 3.3, "exercise_load": 580.6}, "cycling": {"activity_count": 4, "distance": 89.51, "duration_hours": 3.22, "exercise_load": 258.7}, "swimming": {"activity_count": 1, "distance": 1.6, "duration_hours": 1.16, "exercise_load": 66.5}, "other": {"activity_count": 2, "distance": 0.0, "duration_hours": 0.75, "exercise_load": 28.1}}, 934.0],
+    ["2025-06-15", "2025-06-09", "2025-06-15", 57, 53.0, 47.0, 6.22, 74, 47.0, "Maintaining 2", 890, 839, 1.0, "Optimal", 11, 8.05, 91.74, {"running": {"activity_count": 4, "distance": 28.17, "duration_hours": 3.11, "exercise_load": 533.3}, "cycling": {"activity_count": 2, "distance": 56.44, "duration_hours": 2.05, "exercise_load": 166.1}, "swimming": {"activity_count": 1, "distance": 1.7, "duration_hours": 1.14, "exercise_load": 87.7}, "other": {"activity_count": 4, "distance": 5.43, "duration_hours": 1.76, "exercise_load": 42.4}}, 829.4],
+    ["2025-06-22", "2025-06-16", "2025-06-22", 60, 45.0, 50.0, 4.58, 53, 47.0, "Maintaining 2", 976, 854, 1.1, "Optimal", 10, 7.61, 95.64, {"running": {"activity_count": 5, "distance": 33.63, "duration_hours": 3.79, "exercise_load": 595.6}, "cycling": {"activity_count": 2, "distance": 59.09, "duration_hours": 2.09, "exercise_load": 202.8}, "swimming": {"activity_count": 1, "distance": 2.3, "duration_hours": 1.23, "exercise_load": 69.1}, "other": {"activity_count": 2, "distance": 0.62, "duration_hours": 0.51, "exercise_load": 16.5}}, 884.0],
+    ["2025-06-29", "2025-06-23", "2025-06-29", 60, 40.0, 46.0, 4.4, 47, 47.0, "Maintaining 2", 969, 857, 1.1, "Optimal", 7, 6.86, 91.47, {"running": {"activity_count": 4, "distance": 31.1, "duration_hours": 3.5, "exercise_load": 529.5}, "cycling": {"activity_count": 2, "distance": 58.37, "duration_hours": 2.12, "exercise_load": 232.1}, "swimming": {"activity_count": 1, "distance": 2.0, "duration_hours": 1.23, "exercise_load": 63.1}}, 824.8],
+    ["2025-07-06", "2025-06-30", "2025-07-06", 56, 56.0, 55.0, 6.85, 71, 47.0, "Productive 3", 728, 798, 0.9, "Optimal", 10, 6.36, 75.84, {"running": {"activity_count": 4, "distance": 24.18, "duration_hours": 2.79, "exercise_load": 341.0}, "cycling": {"activity_count": 3, "distance": 48.84, "duration_hours": 1.71, "exercise_load": 180.1}, "swimming": {"activity_count": 1, "distance": 2.1, "duration_hours": 1.3, "exercise_load": 74.0}, "other": {"activity_count": 2, "distance": 0.72, "duration_hours": 0.57, "exercise_load": 7.9}}, 603.1],
+    ["2025-07-13", "2025-07-07", "2025-07-13", 60, 32.0, 46.0, 4.72, 39, 47.0, "Productive 3", 822, 743, 1.1, "Optimal", 14, 7.36, 105.45, {"running": {"activity_count": 3, "distance": 21.68, "duration_hours": 2.45, "exercise_load": 165.8}, "cycling": {"activity_count": 4, "distance": 79.62, "duration_hours": 3.04, "exercise_load": 100.4}, "swimming": {"activity_count": 3, "distance": 2.45, "duration_hours": 1.13, "exercise_load": 46.2}, "other": {"activity_count": 2, "distance": 0.7, "duration_hours": 0.54, "exercise_load": 11.4}, "transition": {"activity_count": 2, "distance": 1.0, "duration_hours": 0.21}}, 323.7]
+  ]
+  },
+  "body_battery_trend": {
+    "columns": ["date", "charged", "drained"],
+    "data": [
+    ["2025-07-07", 77, 77],
+    ["2025-07-08", 53, 56],
+    ["2025-07-09", 62, 62],
+    ["2025-07-10", 41, 41],
+    ["2025-07-11", 40, 40],
+    ["2025-07-12", 31, 31],
+    ["2025-07-13", 13, 13]
+  ]
+  },
+  "units": {
+    "distance": "km",
+    "pace": "min/km",
+    "elevation": "m",
+    "stride_length": "m",
+    "vertical_oscillation": "cm",
+    "temperature": "°C",
+    "wind_speed": "m/s",
+    "precipitation": "mm"
+  }
+}
