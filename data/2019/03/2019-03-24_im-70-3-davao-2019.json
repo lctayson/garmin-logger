@@ -1,0 +1,277 @@
+{
+  "date": "2019-03-24",
+  "units": {
+    "distance": "km",
+    "pace": "min/km",
+    "elevation": "m",
+    "stride_length": "m",
+    "vertical_oscillation": "cm",
+    "temperature": "°C",
+    "wind_speed": "m/s",
+    "precipitation": "mm"
+  },
+  "activities": [
+    {
+      "name": "IM 70.3 Davao 2019 - Open Water Swimming",
+      "activity_id": 3489801344,
+      "type": "open_water_swimming",
+      "distance": 5.1,
+      "time": "49:14",
+      "elapsed_time": "49:14",
+      "moving_time": "44:13",
+      "avg_pace": "0:58",
+      "start_time_local": "2019-03-24T06:30:03.0",
+      "splits": {
+        "columns": ["step_type", "lap", "time", "elapsed_time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr", "min_hr", "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace", "distance", "elevation_gain", "elevation_loss", "stride_length", "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power", "avg_power", "max_power", "avg_vertical_ratio"],
+        "data": [
+        [null, 1, "5:28", "5:00", "10:56", null, null, null, null, null, null, null, 390.0, "4:31", null, "5:00", "10:00", 0.5, null, null, null, null, null, null, null, null, null],
+        [null, 2, "5:28", "4:53", "10:57", null, null, null, null, null, null, null, 385.0, "3:26", null, "4:53", "9:46", 0.5, null, null, null, null, null, null, null, null, null],
+        [null, 3, "4:06", "3:57", "8:13", null, null, null, null, null, null, null, 390.0, "2:56", null, "3:57", "7:54", 0.5, null, null, null, null, null, null, null, null, null],
+        [null, 4, "4:35", "3:53", "9:10", null, null, null, null, null, null, null, 390.0, "2:38", null, "3:53", "7:46", 0.5, null, null, null, null, null, null, null, null, null],
+        [null, 5, "4:26", "4:12", "8:53", null, null, null, null, null, null, null, 390.0, "3:18", null, "4:12", "8:24", 0.5, null, null, null, null, null, null, null, null, null],
+        [null, 6, "4:48", "4:28", "9:35", null, null, null, null, null, null, null, 385.0, "4:31", null, "4:28", "8:56", 0.5, null, null, null, null, null, null, null, null, null],
+        [null, 7, "4:28", "4:12", "8:56", null, null, null, null, null, null, null, 406.0, "1:58", null, "4:12", "8:24", 0.5, null, null, null, null, null, null, null, null, null],
+        [null, 8, "4:14", "4:07", "8:27", null, null, null, null, null, null, null, 390.0, "2:47", null, "4:07", "8:14", 0.5, null, null, null, null, null, null, null, null, null],
+        [null, 9, "4:59", "4:28", "9:59", null, null, null, null, null, null, null, 390.0, "3:04", null, "4:28", "8:56", 0.5, null, null, null, null, null, null, null, null, null],
+        [null, 10, "5:28", "5:03", "10:56", null, null, null, null, null, null, null, 406.0, "1:11", null, "5:03", "10:06", 0.5, null, null, null, null, null, null, null, null, null],
+        [null, 11, "1:13", "1:13", "12:22", null, null, null, null, null, null, null, 71.0, "5:31", null, null, "1:14", 0.1, null, null, null, null, null, null, null, null, null]
+      ]
+      },
+      "weather": {
+        "temperature": 27.2,
+        "feels_like": 28.9,
+        "dew_point": 21.1,
+        "humidity_pct": 70.0,
+        "wind_speed": 7.0,
+        "wind_direction_deg": 340.0,
+        "condition": "Mostly Clear"
+      },
+      "lap_count": 11,
+      "parent_activity_id": 3489801339
+    },
+    {
+      "name": "Transition 1 (T1)",
+      "activity_id": 3489801345,
+      "type": "transition_v2",
+      "distance": 0.16,
+      "time": "1:36",
+      "elapsed_time": "1:36",
+      "moving_time": "1:03",
+      "avg_pace": "10:17",
+      "avg_hr": 99.0,
+      "max_hr": 121.0,
+      "elevation_gain": 0.0,
+      "elevation_loss": 0.0,
+      "start_time_local": "2019-03-24T07:19:16.0",
+      "training_effect": {
+        "aerobic": 0.1,
+        "aerobic_message": "NO_AEROBIC_BENEFIT",
+        "anaerobic": 0.0,
+        "anaerobic_message": "NO_ANAEROBIC_BENEFIT"
+      },
+      "splits": {
+        "columns": ["step_type", "lap", "time", "elapsed_time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr", "min_hr", "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace", "distance", "elevation_gain", "elevation_loss", "stride_length", "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power", "avg_power", "max_power", "avg_vertical_ratio"],
+        "data": [
+        [null, 1, "1:36", "1:30", "10:17", null, 99.0, 121.0, 69, 69, 120, null, 34.0, "3:35", null, "1:03", "6:44", 0.16, 0.0, 0.0, null, null, null, null, null, null, null]
+      ]
+      },
+      "weather": {
+        "temperature": 27.2,
+        "feels_like": 28.9,
+        "dew_point": 21.1,
+        "humidity_pct": 70.0,
+        "wind_speed": 7.0,
+        "wind_direction_deg": 340.0,
+        "condition": "Mostly Clear"
+      },
+      "lap_count": 1,
+      "parent_activity_id": 3489801339
+    },
+    {
+      "name": "IM 70.3 Davao 2019 - Cycling",
+      "activity_id": 3489801346,
+      "type": "cycling",
+      "distance": 90.55,
+      "time": "2:44:15",
+      "elapsed_time": "2:44:15",
+      "moving_time": "2:43:18",
+      "avg_pace": "1:49",
+      "avg_hr": 157.0,
+      "max_hr": 180.0,
+      "elevation_gain": 253.0,
+      "elevation_loss": 252.0,
+      "start_time_local": "2019-03-24T07:20:52.0",
+      "training_effect": {
+        "aerobic": 4.8,
+        "aerobic_message": "HIGHLY_IMPROVING_VO2_MAX",
+        "anaerobic": 3.799999952316284,
+        "anaerobic_message": "IMPROVING_ANAEROBIC_BASE"
+      },
+      "splits": {
+        "columns": ["step_type", "lap", "time", "elapsed_time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr", "min_hr", "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace", "distance", "elevation_gain", "elevation_loss", "stride_length", "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power", "avg_power", "max_power", "avg_vertical_ratio"],
+        "data": [
+        [null, 1, "9:30", "9:29", "1:54", null, 115.0, 132.0, 119, 95, 118, null, 277.0, "1:44", null, "9:29", "1:54", 5.0, 10.0, 7.0, null, null, null, null, null, null, null],
+        [null, 2, "9:59", "9:57", "2:00", null, 140.0, 167.0, 115, 109, 162, null, 398.0, "1:45", null, "9:57", "1:59", 5.0, 3.0, 10.0, null, null, null, null, null, null, null],
+        [null, 3, "10:27", "10:24", "2:05", null, 157.0, 166.0, 161, 149, 165, null, 503.0, "1:53", null, "10:24", "2:05", 5.0, 18.0, 16.0, null, null, null, null, null, null, null],
+        [null, 4, "9:18", "9:12", "1:52", null, 160.0, 168.0, 162, 147, 163, null, 453.0, "1:29", null, "9:12", "1:50", 5.0, 12.0, 13.0, null, null, null, null, null, null, null],
+        [null, 5, "9:48", "9:46", "1:58", null, 160.0, 169.0, 164, 145, 165, null, 478.0, "1:41", null, "9:46", "1:57", 5.0, 15.0, 16.0, null, null, null, null, null, null, null],
+        [null, 6, "10:26", "10:26", "2:05", null, 165.0, 174.0, 165, 151, 161, null, 524.0, "1:50", null, "10:26", "2:05", 5.0, 18.0, 21.0, null, null, null, null, null, null, null],
+        [null, 7, "9:25", "9:21", "1:53", null, 164.0, 180.0, 163, 146, 159, null, 465.0, "1:36", null, "9:21", "1:52", 5.0, 15.0, 15.0, null, null, null, null, null, null, null],
+        [null, 8, "9:37", "9:31", "1:55", null, 161.0, 172.0, 160, 141, 169, null, 448.0, "1:32", null, "9:31", "1:54", 5.0, 19.0, 20.0, null, null, null, null, null, null, null],
+        [null, 9, "9:57", "9:56", "1:59", null, 164.0, 173.0, 170, 150, 163, null, 486.0, "1:48", null, "9:56", "1:59", 5.0, 19.0, 12.0, null, null, null, null, null, null, null],
+        [null, 10, "8:39", "8:38", "1:44", null, 160.0, 168.0, 164, 138, 138, null, 390.0, "1:30", null, "8:38", "1:44", 5.0, 7.0, 15.0, null, null, null, null, null, null, null],
+        [null, 11, "8:49", "8:50", "1:46", null, 160.0, 168.0, 138, 136, 160, null, 385.0, "1:29", null, "8:49", "1:46", 5.0, 25.0, 18.0, null, null, null, null, null, null, null],
+        [null, 12, "8:18", "8:16", "1:40", null, 163.0, 176.0, 160, 145, 158, null, 381.0, "1:29", null, "8:16", "1:39", 5.0, 14.0, 16.0, null, null, null, null, null, null, null],
+        [null, 13, "7:47", "7:46", "1:33", null, 160.0, 171.0, 158, 157, 164, null, 348.0, "1:26", null, "7:46", "1:33", 5.0, 10.0, 8.0, null, null, null, null, null, null, null],
+        [null, 14, "7:47", "7:46", "1:33", null, 159.0, 167.0, 164, 149, 158, null, 335.0, "1:25", null, "7:46", "1:33", 5.0, 10.0, 9.0, null, null, null, null, null, null, null],
+        [null, 15, "8:33", "8:28", "1:43", null, 161.0, 169.0, 157, 153, 160, null, 381.0, "1:34", null, "8:28", "1:42", 5.0, 20.0, 17.0, null, null, null, null, null, null, null],
+        [null, 16, "8:20", "8:16", "1:40", null, 162.0, 171.0, 161, 153, 165, null, 381.0, "1:30", null, "8:16", "1:39", 5.0, 15.0, 18.0, null, null, null, null, null, null, null],
+        [null, 17, "7:56", "7:52", "1:35", null, 164.0, 169.0, 165, 160, 160, null, 381.0, "1:25", null, "7:52", "1:34", 5.0, 12.0, 10.0, null, null, null, null, null, null, null],
+        [null, 18, "8:19", "8:16", "1:40", null, 163.0, 167.0, 161, 158, 164, null, 390.0, "1:31", null, "8:16", "1:39", 5.0, 13.0, 10.0, null, null, null, null, null, null, null],
+        [null, 19, "1:19", "1:09", "2:23", null, 161.0, 164.0, 163, 157, 157, null, 54.0, "2:00", null, "1:09", "2:05", 0.55, 0.0, 2.0, null, null, null, null, null, null, null]
+      ]
+      },
+      "weather": {
+        "temperature": 27.2,
+        "feels_like": 28.9,
+        "dew_point": 21.1,
+        "humidity_pct": 70.0,
+        "wind_speed": 7.0,
+        "wind_direction_deg": 340.0,
+        "condition": "Mostly Clear"
+      },
+      "hr_zones": {
+        "columns": ["zone", "range", "time", "percent"],
+        "data": [
+        ["Zone 1 - Warm Up", "122-134 bpm", "5:14", 3],
+        ["Zone 2 - Easy", "135-146 bpm", "1:45", 1],
+        ["Zone 3 - Aerobic", "147-159 bpm", "37:34", 24],
+        ["Zone 4 - Threshold", "160-171 bpm", "107:12", 69],
+        ["Zone 5 - Maximum", ">171 bpm", "3:03", 2]
+      ]
+      },
+      "lap_count": 19,
+      "parent_activity_id": 3489801339
+    },
+    {
+      "name": "Transition 2 (T2)",
+      "activity_id": 3489801349,
+      "type": "transition_v2",
+      "distance": 0.21,
+      "time": "2:13",
+      "elapsed_time": "2:13",
+      "moving_time": "1:26",
+      "avg_pace": "10:31",
+      "avg_hr": 152.0,
+      "max_hr": 163.0,
+      "elevation_gain": 0.0,
+      "elevation_loss": 1.0,
+      "start_time_local": "2019-03-24T10:05:07.0",
+      "training_effect": {
+        "aerobic": 4.8,
+        "aerobic_message": "HIGHLY_IMPROVING_VO2_MAX",
+        "anaerobic": 3.799999952316284,
+        "anaerobic_message": "IMPROVING_ANAEROBIC_BASE"
+      },
+      "splits": {
+        "columns": ["step_type", "lap", "time", "elapsed_time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr", "min_hr", "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace", "distance", "elevation_gain", "elevation_loss", "stride_length", "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power", "avg_power", "max_power", "avg_vertical_ratio"],
+        "data": [
+        [null, 1, "2:13", "2:09", "10:31", null, 152.0, 163.0, 157, 132, 162, null, 54.0, "5:26", null, "1:26", "6:48", 0.21, 0.0, 1.0, null, null, null, null, null, null, null]
+      ]
+      },
+      "weather": {
+        "temperature": 30.0,
+        "feels_like": 33.3,
+        "dew_point": 22.2,
+        "humidity_pct": 62.0,
+        "wind_speed": 14.0,
+        "wind_direction_deg": 30.0,
+        "condition": "Mostly Clear"
+      },
+      "hr_zones": {
+        "columns": ["zone", "range", "time", "percent"],
+        "data": [
+        ["Zone 1 - Warm Up", "122-134 bpm", "0:06", 5],
+        ["Zone 2 - Easy", "135-146 bpm", "0:36", 27],
+        ["Zone 3 - Aerobic", "147-159 bpm", "0:48", 37],
+        ["Zone 4 - Threshold", "160-171 bpm", "0:42", 32],
+        ["Zone 5 - Maximum", ">171 bpm", "0:00", 0]
+      ]
+      },
+      "lap_count": 1,
+      "parent_activity_id": 3489801339
+    },
+    {
+      "name": "IM 70.3 Davao 2019 - Running",
+      "activity_id": 3489801351,
+      "type": "running",
+      "distance": 21.01,
+      "time": "2:01:45",
+      "elapsed_time": "2:01:45",
+      "moving_time": "2:01:13",
+      "avg_pace": "5:48",
+      "avg_hr": 170.0,
+      "max_hr": 193.0,
+      "elevation_gain": 67.0,
+      "elevation_loss": 50.0,
+      "start_time_local": "2019-03-24T10:07:19.0",
+      "training_effect": {
+        "aerobic": 5.0,
+        "aerobic_message": "OVERREACHING",
+        "anaerobic": 4.300000190734863,
+        "anaerobic_message": "HIGHLY_IMPROVING_ANAEROBIC_CAPACITY_AND_SPEED"
+      },
+      "decoupling": {
+        "pace_pct": 6.4
+      },
+      "splits": {
+        "columns": ["step_type", "lap", "time", "elapsed_time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr", "min_hr", "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace", "distance", "elevation_gain", "elevation_loss", "stride_length", "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power", "avg_power", "max_power", "avg_vertical_ratio"],
+        "data": [
+        [null, 1, "5:32", "5:32", "5:32", null, 165.0, 168.0, 162, 159, 166, 177.0, 264.0, "4:56", 180.0, "5:32", "5:32", 1.0, 6.0, 2.0, 1.02, null, null, null, null, null, null],
+        [null, 2, "5:22", "5:21", "5:22", null, 167.0, 172.0, 166, 166, 167, 176.0, 264.0, "5:05", 180.0, "5:21", "5:21", 1.0, 1.0, 2.0, 1.06, null, null, null, null, null, null],
+        [null, 3, "5:35", "5:33", "5:35", null, 169.0, 173.0, 167, 166, 168, 174.0, 281.0, "5:26", 176.0, "5:33", "5:33", 1.0, 5.0, 0.0, 1.03, null, null, null, null, null, null],
+        [null, 4, "5:38", "5:38", "5:38", null, 171.0, 174.0, 168, 168, 172, 171.0, 289.0, "5:18", 176.0, "5:38", "5:38", 1.0, 3.0, 0.0, 1.04, null, null, null, null, null, null],
+        [null, 5, "5:38", "5:37", "5:38", null, 171.0, 176.0, 172, 168, 169, 171.0, 289.0, "5:07", 174.0, "5:37", "5:37", 1.0, 5.0, 9.0, 1.04, null, null, null, null, null, null],
+        [null, 6, "5:33", "5:32", "5:33", null, 170.0, 177.0, 169, 165, 170, 173.0, 281.0, "4:48", 176.0, "5:32", "5:32", 1.0, 2.0, 2.0, 1.04, null, null, null, null, null, null],
+        [null, 7, "5:51", "5:50", "5:51", null, 168.0, 173.0, 170, 164, 170, 166.0, 289.0, "5:15", 172.0, "5:50", "5:50", 1.0, 2.0, 2.0, 1.03, null, null, null, null, null, null],
+        [null, 8, "5:49", "5:48", "5:50", null, 169.0, 171.0, 170, 166, 169, 170.0, 289.0, "5:17", 172.0, "5:48", "5:48", 1.0, 6.0, 0.0, 1.01, null, null, null, null, null, null],
+        [null, 9, "5:50", "5:49", "5:50", null, 168.0, 175.0, 169, 163, 169, 170.0, 289.0, "5:09", 176.0, "5:49", "5:49", 1.0, 0.0, 3.0, 1.01, null, null, null, null, null, null],
+        [null, 10, "5:44", "5:43", "5:44", null, 169.0, 176.0, 170, 166, 170, 167.0, 285.0, "4:53", 176.0, "5:43", "5:43", 1.0, 1.0, 4.0, 1.04, null, null, null, null, null, null],
+        [null, 11, "5:44", "5:43", "5:44", null, 171.0, 175.0, 170, 168, 171, 170.0, 293.0, "5:00", 177.0, "5:43", "5:43", 1.0, 3.0, 2.0, 1.03, null, null, null, null, null, null],
+        [null, 12, "5:39", "5:38", "5:39", null, 171.0, 174.0, 171, 165, 173, 172.0, 289.0, "5:06", 176.0, "5:38", "5:38", 1.0, 1.0, 0.0, 1.03, null, null, null, null, null, null],
+        [null, 13, "6:19", "6:19", "6:19", null, 170.0, 180.0, 173, 164, 180, 164.0, 318.0, "5:15", 246.0, "6:09", "6:09", 1.0, 7.0, 0.0, 0.97, null, null, null, null, null, null],
+        [null, 14, "6:08", "6:06", "6:08", null, 170.0, 180.0, 180, 164, 170, 165.0, 306.0, "5:08", 174.0, "6:06", "6:06", 1.0, 1.0, 2.0, 0.99, null, null, null, null, null, null],
+        [null, 15, "6:11", "6:10", "6:11", null, 170.0, 180.0, 170, 162, 170, 163.0, 306.0, "5:19", 178.0, "6:10", "6:10", 1.0, 2.0, 4.0, 0.99, null, null, null, null, null, null],
+        [null, 16, "6:16", "6:16", "6:16", null, 169.0, 175.0, 170, 165, 165, 164.0, 306.0, "5:28", 178.0, "6:16", "6:16", 1.0, 1.0, 4.0, 0.97, null, null, null, null, null, null],
+        [null, 17, "6:00", "5:59", "6:00", null, 164.0, 170.0, 165, 152, 163, 168.0, 256.0, "5:02", 178.0, "5:59", "5:59", 1.0, 5.0, 2.0, 0.99, null, null, null, null, null, null],
+        [null, 18, "5:45", "5:44", "5:45", null, 172.0, 181.0, 163, 161, 179, 172.0, 293.0, "5:15", 176.0, "5:44", "5:44", 1.0, 8.0, 0.0, 1.01, null, null, null, null, null, null],
+        [null, 19, "5:59", "5:57", "5:59", null, 172.0, 180.0, 179, 166, 180, 170.0, 306.0, "5:25", 176.0, "5:57", "5:57", 1.0, 2.0, 6.0, 0.99, null, null, null, null, null, null],
+        [null, 20, "5:46", "5:46", "5:46", null, 185.0, 193.0, 180, 176, 185, 171.0, 348.0, "5:07", 249.0, "5:46", "5:46", 1.0, 1.0, 2.0, 1.01, null, null, null, null, null, null],
+        [null, 21, "5:21", "5:20", "5:21", null, 178.0, 186.0, 185, 174, 177, 176.0, 297.0, "4:39", 182.0, "5:20", "5:20", 1.0, 3.0, 4.0, 1.07, null, null, null, null, null, null],
+        [null, 22, "0:04", "0:02", "6:50", null, 178.0, 179.0, 177, 177, 179, 171.0, 0.0, "4:53", 171.0, "0:02", "3:13", 0.01, 0.0, 0.0, 0.86, null, null, null, null, null, null]
+      ]
+      },
+      "weather": {
+        "temperature": 30.0,
+        "feels_like": 33.3,
+        "dew_point": 22.2,
+        "humidity_pct": 62.0,
+        "wind_speed": 14.0,
+        "wind_direction_deg": 30.0,
+        "condition": "Mostly Clear"
+      },
+      "hr_zones": {
+        "columns": ["zone", "range", "time", "percent"],
+        "data": [
+        ["Zone 1 - Warm Up", "110-134 bpm", "0:00", 0],
+        ["Zone 2 - Easy", "135-149 bpm", "0:00", 0],
+        ["Zone 3 - Aerobic", "150-160 bpm", "0:38", 1],
+        ["Zone 4 - Threshold", "161-168 bpm", "41:01", 34],
+        ["Zone 5 - Maximum", ">168 bpm", "80:19", 66]
+      ]
+      },
+      "lap_count": 22,
+      "parent_activity_id": 3489801339
+    }
+  ]
+}
