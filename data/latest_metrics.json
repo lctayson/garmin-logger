@@ -21,7 +21,7 @@
       "stress_history": {"percent": 58, "feedback": "Moderate"}
     }
   },
-  "health": {"steps": 62},
+  "health": {"steps": 135},
   "sleep": {"deep_h": 0.58, "light_h": 5.7, "rem_h": 1.63, "awake_h": 0.42, "baseline_h": 7.0, "need_h": 8.0, "next_need_h": 7.0, "feedback": "Highly Increased", "training_feedback": "Chronic", "sleep_history_adjustment": "Increasing", "hrv_adjustment": "No Change", "nap_adjustment": "No Change", "previous_day_nap": null},
   "load": {
     "acute_load": 505,
@@ -132,7 +132,7 @@
     ["2026-09-11", 87, 77, 95, 29],
     ["2026-09-12", 45, 82, 87, 5],
     ["2026-09-13", 34, 34, 36, 5],
-    ["2026-09-14", 73, 8, 78, 5]
+    ["2026-09-14", 73, 9, 78, 5]
   ]
   },
   "units": {"distance": "km", "pace": "min/km", "elevation": "m", "stride_length": "m", "vertical_oscillation": "cm", "temperature": "°C", "wind_speed": "m/s", "precipitation": "mm"}
