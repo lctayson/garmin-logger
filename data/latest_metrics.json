@@ -12,7 +12,12 @@
     "sleep_hours_including_previous_day_nap": 7.92,
     "sleep_score": 79,
     "recovery_hours": 0.0,
-    "hrv_baseline": {"lowUpper": 45.0, "balancedLow": 47.0, "balancedUpper": 55.0, "markerValue": 0.375},
+    "hrv_baseline": {
+      "lowUpper": 45.0,
+      "balancedLow": 47.0,
+      "balancedUpper": 55.0,
+      "markerValue": 0.375
+    },
     "factor_details": {
       "sleep_score": {"percent": 68, "feedback": "Moderate"},
       "recovery_time": {"percent": 99, "feedback": "Good"},
@@ -22,7 +27,21 @@
     }
   },
   "health": {"steps": 135},
-  "sleep": {"deep_h": 0.58, "light_h": 5.7, "rem_h": 1.63, "awake_h": 0.42, "baseline_h": 7.0, "need_h": 8.0, "next_need_h": 7.0, "feedback": "Highly Increased", "training_feedback": "Chronic", "sleep_history_adjustment": "Increasing", "hrv_adjustment": "No Change", "nap_adjustment": "No Change", "previous_day_nap": null},
+  "sleep": {
+    "deep_h": 0.58,
+    "light_h": 5.7,
+    "rem_h": 1.63,
+    "awake_h": 0.42,
+    "baseline_h": 7.0,
+    "need_h": 8.0,
+    "next_need_h": 7.0,
+    "feedback": "Highly Increased",
+    "training_feedback": "Chronic",
+    "sleep_history_adjustment": "Increasing",
+    "hrv_adjustment": "No Change",
+    "nap_adjustment": "No Change",
+    "previous_day_nap": null
+  },
   "load": {
     "acute_load": 505,
     "chronic_load": 528,
@@ -42,13 +61,35 @@
     "anaerobic_target": [173, 519],
     "load_focus": "Anaerobic Shortage"
   },
-  "running_tolerance": {"acute_impact_load": 36.8, "weekly_tolerance": 65.2, "actual_7_day_distance": 34.3, "distance_unit": "km", "status": "Medium", "percent_of_tolerance": 56.4},
+  "running_tolerance": {
+    "acute_impact_load": 36.8,
+    "weekly_tolerance": 65.2,
+    "actual_7_day_distance": 34.3,
+    "distance_unit": "km",
+    "status": "Medium",
+    "percent_of_tolerance": 56.4
+  },
   "training_history": {
     "7_day": {
-      "total_endurance": {"activity_count": 6, "distance": 35.31, "duration_hours": 4.37, "exercise_load": 595.0},
+      "total_endurance": {
+        "activity_count": 6,
+        "distance": 35.31,
+        "duration_hours": 4.37,
+        "exercise_load": 595.0
+      },
       "sports": {
-        "running": {"activity_count": 5, "distance": 34.31, "duration_hours": 4.11, "exercise_load": 588.4},
-        "other": {"activity_count": 1, "distance": 1.0, "duration_hours": 0.26, "exercise_load": 6.6}
+        "running": {
+          "activity_count": 5,
+          "distance": 34.31,
+          "duration_hours": 4.11,
+          "exercise_load": 588.4
+        },
+        "other": {
+          "activity_count": 1,
+          "distance": 1.0,
+          "duration_hours": 0.26,
+          "exercise_load": 6.6
+        }
       }
     },
     "28_day": {
@@ -57,36 +98,91 @@
         {
           "week_start": "2026-08-18",
           "week_end": "2026-08-24",
-          "total_endurance": {"activity_count": 4, "distance": 29.15, "duration_hours": 3.48, "exercise_load": 522.4},
+          "total_endurance": {
+            "activity_count": 4,
+            "distance": 29.15,
+            "duration_hours": 3.48,
+            "exercise_load": 522.4
+          },
           "sports": {
-            "running": {"activity_count": 4, "distance": 29.15, "duration_hours": 3.48, "exercise_load": 522.4}
+            "running": {
+              "activity_count": 4,
+              "distance": 29.15,
+              "duration_hours": 3.48,
+              "exercise_load": 522.4
+            }
           }
         },
         {
           "week_start": "2026-08-25",
           "week_end": "2026-08-31",
-          "total_endurance": {"activity_count": 5, "distance": 30.74, "duration_hours": 3.97, "exercise_load": 546.0},
+          "total_endurance": {
+            "activity_count": 5,
+            "distance": 30.74,
+            "duration_hours": 3.97,
+            "exercise_load": 546.0
+          },
           "sports": {
-            "running": {"activity_count": 4, "distance": 28.17, "duration_hours": 3.3, "exercise_load": 541.7},
-            "other": {"activity_count": 1, "distance": 2.57, "duration_hours": 0.67, "exercise_load": 4.3}
+            "running": {
+              "activity_count": 4,
+              "distance": 28.17,
+              "duration_hours": 3.3,
+              "exercise_load": 541.7
+            },
+            "other": {
+              "activity_count": 1,
+              "distance": 2.57,
+              "duration_hours": 0.67,
+              "exercise_load": 4.3
+            }
           }
         },
         {
           "week_start": "2026-09-01",
           "week_end": "2026-09-07",
-          "total_endurance": {"activity_count": 6, "distance": 34.92, "duration_hours": 4.39, "exercise_load": 526.2},
+          "total_endurance": {
+            "activity_count": 6,
+            "distance": 34.92,
+            "duration_hours": 4.39,
+            "exercise_load": 526.2
+          },
           "sports": {
-            "running": {"activity_count": 5, "distance": 34.22, "duration_hours": 4.2, "exercise_load": 523.3},
-            "other": {"activity_count": 1, "distance": 0.71, "duration_hours": 0.19, "exercise_load": 2.9}
+            "running": {
+              "activity_count": 5,
+              "distance": 34.22,
+              "duration_hours": 4.2,
+              "exercise_load": 523.3
+            },
+            "other": {
+              "activity_count": 1,
+              "distance": 0.71,
+              "duration_hours": 0.19,
+              "exercise_load": 2.9
+            }
           }
         },
         {
           "week_start": "2026-09-08",
           "week_end": "2026-09-14",
-          "total_endurance": {"activity_count": 6, "distance": 35.31, "duration_hours": 4.37, "exercise_load": 595.0},
+          "total_endurance": {
+            "activity_count": 6,
+            "distance": 35.31,
+            "duration_hours": 4.37,
+            "exercise_load": 595.0
+          },
           "sports": {
-            "running": {"activity_count": 5, "distance": 34.31, "duration_hours": 4.11, "exercise_load": 588.4},
-            "other": {"activity_count": 1, "distance": 1.0, "duration_hours": 0.26, "exercise_load": 6.6}
+            "running": {
+              "activity_count": 5,
+              "distance": 34.31,
+              "duration_hours": 4.11,
+              "exercise_load": 588.4
+            },
+            "other": {
+              "activity_count": 1,
+              "distance": 1.0,
+              "duration_hours": 0.26,
+              "exercise_load": 6.6
+            }
           }
         }
       ]
@@ -135,5 +231,14 @@
     ["2026-09-14", 73, 9, 78, 5]
   ]
   },
-  "units": {"distance": "km", "pace": "min/km", "elevation": "m", "stride_length": "m", "vertical_oscillation": "cm", "temperature": "°C", "wind_speed": "m/s", "precipitation": "mm"}
+  "units": {
+    "distance": "km",
+    "pace": "min/km",
+    "elevation": "m",
+    "stride_length": "m",
+    "vertical_oscillation": "cm",
+    "temperature": "°C",
+    "wind_speed": "m/s",
+    "precipitation": "mm"
+  }
 }
