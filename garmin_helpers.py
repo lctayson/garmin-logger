@@ -191,7 +191,7 @@ def get_training_readiness_details(api, target_date_str, training_status_raw=Non
     feedback_long = entry.get('feedbackLong')
     if score is not None or level or feedback_short or feedback_long:
         readiness_obj = {'score': score,'level': humanize_enum(level) if isinstance(level, str) else level,'feedback_short': humanize_enum(feedback_short) if isinstance(feedback_short, str) else feedback_short,'feedback_long': humanize_enum(feedback_long) if isinstance(feedback_long, str) else feedback_long}
-        factors = {'sleep_score': _factor(entry, 'sleepScoreFactorPercent', 'sleepScoreFactorFeedback'),'recovery_time': _factor(entry, 'recoveryTimeFactorPercent', 'recoveryTimeFactorFeedback'),'acwr': _factor(entry, 'acwrFactorPercent', 'acwrFactorFeedback'),'hrv': _factor(entry, 'hrvFactorPercent', 'hrvFactorFeedback'),'stress_history': _factor(entry, 'stressHistoryFactorPercent', 'stressHistoryFactorFeedback')}
+        factors = {'sleep_score': _factor(entry, 'sleepScoreFactorPercent', 'sleepScoreFactorFeedback'),'sleep_history': _factor(entry, 'sleepHistoryFactorPercent', 'sleepHistoryFactorFeedback'),'recovery_time': _factor(entry, 'recoveryTimeFactorPercent', 'recoveryTimeFactorFeedback'),'acwr': _factor(entry, 'acwrFactorPercent', 'acwrFactorFeedback'),'hrv': _factor(entry, 'hrvFactorPercent', 'hrvFactorFeedback'),'stress_history': _factor(entry, 'stressHistoryFactorPercent', 'stressHistoryFactorFeedback')}
         factors = {k: v for k, v in factors.items() if v}
         if factors: readiness_obj['factors'] = factors
         result['readiness'] = {k: v for k, v in readiness_obj.items() if v is not None}

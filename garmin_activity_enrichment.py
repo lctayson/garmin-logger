@@ -11,7 +11,8 @@ SPLIT_COLUMN_ORDER = (
     "avg_hr", "max_hr", "elevation_gain_m", "elevation_loss_m", "avg_run_cadence",
     "avg_ground_contact_time_ms", "avg_stride_length_m", "avg_vertical_oscillation_cm",
     "avg_vertical_ratio_pct", "normalized_power_w", "avg_power_w", "avg_w_kg", "max_power_w",
-    "calories", "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace",
+    "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace",
+    "workout_step_index", "workout_compliance_pct",
 )
 
 DUPLICATE_SPLIT_FIELDS = (
@@ -238,7 +239,7 @@ def enrich_activity_splits(api, activity):
         ("averageHR", "avg_hr", 0), ("maxHR", "max_hr", 0), ("averageRunCadence", "avg_run_cadence", 0),
         ("groundContactTime", "avg_ground_contact_time_ms", 1), ("verticalOscillation", "avg_vertical_oscillation_cm", 1),
         ("verticalRatio", "avg_vertical_ratio_pct", 1), ("normalizedPower", "normalized_power_w", 0),
-        ("averagePower", "avg_power_w", 0), ("maxPower", "max_power_w", 0), ("calories", "calories", 0),
+        ("averagePower", "avg_power_w", 0), ("maxPower", "max_power_w", 0),
     )
     for lap in laps:
         if not isinstance(lap, dict):
@@ -251,6 +252,10 @@ def enrich_activity_splits(api, activity):
             item.pop(key, None)
         if lap.get("intensityType") is not None:
             item["step_type"] = lap["intensityType"]
+        if lap.get("wktStepIndex") is not None:
+            item["workout_step_index"] = generator.safe_int(lap["wktStepIndex"])
+        if lap.get("directWorkoutComplianceScore") is not None:
+            item["workout_compliance_pct"] = generator.safe_int(lap["directWorkoutComplianceScore"])
         for key in ("intensity", "cumulative_time", "cumulative_time_min", "intensityType"):
             item.pop(key, None)
         pace = _pace_from_speed(lap.get("averageSpeed"))

@@ -40,10 +40,11 @@ DEFAULT_UNITS = {"distance": "km", "pace": "min/km", "elevation": "m", "stride_l
 
 SPLIT_COLUMN_ORDER = (
     "step_type", "lap", "time", "elapsed_time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr", "min_hr",
-    "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence", "moving_time",
+    "end_hr", "avg_run_cadence", "best_pace", "max_run_cadence", "moving_time",
     "avg_moving_pace", "distance", "elevation_gain", "elevation_loss", "stride_length",
     "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power", "avg_power",
     "max_power", "avg_vertical_ratio",
+    "workout_step_index", "workout_compliance_pct",
 )
 
 
