@@ -20,6 +20,7 @@
     },
     "factor_details": {
       "sleep_score": {"percent": 36, "feedback": "Poor"},
+      "sleep_history": {"percent": 55, "feedback": "Moderate"},
       "recovery_time": {"percent": 87, "feedback": "Good"},
       "acwr": {"percent": 86, "feedback": "Good"},
       "hrv": {"percent": 89, "feedback": "Good"},
