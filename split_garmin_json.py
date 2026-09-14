@@ -63,10 +63,12 @@ def _dump_pretty(value, level=0, table=False):
     if isinstance(value, dict):
         if not value:
             return "{}"
-        if all(not isinstance(v, (dict, list)) for v in value.values()):
-            # A small record made entirely of scalars (e.g. a factor's
-            # {percent, feedback} pair) reads fine on one line -- same
-            # reasoning as the scalar-list case below.
+        if len(value) <= 2 and all(not isinstance(v, (dict, list)) for v in value.values()):
+            # Only small (<=2 key) all-scalar records collapse to one line,
+            # e.g. a factor's {percent, feedback} pair. Larger scalar dicts
+            # (sleep, units, running_tolerance, training_history's sport
+            # breakdowns, etc.) stay one key per line -- collapsing those
+            # too was hard to read on a phone and isn't needed here.
             return json.dumps(value, ensure_ascii=False)
         parts = []
         for key, val in value.items():
@@ -345,4 +347,4 @@ def main():
         refresh_latest_activities(args.data_dir, target_date, dated_activities, True, today)
 
 
-if __name__ == "__main__": main()   
+if __name__ == "__main__": main()

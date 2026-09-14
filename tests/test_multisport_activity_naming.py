@@ -157,9 +157,9 @@ def test_scalar_target_arrays_render_inline():
 
 
 def test_scalar_only_records_render_inline():
-    """A small dict made entirely of scalars (e.g. a factor's
-    {percent, feedback} pair) should print on one line too -- same
-    reasoning as scalar lists, applied to objects instead of arrays."""
+    """A small (<=2 key) dict made entirely of scalars (e.g. a factor's
+    {percent, feedback} pair) should print on one line -- same reasoning
+    as scalar lists, applied to objects instead of arrays."""
     from split_garmin_json import _dump_pretty
     import json as _json
 
@@ -179,4 +179,39 @@ def test_scalar_only_records_render_inline():
     # the outer "readiness" dict is NOT all-scalar (factor_details is a dict),
     # so it must stay multi-line, not collapse to one giant line
     assert '"readiness": {\n' in rendered
+    assert _json.loads(rendered) == payload
+
+
+def test_larger_scalar_dicts_stay_multiline():
+    """Dicts with more than 2 keys must NOT collapse, even if every value
+    is a scalar -- e.g. sleep/units/running_tolerance and, critically,
+    training_history's per-sport breakdowns used across both the 7-day
+    and 28-day trend tables. Collapsing those was unreadable on a phone
+    and this must not touch history/trend formatting."""
+    from split_garmin_json import _dump_pretty
+    import json as _json
+
+    payload = {
+        "sleep": {"deep_h": 1.13, "light_h": 3.13, "rem_h": 0.0, "awake_h": 0.2},
+        "training_history": {
+            "7_day": {
+                "sports": {
+                    "running": {
+                        "activity_count": 5,
+                        "distance": 34.31,
+                        "duration_hours": 4.11,
+                        "exercise_load": 588.4,
+                    }
+                }
+            }
+        },
+        # a 2-key dict should still collapse regardless of nesting depth
+        "load": {"chronic_load_range": {"min": 434.4, "max": 814.5}},
+    }
+    rendered = _dump_pretty(payload)
+
+    assert '"sleep": {\n' in rendered
+    assert '"running": {\n' in rendered
+    assert '"activity_count": 5,\n' in rendered
+    assert '"chronic_load_range": {"min": 434.4, "max": 814.5}' in rendered
     assert _json.loads(rendered) == payload
