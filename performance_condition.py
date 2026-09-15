@@ -74,7 +74,9 @@ def add_performance_condition(api, activity):
     if not samples:
         return activity
 
-    activity["performance_condition_start"] = round(samples[0])
-    activity["performance_condition_end"] = round(samples[-1])
-    activity["performance_condition_avg"] = round(sum(samples) / len(samples), 1)
+    activity["performance_condition"] = {
+        "start": round(samples[0]),
+        "end": round(samples[-1]),
+        "avg": round(sum(samples) / len(samples), 1),
+    }
     return activity
