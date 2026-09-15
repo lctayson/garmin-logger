@@ -461,11 +461,11 @@ def enrich_activity(api, activity):
     body_battery_impact = pick(("differenceBodyBattery",))
     stamina = {}
     if begin_stamina is not None:
-        stamina["begin_pct"] = generator.safe_float(begin_stamina, 0)
+        stamina["begin"] = generator.safe_float(begin_stamina, 0)
     if end_stamina is not None:
-        stamina["end_pct"] = generator.safe_float(end_stamina, 0)
+        stamina["end"] = generator.safe_float(end_stamina, 0)
     if min_stamina is not None:
-        stamina["min_pct"] = generator.safe_float(min_stamina, 0)
+        stamina["min"] = generator.safe_float(min_stamina, 0)
     if stamina:
         activity["stamina"] = stamina
     if body_battery_impact is not None:

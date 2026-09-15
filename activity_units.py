@@ -81,7 +81,7 @@ def _reorder_activity(out):
         "name", "activity_id", "type",
         "distance", "time", "elapsed_time", "moving_time", "avg_pace", "gap",
         "avg_hr", "max_hr", "recovery_hr",
-        "elevation_gain", "elevation_loss", "calories", "load", "start_time_local",
+        "elevation", "calories", "load", "start_time_local",
         "activity_vo2max", "performance_condition",
         "training_effect", "exercise_load", "recovery_time_hours",
         "stamina", "body_battery_impact", "impact_load",
@@ -129,13 +129,16 @@ def _convert_activity(activity, api):
         out["avg_pace"] = _pace_convert(out["avg_pace"], to_miles=True)
     if "gap" in out and imperial:
         out["gap"] = _pace_convert(out["gap"], to_miles=True)
-    for old, new in (("elevation_gain_m", "elevation_gain"), ("elevation_loss_m", "elevation_loss")):
+    elevation = {}
+    for old, new in (("elevation_gain_m", "gain"), ("elevation_loss_m", "loss")):
         if old in out:
             try:
                 value = float(out.pop(old))
-                out[new] = round(value * (M_TO_FT if imperial else 1.0), 1)
+                elevation[new] = round(value * (M_TO_FT if imperial else 1.0), 1)
             except (TypeError, ValueError):
                 out.pop(old, None)
+    if elevation:
+        out["elevation"] = elevation
     weather = out.get("weather")
     if isinstance(weather, dict):
         weather = dict(weather)

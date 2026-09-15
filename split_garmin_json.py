@@ -20,7 +20,7 @@ ACTIVITY_KEY_ORDER = (
     "name", "activity_id", "type",
     "distance", "time", "elapsed_time", "moving_time", "avg_pace", "gap",
     "avg_hr", "max_hr", "recovery_hr",
-    "elevation_gain", "elevation_loss", "calories", "load", "start_time_local",
+    "elevation", "calories", "load", "start_time_local",
     "activity_vo2max", "performance_condition",
     "training_effect", "exercise_load", "recovery_time_hours",
     "stamina", "body_battery_impact", "impact_load",
@@ -36,7 +36,8 @@ TRAINING_EFFECT_KEY_ORDER = ("label", "aerobic", "aerobic_message", "anaerobic",
 INTERVAL_DRIFT_KEY_ORDER = ("work_reps", "pace_ef_drift_pct", "hr_delta_bpm", "power_ef_drift_pct", "power_delta_w")
 WEATHER_KEY_ORDER = ("temperature", "feels_like", "dew_point", "humidity_pct", "wind_speed", "wind_direction_deg", "condition")
 PERFORMANCE_CONDITION_KEY_ORDER = ("start", "end", "avg")
-STAMINA_KEY_ORDER = ("begin_pct", "end_pct", "min_pct")
+STAMINA_KEY_ORDER = ("begin", "end", "min")
+ELEVATION_KEY_ORDER = ("gain", "loss")
 ZONE_KEY_ORDER = ("columns", "data")
 DEFAULT_UNITS = {"distance": "km", "pace": "min/km", "elevation": "m", "stride_length": "m", "vertical_oscillation": "cm", "temperature": "°C", "wind_speed": "m/s", "precipitation": "mm"}
 
@@ -163,7 +164,7 @@ def _normalize_splits(activity):
 
 
 def _normalize_nested(activity):
-    for key, order in (("training_effect", TRAINING_EFFECT_KEY_ORDER), ("interval_drift", INTERVAL_DRIFT_KEY_ORDER), ("weather", WEATHER_KEY_ORDER), ("performance_condition", PERFORMANCE_CONDITION_KEY_ORDER), ("stamina", STAMINA_KEY_ORDER)):
+    for key, order in (("training_effect", TRAINING_EFFECT_KEY_ORDER), ("interval_drift", INTERVAL_DRIFT_KEY_ORDER), ("weather", WEATHER_KEY_ORDER), ("performance_condition", PERFORMANCE_CONDITION_KEY_ORDER), ("stamina", STAMINA_KEY_ORDER), ("elevation", ELEVATION_KEY_ORDER)):
         if isinstance(activity.get(key), dict):
             activity[key] = _ordered_dict(activity[key], order)
     for key in ("hr_zones", "power_zones"):
