@@ -14,11 +14,11 @@
     "chronic_load": 528,
     "acwr": 0.9,
     "vo2_max": 44.0,
-    "recovery_time_hours": 2.0,
+    "recovery_time_hours": 1.7,
     "readiness": {
-      "score": 74,
-      "level": "Moderate",
-      "feedback_short": "Recovered And Ready",
+      "score": 75,
+      "level": "High",
+      "feedback_short": "Well Recovered",
       "factors": {
         "sleep_score": {
           "percent": 70,
@@ -29,7 +29,7 @@
           "feedback": "Moderate"
         },
         "recovery_time": {
-          "percent": 96,
+          "percent": 97,
           "feedback": "Good"
         },
         "acwr": {
@@ -94,7 +94,7 @@
       "acwr_percent": 38,
       "acwr_status": "Optimal"
     },
-    "recovery_time_hours": 2.0,
+    "recovery_time_hours": 1.7,
     "load_focus": "Anaerobic Shortage",
     "monthly_load_balance": {
       "aerobic_low": 458.4,

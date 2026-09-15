@@ -1,9 +1,9 @@
 {
   "date": "2026-09-16",
   "readiness": {
-    "score": 74,
-    "level": "Moderate",
-    "feedback": "Recovered And Ready",
+    "score": 75,
+    "level": "High",
+    "feedback": "Well Recovered",
     "resting_hr": 57,
     "hrv_last_night_avg_ms": 57.0,
     "hrv_7_day_avg_ms": 50.0,
@@ -11,7 +11,7 @@
     "sleep_hours": 6.4,
     "sleep_hours_including_previous_day_nap": 6.4,
     "sleep_score": 80,
-    "recovery_hours": 2.0,
+    "recovery_hours": 1.7,
     "hrv_baseline": {
       "lowUpper": 45.0,
       "balancedLow": 47.0,
@@ -21,7 +21,7 @@
     "factor_details": {
       "sleep_score": {"percent": 70, "feedback": "Good"},
       "sleep_history": {"percent": 67, "feedback": "Moderate"},
-      "recovery_time": {"percent": 96, "feedback": "Good"},
+      "recovery_time": {"percent": 97, "feedback": "Good"},
       "acwr": {"percent": 95, "feedback": "Good"},
       "hrv": {"percent": 100, "feedback": "Very Good"},
       "stress_history": {"percent": 69, "feedback": "Moderate"}
