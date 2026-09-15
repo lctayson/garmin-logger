@@ -44,11 +44,11 @@
           "userProfilePK": 2835325
         },
         {
-          "acuteDistance": 28184,
-          "acuteImpactLoad": 30554,
+          "acuteDistance": 34212,
+          "acuteImpactLoad": 38927,
           "acuteTolerance": 65225,
           "calendarDate": "2026-09-15",
-          "runningToleranceFeedBackPhrase": "LOW_LOAD_1DAYS",
+          "runningToleranceFeedBackPhrase": "MEDIUM_LOAD",
           "userProfilePK": 2835325
         },
         {
@@ -62,7 +62,7 @@
       ]
     }
   },
-  "retrieved_at": "2026-09-14T21:03:06.931434+00:00",
+  "retrieved_at": "2026-09-15T06:28:45.504073+00:00",
   "source": "Garmin Connect API",
   "target_date": "2026-09-15",
   "window_end": "2026-09-15",
