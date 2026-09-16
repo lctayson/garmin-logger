@@ -14,11 +14,11 @@
     "chronic_load": 555,
     "acwr": 1.0,
     "vo2_max": 44.0,
-    "recovery_time_hours": 23.3,
+    "recovery_time_hours": 23.1,
     "readiness": {
-      "score": 49,
-      "level": "Low",
-      "feedback_short": "Find Time To Relax",
+      "score": 50,
+      "level": "Moderate",
+      "feedback_short": "Listen To Your Body",
       "factors": {
         "sleep_score": {
           "percent": 64,
@@ -29,7 +29,7 @@
           "feedback": "Moderate"
         },
         "recovery_time": {
-          "percent": 62,
+          "percent": 63,
           "feedback": "Moderate"
         },
         "acwr": {
@@ -79,7 +79,7 @@
       "rem": 1.07,
       "awake": 0.13
     },
-    "total_steps": 8988
+    "total_steps": 9124
   },
   "training_status": {
     "status": "Maintaining 2",
@@ -94,7 +94,7 @@
       "acwr_percent": 42,
       "acwr_status": "Optimal"
     },
-    "recovery_time_hours": 23.3,
+    "recovery_time_hours": 23.1,
     "load_focus": "Anaerobic Shortage",
     "monthly_load_balance": {
       "aerobic_low": 516.6,
