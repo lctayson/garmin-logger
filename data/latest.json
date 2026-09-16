@@ -2,7 +2,50 @@
   "date": "2026-09-17",
   "_measurement_system": "metric",
   "daily_readiness": {
-    "resting_hr_bpm": 61,
+    "resting_hr_bpm": 58,
+    "hrv_last_night_avg_ms": 46.0,
+    "hrv_7_day_avg_ms": 50.0,
+    "hrv_status": "BALANCED",
+    "sleep_hours": 6.1,
+    "sleep_hours_including_previous_day_nap": 6.1,
+    "sleep_score": 76,
+    "training_status": "Maintaining 2",
+    "acute_load": 463,
+    "chronic_load": 529,
+    "acwr": 0.8,
+    "vo2_max": 44.0,
+    "recovery_time_hours": 0.0,
+    "readiness": {
+      "score": 67,
+      "level": "Moderate",
+      "feedback_short": "Balance Stress And Recovery",
+      "factors": {
+        "sleep_score": {
+          "percent": 64,
+          "feedback": "Moderate"
+        },
+        "sleep_history": {
+          "percent": 69,
+          "feedback": "Moderate"
+        },
+        "recovery_time": {
+          "percent": 99,
+          "feedback": "Good"
+        },
+        "acwr": {
+          "percent": 96,
+          "feedback": "Good"
+        },
+        "hrv": {
+          "percent": 100,
+          "feedback": "Very Good"
+        },
+        "stress_history": {
+          "percent": 52,
+          "feedback": "Moderate"
+        }
+      }
+    },
     "sleep_need": {
       "baseline_hours": 7.0,
       "need_hours": 7.0,
@@ -10,17 +53,72 @@
       "training_feedback": "No Change",
       "sleep_history_adjustment": "No Change",
       "hrv_adjustment": "No Change",
-      "nap_adjustment": "No Change"
+      "nap_adjustment": "No Change",
+      "next_need_hours": 7.0
     },
-    "previous_day_nap": null,
-    "sleep_hours_including_previous_day_nap": null
+    "previous_day_nap": null
   },
   "health_stats": {
-    "resting_heart_rate": 61,
-    "hrv": {},
-    "sleep_stages_hours": {}
+    "resting_heart_rate": 58,
+    "hrv": {
+      "last_night_avg_ms": 46.0,
+      "seven_day_avg_ms": 50.0,
+      "status": "BALANCED",
+      "baseline_balanced_range": {
+        "lowUpper": 45.0,
+        "balancedLow": 47.0,
+        "balancedUpper": 55.0,
+        "markerValue": 0.4375
+      }
+    },
+    "sleep_score": 76,
+    "total_sleep_hours": 6.1,
+    "sleep_stages_hours": {
+      "deep": 0.62,
+      "light": 4.42,
+      "rem": 1.07,
+      "awake": 0.13
+    },
+    "total_steps": 52
   },
-  "training_status": {},
+  "training_status": {
+    "status": "Maintaining 2",
+    "training_load": {
+      "acute_load": 463,
+      "chronic_load": 529,
+      "chronic_load_range": {
+        "min": 423.2,
+        "max": 793.5
+      },
+      "acwr": 0.8,
+      "acwr_percent": 33,
+      "acwr_status": "Optimal"
+    },
+    "recovery_time_hours": 0.0,
+    "load_focus": "Anaerobic Shortage",
+    "monthly_load_balance": {
+      "aerobic_low": 516.6,
+      "aerobic_low_target_min": 303,
+      "aerobic_low_target_max": 822,
+      "aerobic_high": 1429.8,
+      "aerobic_high_target_min": 649,
+      "aerobic_high_target_max": 1169,
+      "anaerobic": 67.0,
+      "anaerobic_target_min": 173,
+      "anaerobic_target_max": 519
+    },
+    "vo2_max": {
+      "value": 44.0
+    },
+    "heat_acclimation": {
+      "percentage": 100,
+      "trend": "Acclimatized"
+    },
+    "altitude_acclimation": {
+      "percentage": 0,
+      "trend": null
+    }
+  },
   "training_history": {
     "7_day": {
       "total_endurance": {
@@ -310,7 +408,17 @@
       "window_start": "2026-09-17",
       "window_end": "2026-09-17",
       "window_days": 1,
-      "resting_heart_rate": 61,
+      "resting_heart_rate": 58,
+      "hrv_last_night_avg_ms": 46.0,
+      "hrv_seven_day_avg_ms": 50.0,
+      "total_sleep_hours": 6.1,
+      "sleep_score": 76,
+      "vo2_max": 44.0,
+      "training_status": "Maintaining 2",
+      "acute_load": 463,
+      "chronic_load": 529,
+      "acwr": 0.8,
+      "acwr_status": "Optimal",
       "activity_count": 0,
       "total_endurance_duration_hours": 0.0,
       "total_endurance_distance_km": 0.0,
@@ -678,7 +786,17 @@
       "window_start": "2026-09-11",
       "window_end": "2026-09-17",
       "window_days": 7,
-      "resting_heart_rate": 61,
+      "resting_heart_rate": 58,
+      "hrv_last_night_avg_ms": 46.0,
+      "hrv_seven_day_avg_ms": 50.0,
+      "total_sleep_hours": 6.1,
+      "sleep_score": 76,
+      "vo2_max": 44.0,
+      "training_status": "Maintaining 2",
+      "acute_load": 463,
+      "chronic_load": 529,
+      "acwr": 0.8,
+      "acwr_status": "Optimal",
       "activity_count": 4,
       "total_endurance_duration_hours": 3.45,
       "total_endurance_distance_km": 28.18,
@@ -738,9 +856,9 @@
     },
     {
       "date": "2026-09-17",
-      "charged": 10,
-      "drained": 0,
-      "high": 18,
+      "charged": 57,
+      "drained": 2,
+      "high": 65,
       "low": 8
     }
   ],
