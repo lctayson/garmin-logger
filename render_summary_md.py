@@ -306,40 +306,65 @@ def _readiness_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[s
     return lines
 
 
-def _load_lines(summary: dict[str, Any]) -> list[str]:
-    s = summary.get("load") or {}
+def _load_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[str]:
+    load = payload.get("load") or {}
+    balance = payload.get("load_balance") or {}
+    tolerance = payload.get("running_tolerance") or {}
     v = summary.get("volume") or {}
     lines: list[str] = ["## Load & Trends", ""]
 
-    if s.get("acwr") is not None:
-        bit = f"- **ACWR:** {s['acwr']}"
-        if s.get("acwr_status"):
-            bit += f" ({s['acwr_status']})"
+    if load.get("acwr") is not None:
+        bit = f"- **ACWR:** {load['acwr']}"
+        if load.get("acwr_status"):
+            bit += f" ({load['acwr_status']})"
+        acute = _num(load.get("acute_load"))
+        chronic = _num(load.get("chronic_load"))
+        if acute is not None and chronic is not None:
+            bit += f" — acute {acute:g} / chronic {chronic:g}"
+        rng = load.get("chronic_load_range")
+        if isinstance(rng, dict) and rng.get("min") is not None and rng.get("max") is not None:
+            bit += f" (chronic range {rng['min']:g}–{rng['max']:g})"
         lines.append(bit)
 
     if v.get("distance_7d_km") is not None:
         bit = f"- **7-day volume:** {v['distance_7d_km']}km"
+        avg28 = v.get("avg_weekly_distance_28d_km")
         delta = v.get("distance_7d_vs_28d_avg_pct")
-        if delta is not None:
-            bit += f" ({delta:+.0f}% vs 28-day avg)"
+        if avg28 is not None:
+            bit += f" vs 28-day avg {avg28}km"
+            if delta is not None:
+                bit += f" ({delta:+.0f}%)"
         lines.append(bit)
 
-    if v.get("percent_of_tolerance") is not None:
-        bit = f"- **Running tolerance:** {v['percent_of_tolerance']}%"
-        if v.get("tolerance_status"):
-            bit += f" ({v['tolerance_status']})"
+    if tolerance.get("percent_of_tolerance") is not None:
+        bit = f"- **Running tolerance:** {tolerance['percent_of_tolerance']}%"
+        if tolerance.get("status"):
+            bit += f" ({tolerance['status']})"
+        actual = _num(tolerance.get("actual_7_day_distance"))
+        weekly_cap = _num(tolerance.get("weekly_tolerance"))
+        if actual is not None and weekly_cap is not None:
+            bit += f" — {actual:g}km of {weekly_cap:g}km weekly cap"
+        acute_impact = _num(tolerance.get("acute_impact_load"))
+        if acute_impact is not None:
+            bit += f", acute impact load {acute_impact:g}"
         lines.append(bit)
 
-    gaps = s.get("load_balance_gaps") or {}
-    off = [
-        f"{_titleize(name)} {int(info['gap']):+d}"
-        for name, info in gaps.items()
-        if isinstance(info, dict) and info.get("state") != "in_target"
-    ]
-    if off:
-        lines.append(f"- **Load balance off target:** {', '.join(off)}")
-    elif gaps:
-        lines.append("- **Load balance:** all buckets in target")
+    for name, label in (("aerobic_low", "Aerobic Low"), ("aerobic_high", "Aerobic High"), ("anaerobic", "Anaerobic")):
+        value = _num(balance.get(name))
+        target = balance.get(f"{name}_target")
+        if value is None or not isinstance(target, list) or len(target) != 2:
+            continue
+        lo, hi = _num(target[0]), _num(target[1])
+        bit = f"- **{label}:** {value:g} (target {lo:g}–{hi:g}"
+        if lo is not None and value < lo:
+            bit += f" — {value - lo:+.0f} under)"
+        elif hi is not None and value > hi:
+            bit += f" — {value - hi:+.0f} over)"
+        else:
+            bit += " — in range)"
+        lines.append(bit)
+    if balance.get("load_focus"):
+        lines.append(f"- **Load focus:** {balance['load_focus']}")
 
     trends = summary.get("recovery_trends") or {}
     if trends.get("sleep_7d_avg_h") is not None:
@@ -454,7 +479,7 @@ def render(metrics: dict[str, Any], activities: dict[str, Any] | None) -> str:
     out.extend(_today_lines(date, activities))
     out.append("")
 
-    load_lines = _load_lines(summary)
+    load_lines = _load_lines(metrics, summary)
     if load_lines:
         out.extend(load_lines)
         out.append("")

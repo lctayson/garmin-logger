@@ -252,6 +252,32 @@ class ThisWeekTests(unittest.TestCase):
         self.assertIn("running/cycling", text)
 
 
+    def test_load_lines_show_raw_source_values(self):
+        payload = _payload()
+        payload["load"]["acute_load"] = 491
+        payload["load"]["chronic_load"] = 541
+        payload["load"]["chronic_load_range"] = {"min": 432.8, "max": 811.5}
+        text = render(payload, None)
+        self.assertIn("acute 491 / chronic 541", text)
+        self.assertIn("chronic range 432.8–811.5", text)
+
+    def test_load_balance_buckets_each_show_value_and_target(self):
+        text = render(_payload(), None)
+        self.assertIn("**Aerobic Low:** 516.6 (target 303–822 — in range)", text)
+        self.assertIn("**Aerobic High:** 1541.9 (target 649–1169 — +373 over)", text)
+        self.assertIn("**Anaerobic:** 67 (target 173–519 — -106 under)", text)
+        self.assertIn("**Load focus:** Anaerobic Shortage", text)
+
+    def test_running_tolerance_shows_raw_km_and_cap(self):
+        payload = _payload()
+        payload["running_tolerance"]["actual_7_day_distance"] = 34.2
+        payload["running_tolerance"]["weekly_tolerance"] = 65.2
+        payload["running_tolerance"]["acute_impact_load"] = 43.1
+        text = render(payload, None)
+        self.assertIn("34.2km of 65.2km weekly cap", text)
+        self.assertIn("acute impact load 43.1", text)
+
+
 class RenderTests(unittest.TestCase):
     def test_renders_headline_and_limiter(self):
         text = render(_payload(), None)
