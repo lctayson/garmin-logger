@@ -6,7 +6,7 @@ import unittest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from metrics_summary import attach_summary, build_summary
-from render_summary_md import render
+from render_summary_md import _main_set_line, render
 
 
 def _payload(**overrides):
@@ -132,6 +132,94 @@ class AttachSummaryTests(unittest.TestCase):
         once = attach_summary(_payload())
         twice = attach_summary(once)
         self.assertEqual(json.dumps(once, sort_keys=True), json.dumps(twice, sort_keys=True))
+
+
+class MainSetTests(unittest.TestCase):
+    def _splits(self, columns, data):
+        return {"splits": {"columns": columns, "data": data}}
+
+    def test_matches_manually_verified_threshold_session(self):
+        # Sept 17 real session: 3x20s strides (step_index 1) then 2x7min
+        # threshold reps (step_index 4). Expected values hand-verified.
+        columns = [
+            "step_type", "lap", "time", "elapsed_time", "avg_pace", "avg_gap",
+            "avg_hr", "max_hr", "start_hr", "min_hr", "end_hr", "avg_run_cadence",
+            "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace",
+            "distance", "elevation_gain", "elevation_loss", "stride_length",
+            "avg_vertical_oscillation", "avg_ground_contact_time",
+            "normalized_power", "avg_power", "max_power", "avg_vertical_ratio",
+            "workout_step_index", "workout_compliance_pct",
+        ]
+        data = [
+            ["WARMUP", 1, "10:00", "10:00", "7:43", "7:47", 132.0, 138.0, 108, 108, 138, 172.0, "6:47", 179.0, "10:00", "7:43", 1.3, 0.0, 1.0, 0.75, 7.5, 274.9, 227.0, 226.0, 293.0, 10.0, 0, 100],
+            ["ACTIVE", 2, "0:20", "0:20", "5:08", "5:20", 141.0, 144.0, 138, 138, 144, 184.0, "5:01", 188.0, "0:20", "5:08", 0.07, 0.0, 0.0, 1.01, 8.0, 239.6, 264.0, 323.0, 367.0, 7.9, 1, 100],
+            ["RECOVERY", 3, "1:00", "1:00", "8:36", "8:13", 142.0, 145.0, 144, 139, 139, 167.0, "5:19", 185.0, "1:00", "8:36", 0.12, 0.0, 0.0, 0.73, 7.6, 285.5, 255.0, 215.0, 314.0, 10.5, 2, 100],
+            ["ACTIVE", 4, "0:20", "0:20", "5:08", "5:36", 140.0, 143.0, 139, 138, 143, 182.0, "4:50", 188.0, "0:20", "5:08", 0.06, 0.0, 0.0, 0.97, 7.9, 245.1, 234.0, 310.0, 374.0, 8.3, 1, 100],
+            ["RECOVERY", 5, "1:00", "1:00", "7:49", "7:33", 142.0, 145.0, 143, 140, 140, 171.0, "5:08", 186.0, "1:00", "7:49", 0.13, 0.0, 0.0, 0.77, 7.7, 276.0, 260.0, 232.0, 345.0, 10.0, 2, 100],
+            ["ACTIVE", 6, "0:20", "0:20", "5:15", "5:45", 141.0, 143.0, 140, 139, 143, 182.0, "5:03", 187.0, "0:20", "5:15", 0.06, 0.0, 0.0, 0.96, 7.9, 246.0, 246.0, 301.0, 356.0, 8.3, 1, 100],
+            ["RECOVERY", 7, "1:00", "1:00", "8:51", "8:40", 141.0, 144.0, 143, 135, 136, 145.0, "5:18", 187.0, "1:00", "8:51", 0.11, 0.0, 0.0, 0.82, 7.1, 271.1, 244.0, 184.0, 311.0, 9.4, 2, 100],
+            ["ACTIVE", 8, "7:00", "7:00", "5:35", "5:34", 155.0, 160.0, 136, 136, 159, 182.0, "5:11", 186.0, "7:00", "5:35", 1.25, 1.0, 1.0, 0.98, 8.0, 244.2, 304.0, 306.0, 362.0, 8.1, 4, 100],
+            ["RECOVERY", 9, "2:00", "2:00", "8:23", "8:17", 150.0, 160.0, 159, 144, 145, 165.0, "5:45", 178.0, "2:00", "8:22", 0.24, 0.0, 0.0, 0.74, 7.7, 288.5, 233.0, 216.0, 290.0, 10.5, 5, 100],
+            ["ACTIVE", 10, "7:00", "7:00", "5:23", "5:25", 162.0, 168.0, 145, 145, 168, 182.0, "5:05", 186.0, "7:00", "5:23", 1.3, 1.0, 0.0, 1.01, 8.1, 242.2, 315.0, 317.0, 349.0, 8.0, 4, 100],
+            ["COOLDOWN", 11, "10:35", "10:35", "7:36", "7:35", 149.0, 168.0, 168, 143, 150, 164.0, "5:05", 181.0, "10:35", "7:36", 1.39, 2.0, 1.0, 0.8, 7.7, 275.8, 239.0, 228.0, 336.0, 9.7, 7, None],
+        ]
+        act = self._splits(columns, data)
+        self.assertEqual(
+            _main_set_line(act),
+            "  - MS: 2.55k @ 5:29 159bpm 1.00m 182spm 243ms 8.1cm 312w",
+        )
+
+    def test_falls_back_to_duration_threshold_without_step_index(self):
+        columns = ["step_type", "time", "distance", "avg_hr", "avg_run_cadence",
+                   "stride_length", "avg_ground_contact_time", "avg_vertical_oscillation", "avg_power"]
+        data = [
+            ["WARMUP", "5:00", 0.7, 130, 170, 0.8, 280, 7.5, 200],
+            ["ACTIVE", "0:20", 0.1, 140, 184, 1.0, 240, 8.0, 260],
+            ["RECOVERY", "1:00", 0.15, 142, 167, 0.75, 285, 7.6, 255],
+            ["ACTIVE", "3:00", 0.6, 160, 182, 1.0, 244, 8.1, 310],
+            ["RECOVERY", "2:00", 0.3, 150, 165, 0.8, 270, 7.7, 250],
+            ["ACTIVE", "3:00", 0.62, 165, 183, 1.02, 242, 8.0, 318],
+        ]
+        result = _main_set_line(self._splits(columns, data))
+        self.assertIsNotNone(result)
+        self.assertIn("1.22k", result)
+        self.assertNotIn("0.1", result)  # the 20s stride's distance must not leak into the total
+
+    def test_none_for_continuous_run_without_intervals(self):
+        act = self._splits(["step_type", "time", "distance"], [["ACTIVE", "30:00", 6.0]])
+        self.assertIsNone(_main_set_line(act))
+
+    def test_none_when_splits_missing(self):
+        self.assertIsNone(_main_set_line({}))
+        self.assertIsNone(_main_set_line({"splits": "not a dict"}))
+
+    def test_none_when_single_active_group_only(self):
+        # RECOVERY present but every ACTIVE row shares one step_index/duration
+        # bucket -- nothing to separate from, so no MS line.
+        columns = ["step_type", "time", "distance", "workout_step_index"]
+        data = [
+            ["ACTIVE", "5:00", 1.0, 4],
+            ["RECOVERY", "1:00", 0.1, 5],
+            ["ACTIVE", "5:00", 1.0, 4],
+        ]
+        self.assertIsNone(_main_set_line(self._splits(columns, data)))
+
+    def test_appears_in_full_activity_render(self):
+        act = {
+            "name": "Test Session",
+            "distance": 6.0,
+            "splits": self._splits(
+                ["step_type", "time", "distance", "avg_hr", "avg_run_cadence",
+                 "stride_length", "avg_ground_contact_time", "avg_vertical_oscillation", "avg_power"],
+                [
+                    ["ACTIVE", "0:20", 0.1, 140, 184, 1.0, 240, 8.0, 260],
+                    ["RECOVERY", "1:00", 0.15, 142, 167, 0.75, 285, 7.6, 255],
+                    ["ACTIVE", "3:00", 0.6, 160, 182, 1.0, 244, 8.1, 310],
+                ],
+            )["splits"],
+        }
+        text = render(_payload(), {"date": "2026-09-17", "activities": [act]})
+        self.assertIn("MS:", text)
 
 
 class RenderTests(unittest.TestCase):

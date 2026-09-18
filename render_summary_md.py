@@ -15,11 +15,20 @@ from __future__ import annotations
 import argparse
 import json
 import os
+from decimal import ROUND_HALF_UP, Decimal
 from typing import Any
 
 from metrics_summary import build_summary
 
 _ARROW = {"rising": "up", "falling": "down", "flat": "flat"}
+_MAIN_SET_FIELDS = (
+    ("avg_hr", "bpm", 0),
+    ("stride_length", "m", 2),
+    ("avg_run_cadence", "spm", 0),
+    ("avg_ground_contact_time", "ms", 0),
+    ("avg_vertical_oscillation", "cm", 1),
+    ("avg_power", "w", 0),
+)
 
 
 def _num(value: Any) -> float | None:
@@ -44,6 +53,147 @@ def _hours(value: Any) -> str:
     if n is None:
         return "-"
     return f"{int(n)}h{int(round((n - int(n)) * 60)):02d}"
+
+
+def _round_half_up(value: float, places: int = 0) -> float:
+    """Conventional round-half-up, since Python's round() rounds exact .5
+    values to even and produces off-by-one results on the frequent case of
+    two equal-duration reps averaging to a boundary value."""
+    q = Decimal(10) ** -places
+    result = Decimal(str(value)).quantize(q, rounding=ROUND_HALF_UP)
+    return float(result)
+
+
+def _parse_time_seconds(text: Any) -> float | None:
+    if not isinstance(text, str):
+        return None
+    parts = text.split(":")
+    try:
+        parts_i = [int(p) for p in parts]
+    except ValueError:
+        return None
+    if len(parts_i) == 2:
+        return parts_i[0] * 60 + parts_i[1]
+    if len(parts_i) == 3:
+        return parts_i[0] * 3600 + parts_i[1] * 60 + parts_i[2]
+    return None
+
+
+def _format_pace(seconds_per_km: float) -> str:
+    minutes = int(seconds_per_km // 60)
+    seconds = int(_round_half_up(seconds_per_km - minutes * 60))
+    if seconds == 60:
+        minutes += 1
+        seconds = 0
+    return f"{minutes}:{seconds:02d}"
+
+
+def _group_active_rows(active_rows: list[list[Any]], col: dict[str, int]) -> dict[Any, list[list[Any]]]:
+    """Group ACTIVE splits by workout_step_index, so e.g. warm-up strides and
+    the actual work reps -- both step_type ACTIVE -- separate correctly. Falls
+    back to a duration threshold (reps >=60s vs shorter bursts) when the
+    workout_step_index column is missing or blank on every row, since strides
+    are conventionally under a minute and real reps are not."""
+    step_idx_col = col.get("workout_step_index")
+    if step_idx_col is not None:
+        groups: dict[Any, list[list[Any]]] = {}
+        for row in active_rows:
+            key = row[step_idx_col] if step_idx_col < len(row) else None
+            groups.setdefault(key, []).append(row)
+        if len(groups) > 1:
+            return groups
+
+    time_col = col.get("time")
+    if time_col is None:
+        return {}
+    long_reps, short_reps = [], []
+    for row in active_rows:
+        secs = _parse_time_seconds(row[time_col]) if time_col < len(row) else None
+        (long_reps if (secs or 0) >= 60 else short_reps).append(row)
+    groups = {}
+    if long_reps:
+        groups["long"] = long_reps
+    if short_reps:
+        groups["short"] = short_reps
+    return groups
+
+
+def _main_set_line(act: dict[str, Any]) -> str | None:
+    """Summarize the main work-rep block of an interval session: total
+    distance/pace plus time-weighted HR, stride length, cadence, ground
+    contact time, vertical oscillation, and power. Returns None for anything
+    that isn't structured as an interval workout, or where the fields needed
+    aren't present."""
+    splits = act.get("splits")
+    if not isinstance(splits, dict):
+        return None
+    columns = splits.get("columns")
+    rows = splits.get("data")
+    if not isinstance(columns, list) or not isinstance(rows, list):
+        return None
+    col = {name: i for i, name in enumerate(columns)}
+    if "step_type" not in col or "time" not in col or "distance" not in col:
+        return None
+
+    # Only worth summarizing separately from the overall activity stats when
+    # the workout actually has interval structure (real recoveries between
+    # reps) -- a plain continuous run has nothing distinct to pull out.
+    has_intervals = any(
+        isinstance(row, list) and col["step_type"] < len(row) and row[col["step_type"]] in ("RECOVERY", "REST")
+        for row in rows
+    )
+    if not has_intervals:
+        return None
+
+    active_rows = [row for row in rows if isinstance(row, list) and row[col["step_type"]] == "ACTIVE"]
+    if not active_rows:
+        return None
+
+    groups = _group_active_rows(active_rows, col)
+    if len(groups) < 2:
+        # No distinguishable secondary group (e.g. strides) to separate the
+        # main reps from -- nothing to single out from the overall totals.
+        return None
+
+    def group_duration(group_rows: list[list[Any]]) -> float:
+        total = 0.0
+        for row in group_rows:
+            secs = _parse_time_seconds(row[col["time"]]) if col["time"] < len(row) else None
+            total += secs or 0
+        return total
+
+    main_rows = groups[max(groups, key=lambda k: group_duration(groups[k]))]
+
+    total_time = 0.0
+    total_distance = 0.0
+    weighted_sums = {field: 0.0 for field, _, _ in _MAIN_SET_FIELDS}
+    have = {field: False for field in weighted_sums}
+    for row in main_rows:
+        secs = _parse_time_seconds(row[col["time"]]) if col["time"] < len(row) else None
+        secs = secs or 0
+        dist = _num(row[col["distance"]]) if col["distance"] < len(row) else None
+        total_time += secs
+        total_distance += dist or 0
+        for field in weighted_sums:
+            field_idx = col.get(field)
+            value = _num(row[field_idx]) if field_idx is not None and field_idx < len(row) else None
+            if value is not None:
+                weighted_sums[field] += value * secs
+                have[field] = True
+
+    if total_time <= 0 or total_distance <= 0:
+        return None
+
+    pace = total_time / total_distance
+    bits = [f"{_round_half_up(total_distance, 2):.2f}k @ {_format_pace(pace)}"]
+    for field, unit, places in _MAIN_SET_FIELDS:
+        if not have[field]:
+            continue
+        value = _round_half_up(weighted_sums[field] / total_time, places)
+        text = f"{value:.{places}f}" if places else f"{int(value)}"
+        bits.append(f"{text}{unit}")
+
+    return "  - MS: " + " ".join(bits)
 
 
 def _titleize(name: str) -> str:
@@ -184,9 +334,13 @@ def _activity_detail_lines(act: dict[str, Any]) -> list[str]:
         if te.get("label"):
             te_bits.append(str(te["label"]))
         if te.get("aerobic") is not None:
-            te_bits.append(f"aerobic {te['aerobic']}")
+            aerobic = _num(te.get("aerobic"))
+            if aerobic is not None:
+                te_bits.append(f"aerobic {aerobic:g}")
         if te.get("anaerobic") is not None:
-            te_bits.append(f"anaerobic {te['anaerobic']}")
+            anaerobic = _num(te.get("anaerobic"))
+            if anaerobic is not None:
+                te_bits.append(f"anaerobic {anaerobic:g}")
         if te_bits:
             lines.append(f"  - TE: {' · '.join(te_bits)}")
 
@@ -198,6 +352,10 @@ def _activity_detail_lines(act: dict[str, Any]) -> list[str]:
         if drift.get("hr_delta_bpm") is not None:
             drift_bits.append(f"HR +{int(_num(drift['hr_delta_bpm']) or 0)}bpm")
         lines.append(f"  - Intervals: {' · '.join(drift_bits)}")
+
+    ms_line = _main_set_line(act)
+    if ms_line:
+        lines.append(ms_line)
     return lines
 
 
