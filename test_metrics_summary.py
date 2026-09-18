@@ -278,6 +278,73 @@ class ThisWeekTests(unittest.TestCase):
         self.assertIn("acute impact load 43.1", text)
 
 
+class FlaggingAndRecoveryTests(unittest.TestCase):
+    def test_recovery_time_shown(self):
+        payload = _payload()
+        payload["readiness"]["recovery_hours"] = 23.1
+        self.assertIn("**Recovery time:** 23.1h", render(payload, None))
+
+    def test_recovery_time_flagged_when_very_high(self):
+        payload = _payload()
+        payload["readiness"]["recovery_hours"] = 30
+        text = render(payload, None)
+        self.assertIn("⚠️ **Recovery time:** 30h", text)
+
+    def test_limiter_is_always_flagged(self):
+        self.assertIn("⚠️ **Limiter:**", render(_payload(), None))
+
+    def test_hrv_flagged_only_when_outside_band(self):
+        # default fixture HRV (46ms) sits below the 47ms balanced floor
+        self.assertIn("⚠️ **HRV:** 46ms", render(_payload(), None))
+        payload = _payload()
+        payload["readiness"]["hrv_last_night_avg_ms"] = 51.0
+        text = render(payload, None)
+        self.assertIn("**HRV:** 51ms", text)
+        self.assertNotIn("⚠️ **HRV:**", text)
+
+    def test_acwr_flagged_only_when_not_optimal(self):
+        self.assertNotIn("⚠️ **ACWR:**", render(_payload(), None))  # fixture is Optimal
+        payload = _payload()
+        payload["load"]["acwr_status"] = "High"
+        self.assertIn("⚠️ **ACWR:**", render(payload, None))
+
+    def test_load_balance_bucket_flagged_only_when_off_target(self):
+        text = render(_payload(), None)
+        self.assertNotIn("⚠️ **Aerobic Low:**", text)  # in range
+        self.assertIn("⚠️ **Aerobic High:**", text)  # over
+        self.assertIn("⚠️ **Anaerobic:**", text)  # under
+
+    def test_load_focus_flagged_unless_balanced(self):
+        self.assertIn("⚠️ **Load focus:** Anaerobic Shortage", render(_payload(), None))
+        payload = _payload()
+        payload["load_balance"]["load_focus"] = "Balanced"
+        text = render(payload, None)
+        self.assertIn("**Load focus:** Balanced", text)
+        self.assertNotIn("⚠️ **Load focus:**", text)
+
+    def test_rhr_trend_flagged_only_when_rising(self):
+        payload = _payload()  # default trend data yields a falling RHR trend
+        self.assertNotIn("⚠️ **RHR (7d avg):**", render(payload, None))
+        payload["trend_recent_daily"]["data"] = list(reversed(payload["trend_recent_daily"]["data"]))
+        self.assertIn("⚠️ **RHR (7d avg):**", render(payload, None))
+
+    def test_hrv_trend_flagged_only_when_falling(self):
+        payload = _payload()  # default trend data yields a rising HRV trend
+        self.assertNotIn("⚠️ **HRV:** trending", render(payload, None))
+        payload["trend_recent_daily"]["data"] = list(reversed(payload["trend_recent_daily"]["data"]))
+        self.assertIn("⚠️ **HRV:** trending", render(payload, None))
+
+    def test_sleep_debt_flagged_at_majority_nights_below_need(self):
+        # fixture has 5/7 nights below the 7h need -> flagged
+        self.assertIn("⚠️ **Sleep (7d avg):**", render(_payload(), None))
+
+    def test_running_tolerance_flagged_only_near_cap(self):
+        self.assertNotIn("⚠️ **Running tolerance:**", render(_payload(), None))  # 66.1%
+        payload = _payload()
+        payload["running_tolerance"]["percent_of_tolerance"] = 92.0
+        self.assertIn("⚠️ **Running tolerance:**", render(payload, None))
+
+
 class RenderTests(unittest.TestCase):
     def test_renders_headline_and_limiter(self):
         text = render(_payload(), None)

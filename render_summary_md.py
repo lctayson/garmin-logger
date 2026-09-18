@@ -196,6 +196,13 @@ def _main_set_line(act: dict[str, Any]) -> str | None:
     return "  - MS: " + " ".join(bits)
 
 
+def _flag(is_outlier: bool) -> str:
+    """A single visual marker for lines worth a second look. Deliberately not
+    applied to normal lines too -- silence means normal, the marker means
+    look here, so it stays a useful signal instead of decoration."""
+    return "⚠️ " if is_outlier else ""
+
+
 def _titleize(name: str) -> str:
     return name.replace("_", " ").title()
 
@@ -276,10 +283,10 @@ def _readiness_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[s
     hrv = readiness.get("hrv_last_night_avg_ms")
     if hrv is not None:
         hrv7 = readiness.get("hrv_7_day_avg_ms")
-        bit = f"- **HRV:** {int(_num(hrv) or 0)}ms"
+        band = (summary.get("recovery_trends") or {}).get("hrv_vs_balanced_band")
+        bit = f"- {_flag(band not in (None, 'within'))}**HRV:** {int(_num(hrv) or 0)}ms"
         if hrv7 is not None:
             bit += f" (7d avg: {int(_num(hrv7) or 0)}ms)"
-        band = (summary.get("recovery_trends") or {}).get("hrv_vs_balanced_band")
         if band and band != "within":
             bit += f" — {band} balanced band"
         lines.append(bit)
@@ -287,15 +294,20 @@ def _readiness_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[s
     sleep_h = readiness.get("sleep_hours")
     if sleep_h is not None:
         sleep_score = readiness.get("sleep_score")
-        bit = f"- **Sleep:** {_hours(sleep_h)}"
+        score_num = _num(sleep_score)
+        bit = f"- {_flag(score_num is not None and score_num < 70)}**Sleep:** {_hours(sleep_h)}"
         if sleep_score is not None:
-            bit += f" (score {int(_num(sleep_score) or 0)})"
+            bit += f" (score {int(score_num or 0)})"
         lines.append(bit)
+
+    recovery_h = readiness.get("recovery_hours")
+    if recovery_h is not None:
+        lines.append(f"- {_flag(_num(recovery_h) and _num(recovery_h) >= 24)}**Recovery time:** {_num(recovery_h):g}h")
 
     limiter = s.get("limiting_factor")
     if limiter:
         pct = s.get("limiting_factor_percent")
-        bit = f"- **Limiter:** {_titleize(limiter)}"
+        bit = f"- {_flag(True)}**Limiter:** {_titleize(limiter)}"
         if pct is not None:
             bit += f" ({pct}%)"
         lines.append(bit)
@@ -314,9 +326,10 @@ def _load_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[str]:
     lines: list[str] = ["## Load & Trends", ""]
 
     if load.get("acwr") is not None:
-        bit = f"- **ACWR:** {load['acwr']}"
-        if load.get("acwr_status"):
-            bit += f" ({load['acwr_status']})"
+        acwr_status = load.get("acwr_status")
+        bit = f"- {_flag(bool(acwr_status) and acwr_status != 'Optimal')}**ACWR:** {load['acwr']}"
+        if acwr_status:
+            bit += f" ({acwr_status})"
         acute = _num(load.get("acute_load"))
         chronic = _num(load.get("chronic_load"))
         if acute is not None and chronic is not None:
@@ -337,9 +350,11 @@ def _load_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[str]:
         lines.append(bit)
 
     if tolerance.get("percent_of_tolerance") is not None:
-        bit = f"- **Running tolerance:** {tolerance['percent_of_tolerance']}%"
-        if tolerance.get("status"):
-            bit += f" ({tolerance['status']})"
+        pct = _num(tolerance.get("percent_of_tolerance"))
+        tol_status = tolerance.get("status")
+        bit = f"- {_flag(pct is not None and pct >= 85)}**Running tolerance:** {tolerance['percent_of_tolerance']}%"
+        if tol_status:
+            bit += f" ({tol_status})"
         actual = _num(tolerance.get("actual_7_day_distance"))
         weekly_cap = _num(tolerance.get("weekly_tolerance"))
         if actual is not None and weekly_cap is not None:
@@ -355,7 +370,8 @@ def _load_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[str]:
         if value is None or not isinstance(target, list) or len(target) != 2:
             continue
         lo, hi = _num(target[0]), _num(target[1])
-        bit = f"- **{label}:** {value:g} (target {lo:g}–{hi:g}"
+        off_target = (lo is not None and value < lo) or (hi is not None and value > hi)
+        bit = f"- {_flag(off_target)}**{label}:** {value:g} (target {lo:g}–{hi:g}"
         if lo is not None and value < lo:
             bit += f" — {value - lo:+.0f} under)"
         elif hi is not None and value > hi:
@@ -364,24 +380,28 @@ def _load_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[str]:
             bit += " — in range)"
         lines.append(bit)
     if balance.get("load_focus"):
-        lines.append(f"- **Load focus:** {balance['load_focus']}")
+        focus = balance["load_focus"]
+        lines.append(f"- {_flag('balanced' not in str(focus).lower())}**Load focus:** {focus}")
 
     trends = summary.get("recovery_trends") or {}
     if trends.get("sleep_7d_avg_h") is not None:
-        bit = f"- **Sleep (7d avg):** {_hours(trends['sleep_7d_avg_h'])}"
         below = trends.get("sleep_nights_below_need")
+        sleep_trend = trends.get("sleep_trend")
+        bit = f"- {_flag(bool(below) and below >= 4)}**Sleep (7d avg):** {_hours(trends['sleep_7d_avg_h'])}"
         if below:
             bit += f", {below}/7 nights below need"
-        if trends.get("sleep_trend"):
-            bit += f", trending {_ARROW.get(trends['sleep_trend'], trends['sleep_trend'])}"
+        if sleep_trend:
+            bit += f", trending {_ARROW.get(sleep_trend, sleep_trend)}"
         lines.append(bit)
     if trends.get("resting_hr_7d_avg") is not None:
-        bit = f"- **RHR (7d avg):** {trends['resting_hr_7d_avg']}"
-        if trends.get("resting_hr_trend"):
-            bit += f", trending {_ARROW.get(trends['resting_hr_trend'], trends['resting_hr_trend'])}"
+        rhr_trend = trends.get("resting_hr_trend")
+        bit = f"- {_flag(rhr_trend == 'rising')}**RHR (7d avg):** {trends['resting_hr_7d_avg']}"
+        if rhr_trend:
+            bit += f", trending {_ARROW.get(rhr_trend, rhr_trend)}"
         lines.append(bit)
     if trends.get("hrv_trend"):
-        lines.append(f"- **HRV:** trending {_ARROW.get(trends['hrv_trend'], trends['hrv_trend'])}")
+        hrv_trend = trends["hrv_trend"]
+        lines.append(f"- {_flag(hrv_trend == 'falling')}**HRV:** trending {_ARROW.get(hrv_trend, hrv_trend)}")
 
     return lines if len(lines) > 2 else []
 
