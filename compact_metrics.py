@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 from typing import Any
 
+from metrics_summary import attach_summary
 from metrics_units import apply_metrics_units
 
 _ACTIVITY_KEYS = {"activities", "activity_data", "activityData"}
@@ -299,6 +300,10 @@ def compact_file(path: str | Path) -> bool:
     # cannot reintroduce hard-coded metric field names.
     measurement_system = source.get("_measurement_system") or _measurement_system_from_units(compacted.get("units"))
     compacted = apply_metrics_units(compacted, measurement_system)
+
+    # Derived last, so it summarizes the final unit-normalized values rather
+    # than whatever intermediate shape the payload passed through.
+    compacted = attach_summary(compacted)
 
     serialized = json.dumps(compacted, ensure_ascii=False, indent=2) + "\n"
     if serialized == original:
