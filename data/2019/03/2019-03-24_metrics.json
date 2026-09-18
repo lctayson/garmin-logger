@@ -5,9 +5,7 @@
     "sleep_hours": 4.98,
     "sleep_hours_including_previous_day_nap": 4.98
   },
-  "health": {
-    "steps": 35916
-  },
+  "health": {"steps": 35916},
   "sleep": {
     "deep_h": 0.72,
     "light_h": 3.55,
@@ -15,9 +13,7 @@
     "awake_h": 0.27,
     "previous_day_nap": null
   },
-  "load": {
-    "training_status": "Recovery"
-  },
+  "load": {"training_status": "Recovery"},
   "vo2_max": 49.0,
   "training_history": {
     "7_day": {
