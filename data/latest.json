@@ -5,20 +5,22 @@
     "resting_hr_bpm": 63,
     "sleep_hours": 4.98,
     "sleep_hours_including_previous_day_nap": 4.98,
+    "nap_minutes": 0.0,
     "training_status": "Recovery",
-    "vo2_max": 49.0,
-    "previous_day_nap": null
+    "vo2_max": 49.0
   },
   "health_stats": {
     "resting_heart_rate": 63,
     "hrv": {},
     "total_sleep_hours": 4.98,
+    "sleep_hours_including_previous_day_nap": 4.98,
     "sleep_stages_hours": {
       "deep": 0.72,
       "light": 3.55,
       "rem": 0.72,
       "awake": 0.27
     },
+    "nap_minutes": 0.0,
     "total_steps": 35916
   },
   "training_status": {
