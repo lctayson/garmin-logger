@@ -12,7 +12,7 @@
 
 ## Today
 
-- **Malolos - _Run + Strides/Hills** — 4.07km · 31:09 · 7:39/km · HR 138/155 max
+- **Malolos - Run + Strides** — 4.07km · 31:09 · 7:39/km · HR 138/155 max
   - TE: AEROBIC_BASE · aerobic 2.6 · anaerobic 1
   - Intervals: 4 work reps · pace drift -9.4% · HR +23bpm
   - MS: 3.38k @ 7:25 139bpm 0.79m 171spm 275ms 7.8cm 236w
@@ -32,10 +32,10 @@
 
 ## This Week
 
-- Sun Sep 13 — running, 6.03km, load 58.2
+- Sun Sep 13 — Malolos - _Run + Strides/Hills, 6.03km, load 58.2
 - Mon Sep 14 — rest
-- Tue Sep 15 — running, 6.03km, load 133.5
-- Wed Sep 16 — running, 6.09km, load 68.2
-- Thu Sep 17 — running, 6.03km, load 113.1
+- Tue Sep 15 — Malolos - 4 × 3min VO₂ Intervals, 6.03km, load 133.5
+- Wed Sep 16 — Malolos - _Run + Strides/Hills, 6.09km, load 68.2
+- Thu Sep 17 — Malolos - 2 × 7min Threshold, 6.03km, load 113.1
 - Fri Sep 18 — rest
-- Sat Sep 19 — running, 4.07km, load 66.5
+- Sat Sep 19 — Malolos - _Run + Strides/Hills, 4.07km, load 66.5

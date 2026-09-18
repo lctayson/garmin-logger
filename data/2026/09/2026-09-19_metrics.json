@@ -66,7 +66,6 @@
     "acute_impact_load": 35.0,
     "weekly_tolerance": 65.2,
     "actual_7_day_distance": 28.2,
-    "distance_unit": "km",
     "status": "Medium",
     "percent_of_tolerance": 53.7
   },
