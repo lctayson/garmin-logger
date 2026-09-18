@@ -19,10 +19,13 @@ _Most recent activity (2026-09-17):_
 
 ## Load & Trends
 
-- **ACWR:** 0.9 (Optimal)
-- **7-day volume:** 34.21km (+5% vs 28-day avg)
-- **Running tolerance:** 55.8% (Medium)
-- **Load balance off target:** Aerobic High +372, Anaerobic -106
+- **ACWR:** 0.9 (Optimal) — acute 491 / chronic 541 (chronic range 432.8–811.5)
+- **7-day volume:** 34.21km vs 28-day avg 32.7km (+5%)
+- **Running tolerance:** 55.8% (Medium) — 34.2km of 65.2km weekly cap, acute impact load 36.4
+- **Aerobic Low:** 516.6 (target 303–822 — in range)
+- **Aerobic High:** 1541.9 (target 649–1169 — +373 over)
+- **Anaerobic:** 67 (target 173–519 — -106 under)
+- **Load focus:** Anaerobic Shortage
 - **Sleep (7d avg):** 6h24, 5/7 nights below need, trending up
 - **RHR (7d avg):** 58.3, trending down
 - **HRV:** trending up
