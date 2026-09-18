@@ -71,6 +71,10 @@ jobs:
         run: |
           python split_garmin_json.py --date "$EXPORT_DATE"
 
+      - name: Render daily summary markdown
+        run: |
+          python render_summary_md.py --data-dir data
+
       - name: Commit and Push Generated JSON
         run: |
           set -euo pipefail
@@ -94,3 +98,4 @@ jobs:
             git fetch origin main
             git rebase origin/main
           done
+          
