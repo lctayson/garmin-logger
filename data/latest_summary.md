@@ -26,3 +26,13 @@ _Most recent activity (2026-09-17):_
 - **Sleep (7d avg):** 6h24, 5/7 nights below need, trending up
 - **RHR (7d avg):** 58.3, trending down
 - **HRV:** trending up
+
+## This Week
+
+- Sat Sep 12 — running, 10.03km, load 177.4
+- Sun Sep 13 — running, 6.03km, load 58.2
+- Mon Sep 14 — rest
+- Tue Sep 15 — running, 6.03km, load 133.5
+- Wed Sep 16 — running, 6.09km, load 68.2
+- Thu Sep 17 — running, 6.03km, load 113.1
+- Fri Sep 18 — rest
