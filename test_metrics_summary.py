@@ -222,6 +222,36 @@ class MainSetTests(unittest.TestCase):
         self.assertIn("MS:", text)
 
 
+class ThisWeekTests(unittest.TestCase):
+    def test_rest_and_activity_days_labeled(self):
+        payload = _payload()
+        payload["trend_recent_daily"] = {
+            "columns": ["date", "activity_count", "distance", "sport_volume", "exercise_load"],
+            "data": [
+                ["2026-09-11", 0, 0.0, {}, None],
+                ["2026-09-12", 1, 10.03, {"running": {}}, 177.4],
+            ],
+        }
+        text = render(payload, None)
+        self.assertIn("## This Week", text)
+        self.assertIn("Fri Sep 11 — rest", text)
+        self.assertIn("Sat Sep 12 — running, 10.03km, load 177.4", text)
+
+    def test_omitted_when_no_trend_data(self):
+        payload = _payload()
+        payload.pop("trend_recent_daily", None)
+        self.assertNotIn("## This Week", render(payload, None))
+
+    def test_multi_sport_day_joins_sport_names(self):
+        payload = _payload()
+        payload["trend_recent_daily"] = {
+            "columns": ["date", "activity_count", "distance", "sport_volume", "exercise_load"],
+            "data": [["2026-09-12", 2, 4.0, {"running": {}, "cycling": {}}, 90.0]],
+        }
+        text = render(payload, None)
+        self.assertIn("running/cycling", text)
+
+
 class RenderTests(unittest.TestCase):
     def test_renders_headline_and_limiter(self):
         text = render(_payload(), None)

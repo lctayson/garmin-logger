@@ -200,6 +200,58 @@ def _titleize(name: str) -> str:
     return name.replace("_", " ").title()
 
 
+def _day_label(date_str: Any) -> str:
+    from datetime import datetime
+
+    if not isinstance(date_str, str):
+        return str(date_str)
+    try:
+        return datetime.strptime(date_str, "%Y-%m-%d").strftime("%a %b %d")
+    except ValueError:
+        return date_str
+
+
+def _this_week_lines(payload: dict[str, Any]) -> list[str]:
+    """Per-day breakdown of the trend_recent_daily window (usually 7 days),
+    so the load/volume numbers above can be traced to specific sessions
+    instead of taken on faith."""
+    daily = payload.get("trend_recent_daily")
+    if not isinstance(daily, dict):
+        return []
+    columns = daily.get("columns")
+    rows = daily.get("data")
+    if not isinstance(columns, list) or not isinstance(rows, list) or "date" not in columns:
+        return []
+    col = {name: i for i, name in enumerate(columns)}
+
+    def cell(row: list[Any], name: str) -> Any:
+        i = col.get(name)
+        return row[i] if i is not None and i < len(row) else None
+
+    lines: list[str] = []
+    for row in rows:
+        if not isinstance(row, list):
+            continue
+        label = _day_label(cell(row, "date"))
+        count = _num(cell(row, "activity_count"))
+        if not count:
+            lines.append(f"- {label} — rest")
+            continue
+
+        sport_volume = cell(row, "sport_volume")
+        sports = list(sport_volume.keys()) if isinstance(sport_volume, dict) else []
+        bit = f"- {label} — {'/'.join(sports) if sports else 'activity'}"
+        distance = _num(cell(row, "distance"))
+        if distance is not None:
+            bit += f", {distance}km"
+        load = _num(cell(row, "exercise_load"))
+        if load is not None:
+            bit += f", load {load:g}"
+        lines.append(bit)
+
+    return ["## This Week", ""] + lines if lines else []
+
+
 def _readiness_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[str]:
     readiness = payload.get("readiness") or {}
     s = summary.get("readiness") or {}
@@ -405,6 +457,11 @@ def render(metrics: dict[str, Any], activities: dict[str, Any] | None) -> str:
     load_lines = _load_lines(summary)
     if load_lines:
         out.extend(load_lines)
+        out.append("")
+
+    week_lines = _this_week_lines(metrics)
+    if week_lines:
+        out.extend(week_lines)
         out.append("")
 
     # Collapse repeated blank lines from optional sections being empty.
