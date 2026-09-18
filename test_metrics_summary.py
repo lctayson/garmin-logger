@@ -137,14 +137,16 @@ class AttachSummaryTests(unittest.TestCase):
 class RenderTests(unittest.TestCase):
     def test_renders_headline_and_limiter(self):
         text = render(_payload(), None)
-        self.assertIn("Readiness 50/100", text)
-        self.assertIn("stress history", text)
+        self.assertIn("Readiness: 50/100", text)
+        self.assertIn("Stress History", text)
 
     def test_flags_hrv_below_band(self):
-        self.assertIn("below band", render(_payload(), None))
+        self.assertIn("below balanced band", render(_payload(), None))
 
-    def test_activity_details_rendered(self):
+    def test_activity_details_rendered_when_dated_today(self):
+        payload = _payload()  # date: 2026-09-17
         activities = {
+            "date": "2026-09-17",
             "activities": [
                 {
                     "name": "2 x 7min Threshold",
@@ -156,21 +158,49 @@ class RenderTests(unittest.TestCase):
                     "training_effect": {"label": "TEMPO", "aerobic": 3.4, "anaerobic": 0.0},
                     "interval_drift": {"work_reps": 2, "pace_ef_drift_pct": -0.8, "hr_delta_bpm": 7.0},
                 }
-            ]
+            ],
         }
-        text = render(_payload(), activities)
+        text = render(payload, activities)
+        self.assertIn("## Today", text)
+        self.assertNotIn("Rest Day", text)
         self.assertIn("2 x 7min Threshold", text)
         self.assertIn("TEMPO", text)
         self.assertIn("2 work reps", text)
 
+    def test_stale_activity_file_labeled_as_rest_day_not_today(self):
+        # Rest day: metrics date is newer than the activities file's date,
+        # meaning split_garmin_json.py correctly did not refresh it. The
+        # renderer must not present yesterday's run as today's.
+        payload = _payload()
+        payload["date"] = "2026-09-18"
+        activities = {
+            "date": "2026-09-17",
+            "activities": [{"name": "Yesterday's Run", "distance": 6.03}],
+        }
+        text = render(payload, activities)
+        self.assertIn("Rest Day", text)
+        self.assertIn("Most recent activity (2026-09-17)", text)
+        self.assertIn("Yesterday's Run", text)
+        self.assertNotIn("## Today\n", text)
+
+    def test_genuine_rest_day_with_no_activities_at_all(self):
+        payload = _payload()
+        text = render(payload, {"date": "2026-09-17", "activities": []})
+        self.assertIn("Rest Day", text)
+        self.assertIn("No activity logged", text)
+
     def test_missing_activity_file_is_distinguished_from_rest_day(self):
         self.assertIn("No activity file found", render(_payload(), None))
-        self.assertIn("No activity logged", render(_payload(), {"activities": []}))
+        self.assertNotIn("Rest Day", render(_payload(), None))
 
     def test_render_works_without_precomputed_summary(self):
         payload = _payload()
         self.assertNotIn("summary", payload)
-        self.assertIn("Readiness 50/100", render(payload, None))
+        self.assertIn("Readiness: 50/100", render(payload, None))
+
+    def test_no_triple_blank_lines(self):
+        text = render(_payload(), {"date": "2026-09-17", "activities": []})
+        self.assertNotIn("\n\n\n", text)
 
 
 if __name__ == "__main__":
