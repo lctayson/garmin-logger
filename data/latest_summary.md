@@ -1,31 +1,30 @@
 # Daily Check — 2026-09-19
 
-## Readiness: 57/100 (Moderate)
-> Good Recovery
+## Readiness: 45/100 (Low)
+> Focus On Sleep Quality
 
 - **RHR:** 58 bpm
 - **HRV:** 53ms (7d avg: 49ms)
 - ⚠️ **Sleep:** 6h06 (score 69)
-- **Recovery time:** 0h
+- **Recovery time:** 15.9h
 - ⚠️ **Limiter:** Sleep History (45%)
 - **Also soft:** Sleep Score
 
-## Today — Rest Day
+## Today
 
-_Most recent activity (2026-09-17):_
-- **Malolos - 2 × 7min Threshold** — 6.03km · 40:35 · 6:44/km · HR 147/168 max
-  - TE: TEMPO · aerobic 3.4 · anaerobic 0
-  - Intervals: 2 work reps · pace drift -0.8% · HR +7bpm
-  - MS: 2.55k @ 5:29 159bpm 1.00m 182spm 243ms 8.1cm 312w
+- **Malolos - _Run + Strides/Hills** — 4.07km · 31:09 · 7:39/km · HR 138/155 max
+  - TE: AEROBIC_BASE · aerobic 2.6 · anaerobic 1
+  - Intervals: 4 work reps · pace drift -9.4% · HR +23bpm
+  - MS: 3.38k @ 7:25 139bpm 0.79m 171spm 275ms 7.8cm 236w
 
 ## Load & Trends
 
-- ⚠️ **ACWR:** 0.7 (Low) — acute 393 / chronic 523 (chronic range 418.4–784.5)
-- **7-day volume:** 24.18km vs 28-day avg 30.2km (-20%)
-- **Running tolerance:** 46.9% (Low 1Days) — 24.2km of 65.2km weekly cap, acute impact load 30.6
-- **Aerobic Low:** 516.6 (target 303–822 — in range)
+- **ACWR:** 0.8 (Optimal) — acute 477 / chronic 539 (chronic range 431.2–808.5)
+- **7-day volume:** 28.25km vs 28-day avg 31.2km (-10%)
+- **Running tolerance:** 53.7% (Medium) — 28.2km of 65.2km weekly cap, acute impact load 35
+- **Aerobic Low:** 571 (target 303–822 — in range)
 - ⚠️ **Aerobic High:** 1408.9 (target 649–1169 — +240 over)
-- ⚠️ **Anaerobic:** 67 (target 173–519 — -106 under)
+- ⚠️ **Anaerobic:** 79 (target 173–519 — -94 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
 - ⚠️ **Sleep (7d avg):** 6h23, 6/7 nights below need, trending flat
 - **RHR (7d avg):** 58.3, trending down
@@ -39,4 +38,4 @@ _Most recent activity (2026-09-17):_
 - Wed Sep 16 — running, 6.09km, load 68.2
 - Thu Sep 17 — running, 6.03km, load 113.1
 - Fri Sep 18 — rest
-- Sat Sep 19 — rest
+- Sat Sep 19 — running, 4.07km, load 66.5
