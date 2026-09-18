@@ -1,12 +1,13 @@
 import json
 import os
 import sys
+import tempfile
 import unittest
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from metrics_summary import attach_summary, build_summary
-from render_summary_md import _main_set_line, render
+from render_summary_md import _dated_activity_names, _find_dated_activity_file, _main_set_line, render
 
 
 def _payload(**overrides):
@@ -250,6 +251,62 @@ class ThisWeekTests(unittest.TestCase):
         }
         text = render(payload, None)
         self.assertIn("running/cycling", text)
+
+    def test_uses_real_activity_name_when_dated_file_found(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            day_dir = os.path.join(tmp, "2026", "09")
+            os.makedirs(day_dir)
+            with open(os.path.join(day_dir, "2026-09-12_activities.json"), "w") as f:
+                json.dump({"activities": [{"name": "Malolos - 2 x 7min Threshold"}]}, f)
+
+            payload = _payload()
+            payload["trend_recent_daily"] = {
+                "columns": ["date", "activity_count", "distance", "sport_volume", "exercise_load"],
+                "data": [["2026-09-12", 1, 6.03, {"running": {}}, 113.1]],
+            }
+            text = render(payload, None, data_dir=tmp)
+            self.assertIn("Sat Sep 12 — Malolos - 2 x 7min Threshold, 6.03km, load 113.1", text)
+
+    def test_falls_back_to_sport_when_no_dated_file_matches_that_day(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            os.makedirs(os.path.join(tmp, "2026", "09"))
+            payload = _payload()
+            payload["trend_recent_daily"] = {
+                "columns": ["date", "activity_count", "distance", "sport_volume", "exercise_load"],
+                "data": [["2026-09-12", 1, 6.03, {"running": {}}, 113.1]],
+            }
+            text = render(payload, None, data_dir=tmp)
+            self.assertIn("Sat Sep 12 — running, 6.03km", text)
+
+    def test_finds_slugged_filename_when_no_plain_activities_file_exists(self):
+        # The naming convention changed partway through this project's
+        # history -- newer files are named after the activity, not a fixed
+        # "_activities.json" suffix.
+        with tempfile.TemporaryDirectory() as tmp:
+            day_dir = os.path.join(tmp, "2026", "09")
+            os.makedirs(day_dir)
+            with open(os.path.join(day_dir, "2026-09-15_malolos-4-3min-vo2-intervals.json"), "w") as f:
+                json.dump({"activities": [{"name": "Malolos - 4 x 3min VO2 Intervals"}]}, f)
+
+            payload = _payload()
+            payload["trend_recent_daily"] = {
+                "columns": ["date", "activity_count", "distance", "sport_volume", "exercise_load"],
+                "data": [["2026-09-15", 1, 6.03, {"running": {}}, 133.5]],
+            }
+            text = render(payload, None, data_dir=tmp)
+            self.assertIn("Malolos - 4 x 3min VO2 Intervals", text)
+
+    def test_metrics_file_is_never_mistaken_for_an_activity_file(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            day_dir = os.path.join(tmp, "2026", "09")
+            os.makedirs(day_dir)
+            with open(os.path.join(day_dir, "2026-09-12_metrics.json"), "w") as f:
+                json.dump({"date": "2026-09-12"}, f)
+            self.assertIsNone(_find_dated_activity_file(tmp, "2026-09-12"))
+
+    def test_no_data_dir_never_touches_filesystem(self):
+        # data_dir=None must short-circuit before any glob/open call.
+        self.assertEqual(_dated_activity_names(None, "2026-09-12"), [])
 
 
     def test_load_lines_show_raw_source_values(self):

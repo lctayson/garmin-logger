@@ -90,7 +90,6 @@ def _running_tolerance(api, target_date):
         "acute_impact_load": round(acute_km * factor, 1),
         "weekly_tolerance": round(tolerance_km * factor, 1),
         "actual_7_day_distance": round(distance_km * factor, 1) if distance_km is not None else None,
-        "distance_unit": "mi" if imperial else "km",
         "status": status,
         "percent_of_tolerance": percent,
     }

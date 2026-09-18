@@ -13,6 +13,7 @@ than assuming whatever is in the activities file happened today.
 from __future__ import annotations
 
 import argparse
+import glob
 import json
 import os
 from decimal import ROUND_HALF_UP, Decimal
@@ -218,7 +219,40 @@ def _day_label(date_str: Any) -> str:
         return date_str
 
 
-def _this_week_lines(payload: dict[str, Any]) -> list[str]:
+def _find_dated_activity_file(data_dir: str, date_str: str) -> str | None:
+    """Locate that day's per-activity JSON under data/<year>/<month>/. The
+    naming convention changed partway through this project's history: older
+    files are "<date>_activities.json", newer ones are "<date>_<slugified
+    activity name>.json" -- so this globs rather than assuming one pattern."""
+    if not isinstance(date_str, str) or len(date_str) < 7:
+        return None
+    year, month = date_str[:4], date_str[5:7]
+    day_dir = os.path.join(data_dir, year, month)
+    candidates = [p for p in glob.glob(os.path.join(day_dir, f"{date_str}_*.json")) if not p.endswith("_metrics.json")]
+    if not candidates:
+        return None
+    for path in candidates:
+        if path.endswith("_activities.json"):
+            return path
+    return sorted(candidates)[0]
+
+
+def _dated_activity_names(data_dir: str | None, date_str: Any) -> list[str]:
+    if not data_dir:
+        return []
+    path = _find_dated_activity_file(data_dir, date_str)
+    if not path:
+        return []
+    payload = _load_json(path)
+    if not isinstance(payload, dict):
+        return []
+    activities = payload.get("activities")
+    if not isinstance(activities, list):
+        return []
+    return [str(act["name"]) for act in activities if isinstance(act, dict) and act.get("name")]
+
+
+def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> list[str]:
     """Per-day breakdown of the trend_recent_daily window (usually 7 days),
     so the load/volume numbers above can be traced to specific sessions
     instead of taken on faith."""
@@ -239,15 +273,24 @@ def _this_week_lines(payload: dict[str, Any]) -> list[str]:
     for row in rows:
         if not isinstance(row, list):
             continue
-        label = _day_label(cell(row, "date"))
+        date_str = cell(row, "date")
+        label = _day_label(date_str)
         count = _num(cell(row, "activity_count"))
         if not count:
             lines.append(f"- {label} — rest")
             continue
 
-        sport_volume = cell(row, "sport_volume")
-        sports = list(sport_volume.keys()) if isinstance(sport_volume, dict) else []
-        bit = f"- {label} — {'/'.join(sports) if sports else 'activity'}"
+        # Prefer the actual logged activity name(s); fall back to the sport
+        # type when the day's dated file can't be found (e.g. data_dir not
+        # available, as in tests, or the day predates per-day file logging).
+        names = _dated_activity_names(data_dir, date_str)
+        if names:
+            title = "/".join(names)
+        else:
+            sport_volume = cell(row, "sport_volume")
+            sports = list(sport_volume.keys()) if isinstance(sport_volume, dict) else []
+            title = "/".join(sports) if sports else "activity"
+        bit = f"- {label} — {title}"
         distance = _num(cell(row, "distance"))
         if distance is not None:
             bit += f", {distance}km"
@@ -487,7 +530,7 @@ def _today_lines(metrics_date: Any, activities_payload: dict[str, Any] | None) -
     return lines
 
 
-def render(metrics: dict[str, Any], activities: dict[str, Any] | None) -> str:
+def render(metrics: dict[str, Any], activities: dict[str, Any] | None, data_dir: str | None = None) -> str:
     summary = metrics.get("summary")
     if not isinstance(summary, dict):
         summary = build_summary(metrics)
@@ -504,7 +547,7 @@ def render(metrics: dict[str, Any], activities: dict[str, Any] | None) -> str:
         out.extend(load_lines)
         out.append("")
 
-    week_lines = _this_week_lines(metrics)
+    week_lines = _this_week_lines(metrics, data_dir)
     if week_lines:
         out.extend(week_lines)
         out.append("")
@@ -536,7 +579,7 @@ def main() -> None:
     activities = _load_json(activities_path)
 
     with open(out_path, "w", encoding="utf-8") as f:
-        f.write(render(metrics, activities))
+        f.write(render(metrics, activities, args.data_dir))
     print(out_path)
 
 
