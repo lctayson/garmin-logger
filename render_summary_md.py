@@ -269,8 +269,8 @@ def _strip_location_prefix(name: str) -> str:
 
 def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> list[str]:
     """Per-day breakdown of the trend_recent_daily window (usually 7 days),
-    so the load/volume numbers above can be traced to specific sessions
-    instead of taken on faith."""
+    as a markdown table -- so the load/volume numbers above can be traced to
+    specific sessions instead of taken on faith."""
     daily = payload.get("trend_recent_daily")
     if not isinstance(daily, dict):
         return []
@@ -284,7 +284,7 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
         i = col.get(name)
         return row[i] if i is not None and i < len(row) else None
 
-    lines: list[str] = []
+    table_rows: list[str] = []
     for row in rows:
         if not isinstance(row, list):
             continue
@@ -292,12 +292,9 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
         label = _day_label(date_str)
         count = _num(cell(row, "activity_count"))
         if not count:
-            lines.append(f"- {label} — rest")
+            table_rows.append(f"| {label} | — | — | Rest |")
             continue
 
-        # Prefer the actual logged activity name(s); fall back to the sport
-        # type when the day's dated file can't be found (e.g. data_dir not
-        # available, as in tests, or the day predates per-day file logging).
         names = _dated_activity_names(data_dir, date_str)
         if names:
             title = "/".join(_strip_location_prefix(n) for n in names)
@@ -305,17 +302,17 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
             sport_volume = cell(row, "sport_volume")
             sports = list(sport_volume.keys()) if isinstance(sport_volume, dict) else []
             title = "/".join(sports) if sports else "activity"
-        bit = f"- {label} —"
-        distance = _num(cell(row, "distance"))
-        if distance is not None:
-            bit += f" {distance}km,"
-        load = _num(cell(row, "exercise_load"))
-        if load is not None:
-            bit += f" load {load:g},"
-        bit += f" {title}"
-        lines.append(bit)
 
-    return ["## This Week", ""] + lines if lines else []
+        distance = _num(cell(row, "distance"))
+        dist_cell = f"{distance}km" if distance is not None else "—"
+        load = _num(cell(row, "exercise_load"))
+        load_cell = f"{load:g}" if load is not None else "—"
+        table_rows.append(f"| {label} | {dist_cell} | {load_cell} | {title} |")
+
+    if not table_rows:
+        return []
+    header = ["## This Week", "", "| Date | Distance | Load | Activity |", "|---|---|---|---|"]
+    return header + table_rows
 
 
 def _readiness_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[str]:
