@@ -30,14 +30,14 @@
 - **RHR (7d avg):** 58.3, trending down
 - **HRV:** trending up
 
-## This Week
+## This Week (Sep 13–19)
 
-| Date | Distance | Load | Activity |
+| Day | Distance | Load | Activity |
 |---|---|---|---|
-| Sun Sep 13 | 6.03km | 58.2 | Run + Strides/Hills |
-| Mon Sep 14 | — | — | Rest |
-| Tue Sep 15 | 6.03km | 133.5 | 4 × 3min VO₂ Intervals |
-| Wed Sep 16 | 6.09km | 68.2 | Run + Strides/Hills |
-| Thu Sep 17 | 6.03km | 113.1 | 2 × 7min Threshold |
-| Fri Sep 18 | — | — | Rest |
-| Sat Sep 19 | 4.07km | 66.5 | Run + Strides/Hills |
+| Sun | 6.03km | 58.2 | Run + Strides/Hills |
+| Mon | — | — | Rest |
+| Tue | 6.03km | 133.5 | 4 × 3min VO₂ Intervals |
+| Wed | 6.09km | 68.2 | Run + Strides/Hills |
+| Thu | 6.03km | 113.1 | 2 × 7min Threshold |
+| Fri | — | — | Rest |
+| Sat | 4.07km | 66.5 | Run + Strides/Hills |
