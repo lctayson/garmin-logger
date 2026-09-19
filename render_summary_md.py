@@ -220,6 +220,41 @@ def _day_label(date_str: Any) -> str:
         return date_str
 
 
+def _day_label_short(date_str: Any) -> str:
+    from datetime import datetime
+
+    if not isinstance(date_str, str):
+        return str(date_str)
+    try:
+        return datetime.strptime(date_str, "%Y-%m-%d").strftime("%a")
+    except ValueError:
+        return date_str
+
+
+def _week_range_label(date_strs: list[Any]) -> str | None:
+    """"Sep 13-19" for the header, so each row doesn't need to repeat the
+    month -- handles the rarer case of a window spanning a month or year
+    boundary too."""
+    from datetime import datetime
+
+    parsed = []
+    for d in date_strs:
+        if not isinstance(d, str):
+            continue
+        try:
+            parsed.append(datetime.strptime(d, "%Y-%m-%d"))
+        except ValueError:
+            continue
+    if not parsed:
+        return None
+    start, end = min(parsed), max(parsed)
+    if start.year != end.year:
+        return f"{start.strftime('%b')} {start.day}, {start.year} – {end.strftime('%b')} {end.day}, {end.year}"
+    if start.month != end.month:
+        return f"{start.strftime('%b')} {start.day} – {end.strftime('%b')} {end.day}"
+    return f"{start.strftime('%b')} {start.day}–{end.day}"
+
+
 def _find_dated_activity_file(data_dir: str, date_str: str) -> str | None:
     """Locate that day's per-activity JSON under data/<year>/<month>/. The
     naming convention changed partway through this project's history: older
@@ -285,11 +320,13 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
         return row[i] if i is not None and i < len(row) else None
 
     table_rows: list[str] = []
+    seen_dates: list[Any] = []
     for row in rows:
         if not isinstance(row, list):
             continue
         date_str = cell(row, "date")
-        label = _day_label(date_str)
+        seen_dates.append(date_str)
+        label = _day_label_short(date_str)
         count = _num(cell(row, "activity_count"))
         if not count:
             table_rows.append(f"| {label} | — | — | Rest |")
@@ -311,7 +348,9 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
 
     if not table_rows:
         return []
-    header = ["## This Week", "", "| Date | Distance | Load | Activity |", "|---|---|---|---|"]
+    range_label = _week_range_label(seen_dates)
+    title = f"## This Week ({range_label})" if range_label else "## This Week"
+    header = [title, "", "| Day | Distance | Load | Activity |", "|---|---|---|---|"]
     return header + table_rows
 
 

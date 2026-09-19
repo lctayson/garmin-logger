@@ -7,7 +7,14 @@ import unittest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from metrics_summary import attach_summary, build_summary
-from render_summary_md import _dated_activity_names, _find_dated_activity_file, _main_set_line, _strip_location_prefix, render
+from render_summary_md import (
+    _dated_activity_names,
+    _find_dated_activity_file,
+    _main_set_line,
+    _strip_location_prefix,
+    _week_range_label,
+    render,
+)
 
 
 def _payload(**overrides):
@@ -224,7 +231,7 @@ class MainSetTests(unittest.TestCase):
 
 
 class ThisWeekTests(unittest.TestCase):
-    def test_rest_and_activity_days_labeled(self):
+    def test_rest_and_activity_days_as_table_rows(self):
         payload = _payload()
         payload["trend_recent_daily"] = {
             "columns": ["date", "activity_count", "distance", "sport_volume", "exercise_load"],
@@ -234,9 +241,37 @@ class ThisWeekTests(unittest.TestCase):
             ],
         }
         text = render(payload, None)
-        self.assertIn("## This Week", text)
-        self.assertIn("Fri Sep 11 — rest", text)
-        self.assertIn("Sat Sep 12 — 10.03km, load 177.4, running", text)
+        self.assertIn("| Day | Distance | Load | Activity |", text)
+        self.assertIn("| Fri | — | — | Rest |", text)
+        self.assertIn("| Sat | 10.03km | 177.4 | running |", text)
+
+    def test_header_shows_date_range_not_repeated_per_row(self):
+        payload = _payload()
+        payload["trend_recent_daily"] = {
+            "columns": ["date", "activity_count", "distance", "sport_volume", "exercise_load"],
+            "data": [
+                ["2026-09-13", 1, 6.03, {"running": {}}, 58.2],
+                ["2026-09-19", 1, 4.07, {"running": {}}, 66.5],
+            ],
+        }
+        text = render(payload, None)
+        self.assertIn("## This Week (Sep 13–19)", text)
+        # Row labels are weekday-only now that the range covers the month/day.
+        self.assertIn("| Sun |", text)
+        self.assertIn("| Sat |", text)
+        self.assertNotIn("Sep 13 |", text)
+
+    def test_range_header_spans_month_boundary(self):
+        payload = _payload()
+        payload["trend_recent_daily"] = {
+            "columns": ["date", "activity_count", "distance", "sport_volume", "exercise_load"],
+            "data": [
+                ["2026-09-28", 1, 6.0, {"running": {}}, 100.0],
+                ["2026-10-02", 1, 6.0, {"running": {}}, 100.0],
+            ],
+        }
+        text = render(payload, None)
+        self.assertIn("## This Week (Sep 28 – Oct 2)", text)
 
     def test_omitted_when_no_trend_data(self):
         payload = _payload()
@@ -265,7 +300,7 @@ class ThisWeekTests(unittest.TestCase):
                 "data": [["2026-09-12", 1, 6.03, {"running": {}}, 113.1]],
             }
             text = render(payload, None, data_dir=tmp)
-            self.assertIn("Sat Sep 12 — 6.03km, load 113.1, 2 x 7min Threshold", text)
+            self.assertIn("| Sat | 6.03km | 113.1 | 2 x 7min Threshold |", text)
 
     def test_falls_back_to_sport_when_no_dated_file_matches_that_day(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -276,7 +311,7 @@ class ThisWeekTests(unittest.TestCase):
                 "data": [["2026-09-12", 1, 6.03, {"running": {}}, 113.1]],
             }
             text = render(payload, None, data_dir=tmp)
-            self.assertIn("Sat Sep 12 — 6.03km, load 113.1, running", text)
+            self.assertIn("| Sat | 6.03km | 113.1 | running |", text)
 
     def test_finds_slugged_filename_when_no_plain_activities_file_exists(self):
         # The naming convention changed partway through this project's
@@ -325,6 +360,27 @@ class ThisWeekTests(unittest.TestCase):
             self.assertIn("Run + Strides/Hills", text)
             self.assertNotIn("Malolos", text)
             self.assertNotIn("_Run", text)
+
+
+class WeekRangeLabelTests(unittest.TestCase):
+    def test_same_month(self):
+        self.assertEqual(_week_range_label(["2026-09-13", "2026-09-19"]), "Sep 13–19")
+
+    def test_unsorted_input_still_finds_true_bounds(self):
+        self.assertEqual(_week_range_label(["2026-09-16", "2026-09-13", "2026-09-19"]), "Sep 13–19")
+
+    def test_month_boundary(self):
+        self.assertEqual(_week_range_label(["2026-09-28", "2026-10-02"]), "Sep 28 – Oct 2")
+
+    def test_year_boundary(self):
+        self.assertEqual(_week_range_label(["2025-12-29", "2026-01-02"]), "Dec 29, 2025 – Jan 2, 2026")
+
+    def test_single_date(self):
+        self.assertEqual(_week_range_label(["2026-09-13"]), "Sep 13–13")
+
+    def test_empty_or_invalid_returns_none(self):
+        self.assertIsNone(_week_range_label([]))
+        self.assertIsNone(_week_range_label([None, "not-a-date"]))
 
 
 class StripLocationPrefixTests(unittest.TestCase):
