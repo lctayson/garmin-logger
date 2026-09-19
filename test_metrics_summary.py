@@ -7,7 +7,7 @@ import unittest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from metrics_summary import attach_summary, build_summary
-from render_summary_md import _dated_activity_names, _find_dated_activity_file, _main_set_line, render
+from render_summary_md import _dated_activity_names, _find_dated_activity_file, _main_set_line, _strip_location_prefix, render
 
 
 def _payload(**overrides):
@@ -236,7 +236,7 @@ class ThisWeekTests(unittest.TestCase):
         text = render(payload, None)
         self.assertIn("## This Week", text)
         self.assertIn("Fri Sep 11 — rest", text)
-        self.assertIn("Sat Sep 12 — running, 10.03km, load 177.4", text)
+        self.assertIn("Sat Sep 12 — 10.03km, load 177.4, running", text)
 
     def test_omitted_when_no_trend_data(self):
         payload = _payload()
@@ -265,7 +265,7 @@ class ThisWeekTests(unittest.TestCase):
                 "data": [["2026-09-12", 1, 6.03, {"running": {}}, 113.1]],
             }
             text = render(payload, None, data_dir=tmp)
-            self.assertIn("Sat Sep 12 — Malolos - 2 x 7min Threshold, 6.03km, load 113.1", text)
+            self.assertIn("Sat Sep 12 — 6.03km, load 113.1, 2 x 7min Threshold", text)
 
     def test_falls_back_to_sport_when_no_dated_file_matches_that_day(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -276,7 +276,7 @@ class ThisWeekTests(unittest.TestCase):
                 "data": [["2026-09-12", 1, 6.03, {"running": {}}, 113.1]],
             }
             text = render(payload, None, data_dir=tmp)
-            self.assertIn("Sat Sep 12 — running, 6.03km", text)
+            self.assertIn("Sat Sep 12 — 6.03km, load 113.1, running", text)
 
     def test_finds_slugged_filename_when_no_plain_activities_file_exists(self):
         # The naming convention changed partway through this project's
@@ -294,7 +294,8 @@ class ThisWeekTests(unittest.TestCase):
                 "data": [["2026-09-15", 1, 6.03, {"running": {}}, 133.5]],
             }
             text = render(payload, None, data_dir=tmp)
-            self.assertIn("Malolos - 4 x 3min VO2 Intervals", text)
+            self.assertIn("4 x 3min VO2 Intervals", text)
+            self.assertNotIn("Malolos", text)
 
     def test_metrics_file_is_never_mistaken_for_an_activity_file(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -307,6 +308,42 @@ class ThisWeekTests(unittest.TestCase):
     def test_no_data_dir_never_touches_filesystem(self):
         # data_dir=None must short-circuit before any glob/open call.
         self.assertEqual(_dated_activity_names(None, "2026-09-12"), [])
+
+    def test_location_prefix_stripped_from_week_titles(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            day_dir = os.path.join(tmp, "2026", "09")
+            os.makedirs(day_dir)
+            with open(os.path.join(day_dir, "2026-09-16_activities.json"), "w") as f:
+                json.dump({"activities": [{"name": "Malolos - _Run + Strides/Hills"}]}, f)
+
+            payload = _payload()
+            payload["trend_recent_daily"] = {
+                "columns": ["date", "activity_count", "distance", "sport_volume", "exercise_load"],
+                "data": [["2026-09-16", 1, 6.09, {"running": {}}, 68.2]],
+            }
+            text = render(payload, None, data_dir=tmp)
+            self.assertIn("Run + Strides/Hills", text)
+            self.assertNotIn("Malolos", text)
+            self.assertNotIn("_Run", text)
+
+
+class StripLocationPrefixTests(unittest.TestCase):
+    def test_strips_dash_separated_location(self):
+        self.assertEqual(_strip_location_prefix("Malolos - 4 × 3min VO2 Intervals"), "4 × 3min VO2 Intervals")
+
+    def test_strips_stray_leading_underscore_after_dash(self):
+        self.assertEqual(_strip_location_prefix("Malolos - _Run + Strides/Hills"), "Run + Strides/Hills")
+
+    def test_no_dash_returns_name_unchanged(self):
+        # "Malolos Running" has no separator to reliably tell location from
+        # activity type apart, so leave it as-is rather than guess.
+        self.assertEqual(_strip_location_prefix("Malolos Running"), "Malolos Running")
+
+    def test_never_returns_empty_string(self):
+        self.assertEqual(_strip_location_prefix("Malolos - "), "Malolos - ")
+
+    def test_non_string_passed_through(self):
+        self.assertIsNone(_strip_location_prefix(None))
 
 
     def test_load_lines_show_raw_source_values(self):

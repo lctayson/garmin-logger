@@ -16,6 +16,7 @@ import argparse
 import glob
 import json
 import os
+import re
 from decimal import ROUND_HALF_UP, Decimal
 from typing import Any
 
@@ -252,6 +253,20 @@ def _dated_activity_names(data_dir: str | None, date_str: Any) -> list[str]:
     return [str(act["name"]) for act in activities if isinstance(act, dict) and act.get("name")]
 
 
+_LOCATION_PREFIX_RE = re.compile(r"^\S+\s*-\s*")
+
+
+def _strip_location_prefix(name: str) -> str:
+    """Garmin auto-names activities "<Location> - <Type>" (occasionally with
+    a stray leading underscore on the type, e.g. "Malolos - _Run + Strides").
+    Drop the location so This Week's activity titles take less space -- the
+    location is the same every day and adds nothing here."""
+    if not isinstance(name, str):
+        return name
+    stripped = _LOCATION_PREFIX_RE.sub("", name, count=1).lstrip("_").strip()
+    return stripped or name
+
+
 def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> list[str]:
     """Per-day breakdown of the trend_recent_daily window (usually 7 days),
     so the load/volume numbers above can be traced to specific sessions
@@ -285,18 +300,19 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
         # available, as in tests, or the day predates per-day file logging).
         names = _dated_activity_names(data_dir, date_str)
         if names:
-            title = "/".join(names)
+            title = "/".join(_strip_location_prefix(n) for n in names)
         else:
             sport_volume = cell(row, "sport_volume")
             sports = list(sport_volume.keys()) if isinstance(sport_volume, dict) else []
             title = "/".join(sports) if sports else "activity"
-        bit = f"- {label} — {title}"
+        bit = f"- {label} —"
         distance = _num(cell(row, "distance"))
         if distance is not None:
-            bit += f", {distance}km"
+            bit += f" {distance}km,"
         load = _num(cell(row, "exercise_load"))
         if load is not None:
-            bit += f", load {load:g}"
+            bit += f" load {load:g},"
+        bit += f" {title}"
         lines.append(bit)
 
     return ["## This Week", ""] + lines if lines else []
