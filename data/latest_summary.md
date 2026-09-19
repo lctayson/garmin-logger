@@ -32,10 +32,10 @@
 
 ## This Week
 
-- Sun Sep 13 — Malolos - _Run + Strides/Hills, 6.03km, load 58.2
+- Sun Sep 13 — 6.03km, load 58.2, Run + Strides/Hills
 - Mon Sep 14 — rest
-- Tue Sep 15 — Malolos - 4 × 3min VO₂ Intervals, 6.03km, load 133.5
-- Wed Sep 16 — Malolos - _Run + Strides/Hills, 6.09km, load 68.2
-- Thu Sep 17 — Malolos - 2 × 7min Threshold, 6.03km, load 113.1
+- Tue Sep 15 — 6.03km, load 133.5, 4 × 3min VO₂ Intervals
+- Wed Sep 16 — 6.09km, load 68.2, Run + Strides/Hills
+- Thu Sep 17 — 6.03km, load 113.1, 2 × 7min Threshold
 - Fri Sep 18 — rest
-- Sat Sep 19 — Malolos - _Run + Strides/Hills, 4.07km, load 66.5
+- Sat Sep 19 — 4.07km, load 66.5, Run + Strides/Hills
