@@ -79,7 +79,7 @@
       "rem": 0.4,
       "awake": 0.23
     },
-    "total_steps": 6016
+    "total_steps": 6025
   },
   "training_status": {
     "status": "Maintaining 2",

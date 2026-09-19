@@ -27,7 +27,7 @@
       "stress_history": {"percent": 74, "feedback": "Good"}
     }
   },
-  "health": {"steps": 6016},
+  "health": {"steps": 6025},
   "sleep": {
     "deep_h": 0.57,
     "light_h": 5.13,

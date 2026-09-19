@@ -32,10 +32,12 @@
 
 ## This Week
 
-- Sun Sep 13 — 6.03km, load 58.2, Run + Strides/Hills
-- Mon Sep 14 — rest
-- Tue Sep 15 — 6.03km, load 133.5, 4 × 3min VO₂ Intervals
-- Wed Sep 16 — 6.09km, load 68.2, Run + Strides/Hills
-- Thu Sep 17 — 6.03km, load 113.1, 2 × 7min Threshold
-- Fri Sep 18 — rest
-- Sat Sep 19 — 4.07km, load 66.5, Run + Strides/Hills
+| Date | Distance | Load | Activity |
+|---|---|---|---|
+| Sun Sep 13 | 6.03km | 58.2 | Run + Strides/Hills |
+| Mon Sep 14 | — | — | Rest |
+| Tue Sep 15 | 6.03km | 133.5 | 4 × 3min VO₂ Intervals |
+| Wed Sep 16 | 6.09km | 68.2 | Run + Strides/Hills |
+| Thu Sep 17 | 6.03km | 113.1 | 2 × 7min Threshold |
+| Fri Sep 18 | — | — | Rest |
+| Sat Sep 19 | 4.07km | 66.5 | Run + Strides/Hills |
