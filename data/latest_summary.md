@@ -12,7 +12,7 @@
 
 ## Today
 
-- **Malolos Running** — 9.99km · 57:56 · 5:48/km · HR 168/179 max
+- **Bulacan Masters Heroes Day Run (BMH) 2026** — 9.99km · 57:56 · 5:48/km · HR 168/179 max
   - TE: VO2MAX · aerobic 5 · anaerobic 0
 
 ## Load & Trends
@@ -38,4 +38,4 @@
 | Thu | 6.03km | 113.1 | 2 × 7min Threshold |
 | Fri | — | — | Rest |
 | Sat | 4.07km | 66.5 | Run + Strides/Hills |
-| Sun | 9.99km | 278.2 | Malolos Running |
+| Sun | 9.99km | 278.2 | Bulacan Masters Heroes Day Run (BMH) 2026 |
