@@ -1,27 +1,26 @@
 # Daily Check — 2026-09-22
 
-## Readiness: 34/100 (Low)
+## Readiness: 36/100 (Low)
 > High Recovery Needs
 
 - **RHR:** 57 bpm
 - **HRV:** 55ms (7d avg: 50ms)
 - **Sleep:** 6h22 (score 76)
-- ⚠️ **Recovery time:** 44h
-- ⚠️ **Limiter:** Recovery Time (34%)
+- ⚠️ **Recovery time:** 42.5h
+- ⚠️ **Limiter:** Recovery Time (35%)
 - **Also soft:** Stress History, Sleep Score, Sleep History
 
-## Today — Rest Day
+## Today
 
-_Most recent activity (2026-09-20):_
-- **Bulacan Masters Heroes Day Run (BMH) 2026** — 9.99km · 57:56 · 5:48/km · HR 168/179 max
-  - TE: VO2MAX · aerobic 5 · anaerobic 0
+- **Malolos Running** — 5.02km · 38:05 · 7:35/km · HR 141/153 max
+  - TE: AEROBIC_BASE · aerobic 2.5 · anaerobic 0
 
 ## Load & Trends
 
-- **ACWR:** 0.9 (Optimal) — acute 508 / chronic 552 (chronic range 441.6–828)
-- **7-day volume:** 26.18km vs 28-day avg 30.7km (-15%)
-- **Running tolerance:** 49.1% (Medium) — 26.2km of 64.1km weekly cap, acute impact load 31.5
-- **Aerobic Low:** 510.9 (target 303–822 — in range)
+- **ACWR:** 1.0 (Optimal) — acute 574 / chronic 564 (chronic range 451.2–846)
+- **7-day volume:** 31.2km vs 28-day avg 32.0km (-2%)
+- **Running tolerance:** 56.9% (Medium) — 31.2km of 64.1km weekly cap, acute impact load 36.5
+- **Aerobic Low:** 563.3 (target 303–822 — in range)
 - ⚠️ **Aerobic High:** 1545.1 (target 649–1169 — +376 over)
 - ⚠️ **Anaerobic:** 57.6 (target 173–519 — -115 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
@@ -39,4 +38,4 @@ _Most recent activity (2026-09-20):_
 | Sat | 4.07km | 66.5 | Run + Strides/Hills |
 | Sun | 9.99km | 278.2 | Bulacan Masters Heroes Day Run (BMH) 2026 |
 | Mon | — | — | Rest |
-| Tue | — | — | Rest |
+| Tue | 5.02km | 52.4 | Malolos Running |
