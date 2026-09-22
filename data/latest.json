@@ -79,7 +79,7 @@
       "rem": 0.9,
       "awake": 0.28
     },
-    "total_steps": 64,
+    "total_steps": 9244,
     "naps": [
       {
         "start": "2026-09-22T06:24:33",
@@ -865,14 +865,14 @@
     {
       "date": "2026-09-23",
       "charged": 60,
-      "drained": 3,
+      "drained": 18,
       "high": 76,
       "low": 16
     }
   ],
   "activities": [
     {
-      "name": "Malolos - _Run + Strides/Hills",
+      "name": "BHM W1: Run + Strides",
       "activity_id": 24462801384,
       "type": "running",
       "distance": 6.1,

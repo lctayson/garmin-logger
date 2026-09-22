@@ -12,7 +12,7 @@
 
 ## Today
 
-- **Malolos - _Run + Strides/Hills** — 6.1km · 46:12 · 7:34/km · HR 142/158 max
+- **BHM W1: Run + Strides** — 6.1km · 46:12 · 7:34/km · HR 142/158 max
   - TE: AEROBIC_BASE · aerobic 3 · anaerobic 0.9
   - Intervals: 5 work reps · pace drift -13.6% · HR +23bpm
   - MS: 5.02k @ 7:18 142bpm 0.80m 170spm 275ms 7.9cm 239w
@@ -40,4 +40,4 @@
 | Sun | 9.99km | 278.2 | Bulacan Masters Heroes Day Run (BMH) 2026 |
 | Mon | — | — | Rest |
 | Tue | 5.02km | 52.4 | Malolos Running |
-| Wed | 6.1km | 85.5 | Run + Strides/Hills |
+| Wed | 6.1km | 85.5 | BHM W1: Run + Strides |
