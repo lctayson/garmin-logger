@@ -19,6 +19,9 @@ class FakeGarmin:
         self.for_date_calls.append(date)
         return self.date_payload
 
+    def get_activity(self, activity_id):
+        return {}
+
 
 class ActivityExportDateEndpointTests(unittest.TestCase):
     def setUp(self):

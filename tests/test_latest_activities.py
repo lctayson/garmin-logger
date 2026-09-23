@@ -85,8 +85,7 @@ def test_normalize_activity_matches_target_schema_order():
         "avg_hr": 152.0,
         "max_hr": 176.0,
         "recovery_hr": 24,
-        "elevation_gain": 6.0,
-        "elevation_loss": 9.0,
+        "elevation": {"gain": 6.0, "loss": 9.0},
         "start_time_local": "2026-09-08T06:31:13.0",
         "training_effect": {"label": "VO2MAX", "aerobic": 3.6},
         "interval_drift": {"work_reps": 5},
@@ -134,7 +133,7 @@ def test_normalize_activity_matches_target_schema_order():
 
     expected_activity_keys = [
         "name", "activity_id", "type", "distance", "time", "elapsed_time", "moving_time",
-        "avg_pace", "gap", "avg_hr", "max_hr", "recovery_hr", "elevation_gain", "elevation_loss",
+        "avg_pace", "gap", "avg_hr", "max_hr", "recovery_hr", "elevation",
         "load", "start_time_local", "training_effect", "interval_drift", "splits", "weather",
         "hr_zones", "power_zones", "lap_count",
     ]
@@ -149,15 +148,15 @@ def test_normalize_activity_matches_target_schema_order():
     assert "training_effect_label" not in normalized
 
     expected_split_columns = [
-        "step_type", "lap", "time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr",
-        "min_hr", "end_hr", "avg_run_cadence", "calories", "best_pace", "max_run_cadence",
+        "step_type", "lap", "time", "elapsed_time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr",
+        "min_hr", "end_hr", "avg_run_cadence", "best_pace", "max_run_cadence",
         "moving_time", "avg_moving_pace", "distance", "elevation_gain", "elevation_loss",
         "stride_length", "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power",
-        "avg_power", "max_power", "avg_vertical_ratio",
+        "avg_power", "max_power", "avg_vertical_ratio", "workout_step_index", "workout_compliance_pct",
     ]
     assert normalized["splits"]["columns"] == expected_split_columns
     assert normalized["splits"]["data"][0] == [
-        "WARMUP", 1, "10:01", "7:23", "7:27", 137.0, 148.0, 104, 104, 148,
-        175.0, 93.0, "6:24", 188.0, "10:00", "7:22", 1.36, 0.0, 2.0, 0.77,
-        7.4, 268.1, 234.0, 233.0, 272.0, 9.6,
+        "WARMUP", 1, "10:01", None, "7:23", "7:27", 137.0, 148.0, 104, 104, 148,
+        175.0, "6:24", 188.0, "10:00", "7:22", 1.36, 0.0, 2.0, 0.77,
+        7.4, 268.1, 234.0, 233.0, 272.0, 9.6, None, None,
     ]
