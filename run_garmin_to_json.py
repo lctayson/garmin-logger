@@ -106,16 +106,47 @@ def _add_interval_drift(activity):
     if not isinstance(splits, list) or not splits:
         return activity
 
-    work = []
+    # A genuine interval/rep workout always separates each work bout with a
+    # RECOVERY/REST split. If two ACTIVE splits ever sit back-to-back with
+    # nothing between them, that's just one continuous effort auto-lapped by
+    # GPS (e.g. an easy run's own km splits, with strides tacked on after) --
+    # not repeated work reps. Rep-to-rep drift is meaningless on that shape,
+    # so skip the whole activity rather than accidentally treating the
+    # continuous portion's laps as "work reps".
+    previous_step_type = None
     for split in splits:
-        if not isinstance(split, dict) or str(split.get("step_type", "")).upper() != "ACTIVE":
+        if not isinstance(split, dict):
             continue
-        seconds = _split_duration_seconds(split)
-        if seconds is None or seconds < 120:
-            continue
-        if split.get("avg_pace") is None or split.get("avg_hr") is None:
-            continue
-        work.append(split)
+        step_type = str(split.get("step_type", "")).upper()
+        if step_type == "ACTIVE" and previous_step_type == "ACTIVE":
+            return activity
+        previous_step_type = step_type
+
+    # Group the ACTIVE reps by workout_step_index so distinct rep types in
+    # the same session (e.g. short warm-up strides ahead of the main quality
+    # reps, as in a threshold or VO2 session) don't get blended into one
+    # first-vs-last comparison. Falls back to a short/long duration split
+    # when workout_step_index is missing on every row -- same convention
+    # used for the MS: line in render_summary_md.py -- so older activities
+    # without that field still group sensibly.
+    active = [s for s in splits if isinstance(s, dict) and str(s.get("step_type", "")).upper() == "ACTIVE"]
+    have_step_index = any(s.get("workout_step_index") is not None for s in active)
+    if have_step_index:
+        by_key = {}
+        for s in active:
+            by_key.setdefault(s.get("workout_step_index"), []).append(s)
+        groups = list(by_key.values()) if len(by_key) > 1 else [active]
+    else:
+        long_reps = [s for s in active if (_split_duration_seconds(s) or 0) >= 60]
+        short_reps = [s for s in active if (_split_duration_seconds(s) or 0) < 60]
+        groups = [g for g in (long_reps, short_reps) if g] or [active]
+
+    # No duration floor here -- a rep is a rep whether it's a 400m surge at
+    # sub-5:00/km pace (well under 120s) or a 12-minute SUT block. Picking
+    # the group with the greatest total duration favors the main quality
+    # reps over a shorter warm-up-stride cluster when both are present.
+    candidate = max(groups, key=lambda g: sum(_split_duration_seconds(s) or 0 for s in g))
+    work = [s for s in candidate if s.get("avg_pace") is not None and s.get("avg_hr") is not None]
 
     if len(work) < 2:
         return activity
