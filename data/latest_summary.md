@@ -31,15 +31,29 @@
 
 ## This Week (Sep 17–23)
 
-| Day | Distance | Load | Activity |
-|---|---|---|---|
-| Thu | 6.03km | 113.1 | 2 × 7min Threshold |
+| Day | Dist | Load | Activity |
+|:--- | ---: | ---: | :--- |
+| Thu | 6.03k | 113.1 | 2 × 7min Threshold |
 | Fri | — | — | Rest |
-| Sat | 4.07km | 66.5 | Run + Strides/Hills |
-| Sun | 9.99km | 278.2 | Bulacan Masters Heroes Day Run (BMH) 2026 |
+| Sat | 4.07k | 66.5 | Run + Strides/Hills |
+| Sun | 9.99k | 278.2 | Bulacan Masters Heroes Day Run (BMH) 2026 |
 | Mon | — | — | Rest |
-| Tue | 5.02km | 52.4 | Malolos Running |
-| Wed | 6.1km | 85.5 | BHM W1: Run + Strides |
+| Tue | 5.02k | 52.4 | Malolos Running |
+| Wed | 6.1k | 85.5 | BHM W1: Run + Strides |
+
+**5** sessions &bull; **31.21 km** total &bull; **3h 33m** &bull; Load **595.7**
+
+| Dist | Load | Activity |
+| ---: | ---: | :--- |
+| 6.03k | 113.1 | Thu 2 × 7min Threshold |
+| — | — | Rest |
+| 4.07k | 66.5 | Sat Run + Strides/Hills |
+| 9.99k | 278.2 | Sun Bulacan Masters Heroes Day Run (BMH) 2026 |
+| — | — | Rest |
+| 5.02k | 52.4 | Tue Malolos Running |
+| 6.1k | 85.5 | Wed BHM W1: Run + Strides |
+
+**5** sessions &bull; **31.21 km** total &bull; **3h 33m** &bull; Load **595.7**
 
 ### This Week
 | Date | Activity | Distance (km) | Time | Pace / Details |
