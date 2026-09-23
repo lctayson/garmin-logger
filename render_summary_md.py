@@ -302,6 +302,39 @@ def _strip_location_prefix(name: str) -> str:
     return stripped or name
 
 
+def _dated_activity_seconds(data_dir: str | None, date_str: Any) -> float:
+    """Sum that day's activities' own 'time' fields -- more precise than the
+    rounded duration_hours in trend_recent_daily, so the This Week footer's
+    total duration doesn't drift by a minute from rounding error."""
+    if not data_dir:
+        return 0.0
+    path = _find_dated_activity_file(data_dir, date_str)
+    if not path:
+        return 0.0
+    payload = _load_json(path)
+    if not isinstance(payload, dict):
+        return 0.0
+    activities = payload.get("activities")
+    if not isinstance(activities, list):
+        return 0.0
+    total = 0.0
+    for act in activities:
+        if isinstance(act, dict):
+            seconds = _parse_time_seconds(act.get("time"))
+            if seconds is not None:
+                total += seconds
+    return total
+
+
+def _format_week_duration(total_seconds: float) -> str:
+    total = int(round(total_seconds))
+    hours, remainder = divmod(total, 3600)
+    minutes, seconds = divmod(remainder, 60)
+    if hours:
+        return f"{hours}:{minutes:02d}:{seconds:02d}"
+    return f"{minutes}:{seconds:02d}"
+
+
 def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> list[str]:
     """Per-day breakdown of the trend_recent_daily window (usually 7 days),
     as a markdown table -- so the load/volume numbers above can be traced to
@@ -321,6 +354,10 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
 
     table_rows: list[str] = []
     seen_dates: list[Any] = []
+    total_sessions = 0
+    total_distance = 0.0
+    total_load = 0.0
+    total_seconds = 0.0
     for row in rows:
         if not isinstance(row, list):
             continue
@@ -341,17 +378,28 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
             title = "/".join(sports) if sports else "activity"
 
         distance = _num(cell(row, "distance"))
-        dist_cell = f"{distance}km" if distance is not None else "—"
+        dist_cell = f"{distance}k" if distance is not None else "—"
         load = _num(cell(row, "exercise_load"))
         load_cell = f"{load:g}" if load is not None else "—"
         table_rows.append(f"| {label} | {dist_cell} | {load_cell} | {title} |")
+
+        total_sessions += int(count)
+        if distance is not None:
+            total_distance += distance
+        if load is not None:
+            total_load += load
+        total_seconds += _dated_activity_seconds(data_dir, date_str)
 
     if not table_rows:
         return []
     range_label = _week_range_label(seen_dates)
     title = f"## This Week ({range_label})" if range_label else "## This Week"
-    header = [title, "", "| Day | Distance | Load | Activity |", "|---|---|---|---|"]
-    return header + table_rows
+    header = [title, "", "| Day | Dist | Load | Activity |", "|:--- | ---: | ---: | :--- |"]
+    footer = (
+        f"**{total_sessions}** sessions &bull; **{total_distance:.2f} km** total &bull; "
+        f"**{_format_week_duration(total_seconds)}** &bull; Load **{total_load:g}**"
+    )
+    return header + table_rows + ["", footer]
 
 
 def _readiness_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[str]:
