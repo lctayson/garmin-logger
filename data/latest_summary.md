@@ -14,7 +14,6 @@
 
 - **BHM W1: Run + Strides** — 6.1km · 46:12 · 7:34/km · HR 142/158 max
   - TE: AEROBIC_BASE · aerobic 3 · anaerobic 0.9
-  - Intervals: 5 work reps · pace drift -13.6% · HR +23bpm
   - MS: 5.02k @ 7:18 142bpm 0.80m 170spm 275ms 7.9cm 239w
 
 ## Load & Trends

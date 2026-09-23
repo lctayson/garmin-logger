@@ -909,13 +909,6 @@
       },
       "body_battery_impact": -11.0,
       "impact_load": 6550.0,
-      "interval_drift": {
-        "work_reps": 5,
-        "pace_ef_drift_pct": -13.6,
-        "hr_delta_bpm": 23.0,
-        "power_ef_drift_pct": -12.8,
-        "power_delta_w": 7.0
-      },
       "activity_splits": [
         {
           "step_type": "ACTIVE",
