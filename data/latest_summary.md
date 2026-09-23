@@ -1,8 +1,14 @@
 # Daily Check — 2026-09-24
 
-## Readiness: -/100
+## Readiness: 62/100 (Moderate)
+> Good Sleep History
 
-- **RHR:** 61 bpm
+- **RHR:** 60 bpm
+- ⚠️ **HRV:** 45ms (7d avg: 48ms) — below balanced band
+- ⚠️ **Sleep:** 6h59 (score 69)
+- **Recovery time:** 0h
+- ⚠️ **Limiter:** Sleep Score (53%)
+- **Also soft:** Stress History, Sleep History
 
 ## Today — Rest Day
 
@@ -13,11 +19,16 @@ _Most recent activity (2026-09-23):_
 
 ## Load & Trends
 
+- **ACWR:** 0.8 (Optimal) — acute 484 / chronic 546 (chronic range 436.8–819)
 - **7-day volume:** 25.18km vs 28-day avg 30.5km (-17%)
 - **Running tolerance:** 51.8% (Medium) — 25.2km of 64.1km weekly cap, acute impact load 33.2
-- ⚠️ **Sleep (7d avg):** 6h25, 4/7 nights below need, trending up
-- ⚠️ **RHR (7d avg):** 58.0, trending up
-- **HRV:** trending up
+- **Aerobic Low:** 590.3 (target 303–822 — in range)
+- ⚠️ **Aerobic High:** 1421.6 (target 649–1169 — +253 over)
+- ⚠️ **Anaerobic:** 57.6 (target 173–519 — -115 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- ⚠️ **Sleep (7d avg):** 6h30, 4/7 nights below need, trending up
+- ⚠️ **RHR (7d avg):** 57.9, trending up
+- **HRV:** trending flat
 
 ## This Week (Sep 18–24)
 
