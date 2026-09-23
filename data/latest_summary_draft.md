@@ -46,10 +46,10 @@
 | Dist | Load | Activity |
 | ---: | ---: | :--- |
 | 6.03k | 113.1 | Thu 2 × 7min Threshold |
-| — | — | Rest |
+| — | — | Fri Rest |
 | 4.07k | 66.5 | Sat Run + Strides/Hills |
 | 9.99k | 278.2 | Sun Bulacan Masters Heroes Day Run (BMH) 2026 |
-| — | — | Rest |
+| — | — | Mon Rest |
 | 5.02k | 52.4 | Tue Malolos Running |
 | 6.1k | 85.5 | Wed BHM W1: Run + Strides |
 
