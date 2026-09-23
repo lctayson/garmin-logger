@@ -40,3 +40,22 @@
 | Mon | — | — | Rest |
 | Tue | 5.02km | 52.4 | Malolos Running |
 | Wed | 6.1km | 85.5 | BHM W1: Run + Strides |
+
+### This Week
+| Date | Activity | Distance (km) | Time | Pace / Details |
+| :--- | :--- | :---: | :---: | :--- |
+| Sep 21 | Run (Sub-Threshold) | 12.50 | 1:02:15 | 4:58 /km |
+| Sep 23 | Interval Session | 10.00 | 0:48:30 | 4:51 /km |
+| **Total** | **2 Activities** | **22.50 km** | **1:50:45** | **4:55 /km avg** |
+
+### This Week
+- **Sep 21:** Run — 12.50 km (1:02:15)
+- **Sep 23:** Interval Session — 10.00 km (0:48:30)
+
+> **📊 Weekly Total:** 22.50 km &nbsp;|&nbsp; ⏱️ 1h 50m &nbsp;|&nbsp; ⛰️ 140m D+ &nbsp;|&nbsp; 🔥 1,450 kcal
+
+### This Week
+* **Mon:** 12.50 km Easy Sub-Threshold (1:02:15)
+* **Wed:** 10.00 km Intervals (0:48:30)
+
+**Weekly Summary:** 2 sessions &bull; **22.50 km** total &bull; **1h 50m** duration
