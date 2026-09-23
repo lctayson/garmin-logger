@@ -1,9 +1,9 @@
 {
   "date": "2026-09-23",
   "readiness": {
-    "score": 48,
-    "level": "Low",
-    "feedback": "Find Time To Relax",
+    "score": 50,
+    "level": "Moderate",
+    "feedback": "Listen To Your Body",
     "resting_hr": 58,
     "hrv_last_night_avg_ms": 48.0,
     "hrv_7_day_avg_ms": 49.0,
@@ -11,7 +11,7 @@
     "sleep_hours": 6.08,
     "sleep_hours_including_previous_day_nap": 6.81,
     "sleep_score": 76,
-    "recovery_hours": 22.8,
+    "recovery_hours": 20.6,
     "hrv_baseline": {
       "lowUpper": 45.0,
       "balancedLow": 47.0,
@@ -21,13 +21,13 @@
     "factor_details": {
       "sleep_score": {"percent": 64, "feedback": "Moderate"},
       "sleep_history": {"percent": 67, "feedback": "Moderate"},
-      "recovery_time": {"percent": 63, "feedback": "Moderate"},
+      "recovery_time": {"percent": 67, "feedback": "Moderate"},
       "acwr": {"percent": 89, "feedback": "Good"},
       "hrv": {"percent": 97, "feedback": "Good"},
       "stress_history": {"percent": 58, "feedback": "Moderate"}
     }
   },
-  "health": {"steps": 9244},
+  "health": {"steps": 9505},
   "sleep": {
     "deep_h": 0.55,
     "light_h": 4.63,
@@ -35,7 +35,7 @@
     "awake_h": 0.28,
     "baseline_h": 7.0,
     "need_h": 6.5,
-    "next_need_h": 7.0,
+    "next_need_h": 6.67,
     "feedback": "Decreased",
     "training_feedback": "Chronic",
     "sleep_history_adjustment": "No Change",
@@ -216,7 +216,7 @@
     ["2026-09-20", 38, 50, 55, 5],
     ["2026-09-21", 83, 60, 75, 6],
     ["2026-09-22", 69, 83, 89, 7],
-    ["2026-09-23", 60, 18, 76, 16]
+    ["2026-09-23", 60, 58, 76, 16]
   ]
   },
   "units": {
