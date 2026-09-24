@@ -1,9 +1,9 @@
 {
   "date": "2026-09-24",
   "readiness": {
-    "score": 49,
-    "level": "Low",
-    "feedback": "Focus On Energy Levels",
+    "score": 50,
+    "level": "Moderate",
+    "feedback": "Good Sleep History",
     "resting_hr": 60,
     "hrv_last_night_avg_ms": 45.0,
     "hrv_7_day_avg_ms": 48.0,
@@ -11,7 +11,7 @@
     "sleep_hours": 6.98,
     "sleep_hours_including_previous_day_nap": 7.62,
     "sleep_score": 69,
-    "recovery_hours": 18.4,
+    "recovery_hours": 16.8,
     "hrv_baseline": {
       "lowUpper": 45.0,
       "balancedLow": 47.0,
@@ -21,7 +21,7 @@
     "factor_details": {
       "sleep_score": {"percent": 53, "feedback": "Moderate"},
       "sleep_history": {"percent": 64, "feedback": "Moderate"},
-      "recovery_time": {"percent": 70, "feedback": "Good"},
+      "recovery_time": {"percent": 73, "feedback": "Good"},
       "acwr": {"percent": 90, "feedback": "Good"},
       "hrv": {"percent": 94, "feedback": "Good"},
       "stress_history": {"percent": 59, "feedback": "Moderate"}

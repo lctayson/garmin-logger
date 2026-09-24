@@ -1,14 +1,14 @@
 # Daily Check — 2026-09-24
 
-## Readiness: 49/100 (Low)
-> Focus On Energy Levels
+## Readiness: 50/100 (Moderate)
+> Good Sleep History
 
 - **RHR:** 60 bpm
 - ⚠️ **HRV:** 45ms (7d avg: 48ms) — below balanced band
 - ⚠️ **Sleep:** 6h59 (score 69)
-- **Recovery time:** 18.4h
+- **Recovery time:** 16.8h
 - ⚠️ **Limiter:** Sleep Score (53%)
-- **Also soft:** Stress History, Sleep History, Recovery Time
+- **Also soft:** Stress History, Sleep History
 
 ## Today
 
@@ -40,4 +40,6 @@
 | Wed | 6.1k | 85.5 | BHM W1: Run + Strides |
 | Thu | 6.03k | 73.5 | Malolos Running |
 
-**5** sessions &bull; **31.21 km** total &bull; **3:37:15** &bull; Load **556.1**
+| Sessions | Distance | Time | Load |
+|:---: | :---: | :---: | :---: |
+| 5 | 31.21 km | 3:37:15 | 556.1 |
