@@ -395,11 +395,13 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
     range_label = _week_range_label(seen_dates)
     title = f"## This Week ({range_label})" if range_label else "## This Week"
     header = [title, "", "| Day | Dist | Load | Activity |", "|:--- | ---: | ---: | :--- |"]
-    footer = (
-        f"**{total_sessions}** sessions &bull; **{total_distance:.2f} km** total &bull; "
-        f"**{_format_week_duration(total_seconds)}** &bull; Load **{total_load:g}**"
-    )
-    return header + table_rows + ["", footer]
+    footer = [
+        "",
+        "| Sessions | Distance | Time | Load |",
+        "|:---: | :---: | :---: | :---: |",
+        f"| {total_sessions} | {total_distance:.2f} km | {_format_week_duration(total_seconds)} | {total_load:g} |",
+    ]
+    return header + table_rows + footer
 
 
 def _readiness_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[str]:
