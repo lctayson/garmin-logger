@@ -14,6 +14,7 @@
 
 - **Malolos Running** — 6.03km · 43:53 · 7:17/km · HR 141/153 max
   - TE: AEROBIC_BASE · aerobic 2.9 · anaerobic 0
+  - MS: 6.00k @ 7:17 141bpm 0.80m 171spm 274ms 7.8cm 240w
 
 ## Load & Trends
 
