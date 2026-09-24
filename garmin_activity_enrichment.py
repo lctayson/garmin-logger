@@ -134,13 +134,36 @@ def _speed_from_pace(pace):
     return 1000.0 / sec if sec > 0 else None
 
 
+def _continuous_segments(valid):
+    """Split into contiguous runs, breaking wherever a RECOVERY/REST split
+    appears. Decoupling only makes sense over one continuous effort -- e.g.
+    the main set of an easy run before any strides -- not blended with the
+    short, recovery-bounded reps that might follow it."""
+    segments = []
+    current = []
+    for split in valid:
+        step_type = str(split.get("step_type", "")).upper()
+        if step_type in {"RECOVERY", "REST"}:
+            if current:
+                segments.append(current)
+                current = []
+            continue
+        current.append(split)
+    if current:
+        segments.append(current)
+    return segments
+
+
 def _calculate_decoupling(activity):
     """Calculate Pa:HR and Pw:HR decoupling for continuous aerobic runs.
 
-    The calculation intentionally skips structured interval/stride workouts
-    containing recovery splits. Existing activity fields are untouched; this
-    only adds a decoupling object when there is enough continuous split data.
-    Calculations remain in canonical metric units before final unit conversion.
+    When the activity also contains strides or interval reps (recovery-
+    bounded splits), decoupling is computed on the largest contiguous
+    non-recovery segment only -- e.g. the main set of an easy run before
+    strides -- rather than skipped outright or blended with the strides.
+    Existing activity fields are untouched; this only adds a decoupling
+    object when there is enough continuous split data. Calculations remain
+    in canonical metric units before final unit conversion.
     """
     if not isinstance(activity, dict) or str(activity.get("type", "")).lower() != "running":
         return
@@ -150,7 +173,16 @@ def _calculate_decoupling(activity):
     valid = [s for s in splits if isinstance(s, dict)]
     if len(valid) < 3:
         return
-    if any(str(s.get("step_type", "")).upper() in {"RECOVERY", "REST"} for s in valid):
+
+    segments = _continuous_segments(valid)
+    if not segments:
+        return
+
+    def segment_seconds(segment):
+        return sum((_split_seconds(s) or 0) for s in segment)
+
+    valid = max(segments, key=segment_seconds)
+    if len(valid) < 3:
         return
 
     rows = []
