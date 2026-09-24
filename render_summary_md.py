@@ -121,11 +121,15 @@ def _group_active_rows(active_rows: list[list[Any]], col: dict[str, int]) -> dic
 
 
 def _main_set_line(act: dict[str, Any]) -> str | None:
-    """Summarize the main work-rep block of an interval session: total
-    distance/pace plus time-weighted HR, stride length, cadence, ground
-    contact time, vertical oscillation, and power. Returns None for anything
-    that isn't structured as an interval workout, or where the fields needed
-    aren't present."""
+    """Summarize the main effort of a run: total distance/pace plus
+    time-weighted HR, stride length, cadence, ground contact time, vertical
+    oscillation, and power. For a continuous run with no interval structure,
+    that's simply the whole run's averages. When the activity has real
+    interval structure (recovery-bounded reps, e.g. strides or quality
+    reps), it's the largest-duration group of ACTIVE/INTERVAL splits --
+    the main set, not the warm-up strides or finisher strides tacked on
+    either side. Returns None only when the fields needed aren't present.
+    """
     splits = act.get("splits")
     if not isinstance(splits, dict):
         return None
@@ -137,24 +141,18 @@ def _main_set_line(act: dict[str, Any]) -> str | None:
     if "step_type" not in col or "time" not in col or "distance" not in col:
         return None
 
-    # Only worth summarizing separately from the overall activity stats when
-    # the workout actually has interval structure (real recoveries between
-    # reps) -- a plain continuous run has nothing distinct to pull out.
-    has_intervals = any(
-        isinstance(row, list) and col["step_type"] < len(row) and row[col["step_type"]] in ("RECOVERY", "REST")
-        for row in rows
-    )
-    if not has_intervals:
-        return None
-
-    active_rows = [row for row in rows if isinstance(row, list) and row[col["step_type"]] == "ACTIVE"]
+    # Garmin labels a plain continuous run's own auto-laps as either ACTIVE
+    # or INTERVAL depending on the device/activity profile -- both count as
+    # "main effort" laps, as opposed to WARMUP/COOLDOWN/RECOVERY/REST.
+    active_rows = [
+        row for row in rows
+        if isinstance(row, list) and col["step_type"] < len(row) and row[col["step_type"]] in ("ACTIVE", "INTERVAL")
+    ]
     if not active_rows:
         return None
 
     groups = _group_active_rows(active_rows, col)
-    if len(groups) < 2:
-        # No distinguishable secondary group (e.g. strides) to separate the
-        # main reps from -- nothing to single out from the overall totals.
+    if not groups:
         return None
 
     def group_duration(group_rows: list[list[Any]]) -> float:
@@ -164,6 +162,10 @@ def _main_set_line(act: dict[str, Any]) -> str | None:
             total += secs or 0
         return total
 
+    # With one group (a plain continuous run) this is just that whole run.
+    # With multiple groups (strides/quality reps mixed with a continuous
+    # portion, or warm-up strides ahead of the real quality reps) this picks
+    # the main set over the shorter secondary block.
     main_rows = groups[max(groups, key=lambda k: group_duration(groups[k]))]
 
     total_time = 0.0
