@@ -1,28 +1,27 @@
 # Daily Check — 2026-09-26
 
-## Readiness: 69/100 (Moderate)
+## Readiness: 53/100 (Moderate)
 > Well Rested
 
 - **RHR:** 58 bpm
 - **HRV:** 51ms (7d avg: 48ms)
 - **Sleep:** 6h47 (score 83)
-- **Recovery time:** 0h
+- **Recovery time:** 21.3h
 - ⚠️ **Limiter:** Sleep History (54%)
-- **Also soft:** Stress History
+- **Also soft:** Stress History, Recovery Time
 
-## Today — Rest Day
+## Today
 
-_Most recent activity (2026-09-24):_
-- **Malolos Running** — 6.03km · 43:53 · 7:17/km · HR 141/153 max
-  - TE: AEROBIC_BASE · aerobic 2.9 · anaerobic 0
-  - MS: 6.00k @ 7:17 141bpm 0.80m 171spm 274ms 7.8cm 240w
+- **Malolos Running** — 9.03km · 1:07:08 · 7:26/km · HR 146/158 max
+  - TE: AEROBIC_BASE · aerobic 3.1 · anaerobic 0
+  - MS: 9.00k @ 7:26 146bpm 0.80m 169spm 278ms 7.9cm 236w
 
 ## Load & Trends
 
-- ⚠️ **ACWR:** 0.7 (Low) — acute 372 / chronic 528 (chronic range 422.4–792)
-- **7-day volume:** 27.14km vs 28-day avg 32.0km (-15%)
-- **Running tolerance:** 42.9% (Low 1Days) — 27.1km of 64.1km weekly cap, acute impact load 27.5
-- **Aerobic Low:** 659.5 (target 303–822 — in range)
+- **ACWR:** 0.8 (Optimal) — acute 483 / chronic 548 (chronic range 438.4–822)
+- **7-day volume:** 36.17km vs 28-day avg 34.2km (+6%)
+- **Running tolerance:** 56.9% (Medium) — 36.2km of 64.1km weekly cap, acute impact load 36.5
+- **Aerobic Low:** 746.5 (target 303–822 — in range)
 - ⚠️ **Aerobic High:** 1421.6 (target 649–1169 — +253 over)
 - ⚠️ **Anaerobic:** 57.6 (target 173–519 — -115 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
@@ -40,8 +39,8 @@ _Most recent activity (2026-09-24):_
 | Wed | 6.1k | 85.5 | BHM W1: Run + Strides |
 | Thu | 6.03k | 73.5 | Malolos Running |
 | Fri | — | — | Rest |
-| Sat | — | — | Rest |
+| Sat | 9.03k | 87 | Malolos Running |
 
 | Sessions | Distance | Time | Load |
 |:---: | :---: | :---: | :---: |
-| 4 | 27.14 km | 3:06:06 | 489.6 |
+| 5 | 36.17 km | 4:13:14 | 576.6 |
