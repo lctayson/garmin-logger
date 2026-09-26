@@ -1,0 +1,47 @@
+{
+  "races": [
+    {
+      "date": "2026-02",
+      "event": "BHM 2026 Half Marathon",
+      "distance_km": 21.1,
+      "time": "1:59:23",
+      "pace": "5:40/km",
+      "avg_hr": 167,
+      "gct_ms": 250,
+      "type": "race",
+      "notes": "Best half marathon since returning to training (recent_bests, not all-time PB). Baseline anchoring subsequent HM block training and race projections. Exact date within February 2026 not yet confirmed."
+    },
+    {
+      "date": "2026-08-09",
+      "event": "BM 21K",
+      "distance_km": 21.1,
+      "time": "2:19:23",
+      "type": "race",
+      "notes": "End of 22-week Norwegian Singles HM block, targeting sub-1:55. Opening km averaged ~5:56/km vs ~5:41/km needed for sub-2:00; post-race analysis found zero anaerobic load against a 217-652 target. Gap attributed to motivational/psychological factors (early demoralization from pace data) rather than physiological breakdown."
+    },
+    {
+      "date": "2026-09-20",
+      "event": "BMH (Bulacan Masters Heroes) 10K",
+      "distance_km": 10.0,
+      "time": "57:56",
+      "type": "race",
+      "notes": "B-race within the 10K training block (sub-55:00 initial goal, sub-52:00 target, sub-50:00 stretch)."
+    }
+  ],
+  "tests": [],
+  "personal_bests": {
+    "_notes": "All-time PBs, per device Personal Records. Most predate a multi-year training gap before the 2026 comeback -- see recent_bests for current-era numbers used in near-term pacing/goal decisions.",
+    "1km": {"time": "4:51", "date": "2025-10-21", "previous": "4:53"},
+    "1mi": {"time": "7:41", "date": "2025-01-15"},
+    "5k": {"time": "22:56", "date": "2017-11-15"},
+    "10k": {"time": "48:34", "date": "2018-10-13"},
+    "half_marathon": {"time": "1:47:30", "date": "2018-04-08"},
+    "marathon": {"time": "4:02:49", "date": "2018-12-09"},
+    "longest_run_km": {"distance_km": 44.05, "date": "2018-12-09"}
+  },
+  "recent_bests": {
+    "_notes": "Best results since the 2026 training comeback -- these are what actually inform current pacing and goal-setting, not the older all-time PBs above.",
+    "half_marathon": {"time": "1:59:23", "date": "2026-02", "event": "BHM 2026 Half Marathon"},
+    "10k": null
+  }
+}
