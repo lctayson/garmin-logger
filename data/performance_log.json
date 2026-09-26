@@ -1,7 +1,7 @@
 {
   "races": [
     {
-      "date": "2026-02",
+      "date": "2026-02-22",
       "event": "BHM 2026 Half Marathon",
       "distance_km": 21.1,
       "time": "1:59:23",
@@ -31,17 +31,17 @@
   "tests": [],
   "personal_bests": {
     "_notes": "All-time PBs, per device Personal Records. Most predate a multi-year training gap before the 2026 comeback -- see recent_bests for current-era numbers used in near-term pacing/goal decisions.",
-    "1km": {"time": "4:51", "date": "2025-10-21", "previous": "4:53"},
-    "1mi": {"time": "7:41", "date": "2025-01-15"},
-    "5k": {"time": "22:56", "date": "2017-11-15"},
-    "10k": {"time": "48:34", "date": "2018-10-13"},
-    "half_marathon": {"time": "1:47:30", "date": "2018-04-08"},
-    "marathon": {"time": "4:02:49", "date": "2018-12-09"},
-    "longest_run_km": {"distance_km": 44.05, "date": "2018-12-09"}
+    "1km": {"time": "4:51", "date": "2025-10-21", "event": "5k Sub 25 W8: 3 x 1k + 3 x 600", "previous": "4:53"},
+    "1mi": {"time": "7:41", "date": "2025-01-15", "event": "Malolos - 1 Mile TT"},
+    "5k": {"time": "22:56", "date": "2017-11-15", "event": "5K TT"},
+    "10k": {"time": "48:34", "date": "2018-10-13", "event": "YOLO Run 2018"},
+    "half_marathon": {"time": "1:47:30", "date": "2018-04-08", "event": "2XU Compression Run 2018 - 21K"},
+    "marathon": {"time": "4:02:49", "date": "2018-12-09", "event": "SCSM 2018"},
+    "longest_run_km": {"distance_km": 44.05, "date": "2018-12-09", "event": "SCSM 2018"}
   },
   "recent_bests": {
     "_notes": "Best results since the 2026 training comeback -- these are what actually inform current pacing and goal-setting, not the older all-time PBs above.",
-    "half_marathon": {"time": "1:59:23", "date": "2026-02", "event": "BHM 2026 Half Marathon"},
-    "10k": null
+    "half_marathon": {"time": "1:59:23", "date": "2026-02-22", "event": "BHM 2026 Half Marathon"},
+    "10k": {"time": "54:59", "date": "2025-08-03", "event": "Run Bulacan 2025 - Malolos"}
   }
 }
