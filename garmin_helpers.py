@@ -129,7 +129,28 @@ def get_training_status_details(api, target_date_str):
     return {k:v for k,v in result.items() if v is not None}
 
 
-def _find_first_key(obj, keys):
+def get_race_predictions_details(api, target_date_str=None):
+    """Garmin's Race Predictor: predicted 5K/10K/half/full marathon times
+    from current fitness. It's derived almost entirely from vo2_max (not an
+    independent training signal), so this is meant as a goal-tracking
+    marker to compare against target race times, not a diagnostic input.
+    Note Garmin's own accuracy caveat: reliable at 5K/10K, but the marathon
+    estimate commonly runs 30-60 minutes optimistic.
+    """
+    try:
+        raw = api.get_race_predictions()
+    except Exception as e:
+        print(f'[race_predictions] Warning: {e}', file=sys.stderr)
+        return {}
+    if not isinstance(raw, dict):
+        return {}
+    result = {
+        '5k': _format_elapsed_time(raw.get('time5K')),
+        '10k': _format_elapsed_time(raw.get('time10K')),
+        'half_marathon': _format_elapsed_time(raw.get('timeHalfMarathon')),
+        'marathon': _format_elapsed_time(raw.get('timeMarathon')),
+    }
+    return {k:v for k,v in result.items() if v is not None}
     if isinstance(obj, dict):
         for key in keys:
             if key in obj and obj[key] is not None and obj[key] != '':

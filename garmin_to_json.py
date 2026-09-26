@@ -6,6 +6,7 @@ from zoneinfo import ZoneInfo
 from garminconnect import Garmin
 from garmin_helpers import (
     get_training_status_details,
+    get_race_predictions_details,
     get_body_battery_trend,
     get_activities,
 )
@@ -407,6 +408,7 @@ def main():
     api.login(tokenstore=os.path.expanduser(tokenstore))
     health_stats = get_health_stats(api, target_date.isoformat(), target_date)
     training_status = get_training_status_details(api, target_date.isoformat())
+    race_predictions = get_race_predictions_details(api)
     training_history = get_training_history(api, target_date)
     activities = get_activities(api, target_date)
     trends = get_metric_trend(api, target_date, days=args.trend_days, interval=1)
@@ -431,6 +433,7 @@ def main():
         "daily_readiness": build_daily_readiness(health_stats, training_status),
         "health_stats": health_stats,
         "training_status": training_status_output,
+        "race_predictions": race_predictions,
         "training_history": training_history,
         "trend_recent_daily": trends,
         "trend_long_range_weekly": weekly_trends,

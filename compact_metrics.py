@@ -221,6 +221,15 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
     if status.get("vo2_max") is not None:
         out["vo2_max"] = _compact_current_vo2(status["vo2_max"])
 
+    # Race Predictor times are almost entirely a function of vo2_max above,
+    # not an independent signal -- kept as a goal-tracking marker (compare
+    # against actual target race times) rather than folded into "load" or
+    # used for training-load analysis. Garmin's own accuracy note: reliable
+    # at 5K/10K, but the marathon estimate commonly runs 30-60 min optimistic.
+    race_predictions = source.get("race_predictions")
+    if isinstance(race_predictions, dict) and race_predictions:
+        out["race_predictions"] = race_predictions
+
     balance = status.get("monthly_load_balance")
     if isinstance(balance, dict):
         compact_balance: dict[str, Any] = {}
