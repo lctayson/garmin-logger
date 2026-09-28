@@ -151,6 +151,9 @@ def get_race_predictions_details(api, target_date_str=None):
         'marathon': _format_elapsed_time(raw.get('timeMarathon')),
     }
     return {k:v for k,v in result.items() if v is not None}
+
+
+def _find_first_key(obj, keys):
     if isinstance(obj, dict):
         for key in keys:
             if key in obj and obj[key] is not None and obj[key] != '':
