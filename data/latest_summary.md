@@ -1,17 +1,12 @@
-# Daily Check — 2026-09-29
+# Daily Check — 2026-09-30
 
-## Readiness: 25/100 (Low)
-> Find Time To Relax
+## Readiness: -/100
 
-- **RHR:** 60 bpm
-- ⚠️ **HRV:** 41ms (7d avg: 49ms) — below balanced band
-- ⚠️ **Sleep:** 5h12 (score 56)
-- ⚠️ **Recovery time:** 36h
-- ⚠️ **Limiter:** Sleep Score (38%)
-- **Also soft:** Recovery Time, Sleep History
+- **RHR:** 61 bpm
 
-## Today
+## Today — Rest Day
 
+_Most recent activity (2026-09-29):_
 - **Malolos - 3 × 8min Threshold** — 8.03km · 54:18 · 6:46/km · HR 156/174 max
   - TE: LACTATE_THRESHOLD · aerobic 4 · anaerobic 0.9
   - Intervals: 3 work reps · pace drift -6.7% · HR +9bpm
@@ -19,29 +14,24 @@
 
 ## Load & Trends
 
-- **ACWR:** 0.9 (Optimal) — acute 503 / chronic 544 (chronic range 435.2–816)
-- **7-day volume:** 35.21km vs 28-day avg 33.7km (+4%)
-- **Running tolerance:** 59.2% (Medium) — 35.2km of 62.7km weekly cap, acute impact load 37.1
-- **Aerobic Low:** 794.4 (target 303–822 — in range)
-- ⚠️ **Aerobic High:** 1241.5 (target 649–1169 — +72 over)
-- ⚠️ **Anaerobic:** 43.8 (target 173–519 — -129 under)
-- ⚠️ **Load focus:** Anaerobic Shortage
-- ⚠️ **Sleep (7d avg):** 6h02, 5/7 nights below need, trending down
-- **RHR (7d avg):** 58.1, trending down
+- **7-day volume:** 29.11km vs 28-day avg 32.2km (-10%)
+- **Running tolerance:** 49.6% (Medium) — 29.1km of 62.7km weekly cap, acute impact load 31.1
+- ⚠️ **Sleep (7d avg):** 6h01, 6/7 nights below need, trending down
+- **RHR (7d avg):** 58.6, trending flat
 - **HRV:** trending up
 
-## This Week (Sep 23–29)
+## This Week (Sep 24–30)
 
 | Day | Dist | Load | Activity |
 |:--- | ---: | ---: | :--- |
-| Wed | 6.1k | 85.5 | BHM W1: Run + Strides |
 | Thu | 6.03k | 73.5 | Malolos Running |
 | Fri | — | — | Rest |
 | Sat | 9.03k | 87 | Malolos Running |
 | Sun | 6.02k | 48 | Malolos Running |
 | Mon | 0.0k | 2.9 | Mon Strength A |
 | Tue | 8.03k | 178.9 | 3 × 8min Threshold |
+| Wed | — | — | Rest |
 
 | Sessions | Distance | Time | Load |
 |:---: | :---: | :---: | :---: |
-| 6 | 35.21 km | 4:36:26 | 475.8 |
+| 5 | 29.11 km | 3:50:14 | 390.3 |
