@@ -39,9 +39,9 @@
 | Fri | — | — | Rest |
 | Sat | 9.03k | 87 | Malolos Running |
 | Sun | 6.02k | 48 | Malolos Running |
-| Mon | 0.0k | 2.9 | other |
+| Mon | 0.0k | 2.9 | Mon Strength A |
 | Tue | 8.03k | 178.9 | 3 × 8min Threshold |
 
 | Sessions | Distance | Time | Load |
 |:---: | :---: | :---: | :---: |
-| 6 | 35.21 km | 4:18:28 | 475.8 |
+| 6 | 35.21 km | 4:36:26 | 475.8 |
