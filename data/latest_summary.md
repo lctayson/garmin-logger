@@ -1,30 +1,30 @@
 # Daily Check — 2026-10-01
 
-## Readiness: 65/100 (Moderate)
-> Good Sleep Last Night
+## Readiness: 45/100 (Low)
+> Focus On Energy Levels
 
 - **RHR:** 56 bpm
 - **HRV:** 48ms (7d avg: 50ms)
 - **Sleep:** 6h31 (score 84)
-- **Recovery time:** 0h
+- ⚠️ **Recovery time:** 26.4h
 - ⚠️ **Limiter:** Sleep History (45%)
-- **Also soft:** Stress History
+- **Also soft:** Recovery Time, Stress History
 
-## Today — Rest Day
+## Today
 
-_Most recent activity (2026-09-30):_
-- **Malolos - Run + Strides** — 6.03km · 48:19 · 8:00/km · HR 135/153 max
-  - TE: AEROBIC_BASE · aerobic 2.5 · anaerobic 0.8
-  - MS: 5.05k @ 7:53 134bpm 0.76m 166spm 284ms 7.8cm 224w
+- **Malolos - 6 × 2min VO₂ Intervals** — 7.02km · 48:28 · 6:54/km · HR 153/176 max
+  - TE: VO2MAX · aerobic 3.6 · anaerobic 1.5
+  - Intervals: 6 work reps · pace drift -6.7% · HR +17bpm
+  - MS: 2.35k @ 5:06 162bpm 1.04m 185spm 236ms 8.0cm 331w
 
 ## Load & Trends
 
-- ⚠️ **ACWR:** 0.7 (Low) — acute 400 / chronic 519 (chronic range 415.2–778.5)
-- **7-day volume:** 29.11km vs 28-day avg 32.2km (-10%)
-- **Running tolerance:** 53.3% (Medium) — 29.1km of 62.7km weekly cap, acute impact load 33.4
+- **ACWR:** 1.0 (Optimal) — acute 592 / chronic 553 (chronic range 442.4–829.5)
+- **7-day volume:** 36.14km vs 28-day avg 34.0km (+6%)
+- **Running tolerance:** 68.6% (Medium) — 36.1km of 62.7km weekly cap, acute impact load 43
 - **Aerobic Low:** 772.3 (target 303–822 — in range)
-- **Aerobic High:** 1122.1 (target 649–1169 — in range)
-- ⚠️ **Anaerobic:** 28.9 (target 173–519 — -144 under)
+- ⚠️ **Aerobic High:** 1254.3 (target 649–1169 — +85 over)
+- ⚠️ **Anaerobic:** 47.7 (target 173–519 — -125 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
 - ⚠️ **Sleep (7d avg):** 6h01, 7/7 nights below need, trending flat
 - ⚠️ **RHR (7d avg):** 57.6, trending up
@@ -40,8 +40,8 @@ _Most recent activity (2026-09-30):_
 | Mon | 0.0k | 2.9 | Mon Strength A |
 | Tue | 8.03k | 178.9 | 3 × 8min Threshold |
 | Wed | 6.03k | 58.1 | Run + Strides |
-| Thu | — | — | Rest |
+| Thu | 7.02k | 151 | 6 × 2min VO₂ Intervals |
 
 | Sessions | Distance | Time | Load |
 |:---: | :---: | :---: | :---: |
-| 5 | 29.11 km | 3:54:40 | 374.9 |
+| 6 | 36.13 km | 4:43:08 | 525.9 |
