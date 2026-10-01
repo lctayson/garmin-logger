@@ -447,14 +447,3 @@ Whenever a material workout, Garmin metric, race result, plan change, or coachin
 - never leave competing plan versions unmarked.
 
 This master record is the canonical reference unless a later explicit decision supersedes a section.
-
-## 13. Maintenance rule
-
-Whenever a material workout, Garmin metric, race result, plan change, or coaching decision is established:
-- add the objective data;
-- add the interpretation;
-- update the canonical week if changed;
-- update the decision log;
-- never leave competing plan versions unmarked.
-
-This master record is the canonical reference unless a later explicit decision supersedes a section.
