@@ -78,7 +78,8 @@
       "light": 3.8,
       "rem": 0.98,
       "awake": 0.0
-    }
+    },
+    "total_steps": 23
   },
   "training_status": {
     "status": "Maintaining 2",
@@ -877,7 +878,7 @@
     {
       "date": "2026-10-02",
       "charged": 63,
-      "drained": 7,
+      "drained": 11,
       "high": 82,
       "low": 19
     }
