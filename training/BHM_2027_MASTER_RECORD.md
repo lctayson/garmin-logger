@@ -2,7 +2,7 @@
 
 Project: 10k Block 2026 End
 Target race: BHM 2027 Half Marathon — Sunday, February 21, 2027
-Canonical status: Working source of truth as of September 21, 2026.
+Canonical status: Updated October 1, 2026 from the latest uploaded BHM 2027 workbook and Oct 1 Garmin workout data.
 
 ## 1. Athlete profile
 
@@ -24,33 +24,38 @@ Historical references:
 - BM HM Aug 9, 2026: 21.323 km, 2:19:23, 6:32/km, HR 163 avg/170 max, 249 W avg/260 W NP, cadence 165, TE 5.0, load 403, overreaching.
 - BM 10K Sep 20, 2026: 9.99 km, 57:56, 5:48/km, HR 168 avg/179 max, load 278.2, aerobic TE 5.0 VO2MAX/OVERREACHING.
 
-## 2. Current Garmin status — September 21, 2026
+## 2. Current Garmin status — October 1, 2026
 
-- Readiness: 2/100, Poor — “Let Your Body Recover”
-- RHR: 59 bpm
-- HRV: 47 ms; 7-day average 50; balanced
-- Sleep: 7h43, score 82
-- Recovery time: 66.4 h
+- Pre-run Oct 1 readiness: 65/100 Moderate
+- Pre-run RHR: 56 bpm
+- HRV: 48 ms; 7-day average 50; balanced
+- Sleep: 6h31, score 84
+- Pre-run recovery time: 0 h
+- Post-run recovery time: 26.4 h
 - ACWR: 1.0, Optimal
-- Acute load: 622; chronic: 569
-- 7-day running: 32.21 km
-- 28-day average: 32.2 km
-- Running tolerance: 64.1 km/week
+- Acute load: 592; chronic: 553
+- 7-day running before workout: 29.1 km
+- 7-day running after workout: 36.14 km / 5 runs
+- 28-day average weekly running: 34.0 km
+- Running tolerance: 62.7 km/week
 - VO2max: 44
 - Heat acclimation: 100%, acclimatized
-- Aerobic low: 510.9
-- Aerobic high: 1687.1, above Garmin target
-- Anaerobic: 79, below Garmin target
-- Garmin load focus: “Anaerobic Shortage”
+- Post-run Garmin load focus: “Anaerobic Shortage”
 
-Interpretation:
-- “Anaerobic Shortage” is a Garmin training-load-model flag, not proof of physiological anaerobic deficiency.
-- Do not chase it immediately after the Sep 20 race, which already produced aerobic TE 5.0 and a large high-intensity stimulus.
-- Readiness 2/100 is primarily a recovery signal immediately after racing, not evidence of lost fitness.
-- Do not force Tuesday quality solely because it is Tuesday. Reassess sleep, RHR, HRV, fatigue and easy-running response.
-- HR is a guardrail, not an instant stop signal because HR lags and heat/humidity affect it.
-- For intervals, pace/mechanics are primary; HR is secondary/guardrail.
+Oct 1 interpretation:
+- Readiness was adequate for the planned VO2 session. The post-run drop to 45/100 and 26.4 h recovery is an expected acute response to a quality workout, not evidence of lost fitness.
+- “Anaerobic Shortage” remains a Garmin training-load-model flag, not proof of physiological anaerobic deficiency. Do not add extra hard work solely to correct it.
+- Current weekly load remains controlled: ACWR 1.0 and 36.1 km over the last 7 days versus 62.7 km/week tolerance.
+- Continue using HR as a guardrail and pace/mechanics as the primary control for intervals, especially in hot-humid conditions.
+- Current Garmin race predictions are algorithmic indicators only and are not treated as race forecasts.
 
+Oct 1 — 6×2 min VO2 workout:
+- 7.02 km, 48:28, avg HR 153, max 176, load 151, aerobic TE 3.6 “Improving VO2 Max”, anaerobic TE 1.5 “Minor Anaerobic Benefit”.
+- Reps progressed 5:10, 5:11, 5:10, 5:07, 5:05, 4:59/km with stable/increasing cadence 184–185 spm, stride 1.03–1.06 m, GCT 233.5–237.7 ms and power 325–338 W.
+- MS: 2.34k @ 5:07 162bpm 1.04m 185spm 236ms 8.0cm 331w
+- Interpretation: strong execution and good mechanics under increasing intensity. No need to shorten recovery or add another anaerobic session to chase Garmin load focus. Use approximately 5:05–5:15/km as the current short-VO2 working range, without forcing 5:00/km on every rep.
+
+## 3. Sep 20 2026 10K diagnostic
 ## 3. Sep 20 2026 10K diagnostic
 
 Race conditions:
@@ -102,11 +107,11 @@ Sep 19 — shakeout:
 
 Monday: Rest + Strength
 Tuesday: Quality #1 — SUT/threshold
-Wednesday: Easy + strides when prescribed
+Wednesday: Easy + strides or hill sprints when prescribed
 Thursday: Quality #2 — VO2 / 10K-specific / HM-specific
 Friday: Rest + core/stability
 Saturday: Long run / race-specific durability
-Sunday: Easy/recovery + hills when prescribed
+Sunday: Easy/recovery; hills only where explicitly prescribed
 
 Two quality days are the core structure. Do not add a third hard day merely to satisfy Garmin load focus.
 
@@ -128,187 +133,205 @@ Two quality days are the core structure. Do not add a third hard day merely to s
 
 ## 6. CANONICAL W1–W22 PLAN
 
-W1 Sep 21–27 — ~32K
-- Mon rest
+W1 Sep 21–27 — 32K
+- Mon Strength A
 - Tue 5K EZ @7:05–7:35 ≤150
-- Wed 6K EZ @6:55–7:25 ≤150
-- Thu 6K EZ @7:05–7:35 +4×20s strides, 75s walk
+- Wed 6K EZ @6:55–7:25 ≤150 + 6×20s strides, 90s walk
+- Thu 6K EZ @7:05–7:35 ≤150
 - Fri rest + core
-- Sat 9K LSD @6:50–7:20
-- Sun 6K recovery @7:10–7:45
+- Sat 9K LSD @6:50–7:20 ≤150
+- Sun 6K recovery @7:10–7:45 ≤145
 
-W2 Sep 28–Oct 4 — ~35K
+W2 Sep 28–Oct 4 — 36K
 - Tue 7K: 3×8min SUT @5:30–5:40, 2min jog, ≤168
-- Wed 6K EZ +4×20s strides
-- Thu 6K: 6×2min @5:00–5:10, 2min jog, ≤172
-- Sat 10K LSD
-- Sun 6K EZ +6×10s hills
+- Wed 6K EZ @6:50–7:20 ≤150 +4×20s strides, 75s walk
+- Thu 7K: 6×2min @5:00–5:10, 2min jog, ≤172
+- Fri rest + core
+- Sat 10K EZ @6:45–7:20 ≤150
+- Sun 6K EZ @6:50–7:20 ≤150 +6×10s hills, walk/jog back
 
-W3 Oct 5–11 — ~38K
-- Tue 7K: 2×10min SUT @5:28–5:38
-- Wed 6K EZ +5×20s strides
-- Thu 6K: 5×3min @5:05–5:12
-- Sat 11K TOTAL including 5K Takbo Ng Pag-Asa test; approximately 3K EZ +5K test +3K EZ
-- Sun 6K EZ, no hills
+W3 Oct 5–11 — 36K
+- Tue 7K: 2×10min SUT @5:28–5:38, 2min jog
+- Wed 6K EZ @6:50–7:20 ≤150 +5×20s strides, 75s walk
+- Thu 6K: 5×3min @5:05–5:12, 2min jog
+- Fri rest + core
+- Sat 11K LSD @6:45–7:20 ≤150; Takbo Ng Pag-Asa 5K test at 5:00 AM is listed in the workbook
+- Sun 6K EZ @6:50–7:20 ≤150; Bulacan Medical Center 95th Anniversary Fun Run listed
 
-W4 Oct 12–18 — ~41K
-- Tue 7K: 3×8min SUT @5:25–5:35
-- Wed 6K EZ +5 strides
-- Thu 8K: 4×1K @5:00–5:08, 90s jog
-- Sat 12K LSD
-- Sun 8K EZ + hills
+W4 Oct 12–18 — 41K
+- Tue 7K: 3×8min SUT @5:25–5:35, 2min jog, ≤168
+- Wed 6K EZ @6:50–7:20 ≤150 +6–8 hill sprints
+- Thu 8K: 4×1K @5:00–5:08, 2min jog, ≤172
+- Fri rest + core
+- Sat 12K EZ
+- Sun 8K EZ @6:50–7:20 ≤150; CCM listed
 
 W5 Oct 19–25 — 38K
-- Tue 6K: 2×8min SUT
-- Wed 6K EZ
-- Thu ~8K including 5K test + WU/CD
-- Sat 10K LSD
-- Sun 8K EZ + hills
-- Important: 38K is correct; session totals sum to 38K.
+- Tue 6K: 2×8min SUT @5:25–5:35, 2min jog
+- Wed 6K EZ @6:55–7:25 ≤150
+- Thu 8K: 5K test + WU/CD, or 7K EZ + strides if a test is not warranted
+- Fri rest + core
+- Sat 10K EZ
+- Sun 8K EZ @6:50–7:20 ≤150
 
-W6 Oct 26–Nov 1 — ~43K
-- Tue 9K: 3×10min SUT
-- Wed 6K EZ
-- Thu 7K: 5×4min @5:00–5:08, 2min jog
-- Sat 13K LSD
-- Sun 8K EZ + hills
+W6 Oct 26–Nov 1 — 43K
+- Tue 9K: 3×10min SUT @5:25–5:33, 2min jog
+- Wed 6K EZ @6:50–7:20 ≤150 +5×20s strides, 75s walk
+- Thu 7K: 6×75s @3K–5K effort, 90s recovery
+- Fri rest + core
+- Sat 13K EZ
+- Sun 8K EZ @6:50–7:20 ≤150
 
-W7 Nov 2–8 — ~45K
-- Tue 8K: 2×12min SUT
-- Wed 6K EZ
-- Thu 9K: 6×1K @4:58–5:05, 90s jog
-- Sat 14K, last 3K @5:45–5:55
-- Sun 8K EZ + hills
+W7 Nov 2–8 — 45K
+- Tue 8K: 2×12min SUT @5:25–5:33, 3min jog
+- Wed 6K EZ @6:50–7:20 ≤150 +5×20s strides
+- Thu 9K: 6×1K @4:58–5:05, 90s jog, ≤172
+- Fri rest + core
+- Sat 14K: 11K EZ +3K @5:45–5:55
+- Sun 8K EZ @6:50–7:20 ≤150
 
-W8 Nov 9–15 — ~46K
-- Tue 8K: 20min continuous SUT @5:25–5:35 +4×2min @5:10–5:20
-- Wed 7K EZ
-- Thu 9K: 3×2K @5:12–5:18, 2:30 jog
-- Sat 14K LSD
-- Sun 8K EZ + hills
-
-W9 Nov 16–22 — ~46K
-- Tue 9K: 3×10min SUT
-- Wed 6K EZ
-- Thu 9K: 5×1K @4:58–5:05
-- Sat 14K, last 4K @5:40–5:50
-- Sun 8K EZ + hills
-
-W10 Nov 23–29 — ~31K
-- Tue 6K: 2×8min SUT
-- Wed 6K EZ
-- Thu 5K EZ +4×20s strides
-- Fri rest
-- Sat 4K shakeout
-- Sun 10K test
-
-W11 Nov 30–Dec 6 — ~40K
-- Tue 8K: 2×12min SUT
-- Wed 6K EZ
-- Thu 6K: 5×3min @5:05–5:12
-- Sat 12K LSD
-- Sun 8K EZ + hills
-
-W12 Dec 7–13 — ~46K
-- Tue 9K: 3×10min SUT
-- Wed 6K EZ
-- Thu 9K: 3×2K @5:20–5:27
-- Sat 15K, last 3K @5:40–5:50
-- Sun 8K EZ
-
-W13 Dec 14–20 — ~49K
-- Tue 9K: 3×10min SUT
-- Wed 7K EZ
-- Thu 10K: 2×4K @5:35–5:42, 3min jog
-- Sat 15K easy
-- Sun 8K EZ
-
-W14 Dec 21–27 — ~38K
-- Tue 6K: 2×8min SUT
-- Wed 6K EZ
-- Thu 6K: 4×3min @5:10–5:18
-- Sat 12K LSD
-- Sun 8K EZ
-
-W15 Dec 28–Jan 3 — ~48K
-- Tue 9K: 3×10min SUT
-- Wed 6K EZ
-- Thu 9K: 3×2K @5:25–5:32
-- Sat 17K, last 5K @5:35–5:45
-- Sun 8K EZ
-
-W16 Jan 4–10 — ~49K
-- Tue 9K: 2×15min SUT
-- Wed 6K EZ
-- Thu 9K: 3×2K @5:25–5:32
-- Sat 17K easy
-- Sun 8K EZ
-
-W17 Jan 11–17 — ~51K
-- Tue 10K: 3×12min SUT
-- Wed 6K EZ
-- Thu 9K: 2×3K @5:28–5:35
-- Sat 18K, last 4K @5:40–5:50
-- Sun 8K EZ
-
-W18 Jan 18–24 — ~48K
-- Tue 9K: 2×15min SUT
-- Wed 6K EZ
-- Thu 9K: 3×2K @5:25–5:32
-- Sat 16K LSD
-- Sun 8K EZ
-
-W19 Jan 25–31 — ~47K
-- Tue 7K: 3×8min SUT
-- Wed 6K EZ
-- Thu 6K: 4×3min @5:05–5:12
-- Sat 20K, last 5K @5:35–5:45
-- Sun 8K EZ + hills
-
-W20 Feb 1–7 — ~46–47K
-- Tue 8K: 2×12min SUT
-- Wed 6K EZ
-- Thu 9K: 3×2K @5:30–5:37
-- Sat 16K LSD
-- Sun 8K recovery
-- Important: Saturday is 16K, not 18K, to consolidate after W19 peak.
-
-W21 Feb 8–14 — ~38K
-- Tue 6K: 2×8min SUT
-- Wed 6K EZ
-- Thu 6K: 3×3min @5:05–5:12
+W8 Nov 9–15 — 46K
+- Tue 8K: 20min continuous SUT @5:25–5:35 +4×2min @5:10–5:20, 2min jog between 2min reps, ≤170
+- Wed 7K EZ @6:45–7:20 ≤150 +6–8 hill sprints
+- Thu 9K: 3×2K @5:12–5:18, 2:30 jog, ≤170
+- Fri rest + core
 - Sat 14K EZ
-- Sun 6K recovery
+- Sun 8K EZ @6:50–7:20 ≤150; Coffee Run 10/16K listed
 
-W22 Feb 15–21 — ~39.1K including race
-- Tue 6K: 2×6min @~5:30
-- Wed 4K EZ +4×20s strides
-- Thu 5K: 3×3min @5:15–5:20
+W9 Nov 16–22 — 46K
+- Tue 9K: 3×10min SUT @5:25–5:33, 2min jog
+- Wed 6K EZ @6:50–7:20 ≤150 +5×20s strides
+- Thu 9K: 5×90s HARD, 2min recovery
+- Fri rest + core
+- Sat 14K: 10K EZ +4K @5:40–5:50
+- Sun 8K EZ @6:50–7:20 ≤150
+
+W10 Nov 23–29 — 37K
+- Tue 6K: 2×8min SUT @5:25–5:35, 2min jog
+- Wed 6K EZ @6:50–7:20 ≤150
+- Thu 5K EZ @6:55–7:25 ≤150 +4×20s strides, 75s walk
 - Fri rest
-- Sat 3K shakeout
-- Sun BHM 21.1K
+- Sat 12K EZ
+- Sun 8K EZ
+
+W11 Nov 30–Dec 6 — 41K
+- Tue 8K: 2×12min SUT @5:30–5:36, 3min jog
+- Wed 6K EZ @6:50–7:20 ≤150 + strides
+- Thu 7K: VO2 re-test 6×2min @5:00–5:10, 2min jog
+- Fri rest + core
+- Sat 12K EZ (14K is an optional upper bound only if recovery and surrounding load justify it)
+- Sun 8K EZ @6:50–7:20 ≤150
+
+W12 Dec 7–13 — 47K
+- Tue 9K: 3×10min SUT @5:28–5:35, 2min jog
+- Wed 6K EZ @6:50–7:20 ≤150 +6–8 hills
+- Thu 9K: 3×2K @5:20–5:27, 2:30 jog, ≤170 — HM/10K bridge
+- Fri rest + core
+- Sat 15K: 12K EZ +3K @5:40–5:50
+- Sun 8K EZ @6:50–7:20 ≤150
+
+W13 Dec 14–20 — 49K
+- Tue 9K: 3×10min SUT @5:28–5:35, 2min jog
+- Wed 7K EZ @6:45–7:20 ≤150 +5×20s strides, 75s walk
+- Thu 10K: 2×4K @5:35–5:42, 3min jog, ≤169 — HM-specific
+- Fri rest + core
+- Sat 15K EZ
+- Sun 8K EZ @6:50–7:20 ≤150
+
+W14 Dec 21–27 — 38K
+- Tue 6K: 2×8min SUT @5:25–5:35, 2min jog
+- Wed 6K EZ @6:55–7:25 ≤150 + strides
+- Thu 6K: 5×75–90s hard, 90–120s recovery — anaerobic capacity
+- Fri rest + core
+- Sat 12K EZ
+- Sun 8K EZ @6:50–7:20 ≤150
+
+W15 Dec 28–Jan 3 — 49K
+- Tue 9K: 3×10min SUT @5:28–5:35, 2min jog
+- Wed 6K EZ @6:50–7:20 ≤150 +5×20s strides, 75s walk
+- Thu 9K: 3×2K @5:25–5:32, 2:30 jog, ≤170 — HM-specific
+- Fri rest + core
+- Sat 17K: 12K EZ +5K @5:35–5:45 only if recovered
+- Sun 8K EZ @6:50–7:20 ≤150
+
+W16 Jan 4–10 — 49K
+- Tue 9K: 2×15min SUT @5:30–5:36, 3min jog, ≤168
+- Wed 6K EZ @6:50–7:20 ≤150 +6–8 hills
+- Thu 9K: 3×2K @5:25–5:32, 2:30 jog, ≤170
+- Fri rest + core
+- Sat 17K EZ
+- Sun 8K EZ @6:50–7:20 ≤150
+
+W17 Jan 11–17 — 51K
+- Tue 10K: 3×12min SUT @5:28–5:35, 3min jog, ≤169
+- Wed 6K EZ @6:45–7:20 ≤150 +5×20s strides, 75s walk
+- Thu 9K: 2×3K @5:28–5:35, 3min jog, ≤170
+- Fri rest + core
+- Sat 18K: 14K EZ +4K @5:40–5:50
+- Sun 8K EZ @6:50–7:20 ≤150
+
+W18 Jan 18–24 — 48K
+- Tue 9K: 2×15min SUT @5:30–5:36, 3min jog, ≤169
+- Wed 6K EZ @6:50–7:20 ≤150 + strides
+- Thu 9K: 3×2K @5:25–5:32, 2:30 jog, ≤170
+- Fri rest + core
+- Sat 16K EZ
+- Sun 8K EZ @6:50–7:20 ≤150
+
+W19 Jan 25–31 — 47K
+- Tue 7K: 3×8min SUT @5:25–5:32, 2min jog
+- Wed 6K EZ @6:50–7:20 ≤150 +5×20s strides
+- Thu 6K: 4×3min @5:05–5:12, 2min jog, ≤172 — 10K support
+- Fri rest + core
+- Sat 20K: 15K EZ +5K @5:35–5:45 only if recovered
+- Sun 8K EZ @6:50–7:20 ≤150
+
+W20 Feb 1–7 — 47K
+- Tue 8K: 2×12min SUT @5:28–5:35, 3min jog, ≤168
+- Wed 6K EZ @6:50–7:20 ≤150
+- Thu 9K: 3×2K @5:30–5:37, 2:30 jog, ≤169
+- Fri rest + light core
+- Sat 16K EZ
+- Sun 8K recovery @7:00–7:40 ≤145
+
+W21 Feb 8–14 — 38K
+- Tue 6K: 2×8min SUT @5:25–5:35, 2min jog, ≤168
+- Wed 6K EZ @6:50–7:20 ≤150 +4×20s strides, 75s walk
+- Thu 6K: 3×3min @5:05–5:12, 2min jog, ≤170 — VO2 maintenance
+- Fri rest
+- Sat 14K EZ
+- Sun 6K recovery @7:05–7:45 ≤145
+
+W22 Feb 15–21 — 39.1K including race
+- Tue 6K: 2×6min @~5:30, 2min jog, ≤166
+- Wed 4K EZ @6:55–7:25 ≤150 +4×20s strides, 75s walk
+- Thu 5K: 3×3min @5:15–5:20, 2min jog, ≤168 — race sharpening
+- Fri rest
+- Sat 3K shakeout +3×15–20s strides
+- Sun BHM race — 21.1K
+
 
 ## 7. Saturday progression — LOCKED
 
 W1 9K easy
 W2 10K easy
-W3 11K total incl. 5K test
+W3 11K total; Takbo Ng Pag-Asa 5K test is listed in workbook
 W4 12K easy
 W5 10K easy
 W6 13K easy
 W7 14K, last 3K @5:45–5:55
 W8 14K easy
 W9 14K, last 4K @5:40–5:50
-W10 4K shakeout
-W11 12K easy
+W10 12K easy
+W11 12K easy; 14K is an optional upper bound only if recovery and surrounding load justify it
 W12 15K, last 3K @5:40–5:50
 W13 15K easy
 W14 12K easy
-W15 17K, last 5K @5:35–5:45
+W15 17K, last 5K @5:35–5:45 only if recovered
 W16 17K easy
 W17 18K, last 4K @5:40–5:50
 W18 16K easy
-W19 20K, last 5K @5:35–5:45
+W19 20K, last 5K @5:35–5:45 only if recovered
 W20 16K easy
 W21 14K easy
 W22 3K shakeout + HM
@@ -384,38 +407,35 @@ Before changing the canonical plan:
 9. Do not treat one poor readiness score as lost fitness.
 10. If the workbook and a pasted table differ, inspect the workbook before deciding.
 
-Locked decisions:
+Locked decisions / workbook supersedes prior versions:
 - BHM 2027 target: Feb 21, 2027.
 - Tue + Thu quality.
 - Monday strength / Friday core.
-- W3: 11K total including 5K test; Sunday 6K easy without hills.
-- W5 total: 38K, not 35K.
-- W11 Saturday: 12K, not 14K.
-- W13 Saturday: 15K easy, not 16K.
-- W16 Saturday: 17K easy, not 18K.
-- W19 Saturday: 20K with final 5K @5:35–5:45.
-- W20 Saturday: 16K, not 18K.
+- Uploaded workbook is now the authoritative W1–W22 schedule.
+- W2 Thu 6×2min VO2 and Sunday 6×10s hills.
+- W3 retains the workbook-listed 5K test within the 11K Saturday total; Sunday is easy with no hills/strides.
+- W5 Thu remains an either/or: 5K test with WU/CD, or 7K EZ + strides if a test is not warranted.
+- W6/W9/W14 use short anaerobic-capacity sessions rather than adding a third quality day.
+- Hills are placed only where the workbook explicitly prescribes them: W2, W4, W8, W12 and W16.
+- W10 is a consolidation week with 12K Saturday + 8K Sunday; no 10K test.
+- W11 Saturday is 12K, with 14K only as an optional upper bound if recovery supports it.
+- W12 begins the stronger HM/10K bridge with 3×2K and a 15K controlled fast-finish long run.
+- W13 moves into explicit HM-specific work: 2×4K @5:35–5:42.
+- W15–W19 emphasize HM-specific durability and the peak 20K long run.
+- W19 final 5K @5:35–5:45 is conditional on recovery.
+- W20 Saturday remains 16K to consolidate after W19.
 - Peak long run: 20K.
 
 ## 12. Workbook reference
 
 Uploaded workbook:
-927b9c58-717c-4c55-b8df-10b7fc1a9ffb.xlsx
+Untitled spreadsheet.xlsx (current uploaded revision)
 
 Main sheet:
-BHM 2027 w 10k Build
+Sheet1
 
-Relevant sheets:
-Str & Plyo
-PaceBand
-Race Day
-10k BMH
-BHM26 NSA+HM
-HM Sub 155_v3b
-HM Sub 155_v2
-Mobility
+The workbook contains the complete W1–W22 BHM 2027 schedule used as the current source of truth. Its W1–W22 mileage column is preserved in the plan above where explicit session totals are available.
 
-The workbook's W5 total is 38K and its session totals support that number.
 
 ## 13. Maintenance rule
 
