@@ -28,7 +28,7 @@ DEFAULT_MODELS = {
     "gemini": "gemini-3.8-flash",
     "anthropic": "claude-sonnet-5",
 }
-MAX_OUTPUT_TOKENS = 300
+MAX_OUTPUT_TOKENS = 600
 
 SYSTEM_PREFIX = """You are Onin's endurance running coach. You write short, \
 specific analysis of a single workout he just completed, grounded in the \
