@@ -33,72 +33,12 @@
       },
       "body_battery_impact": -2.0,
       "splits": {
-        "columns": [
-          "step_type",
-          "lap",
-          "time",
-          "elapsed_time",
-          "avg_pace",
-          "avg_gap",
-          "avg_hr",
-          "max_hr",
-          "start_hr",
-          "min_hr",
-          "end_hr",
-          "avg_run_cadence",
-          "best_pace",
-          "max_run_cadence",
-          "moving_time",
-          "avg_moving_pace",
-          "distance",
-          "elevation_gain",
-          "elevation_loss",
-          "stride_length",
-          "avg_vertical_oscillation",
-          "avg_ground_contact_time",
-          "normalized_power",
-          "avg_power",
-          "max_power",
-          "avg_vertical_ratio",
-          "workout_step_index",
-          "workout_compliance_pct"
-        ],
+        "columns": ["step_type", "lap", "time", "elapsed_time", "avg_pace", "avg_gap", "avg_hr", "max_hr", "start_hr", "min_hr", "end_hr", "avg_run_cadence", "best_pace", "max_run_cadence", "moving_time", "avg_moving_pace", "distance", "elevation_gain", "elevation_loss", "stride_length", "avg_vertical_oscillation", "avg_ground_contact_time", "normalized_power", "avg_power", "max_power", "avg_vertical_ratio", "workout_step_index", "workout_compliance_pct"],
         "data": [
-          [
-            null,
-            1,
-            "24:36",
-            "24:36",
-            null,
-            null,
-            92.0,
-            111.0,
-            81,
-            71,
-            88,
-            null,
-            null,
-            null,
-            "14:21",
-            null,
-            0.0,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        ]
+        [null, 1, "24:36", "24:36", null, null, 92.0, 111.0, 81, 71, 88, null, null, null, "14:21", null, 0.0, null, null, null, null, null, null, null, null, null, null, null]
+      ]
       },
-      "lap_count": 1,
-      "ai_analysis": "Unremarkable maintenance session executed exactly as it should be. At an average HR of 92 bpm (peaking at 111) over 24 minutes, this provided the targeted stability work with virtually zero systemic fatigue (load 3.0, 0.2 aerobic TE). Paired with an 81 sleep score and 77 readiness, your physical reserves remain completely uncompromised heading into the weekend.",
-      "ai_analysis_provider": "gemini:gemini-3.8-flash"
+      "lap_count": 1
     }
   ]
 }
