@@ -1,9 +1,9 @@
 {
   "date": "2026-10-01",
   "readiness": {
-    "score": 45,
-    "level": "Low",
-    "feedback": "Focus On Energy Levels",
+    "score": 50,
+    "level": "Moderate",
+    "feedback": "Good Sleep Last Night",
     "resting_hr": 56,
     "hrv_last_night_avg_ms": 48.0,
     "hrv_7_day_avg_ms": 50.0,
@@ -11,7 +11,7 @@
     "sleep_hours": 6.52,
     "sleep_hours_including_previous_day_nap": 6.52,
     "sleep_score": 84,
-    "recovery_hours": 26.4,
+    "recovery_hours": 20.8,
     "hrv_baseline": {
       "lowUpper": 45.0,
       "balancedLow": 47.0,
@@ -21,13 +21,13 @@
     "factor_details": {
       "sleep_score": {"percent": 78, "feedback": "Good"},
       "sleep_history": {"percent": 45, "feedback": "Moderate"},
-      "recovery_time": {"percent": 57, "feedback": "Moderate"},
+      "recovery_time": {"percent": 67, "feedback": "Moderate"},
       "acwr": {"percent": 88, "feedback": "Good"},
       "hrv": {"percent": 100, "feedback": "Very Good"},
       "stress_history": {"percent": 65, "feedback": "Moderate"}
     }
   },
-  "health": {"steps": 72},
+  "health": {"steps": 10389},
   "sleep": {
     "deep_h": 1.25,
     "light_h": 3.95,
@@ -55,9 +55,9 @@
   "vo2_max": 44.0,
   "race_predictions": {
     "5k": "27:35",
-    "10k": "57:29",
-    "half_marathon": "2:12:33",
-    "marathon": "4:56:22"
+    "10k": "57:30",
+    "half_marathon": "2:12:35",
+    "marathon": "4:56:28"
   },
   "load_balance": {
     "aerobic_low": 772.3,
@@ -228,7 +228,7 @@
     ["2026-09-28", 68, 72, 80, 14],
     ["2026-09-29", 37, 52, 56, 5],
     ["2026-09-30", 71, 55, 63, 5],
-    ["2026-10-01", 60, 5, 82, 22]
+    ["2026-10-01", 71, 75, 82, 7]
   ]
   },
   "units": {
