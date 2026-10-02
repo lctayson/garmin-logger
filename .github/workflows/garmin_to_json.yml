@@ -71,6 +71,12 @@ jobs:
         run: |
           python split_garmin_json.py --date "$EXPORT_DATE"
 
+      - name: Generate AI workout analysis
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python generate_ai_analysis.py --date "$EXPORT_DATE" --data-dir data --provider gemini
+          
       - name: Render daily summary markdown
         run: |
           python render_summary_md.py --data-dir data

@@ -600,6 +600,10 @@ def _activity_detail_lines(act: dict[str, Any]) -> list[str]:
     ms_line = _main_set_line(act)
     if ms_line:
         lines.append(ms_line)
+
+    ai_analysis = act.get("ai_analysis")
+    if ai_analysis:
+        lines.append(f"  - 🧠 {ai_analysis}")
     return lines
 
 
