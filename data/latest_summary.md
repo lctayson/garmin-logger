@@ -1,31 +1,27 @@
 # Daily Check — 2026-10-02
 
-## Readiness: 68/100 (Moderate)
-> Well Rested
+## Readiness: 77/100 (High)
+> Energizing Nap
 
 - **RHR:** 57 bpm
 - **HRV:** 54ms (7d avg: 51ms)
 - **Sleep:** 5h51 (score 81)
-- **Recovery time:** 4.6h
+- **Recovery time:** 0h
 - ⚠️ **Limiter:** Stress History (58%)
 - **Also soft:** Sleep History
 
-## Today — Rest Day
+## Today
 
-_Most recent activity (2026-10-01):_
-- **Malolos - 6 × 2min VO₂ Intervals** — 7.02km · 48:28 · 6:54/km · HR 153/176 max
-  - TE: VO2MAX · aerobic 3.6 · anaerobic 1.5
-  - Intervals: 6 work reps · pace drift -6.7% · HR +17bpm
-  - MS: 2.35k @ 5:06 162bpm 1.04m 185spm 236ms 8.0cm 331w
-  - 🧠 benefit).
-        *   Interval
+- **Friday Core/Hip Stability** — 0.0km · 24:36 · HR 92/111 max
+  - TE: AEROBIC_BASE · aerobic 0.2 · anaerobic 0
+  - 🧠 Routine, low-cost maintenance session as expected. With an average HR of 92 bpm (max 111 bpm) and a negligible training load of 3, this did its job for core and hip stability without taking any toll on your system. Coming off solid sleep (81) and an 77 readiness score, you’re completely primed for the weekend running volume.
 
 ## Load & Trends
 
-- **ACWR:** 0.9 (Optimal) — acute 498 / chronic 535 (chronic range 428–802.5)
+- **ACWR:** 0.9 (Optimal) — acute 502 / chronic 535 (chronic range 428–802.5)
 - **7-day volume:** 36.14km vs 28-day avg 34.0km (+6%)
 - **Running tolerance:** 59.6% (Medium) — 36.1km of 62.7km weekly cap, acute impact load 37.4
-- **Aerobic Low:** 772.3 (target 303–822 — in range)
+- **Aerobic Low:** 775.2 (target 303–822 — in range)
 - ⚠️ **Aerobic High:** 1254.3 (target 649–1169 — +85 over)
 - ⚠️ **Anaerobic:** 47.7 (target 173–519 — -125 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
@@ -43,8 +39,8 @@ _Most recent activity (2026-10-01):_
 | Tue | 8.03k | 178.9 | 3 × 8min Threshold |
 | Wed | 6.03k | 58.1 | Run + Strides |
 | Thu | 7.02k | 151 | 6 × 2min VO₂ Intervals |
-| Fri | — | — | Rest |
+| Fri | 0.0k | 3 | Friday Core/Hip Stability |
 
 | Sessions | Distance | Time | Load |
 |:---: | :---: | :---: | :---: |
-| 6 | 36.13 km | 4:43:08 | 525.9 |
+| 7 | 36.13 km | 5:07:44 | 528.9 |

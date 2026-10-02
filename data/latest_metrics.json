@@ -1,9 +1,9 @@
 {
   "date": "2026-10-02",
   "readiness": {
-    "score": 68,
-    "level": "Moderate",
-    "feedback": "Well Rested",
+    "score": 77,
+    "level": "High",
+    "feedback": "Energizing Nap",
     "resting_hr": 57,
     "hrv_last_night_avg_ms": 54.0,
     "hrv_7_day_avg_ms": 51.0,
@@ -11,7 +11,7 @@
     "sleep_hours": 5.85,
     "sleep_hours_including_previous_day_nap": 5.85,
     "sleep_score": 81,
-    "recovery_hours": 4.6,
+    "recovery_hours": 0.0,
     "hrv_baseline": {
       "lowUpper": 45.0,
       "balancedLow": 47.0,
@@ -21,13 +21,13 @@
     "factor_details": {
       "sleep_score": {"percent": 72, "feedback": "Good"},
       "sleep_history": {"percent": 67, "feedback": "Moderate"},
-      "recovery_time": {"percent": 92, "feedback": "Good"},
+      "recovery_time": {"percent": 99, "feedback": "Good"},
       "acwr": {"percent": 94, "feedback": "Good"},
       "hrv": {"percent": 100, "feedback": "Very Good"},
       "stress_history": {"percent": 58, "feedback": "Moderate"}
     }
   },
-  "health": {"steps": 23},
+  "health": {"steps": 532},
   "sleep": {
     "deep_h": 1.07,
     "light_h": 3.8,
@@ -35,7 +35,7 @@
     "awake_h": 0.0,
     "baseline_h": 7.0,
     "need_h": 7.0,
-    "next_need_h": 7.0,
+    "next_need_h": 6.5,
     "feedback": "No Change No Adjustments",
     "training_feedback": "No Change",
     "sleep_history_adjustment": "No Change",
@@ -44,7 +44,7 @@
     "previous_day_nap": null
   },
   "load": {
-    "acute_load": 498,
+    "acute_load": 502,
     "chronic_load": 535,
     "acwr": 0.9,
     "acwr_percent": 38,
@@ -60,7 +60,7 @@
     "marathon": "4:56:28"
   },
   "load_balance": {
-    "aerobic_low": 772.3,
+    "aerobic_low": 775.2,
     "aerobic_low_target": [303, 822],
     "aerobic_high": 1254.3,
     "aerobic_high_target": [649, 1169],
@@ -78,10 +78,10 @@
   "training_history": {
     "7_day": {
       "total_endurance": {
-        "activity_count": 6,
+        "activity_count": 7,
         "distance": 36.14,
-        "duration_hours": 4.72,
-        "exercise_load": 525.9
+        "duration_hours": 5.13,
+        "exercise_load": 528.9
       },
       "sports": {
         "running": {
@@ -91,10 +91,10 @@
           "exercise_load": 523.0
         },
         "other": {
-          "activity_count": 1,
+          "activity_count": 2,
           "distance": 0.0,
-          "duration_hours": 0.3,
-          "exercise_load": 2.9
+          "duration_hours": 0.71,
+          "exercise_load": 5.9
         }
       }
     },
@@ -165,10 +165,10 @@
           "week_start": "2026-09-26",
           "week_end": "2026-10-02",
           "total_endurance": {
-            "activity_count": 6,
+            "activity_count": 7,
             "distance": 36.14,
-            "duration_hours": 4.72,
-            "exercise_load": 525.9
+            "duration_hours": 5.13,
+            "exercise_load": 528.9
           },
           "sports": {
             "running": {
@@ -178,10 +178,10 @@
               "exercise_load": 523.0
             },
             "other": {
-              "activity_count": 1,
+              "activity_count": 2,
               "distance": 0.0,
-              "duration_hours": 0.3,
-              "exercise_load": 2.9
+              "duration_hours": 0.71,
+              "exercise_load": 5.9
             }
           }
         }
@@ -199,7 +199,7 @@
     ["2026-09-29", 60, 41.0, 49.0, 5.2, 56, 44.0, "Maintaining 2", 503, 544, 0.9, "Optimal", 1, 0.91, 8.03, {"running": {"activity_count": 1, "distance": 8.03, "duration_hours": 0.91, "exercise_load": 178.9}}, 178.9],
     ["2026-09-30", 58, 50.0, 49.0, 6.38, 67, 44.0, "Maintaining 2", 474, 541, 0.8, "Optimal", 1, 0.81, 6.03, {"running": {"activity_count": 1, "distance": 6.03, "duration_hours": 0.81, "exercise_load": 58.1}}, 58.1],
     ["2026-10-01", 56, 48.0, 50.0, 6.52, 84, 44.0, "Maintaining 2", 592, 553, 1.0, "Optimal", 1, 0.81, 7.02, {"running": {"activity_count": 1, "distance": 7.02, "duration_hours": 0.81, "exercise_load": 151.0}}, 151.0],
-    ["2026-10-02", 57, 54.0, 51.0, 5.85, 81, 44.0, "Maintaining 2", 498, 535, 0.9, "Optimal", 0, 0.0, 0.0, {}, null]
+    ["2026-10-02", 57, 54.0, 51.0, 5.85, 81, 44.0, "Maintaining 2", 502, 535, 0.9, "Optimal", 1, 0.41, 0.0, {"other": {"activity_count": 1, "distance": 0.0, "duration_hours": 0.41, "exercise_load": 3.0}}, 3.0]
   ]
   },
   "trend_long_range_weekly": {
@@ -216,7 +216,7 @@
     ["2026-09-11", "2026-09-05", "2026-09-11", 57, 51.0, 49.0, 7.75, 82, 44.0, "Maintaining 2", 496, 525, 0.9, "Optimal", 6, 4.48, 35.32, {"running": {"activity_count": 5, "distance": 34.32, "duration_hours": 4.23, "exercise_load": 510.7}, "other": {"activity_count": 1, "distance": 1.0, "duration_hours": 0.26, "exercise_load": 6.6}}, 517.3],
     ["2026-09-18", "2026-09-12", "2026-09-18", 58, 46.0, 49.0, 7.1, 57, 44.0, "Maintaining 2", 491, 541, 0.9, "Optimal", 5, 4.12, 34.21, {"running": {"activity_count": 5, "distance": 34.21, "duration_hours": 4.12, "exercise_load": 550.5}}, 550.5],
     ["2026-09-25", "2026-09-19", "2026-09-25", 60, 48.0, 49.0, 5.67, 70, 44.0, "Maintaining 2", 466, 547, 0.8, "Optimal", 5, 3.62, 31.21, {"running": {"activity_count": 5, "distance": 31.21, "duration_hours": 3.62, "exercise_load": 556.1}}, 556.1],
-    ["2026-10-02", "2026-09-26", "2026-10-02", 57, 54.0, 51.0, 5.85, 81, 44.0, "Maintaining 2", 498, 535, 0.9, "Optimal", 6, 4.72, 36.14, {"running": {"activity_count": 5, "distance": 36.14, "duration_hours": 4.42, "exercise_load": 523.0}, "other": {"activity_count": 1, "distance": 0.0, "duration_hours": 0.3, "exercise_load": 2.9}}, 525.8]
+    ["2026-10-02", "2026-09-26", "2026-10-02", 57, 54.0, 51.0, 5.85, 81, 44.0, "Maintaining 2", 502, 535, 0.9, "Optimal", 7, 5.13, 36.14, {"running": {"activity_count": 5, "distance": 36.14, "duration_hours": 4.42, "exercise_load": 523.0}, "other": {"activity_count": 2, "distance": 0.0, "duration_hours": 0.71, "exercise_load": 5.9}}, 528.8]
   ]
   },
   "body_battery_trend": {
@@ -228,7 +228,7 @@
     ["2026-09-29", 37, 52, 56, 5],
     ["2026-09-30", 71, 55, 63, 5],
     ["2026-10-01", 71, 75, 82, 7],
-    ["2026-10-02", 63, 22, 82, 19]
+    ["2026-10-02", 69, 57, 82, 19]
   ]
   },
   "units": {
