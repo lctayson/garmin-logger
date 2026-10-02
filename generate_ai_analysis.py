@@ -84,12 +84,20 @@ def _call_gemini(model, system, user_content):
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY not set")
     client = genai.Client(api_key=api_key)
+    
+    # Handle thinking configuration based on model version family
+    if "gemini-3" in model:
+        thinking_cfg = types.ThinkingConfig(thinking_level="low")
+    else:
+        thinking_cfg = types.ThinkingConfig(thinking_budget=0)
+
     response = client.models.generate_content(
         model=model,
         contents=user_content,
         config=types.GenerateContentConfig(
             system_instruction=system,
             max_output_tokens=MAX_OUTPUT_TOKENS,
+            thinking_config=thinking_cfg,
         ),
     )
     return (response.text or "").strip()
