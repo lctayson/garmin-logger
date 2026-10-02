@@ -17,6 +17,8 @@ _Most recent activity (2026-10-01):_
   - TE: VO2MAX · aerobic 3.6 · anaerobic 1.5
   - Intervals: 6 work reps · pace drift -6.7% · HR +17bpm
   - MS: 2.35k @ 5:06 162bpm 1.04m 185spm 236ms 8.0cm 331w
+  - 🧠 benefit).
+        *   Interval
 
 ## Load & Trends
 
