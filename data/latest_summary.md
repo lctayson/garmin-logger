@@ -14,7 +14,7 @@
 
 - **Friday Core/Hip Stability** — 0.0km · 24:36 · HR 92/111 max
   - TE: AEROBIC_BASE · aerobic 0.2 · anaerobic 0
-  - 🧠 Routine, low-cost maintenance session as expected. With an average HR of 92 bpm (max 111 bpm) and a negligible training load of 3, this did its job for core and hip stability without taking any toll on your system. Coming off solid sleep (81) and an 77 readiness score, you’re completely primed for the weekend running volume.
+  - 🧠 Unremarkable maintenance session executed exactly as it should be. At an average HR of 92 bpm (peaking at 111) over 24 minutes, this provided the targeted stability work with virtually zero systemic fatigue (load 3.0, 0.2 aerobic TE). Paired with an 81 sleep score and 77 readiness, your physical reserves remain completely uncompromised heading into the weekend.
 
 ## Load & Trends
 
