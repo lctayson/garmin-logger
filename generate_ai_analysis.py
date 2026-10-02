@@ -25,7 +25,7 @@ import sys
 from render_summary_md import _find_dated_activity_file, _load_json
 
 DEFAULT_MODELS = {
-    "gemini": "gemini-2.5-flash",
+    "gemini": "gemini-3.8-flash",
     "anthropic": "claude-sonnet-5",
 }
 MAX_OUTPUT_TOKENS = 300
