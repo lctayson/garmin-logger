@@ -380,7 +380,18 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
             title = "/".join(sports) if sports else "activity"
 
         distance = _num(cell(row, "distance"))
-        dist_cell = f"{distance}k" if distance is not None else "—"
+        day_seconds = _dated_activity_seconds(data_dir, date_str)
+        # Distance is 0/absent for non-GPS activities (strength, core) --
+        # showing "0.0k" there reads as "went nowhere" rather than "distance
+        # doesn't apply to this activity type". Duration is always
+        # meaningful regardless of activity type, so it's the better
+        # fallback -- same column, not a new one, to stay phone-readable.
+        if distance:
+            dist_cell = f"{distance}k"
+        elif day_seconds:
+            dist_cell = _format_week_duration(day_seconds)
+        else:
+            dist_cell = "—"
         load = _num(cell(row, "exercise_load"))
         load_cell = f"{load:g}" if load is not None else "—"
         table_rows.append(f"| {label} | {dist_cell} | {load_cell} | {title} |")
@@ -390,13 +401,13 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
             total_distance += distance
         if load is not None:
             total_load += load
-        total_seconds += _dated_activity_seconds(data_dir, date_str)
+        total_seconds += day_seconds
 
     if not table_rows:
         return []
     range_label = _week_range_label(seen_dates)
     title = f"## This Week ({range_label})" if range_label else "## This Week"
-    header = [title, "", "| Day | Dist | Load | Activity |", "|:--- | ---: | ---: | :--- |"]
+    header = [title, "", "| Day | Dist/Time | Load | Activity |", "|:--- | ---: | ---: | :--- |"]
     footer = [
         "",
         "| Sessions | Distance | Time | Load |",
