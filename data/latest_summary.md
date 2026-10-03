@@ -15,7 +15,6 @@
 - **Malolos Running** — 10.03km · 1:14:18 · 7:25/km · HR 146/161 max
   - TE: AEROBIC_BASE · aerobic 3.2 · anaerobic 0
   - MS: 10.00k · 7:25 146bpm 0.80m 168spm 278ms 7.9cm 238w
-  - 🧠 A textbook, unremarkable recovery run. Pacing (7:25/km) and average heart rate (146 bpm) sat right inside your recovery/easy aerobic target zone (<=145–150 bpm), keeping the cardiac cost low despite starting with a moderate readiness score of 53. The negative performance condition (-2.2 avg) simply reflects that lower readiness, but you managed the effort properly by not forcing the pace, resulting in a modest training load (93) and a clean aerobic base stimulus without digging into recovery reserves.
 
 ## Load & Trends
 
@@ -32,7 +31,7 @@
 
 ## This Week (Sep 27 – Oct 3)
 
-| D | xxDist · Time | Load | Activity |
+| D | Dist · Time | Load | Activity |
 |:---:|---:|---:|:---|
 | S | 6k · 46:57 | 48 | Malolos Run |
 | M | 17:58 | 2.9 | Strength A |
