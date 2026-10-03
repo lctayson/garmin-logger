@@ -141,9 +141,6 @@ def _main_set_line(act: dict[str, Any]) -> str | None:
     if "step_type" not in col or "time" not in col or "distance" not in col:
         return None
 
-    # Garmin labels a plain continuous run's own auto-laps as either ACTIVE
-    # or INTERVAL depending on the device/activity profile -- both count as
-    # "main effort" laps, as opposed to WARMUP/COOLDOWN/RECOVERY/REST.
     active_rows = [
         row for row in rows
         if isinstance(row, list) and col["step_type"] < len(row) and row[col["step_type"]] in ("ACTIVE", "INTERVAL")
@@ -162,10 +159,6 @@ def _main_set_line(act: dict[str, Any]) -> str | None:
             total += secs or 0
         return total
 
-    # With one group (a plain continuous run) this is just that whole run.
-    # With multiple groups (strides/quality reps mixed with a continuous
-    # portion, or warm-up strides ahead of the real quality reps) this picks
-    # the main set over the shorter secondary block.
     main_rows = groups[max(groups, key=lambda k: group_duration(groups[k]))]
 
     total_time = 0.0
@@ -201,9 +194,6 @@ def _main_set_line(act: dict[str, Any]) -> str | None:
 
 
 def _flag(is_outlier: bool) -> str:
-    """A single visual marker for lines worth a second look. Deliberately not
-    applied to normal lines too -- silence means normal, the marker means
-    look here, so it stays a useful signal instead of decoration."""
     return "⚠️ " if is_outlier else ""
 
 
@@ -211,32 +201,19 @@ def _titleize(name: str) -> str:
     return name.replace("_", " ").title()
 
 
-def _day_label(date_str: Any) -> str:
+def _day_label_single_letter(date_str: Any) -> str:
     from datetime import datetime
 
     if not isinstance(date_str, str):
         return str(date_str)
     try:
-        return datetime.strptime(date_str, "%Y-%m-%d").strftime("%a %b %d")
-    except ValueError:
-        return date_str
-
-
-def _day_label_short(date_str: Any) -> str:
-    from datetime import datetime
-
-    if not isinstance(date_str, str):
-        return str(date_str)
-    try:
-        return datetime.strptime(date_str, "%Y-%m-%d").strftime("%a")
+        # Returns single letter: S, M, T, W, T, F, S
+        return datetime.strptime(date_str, "%Y-%m-%d").strftime("%a")[0]
     except ValueError:
         return date_str
 
 
 def _week_range_label(date_strs: list[Any]) -> str | None:
-    """"Sep 13-19" for the header, so each row doesn't need to repeat the
-    month -- handles the rarer case of a window spanning a month or year
-    boundary too."""
     from datetime import datetime
 
     parsed = []
@@ -258,10 +235,6 @@ def _week_range_label(date_strs: list[Any]) -> str | None:
 
 
 def _find_dated_activity_file(data_dir: str, date_str: str) -> str | None:
-    """Locate that day's per-activity JSON under data/<year>/<month>/. The
-    naming convention changed partway through this project's history: older
-    files are "<date>_activities.json", newer ones are "<date>_<slugified
-    activity name>.json" -- so this globs rather than assuming one pattern."""
     if not isinstance(date_str, str) or len(date_str) < 7:
         return None
     year, month = date_str[:4], date_str[5:7]
@@ -294,20 +267,25 @@ _LOCATION_PREFIX_RE = re.compile(r"^\S+\s*-\s*")
 
 
 def _strip_location_prefix(name: str) -> str:
-    """Garmin auto-names activities "<Location> - <Type>" (occasionally with
-    a stray leading underscore on the type, e.g. "Malolos - _Run + Strides").
-    Drop the location so This Week's activity titles take less space -- the
-    location is the same every day and adds nothing here."""
     if not isinstance(name, str):
         return name
     stripped = _LOCATION_PREFIX_RE.sub("", name, count=1).lstrip("_").strip()
     return stripped or name
 
 
+def _shorten_activity_name(name: str) -> str:
+    """Apply specific shorthand transformations to fit mobile table widths better."""
+    cleaned = _strip_location_prefix(name)
+    # Common training label shortcuts
+    cleaned = re.sub(r"Mon Strength A", "Strength A", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"Threshold", "Thr", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"Intervals", "Int", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"Core/Hip Stability", "Core / Hip", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"Run \+ Strides", "Run + Strides", cleaned, flags=re.IGNORECASE)
+    return cleaned
+
+
 def _dated_activity_seconds(data_dir: str | None, date_str: Any) -> float:
-    """Sum that day's activities' own 'time' fields -- more precise than the
-    rounded duration_hours in trend_recent_daily, so the This Week footer's
-    total duration doesn't drift by a minute from rounding error."""
     if not data_dir:
         return 0.0
     path = _find_dated_activity_file(data_dir, date_str)
@@ -337,10 +315,29 @@ def _format_week_duration(total_seconds: float) -> str:
     return f"{minutes}:{seconds:02d}"
 
 
+def _format_compact_volume(distance: float | None, day_seconds: float) -> str:
+    """Format distance rounded cleanly with trailing zero elimination (e.g. 6.0k -> 6k)
+    plus time appended like '6k @ 34:12'."""
+    time_str = _format_week_duration(day_seconds) if day_seconds > 0 else ""
+    
+    if distance and distance > 0:
+        # Round to 1 decimal place first
+        rounded_dist = round(distance, 1)
+        # If it's a whole number (e.g. 6.0), drop the decimal
+        if rounded_dist.is_integer():
+            dist_str = f"{int(rounded_dist)}k"
+        else:
+            dist_str = f"{rounded_dist}k"
+            
+        if time_str:
+            return f"{dist_str} @ {time_str}"
+        return dist_str
+    elif time_str:
+        return time_str
+    return "—"
+
+
 def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> list[str]:
-    """Per-day breakdown of the trend_recent_daily window (usually 7 days),
-    as a markdown table -- so the load/volume numbers above can be traced to
-    specific sessions instead of taken on faith."""
     daily = payload.get("trend_recent_daily")
     if not isinstance(daily, dict):
         return []
@@ -365,7 +362,7 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
             continue
         date_str = cell(row, "date")
         seen_dates.append(date_str)
-        label = _day_label_short(date_str)
+        label = _day_label_single_letter(date_str)
         count = _num(cell(row, "activity_count"))
         if not count:
             table_rows.append(f"| {label} | — | — | Rest |")
@@ -373,7 +370,7 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
 
         names = _dated_activity_names(data_dir, date_str)
         if names:
-            title = "/".join(_strip_location_prefix(n) for n in names)
+            title = "/".join(_shorten_activity_name(n) for n in names)
         else:
             sport_volume = cell(row, "sport_volume")
             sports = list(sport_volume.keys()) if isinstance(sport_volume, dict) else []
@@ -381,20 +378,12 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
 
         distance = _num(cell(row, "distance"))
         day_seconds = _dated_activity_seconds(data_dir, date_str)
-        # Distance is 0/absent for non-GPS activities (strength, core) --
-        # showing "0.0k" there reads as "went nowhere" rather than "distance
-        # doesn't apply to this activity type". Duration is always
-        # meaningful regardless of activity type, so it's the better
-        # fallback -- same column, not a new one, to stay phone-readable.
-        if distance:
-            dist_cell = f"{distance}k"
-        elif day_seconds:
-            dist_cell = _format_week_duration(day_seconds)
-        else:
-            dist_cell = "—"
+        
+        volume_cell = _format_compact_volume(distance, day_seconds)
+        
         load = _num(cell(row, "exercise_load"))
         load_cell = f"{load:g}" if load is not None else "—"
-        table_rows.append(f"| {label} | {dist_cell} | {load_cell} | {title} |")
+        table_rows.append(f"| {label} | {volume_cell} | {load_cell} | {title} |")
 
         total_sessions += int(count)
         if distance is not None:
@@ -407,12 +396,24 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
         return []
     range_label = _week_range_label(seen_dates)
     title = f"## This Week ({range_label})" if range_label else "## This Week"
-    header = [title, "", "| Day | Dist/Time | Load | Activity |", "|:--- | ---: | ---: | :--- |"]
+    
+    # HTML wrapper injected for best mobile viewing format (compact padding, text nowrap)
+    mobile_table_wrapper_open = '<div style="overflow-x:auto;"><table style="font-size:12px; width:100%; white-space:nowrap;">'
+    mobile_table_wrapper_close = '</table></div>'
+    
+    header = [
+        title, 
+        "", 
+        mobile_table_wrapper_open,
+        "| D | Volume | Load | Activity |", 
+        "|:---: | ---: | ---: | :--- |"
+    ]
     footer = [
         "",
         "| Sessions | Distance | Time | Load |",
         "|:---: | :---: | :---: | :---: |",
         f"| {total_sessions} | {total_distance:.2f} km | {_format_week_duration(total_seconds)} | {total_load:g} |",
+        mobile_table_wrapper_close
     ]
     return header + table_rows + footer
 
@@ -626,9 +627,6 @@ def _today_lines(metrics_date: Any, activities_payload: dict[str, Any] | None) -
     activities = activities_payload.get("activities")
     has_activities = isinstance(activities, list) and bool(activities)
 
-    # The activities file only refreshes on a day with a real activity, so an
-    # older date here means today is a rest day and this is the last logged
-    # run, not today's. Label it as such rather than implying it's today's.
     is_today = metrics_date is not None and activities_date == metrics_date
 
     if is_today and has_activities:
@@ -641,7 +639,6 @@ def _today_lines(metrics_date: Any, activities_payload: dict[str, Any] | None) -
     if not has_activities:
         return ["## Today — Rest Day", "", "_No activity logged._"]
 
-    # Stale file: real activities present, but dated before today.
     lines = ["## Today — Rest Day", "", f"_Most recent activity ({activities_date}):_"]
     for act in activities:
         if isinstance(act, dict):
@@ -671,7 +668,6 @@ def render(metrics: dict[str, Any], activities: dict[str, Any] | None, data_dir:
         out.extend(week_lines)
         out.append("")
 
-    # Collapse repeated blank lines from optional sections being empty.
     cleaned: list[str] = []
     for line in out:
         if line == "" and cleaned and cleaned[-1] == "":
