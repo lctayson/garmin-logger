@@ -15,7 +15,7 @@
 - **Malolos Running** — 10.03km · 1:14:18 · 7:25/km · HR 146/161 max
   - TE: AEROBIC_BASE · aerobic 3.2 · anaerobic 0
   - MS: 10.00k @ 7:25 146bpm 0.80m 168spm 278ms 7.9cm 238w
-  - 🧠 Clean, unremarkable recovery volume. Given a mediocre readiness score (53) and a persistent -2 performance condition, executing at 7:25/km with an average HR of 146 bpm kept you safely beneath your 150 bpm ceiling despite the local heat. You absorbed 10K of low-stress aerobic base without compounding fatigue, exactly what was called for ahead of the week's quality sessions.
+  - 🧠 Unremarkable, textbook recovery run. Coming in off a mediocre readiness score (53), you kept the effort strictly honest: 7:25/km pace yielded an average heart rate of 146 bpm, sitting comfortably under your 150 bpm recovery ceiling. The flat -2 performance condition is completely expected given the low readiness and morning humidity, but it didn't force any cardiac drift—stamina closed at 81% and the load was kept light at 93. Exactly what a low-readiness aerobic day should look like.
 
 ## Load & Trends
 
