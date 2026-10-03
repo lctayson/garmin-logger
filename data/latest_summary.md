@@ -15,7 +15,7 @@
 - **Malolos Running** — 10.03km · 1:14:18 · 7:25/km · HR 146/161 max
   - TE: AEROBIC_BASE · aerobic 3.2 · anaerobic 0
   - MS: 10.00k @ 7:25 146bpm 0.80m 168spm 278ms 7.9cm 238w
-  - 🧠 Unremarkable, disciplined recovery volume. Given the mediocre readiness score of 53 and a persistent Performance Condition of -2, keeping the average pace down to 7:25/km and heart rate capped at 146 bpm was the right call. The brief spike to 161 bpm likely reflects local terrain or late-run Malolos heat, but overall aerobic strain was minimal (load 93.2). Job done—rest up so you have the legs for quality work.
+  - 🧠 Unremarkable, disciplined recovery volume that matched your moderate readiness (score 53). Averaging 146 bpm at 7:25/km keeps you squarely beneath the 150 bpm ceiling for this pace bracket, even in the Malolos heat. The flat -2 performance condition reflects the accumulated fatigue you carried in, but keeping stamina above 80% and load under 100 means you absorbed the 10K without compromising the quality sessions ahead.
 
 ## Load & Trends
 
