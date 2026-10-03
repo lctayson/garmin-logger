@@ -207,7 +207,6 @@ def _day_label_single_letter(date_str: Any) -> str:
     if not isinstance(date_str, str):
         return str(date_str)
     try:
-        # Returns single letter: S, M, T, W, T, F, S
         return datetime.strptime(date_str, "%Y-%m-%d").strftime("%a")[0]
     except ValueError:
         return date_str
@@ -274,15 +273,45 @@ def _strip_location_prefix(name: str) -> str:
 
 
 def _shorten_activity_name(name: str) -> str:
-    """Apply specific shorthand transformations to fit mobile table widths better."""
+    """Smart algorithmic cleaner for training activity names:
+    - Removes location prefixes (e.g. 'Malolos - ')
+    - Strips leading day-of-week labels (e.g. 'Mon ', 'Friday ')
+    - Normalizes repetition multipliers ('3 × 8' -> '3x8')
+    - Compacts time units ('8min' -> '8m', '30sec' -> '30s')
+    - Applies standard training shorthand dictionaries (Threshold -> Thr, Intervals -> Int)
+    """
+    if not isinstance(name, str):
+        return name
+    
+    # 1. Strip Garmin location prefix
     cleaned = _strip_location_prefix(name)
-    # Common training label shortcuts
-    cleaned = re.sub(r"Mon Strength A", "Strength A", cleaned, flags=re.IGNORECASE)
-    cleaned = re.sub(r"Threshold", "Thr", cleaned, flags=re.IGNORECASE)
-    cleaned = re.sub(r"Intervals", "Int", cleaned, flags=re.IGNORECASE)
-    cleaned = re.sub(r"Core/Hip Stability", "Core / Hip", cleaned, flags=re.IGNORECASE)
-    cleaned = re.sub(r"Run \+ Strides", "Run + Strides", cleaned, flags=re.IGNORECASE)
-    return cleaned
+    
+    # 2. Strip leading day names dynamically
+    cleaned = re.sub(r"^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+", "", cleaned, flags=re.IGNORECASE)
+    
+    # 3. Standardize multiplication layout
+    cleaned = re.sub(r"\s*[×xX]\s*", "x", cleaned)
+    
+    # 4. Compact time indicators
+    cleaned = re.sub(r"\b(\d+)\s*mins?\b", r"\1m", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\b(\d+)\s*secs?\b", r"\1s", cleaned, flags=re.IGNORECASE)
+    
+    # 5. Smart dictionary abbreviation replacements for common training terms
+    abbreviations = {
+        r"\bThreshold\b": "Thr",
+        r"\bIntervals?\b": "Int",
+        r"\bRecovery\b": "Rec",
+        r"\bProgression\b": "Prog",
+        r"\bStability\b": "",  # Redundant with Core/Hip
+    }
+    for pattern, repl in abbreviations.items():
+        cleaned = re.sub(pattern, repl, cleaned, flags=re.IGNORECASE)
+        
+    # Clean up any leftover duplicate spacing or punctuation formatting
+    cleaned = re.sub(r"\s+", " ", cleaned).strip()
+    cleaned = re.sub(r"\s*/\s*", "/", cleaned)
+    
+    return cleaned or name
 
 
 def _dated_activity_seconds(data_dir: str | None, date_str: Any) -> float:
@@ -316,14 +345,12 @@ def _format_week_duration(total_seconds: float) -> str:
 
 
 def _format_compact_volume(distance: float | None, day_seconds: float) -> str:
-    """Format distance rounded cleanly with trailing zero elimination (e.g. 6.0k -> 6k)
+    """Format distance cleanly (dropping trailing zero e.g. 6.0k -> 6k)
     plus time appended like '6k @ 34:12'."""
     time_str = _format_week_duration(day_seconds) if day_seconds > 0 else ""
     
     if distance and distance > 0:
-        # Round to 1 decimal place first
         rounded_dist = round(distance, 1)
-        # If it's a whole number (e.g. 6.0), drop the decimal
         if rounded_dist.is_integer():
             dist_str = f"{int(rounded_dist)}k"
         else:
@@ -397,23 +424,17 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
     range_label = _week_range_label(seen_dates)
     title = f"## This Week ({range_label})" if range_label else "## This Week"
     
-    # HTML wrapper injected for best mobile viewing format (compact padding, text nowrap)
-    mobile_table_wrapper_open = '<div style="overflow-x:auto;"><table style="font-size:12px; width:100%; white-space:nowrap;">'
-    mobile_table_wrapper_close = '</table></div>'
-    
     header = [
         title, 
         "", 
-        mobile_table_wrapper_open,
         "| D | Volume | Load | Activity |", 
-        "|:---: | ---: | ---: | :--- |"
+        "|:---:|---:|---:|:---|"
     ]
     footer = [
         "",
         "| Sessions | Distance | Time | Load |",
-        "|:---: | :---: | :---: | :---: |",
+        "|:---:|:---:|:---:|:---:|",
         f"| {total_sessions} | {total_distance:.2f} km | {_format_week_duration(total_seconds)} | {total_load:g} |",
-        mobile_table_wrapper_close
     ]
     return header + table_rows + footer
 
