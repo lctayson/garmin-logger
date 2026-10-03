@@ -15,7 +15,6 @@
 - **Malolos Running** — 6.03km · 45:01 · 7:28/km · HR 139/151 max
   - TE: AEROBIC_BASE · aerobic 2.7 · anaerobic 0
   - MS: 6.00k · 7:29 139bpm 0.80m 167spm 281ms 8.0cm 235w
-  - 🧠 An unremarkable, disciplined recovery jog that respected low readiness (score 49, sub-par sleep) and the local heat. You kept the effort strictly restorative at 7:28/km and 139 bpm average, staying comfortably below the 145–150 bpm recovery cap even at your peak (151 bpm). Exactly the low-cost volume needed today—absorb the session and prioritize sleep tonight so you're ready for quality work later this week.
 
 ## Load & Trends
 
