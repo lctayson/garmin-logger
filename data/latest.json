@@ -79,7 +79,7 @@
       "rem": 0.85,
       "awake": 0.12
     },
-    "total_steps": 13461,
+    "total_steps": 13500,
     "naps": [
       {
         "start": "2026-10-02T06:31:00",

@@ -507,7 +507,7 @@
         ]
       },
       "lap_count": 11,
-      "ai_analysis": "Unremarkable, disciplined aerobic base run. Entering the session with moderate readiness (53), you respected the context and kept the effort strictly in check—averaging 146 bpm at 7:25/km over the 10K, safely below the 150 bpm ceiling for pure recovery/easy work. The flat -2 performance condition confirms some residual fatigue, but the controlled cardiac output avoided compounding it ahead of your key quality sessions.",
+      "ai_analysis": "A textbook recovery run that respected the mediocre readiness score (53). Keeping the average HR to 146 bpm across 10k in Malolos heat shows great discipline, cleanly staying under your 150 bpm ceiling even if the -2 Performance Condition reflects some lingering fatigue. This was unremarkable in the best way—pure aerobic maintenance that banked 74 minutes of time-on-feet without compromising the upcoming quality sessions.",
       "ai_analysis_provider": "gemini:gemini-3.8-flash"
     }
   ]
