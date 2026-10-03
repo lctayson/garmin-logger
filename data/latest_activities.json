@@ -507,7 +507,7 @@
         ]
       },
       "lap_count": 11,
-      "ai_analysis": "Unremarkable, disciplined recovery volume that matched your moderate readiness (score 53). Averaging 146 bpm at 7:25/km keeps you squarely beneath the 150 bpm ceiling for this pace bracket, even in the Malolos heat. The flat -2 performance condition reflects the accumulated fatigue you carried in, but keeping stamina above 80% and load under 100 means you absorbed the 10K without compromising the quality sessions ahead.",
+      "ai_analysis": "Unremarkable, disciplined recovery volume that matched your moderate readiness (score 53). You kept the effort strictly aerobic at an average HR of 146 bpm and a 7:25/km pace, sitting cleanly in your recovery zone without letting the Malolos morning heat drag the session into unintended steady work. The flat -2 performance condition reflects the accumulated fatigue you carried into the start, but execution was spot-on to absorb 10k without compromising the quality sessions ahead.",
       "ai_analysis_provider": "gemini:gemini-3.8-flash"
     }
   ]
