@@ -435,7 +435,7 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
     header = [
         title, 
         "", 
-        "| D | Volume | Load | Activity |", 
+        "| D | Dist · Time | Load | Activity |", 
         "|:---:|---:|---:|:---|"
     ]
     footer = [
