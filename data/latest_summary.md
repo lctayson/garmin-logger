@@ -15,7 +15,7 @@
 - **Malolos Running** — 10.03km · 1:14:18 · 7:25/km · HR 146/161 max
   - TE: AEROBIC_BASE · aerobic 3.2 · anaerobic 0
   - MS: 10.00k @ 7:25 146bpm 0.80m 168spm 278ms 7.9cm 238w
-  - 🧠 Unremarkable, well-executed recovery volume. Given a modest readiness score of 53 and a persistent Performance Condition of -2, keeping 10K capped at 7:25/km and an average HR of 146 bpm strictly honored the aerobic ceiling (<=150 bpm) despite the Malolos heat. This did exactly what it needed to do—banked low-cost base mileage without adding fatigue ahead of your key quality sessions.
+  - 🧠 Straightforward, unremarkable recovery-aerobic volume. Given the mediocre readiness score (53) and a flat -2 Performance Condition throughout, keeping the effort strictly disciplined at 7:25/km and an average HR of 146 bpm (right at the recovery ceiling) was the correct call. The peak HR of 161 bpm indicates some mild drift or a late surge, likely compounded by Malolos morning heat, but it didn't disrupt the session's intent to absorb volume without accumulating fatigue ahead of key quality days.
 
 ## Load & Trends
 
