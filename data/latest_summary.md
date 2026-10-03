@@ -15,6 +15,7 @@
 - **Malolos Running** — 6.03km · 45:01 · 7:28/km · HR 139/151 max
   - TE: AEROBIC_BASE · aerobic 2.7 · anaerobic 0
   - MS: 6.00k · 7:29 139bpm 0.80m 167spm 281ms 8.0cm 235w
+  - 🧠 Proper recovery execution here. Given your low readiness score (49) and mediocre sleep (67), keeping the pace down to 7:28/km held your average HR at 139 bpm—comfortably below your 145 bpm recovery ceiling even in the local heat. The slight dip in performance condition (+2 to -1) is typical when running under-recovered, but the modest 58 load ensures today absorbed rather than added stress ahead of your next quality day.
 
 ## Load & Trends
 
