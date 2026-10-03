@@ -15,7 +15,7 @@
 - **Malolos Running** — 10.03km · 1:14:18 · 7:25/km · HR 146/161 max
   - TE: AEROBIC_BASE · aerobic 3.2 · anaerobic 0
   - MS: 10.00k @ 7:25 146bpm 0.80m 168spm 278ms 7.9cm 238w
-  - 🧠 A textbook recovery run that respected the mediocre readiness score (53). Keeping the average HR to 146 bpm across 10k in Malolos heat shows great discipline, cleanly staying under your 150 bpm ceiling even if the -2 Performance Condition reflects some lingering fatigue. This was unremarkable in the best way—pure aerobic maintenance that banked 74 minutes of time-on-feet without compromising the upcoming quality sessions.
+  - 🧠 Unremarkable, disciplined recovery volume. Given a middling readiness score of 53 and a persistent performance condition of -2, keeping the pace back at 7:25/km to hold average HR at 146 bpm was the right call in the Malolos heat. It collected 10k of aerobic base (3.2 TE, 93 load) without accumulating fatigue ahead of your key quality sessions.
 
 ## Load & Trends
 

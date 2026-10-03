@@ -507,7 +507,7 @@
         ]
       },
       "lap_count": 11,
-      "ai_analysis": "A textbook recovery run that respected the mediocre readiness score (53). Keeping the average HR to 146 bpm across 10k in Malolos heat shows great discipline, cleanly staying under your 150 bpm ceiling even if the -2 Performance Condition reflects some lingering fatigue. This was unremarkable in the best way—pure aerobic maintenance that banked 74 minutes of time-on-feet without compromising the upcoming quality sessions.",
+      "ai_analysis": "Unremarkable, disciplined recovery volume. Given a middling readiness score of 53 and a persistent performance condition of -2, keeping the pace back at 7:25/km to hold average HR at 146 bpm was the right call in the Malolos heat. It collected 10k of aerobic base (3.2 TE, 93 load) without accumulating fatigue ahead of your key quality sessions.",
       "ai_analysis_provider": "gemini:gemini-3.8-flash"
     }
   ]
