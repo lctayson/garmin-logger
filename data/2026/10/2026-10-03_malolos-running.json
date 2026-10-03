@@ -507,7 +507,7 @@
         ]
       },
       "lap_count": 11,
-      "ai_analysis": "A textbook recovery/easy aerobic run executed exactly where it needed to be. Given the moderate readiness (53) and a flat -2 performance condition, keeping the effort strictly governed at 7:25/km and an average HR of 146 bpm protected the system while banking 10k of base volume. With only an 81% stamina floor and minimal physiological strain (93 load), you absorbed the miles cleanly without digging into tomorrow's capacity.",
+      "ai_analysis": "Unremarkable, disciplined recovery volume that matched your moderate readiness (score 53). You kept the effort strictly within bounds—averaging 7:25/km at 146 bpm, safely below your 150 bpm ceiling despite the local heat, with Performance Condition holding completely flat at -2 across the full 10k. Exactly the low-cost aerobic base work needed ahead of the quality sessions later in the week.",
       "ai_analysis_provider": "gemini:gemini-3.8-flash"
     }
   ]
