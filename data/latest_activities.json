@@ -507,7 +507,7 @@
         ]
       },
       "lap_count": 11,
-      "ai_analysis": "Unremarkable, textbook recovery run. Coming in off a mediocre readiness score (53), you kept the effort strictly honest: 7:25/km pace yielded an average heart rate of 146 bpm, sitting comfortably under your 150 bpm recovery ceiling. The flat -2 performance condition is completely expected given the low readiness and morning humidity, but it didn't force any cardiac drift—stamina closed at 81% and the load was kept light at 93. Exactly what a low-readiness aerobic day should look like.",
+      "ai_analysis": "A textbook easy aerobic/recovery run that appropriately respected your moderate readiness (53). Holding 7:25/km at an average HR of 146 bpm kept the cardiac cost well below your 150 bpm recovery ceiling for the bulk of the 10K, which is solid discipline in Malolos morning conditions. The flat -2 performance condition and 93 load confirm this served purely to bank base volume without adding meaningful fatigue ahead of your key quality sessions.",
       "ai_analysis_provider": "gemini:gemini-3.8-flash"
     }
   ]

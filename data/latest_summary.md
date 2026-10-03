@@ -15,7 +15,7 @@
 - **Malolos Running** — 10.03km · 1:14:18 · 7:25/km · HR 146/161 max
   - TE: AEROBIC_BASE · aerobic 3.2 · anaerobic 0
   - MS: 10.00k @ 7:25 146bpm 0.80m 168spm 278ms 7.9cm 238w
-  - 🧠 Unremarkable, textbook recovery run. Coming in off a mediocre readiness score (53), you kept the effort strictly honest: 7:25/km pace yielded an average heart rate of 146 bpm, sitting comfortably under your 150 bpm recovery ceiling. The flat -2 performance condition is completely expected given the low readiness and morning humidity, but it didn't force any cardiac drift—stamina closed at 81% and the load was kept light at 93. Exactly what a low-readiness aerobic day should look like.
+  - 🧠 A textbook easy aerobic/recovery run that appropriately respected your moderate readiness (53). Holding 7:25/km at an average HR of 146 bpm kept the cardiac cost well below your 150 bpm recovery ceiling for the bulk of the 10K, which is solid discipline in Malolos morning conditions. The flat -2 performance condition and 93 load confirm this served purely to bank base volume without adding meaningful fatigue ahead of your key quality sessions.
 
 ## Load & Trends
 
@@ -32,14 +32,14 @@
 
 ## This Week (Sep 27 – Oct 3)
 
-| Day | Dist | Load | Activity |
+| Day | Dist/Time | Load | Activity |
 |:--- | ---: | ---: | :--- |
 | Sun | 6.02k | 48 | Malolos Running |
-| Mon | 0.0k | 2.9 | Mon Strength A |
+| Mon | 17:58 | 2.9 | Mon Strength A |
 | Tue | 8.03k | 178.9 | 3 × 8min Threshold |
 | Wed | 6.03k | 58.1 | Run + Strides |
 | Thu | 7.02k | 151 | 6 × 2min VO₂ Intervals |
-| Fri | 0.0k | 3 | Friday Core/Hip Stability |
+| Fri | 24:36 | 3 | Friday Core/Hip Stability |
 | Sat | 10.03k | 93.2 | Malolos Running |
 
 | Sessions | Distance | Time | Load |
