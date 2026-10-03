@@ -15,7 +15,7 @@
 - **Malolos Running** — 10.03km · 1:14:18 · 7:25/km · HR 146/161 max
   - TE: AEROBIC_BASE · aerobic 3.2 · anaerobic 0
   - MS: 10.00k @ 7:25 146bpm 0.80m 168spm 278ms 7.9cm 238w
-  - 🧠 A textbook easy aerobic/recovery run that appropriately respected your moderate readiness (53). Holding 7:25/km at an average HR of 146 bpm kept the cardiac cost well below your 150 bpm recovery ceiling for the bulk of the 10K, which is solid discipline in Malolos morning conditions. The flat -2 performance condition and 93 load confirm this served purely to bank base volume without adding meaningful fatigue ahead of your key quality sessions.
+  - 🧠 Unremarkable and properly executed recovery/easy volume. Given the mediocre readiness score (53) and negative performance condition (-2.2), keeping the average heart rate at 146 bpm—safely under your 150 bpm ceiling for recovery running—shows disciplined restraint in the Malolos morning heat. You soaked up 10k of low-cost aerobic base work without accumulating unnecessary fatigue ahead of your key quality sessions.
 
 ## Load & Trends
 
@@ -32,16 +32,18 @@
 
 ## This Week (Sep 27 – Oct 3)
 
-| Day | Dist/Time | Load | Activity |
-|:--- | ---: | ---: | :--- |
-| Sun | 6.02k | 48 | Malolos Running |
-| Mon | 17:58 | 2.9 | Mon Strength A |
-| Tue | 8.03k | 178.9 | 3 × 8min Threshold |
-| Wed | 6.03k | 58.1 | Run + Strides |
-| Thu | 7.02k | 151 | 6 × 2min VO₂ Intervals |
-| Fri | 24:36 | 3 | Friday Core/Hip Stability |
-| Sat | 10.03k | 93.2 | Malolos Running |
+<div style="overflow-x:auto;"><table style="font-size:12px; width:100%; white-space:nowrap;">
+| D | Volume | Load | Activity |
+|:---: | ---: | ---: | :--- |
+| S | 6k @ 46:57 | 48 | Malolos Running |
+| M | 17:58 | 2.9 | Strength A |
+| T | 8k @ 54:18 | 178.9 | 3 × 8min Thr |
+| W | 6k @ 48:19 | 58.1 | Run + Strides |
+| T | 7k @ 48:28 | 151 | 6 × 2min VO₂ Int |
+| F | 24:36 | 3 | Friday Core / Hip |
+| S | 10k @ 1:14:18 | 93.2 | Malolos Running |
 
 | Sessions | Distance | Time | Load |
 |:---: | :---: | :---: | :---: |
 | 7 | 37.13 km | 5:14:54 | 535.1 |
+</table></div>
