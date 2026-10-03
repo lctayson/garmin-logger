@@ -15,7 +15,7 @@
 - **Malolos Running** — 10.03km · 1:14:18 · 7:25/km · HR 146/161 max
   - TE: AEROBIC_BASE · aerobic 3.2 · anaerobic 0
   - MS: 10.00k @ 7:25 146bpm 0.80m 168spm 278ms 7.9cm 238w
-  - 🧠 Unremarkable, disciplined recovery volume that matched your moderate readiness (score 53). You kept the effort strictly aerobic at an average HR of 146 bpm and a 7:25/km pace, sitting cleanly in your recovery zone without letting the Malolos morning heat drag the session into unintended steady work. The flat -2 performance condition reflects the accumulated fatigue you carried into the start, but execution was spot-on to absorb 10k without compromising the quality sessions ahead.
+  - 🧠 Unremarkable, textbook recovery run. Coming in with a moderate readiness of 53, you kept the pacing disciplined at 7:25/km and held average HR at 146 bpm, right within your sub-150 recovery ceiling despite the persistent -2 performance condition. A 10k aerobic deposit with zero unintended intensity—exactly what was needed to absorb recent work without digging into fatigue reserves.
 
 ## Load & Trends
 
@@ -34,13 +34,13 @@
 
 | D | Volume | Load | Activity |
 |:---:|---:|---:|:---|
-| S | 6k @ 46:57 | 48 | Malolos Running |
+| S | 6k @ 46:57 | 48 | Malolos Run |
 | M | 17:58 | 2.9 | Strength A |
 | T | 8k @ 54:18 | 178.9 | 3x8min Thr |
 | W | 6k @ 48:19 | 58.1 | Run + Strides |
 | T | 7k @ 48:28 | 151 | 6x2min VO₂ Int |
 | F | 24:36 | 3 | Core/Hip |
-| S | 10k @ 1:14:18 | 93.2 | Malolos Running |
+| S | 10k @ 1:14:18 | 93.2 | Malolos Run |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|

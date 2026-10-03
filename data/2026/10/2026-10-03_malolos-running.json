@@ -507,7 +507,7 @@
         ]
       },
       "lap_count": 11,
-      "ai_analysis": "Unremarkable, disciplined recovery volume that matched your moderate readiness (score 53). You kept the effort strictly aerobic at an average HR of 146 bpm and a 7:25/km pace, sitting cleanly in your recovery zone without letting the Malolos morning heat drag the session into unintended steady work. The flat -2 performance condition reflects the accumulated fatigue you carried into the start, but execution was spot-on to absorb 10k without compromising the quality sessions ahead.",
+      "ai_analysis": "Unremarkable, textbook recovery run. Coming in with a moderate readiness of 53, you kept the pacing disciplined at 7:25/km and held average HR at 146 bpm, right within your sub-150 recovery ceiling despite the persistent -2 performance condition. A 10k aerobic deposit with zero unintended intensity—exactly what was needed to absorb recent work without digging into fatigue reserves.",
       "ai_analysis_provider": "gemini:gemini-3.8-flash"
     }
   ]
