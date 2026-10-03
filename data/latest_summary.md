@@ -15,7 +15,7 @@
 - **Malolos Running** — 10.03km · 1:14:18 · 7:25/km · HR 146/161 max
   - TE: AEROBIC_BASE · aerobic 3.2 · anaerobic 0
   - MS: 10.00k @ 7:25 146bpm 0.80m 168spm 278ms 7.9cm 238w
-  - 🧠 Unremarkable, textbook recovery running. With readiness at a moderate 53 and a flat -2 Performance Condition throughout, you kept discipline where it mattered: holding average HR right at 146 bpm and pace at an honest 7:25/km across the full 10K. This absorbed minimal stamina (ending at 81%) and produced clean aerobic base work without borrowing from tomorrow’s key quality session.
+  - 🧠 A text-book easy aerobic day that respected your moderate readiness (score 53). Running 10K at 7:25/km with an average HR of 146 bpm kept you right at the floor of your aerobic zone, keeping cardiac cost minimal despite the -2 performance condition and Malolos morning warmth. Nothing dramatic here—just clean, low-stress base volume that won't compromise your legs for the quality sessions ahead.
 
 ## Load & Trends
 
