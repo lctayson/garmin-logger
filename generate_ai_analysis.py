@@ -66,7 +66,10 @@ def _call_anthropic(model, system, user_content):
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
         raise RuntimeError("ANTHROPIC_API_KEY not set")
-    client = anthropic.Anthropic(api_key=api_key)
+    # SDK already retries transient errors (529 overloaded, timeouts, etc.)
+    # automatically -- default is 2, bumped up since this runs unattended
+    # in CI with nobody waiting on a live response.
+    client = anthropic.Anthropic(api_key=api_key, max_retries=5)
     response = client.messages.create(
         model=model,
         max_tokens=MAX_OUTPUT_TOKENS,
@@ -83,8 +86,22 @@ def _call_gemini(model, system, user_content):
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY not set")
-    client = genai.Client(api_key=api_key)
-    
+    # The SDK does NOT retry by default (retry_options is None unless set
+    # explicitly) -- a transient 503 (model overloaded, routine and
+    # temporary) fails outright on the first attempt otherwise.
+    client = genai.Client(
+        api_key=api_key,
+        http_options=types.HttpOptions(
+            retry_options=types.HttpRetryOptions(
+                attempts=5,
+                initial_delay=1.0,
+                max_delay=20.0,
+                exp_base=2.0,
+                http_status_codes=[408, 429, 500, 502, 503, 504],
+            ),
+        ),
+    )
+
     # Handle thinking configuration based on model version family
     if "gemini-3" in model:
         thinking_cfg = types.ThinkingConfig(thinking_level="low")
