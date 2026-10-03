@@ -36,7 +36,7 @@
 |:---:|---:|---:|:---|
 | S | 6k @ 46:57 | 48 | Malolos Run |
 | M | 6K · 46:57 | 2.9 | Strength A |
-| T | 6K / 46:57 | 178.9 | 3x8min Thr |
+| T | 6K • 46:57 | 178.9 | 3x8min Thr |
 | W | 6K — 46:57 | 58.1 | Run + Strides |
 | T | 6K • 46:57 | 151 | 6x2min VO₂ Int |
 | F | 6K, 46:57 | 3 | Core/Hip |
