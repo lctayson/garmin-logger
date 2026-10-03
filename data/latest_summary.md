@@ -15,7 +15,6 @@
 - **Malolos Running** — 10.03km · 1:14:18 · 7:25/km · HR 146/161 max
   - TE: AEROBIC_BASE · aerobic 3.2 · anaerobic 0
   - MS: 10.00k @ 7:25 146bpm 0.80m 168spm 278ms 7.9cm 238w
-  - 🧠 Unremarkable easy aerobic volume, executed cleanly despite entering with moderate readiness (score 53). Pacing at 7:25/km kept your average HR right at 146 bpm, safely inside the recovery/easy aerobic ceiling (≤150 bpm) with a max HR of only 161. The flat performance condition (-2 across the board) reflects the fatigue you brought in, but you didn't force the pace to chase numbers in the heat. Solid, low-cost maintenance run.
 
 ## Load & Trends
 
