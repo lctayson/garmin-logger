@@ -32,15 +32,15 @@
 
 ## This Week (Sep 27 – Oct 3)
 
-| D | Volume | Load | Activity |
+| D |Volume | Load | Activity |
 |:---:|---:|---:|:---|
-| S | 6k @ 46:57 | 48 | Malolos Running |
-| M | 17:58 | 2.9 | Strength A |
-| T | 8k @ 54:18 | 178.9 | 3x8min Thr |
-| W | 6k @ 48:19 | 58.1 | Run + Strides |
-| T | 7k @ 48:28 | 151 | 6x2min VO₂ Int |
-| F | 24:36 | 3 | Core/Hip |
-| S | 10k @ 1:14:18 | 93.2 | Malolos Running |
+| S |6k @ 46:57 | 48 | Malolos Running |
+| M |17:58 | 2.9 | Strength A |
+| T |8k @ 54:18 | 178.9 | 3x8min Thr |
+| W |6k @ 48:19 | 58.1 | Run + Strides |
+| T |7k @ 48:28 | 151 | 6x2min VO₂ Int |
+| F |24:36 | 3 | Core/Hip |
+| S |10k @ 1:14:18 | 93.2 | Malolos Running |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
