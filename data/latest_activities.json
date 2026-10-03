@@ -507,7 +507,7 @@
         ]
       },
       "lap_count": 11,
-      "ai_analysis": "A textbook recovery/easy aerobic volume run. With readiness sitting at a modest 53 and a persistent Performance Condition of -2, you kept discipline where it mattered: 7:25/km average pace held the average heart rate right at 146 bpm, comfortably below the 150 bpm recovery ceiling. Given the Malolos heat, keeping the cardiac cost suppressed like this means zero interference with the harder quality sessions scheduled for the bridge phase.",
+      "ai_analysis": "A textbook recovery/easy aerobic run executed exactly where it needed to be. Given the moderate readiness (53) and a flat -2 performance condition, keeping the effort strictly governed at 7:25/km and an average HR of 146 bpm protected the system while banking 10k of base volume. With only an 81% stamina floor and minimal physiological strain (93 load), you absorbed the miles cleanly without digging into tomorrow's capacity.",
       "ai_analysis_provider": "gemini:gemini-3.8-flash"
     }
   ]
