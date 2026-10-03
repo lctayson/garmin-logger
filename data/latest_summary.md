@@ -15,7 +15,7 @@
 - **Malolos Running** — 10.03km · 1:14:18 · 7:25/km · HR 146/161 max
   - TE: AEROBIC_BASE · aerobic 3.2 · anaerobic 0
   - MS: 10.00k @ 7:25 146bpm 0.80m 168spm 278ms 7.9cm 238w
-  - 🧠 Straightforward aerobic base volume today, executed with good discipline given the mediocre readiness score (53). You kept the average HR capped right at 146 bpm across 10k at 7:25/km, keeping the cardiac cost squarely in the recovery/easy zone despite the persistent -2 performance condition and local heat. Unremarkable by design—this serves its purpose as low-cost aerobic maintenance without taking anything away from your upcoming quality sessions.
+  - 🧠 A textbook recovery/easy aerobic volume run. With readiness sitting at a modest 53 and a persistent Performance Condition of -2, you kept discipline where it mattered: 7:25/km average pace held the average heart rate right at 146 bpm, comfortably below the 150 bpm recovery ceiling. Given the Malolos heat, keeping the cardiac cost suppressed like this means zero interference with the harder quality sessions scheduled for the bridge phase.
 
 ## Load & Trends
 
