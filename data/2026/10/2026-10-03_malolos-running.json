@@ -507,7 +507,7 @@
         ]
       },
       "lap_count": 11,
-      "ai_analysis": "Textbook execution for a moderate-readiness day (readiness 53). You absorbed the lower recovery capacity by keeping the pace restrained at 7:25/km, which pinned your average HR right at 146 bpm—safely within your recovery ceiling (<=145-150 bpm) despite the Malolos heat. The steady -2 performance condition and 81% ending stamina show you didn't overreach, banking 10k of honest aerobic volume (93 load) without digging a recovery hole.",
+      "ai_analysis": "Unremarkable easy aerobic volume, executed cleanly despite entering with moderate readiness (score 53). Pacing at 7:25/km kept your average HR right at 146 bpm, safely inside the recovery/easy aerobic ceiling (≤150 bpm) with a max HR of only 161. The flat performance condition (-2 across the board) reflects the fatigue you brought in, but you didn't force the pace to chase numbers in the heat. Solid, low-cost maintenance run.",
       "ai_analysis_provider": "gemini:gemini-3.8-flash"
     }
   ]
