@@ -182,7 +182,7 @@ def _main_set_line(act: dict[str, Any]) -> str | None:
         return None
 
     pace = total_time / total_distance
-    bits = [f"{_round_half_up(total_distance, 2):.2f}k @ {_format_pace(pace)}"]
+    bits = [f"{_round_half_up(total_distance, 2):.2f}k · {_format_pace(pace)}"]
     for field, unit, places in _MAIN_SET_FIELDS:
         if not have[field]:
             continue
@@ -354,7 +354,7 @@ def _format_week_duration(total_seconds: float) -> str:
 
 def _format_compact_volume(distance: float | None, day_seconds: float) -> str:
     """Format distance cleanly (dropping trailing zero e.g. 6.0k -> 6k)
-    plus time appended like '6k @ 34:12'."""
+    plus time appended like '6k · 34:12'."""
     time_str = _format_week_duration(day_seconds) if day_seconds > 0 else ""
     
     if distance and distance > 0:
@@ -365,7 +365,7 @@ def _format_compact_volume(distance: float | None, day_seconds: float) -> str:
             dist_str = f"{rounded_dist}k"
             
         if time_str:
-            return f"{dist_str} @ {time_str}"
+            return f"{dist_str} · {time_str}"
         return dist_str
     elif time_str:
         return time_str
