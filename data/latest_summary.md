@@ -32,7 +32,7 @@
 
 ## This Week (Sep 27 – Oct 3)
 
-| D | xDist · Time | Load | Activity |
+| D | xxDist · Time | Load | Activity |
 |:---:|---:|---:|:---|
 | S | 6k · 46:57 | 48 | Malolos Run |
 | M | 17:58 | 2.9 | Strength A |
