@@ -279,6 +279,7 @@ def _shorten_activity_name(name: str) -> str:
     - Normalizes repetition multipliers ('3 × 8' -> '3x8')
     - Compacts time units ('8min' -> '8m', '30sec' -> '30s')
     - Applies standard training shorthand dictionaries (Threshold -> Thr, Intervals -> Int)
+    - Normalizes generic sport terms (Running -> Run, Cycling -> Ride)
     """
     if not isinstance(name, str):
         return name
@@ -296,8 +297,15 @@ def _shorten_activity_name(name: str) -> str:
     cleaned = re.sub(r"\b(\d+)\s*mins?\b", r"\1m", cleaned, flags=re.IGNORECASE)
     cleaned = re.sub(r"\b(\d+)\s*secs?\b", r"\1s", cleaned, flags=re.IGNORECASE)
     
-    # 5. Smart dictionary abbreviation replacements for common training terms
+    # 5. Smart dictionary abbreviation replacements for common training and sport terms
     abbreviations = {
+        r"\bRunning\b": "Run",
+        r"\bCycling\b": "Ride",
+        r"\bWalking\b": "Walk",
+        r"\bSwimming\b": "Swim",
+        r"\bTrail Running\b": "Trail Run",
+        r"\bTreadmill Running\b": "Tread Run",
+        r"\bVirtual Ride\b": "Virt Ride",
         r"\bThreshold\b": "Thr",
         r"\bIntervals?\b": "Int",
         r"\bRecovery\b": "Rec",
