@@ -507,7 +507,7 @@
         ]
       },
       "lap_count": 11,
-      "ai_analysis": "Straightforward, unremarkable recovery-aerobic volume. Given the mediocre readiness score (53) and a flat -2 Performance Condition throughout, keeping the effort strictly disciplined at 7:25/km and an average HR of 146 bpm (right at the recovery ceiling) was the correct call. The peak HR of 161 bpm indicates some mild drift or a late surge, likely compounded by Malolos morning heat, but it didn't disrupt the session's intent to absorb volume without accumulating fatigue ahead of key quality days.",
+      "ai_analysis": "Straightforward aerobic base volume today, executed with good discipline given the mediocre readiness score (53). You kept the average HR capped right at 146 bpm across 10k at 7:25/km, keeping the cardiac cost squarely in the recovery/easy zone despite the persistent -2 performance condition and local heat. Unremarkable by design—this serves its purpose as low-cost aerobic maintenance without taking anything away from your upcoming quality sessions.",
       "ai_analysis_provider": "gemini:gemini-3.8-flash"
     }
   ]
