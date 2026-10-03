@@ -15,7 +15,7 @@
 - **Malolos Running** — 10.03km · 1:14:18 · 7:25/km · HR 146/161 max
   - TE: AEROBIC_BASE · aerobic 3.2 · anaerobic 0
   - MS: 10.00k @ 7:25 146bpm 0.80m 168spm 278ms 7.9cm 238w
-  - 🧠 A textbook, unremarkable recovery run that respected your lower readiness score (53). Keeping the average HR at 146 bpm over 10 km at a 7:25/km pace kept the cardiac stress well under your aerobic ceiling despite the local heat. The persistent -2 performance condition confirms you carried some residual fatigue into the session, but you absorbed the 93 load without turning it into unintended steady work.
+  - 🧠 Unremarkable easy aerobic volume, executed properly given the modest readiness score (53). Holding 7:25/km at an average HR of 146 bpm kept the cardiac cost safely below the 150 bpm ceiling despite the local heat, perfectly fitting a recovery/easy bracket. The flat -2 performance condition reflects the slightly sluggish baseline rather than in-run fatigue, and the low load (93) leaves your legs fresh for quality work ahead.
 
 ## Load & Trends
 
@@ -32,16 +32,15 @@
 
 ## This Week (Sep 27 – Oct 3)
 
-|D|Volume|Load|Activity|
+| D | Volume | Load | Activity |
 |:---:|---:|---:|:---|
-|S|6k @ 46:57|48|Malolos Run|
-|M|17:58|2.9|Strength A|
-|T|8k @ 54:18|178.9|3x8min Thr|
-|W|6k @ 48:19|58.1|Run + Strides|
-|T|7k @ 48:28|151|6x2min VO₂ Int|
-|F|24:36|3|Core/Hip|
-|S|10k @ 1:14:18|93.2|Malolos Run|
-
+| S | 6k @ 46:57 | 48 | Malolos Running |
+| M | 17:58 | 2.9 | Strength A |
+| T | 8k @ 54:18 | 178.9 | 3x8min Thr |
+| W | 6k @ 48:19 | 58.1 | Run + Strides |
+| T | 7k @ 48:28 | 151 | 6x2min VO₂ Int |
+| F | 24:36 | 3 | Core/Hip |
+| S | 10k @ 1:14:18 | 93.2 | Malolos Running |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
