@@ -14,8 +14,8 @@
 
 - **Malolos Running** — 10.03km · 1:14:18 · 7:25/km · HR 146/161 max
   - TE: AEROBIC_BASE · aerobic 3.2 · anaerobic 0
-  - MS: 10.00k @ 7:25 146bpm 0.80m 168spm 278ms 7.9cm 238w
-  - 🧠 Unremarkable, textbook recovery run. Coming in with a moderate readiness of 53, you kept the pacing disciplined at 7:25/km and held average HR at 146 bpm, right within your sub-150 recovery ceiling despite the persistent -2 performance condition. A 10k aerobic deposit with zero unintended intensity—exactly what was needed to absorb recent work without digging into fatigue reserves.
+  - MS: 10.00k · 7:25 146bpm 0.80m 168spm 278ms 7.9cm 238w
+  - 🧠 A textbook, unremarkable recovery run. Pacing (7:25/km) and average heart rate (146 bpm) sat right inside your recovery/easy aerobic target zone (<=145–150 bpm), keeping the cardiac cost low despite starting with a moderate readiness score of 53. The negative performance condition (-2.2 avg) simply reflects that lower readiness, but you managed the effort properly by not forcing the pace, resulting in a modest training load (93) and a clean aerobic base stimulus without digging into recovery reserves.
 
 ## Load & Trends
 
@@ -34,13 +34,13 @@
 
 | D | Volume | Load | Activity |
 |:---:|---:|---:|:---|
-| S | 6k @ 46:57 | 48 | Malolos Run |
-| M | 6K · 46:57 | 2.9 | Strength A |
-| T | 6K • 46:57 | 178.9 | 3x8min Thr |
-| W | 6K — 46:57 | 58.1 | Run + Strides |
-| T | 6K • 46:57 | 151 | 6x2min VO₂ Int |
-| F | 6K, 46:57 | 3 | Core/Hip |
-| S | 6K · 46:57 | 93.2 | Malolos Run |
+| S | 6k · 46:57 | 48 | Malolos Run |
+| M | 17:58 | 2.9 | Strength A |
+| T | 8k · 54:18 | 178.9 | 3x8min Thr |
+| W | 6k · 48:19 | 58.1 | Run + Strides |
+| T | 7k · 48:28 | 151 | 6x2min VO₂ Int |
+| F | 24:36 | 3 | Core/Hip |
+| S | 10k · 1:14:18 | 93.2 | Malolos Run |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
