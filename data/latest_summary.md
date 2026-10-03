@@ -15,7 +15,7 @@
 - **Malolos Running** — 10.03km · 1:14:18 · 7:25/km · HR 146/161 max
   - TE: AEROBIC_BASE · aerobic 3.2 · anaerobic 0
   - MS: 10.00k @ 7:25 146bpm 0.80m 168spm 278ms 7.9cm 238w
-  - 🧠 Unremarkable and properly executed recovery/easy volume. Given the mediocre readiness score (53) and negative performance condition (-2.2), keeping the average heart rate at 146 bpm—safely under your 150 bpm ceiling for recovery running—shows disciplined restraint in the Malolos morning heat. You soaked up 10k of low-cost aerobic base work without accumulating unnecessary fatigue ahead of your key quality sessions.
+  - 🧠 A completely unremarkable, disciplined recovery/easy run—which is exactly what was called for on a 53 readiness day. Holding a 7:25/km pace kept your average HR at 146 bpm, cleanly inside your sub-150 recovery ceiling despite the Malolos heat and a persistent -2 performance condition. A low-stress 93 load that absorbs without compromising the quality sessions ahead this week.
 
 ## Load & Trends
 
@@ -32,18 +32,16 @@
 
 ## This Week (Sep 27 – Oct 3)
 
-<div style="overflow-x:auto;"><table style="font-size:12px; width:100%; white-space:nowrap;">
 | D | Volume | Load | Activity |
-|:---: | ---: | ---: | :--- |
+|:---:|---:|---:|:---|
 | S | 6k @ 46:57 | 48 | Malolos Running |
 | M | 17:58 | 2.9 | Strength A |
-| T | 8k @ 54:18 | 178.9 | 3 × 8min Thr |
+| T | 8k @ 54:18 | 178.9 | 3x8min Thr |
 | W | 6k @ 48:19 | 58.1 | Run + Strides |
-| T | 7k @ 48:28 | 151 | 6 × 2min VO₂ Int |
-| F | 24:36 | 3 | Friday Core / Hip |
+| T | 7k @ 48:28 | 151 | 6x2min VO₂ Int |
+| F | 24:36 | 3 | Core/Hip |
 | S | 10k @ 1:14:18 | 93.2 | Malolos Running |
 
 | Sessions | Distance | Time | Load |
-|:---: | :---: | :---: | :---: |
+|:---:|:---:|:---:|:---:|
 | 7 | 37.13 km | 5:14:54 | 535.1 |
-</table></div>
