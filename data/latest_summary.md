@@ -32,7 +32,7 @@
 ## This Week (Sep 28 – Oct 4)
 
 | D | Activity | Volume | Load |
-|:---:|---:|:---|---|
+|:---:|---|---:|---|
 | M | Strength A | 17:58 | 2.9 |
 | T | 3x8min Thr | 8k · 54:18 | 178.9 |
 | W | Run + Strides | 6k · 48:19 | 58.1 |
