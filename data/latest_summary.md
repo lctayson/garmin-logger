@@ -15,7 +15,6 @@
 - **Malolos Running** — 6.03km · 45:01 · 7:28/km · HR 139/151 max
   - TE: AEROBIC_BASE · aerobic 2.7 · anaerobic 0
   - MS: 6.00k · 7:29 139bpm 0.80m 167spm 281ms 8.0cm 235w
-  - 🧠 Unremarkable recovery run, executed exactly right given the mediocre sleep (score 67) and readiness score of 50. Pacing (7:28/km) and cardiac cost (139 bpm average, peaking at 151 bpm) stayed comfortably within the true recovery ceiling despite the Malolos morning heat. The slight fade in performance condition from +2 to -1 is completely expected under these recovery metrics and reflects zero actual fatigue debt—just low-impact base maintenance doing what it's supposed to do.
 
 ## Load & Trends
 
