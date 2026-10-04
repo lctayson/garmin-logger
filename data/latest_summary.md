@@ -15,6 +15,7 @@
 - **Malolos Running** — 6.03km · 45:01 · 7:28/km · HR 139/151 max
   - TE: AEROBIC_BASE · aerobic 2.7 · anaerobic 0
   - MS: 6.00k · 7:29 139bpm 0.80m 167spm 281ms 8.0cm 235w
+  - 🧠 A disciplined recovery effort given the mediocre readiness score (50) and subpar sleep (67). You kept your effort strictly within the true recovery ceiling—averaging 139 bpm at 7:28/km pace with HR peaking at just 151 bpm—refusing to let Malolos heat drag you into higher zones. The minor performance condition fade (+2 to -1) is expected under those recovery conditions, and an aerobic load of 58.4 served its purpose without compromising your upcoming quality days.
 
 ## Load & Trends
 
