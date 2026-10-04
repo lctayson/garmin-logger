@@ -15,6 +15,7 @@
 - **Malolos Running** — 6.03km · 45:01 · 7:28/km · HR 139/151 max
   - TE: AEROBIC_BASE · aerobic 2.7 · anaerobic 0
   - MS: 6.00k · 7:29 139bpm 0.80m 167spm 281ms 8.0cm 235w
+  - 🧠 Unremarkable recovery run, executed exactly right given the mediocre sleep (score 67) and readiness score of 50. Pacing (7:28/km) and cardiac cost (139 bpm average, peaking at 151 bpm) stayed comfortably within the true recovery ceiling despite the Malolos morning heat. The slight fade in performance condition from +2 to -1 is completely expected under these recovery metrics and reflects zero actual fatigue debt—just low-impact base maintenance doing what it's supposed to do.
 
 ## Load & Trends
 
@@ -31,15 +32,15 @@
 
 ## This Week (Sep 28 – Oct 4)
 
-| D | Dist · Time | Load | Activity |
-|:---:|---:|---:|:---|
-| M | 17:58 | 2.9 | Strength A |
-| T | 8k · 54:18 | 178.9 | 3x8min Thr |
-| W | 6k · 48:19 | 58.1 | Run + Strides |
-| T | 7k · 48:28 | 151 | 6x2min VO₂ Int |
-| F | 24:36 | 3 | Core/Hip |
-| S | 10k · 1:14:18 | 93.2 | Malolos Run |
-| S | 6k · 45:01 | 58.4 | Malolos Run |
+| D | Activity | Volume | Load |
+|:---:|---:|:---|---|
+| M | Strength A | 17:58 | 2.9 |
+| T | 3x8min Thr | 8k · 54:18 | 178.9 |
+| W | Run + Strides | 6k · 48:19 | 58.1 |
+| T | 6x2min VO₂ Int | 7k · 48:28 | 151 |
+| F | Core/Hip | 24:36 | 3 |
+| S | Malolos Run | 10k · 1:14:18 | 93.2 |
+| S | Malolos Run | 6k · 45:01 | 58.4 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
