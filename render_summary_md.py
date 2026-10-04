@@ -400,7 +400,7 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
         label = _day_label_single_letter(date_str)
         count = _num(cell(row, "activity_count"))
         if not count:
-            table_rows.append(f"| {label} | — | — | Rest |")
+            table_rows.append(f"| {label} | Rest | — | — |")
             continue
 
         names = _dated_activity_names(data_dir, date_str)
@@ -418,7 +418,7 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
         
         load = _num(cell(row, "exercise_load"))
         load_cell = f"{load:g}" if load is not None else "—"
-        table_rows.append(f"| {label} | {volume_cell} | {load_cell} | {title} |")
+        table_rows.append(f"| {label} | {title} | {volume_cell} | {load_cell} |")
 
         total_sessions += int(count)
         if distance is not None:
@@ -435,8 +435,8 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
     header = [
         title, 
         "", 
-        "| D | Dist · Time | Load | Activity |", 
-        "|:---:|---:|---:|:---|"
+        "| D | Activity | Volume | Load |", 
+        "|:---:|---:|:---|---|"
     ]
     footer = [
         "",
