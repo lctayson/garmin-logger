@@ -15,6 +15,7 @@
 - **Malolos Running** — 6.03km · 45:01 · 7:28/km · HR 139/151 max
   - TE: AEROBIC_BASE · aerobic 2.7 · anaerobic 0
   - MS: 6.00k @ 7:29 139bpm 0.80m 167spm 281ms 8.0cm 235w
+  - 🧠 A textbook recovery jog that did exactly what it needed to do given a mediocre readiness score (50) and suboptimal sleep (67). Holding an average pace of 7:28/km kept your heart rate tightly capped at 139 bpm, with a peak of only 151 bpm—well within your true recovery ceiling despite Malolos morning conditions. With performance condition slipping from +2 to -1 across just 45 minutes, keeping the effort this disciplined avoided digging a hole ahead of your upcoming quality work.
 
 ## Load & Trends
 
