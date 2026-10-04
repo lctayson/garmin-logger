@@ -15,7 +15,7 @@
 - **Malolos Running** — 6.03km · 45:01 · 7:28/km · HR 139/151 max
   - TE: AEROBIC_BASE · aerobic 2.7 · anaerobic 0
   - MS: 6.00k @ 7:29 139bpm 0.80m 167spm 281ms 8.0cm 235w
-  - 🧠 Clean recovery run executed exactly where it needed to be. Coming off a moderate readiness score (50) and subpar sleep (67), keeping the pace at 7:28/km held your average heart rate to 139 bpm—comfortably under your 145–150 bpm ceiling even with the local heat factor. Performance condition dropped from +2 to -1 over the 45 minutes, reflecting that underlying fatigue, but the 58 load won't compromise your upcoming quality sessions.
+  - 🧠 Unremarkable and properly executed recovery run. Coming in with a moderate readiness score of 50 and a mediocre sleep score (67), you kept the discipline intact—averaging 7:28/km with heart rate strictly contained at 139 bpm (peaking at just 151 bpm), firmly inside your recovery ceiling. The slight fade in performance condition (+2 to -1) is typical given the low sleep, but keeping the physiological cost tiny (58 load, 10 Body Battery drain) ensures this absorbed smoothly without compromising your key quality days.
 
 ## Load & Trends
 
