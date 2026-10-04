@@ -182,7 +182,7 @@ def _main_set_line(act: dict[str, Any]) -> str | None:
         return None
 
     pace = total_time / total_distance
-    bits = [f"{_round_half_up(total_distance, 2):.2f}k · {_format_pace(pace)}"]
+    bits = [f"{_round_half_up(total_distance, 2):.2f}k @ {_format_pace(pace)}"]
     for field, unit, places in _MAIN_SET_FIELDS:
         if not have[field]:
             continue
