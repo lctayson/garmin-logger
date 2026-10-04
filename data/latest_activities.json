@@ -387,7 +387,7 @@
         ]
       },
       "lap_count": 7,
-      "ai_analysis": "A textbook recovery run that stayed right where it needed to be. Despite coming in on subpar sleep (readiness 50, sleep score 67), you kept the effort disciplined at 7:28/km with an average HR of 139 bpm, well under your 145 bpm ceiling and peaking at just 151. The slight drop in performance condition (+2 to -1) is typical given the fatigue and morning heat, but by not forcing the pace, you kept the systemic cost minimal (load 58) and absorbed the aerobic base work cleanly.",
+      "ai_analysis": "Clean recovery run executed exactly where it needed to be. Coming off a moderate readiness score (50) and subpar sleep (67), keeping the pace at 7:28/km held your average heart rate to 139 bpm—comfortably under your 145–150 bpm ceiling even with the local heat factor. Performance condition dropped from +2 to -1 over the 45 minutes, reflecting that underlying fatigue, but the 58 load won't compromise your upcoming quality sessions.",
       "ai_analysis_provider": "gemini:gemini-3.8-flash"
     }
   ]
