@@ -44,7 +44,7 @@
         "feedback": "Good"
       }
     },
-    "ai_analysis": "Proceed with Strength A as scheduled. Today’s moderate readiness score (56) is entirely driven by a shorter sleep night (6.3 hours), whereas your autonomic recovery is fully primed (HRV at 53ms, resting HR steady at 59bpm, and 0 recovery hours remaining). Focus on explosive, clean mechanics for the hip extension work and keep the volume strictly within prescription—don't chase fatigue today so your legs are sharp for tomorrow's threshold intervals.",
+    "ai_analysis": "Readiness is moderate at 56, driven almost entirely by mediocre sleep (6.3 hours, sleep score 64), while your underlying physiological markers are completely intact (HRV balanced at 53 ms, 0 recovery hours needed, ACWR optimal at 0.8). \n\nToday calls for **Strength A (power/hip extension)** with no running scheduled. Proceed with the lift as planned—the low sleep isn't enough to compromise a non-running neuromuscular session, but keep rest intervals honest between heavy sets and prioritize getting to bed early tonight so you're clear for Tuesday's threshold work.",
     "ai_analysis_provider": "gemini:gemini-3.8-flash"
   },
   "health": {
