@@ -41,6 +41,20 @@ factors to watch for):
 
 """
 
+READINESS_SYSTEM_PREFIX = """You are Onin's endurance running coach. No \
+activity has been logged yet today. Using his current readiness/recovery \
+data and the typical schedule for today's day-of-week (both in the \
+durable context below), give a short, specific recommendation: proceed \
+with today's normal session as planned, modify it (how, specifically), \
+or rest. Never generic "listen to your body" filler -- say what you'd \
+actually do given these specific numbers. If readiness looks fine, say so \
+plainly rather than manufacturing caution.
+
+Durable coaching context (goal, current phase, methodology, known risk \
+factors, and today's typical scheduled session):
+
+"""
+
 
 def _build_prompt(activity, metrics):
     """Keep the payload small and relevant -- not a full raw JSON dump."""
@@ -59,6 +73,38 @@ def _build_prompt(activity, metrics):
     }
 
     return json.dumps({"activity": trimmed_activity, "readiness_that_day": trimmed_readiness}, indent=2)
+
+
+def _build_readiness_prompt(metrics, date_str):
+    import datetime
+    weekday = datetime.date.fromisoformat(date_str).strftime("%A")
+    readiness = (metrics or {}).get("readiness") or {}
+    load = (metrics or {}).get("load") or {}
+    trimmed_readiness = {
+        k: readiness[k]
+        for k in (
+            "score", "level", "feedback", "resting_hr", "hrv_last_night_avg_ms",
+            "hrv_7_day_avg_ms", "hrv_status", "sleep_hours", "sleep_score",
+            "recovery_hours", "factor_details",
+        )
+        if k in readiness
+    }
+    trimmed_load = {
+        k: load[k]
+        for k in ("acute_load", "chronic_load", "acwr", "acwr_status", "load_focus", "vo2_max")
+        if k in load
+    }
+    return json.dumps(
+        {"day_of_week": weekday, "readiness": trimmed_readiness, "load": trimmed_load},
+        indent=2,
+    )
+
+
+def generate_readiness_analysis(provider, model, context_text, metrics, date_str):
+    prompt = _build_readiness_prompt(metrics, date_str)
+    system = READINESS_SYSTEM_PREFIX + context_text
+    user_content = f"Today's readiness data (no activity logged yet):\n\n{prompt}"
+    return PROVIDER_CALLERS[provider](model, system, user_content)
 
 
 def _call_anthropic(model, system, user_content):
@@ -133,6 +179,44 @@ def generate_for_activity(provider, model, context_text, activity, metrics):
     return PROVIDER_CALLERS[provider](model, system, user_content)
 
 
+def _run_readiness_mode(args, model, context_text, metrics, metrics_path):
+    if not isinstance(metrics, dict) or not metrics.get("readiness"):
+        print("[generate_ai_analysis] No activity and no readiness data for this date -- nothing to do.", file=sys.stderr)
+        return
+
+    readiness = metrics["readiness"]
+    if readiness.get("ai_analysis") and not args.force:
+        print("[generate_ai_analysis] Readiness analysis already set for this date -- skipping (use --force to regenerate).", file=sys.stderr)
+        return
+
+    try:
+        analysis = generate_readiness_analysis(args.provider, model, context_text, metrics, args.date)
+    except Exception as e:
+        print(f"[generate_ai_analysis] {args.provider} call failed for readiness analysis: {e}", file=sys.stderr)
+        return
+    if not analysis:
+        return
+
+    readiness["ai_analysis"] = analysis
+    readiness["ai_analysis_provider"] = f"{args.provider}:{model}"
+    print(f"[generate_ai_analysis] Generated readiness-based analysis via {args.provider} (no activity logged yet).", file=sys.stderr)
+
+    with open(metrics_path, "w", encoding="utf-8") as f:
+        json.dump(metrics, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+
+    # Keep latest_metrics.json in sync if it's the same day.
+    latest_metrics_path = os.path.join(args.data_dir, "latest_metrics.json")
+    if os.path.exists(latest_metrics_path):
+        latest_metrics = _load_json(latest_metrics_path)
+        if isinstance(latest_metrics, dict) and latest_metrics.get("date") == args.date:
+            latest_metrics.setdefault("readiness", {})["ai_analysis"] = analysis
+            latest_metrics["readiness"]["ai_analysis_provider"] = f"{args.provider}:{model}"
+            with open(latest_metrics_path, "w", encoding="utf-8") as f:
+                json.dump(latest_metrics, f, indent=2, ensure_ascii=False)
+                f.write("\n")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--date", required=True, help="YYYY-MM-DD")
@@ -155,22 +239,18 @@ def main():
     with open(args.context, "r", encoding="utf-8") as f:
         context_text = f.read()
 
-    activity_path = _find_dated_activity_file(args.data_dir, args.date)
-    if not activity_path:
-        print(f"[generate_ai_analysis] No activity file found for {args.date} -- nothing to do.", file=sys.stderr)
-        return
-
-    activities_payload = _load_json(activity_path)
-    if not isinstance(activities_payload, dict):
-        print(f"[generate_ai_analysis] Could not read {activity_path}", file=sys.stderr)
-        return
-    activities = activities_payload.get("activities")
-    if not isinstance(activities, list) or not activities:
-        print(f"[generate_ai_analysis] No activities in {activity_path}", file=sys.stderr)
-        return
-
     metrics_path = os.path.join(args.data_dir, args.date[:4], args.date[5:7], f"{args.date}_metrics.json")
     metrics = _load_json(metrics_path) if os.path.exists(metrics_path) else None
+
+    activity_path = _find_dated_activity_file(args.data_dir, args.date)
+    activities_payload = _load_json(activity_path) if activity_path else None
+    activities = (activities_payload or {}).get("activities") if isinstance(activities_payload, dict) else None
+
+    if not isinstance(activities, list) or not activities:
+        # No workout logged (yet, or a rest day) -- fall back to a
+        # readiness-only recommendation instead of doing nothing.
+        _run_readiness_mode(args, model, context_text, metrics, metrics_path)
+        return
 
     changed = False
     for activity in activities:

@@ -417,7 +417,7 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
         volume_cell = _format_compact_volume(distance, day_seconds)
         
         load = _num(cell(row, "exercise_load"))
-        load_cell = f"{load:g}" if load is not None else "—"
+        load_cell = f"{round(load)}" if load is not None else "—"
         table_rows.append(f"| {label} | {title} | {volume_cell} | {load_cell} |")
 
         total_sessions += int(count)
@@ -436,7 +436,7 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
         title, 
         "", 
         "| D | Activity | Volume | Load |", 
-        "|:---:|---|---:|---|"
+        "|:---:|:---|---:|---|"
     ]
     footer = [
         "",
@@ -502,6 +502,10 @@ def _readiness_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[s
         others = [n for n in (s.get("limiting_factors") or []) if n != limiter]
         if others:
             lines.append(f"- **Also soft:** {', '.join(_titleize(n) for n in others)}")
+
+    ai_analysis = readiness.get("ai_analysis")
+    if ai_analysis:
+        lines.append(f"- 🧠 {ai_analysis}")
 
     return lines
 

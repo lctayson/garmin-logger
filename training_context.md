@@ -29,6 +29,22 @@ Then: 12-week HM-specific phase (Nov 30, 2026 - Feb 21, 2027), keeping
 real VO2max work weekly (not reverting to sub-threshold-only), with
 race-pace long-run segments progressively introduced.
 
+## Typical weekly schedule (current bridge phase)
+
+Day-of-week pattern the block currently follows -- for giving a specific
+"what today normally is, and how should readiness adjust it" recommendation
+on mornings with no activity logged yet, not for predicting results. Update
+this section when the HM-specific phase begins (Nov 30, 2026) or whenever
+the actual weekly structure changes.
+
+- **Sunday**: Long run, easy pace (LSD)
+- **Monday**: Strength A (power/hip extension)
+- **Tuesday**: Threshold session (sub-threshold intervals, e.g. 3x8min)
+- **Wednesday**: Easy run + strides
+- **Thursday**: VO2max intervals -- hardest session of the week
+- **Friday**: Core/hip stability strength, no running
+- **Saturday**: Long run, easy pace, sometimes with hill sprints
+
 ## Methodology
 
 - Norwegian Singles sub-threshold approach, Friel 7-zone HR model
