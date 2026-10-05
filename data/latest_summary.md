@@ -9,6 +9,7 @@
 - **Recovery time:** 0h
 - ⚠️ **Limiter:** Sleep Score (46%)
 - **Also soft:** Sleep History, Stress History
+- 🧠 Readiness sits at 56 primarily due to short sleep (6.3 hours, sleep score 64), but your underlying autonomic recovery is completely fine with HRV at 53 ms (above your 50
 
 ## Today — Rest Day
 
