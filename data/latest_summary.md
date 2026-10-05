@@ -9,9 +9,6 @@
 - **Recovery time:** 0h
 - ⚠️ **Limiter:** Sleep Score (46%)
 - **Also soft:** Sleep History, Stress History
-- 🧠 Readiness is moderate at 56, driven almost entirely by mediocre sleep (6.3 hours, sleep score 64), while your underlying physiological markers are completely intact (HRV balanced at 53 ms, 0 recovery hours needed, ACWR optimal at 0.8). 
-
-Today calls for **Strength A (power/hip extension)** with no running scheduled. Proceed with the lift as planned—the low sleep isn't enough to compromise a non-running neuromuscular session, but keep rest intervals honest between heavy sets and prioritize getting to bed early tonight so you're clear for Tuesday's threshold work.
 
 ## Today — Rest Day
 
