@@ -14,6 +14,7 @@
 
 - **Mon Strength A** — 0.0km · 20:44 · HR 83/99 max
   - TE: AEROBIC_BASE · aerobic 0.1 · anaerobic 0
+  - 🧠 Unremarkable and strictly structural, which is exactly what a Monday strength session should be. Avg HR was 83 bpm (peaking at 99 bpm) across the 20 minutes, yielding an appropriately negligible 1.9 load that won't add any systemic fatigue. Readiness is on the lower side at 56 with a mediocre 64 sleep score, so prioritize winding down early tonight—tomorrow's sub-threshold intervals require full focus to keep quality high without spiking cardiac drift in the morning heat.
 
 ## Load & Trends
 
