@@ -9,7 +9,6 @@
 - **Recovery time:** 0h
 - ⚠️ **Limiter:** Sleep History (47%)
 - **Also soft:** Sleep Score
-- 🧠 Readiness is at a moderate 58 primarily due to 6.4 hours of sleep, but your underlying autonomic
 
 ## Today — Rest Day
 
