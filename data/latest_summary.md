@@ -9,6 +9,7 @@
 - **Recovery time:** 0h
 - ⚠️ **Limiter:** Sleep History (47%)
 - **Also soft:** Sleep Score
+- 🧠 Proceed with today's scheduled sub-threshold session (e.g., 3x8 min) as planned. While your sleep was somewhat light at 6.4 hours, your autonomic recovery is solid: overnight HRV is up at 58 ms against your 53 ms baseline, resting HR is steady at 55 bpm, and your acute load is sitting low (ACWR 0.7). Just lock in on your HR cap early in the heat—keep the intervals strictly between 158–168 bpm (under your 171 LTHR) so you don't compromise Thursday's VO2max work.
 
 ## Today — Rest Day
 
