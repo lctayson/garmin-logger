@@ -31,7 +31,7 @@
 ## This Week (Sep 29 – Oct 5)
 
 | D | Activity | Volume | Load |
-|:---:|:---|---:|---|
+|:---:|:---|---:|---:|
 | T | 3x8min Thr | 8k · 54:18 | 179 |
 | W | Run + Strides | 6k · 48:19 | 58 |
 | T | 6x2min VO₂ Int | 7k · 48:28 | 151 |
