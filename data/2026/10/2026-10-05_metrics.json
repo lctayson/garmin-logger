@@ -44,7 +44,7 @@
         "feedback": "Good"
       }
     },
-    "ai_analysis": "Readiness sits at 56 primarily due to short sleep (6.3 hours, sleep score 64), but your underlying autonomic recovery is completely fine with HRV at 53 ms (above your 50",
+    "ai_analysis": "Proceed with Strength A (power/hip extension) as planned. While your readiness is down at 56 due to a short 6.3-hour sleep, your underlying autonomic recovery is completely stable—HRV is balanced at 53 ms (above your 50 ms baseline), RHR is steady at 59 bpm, and ACWR is sitting comfortably at 0.8. Hit your normal lifting volume and power outputs today, but prioritize getting to bed early tonight so sleep debt doesn't carry into Tuesday's sub-threshold intervals.",
     "ai_analysis_provider": "gemini:gemini-3.8-flash"
   },
   "health": {
@@ -891,7 +891,7 @@
       [
         "2026-10-05",
         59,
-        54,
+        56,
         77,
         21
       ]
