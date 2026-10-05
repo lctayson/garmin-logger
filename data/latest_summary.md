@@ -1,30 +1,29 @@
 # Daily Check — 2026-10-06
 
-## Readiness: 58/100 (Moderate)
-> Good Recovery
+## Readiness: 37/100 (Low)
+> Focus On Sleep Quality
 
 - **RHR:** 55 bpm
 - ⚠️ **HRV:** 58ms (7d avg: 53ms) — above balanced band
 - **Sleep:** 6h25 (score 70)
-- **Recovery time:** 0h
+- ⚠️ **Recovery time:** 28.8h
 - ⚠️ **Limiter:** Sleep History (47%)
-- **Also soft:** Sleep Score
-- 🧠 Proceed with today's scheduled sub-threshold session (e.g., 3x8 min) as planned. While your sleep was somewhat light at 6.4 hours, your autonomic recovery is solid: overnight HRV is up at 58 ms against your 53 ms baseline, resting HR is steady at 55 bpm, and your acute load is sitting low (ACWR 0.7). Just lock in on your HR cap early in the heat—keep the intervals strictly between 158–168 bpm (under your 171 LTHR) so you don't compromise Thursday's VO2max work.
+- **Also soft:** Recovery Time, Sleep Score
 
-## Today — Rest Day
+## Today
 
-_Most recent activity (2026-10-05):_
-- **Mon Strength A** — 0.0km · 20:44 · HR 83/99 max
-  - TE: AEROBIC_BASE · aerobic 0.1 · anaerobic 0
-  - 🧠 Unremarkable and strictly structural, which is exactly what a Monday strength session should be. Avg HR was 83 bpm (peaking at 99 bpm) across the 20 minutes, yielding an appropriately negligible 1.9 load that won't add any systemic fatigue. Readiness is on the lower side at 56 with a mediocre 64 sleep score, so prioritize winding down early tonight—tomorrow's sub-threshold intervals require full focus to keep quality high without spiking cardiac drift in the morning heat.
+- **Malolos - 2 × 10min Threshold** — 7.04km · 47:21 · 6:44/km · HR 151/172 max
+  - TE: LACTATE_THRESHOLD · aerobic 3.7 · anaerobic 0.8
+  - Intervals: 2 work reps · pace drift -2.2% · HR +7bpm
+  - MS: 3.60k @ 5:33 163bpm 0.99m 180spm 246ms 8.2cm 308w
 
 ## Load & Trends
 
-- ⚠️ **ACWR:** 0.7 (Low) — acute 348 / chronic 491 (chronic range 392.8–736.5)
-- **7-day volume:** 29.11km vs 28-day avg 32.4km (-10%)
-- **Running tolerance:** 50.7% (Medium) — 29.1km of 62.3km weekly cap, acute impact load 31.6
+- **ACWR:** 1.0 (Optimal) — acute 543 / chronic 526 (chronic range 420.8–789)
+- **7-day volume:** 36.15km vs 28-day avg 34.2km (+6%)
+- **Running tolerance:** 65.7% (Medium) — 36.1km of 62.3km weekly cap, acute impact load 40.9
 - **Aerobic Low:** 779.3 (target 303–822 — in range)
-- **Aerobic High:** 1123.1 (target 649–1169 — in range)
+- ⚠️ **Aerobic High:** 1265.8 (target 649–1169 — +97 over)
 - ⚠️ **Anaerobic:** 47.7 (target 173–519 — -125 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
 - ⚠️ **Sleep (7d avg):** 6h10, 7/7 nights below need, trending flat
@@ -41,8 +40,8 @@ _Most recent activity (2026-10-05):_
 | S | Malolos Run | 10k · 1:14:18 | 93 |
 | S | Malolos Run | 6k · 45:01 | 58 |
 | M | Strength A | 20:44 | 2 |
-| T | Rest | — | — |
+| T | 2x10min Thr | 7k · 47:21 | 153 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 6 | 29.11 km | 4:21:26 | 365.6 |
+| 7 | 36.15 km | 5:08:47 | 519 |
