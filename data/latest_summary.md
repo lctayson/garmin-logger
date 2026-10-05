@@ -34,13 +34,13 @@ _Most recent activity (2026-10-04):_
 ## This Week (Sep 29 – Oct 5)
 
 | D | Activity | Volume | Load |
-|:---:|---|---:|---|
-| T | 3x8min Thr | 8k · 54:18 | 178.9 |
-| W | Run + Strides | 6k · 48:19 | 58.1 |
+|:---:|:---|---:|---|
+| T | 3x8min Thr | 8k · 54:18 | 179 |
+| W | Run + Strides | 6k · 48:19 | 58 |
 | T | 6x2min VO₂ Int | 7k · 48:28 | 151 |
 | F | Core/Hip | 24:36 | 3 |
-| S | Malolos Run | 10k · 1:14:18 | 93.2 |
-| S | Malolos Run | 6k · 45:01 | 58.4 |
+| S | Malolos Run | 10k · 1:14:18 | 93 |
+| S | Malolos Run | 6k · 45:01 | 58 |
 | M | Rest | — | — |
 
 | Sessions | Distance | Time | Load |
