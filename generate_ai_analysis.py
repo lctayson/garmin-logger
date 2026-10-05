@@ -246,10 +246,10 @@ def main():
     activities_payload = _load_json(activity_path) if activity_path else None
     activities = (activities_payload or {}).get("activities") if isinstance(activities_payload, dict) else None
 
-    _run_readiness_mode(args, model, context_text, metrics, metrics_path)
     if not isinstance(activities, list) or not activities:
         # No workout logged (yet, or a rest day) -- fall back to a
         # readiness-only recommendation instead of doing nothing.
+        _run_readiness_mode(args, model, context_text, metrics, metrics_path)
         return
 
     changed = False
