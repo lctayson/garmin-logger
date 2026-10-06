@@ -12,7 +12,7 @@
 
 ## Today
 
-- **Malolos - _Run + Strides/Hills** — 6.02km · 48:18 · 8:01/km · HR 138/152 max
+- **Run + Strides** — 6.02km · 48:18 · 8:01/km · HR 138/152 max
   - TE: AEROBIC_BASE · aerobic 2.6 · anaerobic 0.8
   - MS: 5.05k @ 7:51 139bpm 0.76m 166spm 284ms 7.9cm 224w
 
