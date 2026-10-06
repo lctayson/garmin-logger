@@ -16,7 +16,6 @@
   - TE: LACTATE_THRESHOLD · aerobic 3.7 · anaerobic 0.8
   - Intervals: 2 work reps · pace drift -2.2% · HR +7bpm
   - MS: 3.60k @ 5:33 163bpm 0.99m 180spm 246ms 8.2cm 308w
-  - 🧠 Despite rolling into this on low readiness (37), execution on the 2 × 10min block was disciplined, capping at a peak HR of 172 bpm—right on your 171 bpm LTHR ceiling without spilling over into an uncontrolled burn. Aerobic drift between reps was
 
 ## Load & Trends
 
