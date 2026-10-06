@@ -187,15 +187,15 @@ def _call_github(model: str, system: str, user_content: str) -> str:
         ],
     )
 
-    # Safe extraction handling both ChatCompletion object and string response
-    if isinstance(response, str):
-        return response.strip()
-
+    # Standard OpenAI SDK response handling
     if hasattr(response, "choices") and response.choices:
         content = response.choices[0].message.content
-        return (content or "").strip()
-
-    return str(response).strip()
+        if content and content.strip():
+            return content.strip()
+            
+    # Debug print if model returned no text content
+    print(f"[generate_ai_analysis] Raw GitHub response object: {response}", file=sys.stderr)
+    return ""
 
 
 PROVIDER_CALLERS = {
