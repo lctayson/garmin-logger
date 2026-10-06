@@ -176,8 +176,6 @@ def _call_github(model: str, system: str, user_content: str) -> str:
         timeout=60.0,
     )
 
-    # Ensure model string has the provider namespace prefix required by GitHub API
-    # e.g., "gpt-4o" -> "openai/gpt-4o"
     model_name = model if "/" in model else f"openai/{model}"
 
     response = client.chat.completions.create(
@@ -188,7 +186,16 @@ def _call_github(model: str, system: str, user_content: str) -> str:
             {"role": "user", "content": user_content},
         ],
     )
-    return (response.choices[0].message.content or "").strip()
+
+    # Safe extraction handling both ChatCompletion object and string response
+    if isinstance(response, str):
+        return response.strip()
+
+    if hasattr(response, "choices") and response.choices:
+        content = response.choices[0].message.content
+        return (content or "").strip()
+
+    return str(response).strip()
 
 
 PROVIDER_CALLERS = {
