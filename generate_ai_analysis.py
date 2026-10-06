@@ -20,6 +20,7 @@ import argparse
 import json
 import os
 import sys
+import datetime
 
 from render_summary_md import _find_dated_activity_file, _load_json
 
@@ -250,11 +251,12 @@ def _run_readiness_mode(args, model, context_text, metrics, metrics_path):
 
 
 def main():
+    default_date = datetime.datetime.now().strftime("%Y-%m-%d")
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--date", required=True, help="YYYY-MM-DD")
+    parser.add_argument("--date", default=default_date, help="YYYY-MM-DD")
     parser.add_argument("--data-dir", default="data")
     parser.add_argument("--context", default="training_context.md")
-    parser.add_argument("--provider", choices=("gemini", "anthropic", "github"), default="gemini")
+    parser.add_argument("--provider", choices=("gemini", "anthropic", "github"), default="github")
     parser.add_argument("--model", default=None, help="Defaults per-provider if not given")
     parser.add_argument("--force", action="store_true", help="Regenerate even if ai_analysis already set")
     args = parser.parse_args()
