@@ -73,7 +73,7 @@ jobs:
 
       - name: Generate AI workout analysis
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_MODELS_TOKEN }}
         run: |
           python generate_ai_analysis.py --date "$EXPORT_DATE" --data-dir data --provider github
           
