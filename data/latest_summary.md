@@ -16,6 +16,7 @@
   - TE: LACTATE_THRESHOLD · aerobic 3.7 · anaerobic 0.8
   - Intervals: 2 work reps · pace drift -2.2% · HR +7bpm
   - MS: 3.60k @ 5:33 163bpm 0.99m 180spm 246ms 8.2cm 308w
+  - 🧠 Clean execution on the 2 × 10min threshold block despite entering the session with low readiness (score 37). Your efficiency held up well across the reps with only a -2.2% pace EF drift and a controlled +7 bpm HR rise, peaking just at LTHR (172 bpm max vs. 171 LTHR) exactly where it should for a sub-threshold stimulus. Given the suppressed recovery numbers, holding performance condition positive (+1 to +4) shows you didn't force the pace beyond your physiological ceiling today—prioritize sleep tonight so this fatigue doesn't roll into your next quality day.
 
 ## Load & Trends
 
