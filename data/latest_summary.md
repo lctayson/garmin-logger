@@ -12,9 +12,10 @@
 
 ## Today
 
-- **Run + Strides** — 6.02km · 48:18 · 8:01/km · HR 138/152 max
+- **Malolos - _Run + Strides/Hills** — 6.02km · 48:18 · 8:01/km · HR 138/152 max
   - TE: AEROBIC_BASE · aerobic 2.6 · anaerobic 0.8
   - MS: 5.05k @ 7:51 139bpm 0.76m 166spm 284ms 7.9cm 224w
+  - 🧠 A textbook low-cost recovery run that did exactly what was required. Despite starting with a moderate readiness of 52 and a sluggish performance condition (-2.2 avg), you kept discipline by letting the pace slip out to 8:01/km to keep the cardiac demand firmly capped at an average of 138 bpm—well under your 145–150 bpm ceiling. The minor spikes up to 152 bpm reflect the strides without bleeding into threshold fatigue, keeping the total session load light at 64.4. You absorb yesterday's sub-threshold work cleanly and are set up well for Thursday's VO2max intervals.
 
 ## Load & Trends
 
