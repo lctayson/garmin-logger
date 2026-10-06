@@ -37,13 +37,13 @@ on mornings with no activity logged yet, not for predicting results. Update
 this section when the HM-specific phase begins (Nov 30, 2026) or whenever
 the actual weekly structure changes.
 
-- **Sunday**: Long run, easy pace (LSD)
 - **Monday**: Strength A (power/hip extension)
 - **Tuesday**: Threshold session (sub-threshold intervals, e.g. 3x8min)
 - **Wednesday**: Easy run + strides
 - **Thursday**: VO2max intervals -- hardest session of the week
 - **Friday**: Core/hip stability strength, no running
-- **Saturday**: Long run, easy pace, sometimes with hill sprints
+- **Saturday**: Long run, easy pace
+- **Sunday**: Recovery Run, easy pace with hill sprints
 
 ## Methodology
 
