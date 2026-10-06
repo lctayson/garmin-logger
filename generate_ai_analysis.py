@@ -26,7 +26,7 @@ from render_summary_md import _find_dated_activity_file, _load_json
 DEFAULT_MODELS = {
     "gemini": "gemini-3.8-flash",
     "anthropic": "claude-sonnet-5",
-    "github": "gpt-4o",  # Alternatives: "gpt-4o-mini", "meta-llama-3.3-70b-instruct"
+    "github": "openai/gpt-4o",  # Alternatives: "gpt-4o-mini", "meta-llama-3.3-70b-instruct"
 }
 MAX_OUTPUT_TOKENS = 600
 
@@ -241,6 +241,7 @@ def main():
     parser.add_argument("--model", default=None, help="Defaults per-provider if not given")
     parser.add_argument("--force", action="store_true", help="Regenerate even if ai_analysis already set")
     args = parser.parse_args()
+    
     model = args.model or DEFAULT_MODELS[args.provider]
 
     key_map = {
@@ -249,22 +250,41 @@ def main():
         "github": "GITHUB_TOKEN",
     }
     key_var = key_map[args.provider]
-    if not os.environ.get(key_var) and not (args.provider == "github" and os.environ.get("GH_TOKEN")):
+    
+    # Normalize GH_TOKEN -> GITHUB_TOKEN if using github provider
+    if args.provider == "github" and not os.environ.get("GITHUB_TOKEN") and os.environ.get("GH_TOKEN"):
+        os.environ["GITHUB_TOKEN"] = os.environ["GH_TOKEN"]
+
+    if not os.environ.get(key_var):
         print(f"[generate_ai_analysis] {key_var} not set -- skipping.", file=sys.stderr)
         return
 
     if not os.path.exists(args.context):
         print(f"[generate_ai_analysis] {args.context} not found -- skipping.", file=sys.stderr)
         return
+        
     with open(args.context, "r", encoding="utf-8") as f:
         context_text = f.read()
 
-    metrics_path = os.path.join(args.data_dir, args.date[:4], args.date[5:7], f"{args.date}_metrics.json")
+    # Safe path building
+    date_parts = args.date.split("-")
+    if len(date_parts) >= 2:
+        metrics_path = os.path.join(args.data_dir, date_parts[0], date_parts[1], f"{args.date}_metrics.json")
+    else:
+        metrics_path = os.path.join(args.data_dir, f"{args.date}_metrics.json")
+
     metrics = _load_json(metrics_path) if os.path.exists(metrics_path) else None
 
     activity_path = _find_dated_activity_file(args.data_dir, args.date)
     activities_payload = _load_json(activity_path) if activity_path else None
-    activities = (activities_payload or {}).get("activities") if isinstance(activities_payload, dict) else None
+
+    # Handle both top-level list and wrapped dict structures
+    if isinstance(activities_payload, list):
+        activities = activities_payload
+    elif isinstance(activities_payload, dict):
+        activities = activities_payload.get("activities")
+    else:
+        activities = None
 
     if not isinstance(activities, list) or not activities:
         _run_readiness_mode(args, model, context_text, metrics, metrics_path)
@@ -281,6 +301,7 @@ def main():
         except Exception as e:
             print(f"[generate_ai_analysis] {args.provider} call failed for '{activity.get('name')}': {e}", file=sys.stderr)
             continue
+            
         if analysis:
             activity["ai_analysis"] = analysis
             activity["ai_analysis_provider"] = f"{args.provider}:{model}"
