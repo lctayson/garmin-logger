@@ -16,6 +16,7 @@
   - TE: LACTATE_THRESHOLD · aerobic 3.7 · anaerobic 0.8
   - Intervals: 2 work reps · pace drift -2.2% · HR +7bpm
   - MS: 3.60k @ 5:33 163bpm 0.99m 180spm 246ms 8.2cm 308w
+  - 🧠 OK
 
 ## Load & Trends
 
