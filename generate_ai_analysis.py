@@ -158,20 +158,30 @@ def _call_gemini(model, system, user_content):
     return (response.text or "").strip()
 
 
-def _call_github(model, system, user_content):
+def _call_github(model: str, system: str, user_content: str) -> str:
     """Call GitHub Models inference endpoint via OpenAI client."""
     from openai import OpenAI
-    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+
+    token = (
+        os.environ.get("GITHUB_TOKEN")
+        or os.environ.get("GH_MODELS_TOKEN")
+        or os.environ.get("GH_TOKEN")
+    )
     if not token:
-        raise RuntimeError("GITHUB_TOKEN or GH_TOKEN not set")
+        raise RuntimeError("No GitHub token set in environment")
 
     client = OpenAI(
-        base_url="https://models.inference.ai.azure.com",
+        base_url="https://models.github.ai/inference",
         api_key=token,
+        timeout=60.0,
     )
 
+    # Ensure model string has the provider namespace prefix required by GitHub API
+    # e.g., "gpt-4o" -> "openai/gpt-4o"
+    model_name = model if "/" in model else f"openai/{model}"
+
     response = client.chat.completions.create(
-        model=model,
+        model=model_name,
         max_tokens=MAX_OUTPUT_TOKENS,
         messages=[
             {"role": "system", "content": system},
