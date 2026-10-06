@@ -12,11 +12,10 @@
 
 ## Today
 
-- **Malolos - 2 × 10min Threshold** — 7.04km · 47:21 · 6:44/km · HR 151/172 max
+- **BHM W3: 2 × 10min Threshold** — 7.04km · 47:21 · 6:44/km · HR 151/172 max
   - TE: LACTATE_THRESHOLD · aerobic 3.7 · anaerobic 0.8
   - Intervals: 2 work reps · pace drift -2.2% · HR +7bpm
   - MS: 3.60k @ 5:33 163bpm 0.99m 180spm 246ms 8.2cm 308w
-  - 🧠 Solid execution on the 2 × 10min block despite heading out with a low readiness score (37) and suboptimal sleep. You capped cardiac drift nicely between reps—HR climbed just 7 bpm, EF drift was minimal at -2.2%, and peaking at 172 bpm keeps you right on your 171 LTHR boundary without spilling over into an unintended VO2max effort. Performance condition climbing to +4 through the work confirms the aerobic engine handled the volume cleanly; prioritize sleep tonight so this 153 load doesn't compromise Thursday's harder interval work.
 
 ## Load & Trends
 
@@ -41,7 +40,7 @@
 | S | Malolos Run | 10k · 1:14:18 | 93 |
 | S | Malolos Run | 6k · 45:01 | 58 |
 | M | Strength A | 20:44 | 2 |
-| T | 2x10min Thr | 7k · 47:21 | 153 |
+| T | BHM W3: 2x10min Thr | 7k · 47:21 | 153 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|

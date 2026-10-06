@@ -79,7 +79,7 @@
       "rem": 0.45,
       "awake": 0.23
     },
-    "total_steps": 9731
+    "total_steps": 9933
   },
   "training_status": {
     "status": "Maintaining 2",
@@ -904,14 +904,14 @@
     {
       "date": "2026-10-06",
       "charged": 68,
-      "drained": 60,
+      "drained": 73,
       "high": 90,
-      "low": 24
+      "low": 19
     }
   ],
   "activities": [
     {
-      "name": "Malolos - 2 × 10min Threshold",
+      "name": "BHM W3: 2 × 10min Threshold",
       "activity_id": 24620253832,
       "type": "running",
       "distance": 7.04,
