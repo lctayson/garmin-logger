@@ -7,14 +7,13 @@ Runs between split_garmin_json.py and render_summary_md.py in the daily
 pipeline: needs the day's enriched activity JSON to already exist, and
 render_summary_md.py picks up the "ai_analysis" field this writes.
 
-Supports two providers -- flip between them with --provider, no other
-code changes needed:
+Supports three providers -- flip between them with --provider:
 
     python generate_ai_analysis.py --date 2026-09-28 --provider gemini
     python generate_ai_analysis.py --date 2026-09-28 --provider anthropic
+    python generate_ai_analysis.py --date 2026-09-28 --provider github
 
-Requires GEMINI_API_KEY or ANTHROPIC_API_KEY in the environment,
-matching whichever --provider is selected.
+Requires GEMINI_API_KEY, ANTHROPIC_API_KEY, or GITHUB_TOKEN in the environment.
 """
 
 import argparse
@@ -27,6 +26,7 @@ from render_summary_md import _find_dated_activity_file, _load_json
 DEFAULT_MODELS = {
     "gemini": "gemini-3.8-flash",
     "anthropic": "claude-sonnet-5",
+    "github": "gpt-4o",  # Alternatives: "gpt-4o-mini", "meta-llama-3.3-70b-instruct"
 }
 MAX_OUTPUT_TOKENS = 600
 
@@ -57,7 +57,6 @@ factors, and today's typical scheduled session):
 
 
 def _build_prompt(activity, metrics):
-    """Keep the payload small and relevant -- not a full raw JSON dump."""
     fields = (
         "name", "type", "distance", "time", "avg_pace", "avg_hr", "max_hr",
         "training_effect", "interval_drift", "performance_condition",
@@ -112,9 +111,6 @@ def _call_anthropic(model, system, user_content):
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
         raise RuntimeError("ANTHROPIC_API_KEY not set")
-    # SDK already retries transient errors (529 overloaded, timeouts, etc.)
-    # automatically -- default is 2, bumped up since this runs unattended
-    # in CI with nobody waiting on a live response.
     client = anthropic.Anthropic(api_key=api_key, max_retries=5)
     response = client.messages.create(
         model=model,
@@ -132,9 +128,6 @@ def _call_gemini(model, system, user_content):
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY not set")
-    # The SDK does NOT retry by default (retry_options is None unless set
-    # explicitly) -- a transient 503 (model overloaded, routine and
-    # temporary) fails outright on the first attempt otherwise.
     client = genai.Client(
         api_key=api_key,
         http_options=types.HttpOptions(
@@ -148,7 +141,6 @@ def _call_gemini(model, system, user_content):
         ),
     )
 
-    # Handle thinking configuration based on model version family
     if "gemini-3" in model:
         thinking_cfg = types.ThinkingConfig(thinking_level="low")
     else:
@@ -166,9 +158,33 @@ def _call_gemini(model, system, user_content):
     return (response.text or "").strip()
 
 
+def _call_github(model, system, user_content):
+    """Call GitHub Models inference endpoint via OpenAI client."""
+    from openai import OpenAI
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if not token:
+        raise RuntimeError("GITHUB_TOKEN or GH_TOKEN not set")
+
+    client = OpenAI(
+        base_url="https://models.inference.ai.azure.com",
+        api_key=token,
+    )
+
+    response = client.chat.completions.create(
+        model=model,
+        max_tokens=MAX_OUTPUT_TOKENS,
+        messages=[
+            {"role": "system", "content": system},
+            {"role": "user", "content": user_content},
+        ],
+    )
+    return (response.choices[0].message.content or "").strip()
+
+
 PROVIDER_CALLERS = {
     "anthropic": _call_anthropic,
     "gemini": _call_gemini,
+    "github": _call_github,
 }
 
 
@@ -205,7 +221,6 @@ def _run_readiness_mode(args, model, context_text, metrics, metrics_path):
         json.dump(metrics, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
-    # Keep latest_metrics.json in sync if it's the same day.
     latest_metrics_path = os.path.join(args.data_dir, "latest_metrics.json")
     if os.path.exists(latest_metrics_path):
         latest_metrics = _load_json(latest_metrics_path)
@@ -222,14 +237,19 @@ def main():
     parser.add_argument("--date", required=True, help="YYYY-MM-DD")
     parser.add_argument("--data-dir", default="data")
     parser.add_argument("--context", default="training_context.md")
-    parser.add_argument("--provider", choices=("gemini", "anthropic"), default="gemini")
+    parser.add_argument("--provider", choices=("gemini", "anthropic", "github"), default="gemini")
     parser.add_argument("--model", default=None, help="Defaults per-provider if not given")
     parser.add_argument("--force", action="store_true", help="Regenerate even if ai_analysis already set")
     args = parser.parse_args()
     model = args.model or DEFAULT_MODELS[args.provider]
 
-    key_var = "GEMINI_API_KEY" if args.provider == "gemini" else "ANTHROPIC_API_KEY"
-    if not os.environ.get(key_var):
+    key_map = {
+        "gemini": "GEMINI_API_KEY",
+        "anthropic": "ANTHROPIC_API_KEY",
+        "github": "GITHUB_TOKEN",
+    }
+    key_var = key_map[args.provider]
+    if not os.environ.get(key_var) and not (args.provider == "github" and os.environ.get("GH_TOKEN")):
         print(f"[generate_ai_analysis] {key_var} not set -- skipping.", file=sys.stderr)
         return
 
@@ -247,8 +267,6 @@ def main():
     activities = (activities_payload or {}).get("activities") if isinstance(activities_payload, dict) else None
 
     if not isinstance(activities, list) or not activities:
-        # No workout logged (yet, or a rest day) -- fall back to a
-        # readiness-only recommendation instead of doing nothing.
         _run_readiness_mode(args, model, context_text, metrics, metrics_path)
         return
 
@@ -276,7 +294,6 @@ def main():
         json.dump(activities_payload, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
-    # Keep latest_activities.json in sync if it's the same day.
     latest_path = os.path.join(args.data_dir, "latest_activities.json")
     if os.path.exists(latest_path):
         latest_payload = _load_json(latest_path)
