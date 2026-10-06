@@ -73,7 +73,7 @@ jobs:
 
       - name: Generate AI workout analysis
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_MODELS_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           python generate_ai_analysis.py --date "$EXPORT_DATE" --data-dir data --provider gemini
           
