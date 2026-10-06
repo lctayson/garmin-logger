@@ -75,7 +75,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_MODELS_TOKEN }}
         run: |
-          python generate_ai_analysis.py --date "$EXPORT_DATE" --data-dir data --provider github
+          python generate_ai_analysis.py --date "$EXPORT_DATE" --data-dir data --provider gemini
           
       - name: Render daily summary markdown
         run: |

@@ -256,7 +256,7 @@ def main():
     parser.add_argument("--date", default=default_date, help="YYYY-MM-DD")
     parser.add_argument("--data-dir", default="data")
     parser.add_argument("--context", default="training_context.md")
-    parser.add_argument("--provider", choices=("gemini", "anthropic", "github"), default="github")
+    parser.add_argument("--provider", choices=("gemini", "anthropic", "github"), default="gemini")
     parser.add_argument("--model", default=None, help="Defaults per-provider if not given")
     parser.add_argument("--force", action="store_true", help="Regenerate even if ai_analysis already set")
     args = parser.parse_args()
