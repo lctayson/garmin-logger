@@ -44,7 +44,7 @@
         "feedback": "Good"
       }
     },
-    "ai_analysis": "Readiness is solid—HRV is stable (54ms vs 55ms baseline), resting HR is normal at 58 bpm, and an ACWR of 0.8 leaves plenty of capacity for intensity. Proceed with today's scheduled VO2max workout as planned: 5×3min @ 5:05–5:12/km with 2-minute jog recoveries, keeping the HR ceiling at 172 bpm. Make sure these reps genuinely touch that 170–172 bpm zone in the second half of the intervals to lock in the intended anaerobic stimulus.",
+    "ai_analysis": "Readiness is fully green across the board—HRV is stable (54ms vs 55ms 7-day average), resting HR is baseline at 58 bpm, and your ACWR sits at a safe 0.8. Proceed with today's planned VO2max session (5×3min @ 5:05–5:12/km, 2min jog recovery) exactly as written. \n\nGiven the morning heat, execute by effort: open the first two reps around 5:10/km rather than chasing 5:05 early, and let the HR rise toward that 170–172 cap naturally on reps 4 and 5 to ensure you land the true anaerobic stimulus without blowing past your ceiling.",
     "ai_analysis_provider": "gemini:gemini-3.8-flash"
   },
   "health": {
