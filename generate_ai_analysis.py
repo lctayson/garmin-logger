@@ -317,7 +317,7 @@ def main():
 
     if not os.environ.get(key_var):
         print(f"[generate_ai_analysis] {key_var} not set -- skipping.", file=sys.stderr)
-        return
+        sys.exit(1)
 
     if not os.path.exists(args.context):
         print(f"[generate_ai_analysis] {args.context} not found -- skipping.", file=sys.stderr)
@@ -359,7 +359,7 @@ def main():
             analysis = generate_for_activity(args.provider, model, context_text, activity, metrics)
         except Exception as e:
             print(f"[generate_ai_analysis] {args.provider} call failed for '{activity.get('name')}': {e}", file=sys.stderr)
-            continue
+            sys.exit(1)
 
         if analysis:
             activity["ai_analysis"] = analysis
