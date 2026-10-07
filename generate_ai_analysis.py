@@ -32,7 +32,7 @@ load_dotenv()  # Load .env if present, so API keys can be stored there instead o
 DEFAULT_MODELS = {
     "gemini": "gemini-3.8-flash",
     "anthropic": "claude-sonnet-5",
-    "groq": "llama-3.3-70b-versatile",
+    "groq": "deepseek-r1-distill-llama-70b",
     "deepseek": "deepseek-chat",  # Options: "deepseek-chat", "deepseek-reasoner"
     "github": "openai/gpt-4o",  # Options: "gpt-4o-mini", "meta/llama-3.3-70b-instruct"
 }
