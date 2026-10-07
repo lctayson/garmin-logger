@@ -16,7 +16,7 @@
   - TE: VO2MAX · aerobic 3.6 · anaerobic 1
   - Intervals: 5 work reps · pace drift -7.4% · HR +16bpm
   - MS: 2.93k @ 5:07 161bpm 1.05m 184spm 236ms 8.1cm 332w
-  - 🧠 A solid execution of the week's hardest quality session: you hit the full 5 × 3min prescription and pushed max HR to 175 bpm (above your 171 LTHR), registering a genuine 1.0 anaerobic training effect and an "IMPROVING_VO2_MAX" label—precisely the stimulus missing from previous blocks. The -7.4% efficiency drift and 16 bpm HR climb across the reps reflect real cardiac creep in the Malolos morning heat, but your performance condition actually climbed to +5 by the finish, showing you absorbed the work without breaking down mechanically. Given the moderate readiness (53) and 26 hours of suggested recovery, take Friday's rest and core session strictly easy before Saturday's 11K long run.
+  - 🧠 You executed all 5 reps of the 3-minute VO2 intervals, hitting a peak HR of 175 bpm (above your 171 LTHR) and finally logging a measurable 1.0 anaerobic training effect—an important sign that genuine top-end stimulus is landing in this bridge phase. Cardiac drift across the reps was noticeable with a 16 bpm HR delta and a -7.4% efficiency factor drop, typical for these longer intervals in Malolos heat, but your positive performance condition (+4.6 avg) shows you maintained output rather than falling apart late. Given the moderate readiness (53) and 26 hours of recovery needed, take Friday's rest and core seriously so you're ready for Saturday's 11k long run.
 
 ## Load & Trends
 
