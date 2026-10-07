@@ -8,9 +8,7 @@
 - **Sleep:** 6h48 (score 82)
 - **Recovery time:** 0h
 - ⚠️ **Limiter:** Sleep History (65%)
-- 🧠 Readiness is fully green across the board—HRV is stable (54ms vs 55ms 7-day average), resting HR is baseline at 58 bpm, and your ACWR sits at a safe 0.8. Proceed with today's planned VO2max session (5×3min @ 5:05–5:12/km, 2min jog recovery) exactly as written. 
-
-Given the morning heat, execute by effort: open the first two reps around 5:10/km rather than chasing 5:05 early, and let the HR rise toward that 170–172 cap naturally on reps 4 and 5 to ensure you land the true anaerobic stimulus without blowing past your ceiling.
+- 🧠 Readiness is solid—HRV is stable (54ms vs 55ms 7-day avg), recovery time is fully cleared at 0 hours, and sleep was decent at 6.8 hours (82 score). ACWR sits at an optimal 0.85, so you have full clearance to execute today’s planned VO2max session (W3: 7k as 5×3min @ 5:05-5:12, 2min jog) exactly as written. Don't leave the anaerobic stimulus on the table; let your HR climb toward the ≤172 cap on the final reps, but keep the first 90 seconds of each interval strictly tethered to pace so you don't blow up in the heat.
 
 ## Today — Rest Day
 
