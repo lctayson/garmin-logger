@@ -17,7 +17,8 @@ Supports five providers -- flip between them with --provider:
 
 Requires GEMINI_API_KEY, ANTHROPIC_API_KEY, GROQ_API_KEY, DEEPSEEK_API_KEY, or GITHUB_TOKEN.
 """
-
+import os
+from dotenv import load_dotenv
 import argparse
 import datetime
 import json
@@ -25,6 +26,8 @@ import os
 import sys
 
 from render_summary_md import _find_dated_activity_file, _load_json
+
+load_dotenv()  # Load .env if present, so API keys can be stored there instead of in the shell
 
 DEFAULT_MODELS = {
     "gemini": "gemini-3.8-flash",

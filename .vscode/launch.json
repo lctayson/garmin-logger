@@ -12,6 +12,19 @@
                 // "2025-07-13" // YYYY-MM-DD, change this date as needed, or remove the args array if you want it to default to today
             ],
             "justMyCode": true
+        },
+        {
+            "name": "Python: Debug AI Analysis",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/generate_ai_analysis.py",
+            "args": [
+                "--date", "2026-10-07",
+                "--data-dir", "data",
+                "--provider", "groq"
+            ],
+            "envFile": "${workspaceFolder}/.env",
+            "console": "integratedTerminal"
         }
     ]
 }
