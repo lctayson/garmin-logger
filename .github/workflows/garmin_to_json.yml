@@ -76,9 +76,9 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }} 
         run: |
-          # Try Groq first, fall back to Gemini
-          python generate_ai_analysis.py --date "$EXPORT_DATE" --data-dir data --provider groq || \
-          python generate_ai_analysis.py --date "$EXPORT_DATE" --data-dir data --provider gemini
+          # Try Gemini first, fall back to Groq
+          python generate_ai_analysis.py --date "$EXPORT_DATE" --data-dir data --provider gemini || \
+          python generate_ai_analysis.py --date "$EXPORT_DATE" --data-dir data --provider groq
           
       - name: Render daily summary markdown
         run: |
