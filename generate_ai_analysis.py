@@ -7,28 +7,48 @@ Runs between split_garmin_json.py and render_summary_md.py in the daily
 pipeline: needs the day's enriched activity JSON to already exist, and
 render_summary_md.py picks up the "ai_analysis" field this writes.
 
-Supports three providers -- flip between them with --provider:
+Supports five providers -- flip between them with --provider:
 
-    python generate_ai_analysis.py --date 2026-09-28 --provider gemini
-    python generate_ai_analysis.py --date 2026-09-28 --provider anthropic
-    python generate_ai_analysis.py --date 2026-09-28 --provider github
+    python generate_ai_analysis.py --date 2026-10-06 --provider gemini
+    python generate_ai_analysis.py --date 2026-10-06 --provider anthropic
+    python generate_ai_analysis.py --date 2026-10-06 --provider groq
+    python generate_ai_analysis.py --date 2026-10-06 --provider deepseek
+    python generate_ai_analysis.py --date 2026-10-06 --provider github
 
-Requires GEMINI_API_KEY, ANTHROPIC_API_KEY, or GITHUB_TOKEN in the environment.
+Requires GEMINI_API_KEY, ANTHROPIC_API_KEY, GROQ_API_KEY, DEEPSEEK_API_KEY, or GITHUB_TOKEN.
 """
 
 import argparse
+import datetime
 import json
 import os
 import sys
-import datetime
 
 from render_summary_md import _find_dated_activity_file, _load_json
 
 DEFAULT_MODELS = {
     "gemini": "gemini-3.8-flash",
     "anthropic": "claude-sonnet-5",
-    "github": "openai/gpt-4o",  # Alternatives: "gpt-4o-mini", "meta-llama-3.3-70b-instruct"
+    "groq": "llama-3.3-70b-versatile",
+    "deepseek": "deepseek-chat",  # Options: "deepseek-chat", "deepseek-reasoner"
+    "github": "openai/gpt-4o",  # Options: "gpt-4o-mini", "meta/llama-3.3-70b-instruct"
 }
+
+PROVIDER_CONFIGS = {
+    "groq": {
+        "base_url": "https://api.groq.com/openai/v1",
+        "api_key_env": "GROQ_API_KEY",
+    },
+    "deepseek": {
+        "base_url": "https://api.deepseek.com",
+        "api_key_env": "DEEPSEEK_API_KEY",
+    },
+    "github": {
+        "base_url": "https://models.github.ai/inference",
+        "api_key_env": "GITHUB_TOKEN",
+    },
+}
+
 MAX_OUTPUT_TOKENS = 600
 
 SYSTEM_PREFIX = """You are Onin's endurance running coach. You write short, \
@@ -76,7 +96,6 @@ def _build_prompt(activity, metrics):
 
 
 def _build_readiness_prompt(metrics, date_str):
-    import datetime
     weekday = datetime.date.fromisoformat(date_str).strftime("%A")
     readiness = (metrics or {}).get("readiness") or {}
     load = (metrics or {}).get("load") or {}
@@ -100,14 +119,48 @@ def _build_readiness_prompt(metrics, date_str):
     )
 
 
-def generate_readiness_analysis(provider, model, context_text, metrics, date_str):
-    prompt = _build_readiness_prompt(metrics, date_str)
-    system = READINESS_SYSTEM_PREFIX + context_text
-    user_content = f"Today's readiness data (no activity logged yet):\n\n{prompt}"
-    return PROVIDER_CALLERS[provider](model, system, user_content)
+def _call_openai_compatible(
+    model: str,
+    system: str,
+    user_content: str,
+    base_url: str,
+    api_key_env: str,
+) -> str:
+    """Generic caller for OpenAI-compatible providers (Groq, DeepSeek, GitHub Models, OpenRouter)."""
+    from openai import OpenAI
+
+    api_key = os.environ.get(api_key_env)
+    if not api_key:
+        raise RuntimeError(f"{api_key_env} is not set.")
+
+    client = OpenAI(base_url=base_url, api_key=api_key, timeout=60.0)
+
+    # Normalize model string for GitHub Models if namespace omitted
+    if "github" in base_url and "/" not in model:
+        model = f"openai/{model}"
+
+    # Expand token limit for reasoning models to accommodate internal thinking steps
+    max_tokens = 4000 if "reasoner" in model or "r1" in model.lower() else MAX_OUTPUT_TOKENS
+
+    response = client.chat.completions.create(
+        model=model,
+        max_tokens=max_tokens,
+        messages=[
+            {"role": "system", "content": system},
+            {"role": "user", "content": user_content},
+        ],
+    )
+
+    if hasattr(response, "choices") and response.choices:
+        content = response.choices[0].message.content
+        if content and content.strip():
+            return content.strip()
+
+    print(f"[generate_ai_analysis] Raw response object from {base_url}: {response}", file=sys.stderr)
+    return ""
 
 
-def _call_anthropic(model, system, user_content):
+def _call_anthropic(model: str, system: str, user_content: str) -> str:
     import anthropic
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
@@ -123,7 +176,7 @@ def _call_anthropic(model, system, user_content):
     return "".join(parts).strip()
 
 
-def _call_gemini(model, system, user_content):
+def _call_gemini(model: str, system: str, user_content: str) -> str:
     from google import genai
     from google.genai import types
     api_key = os.environ.get("GEMINI_API_KEY")
@@ -142,10 +195,11 @@ def _call_gemini(model, system, user_content):
         ),
     )
 
-    if "gemini-3" in model:
-        thinking_cfg = types.ThinkingConfig(thinking_level="low")
-    else:
-        thinking_cfg = types.ThinkingConfig(thinking_budget=0)
+    thinking_cfg = (
+        types.ThinkingConfig(thinking_level="low")
+        if "gemini-3" in model
+        else types.ThinkingConfig(thinking_budget=0)
+    )
 
     response = client.models.generate_content(
         model=model,
@@ -159,58 +213,37 @@ def _call_gemini(model, system, user_content):
     return (response.text or "").strip()
 
 
-def _call_github(model: str, system: str, user_content: str) -> str:
-    """Call GitHub Models inference endpoint via OpenAI client."""
-    from openai import OpenAI
-
-    token = (
-        os.environ.get("GITHUB_TOKEN")
-        or os.environ.get("GH_MODELS_TOKEN")
-        or os.environ.get("GH_TOKEN")
-    )
-    if not token:
-        raise RuntimeError("No GitHub token set in environment")
-
-    client = OpenAI(
-        base_url="https://models.github.ai/inference",
-        api_key=token,
-        timeout=60.0,
-    )
-
-    model_name = model if "/" in model else f"openai/{model}"
-
-    response = client.chat.completions.create(
-        model=model_name,
-        max_tokens=MAX_OUTPUT_TOKENS,
-        messages=[
-            {"role": "system", "content": system},
-            {"role": "user", "content": user_content},
-        ],
-    )
-
-    # Standard OpenAI SDK response handling
-    if hasattr(response, "choices") and response.choices:
-        content = response.choices[0].message.content
-        if content and content.strip():
-            return content.strip()
-            
-    # Debug print if model returned no text content
-    print(f"[generate_ai_analysis] Raw GitHub response object: {response}", file=sys.stderr)
-    return ""
-
-
-PROVIDER_CALLERS = {
-    "anthropic": _call_anthropic,
-    "gemini": _call_gemini,
-    "github": _call_github,
-}
+def execute_provider_call(provider: str, model: str, system: str, user_content: str) -> str:
+    """Routes provider call to native SDK or generic OpenAI-compatible function."""
+    if provider == "gemini":
+        return _call_gemini(model, system, user_content)
+    elif provider == "anthropic":
+        return _call_anthropic(model, system, user_content)
+    elif provider in PROVIDER_CONFIGS:
+        cfg = PROVIDER_CONFIGS[provider]
+        return _call_openai_compatible(
+            model=model,
+            system=system,
+            user_content=user_content,
+            base_url=cfg["base_url"],
+            api_key_env=cfg["api_key_env"],
+        )
+    else:
+        raise ValueError(f"Unsupported provider: {provider}")
 
 
 def generate_for_activity(provider, model, context_text, activity, metrics):
     prompt = _build_prompt(activity, metrics)
     system = SYSTEM_PREFIX + context_text
     user_content = f"Today's workout data:\n\n{prompt}"
-    return PROVIDER_CALLERS[provider](model, system, user_content)
+    return execute_provider_call(provider, model, system, user_content)
+
+
+def generate_readiness_analysis(provider, model, context_text, metrics, date_str):
+    prompt = _build_readiness_prompt(metrics, date_str)
+    system = READINESS_SYSTEM_PREFIX + context_text
+    user_content = f"Today's readiness data (no activity logged yet):\n\n{prompt}"
+    return execute_provider_call(provider, model, system, user_content)
 
 
 def _run_readiness_mode(args, model, context_text, metrics, metrics_path):
@@ -253,26 +286,34 @@ def _run_readiness_mode(args, model, context_text, metrics, metrics_path):
 def main():
     default_date = datetime.datetime.now().strftime("%Y-%m-%d")
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--date", default=default_date, help="YYYY-MM-DD")
+    parser.add_argument("--date", default=default_date, help="YYYY-MM-DD (defaults to today)")
     parser.add_argument("--data-dir", default="data")
     parser.add_argument("--context", default="training_context.md")
-    parser.add_argument("--provider", choices=("gemini", "anthropic", "github"), default="gemini")
+    parser.add_argument(
+        "--provider",
+        choices=("gemini", "anthropic", "groq", "deepseek", "github"),
+        default="gemini",
+    )
     parser.add_argument("--model", default=None, help="Defaults per-provider if not given")
     parser.add_argument("--force", action="store_true", help="Regenerate even if ai_analysis already set")
     args = parser.parse_args()
-    
+
     model = args.model or DEFAULT_MODELS[args.provider]
 
     key_map = {
         "gemini": "GEMINI_API_KEY",
         "anthropic": "ANTHROPIC_API_KEY",
+        "groq": "GROQ_API_KEY",
+        "deepseek": "DEEPSEEK_API_KEY",
         "github": "GITHUB_TOKEN",
     }
     key_var = key_map[args.provider]
-    
-    # Normalize GH_TOKEN -> GITHUB_TOKEN if using github provider
-    if args.provider == "github" and not os.environ.get("GITHUB_TOKEN") and os.environ.get("GH_TOKEN"):
-        os.environ["GITHUB_TOKEN"] = os.environ["GH_TOKEN"]
+
+    # Support token aliases for GitHub
+    if args.provider == "github" and not os.environ.get("GITHUB_TOKEN"):
+        token_alias = os.environ.get("GH_MODELS_TOKEN") or os.environ.get("GH_TOKEN")
+        if token_alias:
+            os.environ["GITHUB_TOKEN"] = token_alias
 
     if not os.environ.get(key_var):
         print(f"[generate_ai_analysis] {key_var} not set -- skipping.", file=sys.stderr)
@@ -281,11 +322,11 @@ def main():
     if not os.path.exists(args.context):
         print(f"[generate_ai_analysis] {args.context} not found -- skipping.", file=sys.stderr)
         return
-        
+
     with open(args.context, "r", encoding="utf-8") as f:
         context_text = f.read()
 
-    # Safe path building
+    # Build date-specific metrics path safely
     date_parts = args.date.split("-")
     if len(date_parts) >= 2:
         metrics_path = os.path.join(args.data_dir, date_parts[0], date_parts[1], f"{args.date}_metrics.json")
@@ -297,7 +338,6 @@ def main():
     activity_path = _find_dated_activity_file(args.data_dir, args.date)
     activities_payload = _load_json(activity_path) if activity_path else None
 
-    # Handle both top-level list and wrapped dict structures
     if isinstance(activities_payload, list):
         activities = activities_payload
     elif isinstance(activities_payload, dict):
@@ -320,7 +360,7 @@ def main():
         except Exception as e:
             print(f"[generate_ai_analysis] {args.provider} call failed for '{activity.get('name')}': {e}", file=sys.stderr)
             continue
-            
+
         if analysis:
             activity["ai_analysis"] = analysis
             activity["ai_analysis_provider"] = f"{args.provider}:{model}"
