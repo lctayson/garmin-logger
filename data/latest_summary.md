@@ -16,7 +16,7 @@
   - TE: VO2MAX · aerobic 3.6 · anaerobic 1
   - Intervals: 5 work reps · pace drift -7.4% · HR +16bpm
   - MS: 2.93k @ 5:07 161bpm 1.05m 184spm 236ms 8.1cm 332w
-  - 🧠 You hit the intended stimulus today: max HR reached 175 bpm (well above your 171 LTHR) and Garmin clocked a 3.6 VO2max TE with 1.0 anaerobic TE, confirming this didn't slip into just another sub-threshold day. The cost showed up late, with a 16 bpm HR climb across the 5 reps and a -7.4% efficiency drift, which is entirely expected for 3-minute hard efforts in the Malolos heat—especially starting from a moderate readiness score of 53. Performance condition held steady (+3 to +5), meaning your mechanics didn't fall apart under fatigue. Friday’s rest and core will be well-earned before Saturday's 11k LSD.
+  - 🧠 The primary goal here was landing genuine top-end stimulus, and you achieved it: reaching 175 bpm (above LTHR of 171) earned a clean VO2max label and an anaerobic TE of 1.0, avoiding the flatlined stimulus of past cycles. Despite moderate morning readiness (score 53), execution held strong with a +4.6 average Performance Condition and a 13W lift in power across the reps. The trade-off was cardiac drift (+16 bpm HR delta across the 5 reps and -7.4% pace EF drift), reflecting the tropical heat compounding late in the workout. With 26 hours of recovery flagged, keep Friday strictly to core/hip work so Saturday's 11K long run stays truly easy.
 
 ## Load & Trends
 
