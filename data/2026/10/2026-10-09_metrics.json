@@ -44,7 +44,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "Today is Friday, scheduled as a non-running day with core/hip stability work and rest. \n\nYour readiness is sitting at 56, primarily dragged down by short sleep (5.5 hours, sleep score 70) rather than systemic training fatigue—your ACWR (0.90) and recovery time factor (92%) are completely optimal, and HRV is holding in the balanced zone at 48 ms. \n\nProceed with your planned session: take the complete running rest, keep the core and hip stability routine light to moderate (20–30 minutes, bodyweight or band work), and focus on recovering sleep debt tonight ahead of tomorrow's long run.",
+    "ai_analysis": "Today is Friday, scheduled as a non-running day focused on rest and core/hip stability. \n\nYour readiness sits at a moderate 56, driven almost entirely by short sleep (5.5 hours, sleep score 70) rather than systemic fatigue—your ACWR (0.90) and recovery time are optimal, and HRV remains balanced at 48 ms. Proceed with your planned routine: keep it strictly to non-running rest plus light core and hip stability work, keeping the effort low to let your sleep debt catch up ahead of the weekend long run.",
     "ai_analysis_provider": "gemini:gemini-3.8-flash"
   },
   "health": {
