@@ -35,7 +35,7 @@ except ImportError:
 DEFAULT_MODELS = {
     "gemini": "gemini-3.8-flash",
     "anthropic": "claude-sonnet-5",
-    "groq": "deepseek-r1-distill-llama-70b",
+    "groq": "openai/gpt-oss-120b",
     "deepseek": "deepseek-chat",  # Options: "deepseek-chat", "deepseek-reasoner"
     "github": "openai/gpt-4o",  # Options: "gpt-4o-mini", "meta/llama-3.3-70b-instruct"
 }
