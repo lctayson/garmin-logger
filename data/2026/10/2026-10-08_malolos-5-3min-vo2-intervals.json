@@ -690,7 +690,7 @@
         ]
       },
       "lap_count": 17,
-      "ai_analysis": "You hit the intended stimulus today: max HR reached 175 bpm (clearing your LTHR of 171) and Garmin correctly logged an aerobic TE of 3.6 tagged as \"Improving VO2 Max\" with a 1.0 anaerobic contribution. The 16 bpm drift across the 5 reps and -7.4% pace efficiency drop are completely normal for a 3-minute VO2 session in Malolos heat, showing you actually pushed into that top gear rather than settling into threshold comfort. Performance condition held strong throughout (+3 to +5), so take full advantage of tomorrow's rest and core day before Saturday's 11K long run.",
+      "ai_analysis": "This is the VO2max stimulus actually landing: you touched a max HR of 175 bpm (right into the 170–178 target zone) with a 3.6 Aerobic / 1.0 Anaerobic Training Effect, breaking the historical pattern of missing high-end stimulus. The 16 bpm HR delta across the 5 reps and -7.4% efficiency drift show real cardiac strain and fatigue by the final interval in the morning heat, but Performance Condition held strong (+3 to +5). Given the moderate readiness (53) and 26 hours of required recovery, take tomorrow's core/rest day completely easy before Saturday's 11k LSD.",
       "ai_analysis_provider": "gemini:gemini-3.8-flash"
     }
   ]
