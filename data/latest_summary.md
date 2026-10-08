@@ -9,9 +9,7 @@
 - **Recovery time:** 4.8h
 - ⚠️ **Limiter:** Sleep Score (55%)
 - **Also soft:** Stress History
-- 🧠 Today is Friday, scheduled as a non-running day focused on rest and core/hip stability. 
-
-Your readiness sits at a moderate 56, driven almost entirely by short sleep (5.5 hours, sleep score 70) rather than systemic fatigue—your ACWR (0.90) and recovery time are optimal, and HRV remains balanced at 48 ms. Proceed with your planned routine: keep it strictly to non-running rest plus light core and hip stability work, keeping the effort low to let your sleep debt catch up ahead of the weekend long run.
+- 🧠 Your Friday is a core/hip‑stability strength day (no running). The overall readiness is “moderate” (score 56) and HRV is a bit down after only 5½ h of sleep, but the ACWR is optimal and stress‑recovery balance is still acceptable. Do the planned strength session, but trim the load – stay at the lighter end of the prescribed volume, drop any max‑effort lifts, and focus on quality activation and mobility. If you feel unusually fatigued mid‑session, stop and recover.
 
 ## Today — Rest Day
 
