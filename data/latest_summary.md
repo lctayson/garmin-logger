@@ -16,7 +16,7 @@
   - TE: VO2MAX · aerobic 3.6 · anaerobic 1
   - Intervals: 5 work reps · pace drift -7.4% · HR +16bpm
   - MS: 2.93k @ 5:07 161bpm 1.05m 184spm 236ms 8.1cm 332w
-  - 🧠 Solid execution on the week's hardest workout despite moderate readiness (53). You delivered genuine top-end stimulus, logging a 3.6 VO2max training effect and touching 175 bpm late—exactly what was missing from your previous HM cycle. The 16 bpm cardiac drift across the 5 reps is expected given the 3-minute interval duration in Malolos heat, but holding strong output (performance condition ended at +5) confirms you absorbed the demand well. Take Friday’s scheduled rest and core seriously before Saturday's 11k long run.
+  - 🧠 Your Thursday VO₂‑max session fell short of the intended intensity: the 5 × 3‑min reps were about 7 % slower than the 4:50–5:15 /km target (avg 6:46 /km) and averaged only 150 bpm, well under the ≤172 bpm cap, even though the max HR spiked to 175 bpm. Nonetheless the training‑effect algorithm still logged a solid VO₂‑max stimulus (aerobic 3.6) with a modest anaerobic benefit, and the stamina curve (99 → 71 → 52 %) shows the expected fatigue profile for a hard interval block. With a readiness score of 53 (moderate
 
 ## Load & Trends
 
