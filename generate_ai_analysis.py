@@ -35,9 +35,9 @@ except ImportError:
 DEFAULT_MODELS = {
     "gemini": "gemini-3.8-flash",
     "anthropic": "claude-sonnet-5",
-    "groq": "openai/gpt-oss-120b",
+    "groq": "openai/gpt-oss-120b",  # llama-3.3-70b-versatile was decommissioned 2026-08-16
     "deepseek": "deepseek-chat",  # Options: "deepseek-chat", "deepseek-reasoner"
-    "github": "openai/gpt-4o",  # Options: "gpt-4o-mini", "meta/llama-3.3-70b-instruct"
+    "github": "openai/gpt-4o",  # Dead: GitHub Models was fully retired 2026-07-30. Do not use.
 }
 
 PROVIDER_CONFIGS = {
@@ -162,8 +162,22 @@ def _call_openai_compatible(
         if content and content.strip():
             return content.strip()
 
-    print(f"[generate_ai_analysis] Raw response object from {base_url}: {response}", file=sys.stderr)
-    return ""
+    # An empty response must raise, not return "" -- a silent empty return
+    # looks like success (exit code 0) to the shell, so the `provider_a ||
+    # provider_b` fallback in the workflow YAML never triggers and nothing
+    # gets generated with no visible error at all.
+    raise RuntimeError(f"Empty response from {base_url} (model={model}): {response}")
+
+
+def _require_nonempty(text: str, source: str) -> str:
+    """A silently-empty result looks like success (exit code 0) to the
+    shell, so the `provider_a || provider_b` fallback in the workflow YAML
+    never triggers and nothing gets generated with no visible error. Every
+    provider caller must raise on empty output, not return "" quietly."""
+    text = (text or "").strip()
+    if not text:
+        raise RuntimeError(f"Empty response from {source}")
+    return text
 
 
 def _call_anthropic(model: str, system: str, user_content: str) -> str:
@@ -179,7 +193,7 @@ def _call_anthropic(model: str, system: str, user_content: str) -> str:
         messages=[{"role": "user", "content": user_content}],
     )
     parts = [block.text for block in response.content if getattr(block, "type", None) == "text"]
-    return "".join(parts).strip()
+    return _require_nonempty("".join(parts), f"anthropic:{model}")
 
 
 def _call_gemini(model: str, system: str, user_content: str) -> str:
@@ -216,7 +230,7 @@ def _call_gemini(model: str, system: str, user_content: str) -> str:
             thinking_config=thinking_cfg,
         ),
     )
-    return (response.text or "").strip()
+    return _require_nonempty(response.text, f"gemini:{model}")
 
 
 def execute_provider_call(provider: str, model: str, system: str, user_content: str) -> str:
@@ -265,10 +279,15 @@ def _run_readiness_mode(args, model, context_text, metrics, metrics_path):
     try:
         analysis = generate_readiness_analysis(args.provider, model, context_text, metrics, args.date)
     except Exception as e:
+        # A genuine failure, not "nothing to do" -- must exit non-zero so
+        # the `provider_a || provider_b` fallback in the workflow YAML
+        # actually triggers, the same reason every provider caller now
+        # raises instead of returning "" on empty output.
         print(f"[generate_ai_analysis] {args.provider} call failed for readiness analysis: {e}", file=sys.stderr)
-        return
+        sys.exit(1)
     if not analysis:
-        return
+        print(f"[generate_ai_analysis] {args.provider} returned an empty readiness analysis.", file=sys.stderr)
+        sys.exit(1)
 
     readiness["ai_analysis"] = analysis
     readiness["ai_analysis_provider"] = f"{args.provider}:{model}"
@@ -356,6 +375,7 @@ def main():
         return
 
     changed = False
+    failed = False
     for activity in activities:
         if not isinstance(activity, dict):
             continue
@@ -364,8 +384,12 @@ def main():
         try:
             analysis = generate_for_activity(args.provider, model, context_text, activity, metrics)
         except Exception as e:
+            # Keep going so other activities can still succeed, and remember
+            # to exit non-zero at the end so the workflow's fallback
+            # provider runs (it skips activities that already have analysis).
             print(f"[generate_ai_analysis] {args.provider} call failed for '{activity.get('name')}': {e}", file=sys.stderr)
-            sys.exit(1)
+            failed = True
+            continue
 
         if analysis:
             activity["ai_analysis"] = analysis
@@ -374,6 +398,8 @@ def main():
             print(f"[generate_ai_analysis] Generated analysis for '{activity.get('name')}' via {args.provider}.", file=sys.stderr)
 
     if not changed:
+        if failed:
+            sys.exit(1)
         return
 
     with open(activity_path, "w", encoding="utf-8") as f:
@@ -387,6 +413,11 @@ def main():
             with open(latest_path, "w", encoding="utf-8") as f:
                 json.dump(activities_payload, f, indent=2, ensure_ascii=False)
                 f.write("\n")
+
+    # Partial progress is saved above; now signal that something still
+    # failed so the fallback provider picks up the remainder.
+    if failed:
+        sys.exit(1)
 
 
 if __name__ == "__main__":

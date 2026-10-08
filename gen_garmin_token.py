@@ -2,6 +2,8 @@ import os
 from pathlib import Path
 from garminconnect import Garmin
 
+# This script generates and saves Garmin Connect tokens for use in Postman.
+
 def main():
     # Prompt for credentials securely or use environment variables
     email = input("Enter your Garmin email: ")
