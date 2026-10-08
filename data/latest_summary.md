@@ -16,7 +16,7 @@
   - TE: VO2MAX · aerobic 3.6 · anaerobic 1
   - Intervals: 5 work reps · pace drift -7.4% · HR +16bpm
   - MS: 2.93k @ 5:07 161bpm 1.05m 184spm 236ms 8.1cm 332w
-  - 🧠 You nailed the target stimulus today: 5 reps completed with peak HR reaching 175 bpm and an actual 1.0 anaerobic TE logged, finally breaking the historical pattern of missing high-end work. The 16 bpm HR delta across reps and -7.4% efficiency drift show real fatigue accumulation by rep 5, but ending with a +5 Performance Condition indicates you absorbed the work rather than blowing up. With readiness at 53 and a 147 load cost in the heat, tomorrow's scheduled rest and core day is non-negotiable to set up Saturday's 11K long run.
+  - 🧠 Solid execution on the week's hardest workout despite moderate readiness (53). You delivered genuine top-end stimulus, logging a 3.6 VO2max training effect and touching 175 bpm late—exactly what was missing from your previous HM cycle. The 16 bpm cardiac drift across the 5 reps is expected given the 3-minute interval duration in Malolos heat, but holding strong output (performance condition ended at +5) confirms you absorbed the demand well. Take Friday’s scheduled rest and core seriously before Saturday's 11k long run.
 
 ## Load & Trends
 
