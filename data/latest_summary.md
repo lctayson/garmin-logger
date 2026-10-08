@@ -1,17 +1,13 @@
-# Daily Check — 2026-10-08
+# Daily Check — 2026-10-09
 
-## Readiness: 53/100 (Moderate)
-> Recovery In Progress
+## Readiness: -/100
 
-- **RHR:** 58 bpm
-- **HRV:** 54ms (7d avg: 55ms)
-- **Sleep:** 6h48 (score 82)
-- ⚠️ **Recovery time:** 26.4h
-- ⚠️ **Limiter:** Recovery Time (57%)
-- **Also soft:** Sleep History
+- **RHR:** 57 bpm
+- 🧠 Resting HR is solid at 57 bpm with no signs of lingering fatigue from midweek quality work. Stick to the scheduled routine today: zero running, complete your core and hip stability work, and bank the recovery ahead of tomorrow’s weekend long run.
 
-## Today
+## Today — Rest Day
 
+_Most recent activity (2026-10-08):_
 - **Malolos - 5 × 3min VO₂ Intervals** — 7.03km · 47:31 · 6:46/km · HR 150/175 max
   - TE: VO2MAX · aerobic 3.6 · anaerobic 1
   - Intervals: 5 work reps · pace drift -7.4% · HR +16bpm
@@ -20,29 +16,24 @@
 
 ## Load & Trends
 
-- **ACWR:** 1.1 (Optimal) — acute 620 / chronic 540 (chronic range 432–810)
 - **7-day volume:** 36.14km vs 28-day avg 34.4km (+5%)
-- **Running tolerance:** 75.0% (Medium) — 36.1km of 62.3km weekly cap, acute impact load 46.7
-- **Aerobic Low:** 760 (target 303–822 — in range)
-- ⚠️ **Aerobic High:** 1270.7 (target 649–1169 — +102 over)
-- ⚠️ **Anaerobic:** 43.3 (target 173–519 — -130 under)
-- ⚠️ **Load focus:** Anaerobic Shortage
-- ⚠️ **Sleep (7d avg):** 6h12, 6/7 nights below need, trending up
-- **RHR (7d avg):** 56.7, trending flat
+- **Running tolerance:** 63.4% (Medium) — 36.1km of 62.3km weekly cap, acute impact load 39.5
+- ⚠️ **Sleep (7d avg):** 6h16, 6/7 nights below need, trending up
+- **RHR (7d avg):** 56.6, trending down
 - **HRV:** trending up
 
-## This Week (Oct 2–8)
+## This Week (Oct 3–9)
 
 | D | Activity | Volume | Load |
 |:---:|:---|---:|---:|
-| F | Core/Hip | 24:36 | 3 |
 | S | Malolos Run | 10k · 1:14:18 | 93 |
 | S | Malolos Run | 6k · 45:01 | 58 |
 | M | Strength A | 20:44 | 2 |
 | T | BHM W3: 2x10min Thr | 7k · 47:21 | 153 |
 | W | Run + Strides/Hills | 6k · 48:18 | 64 |
 | T | 5x3min VO₂ Int | 7k · 47:31 | 147 |
+| F | Rest | — | — |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 7 | 36.15 km | 5:07:49 | 521.5 |
+| 6 | 36.15 km | 4:43:13 | 518.5 |
