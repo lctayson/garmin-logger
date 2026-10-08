@@ -16,7 +16,7 @@
   - TE: VO2MAX · aerobic 3.6 · anaerobic 1
   - Intervals: 5 work reps · pace drift -7.4% · HR +16bpm
   - MS: 2.93k @ 5:07 161bpm 1.05m 184spm 236ms 8.1cm 332w
-  - 🧠 Execution was spot-on for the W3 Thursday target: 5×3min reps completed with heart rate topping out at 175 bpm and an aerobic TE of 3.6, delivering the genuine VO2max stimulus this bridge phase demands. Despite entering on moderate readiness (53), performance condition held strong throughout (+3 to +5), though the 16 bpm HR rise across reps and -7.4% efficiency drift show the expected high cardiac cost of running these in Malolos heat. Take Friday's rest and core seriously so the legs are fresh for Saturday's 11K long run.
+  - 🧠 You nailed the target stimulus today: 5 reps completed with peak HR reaching 175 bpm and an actual 1.0 anaerobic TE logged, finally breaking the historical pattern of missing high-end work. The 16 bpm HR delta across reps and -7.4% efficiency drift show real fatigue accumulation by rep 5, but ending with a +5 Performance Condition indicates you absorbed the work rather than blowing up. With readiness at 53 and a 147 load cost in the heat, tomorrow's scheduled rest and core day is non-negotiable to set up Saturday's 11K long run.
 
 ## Load & Trends
 
