@@ -16,7 +16,7 @@
   - TE: VO2MAX · aerobic 3.6 · anaerobic 1
   - Intervals: 5 work reps · pace drift -7.4% · HR +16bpm
   - MS: 2.93k @ 5:07 161bpm 1.05m 184spm 236ms 8.1cm 332w
-  - 🧠 This is the VO2max stimulus actually landing: you touched a max HR of 175 bpm (right into the 170–178 target zone) with a 3.6 Aerobic / 1.0 Anaerobic Training Effect, breaking the historical pattern of missing high-end stimulus. The 16 bpm HR delta across the 5 reps and -7.4% efficiency drift show real cardiac strain and fatigue by the final interval in the morning heat, but Performance Condition held strong (+3 to +5). Given the moderate readiness (53) and 26 hours of required recovery, take tomorrow's core/rest day completely easy before Saturday's 11k LSD.
+  - 🧠 You executed all 5 reps of the 3-minute VO2 intervals, hitting a peak HR of 175 bpm (just above your 171 LTHR) and finally logging a 1.0 anaerobic training effect—a clear step forward given your history of missing that top-end stimulus. The work showed up on the engine: cardiac drift across the intervals was real, with HR climbing 16 bpm by the final reps and efficiency dropping -7.4% as the heat and cumulative fatigue set in. Despite starting with a moderate readiness of 53, performance condition stayed consistently positive (+4.6 average), meaning the legs handled the mechanical demand well even as the cardiovascular system was working hard. Take full advantage of Friday's core-only rest day so you are reset for Saturday's 11k LSD.
 
 ## Load & Trends
 
