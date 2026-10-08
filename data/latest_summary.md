@@ -16,7 +16,7 @@
   - TE: VO2MAX · aerobic 3.6 · anaerobic 1
   - Intervals: 5 work reps · pace drift -7.4% · HR +16bpm
   - MS: 2.93k @ 5:07 161bpm 1.05m 184spm 236ms 8.1cm 332w
-  - 🧠 Your Thursday VO₂‑max session fell short of the intended intensity: the 5 × 3‑min reps were about 7 % slower than the 4:50–5:15 /km target (avg 6:46 /km) and averaged only 150 bpm, well under the ≤172 bpm cap, even though the max HR spiked to 175 bpm. Nonetheless the training‑effect algorithm still logged a solid VO₂‑max stimulus (aerobic 3.6) with a modest anaerobic benefit, and the stamina curve (99 → 71 → 52 %) shows the expected fatigue profile for a hard interval block. With a readiness score of 53 (moderate
+  - 🧠 You got the true VO2max stimulus today: a 3.6 aerobic TE labeled VO2MAX, a non-zero anaerobic TE (1.0), and a peak HR of 175 bpm (above your 171 LTHR). That is a clean execution of the intended stimulus that historically got missed in your prior cycle. The cost showed up as expected across the 5 reps: a 16 bpm HR rise rep-over-rep and a -7.4% efficiency drift reflect the real cardiac tax of the workout in Malolos heat. With readiness at 53 and 26 hours of recovery needed, take tomorrow's rest and core session fully easy to absorb this before Saturday's long run.
 
 ## Load & Trends
 
