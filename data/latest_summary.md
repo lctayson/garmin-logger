@@ -16,7 +16,7 @@
   - TE: VO2MAX · aerobic 3.6 · anaerobic 1
   - Intervals: 5 work reps · pace drift -7.4% · HR +16bpm
   - MS: 2.93k @ 5:07 161bpm 1.05m 184spm 236ms 8.1cm 332w
-  - 🧠 Good execution on the 5×3min reps today, successfully hitting the intended VO2max stimulus with a peak heart rate of 175 bpm and earning a primary VO2max training effect. The 16 bpm drift and -7.4% efficiency drop across the five intervals reflect expected cardiac fatigue in the Malolos morning heat rather than poor pacing, especially given performance condition held strong (ending at +5). Importantly, this session registered a 1.0 anaerobic TE on moderate readiness (53), ensuring you're genuinely engaging the top-end capacity that was missed in prior cycles. Take tomorrow’s rest and core session fully easy to absorb this before Saturday's 11k LSD.
+  - 🧠 You hit the intended stimulus today: max HR reached 175 bpm (well above your 171 LTHR) and Garmin clocked a 3.6 VO2max TE with 1.0 anaerobic TE, confirming this didn't slip into just another sub-threshold day. The cost showed up late, with a 16 bpm HR climb across the 5 reps and a -7.4% efficiency drift, which is entirely expected for 3-minute hard efforts in the Malolos heat—especially starting from a moderate readiness score of 53. Performance condition held steady (+3 to +5), meaning your mechanics didn't fall apart under fatigue. Friday’s rest and core will be well-earned before Saturday's 11k LSD.
 
 ## Load & Trends
 
