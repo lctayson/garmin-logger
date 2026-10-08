@@ -44,7 +44,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "It’s Friday – the plan calls for a core/hip‑stability strength session (no running). Your readiness is moderate (score 56) and sleep was only 5.5 h, so keep the work light: run the usual movement circuit but drop the load to about 60 % of the usual weight and cut the sets from 3‑4 to 2, focusing on form and mobility rather than maximal effort. This will give you the neuromuscular stimulus you need without stressing recovery, and you’ll stay within the optimal ACWR of 0.9.",
+    "ai_analysis": "**Friday is a core/hip‑stability strength day (no run).** Your overall readiness is moderate (score 56) with only 5½ h of sleep and a slight dip in HRV, but the training‑load balance is still optimal (ACWR 0.9). Stick to the planned session, but keep the work light‑to‑moderate—use body‑weight or low‑load core/hip drills, skip heavy squats or max‑effort lifts, and stop if you feel unusually fatigued. This will give you the necessary neuromuscular stimulus without adding extra strain while you recover.",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
