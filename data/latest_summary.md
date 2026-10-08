@@ -1,9 +1,19 @@
 # Daily Check — 2026-10-09
 
-## Readiness: -/100
+## Readiness: 56/100 (Moderate)
+> Balance Stress And Recovery
 
 - **RHR:** 57 bpm
-- 🧠 Resting HR is solid at 57 bpm with no signs of lingering fatigue from midweek quality work. Stick to the scheduled routine today: zero running, complete your core and hip stability work, and bank the recovery ahead of tomorrow’s weekend long run.
+- **HRV:** 48ms (7d avg: 54ms)
+- **Sleep:** 5h30 (score 70)
+- **Recovery time:** 4.8h
+- ⚠️ **Limiter:** Sleep Score (55%)
+- **Also soft:** Stress History
+- 🧠 Today is Friday, scheduled as a non-running day with core/hip stability work and rest. 
+
+Your readiness is sitting at 56, primarily dragged down by short sleep (5.5 hours, sleep score 70) rather than systemic training fatigue—your ACWR (0.90) and recovery time factor (92%) are completely optimal, and HRV is holding in the balanced zone at 48 ms. 
+
+Proceed with your planned session: take the complete running rest, keep the core and hip stability routine light to moderate (20–30 minutes, bodyweight or band work), and focus on recovering sleep debt tonight ahead of tomorrow's long run.
 
 ## Today — Rest Day
 
@@ -16,11 +26,16 @@ _Most recent activity (2026-10-08):_
 
 ## Load & Trends
 
+- **ACWR:** 0.9 (Optimal) — acute 504 / chronic 525 (chronic range 420–787.5)
 - **7-day volume:** 36.14km vs 28-day avg 34.4km (+5%)
 - **Running tolerance:** 63.4% (Medium) — 36.1km of 62.3km weekly cap, acute impact load 39.5
-- ⚠️ **Sleep (7d avg):** 6h16, 6/7 nights below need, trending up
+- **Aerobic Low:** 760 (target 303–822 — in range)
+- ⚠️ **Aerobic High:** 1270.7 (target 649–1169 — +102 over)
+- ⚠️ **Anaerobic:** 43.3 (target 173–519 — -130 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- ⚠️ **Sleep (7d avg):** 6h09, 7/7 nights below need, trending up
 - **RHR (7d avg):** 56.6, trending down
-- **HRV:** trending up
+- **HRV:** trending flat
 
 ## This Week (Oct 3–9)
 

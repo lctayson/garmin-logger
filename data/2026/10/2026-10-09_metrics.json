@@ -1,16 +1,63 @@
 {
   "date": "2026-10-09",
   "readiness": {
+    "score": 56,
+    "level": "Moderate",
+    "feedback": "Balance Stress And Recovery",
     "resting_hr": 57,
-    "ai_analysis": "Resting HR is solid at 57 bpm with no signs of lingering fatigue from midweek quality work. Stick to the scheduled routine today: zero running, complete your core and hip stability work, and bank the recovery ahead of tomorrow’s weekend long run.",
+    "hrv_last_night_avg_ms": 48.0,
+    "hrv_7_day_avg_ms": 54.0,
+    "hrv_status": "BALANCED",
+    "sleep_hours": 5.5,
+    "sleep_hours_including_previous_day_nap": 5.5,
+    "sleep_score": 70,
+    "recovery_hours": 4.8,
+    "hrv_baseline": {
+      "lowUpper": 45.0,
+      "balancedLow": 47.0,
+      "balancedUpper": 56.0,
+      "markerValue": 0.6388855
+    },
+    "factor_details": {
+      "sleep_score": {
+        "percent": 55,
+        "feedback": "Moderate"
+      },
+      "sleep_history": {
+        "percent": 72,
+        "feedback": "Good"
+      },
+      "recovery_time": {
+        "percent": 92,
+        "feedback": "Good"
+      },
+      "acwr": {
+        "percent": 93,
+        "feedback": "Good"
+      },
+      "hrv": {
+        "percent": 83,
+        "feedback": "Good"
+      },
+      "stress_history": {
+        "percent": 63,
+        "feedback": "Moderate"
+      }
+    },
+    "ai_analysis": "Today is Friday, scheduled as a non-running day with core/hip stability work and rest. \n\nYour readiness is sitting at 56, primarily dragged down by short sleep (5.5 hours, sleep score 70) rather than systemic training fatigue—your ACWR (0.90) and recovery time factor (92%) are completely optimal, and HRV is holding in the balanced zone at 48 ms. \n\nProceed with your planned session: take the complete running rest, keep the core and hip stability routine light to moderate (20–30 minutes, bodyweight or band work), and focus on recovering sleep debt tonight ahead of tomorrow's long run.",
     "ai_analysis_provider": "gemini:gemini-3.8-flash"
   },
   "health": {
     "steps": 10
   },
   "sleep": {
+    "deep_h": 0.6,
+    "light_h": 4.43,
+    "rem_h": 0.47,
+    "awake_h": 0.45,
     "baseline_h": 7.0,
     "need_h": 7.0,
+    "next_need_h": 7.5,
     "feedback": "No Change No Adjustments",
     "training_feedback": "No Change",
     "sleep_history_adjustment": "No Change",
@@ -18,11 +65,42 @@
     "nap_adjustment": "No Change",
     "previous_day_nap": null
   },
+  "load": {
+    "acute_load": 504,
+    "chronic_load": 525,
+    "acwr": 0.9,
+    "acwr_percent": 38,
+    "acwr_status": "Optimal",
+    "chronic_load_range": {
+      "min": 420.0,
+      "max": 787.5
+    },
+    "training_status": "Maintaining 2"
+  },
+  "vo2_max": 44.0,
   "race_predictions": {
     "5k": "27:29",
     "10k": "57:30",
     "half_marathon": "2:12:19",
     "marathon": "4:55:33"
+  },
+  "load_balance": {
+    "aerobic_low": 760.0,
+    "aerobic_low_target": [
+      303,
+      822
+    ],
+    "aerobic_high": 1270.7,
+    "aerobic_high_target": [
+      649,
+      1169
+    ],
+    "anaerobic": 43.3,
+    "anaerobic_target": [
+      173,
+      519
+    ],
+    "load_focus": "Anaerobic Shortage"
   },
   "running_tolerance": {
     "acute_impact_load": 39.5,
@@ -143,6 +221,14 @@
         }
       ]
     }
+  },
+  "heat_acclimation": {
+    "percentage": 100,
+    "trend": "Acclimatized"
+  },
+  "altitude_acclimation": {
+    "percentage": 0,
+    "trend": null
   },
   "trend_recent_daily": {
     "columns": [
@@ -324,16 +410,16 @@
       [
         "2026-10-09",
         57,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        48.0,
+        54.0,
+        5.5,
+        70,
+        44.0,
+        "Maintaining 2",
+        504,
+        525,
+        0.9,
+        "Optimal",
         0,
         0.0,
         0.0,
@@ -708,16 +794,16 @@
         "2026-10-03",
         "2026-10-09",
         57,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        48.0,
+        54.0,
+        5.5,
+        70,
+        44.0,
+        "Maintaining 2",
+        504,
+        525,
+        0.9,
+        "Optimal",
         6,
         4.72,
         36.14,
@@ -792,9 +878,9 @@
       ],
       [
         "2026-10-09",
-        39,
-        0,
-        70,
+        53,
+        3,
+        71,
         18
       ]
     ]
