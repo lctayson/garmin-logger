@@ -25,7 +25,6 @@ def test_morning_snapshot_wins_over_later_post_exercise_snapshot():
             "recoveryTimeFactorFeedback": "GOOD",
             "acwrFactorPercent": 97,
             "acwrFactorFeedback": "GOOD",
-            "inputContext": "AFTER_WAKEUP_RESET",
             "recoveryTimeChangePhrase": "NO_CHANGE_SLEEP",
         },
         {
@@ -42,7 +41,6 @@ def test_morning_snapshot_wins_over_later_post_exercise_snapshot():
             "recoveryTimeFactorFeedback": "MODERATE",
             "acwrFactorPercent": 85,
             "acwrFactorFeedback": "GOOD",
-            "inputContext": "AFTER_POST_EXERCISE_RESET",
             "recoveryTimeChangePhrase": "REACHED_ZERO",
         },
     ]
