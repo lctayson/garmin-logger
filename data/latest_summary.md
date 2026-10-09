@@ -9,7 +9,7 @@
 - **Recovery time:** 4.8h
 - ⚠️ **Limiter:** Sleep Score (55%)
 - **Also soft:** Stress History
-- 🧠 Friday is a core/hip‑stability day, not a running session. Your readiness is “moderate” (score 56) with only 5½ h of sleep and HRV a bit below your 7‑day average, but the training load is still balanced (ACWR 0.9). Go ahead with the strength workout, but trim it: run the circuit at the usual tempo, drop any heavy weighted moves, and limit each block to 2 sets instead of 3 to keep the stimulus light and avoid extra fatigue. If you feel unusually shaky during the first set, stop and replace the rest of the session with gentle mobility work.
+- 🧠 Your Friday is a core/hip‑stability strength day (no run), and the readiness score is only moderate (sleep 5.5 h, HRV a bit down). That level is sufficient for the planned neuromuscular work, but you should dial the load back: run the usual circuit but cut each exercise to 2 × 8–10 reps (or 60 % of the usual weight) and skip any heavy plyometric jumps. Keep the session under a 30‑minute effort and stay well below 150 bpm. If you feel unusually fatigued mid‑session, stop and replace with light mobility/stretching.
 
 ## Today — Rest Day
 
