@@ -9,7 +9,7 @@
 - **Recovery time:** 4.8h
 - ⚠️ **Limiter:** Sleep Score (55%)
 - **Also soft:** Stress History
-- 🧠 It’s a Friday – your day is a core/hip‑stability strength session, not a run. Your readiness is moderate (score 56) with only 5½ h of sleep and a slight dip in HRV, but the ACWR is still optimal, so a full‑body strength day isn’t contraindicated. Do the planned routine but trim the volume/intensity by about 20 % (e.g., two instead of three sets of each hip‑extension/clam‑shell circuit and keep the core circuit at a lighter load). Finish with a brief mobility/foam‑roll block and skip any heavy weighted lifts if you feel unusually fatigued.
+- 🧠 Today is a scheduled non-running day ("Rest + core/hip stability"), which fits your numbers perfectly. Your 56 readiness score is almost entirely driven by short sleep (5.5 hours) and a slight dip in overnight HRV (48 ms vs. 54 ms baseline), while your underlying training load remains completely sound (ACWR 0.90). Proceed with your planned core and hip stability work as normal, but keep it low-stress and prioritize getting to bed early tonight to clear that sleep debt before Saturday's long run.
 
 ## Today — Rest Day
 
