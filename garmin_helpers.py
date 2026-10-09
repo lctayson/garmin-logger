@@ -262,7 +262,8 @@ def get_training_readiness_details(api, target_date_str, training_status_raw=Non
         factors = {k: v for k, v in factors.items() if v}
         if factors: readiness_obj['factors'] = factors
         if len(snapshots) > 1:
-            readiness_obj['snapshots'] = [_compact_readiness_snapshot(item, factors) for item in snapshots]
+            ordered_snapshots = sorted(snapshots, key=lambda item: context(item) != 'AFTER_WAKEUP_RESET')
+            readiness_obj['snapshots'] = [_compact_readiness_snapshot(item, factors) for item in ordered_snapshots]
         result['readiness'] = {k: v for k, v in readiness_obj.items() if v is not None}
     return result
 
