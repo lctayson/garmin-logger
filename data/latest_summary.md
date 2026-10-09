@@ -9,7 +9,9 @@
 - **Recovery time:** 4.8h
 - ⚠️ **Limiter:** Sleep Score (55%)
 - **Also soft:** Stress History
-- 🧠 Your Friday is a core‑hip stability day, not a running load, and your ACWR is in the optimal range (0.9). Readiness is only “moderate” (score 56) with just 5½ h of sleep, so keep the session light: run the usual circuit but drop the load to ~70 % (e.g., 2 sets per movement, lighter weight or fewer reps) and skip any heavy single‑leg plyos. That will give you the neuromuscular stimulus you need without taxing recovery.
+- 🧠 Today is a scheduled non-running day (rest + core/hip stability), which fits your numbers well. While your autonomic recovery is stable (HRV balanced at 48 ms, ACWR optimal at 0.90), the acute dip in readiness to 56 is driven almost entirely by the short 5.5-hour sleep window. 
+
+Proceed with the planned core and hip stability routine, but keep it strictly low-arousal and under 30 minutes without pushing to failure. Do not add any cross-training or shakeout running—bank the recovery today so you absorb Thursday's quality work and enter tomorrow's long run fully restored.
 
 ## Today — Rest Day
 
