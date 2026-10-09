@@ -14,7 +14,7 @@
 
 - **Friday Core/Hip Stability** — 0.0km · 19:24 · HR 91/112 max
   - TE: AEROBIC_BASE · aerobic 0.2 · anaerobic 0
-  - 🧠 The 19‑minute core/hip stability session delivered a very modest aerobic stimulus (aerobic TE 0.2, no anaerobic benefit) and a low training load (3.1 AU), which is exactly what the weekly plan calls for on Friday and preserves capacity for the upcoming VO2max and threshold work. Your morning readiness was moderate (score 56) and the post‑exercise snapshot rose only to 59 with a minimal acute‑load increase (504 → 508), suggesting the strength work added only a slight, tolerable stress. The –1 point body‑battery impact aligns with the modest cardio demand and indicates the session was well‑tolerated given your current recovery budget.
+  - 🧠 The 19‑minute core/hip session produced only a minor aerobic stimulus (aerobic = 0.2, load = 3.1) and heart rate stayed well below any training zone (avg HR ≈ 91 bpm, max HR 112 bpm), so it contributed negligible cardiovascular load. Your morning readiness was moderate (score 56) with only ~4.8 h of recovery logged, which is on the low side before Thursday’s VO2max intervals; you may want to prioritize sleep or easy activity tonight to ensure sufficient freshness for that hard session.
 
 ## Load & Trends
 
