@@ -186,15 +186,28 @@ def get_training_readiness_details(api, target_date_str, training_status_raw=Non
         print(f'[training_readiness] Warning: {e}', file=sys.stderr)
     entry = {}
     if isinstance(readiness, list) and readiness:
-        def ts(e):
-            return (e.get('timestamp') or e.get('timestampLocal') or '') if isinstance(e, dict) else ''
-        entry = max(readiness, key=ts) or {}
+        # Garmin can return multiple snapshots for one local date: the morning
+        # score (AFTER_WAKEUP_RESET) and a later score after exercise. Daily
+        # readiness must represent the morning snapshot, not the latest score.
+        snapshots = [item for item in readiness if isinstance(item, dict)]
+        def context(item):
+            return str(item.get('inputContext') or item.get('input_context') or item.get('context') or '').upper()
+        def ts(item):
+            return str(item.get('timestampLocal') or item.get('timestamp_local') or item.get('timestamp') or '')
+        wakeup = [item for item in snapshots if context(item) == 'AFTER_WAKEUP_RESET']
+        if wakeup:
+            # If Garmin provides duplicate wake-up snapshots, keep the earliest.
+            entry = min(wakeup, key=ts)
+        elif snapshots:
+            # Older API responses may omit inputContext. Use the earliest
+            # timestamp as the safest available approximation of morning state.
+            entry = min(snapshots, key=ts)
     elif isinstance(readiness, dict):
         entry = readiness
     result = {}
     recovery_minutes = entry.get('recoveryTime')
     if recovery_minutes is None:
-        recovery_minutes = _find_first_key(readiness, ('recoveryTime', 'recovery_time'))
+        recovery_minutes = entry.get('recovery_time')
     if recovery_minutes is not None:
         value = _safe_float(recovery_minutes, 1)
         if value is not None:
