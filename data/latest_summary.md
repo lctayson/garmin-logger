@@ -9,7 +9,7 @@
 - **Recovery time:** 4.8h
 - ⚠️ **Limiter:** Sleep Score (55%)
 - **Also soft:** Stress History
-- 🧠 Friday is a scheduled non-running day (Core/hip stability strength only), which fits your data well. Your readiness is dipped at 56 primarily due to an acute sleep shortfall (5.5 hours, sleep score 70), while underlying metrics remain solid (ACWR 0.90, HRV balanced at 48ms). Proceed with your planned core and hip stability routine today, keeping it low-CNS and strictly bodyweight or light resistance—do not add any running. Prioritize making up the sleep deficit tonight so you are set for Saturday's long run.
+- 🧠 Your readiness is 56 (Moderate) with only 5.5 h of sleep and HRV 48 ms (below your 7‑day avg of 54 ms), so you’re not fully recovered. The Friday session is just core/hip‑stability work, so skip the heavy strength load and do a light, body‑weight core circuit (2‑3 sets of the usual moves, no added weight or max‑effort glute bridges). Keep the intensity low and stop if you feel any lingering fatigue. This preserves recovery while still maintaining the weekly stability stimulus.
 
 ## Today — Rest Day
 
