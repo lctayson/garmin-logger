@@ -179,7 +179,7 @@ def _factor(entry, percent_key, feedback_key):
 
 
 def _compact_readiness_snapshot(item, morning_factors):
-    """Compact a Garmin readiness reading without identifiers or timestamps."""
+    """Compact a Garmin readiness reading, retaining its local timestamp only."""
     context = item.get('inputContext') or item.get('input_context') or item.get('context')
     minutes = item.get('recoveryTime', item.get('recovery_time'))
     factor_keys = {
@@ -196,6 +196,7 @@ def _compact_readiness_snapshot(item, morning_factors):
         if factor and factor != morning_factors.get(name):
             changed_factors[name] = factor
     result = {
+        'timestamp_local': item.get('timestampLocal') or item.get('timestamp_local'),
         'context': str(context).upper() if context else None,
         'score': _safe_int(item.get('score')),
         'feedback': item.get('feedbackShort'),
