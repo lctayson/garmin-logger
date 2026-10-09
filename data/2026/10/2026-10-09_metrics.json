@@ -44,7 +44,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "Your readiness is 56 (Moderate) with only 5.5 h of sleep and HRV 48 ms (below your 7‑day avg of 54 ms), so you’re not fully recovered. The Friday session is just core/hip‑stability work, so skip the heavy strength load and do a light, body‑weight core circuit (2‑3 sets of the usual moves, no added weight or max‑effort glute bridges). Keep the intensity low and stop if you feel any lingering fatigue. This preserves recovery while still maintaining the weekly stability stimulus.",
+    "ai_analysis": "Your Friday is a core‑hip stability day, not a running load, and your ACWR is in the optimal range (0.9). Readiness is only “moderate” (score 56) with just 5½ h of sleep, so keep the session light: run the usual circuit but drop the load to ~70 % (e.g., 2 sets per movement, lighter weight or fewer reps) and skip any heavy single‑leg plyos. That will give you the neuromuscular stimulus you need without taxing recovery.",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
