@@ -90,10 +90,18 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }} 
         run: |
-          # Try Groq first; use Gemini only for analyses Groq could not generate.
-          python generate_ai_analysis.py --date "$EXPORT_DATE" --data-dir data --provider groq || \
-          python generate_ai_analysis.py --date "$EXPORT_DATE" --data-dir data --provider gemini
-          
+          # AI analysis is best-effort: preserve any successful analyses and never block the export.
+          if python generate_ai_analysis.py --date "$EXPORT_DATE" --data-dir data --provider groq; then
+            echo "Groq generated all requested analyses."
+          else
+            echo "Groq could not generate every analysis; trying Gemini for activities still missing one."
+            if python generate_ai_analysis.py --date "$EXPORT_DATE" --data-dir data --provider gemini; then
+              echo "Gemini fallback completed."
+            else
+              echo "::warning::Some AI analyses remain unavailable after both providers. Continuing with the available Garmin data and analyses."
+            fi
+          fi
+
       - name: Render daily summary markdown
         run: |
           python render_summary_md.py --data-dir data
