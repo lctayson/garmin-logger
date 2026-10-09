@@ -10,9 +10,9 @@
     "sleep_hours_including_previous_day_nap": 5.57,
     "sleep_score": 64,
     "training_status": "Maintaining 2",
-    "acute_load": 414,
-    "chronic_load": 508,
-    "acwr": 0.8,
+    "acute_load": 550,
+    "chronic_load": 532,
+    "acwr": 1.0,
     "vo2_max": 44.0,
     "recovery_time_hours": 0.0,
     "readiness": {
@@ -44,7 +44,37 @@
           "percent": 61,
           "feedback": "Moderate"
         }
-      }
+      },
+      "snapshots": [
+        {
+          "timestamp_local": "2026-10-10T05:26:38.0",
+          "context": "AFTER_WAKEUP_RESET",
+          "score": 56,
+          "feedback": "BALANCE_STRESS_AND_RECOVERY",
+          "recovery_minutes": 1,
+          "acute_load": 414,
+          "recovery_time_change": "NO_CHANGE_SLEEP"
+        },
+        {
+          "timestamp_local": "2026-10-10T07:25:27.0",
+          "context": "AFTER_POST_EXERCISE_RESET",
+          "score": 36,
+          "feedback": "FIND_TIME_TO_RELAX",
+          "recovery_minutes": 1604,
+          "acute_load": 550,
+          "recovery_time_change": "REACHED_ZERO",
+          "factor_overrides": {
+            "recovery_time": {
+              "percent": 57,
+              "feedback": "Moderate"
+            },
+            "acwr": {
+              "percent": 90,
+              "feedback": "Good"
+            }
+          }
+        }
+      ]
     },
     "sleep_need": {
       "baseline_hours": 7.0,
@@ -79,25 +109,25 @@
       "rem": 0.3,
       "awake": 0.43
     },
-    "total_steps": 110
+    "total_steps": 14460
   },
   "training_status": {
     "status": "Maintaining 2",
     "training_load": {
-      "acute_load": 414,
-      "chronic_load": 508,
+      "acute_load": 550,
+      "chronic_load": 532,
       "chronic_load_range": {
-        "min": 406.4,
-        "max": 762.0
+        "min": 425.6,
+        "max": 798.0
       },
-      "acwr": 0.8,
-      "acwr_percent": 33,
+      "acwr": 1.0,
+      "acwr_percent": 42,
       "acwr_status": "Optimal"
     },
     "recovery_time_hours": 0.0,
     "load_focus": "Anaerobic Shortage",
     "monthly_load_balance": {
-      "aerobic_low": 763.1,
+      "aerobic_low": 869.4,
       "aerobic_low_target_min": 303,
       "aerobic_low_target_max": 822,
       "aerobic_high": 1093.3,
@@ -128,17 +158,17 @@
   "training_history": {
     "7_day": {
       "total_endurance": {
-        "activity_count": 6,
-        "distance_km": 26.11,
-        "duration_hours": 3.81,
-        "exercise_load": 428.4
+        "activity_count": 7,
+        "distance_km": 37.15,
+        "duration_hours": 5.16,
+        "exercise_load": 534.8
       },
       "sports": {
         "running": {
-          "activity_count": 4,
-          "distance_km": 26.11,
-          "duration_hours": 3.14,
-          "exercise_load": 423.4
+          "activity_count": 5,
+          "distance_km": 37.15,
+          "duration_hours": 4.49,
+          "exercise_load": 529.8
         },
         "other": {
           "activity_count": 2,
@@ -149,7 +179,7 @@
       }
     },
     "28_day": {
-      "avg_weekly_running_distance_km": 31.9,
+      "avg_weekly_running_distance_km": 34.7,
       "weekly_total_endurance": [
         {
           "week_start": "2026-09-13",
@@ -215,17 +245,17 @@
           "week_start": "2026-10-04",
           "week_end": "2026-10-10",
           "total_endurance": {
-            "activity_count": 6,
-            "distance_km": 26.11,
-            "duration_hours": 3.81,
-            "exercise_load": 428.4
+            "activity_count": 7,
+            "distance_km": 37.15,
+            "duration_hours": 5.16,
+            "exercise_load": 534.8
           },
           "sports": {
             "running": {
-              "activity_count": 4,
-              "distance_km": 26.11,
-              "duration_hours": 3.14,
-              "exercise_load": 423.4
+              "activity_count": 5,
+              "distance_km": 37.15,
+              "duration_hours": 4.49,
+              "exercise_load": 529.8
             },
             "other": {
               "activity_count": 2,
@@ -238,21 +268,21 @@
       ]
     },
     "legacy_running_summary": {
-      "7d_distance_km": 26.11,
-      "28d_avg_weekly_distance_km": 31.9,
+      "7d_distance_km": 37.15,
+      "28d_avg_weekly_distance_km": 34.7,
       "weekly_distance_last_4_weeks_km": [
         28.25,
         36.17,
         37.14,
-        26.11
+        37.15
       ]
     },
     "running_tolerance": {
-      "acute_impact_load": 33.3,
+      "acute_impact_load": 44.4,
       "weekly_tolerance": 62.3,
-      "actual_7_day_distance": 26.1,
+      "actual_7_day_distance": 37.1,
       "status": "Medium",
-      "percent_of_tolerance": 53.5
+      "percent_of_tolerance": 71.3
     }
   },
   "trend_recent_daily": [
@@ -442,14 +472,22 @@
       "sleep_score": 64,
       "vo2_max": 44.0,
       "training_status": "Maintaining 2",
-      "acute_load": 414,
-      "chronic_load": 508,
-      "acwr": 0.8,
+      "acute_load": 550,
+      "chronic_load": 532,
+      "acwr": 1.0,
       "acwr_status": "Optimal",
-      "activity_count": 0,
-      "total_endurance_duration_hours": 0.0,
-      "total_endurance_distance_km": 0.0,
-      "sport_volume": {}
+      "activity_count": 1,
+      "total_endurance_duration_hours": 1.36,
+      "total_endurance_distance_km": 11.03,
+      "sport_volume": {
+        "running": {
+          "activity_count": 1,
+          "distance_km": 11.03,
+          "duration_hours": 1.36,
+          "exercise_load": 106.4
+        }
+      },
+      "total_exercise_load": 106.4
     }
   ],
   "trend_long_range_weekly": [
@@ -820,19 +858,19 @@
       "sleep_score": 64,
       "vo2_max": 44.0,
       "training_status": "Maintaining 2",
-      "acute_load": 414,
-      "chronic_load": 508,
-      "acwr": 0.8,
+      "acute_load": 550,
+      "chronic_load": 532,
+      "acwr": 1.0,
       "acwr_status": "Optimal",
-      "activity_count": 6,
-      "total_endurance_duration_hours": 3.81,
-      "total_endurance_distance_km": 26.11,
+      "activity_count": 7,
+      "total_endurance_duration_hours": 5.16,
+      "total_endurance_distance_km": 37.15,
       "sport_volume": {
         "running": {
-          "activity_count": 4,
-          "distance_km": 26.11,
-          "duration_hours": 3.14,
-          "exercise_load": 423.5
+          "activity_count": 5,
+          "distance_km": 37.15,
+          "duration_hours": 4.49,
+          "exercise_load": 529.9
         },
         "other": {
           "activity_count": 2,
@@ -841,7 +879,7 @@
           "exercise_load": 4.9
         }
       },
-      "total_exercise_load": 428.4
+      "total_exercise_load": 534.8
     }
   ],
   "body_battery_trend": [
@@ -890,10 +928,506 @@
     {
       "date": "2026-10-10",
       "charged": 47,
-      "drained": 4,
+      "drained": 22,
       "high": 58,
       "low": 11
     }
   ],
-  "activities": []
+  "activities": [
+    {
+      "name": "Malolos Running",
+      "activity_id": 24667970082,
+      "type": "running",
+      "distance": 11.03,
+      "time": "1:21:20",
+      "elapsed_time": "1:23:30",
+      "moving_time": "1:21:14",
+      "avg_pace": "7:22",
+      "gap": "7:24",
+      "avg_hr": 148.0,
+      "max_hr": 162,
+      "recovery_hr": 26,
+      "elevation": {
+        "gain": 23.0,
+        "loss": 24.0
+      },
+      "start_time_local": "2026-10-10T05:57:31.0",
+      "performance_condition": {
+        "start": -3,
+        "end": -2,
+        "avg": -2.1
+      },
+      "training_effect": {
+        "label": "AEROBIC_BASE",
+        "aerobic": 3.3,
+        "aerobic_message": "IMPROVING_AEROBIC_BASE",
+        "anaerobic": 0.0,
+        "anaerobic_message": "NO_ANAEROBIC_BENEFIT"
+      },
+      "exercise_load": 106.4,
+      "stamina": {
+        "begin": 100.0,
+        "end": 79.0,
+        "min": 79.0
+      },
+      "body_battery_impact": -15.0,
+      "impact_load": 11070.0,
+      "decoupling": {
+        "pace_pct": 1.0,
+        "power_pct": 1.8
+      },
+      "activity_splits": [
+        {
+          "step_type": "INTERVAL",
+          "lap": 1,
+          "time": "7:40",
+          "avg_pace": "7:40",
+          "avg_gap": "7:49",
+          "avg_hr": 133.0,
+          "max_hr": 142.0,
+          "start_hr": 91,
+          "min_hr": 90,
+          "end_hr": 142,
+          "avg_run_cadence": 172.0,
+          "best_pace": "6:03",
+          "max_run_cadence": 183.0,
+          "moving_time": "7:40",
+          "avg_moving_pace": "7:40",
+          "elapsed_time": "7:40",
+          "calories": 66,
+          "time_seconds": 459.793,
+          "distance": 1.0,
+          "elevation_gain": 0.0,
+          "elevation_loss": 2.0,
+          "stride_length": 0.75,
+          "avg_vertical_oscillation": 7.4,
+          "avg_ground_contact_time": 273.2,
+          "normalized_power": 227.0,
+          "avg_power": 225.0,
+          "max_power": 281.0,
+          "avg_vertical_ratio": 9.9
+        },
+        {
+          "step_type": "INTERVAL",
+          "lap": 2,
+          "time": "7:41",
+          "avg_pace": "7:41",
+          "avg_gap": "7:41",
+          "avg_hr": 144.0,
+          "max_hr": 149.0,
+          "start_hr": 142,
+          "min_hr": 139,
+          "end_hr": 147,
+          "avg_run_cadence": 170.0,
+          "best_pace": "7:12",
+          "max_run_cadence": 174.0,
+          "moving_time": "7:41",
+          "avg_moving_pace": "7:41",
+          "elapsed_time": "7:41",
+          "calories": 72,
+          "time_seconds": 461.096,
+          "distance": 1.0,
+          "elevation_gain": 6.0,
+          "elevation_loss": 9.0,
+          "stride_length": 0.77,
+          "avg_vertical_oscillation": 7.7,
+          "avg_ground_contact_time": 278.5,
+          "normalized_power": 237.0,
+          "avg_power": 235.0,
+          "max_power": 297.0,
+          "avg_vertical_ratio": 10.1
+        },
+        {
+          "step_type": "INTERVAL",
+          "lap": 3,
+          "time": "7:28",
+          "avg_pace": "7:28",
+          "avg_gap": "7:26",
+          "avg_hr": 146.0,
+          "max_hr": 150.0,
+          "start_hr": 147,
+          "min_hr": 143,
+          "end_hr": 148,
+          "avg_run_cadence": 168.0,
+          "best_pace": "7:10",
+          "max_run_cadence": 173.0,
+          "moving_time": "7:27",
+          "avg_moving_pace": "7:27",
+          "elapsed_time": "7:28",
+          "calories": 72,
+          "time_seconds": 447.66,
+          "distance": 1.0,
+          "elevation_gain": 3.0,
+          "elevation_loss": 2.0,
+          "stride_length": 0.8,
+          "avg_vertical_oscillation": 8.0,
+          "avg_ground_contact_time": 278.8,
+          "normalized_power": 240.0,
+          "avg_power": 239.0,
+          "max_power": 303.0,
+          "avg_vertical_ratio": 9.9
+        },
+        {
+          "step_type": "INTERVAL",
+          "lap": 4,
+          "time": "7:27",
+          "avg_pace": "7:27",
+          "avg_gap": "7:30",
+          "avg_hr": 148.0,
+          "max_hr": 151.0,
+          "start_hr": 148,
+          "min_hr": 146,
+          "end_hr": 150,
+          "avg_run_cadence": 168.0,
+          "best_pace": "7:16",
+          "max_run_cadence": 171.0,
+          "moving_time": "7:27",
+          "avg_moving_pace": "7:27",
+          "elapsed_time": "7:27",
+          "calories": 70,
+          "time_seconds": 446.644,
+          "distance": 1.0,
+          "elevation_gain": 0.0,
+          "elevation_loss": 0.0,
+          "stride_length": 0.8,
+          "avg_vertical_oscillation": 8.0,
+          "avg_ground_contact_time": 279.8,
+          "normalized_power": 235.0,
+          "avg_power": 235.0,
+          "max_power": 256.0,
+          "avg_vertical_ratio": 10.0
+        },
+        {
+          "step_type": "INTERVAL",
+          "lap": 5,
+          "time": "7:25",
+          "avg_pace": "7:25",
+          "avg_gap": "7:24",
+          "avg_hr": 149.0,
+          "max_hr": 152.0,
+          "start_hr": 150,
+          "min_hr": 146,
+          "end_hr": 152,
+          "avg_run_cadence": 167.0,
+          "best_pace": "7:14",
+          "max_run_cadence": 170.0,
+          "moving_time": "7:24",
+          "avg_moving_pace": "7:24",
+          "elapsed_time": "7:25",
+          "calories": 71,
+          "time_seconds": 444.573,
+          "distance": 1.0,
+          "elevation_gain": 1.0,
+          "elevation_loss": 1.0,
+          "stride_length": 0.81,
+          "avg_vertical_oscillation": 8.0,
+          "avg_ground_contact_time": 280.0,
+          "normalized_power": 238.0,
+          "avg_power": 238.0,
+          "max_power": 257.0,
+          "avg_vertical_ratio": 9.9
+        },
+        {
+          "step_type": "INTERVAL",
+          "lap": 6,
+          "time": "7:25",
+          "avg_pace": "7:25",
+          "avg_gap": "7:27",
+          "avg_hr": 149.0,
+          "max_hr": 152.0,
+          "start_hr": 152,
+          "min_hr": 140,
+          "end_hr": 150,
+          "avg_run_cadence": 166.0,
+          "best_pace": "6:17",
+          "max_run_cadence": 175.0,
+          "moving_time": "7:24",
+          "avg_moving_pace": "7:24",
+          "elapsed_time": "7:54",
+          "calories": 71,
+          "time_seconds": 444.918,
+          "distance": 1.0,
+          "elevation_gain": 3.0,
+          "elevation_loss": 1.0,
+          "stride_length": 0.81,
+          "avg_vertical_oscillation": 8.0,
+          "avg_ground_contact_time": 279.8,
+          "normalized_power": 239.0,
+          "avg_power": 240.0,
+          "max_power": 297.0,
+          "avg_vertical_ratio": 9.9
+        },
+        {
+          "step_type": "INTERVAL",
+          "lap": 7,
+          "time": "7:26",
+          "avg_pace": "7:26",
+          "avg_gap": "7:25",
+          "avg_hr": 149.0,
+          "max_hr": 153.0,
+          "start_hr": 149,
+          "min_hr": 146,
+          "end_hr": 150,
+          "avg_run_cadence": 168.0,
+          "best_pace": "7:05",
+          "max_run_cadence": 171.0,
+          "moving_time": "7:26",
+          "avg_moving_pace": "7:26",
+          "elapsed_time": "7:26",
+          "calories": 71,
+          "time_seconds": 446.147,
+          "distance": 1.0,
+          "elevation_gain": 8.0,
+          "elevation_loss": 7.0,
+          "stride_length": 0.8,
+          "avg_vertical_oscillation": 8.0,
+          "avg_ground_contact_time": 279.8,
+          "normalized_power": 243.0,
+          "avg_power": 242.0,
+          "max_power": 311.0,
+          "avg_vertical_ratio": 10.0
+        },
+        {
+          "step_type": "INTERVAL",
+          "lap": 8,
+          "time": "7:24",
+          "avg_pace": "7:24",
+          "avg_gap": "7:23",
+          "avg_hr": 151.0,
+          "max_hr": 154.0,
+          "start_hr": 150,
+          "min_hr": 149,
+          "end_hr": 152,
+          "avg_run_cadence": 168.0,
+          "best_pace": "7:02",
+          "max_run_cadence": 171.0,
+          "moving_time": "7:24",
+          "avg_moving_pace": "7:24",
+          "elapsed_time": "7:24",
+          "calories": 72,
+          "time_seconds": 443.633,
+          "distance": 1.0,
+          "elevation_gain": 0.0,
+          "elevation_loss": 0.0,
+          "stride_length": 0.81,
+          "avg_vertical_oscillation": 8.0,
+          "avg_ground_contact_time": 279.3,
+          "normalized_power": 238.0,
+          "avg_power": 237.0,
+          "max_power": 253.0,
+          "avg_vertical_ratio": 9.9
+        },
+        {
+          "step_type": "INTERVAL",
+          "lap": 9,
+          "time": "7:15",
+          "avg_pace": "7:16",
+          "avg_gap": "7:18",
+          "avg_hr": 153.0,
+          "max_hr": 156.0,
+          "start_hr": 152,
+          "min_hr": 151,
+          "end_hr": 156,
+          "avg_run_cadence": 168.0,
+          "best_pace": "7:04",
+          "max_run_cadence": 172.0,
+          "moving_time": "7:15",
+          "avg_moving_pace": "7:15",
+          "elapsed_time": "7:15",
+          "calories": 72,
+          "time_seconds": 435.459,
+          "distance": 1.0,
+          "elevation_gain": 0.0,
+          "elevation_loss": 0.0,
+          "stride_length": 0.82,
+          "avg_vertical_oscillation": 8.0,
+          "avg_ground_contact_time": 277.9,
+          "normalized_power": 239.0,
+          "avg_power": 239.0,
+          "max_power": 253.0,
+          "avg_vertical_ratio": 9.8
+        },
+        {
+          "step_type": "INTERVAL",
+          "lap": 10,
+          "time": "7:10",
+          "avg_pace": "7:10",
+          "avg_gap": "7:18",
+          "avg_hr": 152.0,
+          "max_hr": 157.0,
+          "start_hr": 156,
+          "min_hr": 137,
+          "end_hr": 154,
+          "avg_run_cadence": 165.0,
+          "best_pace": "6:41",
+          "max_run_cadence": 176.0,
+          "moving_time": "7:09",
+          "avg_moving_pace": "7:09",
+          "elapsed_time": "8:52",
+          "calories": 70,
+          "time_seconds": 430.33,
+          "distance": 1.0,
+          "elevation_gain": 1.0,
+          "elevation_loss": 0.0,
+          "stride_length": 0.82,
+          "avg_vertical_oscillation": 8.0,
+          "avg_ground_contact_time": 275.7,
+          "normalized_power": 242.0,
+          "avg_power": 242.0,
+          "max_power": 294.0,
+          "avg_vertical_ratio": 9.8
+        },
+        {
+          "step_type": "INTERVAL",
+          "lap": 11,
+          "time": "6:48",
+          "avg_pace": "6:48",
+          "avg_gap": "6:48",
+          "avg_hr": 158.0,
+          "max_hr": 162.0,
+          "start_hr": 155,
+          "min_hr": 154,
+          "end_hr": 160,
+          "avg_run_cadence": 170.0,
+          "best_pace": "6:06",
+          "max_run_cadence": 178.0,
+          "moving_time": "6:48",
+          "avg_moving_pace": "6:48",
+          "elapsed_time": "6:48",
+          "calories": 74,
+          "time_seconds": 408.272,
+          "distance": 1.0,
+          "elevation_gain": 1.0,
+          "elevation_loss": 1.0,
+          "stride_length": 0.86,
+          "avg_vertical_oscillation": 8.1,
+          "avg_ground_contact_time": 270.7,
+          "normalized_power": 258.0,
+          "avg_power": 258.0,
+          "max_power": 286.0,
+          "avg_vertical_ratio": 9.4
+        },
+        {
+          "step_type": "INTERVAL",
+          "lap": 12,
+          "time": "0:11",
+          "avg_pace": "5:58",
+          "avg_gap": "6:22",
+          "avg_hr": 160.0,
+          "max_hr": 161.0,
+          "start_hr": 160,
+          "min_hr": 160,
+          "end_hr": 160,
+          "avg_run_cadence": 172.0,
+          "best_pace": "6:21",
+          "max_run_cadence": 172.0,
+          "moving_time": "0:10",
+          "avg_moving_pace": "5:16",
+          "elapsed_time": "0:11",
+          "calories": 2,
+          "time_seconds": 11.321,
+          "distance": 0.03,
+          "elevation_gain": 0.0,
+          "elevation_loss": 0.0,
+          "stride_length": 0.91,
+          "avg_vertical_oscillation": 8.3,
+          "avg_ground_contact_time": 264.0,
+          "normalized_power": 266.0,
+          "avg_power": 266.0,
+          "max_power": 268.0,
+          "avg_vertical_ratio": 9.1
+        }
+      ],
+      "weather": {
+        "temperature": 25.6,
+        "humidity_pct": 89.0,
+        "wind_speed": 2.0,
+        "wind_direction_deg": 90.0,
+        "feels_like": 25.6,
+        "dew_point": 23.9,
+        "condition": "Haze"
+      },
+      "hr_zones": {
+        "columns": [
+          "zone",
+          "range",
+          "time",
+          "percent"
+        ],
+        "data": [
+          [
+            "Zone 1 - Warm Up",
+            "111-146 bpm",
+            "21:07",
+            26
+          ],
+          [
+            "Zone 2 - Easy",
+            "147-152 bpm",
+            "43:08",
+            53
+          ],
+          [
+            "Zone 3 - Aerobic",
+            "153-165 bpm",
+            "16:43",
+            21
+          ],
+          [
+            "Zone 4 - Threshold",
+            "166-169 bpm",
+            "0:00",
+            0
+          ],
+          [
+            "Zone 5 - Maximum",
+            ">169 bpm",
+            "0:00",
+            0
+          ]
+        ]
+      },
+      "power_zones": {
+        "columns": [
+          "zone",
+          "range",
+          "time",
+          "percent"
+        ],
+        "data": [
+          [
+            "Zone 1 - Easy",
+            "205-251 W",
+            "69:12",
+            86
+          ],
+          [
+            "Zone 2 - Moderate",
+            "252-284 W",
+            "10:21",
+            13
+          ],
+          [
+            "Zone 3 - Tempo",
+            "285-314 W",
+            "0:57",
+            1
+          ],
+          [
+            "Zone 4 - Long Interval",
+            "315-362 W",
+            "0:00",
+            0
+          ],
+          [
+            "Zone 5 - Short Interval",
+            ">362 W",
+            "0:00",
+            0
+          ]
+        ]
+      },
+      "lap_count": 12
+    }
+  ]
 }

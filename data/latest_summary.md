@@ -9,21 +9,20 @@
 - **Recovery time:** 0h
 - ⚠️ **Limiter:** Sleep Score (46%)
 - **Also soft:** Sleep History, Stress History
-- 🧠 Your Saturday “LSD” is an easy‑pace run (≤150 bpm). Your readiness is only moderate (sleep ≈ 5½ h, HRV a bit down), but the load balance is fine (ACWR 0.8). Do the long run, but cut the distance to about 8–9 km and stay at the easy end of the zone (≈7:30–7:45 min/km, HR ≤ 150). No strides or hill sprints today – just a relaxed, fully recovered effort.
 
-## Today — Rest Day
+## Today
 
-_Most recent activity (2026-10-09):_
-- **Friday Core/Hip Stability** — 0.0km · 19:24 · HR 91/112 max
-  - TE: AEROBIC_BASE · aerobic 0.2 · anaerobic 0
-  - 🧠 The 19‑minute core/hip session produced only a minor aerobic stimulus (aerobic = 0.2, load = 3.1) and heart rate stayed well below any training zone (avg HR ≈ 91 bpm, max HR 112 bpm), so it contributed negligible cardiovascular load. Your morning readiness was moderate (score 56) with only ~4.8 h of recovery logged, which is on the low side before Thursday’s VO2max intervals; you may want to prioritize sleep or easy activity tonight to ensure sufficient freshness for that hard session.
+- **Malolos Running** — 11.03km · 1:21:20 · 7:22/km · HR 148/162 max
+  - TE: AEROBIC_BASE · aerobic 3.3 · anaerobic 0
+  - MS: 11.00k @ 7:23 148bpm 0.80m 168spm 278ms 7.9cm 239w
+  - 🧠 The 11 km Saturday run stayed inside the LSD prescription (6:45‑7:20 / km) with an overall pace of 7:22 /km and a progressive negative‑split from 7:40 to 6:48 /km, and the average HR of 148 bpm remained under the ≤150 bpm cap. The aerobic training effect of 3.3 AEROBIC_BASE and zero anaerobic contribution align with the intended easy‑long‑run focus, while the modest 20‑point drop in readiness (56 → 36) after the session reflects the relatively high acute load (550 acwr) rather than any pacing issue. No red flags appear; the run delivered the expected aerobic stimulus for the bridge phase.
 
 ## Load & Trends
 
-- **ACWR:** 0.8 (Optimal) — acute 414 / chronic 508 (chronic range 406.4–762)
-- **7-day volume:** 26.11km vs 28-day avg 31.9km (-18%)
-- **Running tolerance:** 53.5% (Medium) — 26.1km of 62.3km weekly cap, acute impact load 33.3
-- **Aerobic Low:** 763.1 (target 303–822 — in range)
+- **ACWR:** 1.0 (Optimal) — acute 550 / chronic 532 (chronic range 425.6–798)
+- **7-day volume:** 37.15km vs 28-day avg 34.7km (+7%)
+- **Running tolerance:** 71.3% (Medium) — 37.1km of 62.3km weekly cap, acute impact load 44.4
+- ⚠️ **Aerobic Low:** 869.4 (target 303–822 — +47 over)
 - **Aerobic High:** 1093.3 (target 649–1169 — in range)
 - ⚠️ **Anaerobic:** 43.3 (target 173–519 — -130 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
@@ -41,8 +40,8 @@ _Most recent activity (2026-10-09):_
 | W | Run + Strides/Hills | 6k · 48:18 | 64 |
 | T | 5x3min VO₂ Int | 7k · 47:31 | 147 |
 | F | Core/Hip | 19:24 | 3 |
-| S | Rest | — | — |
+| S | Malolos Run | 11k · 1:21:20 | 106 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 6 | 26.12 km | 3:48:19 | 428.4 |
+| 7 | 37.15 km | 5:09:39 | 534.8 |
