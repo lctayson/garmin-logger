@@ -22,7 +22,9 @@ import argparse
 import datetime
 import json
 import os
+import re
 import sys
+import time
 
 from render_summary_md import _find_dated_activity_file, _load_json
 
@@ -85,6 +87,51 @@ factors, and today's typical scheduled session):
 
 """
 
+
+
+def _compact_context(context_text: str, date_str: str) -> str:
+    """Keep durable coaching guidance plus only the plan week relevant to this date.
+
+    The full plan is useful as a source of truth, but sending all 22 weeks with
+    every activity wastes tokens and can crowd out the workout evidence. Keep
+    the athlete profile, goals, methodology, risk factors and analysis rules,
+    then append the matching week's prescription (if present).
+    """
+    plan_marker = "# BHM 2027 Training Plan"
+    if plan_marker not in context_text:
+        return context_text.strip()
+
+    durable, plan = context_text.split(plan_marker, 1)
+    durable = durable.strip()
+    plan = plan.strip()
+
+    week_matches = list(re.finditer(r"(?m)^## W\d+ · ([A-Za-z]{3}) (\d{1,2}) ·[^\\n]*", plan))
+    if not week_matches:
+        # Keep the compact plan overview, but avoid blindly sending a long plan.
+        overview = plan.split("\\n## W", 1)[0].strip()
+        return f"{durable}\\n\\n# BHM 2027 plan overview\\n{overview}".strip()
+
+    target_date = datetime.date.fromisoformat(date_str)
+    matching_week = None
+    for index, match in enumerate(week_matches):
+        month_name, day = match.group(1), int(match.group(2))
+        year = 2027 if month_name in ("Jan", "Feb") else 2026
+        try:
+            week_start = datetime.date(year, datetime.datetime.strptime(month_name, "%b").month, day)
+        except ValueError:
+            continue
+        week_end = (week_matches[index + 1].start() - 1) if index + 1 < len(week_matches) else len(plan)
+        if week_start <= target_date <= week_start + datetime.timedelta(days=6):
+            matching_week = plan[match.start():week_end].strip()
+            break
+
+    overview = plan[:week_matches[0].start()].strip()
+    pieces = [durable]
+    if overview:
+        pieces.append("# BHM 2027 plan overview\\n" + overview)
+    if matching_week:
+        pieces.append("# Relevant training week\\n" + matching_week)
+    return "\\n\\n".join(pieces)
 
 def _parse_clock_seconds(value):
     """Parse Garmin split durations/pace strings such as '3:00' or '5:08'."""
@@ -246,7 +293,9 @@ def _call_openai_compatible(
     if not api_key:
         raise RuntimeError(f"{api_key_env} is not set.")
 
-    client = OpenAI(base_url=base_url, api_key=api_key, timeout=60.0)
+    # Own retries so Groq's retry-after guidance is honored instead of the
+    # SDK retrying 429s with its generic backoff.
+    client = OpenAI(base_url=base_url, api_key=api_key, timeout=60.0, max_retries=0)
 
     # Normalize model string for GitHub Models if namespace omitted
     if "github" in base_url and "/" not in model:
@@ -255,19 +304,61 @@ def _call_openai_compatible(
     # Expand token limit for reasoning models to accommodate internal thinking steps
     max_tokens = 4000 if "reasoner" in model or "r1" in model.lower() else MAX_OUTPUT_TOKENS
 
-    response = client.chat.completions.create(
-        model=model,
-        max_tokens=max_tokens,
-        messages=[
-            {"role": "system", "content": system},
-            {"role": "user", "content": user_content},
-        ],
-    )
+    # Groq reports the delay for token-per-minute 429s in either the
+    # Retry-After header or its error text (e.g. "try again in 727.5ms").
+    # Retry only transient rate limits; don't waste attempts on auth/bad requests.
+    max_attempts = 4 if "groq.com" in base_url else 1
+    for attempt in range(1, max_attempts + 1):
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                max_tokens=max_tokens,
+                messages=[
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": user_content},
+                ],
+            )
+            if hasattr(response, "choices") and response.choices:
+                content = response.choices[0].message.content
+                if content and content.strip():
+                    return content.strip()
+            raise RuntimeError(f"Empty response from {base_url} (model={model}): {response}")
+        except Exception as exc:
+            status_code = getattr(exc, "status_code", None)
+            if status_code is None:
+                status_code = getattr(getattr(exc, "response", None), "status_code", None)
+            message = str(exc)
+            is_rate_limit = status_code == 429 or "rate_limit_exceeded" in message or "Rate limit reached" in message
+            if not ("groq.com" in base_url and is_rate_limit and attempt < max_attempts):
+                raise
 
-    if hasattr(response, "choices") and response.choices:
-        content = response.choices[0].message.content
-        if content and content.strip():
-            return content.strip()
+            delay = None
+            response_obj = getattr(exc, "response", None)
+            headers = getattr(response_obj, "headers", None)
+            if headers:
+                retry_after = headers.get("retry-after") or headers.get("Retry-After")
+                if retry_after:
+                    try:
+                        delay = float(retry_after)
+                    except (TypeError, ValueError):
+                        delay = None
+            if delay is None:
+                retry_match = re.search(r"try again in\\s+([0-9]+(?:\\.[0-9]+)?)\\s*(ms|milliseconds?|s|seconds?)", message, re.IGNORECASE)
+                if retry_match:
+                    delay = float(retry_match.group(1))
+                    if retry_match.group(2).lower().startswith("ms"):
+                        delay /= 1000.0
+            if delay is None:
+                delay = min(2 ** (attempt - 1), 8.0)
+
+            # Avoid a zero-delay tight loop, while respecting provider guidance.
+            delay = max(0.25, min(delay, 60.0))
+            print(
+                f"[generate_ai_analysis] Groq rate limit for model '{model}' "
+                f"(attempt {attempt}/{max_attempts}); retrying in {delay:.2f}s.",
+                file=sys.stderr,
+            )
+            time.sleep(delay)
 
     # An empty response must raise, not return "" -- a silent empty return
     # looks like success (exit code 0) to the shell, so the `provider_a ||
@@ -457,7 +548,8 @@ def main():
         return
 
     with open(args.context, "r", encoding="utf-8") as f:
-        context_text = f.read()
+        raw_context = f.read()
+    context_text = _compact_context(raw_context, args.date)
 
     # Build date-specific metrics path safely
     date_parts = args.date.split("-")
