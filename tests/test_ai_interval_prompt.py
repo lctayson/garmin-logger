@@ -1,6 +1,6 @@
 import json
 
-from generate_ai_analysis import _build_prompt, _main_set_summary
+from generate_ai_analysis import _build_prompt, _build_readiness_prompt, _main_set_summary
 
 
 def _activity():
@@ -46,3 +46,20 @@ def test_system_prompt_defines_interval_drift_and_overall_pace_correctly():
 
     assert "not the percentage by which the rep pace missed its target" in generate_ai_analysis.SYSTEM_PREFIX
     assert "not from whole-activity average pace" in generate_ai_analysis.SYSTEM_PREFIX
+
+
+
+def test_prompts_include_compact_readiness_snapshots():
+    snapshots = [
+        {"context": "AFTER_WAKEUP_RESET", "score": 72, "recovery_minutes": 1},
+        {"context": "AFTER_POST_EXERCISE_RESET", "score": 53, "recovery_minutes": 1584},
+    ]
+    metrics = {"readiness": {"score": 72, "snapshots": snapshots}}
+
+    activity_prompt = json.loads(_build_prompt(_activity(), metrics))
+    assert activity_prompt["readiness_that_day"]["score"] == 72
+    assert activity_prompt["readiness_that_day"]["snapshots"] == snapshots
+
+    readiness_prompt = json.loads(_build_readiness_prompt(metrics, "2026-10-08"))
+    assert readiness_prompt["readiness"]["score"] == 72
+    assert readiness_prompt["readiness"]["snapshots"] == snapshots
