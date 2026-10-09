@@ -14,12 +14,26 @@ on:
 permissions:
   contents: write
 
+# Prevent overlapping exports from racing to update generated data on main.
+concurrency:
+  group: garmin-to-json-export-main
+  cancel-in-progress: false
+
 jobs:
   build-garmin-data:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Refresh main before export
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git checkout main
+          git reset --hard origin/main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -97,7 +111,7 @@ jobs:
           git commit -m "Auto-export daily telemetry JSON for $EXPORT_DATE" || echo "No changes to commit"
 
           git fetch origin main
-          git rebase origin/main
+          git rebase -X theirs origin/main
 
           for attempt in 1 2 3; do
             if git push origin HEAD:main; then
@@ -109,5 +123,5 @@ jobs:
             fi
             echo "Push rejected; refreshing main and rebasing before retry $((attempt + 1))..."
             git fetch origin main
-            git rebase origin/main
+            git rebase -X theirs origin/main
           done
