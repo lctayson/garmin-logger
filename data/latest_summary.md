@@ -9,7 +9,7 @@
 - **Recovery time:** 4.8h
 - ⚠️ **Limiter:** Sleep Score (55%)
 - **Also soft:** Stress History
-- 🧠 Your Friday is a core/hip‑stability strength day (no run), and the readiness score is only moderate (sleep 5.5 h, HRV a bit down). That level is sufficient for the planned neuromuscular work, but you should dial the load back: run the usual circuit but cut each exercise to 2 × 8–10 reps (or 60 % of the usual weight) and skip any heavy plyometric jumps. Keep the session under a 30‑minute effort and stay well below 150 bpm. If you feel unusually fatigued mid‑session, stop and replace with light mobility/stretching.
+- 🧠 **Friday is a core/hip‑stability strength day (no running).** Your readiness is moderate (score 56) and sleep was only 5½ h, but overall ACWR is optimal and recovery hours are good. Keep the session but trim the load: do the usual core/hip circuit at ~60 % effort, cut each exercise to 2 sets (or 1 set of the heaviest moves), use lighter resistance, and stop if HR creeps above 150 bpm. This preserves the neuromuscular stimulus without overtaxing a partially fatigued system.
 
 ## Today — Rest Day
 
