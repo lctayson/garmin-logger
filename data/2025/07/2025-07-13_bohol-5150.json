@@ -297,7 +297,7 @@
       },
       "lap_count": 6,
       "parent_activity_id": 19715571043,
-      "ai_analysis": "The main set showed a clear pace drift: the first two reps were fast (17:36 – 18:31) but the middle four slowed to 28:26‑32:41 before picking up again on the last rep, and heart‑rate peaked at 160 bpm on the third rep before dropping, indicating inconsistent effort rather than a steady tempo stimulus. The training‑effect summary (TEMPO aerobic 3.3, anaerobic 0.8 “no anaerobic benefit”) confirms the swim delivered modest aerobic work but no VO2max‑type load that your Thursday hard‑interval sessions require. With a morning readiness score of 15 (poor), sleep 39 and only 5.1 recovery hours, the added load of 123 and a –4 body‑battery impact likely contributed to the low recovery state. Consider keeping cross‑training intensity more uniform or limiting it on days when your readiness is already compromised.",
+      "ai_analysis": "The six‑rep swim showed a wide pacing drift—from a fast 17:36 effort to a sluggish 32:41—yet heart‑rate stayed modest (134–160 bpm), indicating the work remained largely sub‑threshold with a measured aerobic training effect of 3.3 and negligible anaerobic impact (0.8). Your morning readiness was very low (score 15, sleep 39, only 5.1 h recovery), which likely contributed to the inconsistent effort and the overall average pace of 2:41 / 100 m. For the next hard session, aim to tighten rep pacing and ensure a higher recovery window to secure a clearer VO₂max‑type stimulus.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
@@ -440,7 +440,7 @@
       },
       "lap_count": 1,
       "parent_activity_id": 19715571043,
-      "ai_analysis": "The 0.39 km transition run was completed at a very easy 12:19 min/km but still averaged 147 bpm (max 165 bpm), which is higher than expected for a warm‑up at that pace and likely reflects the early‑morning heat. Its training effect (aerobic 3.4, minor anaerobic 1.1) and load of 133 AU are modest, so the session provided only a light stimulus. With a morning readiness score of 15 (poor) driven by a sleep score of 39, you’ll want to keep the rest of today’s training gentle and monitor any lingering fatigue before the Thursday VO2max interval.",
+      "ai_analysis": "The transition run was a very short effort (0.39 km at 12:19 / km), yielding a modest aerobic base stimulus (aerobic 3.4) with only a minor anaerobic contribution (anaerobic ≈ 1.1). Your morning readiness was poor (score 15) driven by low sleep (39) and limited recovery hours (5.1 h), so the low‑intensity nature of this session is appropriate but leaves little surplus for a harder workout today. Keep an eye on sleep quality this week, as it will directly affect your capacity to hit the VO2max intensity required on Thursday.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
@@ -708,7 +708,7 @@
       },
       "lap_count": 5,
       "parent_activity_id": 19715571043,
-      "ai_analysis": "The four 10‑minute effort reps were tightly clustered (1:51‑1:59 / km) with almost identical HR (≈157 bpm), indicating a steady tempo intensity that aligns with the “TEMPO” label and generated a solid aerobic load (TEMPO 4.6) plus a modest anaerobic contribution (≈1 AE). Stamina dropped from 73 % to 51 % over the hour, reflecting the cumulative cardio cost of the warm‑up, the four hard intervals, and the cooldown. Morning readiness was poor (score 15, sleep 39, only ~5 h recovery), and the post‑exercise snapshot shows a dramatic dip in overall recovery score, suggesting today’s training added notable fatigue that should be managed with a lighter run or rest tomorrow.",
+      "ai_analysis": "The four tempo reps averaged 1:56 /km, but the pace slipped from a sharp 1:51 in the second interval to 1:58–1:59 in the final two, indicating a modest drift in efficiency despite HR staying flat at 157‑158 bpm (well below your LTHR of 171 bpm). The session’s aerobic training effect was high (4.6) while the anaerobic contribution was minimal (≈1 AE), so the stimulus stayed firmly in the tempo zone rather than delivering the VO2max load you need on Thursday hard days. Given a “Poor” readiness score (15) driven by very low sleep (39) and only ~5 h of recovery, the 247‑load load is acceptable but you should prioritize recovery before tackling any higher‑intensity work later this week.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
@@ -851,7 +851,7 @@
       },
       "lap_count": 1,
       "parent_activity_id": 19715571043,
-      "ai_analysis": "The 0.6 km transition was run at a very easy 12:30 /km, yet the average HR of 151 bpm sits at the upper edge of the easy zone, suggesting heat‑related cardiac cost rather than a purposeful tempo effort. Although the training‑effect algorithm labeled the bout “TEMPO” (aerobic 4.6, minor 1.1 anaerobic), the actual pace and distance do not match a true tempo stimulus. Morning readiness was poor (score 15, sleep 39, only 5 h recovery), so the elevated HR likely reflects limited recovery more than training load. Overall the session contributed modest load (251) but did not deliver a meaningful interval or threshold work for the current bridge phase.",
+      "ai_analysis": "The 0.6 km transition run was very easy (12:30 min/km, 151 bpm average HR) and produced only a modest anaerobic stimulus (anaerobic ≈ 1.1) while the algorithm flagged a high aerobic load (aerobic ≈ 4.6), likely reflecting the early‑morning heat and the relative strain of even low‑intensity work at a resting HR of 60 bpm. With a morning readiness score of 15 (poor) and a sleep score of 39, the low‑intensity effort was appropriate and there’s no evidence of missed VO2‑max or threshold work. No interval data are present, so execution cannot be evaluated beyond the overall easy‑pace metrics.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
@@ -1319,7 +1319,9 @@
         ]
       },
       "lap_count": 10,
-      "parent_activity_id": 19715571043
+      "parent_activity_id": 19715571043,
+      "ai_analysis": "The 10‑rep interval set averaged 6:13 /km, but the early reps (5:34 km) slowed to a high of 6:36 km before ending at 5:44 km, producing about a 5 % pace drift and a modest HR rise from the low‑160s to 170 bpm, showing the VO2max stimulus faded as fatigue accumulated. The training‑effect label (Lactate Threshold aerobic 5, anaerobic 1.1) confirms the session delivered mostly threshold work rather than the strong VO2max load expected for Thursday hard days. With a morning readiness score of 15 (poor) and only ~5 h of recovery, the execution was limited, and the drift suggests you may need sharper pacing or better recovery before the next hard interval session.",
+      "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
 }
