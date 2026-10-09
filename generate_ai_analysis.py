@@ -65,6 +65,7 @@ Workout-analysis rules:
 - interval_drift.pace_ef_drift_pct is a change in pace/efficiency across reps, not the percentage by which the rep pace missed its target. Interpret it alongside rep paces and HR/power changes; do not conflate the measures.
 - Do not claim the workout's cardiovascular load came mainly from HR spikes, or attribute drift to heat/fatigue, unless the supplied evidence supports it.
 - Treat readiness_that_day as the morning readiness score, not a post-run readiness snapshot.
+- When readiness.snapshots is present, the top-level readiness fields remain the canonical morning snapshot. Use compact snapshots only to compare same-day Garmin readings; factor_overrides contains only values that differ from morning factors. Do not interpret a post-exercise score as pre-run readiness or infer causation from the score change alone.
 
 Durable coaching context (goal, current phase, methodology, and known risk factors to watch for):
 
