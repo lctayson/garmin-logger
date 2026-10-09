@@ -44,8 +44,8 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "Today is a scheduled non-running day (rest + core/hip stability), which fits your numbers well. While your autonomic recovery is stable (HRV balanced at 48 ms, ACWR optimal at 0.90), the acute dip in readiness to 56 is driven almost entirely by the short 5.5-hour sleep window. \n\nProceed with the planned core and hip stability routine, but keep it strictly low-arousal and under 30 minutes without pushing to failure. Do not add any cross-training or shakeout running—bank the recovery today so you absorb Thursday's quality work and enter tomorrow's long run fully restored.",
-    "ai_analysis_provider": "gemini:gemini-3.8-flash"
+    "ai_analysis": "Friday is your core/hip‑stability strength day (no running). Your readiness is only moderate (score 56) with short sleep and HRV a bit below average, so keep the stimulus light: do the usual core circuit but drop the weighted/plyometric moves and cut the volume to 2 × the normal sets, focusing on form and activation only. If you feel any lingering fatigue, skip the session entirely and use the time for gentle mobility and stretching.",
+    "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
     "steps": 10
