@@ -201,9 +201,7 @@ def _compact_readiness_snapshot(item, morning_factors):
         'feedback': item.get('feedbackShort'),
         'recovery_minutes': _safe_int(minutes),
         'acute_load': _safe_int(item.get('acuteLoad')),
-        'hrv_weekly_average': _safe_int(item.get('hrvWeeklyAverage')),
-        'valid_sleep': item.get('validSleep'),
-        'recovery_time_change': item.get('recoveryTimeChangePhrase'),
+                'recovery_time_change': item.get('recoveryTimeChangePhrase'),
     }
     if changed_factors:
         result['factor_overrides'] = changed_factors
