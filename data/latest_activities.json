@@ -97,7 +97,7 @@
         ]
       },
       "lap_count": 1,
-      "ai_analysis": "The 19‑minute core/hip stability session produced a very low aerobic training effect (0.2 AEROBIC_BASE) and no anaerobic stimulus, matching the prescribed strength day in the bridge phase. With an average HR of 91 bpm, max HR 112 bpm, and a modest load of 3.1, the workout barely taxed your cardiovascular system, reflected in the negligible body‑battery drop (‑1) and the slight rise in readiness from 56 to 59 later in the day. Given your moderate morning readiness (score 56, “Balance Stress And Recovery”), the session’s low stress is appropriate and does not appear to compromise recovery for the upcoming Thursday VO2max interval.",
+      "ai_analysis": "The 19‑minute core/hip stability workout delivered a very low aerobic stimulus (training‑effect 0.2 AEROBIC_BASE) with a modest load of 3.1, and HR stayed well below running zones (avg 91 bpm, max 112 bpm), matching the intended low‑intensity strength day. Morning readiness was moderate (score 56, resting HR 57, sleep 70) and the post‑exercise snapshot rose slightly to 59, reflecting unchanged recovery‑time percent (99 %) and a good ACWR (92 %). The –1.0 body‑battery impact indicates a tiny net cost, but the minimal load means it should not compromise Thursday’s VO2max interval.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
