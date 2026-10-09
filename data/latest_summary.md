@@ -20,7 +20,7 @@ _Most recent activity (2026-10-08):_
   - TE: VO2MAX · aerobic 3.6 · anaerobic 1
   - Intervals: 5 work reps · pace drift -7.4% · HR +16bpm
   - MS: 2.93k @ 5:07 161bpm 1.05m 184spm 236ms 8.1cm 332w
-  - 🧠 The Thursday VO₂‑max interval worked as a true VO₂ stimulus (aerobic TE 3.6 and max HR 175), but the average pace of 6:46 is well off the 4:50‑5:15 km target for 3‑minute reps (‑7.4 % drift), so the cardiovascular load was achieved more by heart‑rate spikes than by the intended speed. Stamina fell from 99 % to 71 % (bottoming at 52 %), and the body‑battery impact of –12 with a moderate readiness score (53) tells us you
+  - 🧠 All five 3-minute work reps were between 5:01 and 5:09/km, averaging about 5:06/km—within the prescribed 4:50–5:15/km range—and the reps progressively quickened. Average HR rose from 152 to 168 bpm as pace improved slightly; aerobic TE 3.6 and max HR 175 support a productive VO₂-focused stimulus. The −7.4% pace-efficiency drift describes declining efficiency across the reps, not a 7.4% miss against target pace; the overall 6:46/km includes warm-up, recoveries and cooldown. Stamina ended at 71% (minimum 52%) and body-battery impact was −12, indicating a meaningful session load. Morning readiness was 72 (Recovered And Ready); the score of 53 was the later post-exercise snapshot, not your pre-run readiness.
 
 ## Load & Trends
 
