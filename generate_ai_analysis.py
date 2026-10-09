@@ -317,7 +317,8 @@ def _call_gemini(model: str, system: str, user_content: str) -> str:
                 initial_delay=1.0,
                 max_delay=20.0,
                 exp_base=2.0,
-                http_status_codes=[408, 429, 500, 502, 503, 504],
+                # A 429 quota-exhaustion response will not recover during this run; let the workflow fall back.
+                http_status_codes=[408, 500, 502, 503, 504],
             ),
         ),
     )
@@ -424,7 +425,7 @@ def main():
     parser.add_argument(
         "--provider",
         choices=("gemini", "anthropic", "groq", "deepseek", "github"),
-        default="gemini",
+        default="groq",
     )
     parser.add_argument("--model", default=None, help="Defaults per-provider if not given")
     parser.add_argument("--force", action="store_true", help="Regenerate even if ai_analysis already set")
