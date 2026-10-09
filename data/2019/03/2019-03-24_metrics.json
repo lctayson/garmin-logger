@@ -15,6 +15,12 @@
   },
   "load": {"training_status": "Recovery"},
   "vo2_max": 49.0,
+  "race_predictions": {
+    "5k": "27:29",
+    "10k": "57:30",
+    "half_marathon": "2:12:19",
+    "marathon": "4:55:33"
+  },
   "training_history": {
     "7_day": {
       "total_endurance": {
