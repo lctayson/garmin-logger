@@ -201,7 +201,7 @@ def _build_prompt(activity, metrics):
     readiness = (metrics or {}).get("readiness") or {}
     trimmed_readiness = {
         k: readiness[k]
-        for k in ("score", "level", "feedback", "resting_hr", "sleep_score", "recovery_hours")
+        for k in ("score", "level", "feedback", "resting_hr", "sleep_score", "recovery_hours", "snapshots")
         if k in readiness
     }
 
@@ -217,7 +217,7 @@ def _build_readiness_prompt(metrics, date_str):
         for k in (
             "score", "level", "feedback", "resting_hr", "hrv_last_night_avg_ms",
             "hrv_7_day_avg_ms", "hrv_status", "sleep_hours", "sleep_score",
-            "recovery_hours", "factor_details",
+            "recovery_hours", "factor_details", "snapshots",
         )
         if k in readiness
     }
