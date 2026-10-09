@@ -297,7 +297,7 @@
       },
       "lap_count": 6,
       "parent_activity_id": 19715571043,
-      "ai_analysis": "The six‑rep set showed a clear pace drift: the first and last reps were fast (≈17:36 per 100 m), while the middle four ranged from 28 s to 32 s with the slowest at 32:41, and heart rate peaked at 160 bpm in rep 3 before dropping again. With a TEMPO aerobic effect of 3.3 but only 0.8 anaerobic, the session delivered primarily aerobic stimulus, and the inconsistent pacing limited the intended high‑intensity load. Your morning readiness was 15 (Poor) with a sleep score of 39 and only about 5 h of recovery, indicating you were operating under a notable fatigue deficit. Prioritizing recovery before another hard interval effort will help you maintain consistent pacing and achieve the desired HR/effort targets.",
+      "ai_analysis": "The main set showed a clear pace drift: the first two reps were fast (17:36 – 18:31) but the middle four slowed to 28:26‑32:41 before picking up again on the last rep, and heart‑rate peaked at 160 bpm on the third rep before dropping, indicating inconsistent effort rather than a steady tempo stimulus. The training‑effect summary (TEMPO aerobic 3.3, anaerobic 0.8 “no anaerobic benefit”) confirms the swim delivered modest aerobic work but no VO2max‑type load that your Thursday hard‑interval sessions require. With a morning readiness score of 15 (poor), sleep 39 and only 5.1 recovery hours, the added load of 123 and a –4 body‑battery impact likely contributed to the low recovery state. Consider keeping cross‑training intensity more uniform or limiting it on days when your readiness is already compromised.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
@@ -440,8 +440,8 @@
       },
       "lap_count": 1,
       "parent_activity_id": 19715571043,
-      "ai_analysis": "This 4:50 transition recording captured a quick 0.39 km segment with an average HR of 147 bpm (peaking at 165 bpm), logged amid what appears to be a larger multi-sport event that pushed acute load from 359 to 822. Morning readiness was compromised from the start at 15 due to a poor sleep score of 39. Because this is merely a short transition interval rather than a standalone training session, there is no workout-specific execution to evaluate. Prioritize full recovery and sleep restoration following the overall event demand.",
-      "ai_analysis_provider": "gemini:gemini-3.8-flash"
+      "ai_analysis": "The 0.39 km transition run was completed at a very easy 12:19 min/km but still averaged 147 bpm (max 165 bpm), which is higher than expected for a warm‑up at that pace and likely reflects the early‑morning heat. Its training effect (aerobic 3.4, minor anaerobic 1.1) and load of 133 AU are modest, so the session provided only a light stimulus. With a morning readiness score of 15 (poor) driven by a sleep score of 39, you’ll want to keep the rest of today’s training gentle and monitor any lingering fatigue before the Thursday VO2max interval.",
+      "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
       "name": "Bohol 5150 - Cycling",
@@ -708,7 +708,7 @@
       },
       "lap_count": 5,
       "parent_activity_id": 19715571043,
-      "ai_analysis": "The four tempo intervals averaged 1:56 /km, ranging from 1:51 to 1:59, so pace drift was modest (≈8 s) while heart‑rate stayed flat around 157 bpm. The session generated a strong aerobic load (TEMPO 4.6) with only a minor anaerobic benefit (1.1), matching the intended tempo focus. Yet your morning readiness was poor (score 15, sleep 39, ≈5 h recovery) and stamina dropped from 73 to 51, indicating the workout added notable fatigue. On low‑readiness days, consider scaling back tempo volume to preserve the quality of your upcoming VO₂max sessions.",
+      "ai_analysis": "The four 10‑minute effort reps were tightly clustered (1:51‑1:59 / km) with almost identical HR (≈157 bpm), indicating a steady tempo intensity that aligns with the “TEMPO” label and generated a solid aerobic load (TEMPO 4.6) plus a modest anaerobic contribution (≈1 AE). Stamina dropped from 73 % to 51 % over the hour, reflecting the cumulative cardio cost of the warm‑up, the four hard intervals, and the cooldown. Morning readiness was poor (score 15, sleep 39, only ~5 h recovery), and the post‑exercise snapshot shows a dramatic dip in overall recovery score, suggesting today’s training added notable fatigue that should be managed with a lighter run or rest tomorrow.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
@@ -851,7 +851,7 @@
       },
       "lap_count": 1,
       "parent_activity_id": 19715571043,
-      "ai_analysis": "The 0.6 km transition run was completed at a very slow 12:30 /km while heart rate stayed in the easy‑aerobic range (151 bpm), far below the prescribed easy‑pace target of 6:40–7:15 /km for a recovery effort. Despite the leisurely pace, the training‑effect engine logged a high aerobic TEMPO score (4.6) and a minor anaerobic contribution, suggesting the elevated HR was driven more by ambient heat or fatigue than by speed. Your morning readiness was “Poor” (score 15) with a sleep score of 39 and only 5 h of recovery, which",
+      "ai_analysis": "The 0.6 km transition was run at a very easy 12:30 /km, yet the average HR of 151 bpm sits at the upper edge of the easy zone, suggesting heat‑related cardiac cost rather than a purposeful tempo effort. Although the training‑effect algorithm labeled the bout “TEMPO” (aerobic 4.6, minor 1.1 anaerobic), the actual pace and distance do not match a true tempo stimulus. Morning readiness was poor (score 15, sleep 39, only 5 h recovery), so the elevated HR likely reflects limited recovery more than training load. Overall the session contributed modest load (251) but did not deliver a meaningful interval or threshold work for the current bridge phase.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
@@ -1319,9 +1319,7 @@
         ]
       },
       "lap_count": 10,
-      "parent_activity_id": 19715571043,
-      "ai_analysis": "You entered this 10K run severely compromised by poor sleep, reflected in a morning readiness score of 15. That fatigue clearly dictated the pacing: after opening at 5:34/km, the pace drifted into the 6:20–6:36/km range through the middle kilometers while heart rate held high at 162–167 bpm, before you managed a final push down to 5:44/km at 170 bpm. It was a gritty finish under depleted conditions, but with a 5.0 Aerobic Training Effect and depleted stamina, prioritizing sleep and full recovery over the next 48 hours is non-negotiable.",
-      "ai_analysis_provider": "gemini:gemini-3.8-flash"
+      "parent_activity_id": 19715571043
     }
   ]
 }
