@@ -44,7 +44,35 @@
           "percent": 74,
           "feedback": "Good"
         }
-      }
+      },
+      "snapshots": [
+        {
+          "context": "AFTER_WAKEUP_RESET",
+          "score": 72,
+          "feedback": "RECOVERED_AND_READY",
+          "recovery_minutes": 1,
+          "acute_load": 432,
+          "recovery_time_change": "NO_CHANGE_SLEEP"
+        },
+        {
+          "context": "AFTER_POST_EXERCISE_RESET",
+          "score": 53,
+          "feedback": "RECOVERY_IN_PROGRESS",
+          "recovery_minutes": 1584,
+          "acute_load": 620,
+          "recovery_time_change": "REACHED_ZERO",
+          "factor_overrides": {
+            "recovery_time": {
+              "percent": 57,
+              "feedback": "Moderate"
+            },
+            "acwr": {
+              "percent": 85,
+              "feedback": "Good"
+            }
+          }
+        }
+      ]
     },
     "sleep_need": {
       "baseline_hours": 7.0,

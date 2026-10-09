@@ -18,7 +18,7 @@ _Most recent activity (2026-10-08):_
   - TE: VO2MAX · aerobic 3.6 · anaerobic 1
   - Intervals: 5 work reps · pace drift -7.4% · HR +16bpm
   - MS: 2.93k @ 5:07 161bpm 1.05m 184spm 236ms 8.1cm 332w
-  - 🧠 Execution was spot-on for this W3 VO2max session: all five 3-minute reps fell inside or slightly faster than the 5:05–5:12 target, progressing smoothly from 5:08 down to 5:01. Rep average HR climbed steadily from 152 bpm on rep 1 to 168 bpm on the final interval (maxing at 175 bpm), reflecting appropriate cardiac drift and genuine high-end aerobic stimulus without blowing past your 171 bpm LTHR until the closing rep. That 1.0 anaerobic Training Effect and 3.6 aerobic score show this session delivered the exact stimulus that historically slipped through the cracks in previous blocks.
+  - 🧠 The five 3‑minute VO₂max reps averaged 5:06 /km (range 5:01‑5:09), staying comfortably inside the prescribed 5:00‑5:15 /km window and ending each rep with HR 152‑168 bpm—well under the ≤172 bpm cap for Thursday hard work. The –7.4 % pace‑efficiency drift shows a modest speed‑up across the set, while stamina fell from 99 % to 71 % (minimum 52 %), indicating a solid anaerobic stimulus without excessive degradation. Morning readiness was moderate (score 72), and the post‑run drop to 53 reflects the expected recovery demand after a high‑intensity interval day in the bridge phase.
 
 ## Load & Trends
 
