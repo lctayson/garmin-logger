@@ -9,10 +9,7 @@
 - **Recovery time:** 0h
 - ⚠️ **Limiter:** Sleep Score (46%)
 - **Also soft:** Sleep History, Stress History
-- 🧠 **Saturday – Long run**  
-Your readiness is “moderate” (score 56) with only 5½ h of sleep and a dip in HRV, but the overall load is still below chronic (ACWR 0.8, “optimal”). Since today’s scheduled session is an easy‑pace LSD with a strict HR cap ≤150 bpm, it’s safe to run, but trim the volume a bit to respect the recovery deficit.  
-
-**Do:** 9 km at 6:45‑7:20 min/km, keeping HR ≤150 bpm and no strides or hills. If you feel good mid‑run you can add up to 10 km, but stop if HR or perceived effort spikes. No strength work needed today.
+- 🧠 Saturday is a long‑run day, but your readiness is only “moderate” (score 56) with just 5.6 h of sleep and a dip in HRV. Keep the session easy — stay ≤150 bpm — but trim the volume to about 8 km (≈ 2 km less than your usual 11 km) and skip any fast finishes. This preserves the aerobic stimulus without taxing recovery further.
 
 ## Today — Rest Day
 
