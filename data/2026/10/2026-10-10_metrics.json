@@ -44,7 +44,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "Saturday is a long‑run day, but your readiness is only “moderate” (score 56) with just 5.6 h of sleep and a dip in HRV. Keep the session easy — stay ≤150 bpm — but trim the volume to about 8 km (≈ 2 km less than your usual 11 km) and skip any fast finishes. This preserves the aerobic stimulus without taxing recovery further.",
+    "ai_analysis": "Your Saturday “LSD” is an easy‑pace run (≤150 bpm). Your readiness is only moderate (sleep ≈ 5½ h, HRV a bit down), but the load balance is fine (ACWR 0.8). Do the long run, but cut the distance to about 8–9 km and stay at the easy end of the zone (≈7:30–7:45 min/km, HR ≤ 150). No strides or hill sprints today – just a relaxed, fully recovered effort.",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
