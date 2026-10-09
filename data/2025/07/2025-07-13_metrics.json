@@ -28,6 +28,7 @@
     },
     "snapshots": [
       {
+        "timestamp_local": "2025-07-13T04:08:04.0",
         "context": "AFTER_WAKEUP_RESET",
         "score": 15,
         "feedback": "STAY_STRONG",
@@ -36,6 +37,7 @@
         "recovery_time_change": "POOR_SLEEP_RT_LOW"
       },
       {
+        "timestamp_local": "2025-07-13T09:39:39.0",
         "context": "AFTER_POST_EXERCISE_RESET",
         "score": 1,
         "feedback": "WELL_DONE",
@@ -48,6 +50,7 @@
         }
       },
       {
+        "timestamp_local": "2025-07-13T00:26:44.0",
         "context": "UPDATE_REALTIME_VARIABLES",
         "score": 49,
         "feedback": "BELIEVE_IN_YOURSELF",
