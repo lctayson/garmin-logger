@@ -63,6 +63,22 @@ actual data below -- never generic praise, never a template with numbers \
 swapped in. If something is unremarkable, say so plainly rather than \
 manufacturing a concern.
 
+Workout-analysis rules:
+- For interval sessions, assess execution from the actual work reps in the
+  supplied main_set data, not from whole-activity average pace. Overall pace
+  includes warm-up, recoveries, and cooldown.
+- Compare rep pace with a prescribed target only when that target is explicitly
+  supported by the workout prescription or durable coaching context. If rep
+  data is missing, say pace execution cannot be verified; do not infer a miss
+  from overall average pace.
+- interval_drift.pace_ef_drift_pct is a change in pace/efficiency across reps,
+  not the percentage by which the rep pace missed its target. Interpret it
+  alongside the rep paces and HR/power changes; do not conflate the measures.
+- Do not claim the workout's cardiovascular load came mainly from HR spikes,
+  or attribute drift to heat/fatigue, unless the supplied evidence supports it.
+- Treat readiness_that_day as the morning readiness score, not a post-run
+  readiness snapshot.
+
 Durable coaching context (goal, current phase, methodology, known risk \
 factors to watch for):
 
@@ -83,6 +99,107 @@ factors, and today's typical scheduled session):
 """
 
 
+def _parse_clock_seconds(value):
+    """Parse Garmin split durations/pace strings such as '3:00' or '5:08'."""
+    if not isinstance(value, str):
+        return None
+    parts = value.split(":")
+    try:
+        numbers = [int(part) for part in parts]
+    except ValueError:
+        return None
+    if len(numbers) == 2:
+        return numbers[0] * 60 + numbers[1]
+    if len(numbers) == 3:
+        return numbers[0] * 3600 + numbers[1] * 60 + numbers[2]
+    return None
+
+
+def _format_clock_pace(seconds):
+    minutes = int(seconds // 60)
+    remainder = int(round(seconds - minutes * 60))
+    if remainder >= 60:
+        minutes += 1
+        remainder = 0
+    return f"{minutes}:{remainder:02d}"
+
+
+def _main_set_summary(activity):
+    """Extract the largest-duration group of work splits without copying all laps into the prompt."""
+    splits = activity.get("splits")
+    if not isinstance(splits, dict):
+        return None
+    columns, rows = splits.get("columns"), splits.get("data")
+    if not isinstance(columns, list) or not isinstance(rows, list):
+        return None
+    col = {name: i for i, name in enumerate(columns)}
+    if not all(name in col for name in ("step_type", "time", "avg_pace")):
+        return None
+
+    active = [
+        row for row in rows
+        if isinstance(row, list)
+        and col["step_type"] < len(row)
+        and str(row[col["step_type"]]).upper() in ("ACTIVE", "INTERVAL")
+    ]
+    if len(active) < 2:
+        return None
+
+    def cell(row, name):
+        idx = col.get(name)
+        return row[idx] if idx is not None and idx < len(row) else None
+
+    def duration(row):
+        return _parse_clock_seconds(cell(row, "time")) or 0
+
+    step_col = col.get("workout_step_index")
+    groups = {}
+    if step_col is not None:
+        for row in active:
+            groups.setdefault(cell(row, "workout_step_index"), []).append(row)
+    if len(groups) <= 1:
+        # Some Garmin exports omit step indexes; separate long work reps from
+        # short strides using duration, matching the summary renderer's rule.
+        groups = {}
+        for row in active:
+            key = "long" if duration(row) >= 60 else "short"
+            groups.setdefault(key, []).append(row)
+    if not groups:
+        return None
+
+    work_rows = max(groups.values(), key=lambda group: sum(duration(row) for row in group))
+    reps = []
+    for row in work_rows:
+        pace = cell(row, "avg_pace")
+        pace_seconds = _parse_clock_seconds(pace)
+        if pace_seconds is None or duration(row) <= 0:
+            continue
+        rep = {"duration": cell(row, "time"), "pace": pace}
+        hr = cell(row, "avg_hr")
+        if hr is not None:
+            rep["avg_hr"] = hr
+        reps.append((pace_seconds, rep))
+    if len(reps) < 2:
+        return None
+
+    pace_seconds = [item[0] for item in reps]
+    durations = [item[1]["duration"] for item in reps]
+    result = {
+        "work_reps": len(reps),
+        "rep_paces": [item[1]["pace"] for item in reps],
+        "average_rep_pace": _format_clock_pace(sum(pace_seconds) / len(pace_seconds)),
+        "pace_range": [
+            _format_clock_pace(min(pace_seconds)),
+            _format_clock_pace(max(pace_seconds)),
+        ],
+    }
+    if len(set(durations)) == 1:
+        result["rep_duration"] = durations[0]
+    if all("avg_hr" in item[1] for item in reps):
+        result["rep_avg_hr"] = [item[1]["avg_hr"] for item in reps]
+    return result
+
+
 def _build_prompt(activity, metrics):
     fields = (
         "name", "type", "distance", "time", "avg_pace", "avg_hr", "max_hr",
@@ -90,6 +207,9 @@ def _build_prompt(activity, metrics):
         "stamina", "body_battery_impact", "load",
     )
     trimmed_activity = {k: activity[k] for k in fields if k in activity}
+    main_set = _main_set_summary(activity)
+    if main_set:
+        trimmed_activity["main_set"] = main_set
 
     readiness = (metrics or {}).get("readiness") or {}
     trimmed_readiness = {
