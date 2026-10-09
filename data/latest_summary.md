@@ -18,7 +18,7 @@ _Most recent activity (2026-10-08):_
   - TE: VO2MAX · aerobic 3.6 · anaerobic 1
   - Intervals: 5 work reps · pace drift -7.4% · HR +16bpm
   - MS: 2.93k @ 5:07 161bpm 1.05m 184spm 236ms 8.1cm 332w
-  - 🧠 All five 3-minute work reps were between 5:01 and 5:09/km, averaging about 5:06/km—within the prescribed 4:50–5:15/km range—and the reps progressively quickened. Average HR rose from 152 to 168 bpm as pace improved slightly; aerobic TE 3.6 and max HR 175 support a productive VO₂-focused stimulus. The −7.4% pace-efficiency drift describes declining efficiency across the reps, not a 7.4% miss against target pace; the overall 6:46/km includes warm-up, recoveries and cooldown. Stamina ended at 71% (minimum 52%) and body-battery impact was −12, indicating a meaningful session load. Morning readiness was 72 (Recovered And Ready); the score of 53 was the later post-exercise snapshot, not your pre-run readiness.
+  - 🧠 Execution was spot-on for this W3 VO2max session: all five 3-minute reps fell inside or slightly faster than the 5:05–5:12 target, progressing smoothly from 5:08 down to 5:01. Rep average HR climbed steadily from 152 bpm on rep 1 to 168 bpm on the final interval (maxing at 175 bpm), reflecting appropriate cardiac drift and genuine high-end aerobic stimulus without blowing past your 171 bpm LTHR until the closing rep. That 1.0 anaerobic Training Effect and 3.6 aerobic score show this session delivered the exact stimulus that historically slipped through the cracks in previous blocks.
 
 ## Load & Trends
 
