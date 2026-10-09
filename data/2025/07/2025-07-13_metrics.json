@@ -1,6 +1,9 @@
 {
   "date": "2025-07-13",
   "readiness": {
+    "score": 15,
+    "level": "Poor",
+    "feedback": "Stay Strong",
     "resting_hr": 60,
     "hrv_last_night_avg_ms": 32.0,
     "hrv_7_day_avg_ms": 46.0,
@@ -8,10 +11,7 @@
     "sleep_hours": 4.72,
     "sleep_hours_including_previous_day_nap": 4.72,
     "sleep_score": 39,
-    "recovery_hours": 88.7,
-    "score": 1,
-    "level": "Poor",
-    "feedback": "Well Done",
+    "recovery_hours": 5.1,
     "hrv_baseline": {
       "lowUpper": 43.0,
       "balancedLow": 46.0,
@@ -19,31 +19,50 @@
       "markerValue": 0.25
     },
     "factor_details": {
-      "sleep_score": {
-        "percent": 29,
-        "feedback": "Poor"
+      "sleep_score": {"percent": 29, "feedback": "Poor"},
+      "sleep_history": {"percent": 34, "feedback": "Poor"},
+      "recovery_time": {"percent": 92, "feedback": "Good"},
+      "acwr": {"percent": 100, "feedback": "Very Good"},
+      "hrv": {"percent": 72, "feedback": "Good"},
+      "stress_history": {"percent": 44, "feedback": "Moderate"}
+    },
+    "snapshots": [
+      {
+        "context": "AFTER_WAKEUP_RESET",
+        "score": 15,
+        "feedback": "STAY_STRONG",
+        "recovery_minutes": 304,
+        "acute_load": 359,
+        "recovery_time_change": "POOR_SLEEP_RT_LOW"
       },
-      "recovery_time": {
-        "percent": 10,
-        "feedback": "Poor"
+      {
+        "context": "AFTER_POST_EXERCISE_RESET",
+        "score": 1,
+        "feedback": "WELL_DONE",
+        "recovery_minutes": 5319,
+        "acute_load": 822,
+        "recovery_time_change": "POOR_SLEEP_RT_LOW",
+        "factor_overrides": {
+          "recovery_time": {"percent": 10, "feedback": "Poor"},
+          "acwr": {"percent": 86, "feedback": "Good"}
+        }
       },
-      "acwr": {
-        "percent": 86,
-        "feedback": "Good"
-      },
-      "hrv": {
-        "percent": 72,
-        "feedback": "Good"
-      },
-      "stress_history": {
-        "percent": 44,
-        "feedback": "Moderate"
+      {
+        "context": "UPDATE_REALTIME_VARIABLES",
+        "score": 49,
+        "feedback": "BELIEVE_IN_YOURSELF",
+        "recovery_minutes": 0,
+        "acute_load": 450,
+        "factor_overrides": {
+          "sleep_score": {"percent": 0, "feedback": "None"},
+          "recovery_time": {"percent": 100, "feedback": "Very Good"},
+          "hrv": {"percent": 100, "feedback": "Very Good"},
+          "stress_history": {"percent": 40, "feedback": "Moderate"}
+        }
       }
-    }
+    ]
   },
-  "health": {
-    "steps": 17439
-  },
+  "health": {"steps": 17439},
   "sleep": {
     "deep_h": 0.62,
     "light_h": 4.1,
@@ -65,29 +84,23 @@
     "acwr": 1.1,
     "acwr_percent": 47,
     "acwr_status": "Optimal",
-    "chronic_load_range": {
-      "min": 594.4,
-      "max": 1114.5
-    },
+    "chronic_load_range": {"min": 594.4, "max": 1114.5},
     "training_status": "Productive 3"
   },
   "vo2_max": 47.0,
+  "race_predictions": {
+    "5k": "27:29",
+    "10k": "57:30",
+    "half_marathon": "2:12:19",
+    "marathon": "4:55:33"
+  },
   "load_balance": {
     "aerobic_low": 899.5,
-    "aerobic_low_target": [
-      399,
-      1097
-    ],
+    "aerobic_low_target": [399, 1097],
     "aerobic_high": 1992.6,
-    "aerobic_high_target": [
-      1415,
-      2113
-    ],
+    "aerobic_high_target": [1415, 2113],
     "anaerobic": 69.8,
-    "anaerobic_target": [
-      558,
-      977
-    ],
+    "anaerobic_target": [558, 977],
     "load_focus": "Anaerobic Shortage"
   },
   "training_history": {
@@ -279,14 +292,8 @@
       ]
     }
   },
-  "heat_acclimation": {
-    "percentage": 90,
-    "trend": "Acclimatizing"
-  },
-  "altitude_acclimation": {
-    "percentage": 0,
-    "trend": null
-  },
+  "heat_acclimation": {"percentage": 90, "trend": "Acclimatizing"},
+  "altitude_acclimation": {"percentage": 0, "trend": null},
   "trend_recent_daily": {
     "columns": ["date", "resting_hr", "hrv_last_night_avg_ms", "hrv_7_day_avg_ms", "sleep_hours", "sleep_score", "vo2_max", "training_status", "acute_load", "chronic_load", "acwr", "acwr_status", "activity_count", "duration_hours", "distance", "sport_volume", "exercise_load"],
     "data": [
