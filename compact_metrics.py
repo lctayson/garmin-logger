@@ -168,6 +168,9 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
     factors = _compact_factors(daily_readiness.get("factors"))
     if factors:
         readiness["factor_details"] = factors
+    snapshots = daily_readiness.get("snapshots")
+    if isinstance(snapshots, list):
+        readiness["snapshots"] = snapshots
     if readiness:
         out["readiness"] = readiness
 

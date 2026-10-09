@@ -178,6 +178,36 @@ def _factor(entry, percent_key, feedback_key):
     return {k: v for k, v in obj.items() if v is not None}
 
 
+def _compact_readiness_snapshot(item, morning_factors):
+    """Compact a Garmin readiness reading without identifiers or timestamps."""
+    context = item.get('inputContext') or item.get('input_context') or item.get('context')
+    minutes = item.get('recoveryTime', item.get('recovery_time'))
+    factor_keys = {
+        'sleep_score': ('sleepScoreFactorPercent', 'sleepScoreFactorFeedback'),
+        'sleep_history': ('sleepHistoryFactorPercent', 'sleepHistoryFactorFeedback'),
+        'recovery_time': ('recoveryTimeFactorPercent', 'recoveryTimeFactorFeedback'),
+        'acwr': ('acwrFactorPercent', 'acwrFactorFeedback'),
+        'hrv': ('hrvFactorPercent', 'hrvFactorFeedback'),
+        'stress_history': ('stressHistoryFactorPercent', 'stressHistoryFactorFeedback'),
+    }
+    changed_factors = {}
+    for name, keys in factor_keys.items():
+        factor = _factor(item, *keys)
+        if factor and factor != morning_factors.get(name):
+            changed_factors[name] = factor
+    result = {
+        'context': str(context).upper() if context else None,
+        'score': _safe_int(item.get('score')),
+        'feedback': item.get('feedbackShort'),
+        'recovery_minutes': _safe_int(minutes),
+        'acute_load': _safe_int(item.get('acuteLoad')),
+        'recovery_time_change': item.get('recoveryTimeChangePhrase'),
+    }
+    if changed_factors:
+        result['factor_overrides'] = changed_factors
+    return {key: value for key, value in result.items() if value is not None}
+
+
 def get_training_readiness_details(api, target_date_str, training_status_raw=None):
     readiness = None
     try:
@@ -185,11 +215,11 @@ def get_training_readiness_details(api, target_date_str, training_status_raw=Non
     except Exception as e:
         print(f'[training_readiness] Warning: {e}', file=sys.stderr)
     entry = {}
-    if isinstance(readiness, list) and readiness:
+    snapshots = [item for item in readiness if isinstance(item, dict)] if isinstance(readiness, list) else ([readiness] if isinstance(readiness, dict) else [])
+    if snapshots:
         # Garmin can return multiple snapshots for one local date: the morning
         # score (AFTER_WAKEUP_RESET) and a later score after exercise. Daily
         # readiness must represent the morning snapshot, not the latest score.
-        snapshots = [item for item in readiness if isinstance(item, dict)]
         def context(item):
             return str(item.get('inputContext') or item.get('input_context') or item.get('context') or '').upper()
         def ts(item):
@@ -202,8 +232,6 @@ def get_training_readiness_details(api, target_date_str, training_status_raw=Non
             # Older API responses may omit inputContext. Use the earliest
             # timestamp as the safest available approximation of morning state.
             entry = min(snapshots, key=ts)
-    elif isinstance(readiness, dict):
-        entry = readiness
     result = {}
     recovery_minutes = entry.get('recoveryTime')
     if recovery_minutes is None:
@@ -231,6 +259,9 @@ def get_training_readiness_details(api, target_date_str, training_status_raw=Non
         factors = {'sleep_score': _factor(entry, 'sleepScoreFactorPercent', 'sleepScoreFactorFeedback'),'sleep_history': _factor(entry, 'sleepHistoryFactorPercent', 'sleepHistoryFactorFeedback'),'recovery_time': _factor(entry, 'recoveryTimeFactorPercent', 'recoveryTimeFactorFeedback'),'acwr': _factor(entry, 'acwrFactorPercent', 'acwrFactorFeedback'),'hrv': _factor(entry, 'hrvFactorPercent', 'hrvFactorFeedback'),'stress_history': _factor(entry, 'stressHistoryFactorPercent', 'stressHistoryFactorFeedback')}
         factors = {k: v for k, v in factors.items() if v}
         if factors: readiness_obj['factors'] = factors
+        if len(snapshots) > 1:
+            ordered_snapshots = sorted(snapshots, key=lambda item: context(item) != 'AFTER_WAKEUP_RESET')
+            readiness_obj['snapshots'] = [_compact_readiness_snapshot(item, factors) for item in ordered_snapshots]
         result['readiness'] = {k: v for k, v in readiness_obj.items() if v is not None}
     return result
 
