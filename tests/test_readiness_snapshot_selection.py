@@ -51,7 +51,7 @@ def test_morning_snapshot_wins_over_later_post_exercise_snapshot():
 
     assert result["readiness"]["score"] == 72
     assert result["readiness"]["level"] == "Recovered And Ready"
-    assert result["recovery_time_hours"] == 5.0
+    assert result["recovery_time_hours"] == 0.0
     stored = result["readiness"]["snapshots"]
     assert [item["score"] for item in stored] == [72, 53]
     assert [item["context"] for item in stored] == ["AFTER_WAKEUP_RESET", "AFTER_POST_EXERCISE_RESET"]
@@ -73,3 +73,26 @@ def test_earliest_snapshot_is_fallback_when_context_is_missing():
     result = get_training_readiness_details(FakeApi(snapshots), "2026-10-08")
 
     assert result["readiness"]["score"] == 72
+
+def test_snapshot_array_orders_morning_before_post_exercise_and_omits_for_single_reading():
+    reversed_snapshots = [
+        {
+            "timestampLocal": "2026-10-08T07:10:48.0",
+            "inputContext": "AFTER_POST_EXERCISE_RESET",
+            "score": 53,
+            "feedbackShort": "RECOVERY_IN_PROGRESS",
+            "recoveryTime": 1584,
+        },
+        {
+            "timestampLocal": "2026-10-08T05:23:16.0",
+            "inputContext": "AFTER_WAKEUP_RESET",
+            "score": 72,
+            "feedbackShort": "RECOVERED_AND_READY",
+            "recoveryTime": 1,
+        },
+    ]
+    result = get_training_readiness_details(FakeApi(reversed_snapshots), "2026-10-08")
+    assert [item["score"] for item in result["readiness"]["snapshots"]] == [72, 53]
+
+    single = get_training_readiness_details(FakeApi([reversed_snapshots[1]]), "2026-10-08")
+    assert "snapshots" not in single["readiness"]
