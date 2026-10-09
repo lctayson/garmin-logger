@@ -89,27 +89,18 @@ factors, and today's typical scheduled session):
 
 
 
-def _compact_context(context_text: str, date_str: str) -> str:
-    """Keep durable coaching guidance plus only the plan week relevant to this date.
 
-    The full plan is useful as a source of truth, but sending all 22 weeks with
-    every activity wastes tokens and can crowd out the workout evidence. Keep
-    the athlete profile, goals, methodology, risk factors and analysis rules,
-    then append the matching week's prescription (if present).
-    """
+def _compact_context(context_text: str, date_str: str) -> str:
+    """Keep durable coaching guidance plus only the plan week relevant to this date."""
     plan_marker = "# BHM 2027 Training Plan"
     if plan_marker not in context_text:
         return context_text.strip()
 
     durable, plan = context_text.split(plan_marker, 1)
-    durable = durable.strip()
-    plan = plan.strip()
-
-    week_matches = list(re.finditer(r"(?m)^## W\d+ · ([A-Za-z]{3}) (\d{1,2}) ·[^\\n]*", plan))
+    durable, plan = durable.strip(), plan.strip()
+    week_matches = list(re.finditer(r"(?m)^## W\d+ · ([A-Za-z]{3}) (\d{1,2}) ·[^\n]*", plan))
     if not week_matches:
-        # Keep the compact plan overview, but avoid blindly sending a long plan.
-        overview = plan.split("\\n## W", 1)[0].strip()
-        return f"{durable}\\n\\n# BHM 2027 plan overview\\n{overview}".strip()
+        return durable
 
     target_date = datetime.date.fromisoformat(date_str)
     matching_week = None
@@ -120,18 +111,18 @@ def _compact_context(context_text: str, date_str: str) -> str:
             week_start = datetime.date(year, datetime.datetime.strptime(month_name, "%b").month, day)
         except ValueError:
             continue
-        week_end = (week_matches[index + 1].start() - 1) if index + 1 < len(week_matches) else len(plan)
         if week_start <= target_date <= week_start + datetime.timedelta(days=6):
+            week_end = week_matches[index + 1].start() if index + 1 < len(week_matches) else len(plan)
             matching_week = plan[match.start():week_end].strip()
             break
 
     overview = plan[:week_matches[0].start()].strip()
     pieces = [durable]
     if overview:
-        pieces.append("# BHM 2027 plan overview\\n" + overview)
+        pieces.append("# BHM 2027 plan overview\n" + overview)
     if matching_week:
-        pieces.append("# Relevant training week\\n" + matching_week)
-    return "\\n\\n".join(pieces)
+        pieces.append("# Relevant training week\n" + matching_week)
+    return "\n\n".join(pieces)
 
 def _parse_clock_seconds(value):
     """Parse Garmin split durations/pace strings such as '3:00' or '5:08'."""
@@ -343,7 +334,7 @@ def _call_openai_compatible(
                     except (TypeError, ValueError):
                         delay = None
             if delay is None:
-                retry_match = re.search(r"try again in\\s+([0-9]+(?:\\.[0-9]+)?)\\s*(ms|milliseconds?|s|seconds?)", message, re.IGNORECASE)
+                retry_match = re.search(r"try again in\s+([0-9]+(?:\.[0-9]+)?)\s*(ms|milliseconds?|s|seconds?)", message, re.IGNORECASE)
                 if retry_match:
                     delay = float(retry_match.group(1))
                     if retry_match.group(2).lower().startswith("ms"):
