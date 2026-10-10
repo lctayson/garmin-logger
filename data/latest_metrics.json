@@ -44,7 +44,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "**Today's plan (Sunday) → modify, not skip.** Your readiness score is low (33) mainly because of short sleep, but HRV and ACWR are fine and the scheduled run is already a low‑intensity recovery day. Do a **shorter, ultra‑easy run** – 4 km at ≤145 bpm (≈7:30 /km) and **skip the hill sprints** (or reduce them to 2 × 10‑second easy hills). This will give you the active recovery you need without taxing the nervous system when you’re running low on sleep.",
+    "ai_analysis": "**Sunday is a Recovery Run, but your readiness score is low (33) and you only got 5.5 h of sleep.** Keep the session very light: run about 4 km at an easy 7:30‑8:00 min/km pace, stay ≤145 bpm, and **skip the hill sprints/strides**. This preserves the recovery‑run habit without adding cardio stress while you catch up on rest. If you feel even a bit off after the jog, stop and treat the rest of the day as pure recovery.",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
