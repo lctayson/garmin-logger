@@ -537,7 +537,7 @@
         ]
       },
       "lap_count": 12,
-      "ai_analysis": "The 11‑rep main set held a steady progression from 7:41 /km down to 6:48 /km, with the average rep pace (7:23 /km) essentially matching the overall 7:22 /km, so the intended easy‑pace effort was executed on target. Heart‑rate rose from 133 bpm on the first rep to 158 bpm on the final rep, staying within the easy‑aerobic zone for most of the run and only nudging into sub‑threshold range on the last kilometer, which explains the modest aerobic training effect (aerobic 3.3, anaerobic 0). Your morning readiness was moderate (score 56), and the post‑run drop to 36 reflects the acute load (106 AU) rather than any failure to meet the session’s purpose. Overall, the workout delivered the expected aerobic stimulus without unintended high‑intensity stress.",
+      "ai_analysis": "The 11 km Saturday run stayed inside the prescribed easy‑pace window (6:45–7:20 /km) and even finished the last rep at 6:48 /km, showing a clear positive drift in rep speed without any HR spikes beyond the easy‑zone range (max 162 bpm, rep HRs 133–158 bpm). The aerobic‑base training effect (3.3 AEROBIC, 0 ANAEROBIC) matches the session intent, and the morning readiness score of 56 (moderate) suggests you had sufficient recovery to execute the run as planned. The post‑run drop to a 36 readiness score reflects the acute load of 550 acwr, not a failure of execution, and does not require any immediate training adjustment.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
