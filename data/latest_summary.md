@@ -15,7 +15,7 @@
 - **Malolos Running** — 11.03km · 1:21:20 · 7:22/km · HR 148/162 max
   - TE: AEROBIC_BASE · aerobic 3.3 · anaerobic 0
   - MS: 11.00k @ 7:23 148bpm 0.80m 168spm 278ms 7.9cm 239w
-  - 🧠 The 11 km run stayed within the easy‑run HR cap (average 148 bpm, max 162) and delivered a modest aerobic base stimulus (AEROBIC 3.3, no anaerobic benefit), which matches the Saturday LSD purpose in the bridge phase. Your rep paces show a clear negative split, dropping from 7:40 /km early to 6:48 /km at the end, so the finish approached sub‑threshold speed while still respecting the ≤150 bpm cap. Morning readiness was only moderate (score 56, sleep 64), and stamina fell to 79 % during the session, so the drop in post‑run readiness to 36 is expected but not a cause for concern.
+  - 🧠 The 11 km run stayed firmly in the easy‑pace zone (overall 7:22 / km, rep paces 7:41 → 6:48 / km) and average HR of 148 bpm stayed under the EZ cap of 150 bpm, though the last rep crept to 158 bpm as the pace accelerated. The training‑effect output (aerobic = 3.3, anaerobic = 0) matches the intended aerobic‑base stimulus of a Saturday LSD, and the modest body‑battery drop (‑15) and acute load of 106 AU reflect the expected cost of a 1 h 21 min effort. With a morning readiness score of 56 (moderate) and resting HR 59 bpm, the session was well‑matched to your current recovery state; the post‑run readiness dip to 36 simply records the immediate fatigue from the load. No red flags appear—execution aligns with the bridge‑phase easy‑run prescription.
 
 ## Load & Trends
 
