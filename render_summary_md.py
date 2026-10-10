@@ -112,6 +112,23 @@ def _group_active_rows(active_rows: list[list[Any]], col: dict[str, int]) -> dic
     for row in active_rows:
         secs = _parse_time_seconds(row[time_col]) if time_col < len(row) else None
         (long_reps if (secs or 0) >= 60 else short_reps).append(row)
+    # Garmin can append a tiny final partial lap (e.g. 0:11 and 0.03 km)
+    # to an otherwise continuous run. It is not a stride/short rep: keep it
+    # with the long splits so the main-set distance matches the activity's
+    # true distance instead of silently dropping the remainder.
+    distance_col = col.get("distance")
+    if long_reps and short_reps and active_rows[-1] is short_reps[-1]:
+        final_row = short_reps[-1]
+        final_secs = _parse_time_seconds(final_row[time_col]) if time_col < len(final_row) else None
+        final_distance = _num(final_row[distance_col]) if distance_col is not None and distance_col < len(final_row) else None
+        if (
+            len(short_reps) == 1
+            and final_secs is not None and final_secs < 30
+            and final_distance is not None and 0 < final_distance <= 0.1
+        ):
+            long_reps.append(final_row)
+            short_reps = []
+
     groups = {}
     if long_reps:
         groups["long"] = long_reps
