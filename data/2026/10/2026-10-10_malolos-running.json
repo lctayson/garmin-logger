@@ -537,7 +537,7 @@
         ]
       },
       "lap_count": 12,
-      "ai_analysis": "The 11 km run stayed firmly in the easy‑pace zone (overall 7:22 / km, rep paces 7:41 → 6:48 / km) and average HR of 148 bpm stayed under the EZ cap of 150 bpm, though the last rep crept to 158 bpm as the pace accelerated. The training‑effect output (aerobic = 3.3, anaerobic = 0) matches the intended aerobic‑base stimulus of a Saturday LSD, and the modest body‑battery drop (‑15) and acute load of 106 AU reflect the expected cost of a 1 h 21 min effort. With a morning readiness score of 56 (moderate) and resting HR 59 bpm, the session was well‑matched to your current recovery state; the post‑run readiness dip to 36 simply records the immediate fatigue from the load. No red flags appear—execution aligns with the bridge‑phase easy‑run prescription.",
+      "ai_analysis": "The 11 km Saturday run was just a touch slower than the LSD target range (6:45–7:20 / km), with an average rep pace of 7:23 / km and early reps lingering around 7:40 / km before accelerating to 6:48 / km on the final segment. Heart‑rate stayed comfortably under the easy‑run cap (≤150 bpm) through the first ten reps (133–152 bpm) but rose to 158 bpm on the last, fastest rep, indicating a modest overshoot as fatigue set in. Your morning readiness score of 56 (moderate) was acceptable for an easy day, yet the post‑run drop to 36 highlights reduced recovery capacity and suggests you should prioritize rest before Thursday’s VO₂‑max interval session.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
