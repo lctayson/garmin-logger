@@ -9,9 +9,9 @@
 - **Recovery time:** 8h
 - ⚠️ **Limiter:** Sleep Score (38%)
 - **Also soft:** Stress History, Sleep History
-- 🧠 **Sunday is a Recovery Run, but your readiness score is low (33) and you only got 5.5 h of sleep.** Keep the session very light: run about 4 km at an easy 7:30‑8:00 min/km pace, stay ≤145 bpm, and **skip the hill sprints/strides**. This preserves the recovery‑run habit without adding cardio stress while you catch up on rest. If you feel even a bit off after the jog, stop and treat the rest of the day as pure recovery.
+- 🧠 Today is the recovery‑run day. Your readiness score is low (sleep ≈ 5½ h, sleep score 57) but HRV and ACWR are fine, so a very light session is still useful. Run only 4–5 km at an easy 7:40–8:00 min/km, keep average HR ≤145 bpm and **skip the hill‑sprint bursts**. If you feel unusually tired or any joint pain, simply rest and treat it as an extra recovery day.
 
-## Today — Rest Day
+## Latest Activity
 
 _Most recent activity (2026-10-10):_
 - **Malolos Running** — 11.03km · 1:21:20 · 7:22/km · HR 148/162 max
