@@ -9,7 +9,7 @@
 - **Recovery time:** 8h
 - ⚠️ **Limiter:** Sleep Score (38%)
 - **Also soft:** Stress History, Sleep History
-- 🧠 Today is the recovery‑run day. Your readiness score is low (sleep ≈ 5½ h, sleep score 57) but HRV and ACWR are fine, so a very light session is still useful. Run only 4–5 km at an easy 7:40–8:00 min/km, keep average HR ≤145 bpm and **skip the hill‑sprint bursts**. If you feel unusually tired or any joint pain, simply rest and treat it as an extra recovery day.
+- 🧠 Your readiness score is low (33) mainly because you only got 5.5 h of sleep, even though HRV and ACWR look fine. Keep today’s “recovery” purpose but cut the volume and intensity: run about 4 km at an easy ≤145 bpm pace (≈7:30 – 8:00 min/km) and skip the hill‑sprint bursts. This will give you some circulation without taxing a fatigued system, and you can resume the full 6 km + hills tomorrow.
 
 ## Latest Activity
 
