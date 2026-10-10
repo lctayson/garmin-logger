@@ -537,7 +537,7 @@
         ]
       },
       "lap_count": 12,
-      "ai_analysis": "The 11 km Saturday run stayed comfortably in the prescribed easy‑pace window (6:45‑7:20 /km) and kept average HR at 148 bpm, well under the EZ cap of 150 bpm, so the aerobic stimulus was as intended. The progressive rep paces—from 7:41 early to 6:48 in the final rep—showed a modest negative‑split effort, but the overall training effect remains purely aerobic (AEROBIC_BASE 3.3, no anaerobic credit). Stamina fell from 100 % to 79 % during the run, reflecting a typical depletion for a 1 h 20 min easy long run and not a red flag. Morning readiness was moderate (score 56) and the post‑run drop to 36 is expected after a 106‑load session; no immediate recovery issue is evident.",
+      "ai_analysis": "The 11 km Thursday session delivered 11 work reps ranging from 7:40 / km to 6:48 / km (average 7:23 / km), which is roughly 30–45 s / km slower than the prescribed 5:05–5:12 / km VO₂max target, so the interval intensity fell well short of the intended stimulus. Heart‑rate stayed modest (average 148 bpm, max 162 bpm) and the training effect recorded zero anaerobic benefit, confirming that the session did not generate the high‑intensity load needed for bridge‑phase VO₂max development. With a morning readiness",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
