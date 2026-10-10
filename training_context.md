@@ -142,7 +142,7 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 8k as 4×1K @ 5:00-5:08 (or 5:12?), 2min jog, ≤172
 - **Fri** Rest + core
 - **Sat** 12K EZ
-- **Sun** 8k EZ @ 6:50-7:20, ≤150
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 + 6-8×10s hills
   📌 CCM
 
 ## W5 · Oct 19 · 38 km
@@ -152,7 +152,7 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 8k as 5K TEST + WU/CD, or 7k EZ + strides
 - **Fri** Rest + core
 - **Sat** 10K EZ
-- **Sun** 8k EZ @ 6:50-7:20, ≤150
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 + 6-8×10s hills
 
 ## W6 · Oct 26 · 43 km
 - **Mon** Strength A
@@ -161,7 +161,7 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 7k as 6×75s @ 3-5K effort, 90s RI
 - **Fri** Rest + core
 - **Sat** 13K EZ
-- **Sun** 8k EZ @ 6:50-7:20, ≤150
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 + 6-8×10s hills
 
 ## W7 · Nov 2 · 45 km
 - **Mon** Strength A
@@ -170,7 +170,7 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 9k as 6×1K @ 4:58-5:05, 90s jog, ≤172
 - **Fri** Rest + core
 - **Sat** 14K as 11k EZ + 3K @ 5:45-5:55
-- **Sun** 8k EZ @ 6:50-7:20, ≤150
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 + 6-8×10s hills
 
 ## W8 · Nov 9 · 46 km
 - **Mon** Strength A
@@ -179,7 +179,7 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 9k as 3×2K @ 5:12-5:18, 2:30 jog, ≤170
 - **Fri** Rest + core
 - **Sat** 14K EZ
-- **Sun** 8k EZ @ 6:50-7:20, ≤150
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 + 6-8×10s hills
   📌 Coffee Run 10/16k
 
 ## W9 · Nov 16 · 46 km
@@ -189,7 +189,7 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 9k as 5×90s HARD, 2min RI
 - **Fri** Rest + core
 - **Sat** 14K as 10K EZ + 4K @ 5:40-5:50
-- **Sun** 8k EZ @ 6:50-7:20, ≤150
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 + 6-8×10s hills
 
 ## W10 · Nov 23 · 37 km
 - **Mon** Strength A
@@ -198,7 +198,7 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 5k EZ @ 6:55-7:25, ≤150 + 4×20s strides, 75s walk
 - **Fri** Rest
 - **Sat** 12K EZ
-- **Sun** 8k EZ
+- **Sun** 8k EZ + 6-8×10s hills
 
 ## W11 · Nov 30 · 41 km (HM phase starts)
 - **Mon** Strength A
@@ -207,7 +207,7 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 7k VO2 re-test: 6×2min @ 5:00-5:10, 2min jog
 - **Fri** Rest + core
 - **Sat** 12K or 14K LSD
-- **Sun** 8k EZ @ 6:50-7:20, ≤150
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 + 6-8×10s hills
 
 ## W12 · Dec 7 · 47 km
 - **Mon** Strength A
@@ -216,7 +216,7 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 9k as 3×2K @ 5:20-5:27, 2:30 jog, ≤170 (HM/10K bridge)
 - **Fri** Rest + core
 - **Sat** 15K: 12K EZ + 3K @ 5:40-5:50
-- **Sun** 8k EZ @ 6:50-7:20, ≤150
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 + 6-8×10s hills
 
 ## W13 · Dec 14 · 49 km
 - **Mon** Strength A
@@ -225,7 +225,7 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 10k as 2×4K @ 5:35-5:42, 3min jog, ≤169 (HM specific)
 - **Fri** Rest + core
 - **Sat** 15K EZ
-- **Sun** 8k EZ @ 6:50-7:20, ≤150
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 + 6-8×10s hills
 
 ## W14 · Dec 21 · 38 km
 - **Mon** Strength A
@@ -234,7 +234,7 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 6k as 5×75-90s hard, 90-120s recovery (anaerobic capacity)
 - **Fri** Rest + core
 - **Sat** 12K EZ
-- **Sun** 8k EZ @ 6:50-7:20, ≤150
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 + 6-8×10s hills
 
 ## W15 · Dec 28 · 49 km
 - **Mon** Strength A
@@ -243,7 +243,7 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 9k as 3×2K @ 5:25-5:32, 2:30 jog, ≤170 (HM specific)
 - **Fri** Rest + core
 - **Sat** 17K: 12K EZ + 5K @ 5:35-5:45, only if recovered
-- **Sun** 8k EZ @ 6:50-7:20, ≤150
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 + 6-8×10s hills
 
 ## W16 · Jan 4 · 49 km
 - **Mon** Strength A
@@ -252,7 +252,7 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 9k as 3×2K @ 5:25-5:32, 2:30 jog, ≤170
 - **Fri** Rest + core
 - **Sat** 17K EZ
-- **Sun** 8k EZ @ 6:50-7:20, ≤150
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 + 6-8×10s hills
 
 ## W17 · Jan 11 · 51 km
 - **Mon** Strength A
@@ -261,7 +261,7 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 9k as 2×3K @ 5:28-5:35, 3min jog, ≤170
 - **Fri** Rest + core
 - **Sat** 18K: 14K EZ + 4K @ 5:40-5:50
-- **Sun** 8k EZ @ 6:50-7:20, ≤150
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 + 6-8×10s hills
 
 ## W18 · Jan 18 · 48 km
 - **Mon** Strength A
@@ -270,7 +270,7 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 9k as 3×2K @ 5:25-5:32, 2:30 jog, ≤170
 - **Fri** Rest + core
 - **Sat** 16K EZ
-- **Sun** 8k EZ @ 6:50-7:20, ≤150
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 + 6-8×10s hills
 
 ## W19 · Jan 25 · 47 km
 - **Mon** Strength A
@@ -279,7 +279,7 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 6k as 4×3min @ 5:05-5:12, 2min jog, ≤172 (10K support)
 - **Fri** Rest + core
 - **Sat** 20K: 15K EZ + 5K @ 5:35-5:45, only if recovered
-- **Sun** 8k EZ @ 6:50-7:20, ≤150
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 + 6-8×10s hills
 
 ## W20 · Feb 1 · 47 km
 - **Mon** Strength A
@@ -288,7 +288,7 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 9k as 3×2K @ 5:30-5:37, 2:30 jog, ≤169
 - **Fri** Rest + core
 - **Sat** 16K EZ
-- **Sun** 8k recovery @ 7:00-7:40, ≤145
+- **Sun** 8k recovery @ 7:00-7:40, ≤145 + 6-8×10s hills
 
 ## W21 · Feb 8 · 38 km
 - **Mon** Strength A
@@ -297,7 +297,7 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 6k as 3×3min @ 5:05-5:12, 2min jog, ≤170 (VO2 maintenance)
 - **Fri** Rest
 - **Sat** 14K EZ
-- **Sun** 6k recovery @ 7:05-7:45, ≤145
+- **Sun** 6k recovery @ 7:05-7:45, ≤145 + 6-8×10s hills
 
 ## W22 · Feb 15 · 39.1 km (RACE WEEK)
 - **Mon** Strength A
