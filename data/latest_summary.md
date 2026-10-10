@@ -1,17 +1,19 @@
-# Daily Check — 2026-10-10
+# Daily Check — 2026-10-11
 
-## Readiness: 56/100 (Moderate)
-> Balance Stress And Recovery
+## Readiness: 33/100 (Low)
+> Find Time To Relax
 
 - **RHR:** 59 bpm
-- ⚠️ **HRV:** 46ms (7d avg: 53ms) — below balanced band
-- ⚠️ **Sleep:** 5h34 (score 64)
-- **Recovery time:** 0h
-- ⚠️ **Limiter:** Sleep Score (46%)
-- **Also soft:** Sleep History, Stress History
+- ⚠️ **HRV:** 46ms (7d avg: 51ms) — below balanced band
+- ⚠️ **Sleep:** 5h31 (score 57)
+- **Recovery time:** 8h
+- ⚠️ **Limiter:** Sleep Score (38%)
+- **Also soft:** Stress History, Sleep History
+- 🧠 **Today's plan (Sunday) → modify, not skip.** Your readiness score is low (33) mainly because of short sleep, but HRV and ACWR are fine and the scheduled run is already a low‑intensity recovery day. Do a **shorter, ultra‑easy run** – 4 km at ≤145 bpm (≈7:30 /km) and **skip the hill sprints** (or reduce them to 2 × 10‑second easy hills). This will give you the active recovery you need without taxing the nervous system when you’re running low on sleep.
 
-## Today
+## Today — Rest Day
 
+_Most recent activity (2026-10-10):_
 - **Malolos Running** — 11.03km · 1:21:20 · 7:22/km · HR 148/162 max
   - TE: AEROBIC_BASE · aerobic 3.3 · anaerobic 0
   - MS: 11.03k @ 7:22 148bpm 0.80m 168spm 278ms 7.9cm 239w
@@ -19,29 +21,29 @@
 
 ## Load & Trends
 
-- **ACWR:** 1.0 (Optimal) — acute 550 / chronic 532 (chronic range 425.6–798)
-- **7-day volume:** 37.15km vs 28-day avg 34.7km (+7%)
-- **Running tolerance:** 71.3% (Medium) — 37.1km of 62.3km weekly cap, acute impact load 44.4
-- ⚠️ **Aerobic Low:** 869.4 (target 303–822 — +47 over)
+- **ACWR:** 0.8 (Optimal) — acute 450 / chronic 515 (chronic range 412–772.5)
+- **7-day volume:** 31.12km vs 28-day avg 33.2km (-6%)
+- **Running tolerance:** 61.5% (Medium) — 31.1km of 62.3km weekly cap, acute impact load 38.3
+- **Aerobic Low:** 818 (target 303–822 — in range)
 - **Aerobic High:** 1093.3 (target 649–1169 — in range)
 - ⚠️ **Anaerobic:** 43.3 (target 173–519 — -130 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
-- ⚠️ **Sleep (7d avg):** 6h07, 7/7 nights below need, trending flat
-- **RHR (7d avg):** 56.9, trending flat
+- ⚠️ **Sleep (7d avg):** 6h05, 7/7 nights below need, trending down
+- ⚠️ **RHR (7d avg):** 57.3, trending up
 - ⚠️ **HRV:** trending down
 
-## This Week (Oct 4–10)
+## This Week (Oct 5–11)
 
 | D | Activity | Volume | Load |
 |:---:|:---|---:|---:|
-| S | Malolos Run | 6k · 45:01 | 58 |
 | M | Strength A | 20:44 | 2 |
 | T | BHM W3: 2x10min Thr | 7k · 47:21 | 153 |
 | W | Run + Strides/Hills | 6k · 48:18 | 64 |
 | T | 5x3min VO₂ Int | 7k · 47:31 | 147 |
 | F | Core/Hip | 19:24 | 3 |
 | S | Malolos Run | 11k · 1:21:20 | 106 |
+| S | Rest | — | — |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 7 | 37.15 km | 5:09:39 | 534.8 |
+| 6 | 31.12 km | 4:24:38 | 476.4 |
