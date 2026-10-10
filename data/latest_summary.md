@@ -15,7 +15,7 @@
 - **Malolos Running** — 11.03km · 1:21:20 · 7:22/km · HR 148/162 max
   - TE: AEROBIC_BASE · aerobic 3.3 · anaerobic 0
   - MS: 11.03k @ 7:22 148bpm 0.80m 168spm 278ms 7.9cm 239w
-  - 🧠 The 11 km Saturday run stayed inside the prescribed easy‑pace window (6:45–7:20 /km) and even finished the last rep at 6:48 /km, showing a clear positive drift in rep speed without any HR spikes beyond the easy‑zone range (max 162 bpm, rep HRs 133–158 bpm). The aerobic‑base training effect (3.3 AEROBIC, 0 ANAEROBIC) matches the session intent, and the morning readiness score of 56 (moderate) suggests you had sufficient recovery to execute the run as planned. The post‑run drop to a 36 readiness score reflects the acute load of 550 acwr, not a failure of execution, and does not require any immediate training adjustment.
+  - 🧠 The 11‑km run held an average rep pace of 7:23 /km, essentially identical to the overall 7:22 /km, and the reps progressed from 7:40 to a fastest 6:48 /km. Heart‑rate rose in step with pace, from 133 bpm early to 158 bpm on the final
 
 ## Load & Trends
 
