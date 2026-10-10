@@ -537,7 +537,7 @@
         ]
       },
       "lap_count": 12,
-      "ai_analysis": "The 11‑km run stayed comfortably in the easy‑pace HR zone (average 148 bpm ≤ 150) and the rep‑by‑rep paces show a clear negative drift, finishing the last work interval at 6:48 /km versus the early 7:40 /km, which suggests you were able to progressively pick up speed despite the heat. The aerobic training effect (3.3 AEROBIC_BASE) and the zero anaerobic contribution confirm this was a genuine aerobic endurance effort, not a VO₂max stimulus, and the stamina metric fell to 79 % by the end, matching the expected depletion for a long run. Morning readiness was moderate (score 56); the post‑run drop to 36 reflects the acute load of the session rather than a pre‑existing deficit.",
+      "ai_analysis": "The 11 km run progressed from a 7:40 /km pace with 133 bpm HR in the first rep to a 6:48 /km pace with 158 bpm HR in the final rep, showing a smooth negative‑split pattern and a modest rise in cardiovascular strain that stayed within the easy‑aerobic to low‑threshold zone. The overall training effect (aerobic 3.3, no anaerobic) matches the intended LSD focus of the bridge phase, and the load of 106 AU is well within today’s capacity. Your morning readiness was moderate (score 56), and while the post‑run snapshot fell to 36, the drop is expected after a 1 h 21 min effort and does not indicate a problem on its own. No red flags appear; keep using progressive paces on long runs to maintain aerobic base without adding unnecessary anaerobic stress.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
