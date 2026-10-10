@@ -537,8 +537,8 @@ class RenderTests(unittest.TestCase):
             ],
         }
         text = render(payload, activities)
-        self.assertIn("## Today", text)
-        self.assertNotIn("Rest Day", text)
+        self.assertIn("## Today's Workout", text)
+        self.assertNotIn("Latest Activity", text)
         self.assertIn("2 x 7min Threshold", text)
         self.assertIn("TEMPO", text)
         self.assertIn("2 work reps", text)
@@ -554,20 +554,20 @@ class RenderTests(unittest.TestCase):
             "activities": [{"name": "Yesterday's Run", "distance": 6.03}],
         }
         text = render(payload, activities)
-        self.assertIn("Rest Day", text)
+        self.assertIn("## Latest Activity", text)
         self.assertIn("Most recent activity (2026-09-17)", text)
         self.assertIn("Yesterday's Run", text)
-        self.assertNotIn("## Today\n", text)
+        self.assertNotIn("## Today's Workout", text)
 
     def test_genuine_rest_day_with_no_activities_at_all(self):
         payload = _payload()
         text = render(payload, {"date": "2026-09-17", "activities": []})
-        self.assertIn("Rest Day", text)
+        self.assertIn("## No Activity Logged Today", text)
         self.assertIn("No activity logged", text)
 
     def test_missing_activity_file_is_distinguished_from_rest_day(self):
         self.assertIn("No activity file found", render(_payload(), None))
-        self.assertNotIn("Rest Day", render(_payload(), None))
+        self.assertNotIn("## No Activity Logged Today", render(_payload(), None))
 
     def test_render_works_without_precomputed_summary(self):
         payload = _payload()

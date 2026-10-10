@@ -671,7 +671,7 @@ def _activity_detail_lines(act: dict[str, Any]) -> list[str]:
 
 def _today_lines(metrics_date: Any, activities_payload: dict[str, Any] | None) -> list[str]:
     if not isinstance(activities_payload, dict):
-        return ["## Today", "", "_No activity file found._"]
+        return ["## Activity", "", "_No activity file found._"]
 
     activities_date = activities_payload.get("date")
     activities = activities_payload.get("activities")
@@ -680,16 +680,16 @@ def _today_lines(metrics_date: Any, activities_payload: dict[str, Any] | None) -
     is_today = metrics_date is not None and activities_date == metrics_date
 
     if is_today and has_activities:
-        lines = ["## Today", ""]
+        lines = ["## Today's Workout", ""]
         for act in activities:
             if isinstance(act, dict):
                 lines.extend(_activity_detail_lines(act))
         return lines
 
     if not has_activities:
-        return ["## Today — Rest Day", "", "_No activity logged._"]
+        return ["## No Activity Logged Today", "", "_No activity logged._"]
 
-    lines = ["## Today — Rest Day", "", f"_Most recent activity ({activities_date}):_"]
+    lines = ["## Latest Activity", "", f"_Most recent activity ({activities_date}):_"]
     for act in activities:
         if isinstance(act, dict):
             lines.extend(_activity_detail_lines(act))
