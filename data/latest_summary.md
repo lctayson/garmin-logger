@@ -15,7 +15,7 @@
 - **Malolos Running** — 11.03km · 1:21:20 · 7:22/km · HR 148/162 max
   - TE: AEROBIC_BASE · aerobic 3.3 · anaerobic 0
   - MS: 11.00k @ 7:23 148bpm 0.80m 168spm 278ms 7.9cm 239w
-  - 🧠 The 11 km run stayed solidly in the Easy aerobic zone for the first eight reps (7:41 – 7:24 min/km, HR 133‑151 bpm) and only the final three reps dropped into the upper‑easy/sub‑threshold range (6:48 – 7:10 min/km, HR climbing to 158 bpm), showing a clear negative‑split progression but limited true VO₂max stimulus (anaerobic effect 0.0). Stamina fell from 100 % to 79 % and body‑battery dropped 15 points, while the training load of 106 AU and aerobic effect of 3.3 are consistent with a moderate‑intensity long run in the bridge phase. Your morning readiness was Moderate (score 56); the post‑run drop to 36 reflects the acute load but does not indicate inadequate recovery for tomorrow’s planned strength day.
+  - 🧠 The 11‑km run stayed comfortably in the easy‑pace HR zone (average 148 bpm ≤ 150) and the rep‑by‑rep paces show a clear negative drift, finishing the last work interval at 6:48 /km versus the early 7:40 /km, which suggests you were able to progressively pick up speed despite the heat. The aerobic training effect (3.3 AEROBIC_BASE) and the zero anaerobic contribution confirm this was a genuine aerobic endurance effort, not a VO₂max stimulus, and the stamina metric fell to 79 % by the end, matching the expected depletion for a long run. Morning readiness was moderate (score 56); the post‑run drop to 36 reflects the acute load of the session rather than a pre‑existing deficit.
 
 ## Load & Trends
 
