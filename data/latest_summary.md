@@ -15,7 +15,7 @@
 - **Malolos Running** — 11.03km · 1:21:20 · 7:22/km · HR 148/162 max
   - TE: AEROBIC_BASE · aerobic 3.3 · anaerobic 0
   - MS: 11.00k @ 7:23 148bpm 0.80m 168spm 278ms 7.9cm 239w
-  - 🧠 The 11 km run stayed solidly in the easy‑pace zone for most of the effort (average rep HR 133–151 bpm and pace 7:40–7:24) before a modest progression in the final two reps (7:16 → 6:48 km with HR climbing to 158 bpm), which aligns with the intended gradual pick‑up rather than a hard VO₂max stimulus. Your aerobic training effect of 3.3 and the steady drop in stamina from 100 % to 79 % reflect a typical endurance load (load ≈ 106 AU) without any anaerobic contribution, as expected for a Saturday LSD. Morning readiness was “Moderate” (score 56), so the session was appropriate for the day’s recovery status, and the post‑run dip to 36 simply records the acute fatigue from the workout.
+  - 🧠 The 11 km Thursday session showed a gradual pace drop from 7:40 /km to 6:48 /km, ending 30–45 s/km slower than the prescribed VO2max interval range of 4:50‑5:15 /km, and the rep‑by‑rep HR rose only to 158 bpm—well below the ≤172 bpm cap, which aligns with the training‑effect report of zero anaerobic benefit. Stamina fell from 100 % to 79 % and body‑battery dropped 15 points, indicating a noticeable physiological toll despite the modest intensity. Morning readiness was only moderate (score
 
 ## Load & Trends
 
