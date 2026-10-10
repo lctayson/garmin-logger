@@ -193,6 +193,21 @@ class MainSetTests(unittest.TestCase):
         self.assertIn("1.22k", result)
         self.assertNotIn("0.1", result)  # the 20s stride's distance must not leak into the total
 
+    def test_includes_tiny_trailing_partial_lap_in_main_set_distance(self):
+        # Garmin can append a final GPS remainder (e.g. 0:11 / 0.03 km) to
+        # a continuous run. It must not be discarded as a short-rep group.
+        columns = ["step_type", "time", "distance", "avg_hr", "avg_run_cadence",
+                   "stride_length", "avg_ground_contact_time", "avg_vertical_oscillation", "avg_power",
+                   "workout_step_index"]
+        data = [
+            ["INTERVAL", "7:00", 1.0, 145, 168, 0.8, 278, 7.9, 239, None],
+            ["INTERVAL", "7:00", 1.0, 148, 168, 0.8, 278, 7.9, 239, None],
+            ["INTERVAL", "0:11", 0.03, 150, 172, 0.91, 264, 8.3, 266, None],
+        ]
+        result = _main_set_line(self._splits(columns, data))
+        self.assertIsNotNone(result)
+        self.assertIn("2.03k", result)
+
     def test_none_for_continuous_run_without_intervals(self):
         act = self._splits(["step_type", "time", "distance"], [["ACTIVE", "30:00", 6.0]])
         self.assertIsNone(_main_set_line(act))
