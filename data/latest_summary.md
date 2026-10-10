@@ -15,7 +15,7 @@
 - **Malolos Running** — 11.03km · 1:21:20 · 7:22/km · HR 148/162 max
   - TE: AEROBIC_BASE · aerobic 3.3 · anaerobic 0
   - MS: 11.00k @ 7:23 148bpm 0.80m 168spm 278ms 7.9cm 239w
-  - 🧠 The 11 km Thursday session showed a gradual pace drop from 7:40 /km to 6:48 /km, ending 30–45 s/km slower than the prescribed VO2max interval range of 4:50‑5:15 /km, and the rep‑by‑rep HR rose only to 158 bpm—well below the ≤172 bpm cap, which aligns with the training‑effect report of zero anaerobic benefit. Stamina fell from 100 % to 79 % and body‑battery dropped 15 points, indicating a noticeable physiological toll despite the modest intensity. Morning readiness was only moderate (score
+  - 🧠 The 11 km run stayed solidly in the Easy aerobic zone for the first eight reps (7:41 – 7:24 min/km, HR 133‑151 bpm) and only the final three reps dropped into the upper‑easy/sub‑threshold range (6:48 – 7:10 min/km, HR climbing to 158 bpm), showing a clear negative‑split progression but limited true VO₂max stimulus (anaerobic effect 0.0). Stamina fell from 100 % to 79 % and body‑battery dropped 15 points, while the training load of 106 AU and aerobic effect of 3.3 are consistent with a moderate‑intensity long run in the bridge phase. Your morning readiness was Moderate (score 56); the post‑run drop to 36 reflects the acute load but does not indicate inadequate recovery for tomorrow’s planned strength day.
 
 ## Load & Trends
 
