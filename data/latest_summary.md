@@ -9,7 +9,7 @@
 - **Recovery time:** 8h
 - ⚠️ **Limiter:** Sleep Score (38%)
 - **Also soft:** Stress History, Sleep History
-- 🧠 Your usual Sunday is a 6 km easy run (≈6:50‑7:20 / km) with 6‑8 × 10‑s hill sprints, staying ≤150 bpm. With a readiness score of 33 (low) driven by only 5.5 h of sleep, keep the day ultra‑light: run 3‑4 km at an easy 7:10‑7:45 / km, stay ≤145 bpm, and skip the hill sprints entirely. That gives the nervous system a chance to recover while still maintaining a bit of movement for circulation. If you feel any lingering fatigue, stop early and treat it as a rest day.
+- 🧠 Your usual Sunday is a light recovery run with a few short hill sprints. Your readiness score is low (33) and you only got 5.5 h of sleep, so keep today truly easy: run **4 km at ≤145 bpm** (or simply a gentle jog for the same time) and **skip the hill sprints**. If you feel any fatigue during the jog, stop and add an extra hour of rest instead.
 
 ## Latest Activity
 
