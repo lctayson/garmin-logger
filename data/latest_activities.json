@@ -537,7 +537,7 @@
         ]
       },
       "lap_count": 12,
-      "ai_analysis": "The 11 km run progressed from a 7:40 /km pace with 133 bpm HR in the first rep to a 6:48 /km pace with 158 bpm HR in the final rep, showing a smooth negative‑split pattern and a modest rise in cardiovascular strain that stayed within the easy‑aerobic to low‑threshold zone. The overall training effect (aerobic 3.3, no anaerobic) matches the intended LSD focus of the bridge phase, and the load of 106 AU is well within today’s capacity. Your morning readiness was moderate (score 56), and while the post‑run snapshot fell to 36, the drop is expected after a 1 h 21 min effort and does not indicate a problem on its own. No red flags appear; keep using progressive paces on long runs to maintain aerobic base without adding unnecessary anaerobic stress.",
+      "ai_analysis": "The 11‑rep main set shows a steady negative‑split progression from 7:41 /km to 6:48 /km, with average rep pace (7:23 /km) comfortably inside the Saturday easy‑run window (6:45‑7:20 /km) and HR climbing from 133 bpm to 158 bpm—only the last two reps edge above the EZ HR cap of 150 bpm but remain well under the Thursday hard‑rep limit of 172 bpm. The aerobic training effect of 3.3 AEROBIC_BASE and zero anaerobic contribution align with the intended easy‑run stimulus, and the overall average pace (7:22 /km) matches the prescribed LSD intensity. A morning readiness score of 56 (moderate) combined with an acute load of 414 AU before",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
