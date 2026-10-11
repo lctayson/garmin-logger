@@ -44,7 +44,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "Your readiness is low (score 33) and you only got 5½ h of sleep, so today’s “recovery” run would be more stress than benefit. Skip the scheduled 6 km EZ + hill‑sprint workout and take a true rest day – 10 min of light mobility/foam‑rolling and a short, easy 2–3 km jog (HR < 145 bpm, pace ≈ 7:45–8:10 /km) only if you feel you can’t stay completely still. This will protect your sleep debt and let the low HRV recover without adding unnecessary cardiac load.",
+    "ai_analysis": "**Today’s plan (Sunday = Recovery Run + hill sprints) should be trimmed.** Your readiness score is low (33) driven by only 5½ h of sleep, even though HRV and ACWR are fine. Run an easy 4 km at ≤145 bpm (≈7:20–7:45 / km) and skip the hill‑sprint bursts—treat it as a pure active‑recovery jog. This gives you the circulation benefit without adding cardio stress while you catch up on rest.",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
