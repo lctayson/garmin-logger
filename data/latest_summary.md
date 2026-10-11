@@ -22,7 +22,7 @@
 - **BHM W3: Recovery Run** — 6.03km · 48:10 · 8:00/km · HR 142/154 max
   - TE: AEROBIC_BASE · aerobic 2.4 · anaerobic 0
   - MS: 6.03k @ 7:59 142bpm 0.75m 167spm 284ms 7.7cm 221w
-  - 🧠 The six easy reps stayed within the prescribed easy‑aerobic range (7:45–8:09 min/km, HR 127–149 bpm) and produced no anaerobic stimulus, as expected for a recovery run. However, the gradual HR rise across reps and the 9‑point stamina drop (100 → 91) suggest the session was taxing relative to your low readiness (score 33, sleep 57) and may have edged toward the upper limit of the easy zone. Considering the modest load (≈44 AU) and the negative performance condition (‑5.9 %), you’d likely benefit from a slightly slower pace (≈8:15 min/km) or a shorter distance today to preserve recovery for Thursday’s VO2max work.
+  - 🧠 The six easy‑pace reps stayed comfortably under the EZ HR cap (final rep 149 bpm) and showed a modest upward HR trend, confirming that the session delivered the intended low‑intensity stimulus (training‑effect AEROBIC_BASE = 2.4, anaerobic = 0). Pace drifted between 7:45 /km and 8:09 /km, noticeably slower than the usual EZ target of 6:50‑7:20 /km, which aligns with the low morning readiness score (33 – Low) and the -6 % body‑battery impact. Stamina dipped to 91 % by the end, but the session’s modest load (43.6) and lack of anaerobic contribution are appropriate for a recovery run in the bridge phase.
 
 ## Load & Trends
 
