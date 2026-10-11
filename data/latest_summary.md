@@ -10,12 +10,19 @@
 - ⚠️ **Limiter:** Sleep Score (38%)
 - **Also soft:** Stress History, Sleep History
 
+## Next Session
+- **Planned:** Mon, Oct 12 — Strength A
+- **Recommendation:** Proceed as planned
+- **Reason:** limited sleep (5.5h).
+- **Action:** Follow the planned session, using normal effort-based adjustments and warm up before deciding on intensity.
+- *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
+
 ## Today's Workout
 
 - **Malolos Running** — 6.03km · 48:10 · 8:00/km · HR 142/154 max
   - TE: AEROBIC_BASE · aerobic 2.4 · anaerobic 0
   - MS: 6.03k @ 7:59 142bpm 0.75m 167spm 284ms 7.7cm 221w
-  - 🧠 The six‑rep “interval” portion stayed firmly in easy‑run territory, with rep paces ranging from 7:45 to 8:09 /km and average HR climbing from 127 bpm early to 149 bpm at the end, staying under the EZ cap of 150 bpm. Stamina slipped from 100 % to a low of 91 % and the performance‑condition metric was –6 pts, reflecting the modest fatigue that aligns with your low morning readiness score (33 / Low). Because the session was prescribed as an easy effort, the HR drift does not indicate a missed intensity target, but it does flag that cumulative fatigue is beginning to affect even low‑intensity work. Maintaining a relaxed pace and ensuring better sleep tonight will help keep the next hard session (Thursday VO2max) effective.
+  - 🧠 The six work reps hovered around 8 min/km (7:45–8:09), keeping you solidly in the recovery/easy zone and well below the ≤150 bpm EZ HR cap (rep HR rose gradually from 127 to 149 bpm). With an average rep pace of exactly 8:00 min/km and an aerobic training effect of 2.4 AEROBIC_BASE, the session delivered the intended low‑intensity stimulus and no anaerobic benefit, as expected for a Wednesday easy run. Your morning readiness score of 33 (Low) and sleep score of 57 suggest you’re still paying the cost of recent fatigue, so prioritize recovery or a very easy effort for the remainder of today.
 
 ## Load & Trends
 
