@@ -763,7 +763,7 @@ def _next_session_lines(metrics: dict[str, Any], data_dir: str | None = None) ->
     if not session:
         return []
     lowered_session = session.lower()
-    quality = any(word in lowered_session for word in ("threshold", "vo2", "interval", "tempo", "time trial", "test", "race"))
+    quality = any(word in lowered_session for word in ("threshold", "vo2", "interval", "tempo", "time trial", "test", "race")) or bool(re.search(r"\\b\\d+\\s*[x×]\\s*\\d+", lowered_session))
     readiness = metrics.get("readiness") or {}
     summary = metrics.get("summary") or {}
     score = _num(readiness.get("score"))
