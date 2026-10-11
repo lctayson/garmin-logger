@@ -30,3 +30,14 @@ def resolve_timezone(cli_timezone=None):
 def get_timezone(cli_timezone=None):
     """Return the effective timezone as a ZoneInfo object."""
     return ZoneInfo(resolve_timezone(cli_timezone))
+
+
+# Heading of the active dated plan in training_context.md. Change this once when
+# switching training blocks, or override with GARMIN_TRAINING_PLAN_HEADING.
+TRAINING_PLAN_HEADING = "# BHM 2027 Training Plan"
+TRAINING_PLAN_HEADING_ENV_VAR = "GARMIN_TRAINING_PLAN_HEADING"
+
+
+def resolve_training_plan_heading():
+    """Return the active plan heading (environment override takes precedence)."""
+    return os.getenv(TRAINING_PLAN_HEADING_ENV_VAR, TRAINING_PLAN_HEADING).strip()
