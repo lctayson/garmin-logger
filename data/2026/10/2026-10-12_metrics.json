@@ -44,7 +44,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "Your readiness is moderate but all the key markers (HRV, sleep score, ACWR 0.8) are solid, and Monday is a pure strength day with no running stress. Stick to the scheduled Strength A (hip‑extension/power) session at your usual volume and load; just keep an eye on any unexpected fatigue during the lifts. If you feel any sharp soreness, cut the final set, but otherwise proceed as planned.",
+    "ai_analysis": "Readiness is moderate (score 60) but all the underlying metrics are solid—sleep score 85, HRV at 48 ms (very good), acwr 0.8 (optimal) and no accumulated stress flags. For today’s “Strength A” (power/hip‑extension) you can run the full session as programmed; just stay at the usual moderate load (avoid any heavy max‑effort lifts) and finish with the standard mobility work. No need to cut or skip.",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
