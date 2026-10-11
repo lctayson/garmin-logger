@@ -9,7 +9,7 @@
 - **Recovery time:** 0h
 - ⚠️ **Limiter:** Sleep History (39%)
 - **Also soft:** Stress History
-- 🧠 Your readiness is modest (score 60) but all the key recovery markers are solid—resting HR 60, HRV 48 ms (100 % of your 7‑day norm), good sleep quality, and an optimal ACWR (0.8). Since today’s planned work is the non‑cardio “Strength A” (hip‑extension/power) and it isn’t a heavy systemic load, there’s no reason to back off. Do the normal strength routine at the usual volume/intensity; just stay attentive to any unusual fatigue during the lifts, but otherwise proceed as planned.
+- 🧠 Your readiness is moderate (score 60) but the objective markers are solid – HRV 48 ms (100 % of target), resting HR 60, sleep 7 h 27 min (sleep‑score 85) and ACWR 0.8 (optimal). That’s enough to run the regular **Monday Strength A** session as programmed; just keep the usual load and stop short of failure if you feel any early fatigue. No extra rest or modification is needed today.
 
 ## Next Session
 - **Planned:** Tue, Oct 13 — 7k as 3×8min SUT @ 5:25-5:35, 2min jog, ≤168
