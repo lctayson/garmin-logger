@@ -9,7 +9,7 @@
 - **Recovery time:** 8h
 - ⚠️ **Limiter:** Sleep Score (38%)
 - **Also soft:** Stress History, Sleep History
-- 🧠 Your readiness is low (score 33) and sleep was short, but the overall recovery balance and ACWR are fine. Keep today’s “Recovery Run” but trim it to a very easy 3‑4 km jog, stay well under the 150 bpm cap (aim ≤145 bpm), and skip the hill sprints. This will promote circulation without adding stress, and you can add a brief walk‑cool‑down if you still feel sluggish.
+- 🧠 Your Sunday slot is the “recovery run + hill sprints.” Readiness is low (score 33) mainly because you only got 5.5 h of sleep and a poor sleep‑score, even though HRV and ACWR look fine. Do a shortened, completely easy run ≈ 4 km at ≤145 bpm (≈ 7:20 min/km) and skip the hill sprints—just focus on relaxed pacing and good breathing. If you feel any fatigue during the jog, stop and treat it as a rest day.
 
 ## Latest Activity
 
