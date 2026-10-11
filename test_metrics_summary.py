@@ -11,6 +11,7 @@ from render_summary_md import (
     _dated_activity_names,
     _find_dated_activity_file,
     _main_set_line,
+    _planned_session,
     _strip_location_prefix,
     _week_range_label,
     render,
@@ -585,12 +586,12 @@ class NextSessionRecommendationTests(unittest.TestCase):
         payload["date"] = "2026-09-21"  # Monday; next session is Tuesday threshold
         text = render(payload, None)
         self.assertIn("## Next Session", text)
-        self.assertIn("Tue, Sep 22 — Threshold session", text)
+        self.assertIn("Tue, Sep 22 — 5k EZ @ 7:05-7:35, ≤150", text)
         self.assertIn("Recommendation:** Proceed as planned", text)
 
     def test_multiple_recovery_warnings_adjust_quality_session(self):
         payload = _payload()
-        payload["date"] = "2026-09-21"
+        payload["date"] = "2026-10-07"  # Wednesday; Thursday is the planned quality session
         payload["readiness"]["score"] = 20
         payload["readiness"]["sleep_hours"] = 4.5
         payload["readiness"]["recovery_hours"] = 30
@@ -608,13 +609,29 @@ class NextSessionRecommendationTests(unittest.TestCase):
 
     def test_rest_day_session_does_not_get_quality_cancellation(self):
         payload = _payload()
-        payload["date"] = "2026-09-23"  # Wednesday; Thursday is quality
+        payload["date"] = "2026-10-07"  # Wednesday; Thursday is quality
         payload["readiness"]["score"] = 20
         payload["readiness"]["sleep_hours"] = 4.5
         payload["readiness"]["recovery_hours"] = 30
         text = render(payload, None)
         self.assertIn("Thu, Sep 24 — VO2max intervals", text)
         self.assertIn("Recommendation:** Prioritize recovery", text)
+
+
+    def test_plan_heading_is_supplied_by_central_configuration(self):
+        from config import resolve_training_plan_heading
+        from datetime import date
+        from pathlib import Path
+        context = Path(__file__).with_name("training_context.md").read_text(encoding="utf-8")
+        self.assertEqual(
+            _planned_session(context, date(2026, 9, 22), resolve_training_plan_heading()),
+            "5k EZ @ 7:05-7:35, ≤150",
+        )
+
+    def test_unknown_plan_heading_disables_recommendation_instead_of_guessing(self):
+        from datetime import date
+        context = "# Other plan\\n## W1 · Sep 21 · 32 km\\n- **Tue** 5k easy"
+        self.assertIsNone(_planned_session(context, date(2026, 9, 22), "# BHM 2027 Training Plan"))
 
 
 if __name__ == "__main__":
