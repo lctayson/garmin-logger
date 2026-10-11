@@ -697,27 +697,73 @@ def _today_lines(metrics_date: Any, activities_payload: dict[str, Any] | None) -
 
 
 
-_WEEKLY_PLAN = {
-    0: ("Strength A (power/hip extension)", False),
-    1: ("Threshold session (sub-threshold intervals)", True),
-    2: ("Easy run + strides", False),
-    3: ("VO2max intervals", True),
-    4: ("Core/hip stability strength; no running", False),
-    5: ("Long run, easy pace", False),
-    6: ("Recovery run, easy pace with hill sprints", False),
-}
-
-
-def _next_session_lines(metrics: dict[str, Any]) -> list[str]:
-    """Give conservative, explainable guidance for the next calendar day's planned session."""
+def _planned_session(context_text: str, next_day: Any, plan_heading: str) -> str | None:
+    """Find the next day's prescription in the configured dated-plan section."""
     from datetime import date, timedelta
+
+    lines = context_text.splitlines()
+    try:
+        heading_index = lines.index(plan_heading)
+    except ValueError:
+        return None
+
+    section_lines = []
+    for line in lines[heading_index + 1:]:
+        if line.startswith("# ") and not line.startswith("## "):
+            break
+        section_lines.append(line)
+
+    week_pattern = re.compile(r"^## W\\d+\\s*[·|]\\s*([A-Za-z]{3})\\s+(\\d{1,2})\\b")
+    day_pattern = re.compile(r"^- \\*\\*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\\*\\*\\s+(.+)$")
+    for i, line in enumerate(section_lines):
+        match = week_pattern.match(line)
+        if not match:
+            continue
+        month_text, day_text = match.groups()
+        week_start = None
+        for year in (next_day.year - 1, next_day.year, next_day.year + 1):
+            try:
+                candidate = date(year, __import__("datetime").datetime.strptime(month_text, "%b").month, int(day_text))
+            except ValueError:
+                continue
+            if candidate <= next_day <= candidate + timedelta(days=6):
+                week_start = candidate
+                break
+        if week_start is None:
+            continue
+        for day_line in section_lines[i + 1:]:
+            if day_line.startswith("## W"):
+                break
+            day_match = day_pattern.match(day_line)
+            if not day_match:
+                continue
+            weekday, prescription = day_match.groups()
+            if weekday.lower() == next_day.strftime("%a").lower():
+                return prescription.strip()
+    return None
+
+
+def _next_session_lines(metrics: dict[str, Any], data_dir: str | None = None) -> list[str]:
+    """Give conservative, explainable guidance based on the configured training plan."""
+    from datetime import date, timedelta
+    from pathlib import Path
+    from config import resolve_training_plan_heading
 
     try:
         today = date.fromisoformat(str(metrics.get("date", "")))
     except ValueError:
         return []
     next_day = today + timedelta(days=1)
-    session, quality = _WEEKLY_PLAN[next_day.weekday()]
+    context_path = Path(__file__).with_name("training_context.md")
+    try:
+        context_text = context_path.read_text(encoding="utf-8")
+    except OSError:
+        return []
+    session = _planned_session(context_text, next_day, resolve_training_plan_heading())
+    if not session:
+        return []
+    lowered_session = session.lower()
+    quality = any(word in lowered_session for word in ("threshold", "vo2", "interval", "tempo", "time trial", "test", "race"))
     readiness = metrics.get("readiness") or {}
     summary = metrics.get("summary") or {}
     score = _num(readiness.get("score"))
@@ -751,7 +797,7 @@ def _next_session_lines(metrics: dict[str, Any]) -> list[str]:
         action = "Follow the planned session, using normal effort-based adjustments and warm up before deciding on intensity."
     lines = [
         "## Next Session",
-        f"- **Planned:** {next_day.strftime('%a, %b %-d')} — {session}",
+        f"- **Planned:** {next_day.strftime('%a, %b %d').replace(' 0', ' ')} — {session}",
         f"- **Recommendation:** {decision}",
     ]
     if warnings:
@@ -772,7 +818,7 @@ def render(metrics: dict[str, Any], activities: dict[str, Any] | None, data_dir:
     out: list[str] = [f"# Daily Check — {date}".rstrip(), ""]
     out.extend(_readiness_lines(metrics, summary))
     out.append("")
-    out.extend(_next_session_lines(metrics))
+    out.extend(_next_session_lines(metrics, data_dir))
     out.append("")
     out.extend(_today_lines(date, activities))
     out.append("")
