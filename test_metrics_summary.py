@@ -579,5 +579,43 @@ class RenderTests(unittest.TestCase):
         self.assertNotIn("\n\n\n", text)
 
 
+class NextSessionRecommendationTests(unittest.TestCase):
+    def test_next_day_session_matches_weekly_schedule(self):
+        payload = _payload()
+        payload["date"] = "2026-09-21"  # Monday; next session is Tuesday threshold
+        text = render(payload, None)
+        self.assertIn("## Next Session", text)
+        self.assertIn("Tue, Sep 22 — Threshold session", text)
+        self.assertIn("Recommendation:** Proceed as planned", text)
+
+    def test_multiple_recovery_warnings_adjust_quality_session(self):
+        payload = _payload()
+        payload["date"] = "2026-09-21"
+        payload["readiness"]["score"] = 20
+        payload["readiness"]["sleep_hours"] = 4.5
+        payload["readiness"]["recovery_hours"] = 30
+        text = render(payload, None)
+        self.assertIn("Recommendation:** Prioritize recovery", text)
+        self.assertIn("very low readiness (20/100)", text)
+        self.assertIn("short sleep (4.5h)", text)
+
+    def test_one_low_readiness_signal_alone_does_not_cancel_quality(self):
+        payload = _payload()
+        payload["date"] = "2026-09-21"
+        payload["readiness"]["score"] = 20
+        text = render(payload, None)
+        self.assertIn("Recommendation:** Proceed as planned", text)
+
+    def test_rest_day_session_does_not_get_quality_cancellation(self):
+        payload = _payload()
+        payload["date"] = "2026-09-23"  # Wednesday; Thursday is quality
+        payload["readiness"]["score"] = 20
+        payload["readiness"]["sleep_hours"] = 4.5
+        payload["readiness"]["recovery_hours"] = 30
+        text = render(payload, None)
+        self.assertIn("Thu, Sep 24 — VO2max intervals", text)
+        self.assertIn("Recommendation:** Prioritize recovery", text)
+
+
 if __name__ == "__main__":
     unittest.main()
