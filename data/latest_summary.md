@@ -9,7 +9,7 @@
 - **Recovery time:** 8h
 - ⚠️ **Limiter:** Sleep Score (38%)
 - **Also soft:** Stress History, Sleep History
-- 🧠 Your readiness is low (score 33) and you only got 5½ h of sleep, so today’s “recovery run + hill sprints” is too demanding. Keep it strictly easy: run 4‑5 km at ~7:00–7:30 min/km, stay ≤145 bpm, and skip the hill sprints (or replace them with a few gentle strides if you feel OK). If you feel any lingering fatigue, just rest and treat today as a full recovery day.
+- 🧠 Your readiness is low (score 33) and you only got 5½ h of sleep, so today’s “recovery” run would be more stress than benefit. Skip the scheduled 6 km EZ + hill‑sprint workout and take a true rest day – 10 min of light mobility/foam‑rolling and a short, easy 2–3 km jog (HR < 145 bpm, pace ≈ 7:45–8:10 /km) only if you feel you can’t stay completely still. This will protect your sleep debt and let the low HRV recover without adding unnecessary cardiac load.
 
 ## Latest Activity
 
