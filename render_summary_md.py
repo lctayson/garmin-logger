@@ -723,7 +723,7 @@ def _planned_session(context_text: str, next_day: Any, plan_heading: str) -> str
         week_start = None
         for year in (next_day.year - 1, next_day.year, next_day.year + 1):
             try:
-                candidate = date(year, __import__("datetime").datetime.strptime(month_text, "%b").month, int(day_text))
+                candidate = date(year, datetime.strptime(month_text, "%b").month, int(day_text))
             except ValueError:
                 continue
             if candidate <= next_day <= candidate + timedelta(days=6):
