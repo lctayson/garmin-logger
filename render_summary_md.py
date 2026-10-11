@@ -774,7 +774,7 @@ def render(metrics: dict[str, Any], activities: dict[str, Any] | None, data_dir:
     out.append("")
     out.extend(_next_session_lines(metrics))
     out.append("")
-    out.extend(_today_lines(date, activities)
+    out.extend(_today_lines(date, activities))
     out.append("")
 
     load_lines = _load_lines(metrics, summary)
