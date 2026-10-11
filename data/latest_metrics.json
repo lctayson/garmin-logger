@@ -1,13 +1,63 @@
 {
   "date": "2026-10-12",
   "readiness": {
+    "score": 60,
+    "level": "Moderate",
+    "feedback": "Good Sleep Last Night",
     "resting_hr": 60,
-    "ai_analysis": "Your resting HR is a solid 60 bpm, showing good recovery and no lingering fatigue. With no recent training load flagged, there’s no reason to hold back. Go ahead with today’s Strength A (power/hip‑extension) session exactly as planned.",
+    "hrv_last_night_avg_ms": 48.0,
+    "hrv_7_day_avg_ms": 51.0,
+    "hrv_status": "BALANCED",
+    "sleep_hours": 7.45,
+    "sleep_hours_including_previous_day_nap": 7.45,
+    "sleep_score": 85,
+    "recovery_hours": 0.0,
+    "hrv_baseline": {
+      "lowUpper": 45.0,
+      "balancedLow": 47.0,
+      "balancedUpper": 56.0,
+      "markerValue": 0.47221375
+    },
+    "factor_details": {
+      "sleep_score": {
+        "percent": 80,
+        "feedback": "Good"
+      },
+      "sleep_history": {
+        "percent": 39,
+        "feedback": "Poor"
+      },
+      "recovery_time": {
+        "percent": 99,
+        "feedback": "Good"
+      },
+      "acwr": {
+        "percent": 98,
+        "feedback": "Good"
+      },
+      "hrv": {
+        "percent": 100,
+        "feedback": "Very Good"
+      },
+      "stress_history": {
+        "percent": 55,
+        "feedback": "Moderate"
+      }
+    },
+    "ai_analysis": "Your readiness is modest (score 60) but all the key recovery markers are solid—resting HR 60, HRV 48 ms (100 % of your 7‑day norm), good sleep quality, and an optimal ACWR (0.8). Since today’s planned work is the non‑cardio “Strength A” (hip‑extension/power) and it isn’t a heavy systemic load, there’s no reason to back off. Do the normal strength routine at the usual volume/intensity; just stay attentive to any unusual fatigue during the lifts, but otherwise proceed as planned.",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
+  "health": {
+    "steps": 15
+  },
   "sleep": {
+    "deep_h": 0.85,
+    "light_h": 4.9,
+    "rem_h": 1.7,
+    "awake_h": 0.3,
     "baseline_h": 7.0,
     "need_h": 8.0,
+    "next_need_h": 7.0,
     "feedback": "Highly Increased",
     "training_feedback": "Chronic",
     "sleep_history_adjustment": "Increasing",
@@ -15,11 +65,42 @@
     "nap_adjustment": "No Change",
     "previous_day_nap": null
   },
+  "load": {
+    "acute_load": 420,
+    "chronic_load": 505,
+    "acwr": 0.8,
+    "acwr_percent": 33,
+    "acwr_status": "Optimal",
+    "chronic_load_range": {
+      "min": 404.0,
+      "max": 757.5
+    },
+    "training_status": "Maintaining 2"
+  },
+  "vo2_max": 44.0,
   "race_predictions": {
     "5k": "27:36",
     "10k": "57:35",
     "half_marathon": "2:12:39",
     "marathon": "4:56:30"
+  },
+  "load_balance": {
+    "aerobic_low": 861.6,
+    "aerobic_low_target": [
+      303,
+      822
+    ],
+    "aerobic_high": 1093.3,
+    "aerobic_high_target": [
+      649,
+      1169
+    ],
+    "anaerobic": 43.3,
+    "anaerobic_target": [
+      173,
+      519
+    ],
+    "load_focus": "Anaerobic Shortage"
   },
   "running_tolerance": {
     "acute_impact_load": 38.9,
@@ -146,6 +227,14 @@
         }
       ]
     }
+  },
+  "heat_acclimation": {
+    "percentage": 100,
+    "trend": "Acclimatized"
+  },
+  "altitude_acclimation": {
+    "percentage": 0,
+    "trend": null
   },
   "trend_recent_daily": {
     "columns": [
@@ -327,16 +416,16 @@
       [
         "2026-10-12",
         60,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        48.0,
+        51.0,
+        7.45,
+        85,
+        44.0,
+        "Maintaining 2",
+        420,
+        505,
+        0.8,
+        "Optimal",
         0,
         0.0,
         0.0,
@@ -723,16 +812,16 @@
         "2026-10-06",
         "2026-10-12",
         60,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        48.0,
+        51.0,
+        7.45,
+        85,
+        44.0,
+        "Maintaining 2",
+        420,
+        505,
+        0.8,
+        "Optimal",
         6,
         4.87,
         37.14,
@@ -807,9 +896,9 @@
       ],
       [
         "2026-10-12",
-        28,
+        63,
         0,
-        41,
+        77,
         14
       ]
     ]

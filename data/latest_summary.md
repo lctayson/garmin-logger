@@ -1,9 +1,15 @@
 # Daily Check — 2026-10-12
 
-## Readiness: -/100
+## Readiness: 60/100 (Moderate)
+> Good Sleep Last Night
 
 - **RHR:** 60 bpm
-- 🧠 Your resting HR is a solid 60 bpm, showing good recovery and no lingering fatigue. With no recent training load flagged, there’s no reason to hold back. Go ahead with today’s Strength A (power/hip‑extension) session exactly as planned.
+- **HRV:** 48ms (7d avg: 51ms)
+- **Sleep:** 7h27 (score 85)
+- **Recovery time:** 0h
+- ⚠️ **Limiter:** Sleep History (39%)
+- **Also soft:** Stress History
+- 🧠 Your readiness is modest (score 60) but all the key recovery markers are solid—resting HR 60, HRV 48 ms (100 % of your 7‑day norm), good sleep quality, and an optimal ACWR (0.8). Since today’s planned work is the non‑cardio “Strength A” (hip‑extension/power) and it isn’t a heavy systemic load, there’s no reason to back off. Do the normal strength routine at the usual volume/intensity; just stay attentive to any unusual fatigue during the lifts, but otherwise proceed as planned.
 
 ## Next Session
 - **Planned:** Tue, Oct 13 — 7k as 3×8min SUT @ 5:25-5:35, 2min jog, ≤168
@@ -22,9 +28,14 @@ _Most recent activity (2026-10-11):_
 
 ## Load & Trends
 
+- **ACWR:** 0.8 (Optimal) — acute 420 / chronic 505 (chronic range 404–757.5)
 - **7-day volume:** 37.14km vs 28-day avg 34.7km (+7%)
 - **Running tolerance:** 62.0% (Medium) — 37.1km of 62.7km weekly cap, acute impact load 38.9
-- ⚠️ **Sleep (7d avg):** 6h02, 6/7 nights below need, trending down
+- ⚠️ **Aerobic Low:** 861.6 (target 303–822 — +40 over)
+- **Aerobic High:** 1093.3 (target 649–1169 — in range)
+- ⚠️ **Anaerobic:** 43.3 (target 173–519 — -130 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- ⚠️ **Sleep (7d avg):** 6h14, 7/7 nights below need, trending down
 - ⚠️ **RHR (7d avg):** 57.4, trending up
 - ⚠️ **HRV:** trending down
 
