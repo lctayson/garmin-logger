@@ -9,7 +9,7 @@
 - **Recovery time:** 0h
 - ⚠️ **Limiter:** Sleep History (39%)
 - **Also soft:** Stress History
-- 🧠 Your readiness is moderate (score 60) but the objective markers are solid – HRV 48 ms (100 % of target), resting HR 60, sleep 7 h 27 min (sleep‑score 85) and ACWR 0.8 (optimal). That’s enough to run the regular **Monday Strength A** session as programmed; just keep the usual load and stop short of failure if you feel any early fatigue. No extra rest or modification is needed today.
+- 🧠 Your readiness is moderate but all the key markers (HRV, sleep score, ACWR 0.8) are solid, and Monday is a pure strength day with no running stress. Stick to the scheduled Strength A (hip‑extension/power) session at your usual volume and load; just keep an eye on any unexpected fatigue during the lifts. If you feel any sharp soreness, cut the final set, but otherwise proceed as planned.
 
 ## Next Session
 - **Planned:** Tue, Oct 13 — 7k as 3×8min SUT @ 5:25-5:35, 2min jog, ≤168

@@ -44,11 +44,11 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "Your readiness is moderate (score 60) but the objective markers are solid – HRV 48 ms (100 % of target), resting HR 60, sleep 7 h 27 min (sleep‑score 85) and ACWR 0.8 (optimal). That’s enough to run the regular **Monday Strength A** session as programmed; just keep the usual load and stop short of failure if you feel any early fatigue. No extra rest or modification is needed today.",
+    "ai_analysis": "Your readiness is moderate but all the key markers (HRV, sleep score, ACWR 0.8) are solid, and Monday is a pure strength day with no running stress. Stick to the scheduled Strength A (hip‑extension/power) session at your usual volume and load; just keep an eye on any unexpected fatigue during the lifts. If you feel any sharp soreness, cut the final set, but otherwise proceed as planned.",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
-    "steps": 15
+    "steps": 22
   },
   "sleep": {
     "deep_h": 0.85,
@@ -897,7 +897,7 @@
       [
         "2026-10-12",
         63,
-        2,
+        3,
         77,
         14
       ]
