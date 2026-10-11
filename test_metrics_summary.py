@@ -11,6 +11,7 @@ from render_summary_md import (
     _dated_activity_names,
     _find_dated_activity_file,
     _main_set_line,
+    _planned_session,
     _strip_location_prefix,
     _week_range_label,
     render,
@@ -577,6 +578,60 @@ class RenderTests(unittest.TestCase):
     def test_no_triple_blank_lines(self):
         text = render(_payload(), {"date": "2026-09-17", "activities": []})
         self.assertNotIn("\n\n\n", text)
+
+
+class NextSessionRecommendationTests(unittest.TestCase):
+    def test_next_day_session_matches_weekly_schedule(self):
+        payload = _payload()
+        payload["date"] = "2026-09-21"  # Monday; next session comes from that week's plan
+        text = render(payload, None)
+        self.assertIn("## Next Session", text)
+        self.assertIn("Tue, Sep 22 — 5k EZ @ 7:05-7:35, ≤150", text)
+        self.assertIn("Recommendation:** Proceed as planned", text)
+
+    def test_multiple_recovery_warnings_adjust_quality_session(self):
+        payload = _payload()
+        payload["date"] = "2026-10-07"  # Wednesday; Thursday is the planned quality session
+        payload["readiness"]["score"] = 20
+        payload["readiness"]["sleep_hours"] = 4.5
+        payload["readiness"]["recovery_hours"] = 30
+        text = render(payload, None)
+        self.assertIn("Recommendation:** Prioritize recovery", text)
+        self.assertIn("very low readiness (20/100)", text)
+        self.assertIn("short sleep (4.5h)", text)
+
+    def test_one_low_readiness_signal_alone_does_not_cancel_quality(self):
+        payload = _payload()
+        payload["date"] = "2026-09-21"
+        payload["readiness"]["score"] = 20
+        text = render(payload, None)
+        self.assertIn("Recommendation:** Proceed as planned", text)
+
+    def test_rest_day_session_does_not_get_quality_cancellation(self):
+        payload = _payload()
+        payload["date"] = "2026-10-07"  # Wednesday; Thursday is quality
+        payload["readiness"]["score"] = 20
+        payload["readiness"]["sleep_hours"] = 4.5
+        payload["readiness"]["recovery_hours"] = 30
+        text = render(payload, None)
+        self.assertIn("Thu, Oct 8 — 7k as 5×3min @ 5:05-5:12, 2min jog, ≤172", text)
+        self.assertIn("Recommendation:** Prioritize recovery", text)
+
+
+    def test_plan_heading_is_supplied_by_central_configuration(self):
+        from config import resolve_training_plan_heading
+        from datetime import date
+        from pathlib import Path
+        context = Path(__file__).with_name("training_context.md").read_text(encoding="utf-8")
+        self.assertEqual(
+            _planned_session(context, date(2026, 9, 22), resolve_training_plan_heading()),
+            "5k EZ @ 7:05-7:35, ≤150",
+        )
+
+    def test_unknown_plan_heading_disables_recommendation_instead_of_guessing(self):
+        from datetime import date
+        context = "# Other plan\\n## W1 · Sep 21 · 32 km\\n- **Tue** 5k easy"
+        self.assertIsNone(_planned_session(context, date(2026, 9, 22), "# BHM 2027 Training Plan"))
 
 
 if __name__ == "__main__":

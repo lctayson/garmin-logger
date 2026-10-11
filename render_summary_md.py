@@ -696,6 +696,119 @@ def _today_lines(metrics_date: Any, activities_payload: dict[str, Any] | None) -
     return lines
 
 
+
+def _planned_session(context_text: str, next_day: Any, plan_heading: str) -> str | None:
+    """Find the next day's prescription in the configured dated-plan section."""
+    from datetime import date, timedelta
+
+    lines = context_text.splitlines()
+    try:
+        heading_index = lines.index(plan_heading)
+    except ValueError:
+        return None
+
+    section_lines = []
+    for line in lines[heading_index + 1:]:
+        if line.startswith("# ") and not line.startswith("## "):
+            break
+        section_lines.append(line)
+
+    week_pattern = re.compile(r"^## W\d+\s*[·|]\s*([A-Za-z]{3})\s+(\d{1,2})\b")
+    day_pattern = re.compile(r"^- \*\*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\*\*\s+(.+)$")
+    for i, line in enumerate(section_lines):
+        match = week_pattern.match(line)
+        if not match:
+            continue
+        month_text, day_text = match.groups()
+        week_start = None
+        for year in (next_day.year - 1, next_day.year, next_day.year + 1):
+            try:
+                candidate = date(year, datetime.strptime(month_text, "%b").month, int(day_text))
+            except ValueError:
+                continue
+            if candidate <= next_day <= candidate + timedelta(days=6):
+                week_start = candidate
+                break
+        if week_start is None:
+            continue
+        for day_line in section_lines[i + 1:]:
+            if day_line.startswith("## W"):
+                break
+            day_match = day_pattern.match(day_line)
+            if not day_match:
+                continue
+            weekday, prescription = day_match.groups()
+            if weekday.lower() == next_day.strftime("%a").lower():
+                return prescription.strip()
+    return None
+
+
+def _next_session_lines(metrics: dict[str, Any], data_dir: str | None = None) -> list[str]:
+    """Give conservative, explainable guidance based on the configured training plan."""
+    from datetime import date, timedelta
+    from pathlib import Path
+    from config import resolve_training_plan_heading
+
+    try:
+        today = date.fromisoformat(str(metrics.get("date", "")))
+    except ValueError:
+        return []
+    next_day = today + timedelta(days=1)
+    context_path = Path(__file__).with_name("training_context.md")
+    try:
+        context_text = context_path.read_text(encoding="utf-8")
+    except OSError:
+        return []
+    session = _planned_session(context_text, next_day, resolve_training_plan_heading())
+    if not session:
+        return []
+    lowered_session = session.lower()
+    quality = any(word in lowered_session for word in ("threshold", "vo2", "interval", "tempo", "time trial", "test", "race")) or bool(re.search(r"\b\d+\s*[x×]\s*\d+", lowered_session))
+    readiness = metrics.get("readiness") or {}
+    summary = metrics.get("summary") or {}
+    score = _num(readiness.get("score"))
+    if score is None:
+        score = _num(summary.get("readiness", {}).get("score"))
+    sleep = _num(readiness.get("sleep_hours"))
+    recovery = _num(readiness.get("recovery_hours"))
+    warnings: list[str] = []
+    if score is not None and score <= 25:
+        warnings.append(f"very low readiness ({score:g}/100)")
+    if sleep is not None and sleep < 5:
+        warnings.append(f"short sleep ({sleep:.1f}h)")
+    elif sleep is not None and sleep < 6:
+        warnings.append(f"limited sleep ({sleep:.1f}h)")
+    if recovery is not None and recovery >= 36:
+        warnings.append(f"high remaining recovery time ({recovery:g}h)")
+    elif recovery is not None and recovery >= 24:
+        warnings.append(f"elevated remaining recovery time ({recovery:g}h)")
+    load_status = str((metrics.get("load") or {}).get("acwr_status") or "").lower()
+    if load_status in {"high", "very high", "overreaching"}:
+        warnings.append(f"load status is {load_status}")
+
+    if quality and len(warnings) >= 3:
+        decision = "Prioritize recovery"
+        action = "Replace the quality session with rest or a short, very easy run; reassess before rescheduling intensity."
+    elif quality and len(warnings) >= 2:
+        decision = "Adjust the workout"
+        action = "Keep the warm-up easy and shorten the quality set substantially; stop if effort or symptoms are abnormal."
+    else:
+        decision = "Proceed as planned"
+        action = "Follow the planned session, using normal effort-based adjustments and warm up before deciding on intensity."
+    lines = [
+        "## Next Session",
+        f"- **Planned:** {next_day.strftime('%a, %b %d').replace(' 0', ' ')} — {session}",
+        f"- **Recommendation:** {decision}",
+    ]
+    if warnings:
+        lines.append("- **Reason:** " + "; ".join(warnings) + ".")
+    else:
+        lines.append("- **Reason:** Available readiness indicators do not show a combination of major recovery warnings.")
+    lines.append(f"- **Action:** {action}")
+    lines.append("- *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*")
+    return lines
+
+
 def render(metrics: dict[str, Any], activities: dict[str, Any] | None, data_dir: str | None = None) -> str:
     summary = metrics.get("summary")
     if not isinstance(summary, dict):
@@ -704,6 +817,8 @@ def render(metrics: dict[str, Any], activities: dict[str, Any] | None, data_dir:
     date = metrics.get("date", "")
     out: list[str] = [f"# Daily Check — {date}".rstrip(), ""]
     out.extend(_readiness_lines(metrics, summary))
+    out.append("")
+    out.extend(_next_session_lines(metrics, data_dir))
     out.append("")
     out.extend(_today_lines(date, activities))
     out.append("")

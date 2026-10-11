@@ -736,6 +736,19 @@ Status thresholds used by the exporter:
 | `75–100%` | High |
 | `> 100%` | Exceeded |
 
+
+## Active training plan configuration
+
+The daily summary's next-session recommendation reads the next day's prescription
+from the active dated-plan section in `training_context.md`. The section heading
+is centralized in `config.py` as `TRAINING_PLAN_HEADING`, so it only needs to
+be changed in one place when switching training blocks. For deployments that
+prefer environment configuration, set `GARMIN_TRAINING_PLAN_HEADING` to the
+exact Markdown heading instead (for example, `# BHM 2027 Training Plan`).
+
+If the configured heading or a dated prescription cannot be found, the summary
+omits the recommendation rather than guessing a generic weekly schedule.
+
 ## Activity split schema
 
 Splits are normalized into an analysis-friendly order:
