@@ -19,10 +19,10 @@
 
 ## Today's Workout
 
-- **Malolos Running** — 6.03km · 48:10 · 8:00/km · HR 142/154 max
+- **BHM W3: Recovery Run** — 6.03km · 48:10 · 8:00/km · HR 142/154 max
   - TE: AEROBIC_BASE · aerobic 2.4 · anaerobic 0
   - MS: 6.03k @ 7:59 142bpm 0.75m 167spm 284ms 7.7cm 221w
-  - 🧠 The six work reps hovered around 8 min/km (7:45–8:09), keeping you solidly in the recovery/easy zone and well below the ≤150 bpm EZ HR cap (rep HR rose gradually from 127 to 149 bpm). With an average rep pace of exactly 8:00 min/km and an aerobic training effect of 2.4 AEROBIC_BASE, the session delivered the intended low‑intensity stimulus and no anaerobic benefit, as expected for a Wednesday easy run. Your morning readiness score of 33 (Low) and sleep score of 57 suggest you’re still paying the cost of recent fatigue, so prioritize recovery or a very easy effort for the remainder of today.
+  - 🧠 The six easy reps stayed within the prescribed easy‑aerobic range (7:45–8:09 min/km, HR 127–149 bpm) and produced no anaerobic stimulus, as expected for a recovery run. However, the gradual HR rise across reps and the 9‑point stamina drop (100 → 91) suggest the session was taxing relative to your low readiness (score 33, sleep 57) and may have edged toward the upper limit of the easy zone. Considering the modest load (≈44 AU) and the negative performance condition (‑5.9 %), you’d likely benefit from a slightly slower pace (≈8:15 min/km) or a shorter distance today to preserve recovery for Thursday’s VO2max work.
 
 ## Load & Trends
 
@@ -47,7 +47,7 @@
 | T | 5x3min VO₂ Int | 7k · 47:31 | 147 |
 | F | Core/Hip | 19:24 | 3 |
 | S | Malolos Run | 11k · 1:21:20 | 106 |
-| S | Malolos Run | 6k · 48:10 | 44 |
+| S | BHM W3: Rec Run | 6k · 48:10 | 44 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|

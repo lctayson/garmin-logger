@@ -928,14 +928,14 @@
     {
       "date": "2026-10-11",
       "charged": 45,
-      "drained": 35,
+      "drained": 39,
       "high": 50,
       "low": 5
     }
   ],
   "activities": [
     {
-      "name": "Malolos Running",
+      "name": "BHM W3: Recovery Run",
       "activity_id": 24680277775,
       "type": "running",
       "distance": 6.03,
