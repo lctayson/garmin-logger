@@ -713,8 +713,8 @@ def _planned_session(context_text: str, next_day: Any, plan_heading: str) -> str
             break
         section_lines.append(line)
 
-    week_pattern = re.compile(r"^## W\\d+\\s*[·|]\\s*([A-Za-z]{3})\\s+(\\d{1,2})\\b")
-    day_pattern = re.compile(r"^- \\*\\*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\\*\\*\\s+(.+)$")
+    week_pattern = re.compile(r"^## W\d+\s*[·|]\s*([A-Za-z]{3})\s+(\d{1,2})\b")
+    day_pattern = re.compile(r"^- \*\*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\*\*\s+(.+)$")
     for i, line in enumerate(section_lines):
         match = week_pattern.match(line)
         if not match:
