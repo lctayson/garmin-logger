@@ -22,7 +22,7 @@
 - **BHM W3: Recovery Run** — 6.03km · 48:10 · 8:00/km · HR 142/154 max
   - TE: AEROBIC_BASE · aerobic 2.4 · anaerobic 0
   - MS: 6.03k @ 7:59 142bpm 0.75m 167spm 284ms 7.7cm 221w
-  - 🧠 The six rep paces clustered tightly around the 8 min/km target (7:45–8:09) and the average HR stayed under the easy‑run cap of 150 bpm, so the run delivered exactly the low‑intensity stimulus prescribed for a recovery day. The gradual rise in rep‑by‑rep HR (127 → 149 bpm) is expected as fatigue accumulates, but the final HR remained well within the easy‑zone limit, confirming the session stayed aerobic without any anaerobic load (training effect = 0 anaerobic). Your morning readiness score of 33 (Low) and sleep score of 57 indicate limited recovery capacity today, yet the modest load (43.6) and minimal stamina loss (100 → 91 %) suggest the run was appropriately easy; consider adding a short extra rest or very light activity tomorrow to let the low‑readiness score fully recover.
+  - 🧠 The six work reps averaged 8:00 / km (range 7:45–8:09), which is noticeably slower than the prescribed easy‑run window of 6:50–7:20 / km for Sunday EZ days, while heart‑rate stayed comfortably under the ≤150 bpm cap (rep HRs 127–149 bpm, max 154 bpm). Your stamina dipped from 100 % to 91 % and the aerobic training effect was modest (2.4 AEROBIC_BASE), consistent with the low readiness score of 33 (Low) and a sub‑optimal sleep score (57). The modest HR drift across reps (≈22 bpm increase from first to last) suggests a gradual rise in effort rather than a pacing failure, but the overall slower pace aligns with the fatigue indicated by the readiness snapshot.
 
 ## Load & Trends
 
