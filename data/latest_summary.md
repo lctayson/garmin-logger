@@ -9,8 +9,7 @@
 - **Recovery time:** 8h
 - ⚠️ **Limiter:** Sleep Score (38%)
 - **Also soft:** Stress History, Sleep History
-- 🧠 **Sunday – Recovery run**  
-Your readiness is low (score 33) mainly from poor sleep, but the training load is modest (ACWR 0.8) and HRV is good. Keep today ultra‑easy: run 5‑6 km at ≤145 bpm, cut the hill sprints, and stop if you feel unusually fatigued. If you’re feeling worse than “easy” after the first few minutes, skip the run entirely and take a true rest day.
+- 🧠 Your readiness is low (score 33) mainly because you only got 5½ h of sleep. Keep today’s purpose – a recovery run – but trim the volume and drop the hill sprints. Run about 4‑5 km at an easy 7:30‑8:00 min/km (HR ≤ 145 bpm) and stop once you feel comfortably recovered; if you’re still dragging, skip the run altogether and just walk/stretch. This preserves the recovery intent without adding unnecessary stress.
 
 ## Latest Activity
 
