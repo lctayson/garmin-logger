@@ -131,18 +131,16 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Thu** 7k as 5×3min @ 5:05-5:12, 2min jog, ≤172
 - **Fri** Rest + core
 - **Sat** 11k LSD @ 6:45-7:20, ≤150
-  📌 Takbo Ng Pag-Asa 5K, 5am
-- **Sun** 6k EZ @ 6:50-7:20, ≤150 w/ 6-8×10s hills
-  📌 Bulacan Medical Center 95th Anniversary Fun Run
+- **Sun** 6k EZ @ 6:50-7:20, ≤150
 
-## W4 · Oct 12 · 41 km
+## W4 · Oct 12 · 40 km
 - **Mon** Strength A
 - **Tue** 7k as 3×8min SUT @ 5:25-5:35, 2min jog, ≤168
 - **Wed** 6k EZ @ 6:50-7:20, ≤150 + 6-8 strides
 - **Thu** 8k as 4×1K @ 5:00-5:08 (or 5:12?), 2min jog, ≤172
 - **Fri** Rest + core
 - **Sat** 12K EZ
-- **Sun** 8k EZ @ 6:50-7:20, ≤150 w/ 6-8×10s hills
+- **Sun** 7k EZ @ 6:50-7:20, ≤150 w/ 6-8×10s hills
   📌 CCM
 
 ## W5 · Oct 19 · 38 km
