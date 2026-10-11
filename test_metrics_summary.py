@@ -583,7 +583,7 @@ class RenderTests(unittest.TestCase):
 class NextSessionRecommendationTests(unittest.TestCase):
     def test_next_day_session_matches_weekly_schedule(self):
         payload = _payload()
-        payload["date"] = "2026-09-21"  # Monday; next session is Tuesday threshold
+        payload["date"] = "2026-09-21"  # Monday; next session comes from that week's plan
         text = render(payload, None)
         self.assertIn("## Next Session", text)
         self.assertIn("Tue, Sep 22 — 5k EZ @ 7:05-7:35, ≤150", text)
@@ -614,7 +614,7 @@ class NextSessionRecommendationTests(unittest.TestCase):
         payload["readiness"]["sleep_hours"] = 4.5
         payload["readiness"]["recovery_hours"] = 30
         text = render(payload, None)
-        self.assertIn("Thu, Sep 24 — VO2max intervals", text)
+        self.assertIn("Thu, Oct 8 — 7k as 5×3min @ 5:05-5:12, 2min jog, ≤172", text)
         self.assertIn("Recommendation:** Prioritize recovery", text)
 
 
