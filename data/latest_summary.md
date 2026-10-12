@@ -1,53 +1,55 @@
-# Daily Check — 2026-10-12
+# Daily Check — 2026-10-13
 
-## Readiness: 60/100 (Moderate)
-> Good Sleep Last Night
+## Readiness: 86/100 (High)
+> Well Recovered
 
-- **RHR:** 60 bpm
-- **HRV:** 48ms (7d avg: 51ms)
-- **Sleep:** 7h27 (score 85)
+- **RHR:** 55 bpm
+- **HRV:** 56ms (7d avg: 50ms)
+- **Sleep:** 7h06 (score 91)
 - **Recovery time:** 0h
-- ⚠️ **Limiter:** Sleep History (39%)
+- ⚠️ **Limiter:** Sleep History (63%)
 - **Also soft:** Stress History
+- 🧠 Readiness is high (score 86, HRV 56 ms, sleep 7.1 h, ACWR 0.6 – “Very Good”). No red flags; today’s sub‑threshold Tuesday session can be done as scheduled. Run the planned 7 km = 3 × 8‑min SUT intervals at 5:25‑5:35 /km, keep average HR ≤ 168 bpm, and stick to the 2‑min jog recovery. If you feel especially fresh, you may aim for the faster end of the pace window, but don’t add extra volume.
 
 ## Load & Trends
 
-- **ACWR:** 0.8 (Optimal) — acute 423 / chronic 506 (chronic range 404.8–759)
-- **7-day volume:** 37.14km vs 28-day avg 34.7km (+7%)
-- **Running tolerance:** 62.0% (Medium) — 37.1km of 62.7km weekly cap, acute impact load 38.9
+- ⚠️ **ACWR:** 0.6 (Low) — acute 337 / chronic 486 (chronic range 388.8–729)
+- **7-day volume:** 30.11km vs 28-day avg 33.2km (-9%)
+- **Running tolerance:** 51.8% (Medium) — 30.1km of 62.7km weekly cap, acute impact load 32.5
 - ⚠️ **Aerobic Low:** 863.6 (target 303–822 — +42 over)
-- **Aerobic High:** 1093.3 (target 649–1169 — in range)
+- **Aerobic High:** 968.1 (target 649–1169 — in range)
 - ⚠️ **Anaerobic:** 43.3 (target 173–519 — -130 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
-- ⚠️ **Sleep (7d avg):** 6h14, 7/7 nights below need, trending down
-- ⚠️ **RHR (7d avg):** 57.4, trending up
+- ⚠️ **Sleep (7d avg):** 6h20, 5/7 nights below need, trending flat
+- ⚠️ **RHR (7d avg):** 57.3, trending up
 - ⚠️ **HRV:** trending down
 
 ## Next Session
-- **Planned:** Tue, Oct 13 — 7k as 3×8min SUT @ 5:25-5:35, 2min jog, ≤168
-- **Recommendation:** Adjust the workout
-- **Reason:** ongoing sleep debt (7-day average 6.2h), 7/7 nights below need; resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
-- **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
+- **Planned:** Wed, Oct 14 — 6k EZ @ 6:50-7:20, ≤150 + 6-8 strides
+- **Recommendation:** Keep it easy
+- **Reason:** low 7-day sleep average (6.3h); resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
+- **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
-## Today's Workout
+## Latest Activity
 
+_Most recent activity (2026-10-12):_
 - **Mon Strength A** — 0.0km · 20:37 · HR 86/101 max
   - TE: AEROBIC_BASE · aerobic 0.1 · anaerobic 0
   - 🧠 The Monday Strength A session delivered a very light aerobic stimulus (aerobic TE 0.1, load 2) and stayed well below any cardio load thresholds, which is exactly what the bridge‑phase schedule calls for on strength days. Your readiness score of 60 (moderate) and the “Good Sleep” feedback align with the low‑impact nature of the workout, and the tiny body‑battery drop (‑1) suggests no recovery debt was incurred. No red flags appear; you can proceed to today’s planned run feeling adequately rested.
 
-## This Week (Oct 6–12)
+## This Week (Oct 7–13)
 
 | D | Activity | Volume | Load |
 |:---:|:---|---:|---:|
-| T | BHM W3: 2x10min Thr | 7k · 47:21 | 153 |
 | W | Run + Strides/Hills | 6k · 48:18 | 64 |
 | T | 5x3min VO₂ Int | 7k · 47:31 | 147 |
 | F | Core/Hip | 19:24 | 3 |
 | S | Malolos Run | 11k · 1:21:20 | 106 |
 | S | BHM W3: Rec Run | 6k · 48:10 | 44 |
 | M | Strength A | 20:37 | 2 |
+| T | Rest | — | — |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 7 | 37.15 km | 5:12:41 | 520.1 |
+| 6 | 30.11 km | 4:25:20 | 366.7 |
