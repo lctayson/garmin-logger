@@ -9,7 +9,7 @@
 - **Recovery time:** 0h
 - ⚠️ **Limiter:** Sleep History (39%)
 - **Also soft:** Stress History
-- 🧠 Your readiness is solid enough for today’s planned **Strength A** (hip‑extension/power) work. Keep the session as scheduled, but trim the volume a touch to match the “moderate” readiness score – e.g., do the usual exercises at the standard load but stop after **2 sets** (instead of 3) and keep the reps in the normal 8‑10 range. No extra cardio or extra‑heavy lifts are needed; the reduced set count will protect you while still delivering the neuromuscular stimulus you need.
+- 🧠 Readiness is “moderate” overall, but every sub‑metric (sleep, HRV, resting HR, ACWR) is solid and the acute‑to‑chronic load ratio is well within the optimal window (0.8). That’s enough to run today’s planned Strength‑A session without cutting it back. Stick to the usual power/hip‑extension circuit, keep the load at ~70 % of your 1‑RM and avoid any sets to failure – total volume ≈45 min is fine. Go ahead and train as scheduled.
 
 ## Next Session
 - **Planned:** Tue, Oct 13 — 7k as 3×8min SUT @ 5:25-5:35, 2min jog, ≤168
