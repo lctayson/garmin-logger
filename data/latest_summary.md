@@ -34,7 +34,7 @@
 
 - **Mon Strength A** — 0.0km · 20:37 · HR 86/101 max
   - TE: AEROBIC_BASE · aerobic 0.1 · anaerobic 0
-  - 🧠 Your strength‑training session ran exactly as programmed (≈20 min, load 2, minor aerobic benefit, no anaerobic stimulus), so the cardio load for the day remains negligible. Readiness this morning was moderate (score 60) with a resting HR of 60 bpm and a solid sleep score (85), matching the “good sleep” feedback and indicating you were adequately recovered for the strength day. The –1 Body‑Battery impact is tiny and aligns with the low‑intensity nature of this session, so there’s no sign of accumulating fatigue that would affect Tuesday’s sub‑threshold interval workout.
+  - 🧠 The 20‑minute Strength A session delivered only a trivial aerobic stimulus (aerobic 0.1, load 2) and a negligible body‑battery drop (‑1), which is exactly what the program expects for Monday’s non‑running day. Your morning readiness was moderate (score 60) but flagged “Good Sleep,” and the post‑exercise snapshot shows no change in that score, confirming the strength work didn’t tax your recovery budget. No red flags appear; you’re on track to preserve freshness for the upcoming Tuesday VO2max interval.
 
 ## This Week (Oct 6–12)
 
