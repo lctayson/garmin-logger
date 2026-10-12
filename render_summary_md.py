@@ -745,7 +745,7 @@ def _planned_session(context_text: str, next_day: Any, plan_heading: str) -> str
 
 
 def _next_session_lines(metrics: dict[str, Any], data_dir: str | None = None) -> list[str]:
-    """Give conservative, explainable guidance based on the configured training plan."""
+    """Give conservative guidance using today's markers and multi-day recovery trends."""
     from datetime import date, timedelta
     from pathlib import Path
     from config import resolve_training_plan_heading
@@ -763,52 +763,137 @@ def _next_session_lines(metrics: dict[str, Any], data_dir: str | None = None) ->
     session = _planned_session(context_text, next_day, resolve_training_plan_heading())
     if not session:
         return []
+
     lowered_session = session.lower()
-    quality = any(word in lowered_session for word in ("threshold", "vo2", "interval", "tempo", "time trial", "test", "race")) or bool(re.search(r"\b\d+\s*[x×]\s*\d+", lowered_session))
+    quality = (
+        any(word in lowered_session for word in
+            ("threshold", "vo2", "interval", "tempo", "time trial", "test", "race"))
+        or bool(re.search(r"\\b\\d+\\s*[x×]\\s*\\d+", lowered_session))
+    )
     readiness = metrics.get("readiness") or {}
-    summary = metrics.get("summary") or {}
+    summary = metrics.get("summary")
+    if not isinstance(summary, dict):
+        summary = build_summary(metrics)
+    trends = summary.get("recovery_trends") or {}
+    load = metrics.get("load") or {}
+    tolerance = metrics.get("running_tolerance") or {}
+
     score = _num(readiness.get("score"))
     if score is None:
-        score = _num(summary.get("readiness", {}).get("score"))
+        score = _num((summary.get("readiness") or {}).get("score"))
     sleep = _num(readiness.get("sleep_hours"))
     recovery = _num(readiness.get("recovery_hours"))
-    warnings: list[str] = []
-    if score is not None and score <= 25:
-        warnings.append(f"very low readiness ({score:g}/100)")
-    if sleep is not None and sleep < 5:
-        warnings.append(f"short sleep ({sleep:.1f}h)")
-    elif sleep is not None and sleep < 6:
-        warnings.append(f"limited sleep ({sleep:.1f}h)")
-    if recovery is not None and recovery >= 36:
-        warnings.append(f"high remaining recovery time ({recovery:g}h)")
-    elif recovery is not None and recovery >= 24:
-        warnings.append(f"elevated remaining recovery time ({recovery:g}h)")
-    load_status = str((metrics.get("load") or {}).get("acwr_status") or "").lower()
-    if load_status in {"high", "very high", "overreaching"}:
-        warnings.append(f"load status is {load_status}")
+    sleep_avg = _num(trends.get("sleep_7d_avg_h"))
+    short_nights = _num(trends.get("sleep_nights_below_need"))
+    rhr_trend = trends.get("resting_hr_trend")
+    hrv_trend = trends.get("hrv_trend")
+    hrv_band = trends.get("hrv_vs_balanced_band")
+    acwr_status = str(load.get("acwr_status") or "").lower()
+    tolerance_pct = _num(tolerance.get("percent_of_tolerance"))
 
-    if quality and len(warnings) >= 3:
+    severe: list[str] = []
+    caution: list[str] = []
+
+    # Severe signals are individually meaningful; multiple severe signals
+    # are required before recommending replacing a quality session outright.
+    if score is not None and score <= 25:
+        severe.append(f"very low readiness ({score:g}/100)")
+    elif score is not None and score <= 40:
+        caution.append(f"low readiness ({score:g}/100)")
+
+    if sleep is not None and sleep < 5:
+        severe.append(f"very short sleep last night ({sleep:.1f}h)")
+    elif sleep is not None and sleep < 6:
+        caution.append(f"short sleep last night ({sleep:.1f}h)")
+
+    if recovery is not None and recovery >= 36:
+        severe.append(f"high remaining recovery time ({recovery:g}h)")
+    elif recovery is not None and recovery >= 24:
+        caution.append(f"elevated remaining recovery time ({recovery:g}h)")
+
+    if acwr_status in {"high", "very high", "overreaching"}:
+        severe.append(f"training-load status is {acwr_status}")
+    if tolerance_pct is not None and tolerance_pct >= 95:
+        severe.append(f"running tolerance is nearly full ({tolerance_pct:g}%)")
+    elif tolerance_pct is not None and tolerance_pct >= 85:
+        caution.append(f"running tolerance is high ({tolerance_pct:g}%)")
+
+    # Chronic sleep restriction matters even after one good night. Use both
+    # the 7-day mean and repeated short nights, but avoid counting the same
+    # sleep pattern as several independent severe warnings.
+    chronic_sleep_warning = (
+        (sleep_avg is not None and sleep_avg < 6.0)
+        or (short_nights is not None and short_nights >= 6)
+    )
+    if chronic_sleep_warning:
+        caution.append(
+            "ongoing sleep debt"
+            + (f" (7-day average {sleep_avg:.1f}h)" if sleep_avg is not None else "")
+            + (f", {int(short_nights)}/7 nights below need" if short_nights is not None else "")
+        )
+    elif sleep_avg is not None and sleep_avg < 6.5:
+        caution.append(f"low 7-day sleep average ({sleep_avg:.1f}h)")
+
+    if rhr_trend == "rising":
+        caution.append("resting heart rate is trending up")
+    if hrv_trend == "falling":
+        caution.append("HRV is trending down")
+    if hrv_band == "below":
+        caution.append("last-night HRV is below the balanced band")
+
+    # Two adverse autonomic trends together are more persuasive than either
+    # alone. Treat them as one combined signal rather than double-counting.
+    autonomic_pair = rhr_trend == "rising" and (
+        hrv_trend == "falling" or hrv_band == "below"
+    )
+    if autonomic_pair:
+        caution.append("RHR-up/HRV-down recovery pattern")
+
+    # Deduplicate messages while preserving order; the paired signal is a
+    # useful combined flag, but the individual values remain informative.
+    severe = list(dict.fromkeys(severe))
+    caution = list(dict.fromkeys(caution))
+
+    if quality and len(severe) >= 2:
         decision = "Prioritize recovery"
-        action = "Replace the quality session with rest or a short, very easy run; reassess before rescheduling intensity."
-    elif quality and len(warnings) >= 2:
+        action = (
+            "Replace the quality session with rest or a short, very easy run. "
+            "Do not make up the missed intensity; reassess at the next session."
+        )
+    elif quality and (
+        len(severe) >= 1
+        or len(caution) >= 2
+        or autonomic_pair
+    ):
         decision = "Adjust the workout"
-        action = "Keep the warm-up easy and shorten the quality set substantially; stop if effort or symptoms are abnormal."
+        action = (
+            "Make this an easy aerobic run or substantially reduce the quality "
+            "repetitions; keep effort controlled and stop if the warm-up feels "
+            "abnormally hard. Resume the plan only if you feel normal."
+        )
+    elif not quality and len(severe) >= 2:
+        decision = "Prioritize recovery"
+        action = "Rest, or do only a short, very easy session if you feel well."
+    elif not quality and (len(severe) >= 1 or len(caution) >= 3):
+        decision = "Keep it easy"
+        action = "Avoid adding intensity or volume; shorten the session if effort is unusually high."
     else:
         decision = "Proceed as planned"
-        action = "Follow the planned session, using normal effort-based adjustments and warm up before deciding on intensity."
+        action = "Follow the planned session, using normal effort-based adjustments and reassess during the warm-up."
+
+    reasons = severe + caution
     lines = [
         "## Next Session",
         f"- **Planned:** {next_day.strftime('%a, %b %d').replace(' 0', ' ')} — {session}",
         f"- **Recommendation:** {decision}",
     ]
-    if warnings:
-        lines.append("- **Reason:** " + "; ".join(warnings) + ".")
+    if reasons:
+        lines.append("- **Reason:** " + "; ".join(reasons) + ".")
     else:
-        lines.append("- **Reason:** Available readiness indicators do not show a combination of major recovery warnings.")
+        lines.append("- **Reason:** Available readiness, recovery-trend, and load indicators do not show a combination of major warnings.")
     lines.append(f"- **Action:** {action}")
     lines.append("- *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*")
     return lines
-
 
 def render(metrics: dict[str, Any], activities: dict[str, Any] | None, data_dir: str | None = None) -> str:
     summary = metrics.get("summary")
