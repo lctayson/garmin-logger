@@ -25,16 +25,16 @@
 
 ## Next Session
 - **Planned:** Tue, Oct 13 — 7k as 3×8min SUT @ 5:25-5:35, 2min jog, ≤168
-- **Recommendation:** Proceed as planned
-- **Reason:** Available readiness indicators do not show a combination of major recovery warnings.
-- **Action:** Follow the planned session, using normal effort-based adjustments and warm up before deciding on intensity.
+- **Recommendation:** Adjust the workout
+- **Reason:** ongoing sleep debt (7-day average 6.2h), 7/7 nights below need; resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
+- **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
 ## Today's Workout
 
 - **Mon Strength A** — 0.0km · 20:37 · HR 86/101 max
   - TE: AEROBIC_BASE · aerobic 0.1 · anaerobic 0
-  - 🧠 The 20‑minute Strength A session delivered a very low aerobic stimulus (aerobic TE 0.1, load 2.0) and kept heart rate well below any training zone (avg 86 bpm, max 101 bpm), which is exactly what the Monday strength day is meant to provide. Your readiness score stayed at 60 (moderate) with a resting HR of 60 bpm and an 85‑point sleep score, indicating the modest load didn’t tax recovery. Body‑Battery dropped only 1 point, confirming negligible systemic fatigue. This workout therefore matches the planned low‑impact strength work and poses no concern for your Thursday VO₂‑max session.
+  - 🧠 The Monday Strength A session delivered a very light aerobic stimulus (aerobic TE 0.1, load 2) and stayed well below any cardio load thresholds, which is exactly what the bridge‑phase schedule calls for on strength days. Your readiness score of 60 (moderate) and the “Good Sleep” feedback align with the low‑impact nature of the workout, and the tiny body‑battery drop (‑1) suggests no recovery debt was incurred. No red flags appear; you can proceed to today’s planned run feeling adequately rested.
 
 ## This Week (Oct 6–12)
 
