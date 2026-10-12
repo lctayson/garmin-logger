@@ -9,7 +9,7 @@
 - **Recovery time:** 0h
 - ⚠️ **Limiter:** Sleep History (39%)
 - **Also soft:** Stress History
-- 🧠 Readiness is moderate (score 60) but all the underlying metrics are solid—sleep score 85, HRV at 48 ms (very good), acwr 0.8 (optimal) and no accumulated stress flags. For today’s “Strength A” (power/hip‑extension) you can run the full session as programmed; just stay at the usual moderate load (avoid any heavy max‑effort lifts) and finish with the standard mobility work. No need to cut or skip.
+- 🧠 Readiness is moderate but all key markers (sleep score 85, HRV 48 ms vs 51 ms 7‑day avg, resting HR 60, ACWR 0.8) are solid, and the acute load is well under chronic load. Stick to today’s planned **Strength A (power/hip‑extension) session**—run the usual sets and weights, but stay on the prescribed intensity (no “push‑to‑failure” overload) and finish with a brief mobility cooldown. This will keep the block’s strength stimulus on track without risking excess fatigue.
 
 ## Next Session
 - **Planned:** Tue, Oct 13 — 7k as 3×8min SUT @ 5:25-5:35, 2min jog, ≤168
