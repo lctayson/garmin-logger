@@ -44,7 +44,7 @@
         "feedback": "Good"
       }
     },
-    "ai_analysis": "Readiness is high (86 / 100) with excellent sleep, HRV above your 7‑day average, and a low ACWR (0.6). No red flags—today’s Tuesday sub‑threshold workout should be run as scheduled: 3 × 8 min intervals at 5:25‑5:35 / km, keeping average HR ≤ 168 bpm (adjust slightly lower if the morning heat feels harsher). Warm up, hit the target pace/HR, and finish with the usual jog recovery. Enjoy the session!",
+    "ai_analysis": "Readiness is high (score 86, rested HR 55, HRV above 7‑day avg) and your ACWR is low (0.6), so you’re fully recovered for today’s toughest running day. Go ahead with the planned Tuesday sub‑threshold session – 3 × 8 min at ~5:25‑5:35 / km, 2 min jog recovery, keeping the average HR ≤ 168 bpm. Warm‑up as usual, then focus on hitting the target pace; no need to cut volume or intensity.",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
