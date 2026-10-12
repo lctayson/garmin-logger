@@ -9,7 +9,7 @@
 - **Recovery time:** 0h
 - ⚠️ **Limiter:** Sleep History (39%)
 - **Also soft:** Stress History
-- 🧠 Your readiness is solid (HRV at 100 % of baseline, sleep score 85, ACWR 0.8 → optimal) and there’s no sign of lingering fatigue. Stick to today’s planned Strength A session, but keep the load moderate (e.g., 3 × 8 reps per leg, 70 % of your 1‑RM) rather than pushing heavy max‑effort sets. Finish with the usual hip‑extension activation work and you’ll stay on track without risking overload.
+- 🧠 Your Monday is Strength A (power/hip‑extension). Readiness is moderate but HRV is excellent, sleep was solid and ACWR is optimal (0.8), so the session can go ahead as planned. Hit the usual load (e.g., 3 × 8‑10 reps per exercise, RPE 6‑7) and keep the tempo controlled—no need to cut volume or intensity today.
 
 ## Next Session
 - **Planned:** Tue, Oct 13 — 7k as 3×8min SUT @ 5:25-5:35, 2min jog, ≤168
