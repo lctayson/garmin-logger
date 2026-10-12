@@ -34,7 +34,7 @@
 
 - **Mon Strength A** — 0.0km · 20:37 · HR 86/101 max
   - TE: AEROBIC_BASE · aerobic 0.1 · anaerobic 0
-  - 🧠 The 20‑minute Strength A session delivered a very low aerobic stimulus (aerobic 0.1, anaerobic 0), reflected in the modest average HR of 86 bpm and a negligible training load of 2 AU, which is exactly what the Monday strength day calls for. Body‑Battery dipped only 1 point and your readiness score stayed at 60 (moderate) despite a solid 85‑point sleep score and a resting HR of 60 bpm, indicating no adverse fatigue from today’s work. This aligns with the bridge‑phase plan of preserving recovery for the upcoming Tuesday VO₂max interval.
+  - 🧠 The 20‑minute Strength A session delivered a minimal aerobic stimulus (aerobic TE 0.1) and essentially no anaerobic load, which aligns with the planned low‑impact Monday strength day. Your average heart rate stayed low at 86 bpm (max 101 bpm) and the Garmin load was only 2 AU, so the session added negligible cardiovascular fatigue. The body‑battery impact of –1 and an unchanged readiness score of 60 (moderate) suggest the workout did not erode the good sleep‑derived recovery you entered the day with. Consequently, you remain well‑positioned to tackle the higher‑intensity Tuesday VO₂max‑type session.
 
 ## This Week (Oct 6–12)
 
