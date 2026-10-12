@@ -9,7 +9,7 @@
 - **Recovery time:** 0h
 - ⚠️ **Limiter:** Sleep History (39%)
 - **Also soft:** Stress History
-- 🧠 Your readiness is decent (HRV 100 % and sleep score 85) and the ACWR is optimal, so there’s no reason to skip today’s strength work. Stick to the normal **Strength A** session (hip‑extension/power focus) but keep the load moderate—use your usual sets and reps but stop short of hitting failure, especially in the hotter morning. Finish with a brief mobility circuit and you’ll stay on track without adding unnecessary stress.
+- 🧠 Your readiness is solid enough to run the planned Strength A session today. The sleep score, HRV and ACWR are all in the green, and the moderate‑level readiness (score 60) isn’t low enough to warrant a skip. Just stick to the usual hip‑extension/ power routine, but keep the load at the prescribed moderate intensity (no max‑effort lifts) and focus on clean technique. Proceed as normal.
 
 ## Next Session
 - **Planned:** Tue, Oct 13 — 7k as 3×8min SUT @ 5:25-5:35, 2min jog, ≤168
