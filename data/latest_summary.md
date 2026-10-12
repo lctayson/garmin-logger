@@ -9,7 +9,7 @@
 - **Recovery time:** 0h
 - ⚠️ **Limiter:** Sleep History (39%)
 - **Also soft:** Stress History
-- 🧠 Your readiness is solid enough to run the planned Strength A session today. The sleep score, HRV and ACWR are all in the green, and the moderate‑level readiness (score 60) isn’t low enough to warrant a skip. Just stick to the usual hip‑extension/ power routine, but keep the load at the prescribed moderate intensity (no max‑effort lifts) and focus on clean technique. Proceed as normal.
+- 🧠 Your readiness is solid enough for today’s planned **Strength A** (hip‑extension/power) work. Keep the session as scheduled, but trim the volume a touch to match the “moderate” readiness score – e.g., do the usual exercises at the standard load but stop after **2 sets** (instead of 3) and keep the reps in the normal 8‑10 range. No extra cardio or extra‑heavy lifts are needed; the reduced set count will protect you while still delivering the neuromuscular stimulus you need.
 
 ## Next Session
 - **Planned:** Tue, Oct 13 — 7k as 3×8min SUT @ 5:25-5:35, 2min jog, ≤168
