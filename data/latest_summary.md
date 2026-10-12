@@ -9,7 +9,7 @@
 - **Recovery time:** 0h
 - ⚠️ **Limiter:** Sleep History (39%)
 - **Also soft:** Stress History
-- 🧠 Readiness is “moderate” overall, but every sub‑metric (sleep, HRV, resting HR, ACWR) is solid and the acute‑to‑chronic load ratio is well within the optimal window (0.8). That’s enough to run today’s planned Strength‑A session without cutting it back. Stick to the usual power/hip‑extension circuit, keep the load at ~70 % of your 1‑RM and avoid any sets to failure – total volume ≈45 min is fine. Go ahead and train as scheduled.
+- 🧠 Your readiness is overall solid – HRV is very good, sleep score is high, and ACWR is in the optimal range (0.8). Strength A is a low‑cardio, neuromuscular day, so there’s no need to cut it; just run the standard routine (e.g., 3 × 8‑10 reps of hip‑extension, single‑leg Romanian deadlift, glute bridges, and core work) at the usual load. If you feel any joint or muscle tightness, trim the weight or drop a set, but otherwise proceed as planned.
 
 ## Next Session
 - **Planned:** Tue, Oct 13 — 7k as 3×8min SUT @ 5:25-5:35, 2min jog, ≤168
