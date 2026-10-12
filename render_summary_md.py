@@ -817,17 +817,20 @@ def render(metrics: dict[str, Any], activities: dict[str, Any] | None, data_dir:
 
     date = metrics.get("date", "")
     out: list[str] = [f"# Daily Check — {date}".rstrip(), ""]
+    # Put multi-day recovery and training-load context before recommending
+    # the next session, so the recommendation is read alongside those trends.
     out.extend(_readiness_lines(metrics, summary))
-    out.append("")
-    out.extend(_next_session_lines(metrics, data_dir))
-    out.append("")
-    out.extend(_today_lines(date, activities))
     out.append("")
 
     load_lines = _load_lines(metrics, summary)
     if load_lines:
         out.extend(load_lines)
         out.append("")
+
+    out.extend(_next_session_lines(metrics, data_dir))
+    out.append("")
+    out.extend(_today_lines(date, activities))
+    out.append("")
 
     week_lines = _this_week_lines(metrics, data_dir)
     if week_lines:
