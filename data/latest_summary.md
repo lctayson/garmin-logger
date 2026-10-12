@@ -9,7 +9,6 @@
 - **Recovery time:** 0h
 - ⚠️ **Limiter:** Sleep History (39%)
 - **Also soft:** Stress History
-- 🧠 Your readiness is overall solid – HRV is very good, sleep score is high, and ACWR is in the optimal range (0.8). Strength A is a low‑cardio, neuromuscular day, so there’s no need to cut it; just run the standard routine (e.g., 3 × 8‑10 reps of hip‑extension, single‑leg Romanian deadlift, glute bridges, and core work) at the usual load. If you feel any joint or muscle tightness, trim the weight or drop a set, but otherwise proceed as planned.
 
 ## Next Session
 - **Planned:** Tue, Oct 13 — 7k as 3×8min SUT @ 5:25-5:35, 2min jog, ≤168
@@ -18,20 +17,18 @@
 - **Action:** Follow the planned session, using normal effort-based adjustments and warm up before deciding on intensity.
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
-## Latest Activity
+## Today's Workout
 
-_Most recent activity (2026-10-11):_
-- **BHM W3: Recovery Run** — 6.03km · 48:10 · 8:00/km · HR 142/154 max
-  - TE: AEROBIC_BASE · aerobic 2.4 · anaerobic 0
-  - MS: 6.03k @ 7:59 142bpm 0.75m 167spm 284ms 7.7cm 221w
-  - 🧠 The six work reps averaged 8:00 / km (range 7:45–8:09), which is noticeably slower than the prescribed easy‑run window of 6:50–7:20 / km for Sunday EZ days, while heart‑rate stayed comfortably under the ≤150 bpm cap (rep HRs 127–149 bpm, max 154 bpm). Your stamina dipped from 100 % to 91 % and the aerobic training effect was modest (2.4 AEROBIC_BASE), consistent with the low readiness score of 33 (Low) and a sub‑optimal sleep score (57). The modest HR drift across reps (≈22 bpm increase from first to last) suggests a gradual rise in effort rather than a pacing failure, but the overall slower pace aligns with the fatigue indicated by the readiness snapshot.
+- **Mon Strength A** — 0.0km · 20:37 · HR 86/101 max
+  - TE: AEROBIC_BASE · aerobic 0.1 · anaerobic 0
+  - 🧠 The strength‑training session was a low‑impact, 20‑minute effort with an average HR of 86 bpm (max 101) and a negligible aerobic training effect (0.1 AEROBIC_BASE, no anaerobic contribution). Its load of 2 AU and body‑battery impact of –1 align with the expected light stimulus for Monday’s Strength A day, so it did not meaningfully tax your cardiovascular system. Your morning readiness score of 60 (moderate) and a resting HR of 60 bpm reflect the “good sleep” feedback and were essentially unchanged after the session (acute load rose from 420 to 423). This session therefore met the prescribed purpose of maintaining strength without compromising the recovery needed for the upcoming Tuesday VO2max‑focused interval work.
 
 ## Load & Trends
 
-- **ACWR:** 0.8 (Optimal) — acute 420 / chronic 505 (chronic range 404–757.5)
+- **ACWR:** 0.8 (Optimal) — acute 423 / chronic 506 (chronic range 404.8–759)
 - **7-day volume:** 37.14km vs 28-day avg 34.7km (+7%)
 - **Running tolerance:** 62.0% (Medium) — 37.1km of 62.7km weekly cap, acute impact load 38.9
-- ⚠️ **Aerobic Low:** 861.6 (target 303–822 — +40 over)
+- ⚠️ **Aerobic Low:** 863.6 (target 303–822 — +42 over)
 - **Aerobic High:** 1093.3 (target 649–1169 — in range)
 - ⚠️ **Anaerobic:** 43.3 (target 173–519 — -130 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
@@ -49,8 +46,8 @@ _Most recent activity (2026-10-11):_
 | F | Core/Hip | 19:24 | 3 |
 | S | Malolos Run | 11k · 1:21:20 | 106 |
 | S | BHM W3: Rec Run | 6k · 48:10 | 44 |
-| M | Rest | — | — |
+| M | Strength A | 20:37 | 2 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 6 | 37.15 km | 4:52:04 | 518.1 |
+| 7 | 37.15 km | 5:12:41 | 520.1 |
