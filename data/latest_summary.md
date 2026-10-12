@@ -9,7 +9,7 @@
 - **Recovery time:** 0h
 - ⚠️ **Limiter:** Sleep History (39%)
 - **Also soft:** Stress History
-- 🧠 Your Monday is Strength A (power/hip‑extension). Readiness is moderate but HRV is excellent, sleep was solid and ACWR is optimal (0.8), so the session can go ahead as planned. Hit the usual load (e.g., 3 × 8‑10 reps per exercise, RPE 6‑7) and keep the tempo controlled—no need to cut volume or intensity today.
+- 🧠 Your readiness is decent (HRV 100 % and sleep score 85) and the ACWR is optimal, so there’s no reason to skip today’s strength work. Stick to the normal **Strength A** session (hip‑extension/power focus) but keep the load moderate—use your usual sets and reps but stop short of hitting failure, especially in the hotter morning. Finish with a brief mobility circuit and you’ll stay on track without adding unnecessary stress.
 
 ## Next Session
 - **Planned:** Tue, Oct 13 — 7k as 3×8min SUT @ 5:25-5:35, 2min jog, ≤168
