@@ -9,7 +9,7 @@
 - **Recovery time:** 0h
 - ⚠️ **Limiter:** Sleep History (63%)
 - **Also soft:** Stress History
-- 🧠 Readiness is high (score 86, excellent HRV, 7 h +  sleep, low ACWR), so you’re fully recovered for today’s hardest run of the week. Stick to the planned Tuesday sub‑threshold session – 3 × 8 min intervals at the 5:25‑5:35 /km range, keeping the average HR ≤ 168. Because you’re feeling good, you can comfortably target the faster end of that pace window without any cut‑back. Enjoy the workout!
+- 🧠 Your readiness is high (score 86, good HRV, solid sleep) and the acute‑to‑chronic load ratio is low, so there’s no recovery flag. Do the usual Tuesday session: a warm‑up, then 3 × 8 min sub‑threshold intervals at 5:25‑5:35 /km, keeping the average HR ≤ 168 bpm and 2 min jog recovery. Finish with a short cool‑down – no need to cut volume or intensity today.
 
 ## Load & Trends
 
