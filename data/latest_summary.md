@@ -10,19 +10,6 @@
 - ⚠️ **Limiter:** Sleep History (39%)
 - **Also soft:** Stress History
 
-## Next Session
-- **Planned:** Tue, Oct 13 — 7k as 3×8min SUT @ 5:25-5:35, 2min jog, ≤168
-- **Recommendation:** Proceed as planned
-- **Reason:** Available readiness indicators do not show a combination of major recovery warnings.
-- **Action:** Follow the planned session, using normal effort-based adjustments and warm up before deciding on intensity.
-- *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
-
-## Today's Workout
-
-- **Mon Strength A** — 0.0km · 20:37 · HR 86/101 max
-  - TE: AEROBIC_BASE · aerobic 0.1 · anaerobic 0
-  - 🧠 The strength‑training session was a low‑impact, 20‑minute effort with an average HR of 86 bpm (max 101) and a negligible aerobic training effect (0.1 AEROBIC_BASE, no anaerobic contribution). Its load of 2 AU and body‑battery impact of –1 align with the expected light stimulus for Monday’s Strength A day, so it did not meaningfully tax your cardiovascular system. Your morning readiness score of 60 (moderate) and a resting HR of 60 bpm reflect the “good sleep” feedback and were essentially unchanged after the session (acute load rose from 420 to 423). This session therefore met the prescribed purpose of maintaining strength without compromising the recovery needed for the upcoming Tuesday VO2max‑focused interval work.
-
 ## Load & Trends
 
 - **ACWR:** 0.8 (Optimal) — acute 423 / chronic 506 (chronic range 404.8–759)
@@ -35,6 +22,19 @@
 - ⚠️ **Sleep (7d avg):** 6h14, 7/7 nights below need, trending down
 - ⚠️ **RHR (7d avg):** 57.4, trending up
 - ⚠️ **HRV:** trending down
+
+## Next Session
+- **Planned:** Tue, Oct 13 — 7k as 3×8min SUT @ 5:25-5:35, 2min jog, ≤168
+- **Recommendation:** Proceed as planned
+- **Reason:** Available readiness indicators do not show a combination of major recovery warnings.
+- **Action:** Follow the planned session, using normal effort-based adjustments and warm up before deciding on intensity.
+- *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
+
+## Today's Workout
+
+- **Mon Strength A** — 0.0km · 20:37 · HR 86/101 max
+  - TE: AEROBIC_BASE · aerobic 0.1 · anaerobic 0
+  - 🧠 The 20‑minute Strength A session delivered a very low aerobic stimulus (aerobic 0.1, anaerobic 0), reflected in the modest average HR of 86 bpm and a negligible training load of 2 AU, which is exactly what the Monday strength day calls for. Body‑Battery dipped only 1 point and your readiness score stayed at 60 (moderate) despite a solid 85‑point sleep score and a resting HR of 60 bpm, indicating no adverse fatigue from today’s work. This aligns with the bridge‑phase plan of preserving recovery for the upcoming Tuesday VO₂max interval.
 
 ## This Week (Oct 6–12)
 
