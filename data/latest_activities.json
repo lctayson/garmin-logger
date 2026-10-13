@@ -570,7 +570,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The three 8‑minute threshold reps hit the prescribed 5:25–5:35 km pace exactly (all 5:33) and stayed within the SUT HR cap (final rep 167 bpm ≤ 168), so the intensity was spot‑on. However, HR climbed 10 bpm across the reps while pace stayed flat, and the interval‑drift shows a –6 % efficiency drop, suggesting emerging cardiovascular fatigue despite consistent pacing. With a morning readiness score of 86 (high) and a session load of 173 AU, the workout delivered the intended lactate‑threshold stimulus without overreaching, but the rising HR and efficiency drift are a cue to monitor recovery before the next hard day.",
+      "ai_analysis": "The three 8‑minute threshold reps were all exactly 5:33 /km, landing squarely in the prescribed 5:25‑5:35 window, and the HR progression (157 → 164 → 167 bpm) stayed just under the ≤168 cap for the session. A –6 % pace‑efficiency drift paired with a +10 bpm HR rise shows the expected cardio cost of the heat‑adjusted effort, but the constant rep pace indicates you maintained the target intensity throughout. Your morning readiness was high (score 86) and the post‑run drop to 61 simply reflects the substantial stamina depletion (99 → 67 %) and acute load (≈173), which is normal for a hard Tuesday threshold workout. No execution or recovery concerns emerge from today’s data.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
