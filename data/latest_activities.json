@@ -570,7 +570,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The three 8‑minute threshold reps were all exactly 5:33 /km, landing squarely inside the prescribed 5:25–5:35 /km window for Tuesday VO2max work. Heart‑rate climbed from 157 bpm in the first rep to 167 bpm in the third, matching the expected rise toward the upper end of the threshold zone and consistent with the –6 % pace‑efficiency drift (the reps got slightly faster despite the HR increase). Stamina fell from 99 % to 67 % and the lactate‑threshold training effect was modest (aerobic 3.9, anaerobic ≈0.9), which is typical for a well‑recovered (readiness 86) session. Overall execution was on target, delivering the intended sub‑threshold stimulus without signs of under‑ or over‑loading.",
+      "ai_analysis": "The three 8‑minute threshold reps were all exactly 5:33 /km, landing squarely within the prescribed 5:25‑5:35 range and finishing at 167 bpm, just under the ≤168 bpm cap. Nevertheless, the interval‑drift metrics show a –6 % efficiency decline and a 10‑bpm HR rise across the set, with stamina dropping from 99 % to 67 %, indicating a clear cardiovascular strain despite the steady pace. The session’s load of 173 and a –15 point body‑battery impact are consistent with a hard threshold day, and the post‑run readiness fall to 61 reflects the expected acute recovery demand.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]

@@ -13,10 +13,14 @@
 ## Today's Workout
 
 - **Malolos - 3 x 8min Threshold** — 8.02km · 54:01 · 6:44/km · HR 151/174 max
-  - TE: LACTATE_THRESHOLD · aerobic 3.9 · anaerobic 0.9
+  - TE: Threshold (High Aerobic) · aerobic 3.9 · anaerobic 0.9
   - Intervals: 3 work reps · pace drift -6.0% · HR +10bpm
   - MS: 4.32k @ 5:33 163bpm 1.00m 178spm 248ms 8.2cm 308w
-  - 🧠 The three 8‑minute threshold reps were all exactly 5:33 /km, landing squarely inside the prescribed 5:25–5:35 /km window for Tuesday VO2max work. Heart‑rate climbed from 157 bpm in the first rep to 167 bpm in the third, matching the expected rise toward the upper end of the threshold zone and consistent with the –6 % pace‑efficiency drift (the reps got slightly faster despite the HR increase). Stamina fell from 99 % to 67 % and the lactate‑threshold training effect was modest (aerobic 3.9, anaerobic ≈0.9), which is typical for a well‑recovered (readiness 86) session. Overall execution was on target, delivering the intended sub‑threshold stimulus without signs of under‑ or over‑loading.
+  - 🧠 The three 8‑minute threshold reps were all exactly 5:33 /km, landing squarely within the prescribed 5:25‑5:35 range and finishing at 167 bpm, just under the ≤168 bpm cap. Nevertheless, the interval‑drift metrics show a –6 % efficiency decline and a 10‑bpm HR rise across the set, with stamina dropping from 99 % to 67 %, indicating a clear cardiovascular strain despite the steady pace. The session’s load of 173 and a –15 point body‑battery impact are consistent with a hard threshold day, and the post‑run readiness fall to 61 reflects the expected acute recovery demand.
+
+- **Post-workout response:**
+  - **Readiness:** 61/100 (Recovery In Progress)
+  - **Remaining recovery time:** 1d 9h 36m
 
 ## Next Session
 - **Planned:** Wed, Oct 14 — 6k EZ @ 6:50-7:20, ≤150 + 6-8 strides
