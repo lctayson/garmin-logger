@@ -16,7 +16,7 @@
   - TE: LACTATE_THRESHOLD · aerobic 3.9 · anaerobic 0.9
   - Intervals: 3 work reps · pace drift -6.0% · HR +10bpm
   - MS: 4.32k @ 5:33 163bpm 1.00m 178spm 248ms 8.2cm 308w
-  - 🧠 The three 8‑minute threshold reps hit the prescribed 5:25‑5:35 /km window exactly (5:33 each) and the final rep HR of 167 bpm stayed within the Tuesday cap of ≤168 bpm, so the pacing and intensity targets were met. Across the set HR rose 10 bpm (157 → 167) and stamina fell from 99 % to 67 %, reflecting the expected accumulating load rather than a loss of efficiency—the –6 % pace‑efficiency drift aligns with the steady rep pace despite the HR climb. With a pre‑run readiness score of 86 (high) and a post‑run drop to 61 as the acute load rose to 557, the session delivered a solid lactate‑threshold stimulus (aerobic 3.9, anaerobic ≈ 0.9) without overreaching.
+  - 🧠 The three 8‑minute reps were all exactly 5:33 /km, landing squarely in the prescribed 5:25‑5:35 /km sub‑threshold window, while heart rate climbed from 157 to 167 bpm (the recorded 10 bpm HR delta and –6 % pace‑efficiency drift show a rising cardiovascular cost despite steady pace). The session generated a strong lactate‑threshold stimulus (aerobic 3.9) with only a marginal anaerobic contribution (0.9), and stamina fell from 99 %
 
 ## Next Session
 - **Planned:** Wed, Oct 14 — 6k EZ @ 6:50-7:20, ≤150 + 6-8 strides
