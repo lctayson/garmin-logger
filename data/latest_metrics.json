@@ -44,7 +44,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "Readiness is moderate (score 64) but all recovery metrics (HRV, ACWR 0.9, sleep‑history) are solid and the stress load is well within optimal range. For today’s **Wednesday** session you can run the normal 6 km easy pace (≈6:50–7:15 / km) and finish with the usual 6‑8 strides, keeping the average heart rate ≤150 bpm. No need to cut the run or rest—just stay relaxed, stay cool in the morning heat, and stick to the standard EZ + strides format.",
+    "ai_analysis": "Readiness is moderate (score 64) but every sub‑factor—sleep, HRV, ACWR—is in the “good” range, and your resting HR is low (59 bpm). Go ahead with today’s normal Wednesday workout: 6 km easy at 6:50‑7:20 min/km (keep HR ≤150 bpm) and finish with 6‑8 short strides. No adjustments needed.",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
