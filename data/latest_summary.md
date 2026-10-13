@@ -9,7 +9,14 @@
 - **Recovery time:** 12h
 - ⚠️ **Limiter:** Sleep Score (65%)
 - **Also soft:** Stress History
-- 🧠 Readiness is moderate (64) but every component—HRV, recovery hours, ACWR, and sleep history—is solid and well within the “good” range. Your Wednesday slot is an easy run + strides, and the data shows you’re ready to handle the low‑intensity load without risk. Do the planned 6 km easy run (keep average HR ≤150 bpm) and finish with the usual 6‑8 strides; no need to cut distance or rest today.
+
+## Today's Workout
+
+- **Malolos - Run + Strides/Hills** — 6.03km · 46:47 · 7:46/km · HR 142/157 max
+  - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.7
+  - MS: 5.03k @ 7:33 142bpm 0.79m 167spm 281ms 8.0cm 233w
+  - Readiness 64 → 57 (Listen To Your Body) · Recovery 20h 28m
+  - 🧠 Clean execution on an easy aerobic day with strides. Starting from a conservative 7:59/km and working down to 6:46/km on the final rep kept cardiac cost well in check, with overall average heart rate settling at 142 bpm and reps 4–6 hovering right at the target 150–152 bpm ceiling. The low 73.9 training load and modest 0.7 anaerobic contribution leave you fresh and well-positioned for Thursday's 4×1K VO2max session.
 
 ## Next Session
 - **Planned:** Thu, Oct 15 — 8k as 4×1K @ 5:00-5:08 (or 5:12?), 2min jog, ≤172
@@ -18,23 +25,14 @@
 - **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
-## Latest Activity
-
-_Most recent activity (2026-10-13):_
-- **Malolos - 3 x 8min Threshold** — 8.02km · 54:01 · 6:44/km · HR 151/174 max
-  - TE: Threshold (High Aerobic) · aerobic 3.9 · anaerobic 0.9
-  - Intervals: 3 work reps · pace drift -6.0% · HR +10bpm
-  - MS: 4.32k @ 5:33 163bpm 1.00m 178spm 248ms 8.2cm 308w
-  - 🧠 The three 8‑minute threshold reps were all exactly 5:33 /km, landing squarely in the prescribed 5:25‑5:35 window, and the HR progression (157 → 164 → 167 bpm) stayed just under the ≤168 cap for the session. A –6 % pace‑efficiency drift paired with a +10 bpm HR rise shows the expected cardio cost of the heat‑adjusted effort, but the constant rep pace indicates you maintained the target intensity throughout. Your morning readiness was high (score 86) and the post‑run drop to 61 simply reflects the substantial stamina depletion (99 → 67 %) and acute load (≈173), which is normal for a hard Tuesday threshold workout. No execution or recovery concerns emerge from today’s data.
-
 ## Load & Trends
 
-- **ACWR:** 0.9 (Optimal) — acute 461 / chronic 508 (chronic range 406.4–762)
-- **7-day volume:** 32.11km vs 28-day avg 33.6km (-4%)
-- **Running tolerance:** 60.1% (Medium) — 32.1km of 62.7km weekly cap, acute impact load 37.7
-- **Aerobic Low:** 805.5 (target 303–822 — in range)
-- **Aerobic High:** 1129.9 (target 649–1169 — in range)
-- ⚠️ **Anaerobic:** 43.3 (target 173–519 — -130 under)
+- **ACWR:** 1.0 (Optimal) — acute 555 / chronic 525 (chronic range 420–787.5)
+- **7-day volume:** 38.13km vs 28-day avg 35.2km (+8%)
+- **Running tolerance:** 70.5% (Medium) — 38.1km of 62.7km weekly cap, acute impact load 44.2
+- **Aerobic Low:** 870.6 (target 380–1033 — in range)
+- **Aerobic High:** 1129.9 (target 816–1468 — in range)
+- ⚠️ **Anaerobic:** 43.3 (target 217–652 — -174 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
 - ⚠️ **Sleep (7d avg):** 6h21, 5/7 nights below need, trending up
 - **RHR (7d avg):** 57.9, trending flat
@@ -50,8 +48,8 @@ _Most recent activity (2026-10-13):_
 | S | BHM W3: Rec Run | 6k · 48:10 | 44 |
 | M | Strength A | 20:37 | 2 |
 | T | 3x8min Thr | 8k · 54:01 | 173 |
-| W | Rest | — | — |
+| W | Run + Strides/Hills | 6k · 46:47 | 74 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 6 | 32.11 km | 4:31:03 | 475.2 |
+| 7 | 38.14 km | 5:17:50 | 549.1 |
