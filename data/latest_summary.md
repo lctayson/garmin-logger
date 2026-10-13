@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.7
   - MS: 5.03k @ 7:33 142bpm 0.79m 167spm 281ms 8.0cm 233w
   - Readiness 64 → 57 (Listen To Your Body) · Recovery 20h 28m
-  - 🧠 Pacing was disciplined on this 6 km recovery run, starting conservatively at 7:59/km before steadily progressing down to 6:46/km on the final kilometer. Heart rate control was well within intent, averaging 142 bpm overall and only touching 152 bpm on the faster closing segment, keeping you right around the sub-150 bpm cap for easy days. Morning readiness was moderate at 64 with a 77 sleep score, making this exactly the low-cost aerobic maintenance session needed ahead of Thursday's 4×1K VO2max intervals.
+  - 🧠 The six reps progressed from 7:59 /km down to 6:46 /km while heart rate rose steadily from 126 to 152 bpm, indicating a clear negative‑pace drift and a modest shift from easy‑aerobic into low‑threshold effort by the final hill/stride. Because today’s “run + strides/hills” aligns with the scheduled Wednesday easy day (target 6:40‑7:15 /km, HR ≤150 bpm), the overall intensity stayed
 
 ## Next Session
 - **Planned:** Thu, Oct 15 — 8k as 4×1K @ 5:00-5:08 (or 5:12?), 2min jog, ≤172

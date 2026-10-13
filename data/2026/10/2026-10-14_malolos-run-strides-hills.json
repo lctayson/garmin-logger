@@ -708,8 +708,8 @@
         ]
       },
       "lap_count": 18,
-      "ai_analysis": "Pacing was disciplined on this 6 km recovery run, starting conservatively at 7:59/km before steadily progressing down to 6:46/km on the final kilometer. Heart rate control was well within intent, averaging 142 bpm overall and only touching 152 bpm on the faster closing segment, keeping you right around the sub-150 bpm cap for easy days. Morning readiness was moderate at 64 with a 77 sleep score, making this exactly the low-cost aerobic maintenance session needed ahead of Thursday's 4×1K VO2max intervals.",
-      "ai_analysis_provider": "gemini:gemini-3.8-flash"
+      "ai_analysis": "The six reps progressed from 7:59 /km down to 6:46 /km while heart rate rose steadily from 126 to 152 bpm, indicating a clear negative‑pace drift and a modest shift from easy‑aerobic into low‑threshold effort by the final hill/stride. Because today’s “run + strides/hills” aligns with the scheduled Wednesday easy day (target 6:40‑7:15 /km, HR ≤150 bpm), the overall intensity stayed",
+      "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
 }
