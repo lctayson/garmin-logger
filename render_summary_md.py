@@ -639,7 +639,19 @@ def _activity_detail_lines(act: dict[str, Any]) -> list[str]:
     if isinstance(te, dict):
         te_bits = []
         if te.get("label"):
-            te_bits.append(str(te["label"]))
+            # Preserve the primary-benefit meaning in Garmin Connect wording.
+            primary_benefit = {
+                "LACTATE_THRESHOLD": "Threshold (High Aerobic)",
+                "TEMPO": "Tempo (High Aerobic)",
+                "VO2MAX": "VO2 Max (High Aerobic)",
+                "ANAEROBIC_CAPACITY": "Anaerobic Capacity",
+                "SPRINT": "Sprint (Anaerobic)",
+                "BASE": "Base (Low Aerobic)",
+                "RECOVERY": "Recovery (Low Aerobic)",
+                "RECOVERY_RUN": "Recovery (Low Aerobic)",
+                "LONG_SLOW_DISTANCE": "Base (Low Aerobic)",
+            }.get(str(te["label"]).upper(), str(te["label"]).replace("_", " ").title())
+            te_bits.append(primary_benefit)
         if te.get("aerobic") is not None:
             aerobic = _num(te.get("aerobic"))
             if aerobic is not None:
@@ -670,7 +682,52 @@ def _activity_detail_lines(act: dict[str, Any]) -> list[str]:
     return lines
 
 
-def _today_lines(metrics_date: Any, activities_payload: dict[str, Any] | None) -> list[str]:
+def _post_workout_recovery_lines(metrics_payload: dict[str, Any] | None, activity_date: Any) -> list[str]:
+    """Render the same-day post-exercise readiness snapshot when available."""
+    if not isinstance(metrics_payload, dict) or metrics_payload.get("date") != activity_date:
+        return []
+    readiness = metrics_payload.get("readiness")
+    snapshots = readiness.get("snapshots") if isinstance(readiness, dict) else None
+    if not isinstance(snapshots, list):
+        return []
+
+    snapshot = next(
+        (item for item in reversed(snapshots)
+         if isinstance(item, dict) and item.get("context") == "AFTER_POST_EXERCISE_RESET"),
+        None,
+    )
+    if not snapshot:
+        return []
+
+    lines = ["", "- **Post-workout response:**"]
+    score = _num(snapshot.get("score"))
+    feedback = snapshot.get("feedback")
+    if score is not None:
+        score_line = f"- **Readiness:** {score:g}/100"
+        if feedback:
+            score_line += f" ({str(feedback).replace('_', ' ').title()})"
+        lines.append("  " + score_line)
+    elif feedback:
+        lines.append(f"  - **Readiness:** {str(feedback).replace('_', ' ').title()}")
+
+    recovery_minutes = _num(snapshot.get("recovery_minutes"))
+    if recovery_minutes is not None:
+        recovery_minutes = max(0, int(round(recovery_minutes)))
+        hours, minutes = divmod(recovery_minutes, 60)
+        if hours >= 24:
+            days, hours = divmod(hours, 24)
+            recovery_text = f"{days}d {hours}h {minutes}m" if minutes else f"{days}d {hours}h"
+        else:
+            recovery_text = f"{hours}h {minutes}m" if minutes else f"{hours}h"
+        lines.append(f"  - **Remaining recovery time:** {recovery_text}")
+    return lines if len(lines) > 1 else []
+
+
+def _today_lines(
+    metrics_date: Any,
+    activities_payload: dict[str, Any] | None,
+    metrics_payload: dict[str, Any] | None = None,
+) -> list[str]:
     if not isinstance(activities_payload, dict):
         return ["## Activity", "", "_No activity file found._"]
 
@@ -685,6 +742,7 @@ def _today_lines(metrics_date: Any, activities_payload: dict[str, Any] | None) -
         for act in activities:
             if isinstance(act, dict):
                 lines.extend(_activity_detail_lines(act))
+        lines.extend(_post_workout_recovery_lines(metrics_payload, activities_date))
         return lines
 
     if not has_activities:
@@ -918,14 +976,14 @@ def render(metrics: dict[str, Any], activities: dict[str, Any] | None, data_dir:
     )
 
     if has_activity_today:
-        out.extend(_today_lines(date, activities))
+        out.extend(_today_lines(date, activities, metrics))
         out.append("")
         out.extend(_next_session_lines(metrics, data_dir))
         out.append("")
     else:
         out.extend(_next_session_lines(metrics, data_dir))
         out.append("")
-        out.extend(_today_lines(date, activities))
+        out.extend(_today_lines(date, activities, metrics))
         out.append("")
 
     load_lines = _load_lines(metrics, summary)
