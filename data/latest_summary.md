@@ -16,7 +16,7 @@
   - TE: LACTATE_THRESHOLD · aerobic 3.9 · anaerobic 0.9
   - Intervals: 3 work reps · pace drift -6.0% · HR +10bpm
   - MS: 4.32k @ 5:33 163bpm 1.00m 178spm 248ms 8.2cm 308w
-  - 🧠 The three 8‑minute reps were spot‑on for the Tuesday sub‑threshold prescription, each held at 5:33 /km (the 5:25‑5:35 /km target window) with HR climbing from 157 bpm to 167 bpm and staying just under the ≤168 bpm cap. The –6 % pace‑efficiency drift and flat power delta suggest a modest gain in work‑rate consistency across reps, while stamina fell from 99 % to 67 %—a normal acute fatigue response for a threshold block. Training‑effect scores (aerobic 3.9, anaerobic 0.9 “NO_ANAEROBIC_BENEFIT”) confirm the session delivered the intended lactate‑threshold stimulus without unnecessary anaerobic load, aligning well with the current bridge phase focus.
+  - 🧠 The three 8‑minute reps were all held at 5:33 /km, right inside the prescribed VO₂max/threshold window (5:20–5:35 /km), and the HR stayed below the Thursday cap, so the intensity target was met. However, the interval‑drift metrics show a –6 % pace‑efficiency decline and a 10‑bpm rise in HR across the reps, mirrored by the stamina drop from 99 % to 67 %, indicating the later reps felt noticeably harder despite unchanged pacing. Your morning readiness was high (86, “Well Recovered”) and the post‑run snapshot reflects the expected dip (score 61, recovery‑time at 45 % of baseline), but the consistent efficiency loss suggests you may be accumulating fatigue faster than usual and should monitor recovery before the next hard Tuesday session.
 
 ## Next Session
 - **Planned:** Wed, Oct 14 — 6k EZ @ 6:50-7:20, ≤150 + 6-8 strides
