@@ -36,7 +36,7 @@
   - TE: LACTATE_THRESHOLD · aerobic 3.9 · anaerobic 0.9
   - Intervals: 3 work reps · pace drift -6.0% · HR +10bpm
   - MS: 4.32k @ 5:33 163bpm 1.00m 178spm 248ms 8.2cm 308w
-  - 🧠 The three 8‑minute reps were all exactly 5:33 /km, right inside the prescribed sub‑threshold window (5:20–5:35 /km) and HR stayed below the ≤168 bpm cap, climbing from 157 bpm to 167 bpm as expected. The –6 % pace‑efficiency and –6
+  - 🧠 The three 8‑minute reps were all exactly 5:33 /km, landing comfortably within the 5:25–5:35 /km target for Tuesday threshold work, so pacing was spot‑on. Heart‑rate rose from 157 bpm in the first rep to 167 bpm in the third, staying just under the ≤172 bpm cap for hard intervals, and the –6 % pace‑efficiency drift reflects a modest speed‑up despite the HR climb. Stamina dipped to 67 % by the end and the acute load of 173 points matches the expected bridge‑phase intensity, while your morning readiness score of 86 (high) indicates you began the session well recovered. No concerning signals emerged; the workout delivered the intended threshold stimulus without over‑reaching.
 
 ## This Week (Oct 7–13)
 
