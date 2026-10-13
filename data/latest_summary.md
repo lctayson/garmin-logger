@@ -16,7 +16,7 @@
   - TE: LACTATE_THRESHOLD · aerobic 3.9 · anaerobic 0.9
   - Intervals: 3 work reps · pace drift -6.0% · HR +10bpm
   - MS: 4.32k @ 5:33 163bpm 1.00m 178spm 248ms 8.2cm 308w
-  - 🧠 The three 8‑minute reps were all exactly 5:33 /km, landing squarely in the prescribed 5:25‑5:35 /km sub‑threshold window, while heart rate climbed from 157 to 167 bpm (the recorded 10 bpm HR delta and –6 % pace‑efficiency drift show a rising cardiovascular cost despite steady pace). The session generated a strong lactate‑threshold stimulus (aerobic 3.9) with only a marginal anaerobic contribution (0.9), and stamina fell from 99 %
+  - 🧠 The three 8‑minute reps were spot‑on for the Tuesday sub‑threshold prescription, each held at 5:33 /km (the 5:25‑5:35 /km target window) with HR climbing from 157 bpm to 167 bpm and staying just under the ≤168 bpm cap. The –6 % pace‑efficiency drift and flat power delta suggest a modest gain in work‑rate consistency across reps, while stamina fell from 99 % to 67 %—a normal acute fatigue response for a threshold block. Training‑effect scores (aerobic 3.9, anaerobic 0.9 “NO_ANAEROBIC_BENEFIT”) confirm the session delivered the intended lactate‑threshold stimulus without unnecessary anaerobic load, aligning well with the current bridge phase focus.
 
 ## Next Session
 - **Planned:** Wed, Oct 14 — 6k EZ @ 6:50-7:20, ≤150 + 6-8 strides

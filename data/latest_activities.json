@@ -570,7 +570,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The three 8‑minute reps were all exactly 5:33 /km, landing squarely in the prescribed 5:25‑5:35 /km sub‑threshold window, while heart rate climbed from 157 to 167 bpm (the recorded 10 bpm HR delta and –6 % pace‑efficiency drift show a rising cardiovascular cost despite steady pace). The session generated a strong lactate‑threshold stimulus (aerobic 3.9) with only a marginal anaerobic contribution (0.9), and stamina fell from 99 %",
+      "ai_analysis": "The three 8‑minute reps were spot‑on for the Tuesday sub‑threshold prescription, each held at 5:33 /km (the 5:25‑5:35 /km target window) with HR climbing from 157 bpm to 167 bpm and staying just under the ≤168 bpm cap. The –6 % pace‑efficiency drift and flat power delta suggest a modest gain in work‑rate consistency across reps, while stamina fell from 99 % to 67 %—a normal acute fatigue response for a threshold block. Training‑effect scores (aerobic 3.9, anaerobic 0.9 “NO_ANAEROBIC_BENEFIT”) confirm the session delivered the intended lactate‑threshold stimulus without unnecessary anaerobic load, aligning well with the current bridge phase focus.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
