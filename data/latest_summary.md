@@ -17,7 +17,7 @@
   - Intervals: 3 work reps · pace drift -6.0% · HR +10bpm
   - MS: 4.32k @ 5:33 163bpm 1.00m 178spm 248ms 8.2cm 308w
   - Readiness 86 → 61 (Recovery In Progress) · Recovery 1d 9h 36m
-  - 🧠 The three 8‑minute reps were all exactly 5:33 / km, landing squarely in the prescribed sub‑threshold window (5:20–5:35) and showing a steady HR climb from 157 bpm to 167 bpm, which matches the expected cardiovascular load for this intensity. The −6 % pace‑efficiency drift and 10 bpm HR delta across reps indicate a modest loss of efficiency toward the end of the set, even though the pace itself did not slip. With a pre‑run readiness score of 86 (high) and a training load of ~173, the session delivered the intended lactate‑threshold stimulus (aerobic effect ≈ 3.9) without any abnormal fatigue signals. No red flags appear for the upcoming bridge‑phase VO2max work.
+  - 🧠 The three 8‑minute threshold reps hit the prescribed 5:25–5:35 km pace exactly (all 5:33) and stayed within the SUT HR cap (final rep 167 bpm ≤ 168), so the intensity was spot‑on. However, HR climbed 10 bpm across the reps while pace stayed flat, and the interval‑drift shows a –6 % efficiency drop, suggesting emerging cardiovascular fatigue despite consistent pacing. With a morning readiness score of 86 (high) and a session load of 173 AU, the workout delivered the intended lactate‑threshold stimulus without overreaching, but the rising HR and efficiency drift are a cue to monitor recovery before the next hard day.
 
 ## Next Session
 - **Planned:** Wed, Oct 14 — 6k EZ @ 6:50-7:20, ≤150 + 6-8 strides
