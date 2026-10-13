@@ -36,7 +36,7 @@
   - TE: LACTATE_THRESHOLD · aerobic 3.9 · anaerobic 0.9
   - Intervals: 3 work reps · pace drift -6.0% · HR +10bpm
   - MS: 4.32k @ 5:33 163bpm 1.00m 178spm 248ms 8.2cm 308w
-  - 🧠 The three 8‑minute reps were executed at a perfectly steady 5:33 /km (157 → 164 → 167 bpm), staying within the sub‑threshold HR cap of ≤168 bpm and showing a modest 6 % efficiency drift that reflects the expected rise in heart rate rather than any pacing slip. The overall average pace (6:44 /km) looks slower only because it includes the warm‑up, jog‑back recoveries and cool‑down; the interval work itself delivered a solid aerobic stimulus (aerobic TE ≈ 3.9) with essentially no anaerobic contribution, which is exactly what the bridge phase calls for. Stamina fell from 99 % to 67 % and the post‑run readiness dropped to 61, indicating a noticeable fatigue load but nothing alarming given the high pre‑run score (86) and the intended threshold focus.
+  - 🧠 The three 8‑minute reps were all exactly 5:33 /km, right inside the prescribed sub‑threshold window (5:20–5:35 /km) and HR stayed below the ≤168 bpm cap, climbing from 157 bpm to 167 bpm as expected. The –6 % pace‑efficiency and –6
 
 ## This Week (Oct 7–13)
 
