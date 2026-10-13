@@ -570,7 +570,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The three 8‑minute threshold reps were perfectly on‑pace at 5:33 /km, landing squarely inside the prescribed 5:25‑5:35 window and showing no variation (pace range = 5:33‑5:33). Heart‑rate climbed steadily from 157 bpm to 167 bpm across the reps, and the –6 % pace‑efficiency drift reflects that the same speed was maintained while cardiovascular strain rose—a classic sign of a genuine threshold stimulus. Stamina dropped from 99 % to 67 % during the set, which is expected for a hard Tuesday session, and your morning readiness of 86 (high) suggests you were well‑recovered enough to sustain the load. Post‑run readiness fell to 61, a normal acute recovery dip given the 172.9 training load.",
+      "ai_analysis": "The three 8‑minute threshold reps hit the prescribed 5:25‑5:35 /km window exactly (5:33 each) and the final rep HR of 167 bpm stayed within the Tuesday cap of ≤168 bpm, so the pacing and intensity targets were met. Across the set HR rose 10 bpm (157 → 167) and stamina fell from 99 % to 67 %, reflecting the expected accumulating load rather than a loss of efficiency—the –6 % pace‑efficiency drift aligns with the steady rep pace despite the HR climb. With a pre‑run readiness score of 86 (high) and a post‑run drop to 61 as the acute load rose to 557, the session delivered a solid lactate‑threshold stimulus (aerobic 3.9, anaerobic ≈ 0.9) without overreaching.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]

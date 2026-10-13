@@ -10,6 +10,21 @@
 - ⚠️ **Limiter:** Sleep History (63%)
 - **Also soft:** Stress History
 
+## Today's Workout
+
+- **Malolos - 3 x 8min Threshold** — 8.02km · 54:01 · 6:44/km · HR 151/174 max
+  - TE: LACTATE_THRESHOLD · aerobic 3.9 · anaerobic 0.9
+  - Intervals: 3 work reps · pace drift -6.0% · HR +10bpm
+  - MS: 4.32k @ 5:33 163bpm 1.00m 178spm 248ms 8.2cm 308w
+  - 🧠 The three 8‑minute threshold reps hit the prescribed 5:25‑5:35 /km window exactly (5:33 each) and the final rep HR of 167 bpm stayed within the Tuesday cap of ≤168 bpm, so the pacing and intensity targets were met. Across the set HR rose 10 bpm (157 → 167) and stamina fell from 99 % to 67 %, reflecting the expected accumulating load rather than a loss of efficiency—the –6 % pace‑efficiency drift aligns with the steady rep pace despite the HR climb. With a pre‑run readiness score of 86 (high) and a post‑run drop to 61 as the acute load rose to 557, the session delivered a solid lactate‑threshold stimulus (aerobic 3.9, anaerobic ≈ 0.9) without overreaching.
+
+## Next Session
+- **Planned:** Wed, Oct 14 — 6k EZ @ 6:50-7:20, ≤150 + 6-8 strides
+- **Recommendation:** Keep it easy
+- **Reason:** low 7-day sleep average (6.3h); resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
+- **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
+- *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
+
 ## Load & Trends
 
 - **ACWR:** 1.0 (Optimal) — acute 557 / chronic 526 (chronic range 420.8–789)
@@ -22,21 +37,6 @@
 - ⚠️ **Sleep (7d avg):** 6h20, 5/7 nights below need, trending flat
 - ⚠️ **RHR (7d avg):** 57.3, trending up
 - ⚠️ **HRV:** trending down
-
-## Next Session
-- **Planned:** Wed, Oct 14 — 6k EZ @ 6:50-7:20, ≤150 + 6-8 strides
-- **Recommendation:** Keep it easy
-- **Reason:** low 7-day sleep average (6.3h); resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
-- **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
-- *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
-
-## Today's Workout
-
-- **Malolos - 3 x 8min Threshold** — 8.02km · 54:01 · 6:44/km · HR 151/174 max
-  - TE: LACTATE_THRESHOLD · aerobic 3.9 · anaerobic 0.9
-  - Intervals: 3 work reps · pace drift -6.0% · HR +10bpm
-  - MS: 4.32k @ 5:33 163bpm 1.00m 178spm 248ms 8.2cm 308w
-  - 🧠 The three 8‑minute threshold reps were perfectly on‑pace at 5:33 /km, landing squarely inside the prescribed 5:25‑5:35 window and showing no variation (pace range = 5:33‑5:33). Heart‑rate climbed steadily from 157 bpm to 167 bpm across the reps, and the –6 % pace‑efficiency drift reflects that the same speed was maintained while cardiovascular strain rose—a classic sign of a genuine threshold stimulus. Stamina dropped from 99 % to 67 % during the set, which is expected for a hard Tuesday session, and your morning readiness of 86 (high) suggests you were well‑recovered enough to sustain the load. Post‑run readiness fell to 61, a normal acute recovery dip given the 172.9 training load.
 
 ## This Week (Oct 7–13)
 
