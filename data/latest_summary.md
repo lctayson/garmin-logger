@@ -36,7 +36,7 @@
   - TE: LACTATE_THRESHOLD · aerobic 3.9 · anaerobic 0.9
   - Intervals: 3 work reps · pace drift -6.0% · HR +10bpm
   - MS: 4.32k @ 5:33 163bpm 1.00m 178spm 248ms 8.2cm 308w
-  - 🧠 The three 8‑minute reps were all exactly 5:33 /km, landing comfortably within the 5:25–5:35 /km target for Tuesday threshold work, so pacing was spot‑on. Heart‑rate rose from 157 bpm in the first rep to 167 bpm in the third, staying just under the ≤172 bpm cap for hard intervals, and the –6 % pace‑efficiency drift reflects a modest speed‑up despite the HR climb. Stamina dipped to 67 % by the end and the acute load of 173 points matches the expected bridge‑phase intensity, while your morning readiness score of 86 (high) indicates you began the session well recovered. No concerning signals emerged; the workout delivered the intended threshold stimulus without over‑reaching.
+  - 🧠 The three 8‑minute threshold reps were perfectly on‑pace at 5:33 /km, landing squarely inside the prescribed 5:25‑5:35 window and showing no variation (pace range = 5:33‑5:33). Heart‑rate climbed steadily from 157 bpm to 167 bpm across the reps, and the –6 % pace‑efficiency drift reflects that the same speed was maintained while cardiovascular strain rose—a classic sign of a genuine threshold stimulus. Stamina dropped from 99 % to 67 % during the set, which is expected for a hard Tuesday session, and your morning readiness of 86 (high) suggests you were well‑recovered enough to sustain the load. Post‑run readiness fell to 61, a normal acute recovery dip given the 172.9 training load.
 
 ## This Week (Oct 7–13)
 
