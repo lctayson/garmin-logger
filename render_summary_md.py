@@ -616,7 +616,7 @@ def _load_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[str]:
     return lines if len(lines) > 2 else []
 
 
-def _activity_detail_lines(act: dict[str, Any]) -> list[str]:
+def _activity_detail_lines(act: dict[str, Any], readiness_line: str | None = None) -> list[str]:
     name = act.get("name") or act.get("type") or "Activity"
     bit = f"- **{name}**"
     detail = []
@@ -676,41 +676,52 @@ def _activity_detail_lines(act: dict[str, Any]) -> list[str]:
     if ms_line:
         lines.append(ms_line)
 
+    if readiness_line:
+        lines.append(f"  - {readiness_line}")
+
     ai_analysis = act.get("ai_analysis")
     if ai_analysis:
         lines.append(f"  - 🧠 {ai_analysis}")
     return lines
 
 
-def _post_workout_recovery_lines(metrics_payload: dict[str, Any] | None, activity_date: Any) -> list[str]:
-    """Render the same-day post-exercise readiness snapshot when available."""
+def _post_workout_readiness_line(
+    metrics_payload: dict[str, Any] | None, activity_date: Any
+) -> str | None:
+    """Format pre- to post-workout readiness and remaining recovery on one line."""
     if not isinstance(metrics_payload, dict) or metrics_payload.get("date") != activity_date:
-        return []
+        return None
     readiness = metrics_payload.get("readiness")
     snapshots = readiness.get("snapshots") if isinstance(readiness, dict) else None
     if not isinstance(snapshots, list):
-        return []
+        return None
 
-    snapshot = next(
+    before = next(
+        (item for item in snapshots
+         if isinstance(item, dict) and item.get("context") == "AFTER_WAKEUP_RESET"),
+        None,
+    )
+    after = next(
         (item for item in reversed(snapshots)
          if isinstance(item, dict) and item.get("context") == "AFTER_POST_EXERCISE_RESET"),
         None,
     )
-    if not snapshot:
-        return []
+    if not after:
+        return None
 
-    lines = ["", "- **Post-workout response:**"]
-    score = _num(snapshot.get("score"))
-    feedback = snapshot.get("feedback")
-    if score is not None:
-        score_line = f"- **Readiness:** {score:g}/100"
-        if feedback:
-            score_line += f" ({str(feedback).replace('_', ' ').title()})"
-        lines.append("  " + score_line)
-    elif feedback:
-        lines.append(f"  - **Readiness:** {str(feedback).replace('_', ' ').title()}")
+    parts = []
+    before_score = _num(before.get("score")) if before else None
+    after_score = _num(after.get("score"))
+    if before_score is not None and after_score is not None:
+        parts.append(f"Readiness {before_score:g} → {after_score:g}")
+    elif after_score is not None:
+        parts.append(f"Readiness {after_score:g}")
 
-    recovery_minutes = _num(snapshot.get("recovery_minutes"))
+    feedback = after.get("feedback")
+    if feedback:
+        parts[-1] += f" ({str(feedback).replace('_', ' ').title()})" if parts else f"Readiness ({str(feedback).replace('_', ' ').title()})"
+
+    recovery_minutes = _num(after.get("recovery_minutes"))
     if recovery_minutes is not None:
         recovery_minutes = max(0, int(round(recovery_minutes)))
         hours, minutes = divmod(recovery_minutes, 60)
@@ -719,8 +730,8 @@ def _post_workout_recovery_lines(metrics_payload: dict[str, Any] | None, activit
             recovery_text = f"{days}d {hours}h {minutes}m" if minutes else f"{days}d {hours}h"
         else:
             recovery_text = f"{hours}h {minutes}m" if minutes else f"{hours}h"
-        lines.append(f"  - **Remaining recovery time:** {recovery_text}")
-    return lines if len(lines) > 1 else []
+        parts.append(f"Recovery {recovery_text}")
+    return " · ".join(parts) if parts else None
 
 
 def _today_lines(
@@ -739,10 +750,10 @@ def _today_lines(
 
     if is_today and has_activities:
         lines = ["## Today's Workout", ""]
-        for act in activities:
+        readiness_line = _post_workout_readiness_line(metrics_payload, activities_date)
+        for index, act in enumerate(activities):
             if isinstance(act, dict):
-                lines.extend(_activity_detail_lines(act))
-        lines.extend(_post_workout_recovery_lines(metrics_payload, activities_date))
+                lines.extend(_activity_detail_lines(act, readiness_line if index == 0 else None))
         return lines
 
     if not has_activities:
