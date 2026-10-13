@@ -902,20 +902,36 @@ def render(metrics: dict[str, Any], activities: dict[str, Any] | None, data_dir:
 
     date = metrics.get("date", "")
     out: list[str] = [f"# Daily Check — {date}".rstrip(), ""]
-    # Put multi-day recovery and training-load context before recommending
-    # the next session, so the recommendation is read alongside those trends.
     out.extend(_readiness_lines(metrics, summary))
     out.append("")
+
+    # Today's completed workout is more actionable than the next-session
+    # prescription. On rest days, show the plan first and historical activity
+    # second, so an older workout never pushes the upcoming session down.
+    activities_date = activities.get("date") if isinstance(activities, dict) else None
+    activity_list = activities.get("activities") if isinstance(activities, dict) else None
+    has_activity_today = (
+        date is not None
+        and activities_date == date
+        and isinstance(activity_list, list)
+        and bool(activity_list)
+    )
+
+    if has_activity_today:
+        out.extend(_today_lines(date, activities))
+        out.append("")
+        out.extend(_next_session_lines(metrics, data_dir))
+        out.append("")
+    else:
+        out.extend(_next_session_lines(metrics, data_dir))
+        out.append("")
+        out.extend(_today_lines(date, activities))
+        out.append("")
 
     load_lines = _load_lines(metrics, summary)
     if load_lines:
         out.extend(load_lines)
         out.append("")
-
-    out.extend(_next_session_lines(metrics, data_dir))
-    out.append("")
-    out.extend(_today_lines(date, activities))
-    out.append("")
 
     week_lines = _this_week_lines(metrics, data_dir)
     if week_lines:
