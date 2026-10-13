@@ -570,7 +570,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "All three 8‑minute reps were completed at exactly 5:33 /km, matching the",
+      "ai_analysis": "The three 8‑minute reps were executed at a perfectly steady 5:33 /km (157 → 164 → 167 bpm), staying within the sub‑threshold HR cap of ≤168 bpm and showing a modest 6 % efficiency drift that reflects the expected rise in heart rate rather than any pacing slip. The overall average pace (6:44 /km) looks slower only because it includes the warm‑up, jog‑back recoveries and cool‑down; the interval work itself delivered a solid aerobic stimulus (aerobic TE ≈ 3.9) with essentially no anaerobic contribution, which is exactly what the bridge phase calls for. Stamina fell from 99 % to 67 % and the post‑run readiness dropped to 61, indicating a noticeable fatigue load but nothing alarming given the high pre‑run score (86) and the intended threshold focus.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
