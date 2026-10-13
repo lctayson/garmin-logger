@@ -16,7 +16,7 @@
   - TE: LACTATE_THRESHOLD · aerobic 3.9 · anaerobic 0.9
   - Intervals: 3 work reps · pace drift -6.0% · HR +10bpm
   - MS: 4.32k @ 5:33 163bpm 1.00m 178spm 248ms 8.2cm 308w
-  - 🧠 The three 8‑minute reps were all held at 5:33 /km, right inside the prescribed VO₂max/threshold window (5:20–5:35 /km), and the HR stayed below the Thursday cap, so the intensity target was met. However, the interval‑drift metrics show a –6 % pace‑efficiency decline and a 10‑bpm rise in HR across the reps, mirrored by the stamina drop from 99 % to 67 %, indicating the later reps felt noticeably harder despite unchanged pacing. Your morning readiness was high (86, “Well Recovered”) and the post‑run snapshot reflects the expected dip (score 61, recovery‑time at 45 % of baseline), but the consistent efficiency loss suggests you may be accumulating fatigue faster than usual and should monitor recovery before the next hard Tuesday session.
+  - 🧠 The three 8‑minute threshold reps were all exactly 5:33 /km, landing squarely inside the prescribed 5:25–5:35 /km window for Tuesday VO2max work. Heart‑rate climbed from 157 bpm in the first rep to 167 bpm in the third, matching the expected rise toward the upper end of the threshold zone and consistent with the –6 % pace‑efficiency drift (the reps got slightly faster despite the HR increase). Stamina fell from 99 % to 67 % and the lactate‑threshold training effect was modest (aerobic 3.9, anaerobic ≈0.9), which is typical for a well‑recovered (readiness 86) session. Overall execution was on target, delivering the intended sub‑threshold stimulus without signs of under‑ or over‑loading.
 
 ## Next Session
 - **Planned:** Wed, Oct 14 — 6k EZ @ 6:50-7:20, ≤150 + 6-8 strides
