@@ -44,7 +44,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "Readiness is moderate (score 64) but every sub‑factor—sleep, HRV, ACWR—is in the “good” range, and your resting HR is low (59 bpm). Go ahead with today’s normal Wednesday workout: 6 km easy at 6:50‑7:20 min/km (keep HR ≤150 bpm) and finish with 6‑8 short strides. No adjustments needed.",
+    "ai_analysis": "Readiness is moderate (64) but every component—HRV, recovery hours, ACWR, and sleep history—is solid and well within the “good” range. Your Wednesday slot is an easy run + strides, and the data shows you’re ready to handle the low‑intensity load without risk. Do the planned 6 km easy run (keep average HR ≤150 bpm) and finish with the usual 6‑8 strides; no need to cut distance or rest today.",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
