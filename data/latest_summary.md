@@ -17,7 +17,7 @@
   - Intervals: 3 work reps · pace drift -6.0% · HR +10bpm
   - MS: 4.32k @ 5:33 163bpm 1.00m 178spm 248ms 8.2cm 308w
   - Readiness 86 → 61 (Recovery In Progress) · Recovery 1d 9h 36m
-  - 🧠 The three 8‑minute threshold reps were executed exactly at the prescribed 5:33 /km (within the 5:20‑5:35 /km sub‑threshold window) and the final rep HR of 167 bpm stayed under the ≤168 cap, so pacing and intensity were on target. Stamina fell from 99 % to 67 % and interval‑drift shows a –6 % drop in pace‑efficiency (power efficiency) despite identical rep paces, indicating a modest fatigue‑related loss of mechanical efficiency rather than a pacing slip. The training effect (aerobic 3.9, anaerobic ≈0.9) confirms a strong lactate‑threshold stimulus with negligible anaerobic load, exactly what a Tuesday threshold day should provide. Morning readiness was high (score 86), and the post‑run drop to 61 reflects the expected acute load of 557 AU, not a concern for recovery at this stage.
+  - 🧠 The three 8‑minute reps were all exactly 5:33 /km, landing squarely in the prescribed sub‑threshold window (5:20‑5:35 /km) and each stayed under the HR cap of 168 bpm (157 → 164 → 167 bpm), so the intensity target was met. A –6 % pace‑efficiency drift alongside the progressive HR rise indicates a modest loss of efficiency across the set, which is reflected in the stamina drop from 99 % to 67 % but does not compromise the intended lactate‑threshold stimulus (aerobic TE 3.9, anaerobic TE ≈ 0.9). With a high morning readiness (score 86) and the expected post‑run dip to 61, the load (173 AU) was appropriate for this bridge‑phase Tuesday session.
 
 ## Next Session
 - **Planned:** Wed, Oct 14 — 6k EZ @ 6:50-7:20, ≤150 + 6-8 strides
