@@ -719,7 +719,11 @@ def _post_workout_readiness_line(
 
     feedback = after.get("feedback")
     if feedback:
-        parts[-1] += f" ({str(feedback).replace('_', ' ').title()})" if parts else f"Readiness ({str(feedback).replace('_', ' ').title()})"
+        feedback_text = str(feedback).replace("_", " ").title()
+        if parts:
+            parts[-1] += f" ({feedback_text})"
+        else:
+            parts.append(f"Readiness ({feedback_text})")
 
     recovery_minutes = _num(after.get("recovery_minutes"))
     if recovery_minutes is not None:
