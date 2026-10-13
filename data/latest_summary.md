@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.7
   - MS: 5.03k @ 7:33 142bpm 0.79m 167spm 281ms 8.0cm 233w
   - Readiness 64 → 57 (Listen To Your Body) · Recovery 20h 28m
-  - 🧠 The 6 km easy run with strides/hills stayed firmly in the easy aerobic zone—average HR 142 bpm and rep paces ranging from 7:59 to 6:46 /km (average rep pace 7:25 /km) kept you well below the ≤150 bpm cap. Your HR rose steadily across the reps (126 → 152 bpm) but never exceeded the easy‑zone ceiling, and the modest stamina dip from 99 % to 85 % aligns with the expected load (load ≈ 74). Morning readiness was moderate (score 64) with good sleep, and the post‑run drop to 57 reflects the acute cost of today’s effort rather than a recovery deficit. Overall, execution matched the Wednesday easy‑run prescription and delivered the intended aerobic‑base stimulus without unintended anaerobic stress.
+  - 🧠 Pacing was disciplined on this 6 km recovery run, starting conservatively at 7:59/km before steadily progressing down to 6:46/km on the final kilometer. Heart rate control was well within intent, averaging 142 bpm overall and only touching 152 bpm on the faster closing segment, keeping you right around the sub-150 bpm cap for easy days. Morning readiness was moderate at 64 with a 77 sleep score, making this exactly the low-cost aerobic maintenance session needed ahead of Thursday's 4×1K VO2max intervals.
 
 ## Next Session
 - **Planned:** Thu, Oct 15 — 8k as 4×1K @ 5:00-5:08 (or 5:12?), 2min jog, ≤172

@@ -708,8 +708,8 @@
         ]
       },
       "lap_count": 18,
-      "ai_analysis": "The 6 km easy run with strides/hills stayed firmly in the easy aerobic zone—average HR 142 bpm and rep paces ranging from 7:59 to 6:46 /km (average rep pace 7:25 /km) kept you well below the ≤150 bpm cap. Your HR rose steadily across the reps (126 → 152 bpm) but never exceeded the easy‑zone ceiling, and the modest stamina dip from 99 % to 85 % aligns with the expected load (load ≈ 74). Morning readiness was moderate (score 64) with good sleep, and the post‑run drop to 57 reflects the acute cost of today’s effort rather than a recovery deficit. Overall, execution matched the Wednesday easy‑run prescription and delivered the intended aerobic‑base stimulus without unintended anaerobic stress.",
-      "ai_analysis_provider": "groq:openai/gpt-oss-120b"
+      "ai_analysis": "Pacing was disciplined on this 6 km recovery run, starting conservatively at 7:59/km before steadily progressing down to 6:46/km on the final kilometer. Heart rate control was well within intent, averaging 142 bpm overall and only touching 152 bpm on the faster closing segment, keeping you right around the sub-150 bpm cap for easy days. Morning readiness was moderate at 64 with a 77 sleep score, making this exactly the low-cost aerobic maintenance session needed ahead of Thursday's 4×1K VO2max intervals.",
+      "ai_analysis_provider": "gemini:gemini-3.8-flash"
     }
   ]
 }
