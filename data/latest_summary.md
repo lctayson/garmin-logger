@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.7
   - MS: 5.03k @ 7:33 142bpm 0.79m 167spm 281ms 8.0cm 233w
   - Readiness 64 → 57 (Listen To Your Body) · Recovery 20h 28m
-  - 🧠 The six reps progressed from a relaxed 7:59 /km to a sharp 6:46 /km, with heart rate climbing from 126 bpm to 152 bpm, so the effort stayed within the easy‑to‑steady HR window and did not produce a measurable anaerobic load (anaerobic TE 0.7 ≈ “no anaerobic benefit”). Your overall run was 6 km at 7:46 /km and avg HR 142 bpm, which aligns with the prescribed easy‑day limits (≤150 bpm) and fits the bridge‑phase “EZ + strides/hills” purpose. Stamina fell from 99 % to 85 % (min 79 %) and the post‑run readiness dropped to 57, reflecting the modest cumulative load (73.9) but not indicating any concerning overreaching
+  - 🧠 The six work reps ran progressively faster (7:59 → 6:46 /km) while heart rate rose from 126 to 152 bpm, and the final rep marginally exceeded the easy‑run HR cap of 150 bpm, indicating the hill/stride segment edged into low‑threshold intensity. Overall average pace of 7:46 /km was well outside the prescribed easy‑run window (6:
 
 ## Next Session
 - **Planned:** Thu, Oct 15 — 8k as 4×1K @ 5:00-5:08 (or 5:12?), 2min jog, ≤172
