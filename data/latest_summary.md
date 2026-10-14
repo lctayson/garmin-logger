@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.7
   - MS: 5.03k @ 7:33 142bpm 0.79m 167spm 281ms 8.0cm 233w
   - Readiness 64 → 57 (Listen To Your Body) · Recovery 20h 28m
-  - 🧠 The six work reps ran progressively faster (7:59 → 6:46 /km) while heart rate rose from 126 to 152 bpm, and the final rep marginally exceeded the easy‑run HR cap of 150 bpm, indicating the hill/stride segment edged into low‑threshold intensity. Overall average pace of 7:46 /km was well outside the prescribed easy‑run window (6:
+  - 🧠 This was a disciplined, low-stress easy aerobic session that respected the morning's moderate readiness (score 64). You eased nicely into the work across the 6 kilometers, keeping the average heart rate at 142 bpm and only touching 151–152 bpm as the pace progressed down to 6:46/km on the final kilometer. With overall aerobic demand kept light (load 73.9) and peak HR held to 157 bpm, this preserved the exact energy needed ahead of Thursday's VO2max intervals.
 
 ## Next Session
 - **Planned:** Thu, Oct 15 — 8k as 4×1K @ 5:00-5:08 (or 5:12?), 2min jog, ≤172
