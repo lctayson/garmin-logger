@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.7
   - MS: 5.03k @ 7:33 142bpm 0.79m 167spm 281ms 8.0cm 233w
   - Readiness 64 → 57 (Listen To Your Body) · Recovery 20h 28m
-  - 🧠 The six reps stayed within the easy‑aerobic zone (HR 126‑152 bpm, pace 7:59‑6:46 min/km) and actually got quicker, ending 13 seconds faster than the first rep, so there was no negative drift and the session delivered the intended low‑intensity stimulus (training‑effect anaerobic ≈ 0.0). The average rep pace of 7:25 min/km sits just above your usual easy target (6:50‑7:20), which matches the modest aerobic
+  - 🧠 Your six work reps stayed firmly in the easy‑aerobic zone, moving from 7:59 /km at 126 bpm to a quick 6:46 /km at 152 bpm, and the training‑effect report confirms virtually no anaerobic load (0.7 ae, “NO_ANAEROBIC_BENEFIT”). Stamina fell from 99 % to 85 % (min 79 %) and body‑battery dropped –11, which is typical for a 6 km effort at ~7:30 /km in the warm morning conditions you train in. Your morning readiness was moderate (score 64, good sleep), and the post‑run dip to 57 reflects the expected acute fatigue from
 
 ## Next Session
 - **Planned:** Thu, Oct 15 — 8k as 4×1K @ 5:00-5:08 (or 5:12?), 2min jog, ≤172
