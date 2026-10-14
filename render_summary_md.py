@@ -817,8 +817,8 @@ def _planned_session(context_text: str, next_day: Any, plan_heading: str) -> str
     return None
 
 
-def _next_session_lines(metrics: dict[str, Any], data_dir: str | None = None) -> list[str]:
-    """Give conservative guidance using today's markers and multi-day recovery trends."""
+def _session_guidance_lines(metrics: dict[str, Any], data_dir: str | None = None, *, day_offset: int = 1) -> list[str]:
+    """Give conservative guidance for today's or tomorrow's planned session."""
     from datetime import date, timedelta
     from pathlib import Path
     from config import resolve_training_plan_heading
@@ -827,13 +827,13 @@ def _next_session_lines(metrics: dict[str, Any], data_dir: str | None = None) ->
         today = date.fromisoformat(str(metrics.get("date", "")))
     except ValueError:
         return []
-    next_day = today + timedelta(days=1)
+    target_day = today + timedelta(days=day_offset)
     context_path = Path(__file__).with_name("training_context.md")
     try:
         context_text = context_path.read_text(encoding="utf-8")
     except OSError:
         return []
-    session = _planned_session(context_text, next_day, resolve_training_plan_heading())
+    session = _planned_session(context_text, target_day, resolve_training_plan_heading())
     if not session:
         return []
 
@@ -955,9 +955,10 @@ def _next_session_lines(metrics: dict[str, Any], data_dir: str | None = None) ->
         action = "Follow the planned session, using normal effort-based adjustments and reassess during the warm-up."
 
     reasons = severe + caution
+    heading = "Today's Session" if day_offset == 0 else "Next Session"
     lines = [
-        "## Next Session",
-        f"- **Planned:** {next_day.strftime('%a, %b %d').replace(' 0', ' ')} — {session}",
+        f"## {heading}",
+        f"- **Planned:** {target_day.strftime('%a, %b %d').replace(' 0', ' ')} — {session}",
         f"- **Recommendation:** {decision}",
     ]
     if reasons:
@@ -978,9 +979,8 @@ def render(metrics: dict[str, Any], activities: dict[str, Any] | None, data_dir:
     out.extend(_readiness_lines(metrics, summary))
     out.append("")
 
-    # Today's completed workout is more actionable than the next-session
-    # prescription. On rest days, show the plan first and historical activity
-    # second, so an older workout never pushes the upcoming session down.
+    # Before today's workout is logged, show today's prescription first.
+    # Once an activity is logged today, show its details followed by tomorrow's plan.
     activities_date = activities.get("date") if isinstance(activities, dict) else None
     activity_list = activities.get("activities") if isinstance(activities, dict) else None
     has_activity_today = (
@@ -996,7 +996,7 @@ def render(metrics: dict[str, Any], activities: dict[str, Any] | None, data_dir:
         out.extend(_next_session_lines(metrics, data_dir))
         out.append("")
     else:
-        out.extend(_next_session_lines(metrics, data_dir))
+        out.extend(_session_guidance_lines(metrics, data_dir, day_offset=0))
         out.append("")
         out.extend(_today_lines(date, activities, metrics))
         out.append("")
