@@ -521,10 +521,6 @@ def _readiness_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[s
         if others:
             lines.append(f"- **Also soft:** {', '.join(_titleize(n) for n in others)}")
 
-    ai_analysis = readiness.get("ai_analysis")
-    if ai_analysis:
-        lines.append(f"- 🧠 {ai_analysis}")
-
     return lines
 
 
@@ -966,6 +962,14 @@ def _session_guidance_lines(metrics: dict[str, Any], data_dir: str | None = None
     else:
         lines.append("- **Reason:** Available readiness, recovery-trend, and load indicators do not show a combination of major warnings.")
     lines.append(f"- **Action:** {action}")
+    if day_offset == 0:
+        ai_guidance = (readiness.get("ai_analysis") or "").strip()
+        if ai_guidance:
+            lines.append("")
+            lines.append("### 🧠 AI Coaching Guidance")
+            lines.append("")
+            lines.append(ai_guidance)
+    lines.append("")
     lines.append("- *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*")
     return lines
 
