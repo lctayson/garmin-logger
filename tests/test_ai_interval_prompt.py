@@ -63,3 +63,14 @@ def test_prompts_include_compact_readiness_snapshots():
     readiness_prompt = json.loads(_build_readiness_prompt(metrics, "2026-10-08"))
     assert readiness_prompt["readiness"]["score"] == 72
     assert readiness_prompt["readiness"]["snapshots"] == snapshots
+
+
+def test_readiness_coaching_prompt_requires_executable_plan_specific_guidance():
+    import generate_ai_analysis
+
+    prompt = generate_ai_analysis.READINESS_SYSTEM_PREFIX
+    assert "exact session scheduled for the target date" in prompt
+    assert "main-set reps and pace/effort" in prompt
+    assert "HRV vs baseline/balanced band" in prompt
+    assert "concrete fallback" in prompt
+    assert "do not invent missing prescriptions" in prompt
