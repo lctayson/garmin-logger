@@ -708,8 +708,8 @@
         ]
       },
       "lap_count": 18,
-      "ai_analysis": "This was an appropriately disciplined easy session, with an overall average HR of 142 bpm and the kilometer splits progressing naturally from 7:59 down to 6:46/km. While rep HR crept slightly above the ≤150 bpm cap on the final two kilometers (peaking at 152 bpm on the faster closing split), the total cardiovascular load stayed firmly in the recovery/maintenance zone with an aerobic TE of 2.8. Performance Condition sat negative throughout (-2.9 average) following a moderate morning readiness of 64, making the relaxed pacing a sound decision that preserves legs for Thursday's 4×1K VO2max intervals.",
-      "ai_analysis_provider": "gemini:gemini-3.8-flash"
+      "ai_analysis": "The six work reps progressed from a relaxed 7:59 /km to a brisk 6:46 /km, with heart‑rate climbing from 126 bpm to 152 bpm, indicating that you successfully increased effort toward the end of the stride/hill segment while staying within the ≤172 bpm cap for hard work. Your overall average pace (7:46 /km) and average HR (142 bpm) sit comfortably in the easy‑aerobic zone (≤150 bpm), matching Wednesday’s prescribed EZ + strides session. The modest aerobic training effect (AE 2.8) and a small anaerobic contribution (0.7 ×, “NO ANAEROBIC BENEFIT”) are exactly what we expect from a recovery‑type run, though the stamina dip from 99 % to 85 % suggests the cumulative load from the week is beginning to register. With a morning readiness score of 64 (moderate) and 12 h of recovery, the session was appropriate and did not raise any red flags for the bridge phase.",
+      "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
 }
