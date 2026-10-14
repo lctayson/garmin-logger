@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.7
   - MS: 5.03k @ 7:33 142bpm 0.79m 167spm 281ms 8.0cm 233w
   - Readiness 64 → 57 (Listen To Your Body) · Recovery 20h 28m
-  - 🧠 The six “reps” (likely the strides) progressed from a 7:59 km pace at 126 bpm up to a 6:46 km pace at 152 bpm, staying well within the easy‑run HR cap of ≤150 bpm and the prescribed 6:40–7:15 km zone for the Wednesday session. The overall distance (6 km) and average pace (7:46 /km) match the easy‑run plus stride format, and the training effect shows a solid aerobic base stimulus (Aerobic 2.8) with only a minimal anaerobic contribution, as expected. Your morning readiness score of 64 (moderate) and the “Good Sleep History” suggest you were adequately recovered for this effort; no red flags appear in the pacing or HR data.
+  - 🧠 The six reps averaged 7:25 /km, about 5 % slower than the prescribed easy‑aerobic zone (6:40–7:15 /km), and heart‑rate stayed between 126–152 bpm, well under LTHR, confirming the session remained
 
 ## Next Session
 - **Planned:** Thu, Oct 15 — 8k as 4×1K @ 5:00-5:08 (or 5:12?), 2min jog, ≤172
