@@ -997,7 +997,7 @@ def render(metrics: dict[str, Any], activities: dict[str, Any] | None, data_dir:
     if has_activity_today:
         out.extend(_today_lines(date, activities, metrics))
         out.append("")
-        out.extend(_next_session_lines(metrics, data_dir))
+        out.extend(_session_guidance_lines(metrics, data_dir, day_offset=1))
         out.append("")
     else:
         out.extend(_session_guidance_lines(metrics, data_dir, day_offset=0))
