@@ -708,7 +708,7 @@
         ]
       },
       "lap_count": 18,
-      "ai_analysis": "The six reps progressed from 7:59 /km down to 6:46 /km while heart rate rose steadily from 126 to 152 bpm, indicating a clear negative‑pace drift and a modest shift from easy‑aerobic into low‑threshold effort by the final hill/stride. Because today’s “run + strides/hills” aligns with the scheduled Wednesday easy day (target 6:40‑7:15 /km, HR ≤150 bpm), the overall intensity stayed",
+      "ai_analysis": "The six work reps showed a clear negative‑pace drift—from 7:59 /km down to 6:46 /km—while average heart rate rose steadily from 126 to 152 bpm, indicating a progressive effort (likely the hills/strides) rather than fatigue. Overall the run averaged 7:46 /km, which sits outside the prescribed easy‑run window of 6:50–7:20 /km, but that is expected given the warm‑up, jog recoveries and the faster finishing rep. With a morning readiness score of 64 (moderate) and 12 h of recovery, the session’s aerobic load was appropriate for a Wednesday easy day and did not provide any meaningful anaerobic stimulus.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
