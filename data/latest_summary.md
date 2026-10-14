@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.7
   - MS: 5.03k @ 7:33 142bpm 0.79m 167spm 281ms 8.0cm 233w
   - Readiness 64 → 57 (Listen To Your Body) · Recovery 20h 28m
-  - 🧠 The six work reps showed a clear negative‑pace drift—from 7:59 /km down to 6:46 /km—while average heart rate rose steadily from 126 to 152 bpm, indicating a progressive effort (likely the hills/strides) rather than fatigue. Overall the run averaged 7:46 /km, which sits outside the prescribed easy‑run window of 6:50–7:20 /km, but that is expected given the warm‑up, jog recoveries and the faster finishing rep. With a morning readiness score of 64 (moderate) and 12 h of recovery, the session’s aerobic load was appropriate for a Wednesday easy day and did not provide any meaningful anaerobic stimulus.
+  - 🧠 This was an appropriately disciplined easy session, with an overall average HR of 142 bpm and the kilometer splits progressing naturally from 7:59 down to 6:46/km. While rep HR crept slightly above the ≤150 bpm cap on the final two kilometers (peaking at 152 bpm on the faster closing split), the total cardiovascular load stayed firmly in the recovery/maintenance zone with an aerobic TE of 2.8. Performance Condition sat negative throughout (-2.9 average) following a moderate morning readiness of 64, making the relaxed pacing a sound decision that preserves legs for Thursday's 4×1K VO2max intervals.
 
 ## Next Session
 - **Planned:** Thu, Oct 15 — 8k as 4×1K @ 5:00-5:08 (or 5:12?), 2min jog, ≤172
