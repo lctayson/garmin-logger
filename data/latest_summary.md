@@ -17,7 +17,7 @@
   - Intervals: 4 work reps · pace drift -5.9% · HR +9bpm
   - MS: 4.00k @ 5:09 166bpm 1.05m 182spm 238ms 8.2cm 331w
   - Readiness 63 → 34 (Find Time To Relax) · Recovery 1d 12h
-  - 🧠 The four 1‑km reps averaged 5:09 /km, landing right at the upper edge of the prescribed 5:00‑5:08 (or 5:12) window, with the final rep slipping to 5:10 /km, so the interval intensity was marginally below the intended VO2‑max target. A −5.9 % pace‑efficiency drift together with a 9 bpm rise in heart‑rate across the reps (160 → 169 bpm) shows the usual fatigue buildup, reflected in the stamina drop from 99 % to 64 % (minimum 53 %). Morning readiness was only moderate (score 63), which is acceptable for a hard Thursday VO2‑max session but suggests limited recovery reserve for back‑to‑back hard days. Overall the workout delivered a solid VO2‑max stimulus, though tightening pacing on the last rep would maximize the anaerobic benefit.
+  - 🧠 The four 1‑km reps were run at 5:08, 5:08, 5:09 and 5:10 km h⁻¹, so the first two met the prescribed 5:00‑5:08 window while the last two slipped just a second per km, mirrored by a steady HR rise from 160 to 169 bpm (+9 bpm). The interval‑drift metrics (‑5.9 % pace‑efficiency, ‑6.5 % power‑efficiency) line up with that slowdown and the increasing HR, indicating the expected fatigue buildup across the work set. Stamina dropped from 99 % to 64 % (minimum 53 %) and post‑run readiness plunged to 34, reflecting the high VO2‑max load (training effect 4.0 aerobic) against a moderate morning readiness score of 63.
 
 ## Next Session
 - **Planned:** Fri, Oct 16 — Rest + core
