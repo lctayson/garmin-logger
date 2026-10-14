@@ -18,11 +18,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s Thursday VO₂‑max session, but be ready to trim each 1 km interval by 5‑10 s or cut the rep count to 3 × 1 km if you feel unusually fatigued after the warm‑up.  
+**Decision** – Proceed with today’s Thursday VO₂‑max session, but be ready to back‑off a few seconds per km if you feel unusually fatigued or your heart rate spikes early.
 
-**Workout execution** – Warm‑up 10‑12 min easy jog (≈7:30 /km) + 2‑3 × 80 m strides. Main set: 4 × 1 km at ~5:00‑5:08 /km (zone ≈ VO₂max, HR should stay ≤172 bpm). Recovery jog 2 min between reps (easy, ≤150 bpm). Cool‑down 8‑10 min easy jog + light stretching.  
+**Workout execution** – Warm‑up per the plan (≈10‑15 min easy jog with dynamic drills). Main set: **4 × 1 km** at **5:00‑5:08 min/km**, **2 min jog** recovery between reps; keep HR ≤ 172 bpm. Cool‑down: easy jog ≈10 min.
 
-**Readiness rationale** – Readiness score 63 (moderate) is driven mainly by short sleep (5
+**Read
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
