@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.7
   - MS: 5.03k @ 7:33 142bpm 0.79m 167spm 281ms 8.0cm 233w
   - Readiness 64 → 57 (Listen To Your Body) · Recovery 20h 28m
-  - 🧠 The six work reps progressed from a relaxed 7:59 /km to a brisk 6:46 /km, with heart‑rate climbing from 126 bpm to 152 bpm, indicating that you successfully increased effort toward the end of the stride/hill segment while staying within the ≤172 bpm cap for hard work. Your overall average pace (7:46 /km) and average HR (142 bpm) sit comfortably in the easy‑aerobic zone (≤150 bpm), matching Wednesday’s prescribed EZ + strides session. The modest aerobic training effect (AE 2.8) and a small anaerobic contribution (0.7 ×, “NO ANAEROBIC BENEFIT”) are exactly what we expect from a recovery‑type run, though the stamina dip from 99 % to 85 % suggests the cumulative load from the week is beginning to register. With a morning readiness score of 64 (moderate) and 12 h of recovery, the session was appropriate and did not raise any red flags for the bridge phase.
+  - 🧠 The six reps stayed within the easy‑aerobic zone (HR 126‑152 bpm, pace 7:59‑6:46 min/km) and actually got quicker, ending 13 seconds faster than the first rep, so there was no negative drift and the session delivered the intended low‑intensity stimulus (training‑effect anaerobic ≈ 0.0). The average rep pace of 7:25 min/km sits just above your usual easy target (6:50‑7:20), which matches the modest aerobic
 
 ## Next Session
 - **Planned:** Thu, Oct 15 — 8k as 4×1K @ 5:00-5:08 (or 5:12?), 2min jog, ≤172
