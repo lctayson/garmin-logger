@@ -12,7 +12,7 @@
   },
   "activities": [
     {
-      "name": "Malolos - Run + Strides/Hills",
+      "name": "BHM W4: Run + Strides",
       "activity_id": 24715230518,
       "type": "running",
       "distance": 6.03,
@@ -627,6 +627,15 @@
           ]
         ]
       },
+      "weather": {
+        "temperature": 25.6,
+        "feels_like": 25.6,
+        "dew_point": 24.4,
+        "humidity_pct": 93.0,
+        "wind_speed": 2.0,
+        "wind_direction_deg": 120.0,
+        "condition": "Haze"
+      },
       "hr_zones": {
         "columns": [
           "zone",
@@ -708,8 +717,8 @@
         ]
       },
       "lap_count": 18,
-      "ai_analysis": "This was a disciplined, low-stress easy aerobic session that respected the morning's moderate readiness (score 64). You eased nicely into the work across the 6 kilometers, keeping the average heart rate at 142 bpm and only touching 151–152 bpm as the pace progressed down to 6:46/km on the final kilometer. With overall aerobic demand kept light (load 73.9) and peak HR held to 157 bpm, this preserved the exact energy needed ahead of Thursday's VO2max intervals.",
-      "ai_analysis_provider": "gemini:gemini-3.8-flash"
+      "ai_analysis": "The six work reps averaged 7:25 /km, which is slower than the prescribed easy‑run window of 6:50–7:20 /km, especially the first three reps (7:59, 7:40, 7:25) that sit well above target; only the last two reps (7:24 and 6:46) approached or entered the intended range. Heart‑rate rose steadily from 126 bpm to 152 bpm, staying just under the easy‑run cap of 150 bpm until the final rep, suggesting the effort remained aerobic but was marginally more taxing than planned. The aerobic training effect (2.8) and negligible anaerobic contribution (0.7) align with an easy‑day intent, while the moderate readiness score of 64 (good sleep, resting HR 59) indicates no major recovery limitation for today’s load.",
+      "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
 }

@@ -935,7 +935,7 @@
   ],
   "activities": [
     {
-      "name": "Malolos - Run + Strides/Hills",
+      "name": "BHM W4: Run + Strides",
       "activity_id": 24715230518,
       "type": "running",
       "distance": 6.03,
@@ -1548,6 +1548,15 @@
           "avg_vertical_ratio": 9.4
         }
       ],
+      "weather": {
+        "temperature": 25.6,
+        "humidity_pct": 93.0,
+        "wind_speed": 2.0,
+        "wind_direction_deg": 120.0,
+        "feels_like": 25.6,
+        "dew_point": 24.4,
+        "condition": "Haze"
+      },
       "hr_zones": {
         "columns": [
           "zone",

@@ -12,17 +12,18 @@
 
 ## Today's Workout
 
-- **Malolos - Run + Strides/Hills** — 6.03km · 46:47 · 7:46/km · HR 142/157 max
+- **BHM W4: Run + Strides** — 6.03km · 46:47 · 7:46/km · HR 142/157 max
   - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.7
   - MS: 5.03k @ 7:33 142bpm 0.79m 167spm 281ms 8.0cm 233w
   - Readiness 64 → 57 (Listen To Your Body) · Recovery 20h 28m
-  - 🧠 This was a disciplined, low-stress easy aerobic session that respected the morning's moderate readiness (score 64). You eased nicely into the work across the 6 kilometers, keeping the average heart rate at 142 bpm and only touching 151–152 bpm as the pace progressed down to 6:46/km on the final kilometer. With overall aerobic demand kept light (load 73.9) and peak HR held to 157 bpm, this preserved the exact energy needed ahead of Thursday's VO2max intervals.
+  - 🧠 The six work reps averaged 7:25 /km, which is slower than the prescribed easy‑run window of 6:50–7:20 /km, especially the first three reps (7:59, 7:40, 7:25) that sit well above target; only the last two reps (7:24 and 6:46) approached or entered the intended range. Heart‑rate rose steadily from 126 bpm to 152 bpm, staying just under the easy‑run cap of 150 bpm until the final rep, suggesting the effort remained aerobic but was marginally more taxing than planned. The aerobic training effect (2.8) and negligible anaerobic contribution (0.7) align with an easy‑day intent, while the moderate readiness score of 64 (good sleep, resting HR 59) indicates no major recovery limitation for today’s load.
 
 ## Next Session
 - **Planned:** Thu, Oct 15 — 8k as 4×1K @ 5:00-5:08 (or 5:12?), 2min jog, ≤172
 - **Recommendation:** Adjust the workout
 - **Reason:** low 7-day sleep average (6.3h); last-night HRV is below the balanced band.
 - **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
+
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
 ## Load & Trends
@@ -48,7 +49,7 @@
 | S | BHM W3: Rec Run | 6k · 48:10 | 44 |
 | M | Strength A | 20:37 | 2 |
 | T | 3x8min Thr | 8k · 54:01 | 173 |
-| W | Run + Strides/Hills | 6k · 46:47 | 74 |
+| W | BHM W4: Run + Strides | 6k · 46:47 | 74 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
