@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.7
   - MS: 5.03k @ 7:33 142bpm 0.79m 167spm 281ms 8.0cm 233w
   - Readiness 64 → 57 (Listen To Your Body) · Recovery 20h 28m
-  - 🧠 The six work reps moved from 7:59 /km down to 6:46 /km, ending inside the prescribed easy‑aerobic zone (6:40‑7:15 /km)
+  - 🧠 The six reps progressed from a 7:59 /km start to a 6:46 /km finish, ending with a HR of 152 bpm—just above the EZ cap of 150 bpm but still within the VO2max‑range target of ≤172 bpm for Thursday sessions. Overall the run stayed in the easy‑zone (avg pace 7:46 /km, avg HR 142 bpm) and produced only a modest aerobic training effect (aerobic 2.8, anaerobic ≈0.7), which matches the intended low‑stress Wednesday workout. Your morning readiness was moderate (score 64, sleep 77) and the post‑run drop to 57 reflects the expected acute load (73.9) without any concerning HR spikes or drift. No adjustments are needed; just keep the final fast rep a touch slower to stay fully inside the easy‑zone on future EZ days.
 
 ## Next Session
 - **Planned:** Thu, Oct 15 — 8k as 4×1K @ 5:00-5:08 (or 5:12?), 2min jog, ≤172
