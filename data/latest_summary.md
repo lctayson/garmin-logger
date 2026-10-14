@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.7
   - MS: 5.03k @ 7:33 142bpm 0.79m 167spm 281ms 8.0cm 233w
   - Readiness 64 → 57 (Listen To Your Body) · Recovery 20h 28m
-  - 🧠 The six work reps averaged 7:25 /km, which is slower than the prescribed easy‑run window of 6:50–7:20 /km, especially the first three reps (7:59, 7:40, 7:25) that sit well above target; only the last two reps (7:24 and 6:46) approached or entered the intended range. Heart‑rate rose steadily from 126 bpm to 152 bpm, staying just under the easy‑run cap of 150 bpm until the final rep, suggesting the effort remained aerobic but was marginally more taxing than planned. The aerobic training effect (2.8) and negligible anaerobic contribution (0.7) align with an easy‑day intent, while the moderate readiness score of 64 (good sleep, resting HR 59) indicates no major recovery limitation for today’s load.
+  - 🧠 The six work reps moved from 7:59 /km down to 6:46 /km, ending inside the prescribed easy‑aerobic zone (6:40‑7:15 /km)
 
 ## Next Session
 - **Planned:** Thu, Oct 15 — 8k as 4×1K @ 5:00-5:08 (or 5:12?), 2min jog, ≤172
