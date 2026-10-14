@@ -18,15 +18,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s Thursday session, but stay flexible on pace; the moderate readiness is driven mainly by short sleep, while HRV and resting‑HR are solid and training load is in the optimal range.
+**Decision** – Proceed with today’s Thursday VO₂‑max session, but be ready to trim each 1 km interval by 5‑10 s or cut the rep count to 3 × 1 km if you feel unusually fatigued after the warm‑up.  
 
-**Workout execution** – Warm‑up: 10 min easy jog (≈6:45‑7:15 /km) + 2× 30‑sec strides.  
-Main set: 4 × 1 km intervals at 5:00‑5:08 /km (goal HR ≤ 172 bpm); keep 2 min jog recovery between reps.  
-Cool‑down: 8‑10 min easy jog back to <150 bpm, finish with light stretching.
+**Workout execution** – Warm‑up 10‑12 min easy jog (≈7:30 /km) + 2‑3 × 80 m strides. Main set: 4 × 1 km at ~5:00‑5:08 /km (zone ≈ VO₂max, HR should stay ≤172 bpm). Recovery jog 2 min between reps (easy, ≤150 bpm). Cool‑down 8‑10 min easy jog + light stretching.  
 
-**Readiness rationale** – Sleep ≈ 5 h 52 min (below ideal) gives a “moderate” overall score, but night HRV = 54 ms (above 7‑day avg 49 ms) and resting HR = 57 bpm show good autonomic recovery. ACWR = 0.9 (optimal) and stress‑history is only moderate, so the body is not cumulatively overloaded; the main limiter today is acute fatigue from sleep.
-
-**In‑session guardrails** – *If* your HR spikes > 172 bpm before hitting the target pace, trim the interval to 800 m or slow to 5
+**Readiness rationale** – Readiness score 63 (moderate) is driven mainly by short sleep (5
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 

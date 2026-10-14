@@ -890,7 +890,7 @@
     {
       "date": "2026-10-15",
       "charged": 60,
-      "drained": 0,
+      "drained": 1,
       "high": 76,
       "low": 16
     }
