@@ -17,7 +17,7 @@
   - Intervals: 4 work reps · pace drift -5.9% · HR +9bpm
   - MS: 4.00k @ 5:09 166bpm 1.05m 182spm 238ms 8.2cm 331w
   - Readiness 63 → 34 (Find Time To Relax) · Recovery 1d 12h
-  - 🧠 The four 1 km VO₂‑max reps averaged 5:09 /km (range 5:08–5:10), which sits comfortably inside the prescribed 4:50–5:15 /km window, but the 9 bpm rise in rep HR (160→169 bpm) and the –5.9 % pace‑efficiency drift indicate the work became progressively harder and the pacing slipped slightly toward the slower end of the target. Stamina fell from 99 % to 64 % (minimum 53 %), and the acute load of 185 AU pushed the post‑run readiness down to 34, a clear signal that today’s hard Thursday session taxed the system and will require a focused recovery before the Saturday easy run.
+  - 🧠 The four 1‑km reps hit the prescribed VO2‑max range (5:00‑5:12 /km) with an average of 5:09 /km, and HR rose from 160 bpm to 169 bpm, staying comfortably below the ≤172 bpm cap. A -5.9 % pace‑efficiency drift and -6.5 % power‑efficiency drift reflect a modest slowdown and power loss in the last two reps, which is consistent with the 9 bpm HR rise and the stamina dip from 99 % to a low of 53 %. Overall execution was solid for the bridge‑phase VO2‑max stimulus, and the post‑run readiness drop to 34 is expected given the high acute load (185 load, 693 acwr).
 
 ## Next Session
 - **Planned:** Fri, Oct 16 — Rest + core
