@@ -17,7 +17,7 @@
   - Intervals: 4 work reps · pace drift -5.9% · HR +9bpm
   - MS: 4.00k @ 5:09 166bpm 1.05m 182spm 238ms 8.2cm 331w
   - Readiness 63 → 34 (Find Time To Relax) · Recovery 1d 12h
-  - 🧠 Your 4 × 1 km VO₂max set delivered the intended stimulus – the first two reps hit the prescribed 5:08 /km target and the last two only slipped to 5:09‑5:10, with a modest -5.9 % pace‑efficiency drift and a 9 bpm rise in heart‑rate (160 → 169 bpm) indicating accumulating fatigue but still within the VO₂max HR window (≈170‑178 bpm). Stamina fell from 99 % to 64 % (minimum 53 %) and the training‑effect scores (aerobic 4.0, anaerobic 1.1) confirm a solid high‑intensity load, exactly what the bridge phase demands after the earlier sub‑threshold work. The post‑run readiness drop to 34 is expected after such a demanding session and doesn’t signal overreaching given your moderate morning score of 63.
+  - 🧠 The four 1‑km reps hit the prescribed VO2‑max window (5:08–5:10 /km) but showed a modest slowdown of about 2 seconds from the first to the last rep, accompanied by a 9 bpm rise in HR (160→169 bpm) and a –5.9 % pace‑efficiency drift, indicating the stimulus was solid but fatigue was building across the set. Stamina fell from 99 % to a low of 53 % and the body‑battery impact was –13, confirming the cost of the hard work. Your morning readiness was only “moderate” (score 63) and the post‑exercise snapshot dropped to 34, but the drop reflects the acute load rather than a problem with the session itself. Overall, the interval was an effective VO2‑max stimulus, though keeping rep pace tighter in the later reps would preserve more stamina for the upcoming bridge‑phase work.
 
 ## Next Session
 - **Planned:** Fri, Oct 16 — Rest + core
