@@ -89,222 +89,227 @@ the actual weekly structure changes.
 
 # BHM 2027 Training Plan
 
+Source of truth: the updated BHM 2027 Plan spreadsheet. Preserve planned distances and workout details as written; "MS" denotes completed sessions/results and 📌 denotes a reminder, not an added workout.
+
 Race: Sun Feb 21, 2027 (21.1K)
 Aim sub-1:55 | Target sub-1:58 | Floor sub-2:00
 
-HR caps: Tue SUT ≤166-168 | Wed easy ≤150 | Thu hard reps ≤172 | Sat EZ ≤150 | Sun ≤145-150
+HR guides from the plan: Tuesday SUT ≤166-168 bpm; Wednesday easy ≤150 bpm; Thursday quality ≤172 bpm; Saturday long run mostly ≤150 bpm; Sunday recovery ≤145-150 bpm. Treat pace and HR as guides, with heat, humidity, recovery, and workout execution in context.
 
-Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
-📌 = reminder only (not joining)
-✅ = actual result (distance @ pace, avg HR)
+Legend: SUT = sub-threshold; EZ = easy; LSD = long run; RI = recovery interval; MS = completed session/result; 📌 = reminder only (not added to mileage).
 
 ---
 
 ## W1 · Sep 21 · 32 km
 - **Mon** Strength A
-- **Tue** 5k EZ @ 7:05-7:35, ≤150
-  ✅ 5.02k @ 7:35, 141
-- **Wed** 6k EZ @ 6:55-7:25, ≤150 + 6×20s strides, 90s walk
-- **Thu** 6k EZ @ 7:05-7:35, ≤150
-  ✅ 6.00k @ 7:17, 141
-- **Fri** Rest + core
-- **Sat** 9k LSD @ 6:50-7:20, ≤150
-  ✅ 9.03k @ 7:26, 146
-- **Sun** 6k recovery @ 7:10-7:45, ≤145
-  ✅ 6.00k @ 7:48, 140
+- **Tue** 5k EZ @ 7:05-7:35, ≤150 bpm  
+  MS: 5.02k @ 7:35/km, HR 141, 0.77m stride, 171 spm, 275ms GCT, 3.42cm vertical oscillation, 231W
+- **Wed** 6k EZ @ 6:55-7:25, ≤150 bpm + 6×20s strides; 90s walk
+- **Thu** 6k EZ @ 7:05-7:35, ≤150 bpm  
+  MS: 6.00k @ 7:17/km, HR 141, 0.80m stride, 171 spm, 274ms GCT, 7.8cm vertical oscillation, 240W
+- **Fri** Rest + Core
+- **Sat** 9k LSD @ 6:50-7:20, ≤150 bpm  
+  MS: 9.03k @ 7:26/km, HR 146, 0.80m stride, 169 spm, 278ms GCT, 7.9cm vertical oscillation, 236W
+- **Sun** 6k recovery @ 7:10-7:45, ≤145 bpm  
+  MS: 6.00k @ 7:48/km, HR 140, 0.78m stride, 165 spm, 286ms GCT, 8.0cm vertical oscillation, 227W
 
 ## W2 · Sep 28 · 36 km
 - **Mon** Strength A
-- **Tue** 7k as 3×8min SUT @ 5:30-5:40, 2min jog, ≤168
-  ✅ 4.19k @ 5:44, 165
-- **Wed** 6k EZ @ 6:50-7:20, ≤150 + 4×20s strides, 75s walk
-- **Thu** 7k as 6×2min @ 5:00-5:10, 2min jog, ≤172
-  ✅ 2.35k @ 5:06, 162
-- **Fri** Rest + core
-- **Sat** 10k EZ @ 6:45-7:20, ≤150
-  ✅ 10.00k @ 7:25, 146
-- **Sun** 6k EZ @ 6:50-7:20, ≤150
-  ✅ 6.00k @ 7:29, 139
+- **Tue** 7k as 3×8min SUT @ 5:30-5:40; 2min jog, ≤168 bpm  
+  MS: 4.19k @ 5:44/km, HR 165, 0.96m stride, 181 spm, 247ms GCT, 7.93cm vertical oscillation, 298W
+- **Wed** 6k EZ @ 6:50-7:20, ≤150 bpm + 4×20s strides; 75s walk
+- **Thu** 7k as 6×2min @ 5:00-5:10; 2min jog, ≤172 bpm  
+  MS: 2.35k @ 5:06/km, HR 162, 1.04m stride, 185 spm, 236ms GCT, 8.0cm vertical oscillation, 331W
+- **Fri** Rest + Core
+- **Sat** 10k EZ @ 6:45-7:20, ≤150 bpm  
+  MS: 10.00k @ 7:25/km, HR 146, 0.80m stride, 168 spm, 278ms GCT, 7.9cm vertical oscillation, 238W
+- **Sun** 6k EZ @ 6:50-7:20, ≤150 bpm  
+  MS: 6.00k @ 7:29/km, HR 139, 0.80m stride, 167 spm, 281ms GCT, 8.0cm vertical oscillation, 235W
 
 ## W3 · Oct 5 · 37 km
 - **Mon** Strength A
-- **Tue** 7k as 2×10min SUT @ 5:28-5:38, 2min jog, ≤168
-  ✅ 3.60k @ 5:33, 163
-- **Wed** 6k EZ @ 6:50-7:20, ≤150 + 6×20s strides, 75s walk
-- **Thu** 7k as 5×3min @ 5:05-5:12, 2min jog, ≤172
-- **Fri** Rest + core
-- **Sat** 11k LSD @ 6:45-7:20, ≤150
-- **Sun** 6k EZ @ 6:50-7:20, ≤150
+- **Tue** 7k as 2×10min SUT @ 5:28-5:38; 2min jog, ≤168 bpm  
+  MS: 3.60k @ 5:33/km, HR 163, 0.99m stride, 180 spm, 246ms GCT, 8.2cm vertical oscillation, 308W
+- **Wed** 6k EZ @ 6:50-7:20, ≤150 bpm + 6×20s strides; 75s walk
+- **Thu** 7k as 5×3min @ 5:05-5:12; 2min jog, ≤172 bpm  
+  MS: 2.93k @ 5:07/km, HR 161, 1.05m stride, 184 spm, 236ms GCT, 8.1cm vertical oscillation, 332W
+- **Fri** Rest + Core
+- **Sat** 11k LSD @ 6:45-7:20, ≤150 bpm  
+  MS: 11.03k @ 7:22/km, HR 148, 0.80m stride, 168 spm, 278ms GCT, 7.9cm vertical oscillation, 239W
+- **Sun** 6k EZ @ 6:50-7:20, ≤150 bpm  
+  MS: 6.03k @ 7:59/km, HR 142, 0.75m stride, 167 spm, 284ms GCT, 7.7cm vertical oscillation, 221W
 
-## W4 · Oct 12 · 40 km
+## W4 · Oct 12 · 41 km
 - **Mon** Strength A
-- **Tue** 7k as 3×8min SUT @ 5:25-5:35, 2min jog, ≤168
-- **Wed** 6k EZ @ 6:50-7:20, ≤150 + 6-8 strides
-- **Thu** 8k as 4×1K @ 5:00-5:08 (or 5:12?), 2min jog, ≤172
-- **Fri** Rest + core
-- **Sat** 12K EZ
-- **Sun** 7k EZ @ 6:50-7:20, ≤150 w/ 6-8×10s hills
+- **Tue** 8k as 3×8min SUT @ 5:25-5:35; 2min jog, ≤168 bpm  
+  MS: 4.32k @ 5:33/km, HR 163, 1.00m stride, 178 spm, 248ms GCT, 8.2cm vertical oscillation, 308W
+- **Wed** 6k EZ @ 6:50-7:20, ≤150 bpm + 6-8 strides
+- **Thu** 8k as 4×1k @ 5:00-5:08; 2min RI with 30s walk-jog, ≤172 bpm  
+  MS: 4.00k @ 5:09/km, HR 166, 1.05m stride, 182 spm, 238ms GCT, 8.2cm vertical oscillation, 331W
+- **Fri** Rest + Core
+- **Sat** 12k EZ
+- **Sun** 7k EZ @ 6:50-7:20, ≤150 bpm with 6-8×10s hills  
   📌 CCM
 
 ## W5 · Oct 19 · 38 km
-- **Mon** Strength A; hold loads and avoid DOMS
-- **Tue** 6k as 2×8min SUT @ 5:25-5:35, 2min easy jog, ≤168
-- **Wed** 6k EZ @ 6:50-7:25, ≤150 + 6×20s flat strides, 75s walk
-- **Thu** 8k as 5×3min @ 5:08-5:14, 2min walk-jog, ≤172; controlled, not all-out. October 22 5K baseline is not the default; only do it if all four previously defined go/no-go checks clearly pass
-- **Fri** Rest + Core B
-- **Sat** 10k EZ, ≤150; no fast finish
-- **Sun** 8k EZ @ 6:50-7:20, ≤150 + optional 6-8×10s hills only if recovered and calf-symptom-free
+- **Mon** Strength A
+- **Tue** 6k as 2×8min SUT @ 5:25-5:35; 2min walk-jog, ≤168 bpm
+- **Wed** 6k EZ @ 6:55-7:25, ≤150 bpm + strides
+- **Thu** 8k as 5×3min @ 5:08-5:14; 2min walk-jog, ≤172 bpm. 5K baseline only if all go/no-go checks are clear
+- **Fri** Rest + Core
+- **Sat** 10k EZ, HR ≤150; no fast finish
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 bpm with 6-8×10s hills
 
 ## W6 · Oct 26 · 43 km
 - **Mon** Strength A
-- **Tue** 9k as 3×10min SUT @ 5:25-5:33, 2-3min easy jog, ≤168
-- **Wed** 6k EZ @ 6:50-7:20, ≤150 + 5-6×20s flat strides, 75s walk
-- **Thu** 7k as 6×75s @ controlled 3-5K effort (roughly 5:00-5:12/km by feel), 90s easy recovery; no sprinting
-- **Fri** Rest + Core B
-- **Sat** 13k EZ, ≤150; no fast finish
-- **Sun** 8k EZ @ 6:50-7:20, ≤150 + optional 6-8×10s hills if recovered
+- **Tue** 9k as 3×10min SUT @ 5:25-5:33; 2min walk-jog, ≤168 bpm
+- **Wed** 6k EZ @ 6:50-7:20, ≤150 bpm + 5×20s strides; 75s walk
+- **Thu** 7k as 6×75s at 3-5K effort (5:00-5:12/km); 90s walk-jog
+- **Fri** Rest + Core
+- **Sat** 13k EZ, HR ≤150; no fast finish
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 bpm with 6-8×10s hills
 
 ## W7 · Nov 2 · 45 km
 - **Mon** Strength A
-- **Tue** 8k as 2×12min SUT @ 5:25-5:33, 3min easy jog, ≤168
-- **Wed** 6k EZ @ 6:50-7:20, ≤150 + 5-6×20s flat strides, 75s walk
-- **Thu** 9k as 5×1k @ 5:08-5:12, 2min easy jog, ≤172; only progress toward 5:05 if controlled
-- **Fri** Rest + Core B
-- **Sat** 14k: 11k EZ + optional 3k @ 5:45-5:55, only if first 11k felt easy and HR stayed ≤150; otherwise all EZ
-- **Sun** 8k EZ @ 6:50-7:20, ≤150 + optional hills if recovered
+- **Tue** 8k as 2×12min SUT @ 5:25-5:33; 3min walk-jog, ≤168 bpm
+- **Wed** 6k EZ @ 6:50-7:20, ≤150 bpm + 5×20s strides; 75s walk
+- **Thu** 9k as 5×1k @ 5:08-5:12; 2min walk-jog, ≤172 bpm (5:05 only if controlled)
+- **Fri** Rest + Core
+- **Sat** 14k: 11k EZ + optional 3k @ 5:45-5:55/km, only if first 11k felt easy and HR stayed ≤150
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 bpm with 6-8×10s hills
 
 ## W8 · Nov 9 · 45 km
 - **Mon** Strength A
-- **Tue** 7k as 20min continuous SUT @ 5:25-5:35, ≤168; no additional fast reps
-- **Wed** 7k EZ @ 6:45-7:20, ≤150 + 6-8×20s flat strides, 75s walk
-- **Thu** 9k as 3×2k @ 5:18-5:25, 2:30 easy jog, HR guide ≤170; reassess after W7 rather than forcing the pace
-- **Fri** Rest + Core B
-- **Sat** 14k EZ, ≤150; no fast finish
-- **Sun** 8k EZ @ 6:50-7:20, ≤150 + optional hills if recovered
+- **Tue** 7k as 20min continuous SUT @ 5:25-5:35, ≤168 bpm
+- **Wed** 7k EZ @ 6:45-7:20, ≤150 bpm + 6-8 hill sprints
+- **Thu** 9k as 3×2k @ 5:18-5:25 (provisional; confirm after W7); 2:30 walk-jog, ≤170 bpm
+- **Fri** Rest + Core
+- **Sat** 14k EZ, HR ≤150; no fast finish
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 bpm with 6-8×10s hills  
   📌 Coffee Run 10/16k
 
 ## W9 · Nov 16 · 44 km
 - **Mon** Strength A
-- **Tue** 9k as 3×10min SUT @ 5:25-5:33, 2-3min easy jog, ≤168
-- **Wed** 6k EZ @ 6:50-7:20, ≤150 + 5-6×20s flat strides, 75s walk
-- **Thu** 9k as 5×90s hard but controlled, 2min easy recovery; no sprinting
-- **Fri** Rest + Core B
-- **Sat** 12k: 8k EZ + optional 4k @ 5:40-5:50, only if fresh; drop the finish first if tired
-- **Sun** 8k EZ @ 6:50-7:20, ≤150; hills optional, preferably skip if Saturday felt demanding
+- **Tue** 9k as 3×10min SUT @ 5:25-5:33; 2min walk-jog, ≤168 bpm
+- **Wed** 6k EZ @ 6:50-7:20, ≤150 bpm + 5×20s strides; 75s walk
+- **Thu** 9k: 5×90s hard but controlled at 3-5K effort; 2min easy recovery; don't sprint
+- **Fri** Rest + Core
+- **Sat** 12k: 8k EZ + optional 4k @ 5:40-5:50/km, only if fresh; drop the finish first if tired
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 bpm with 6-8×10s hills
 
-## W10 · Nov 23 · ~32 km (5K TT week)
-- **Mon** Strength A, 2 sets only; no load increase
-- **Tue** 6k as 2×8min SUT @ 5:25-5:35, 2min easy jog, ≤168; downgrade to EZ if tired
-- **Wed** 6k EZ, ≤150; no strides required
-- **Thu** 5k EZ @ 6:55-7:25, ≤150 + 4×20s relaxed strides, 75s walk
-- **Fri** Full rest; optional gentle mobility
-- **Sat Nov 28** 5K TT: ~2k warm-up + 5k TT + ~1.5k cooldown (about 8.5k total); separate Run activity for the TT if possible. This replaces the long run
-- **Sun** 6k very easy or rest if legs feel heavy; no hills
+## W10 · Nov 23 · 31 km (5K TT week)
+- **Mon** Strength A
+- **Tue** 6k as 2×8min SUT @ 5:25-5:35; 2min walk-jog, ≤168 bpm (easy 6k if sleep or fatigue is poor)
+- **Wed** 6k EZ, no strides needed
+- **Thu** 5k EZ @ 6:55-7:25, ≤150 bpm + 4×20s strides; 75s walk
+- **Fri** Rest
+- **Sat** 8k total: ~2k warm-up + 5K TT hard and evenly paced + ~1.5k cooldown. Record the TT as a separate activity
+- **Sun** 6k very easy or rest; no hills
 
-## W11 · Nov 30 · 39 km (HM-specific phase starts)
-- **Mon** Rest or very light strength; no heavy lower-body work after TT week
-- **Tue** 6k as 2×8min controlled SUT; begin around 5:25-5:35, 2min easy jog, ≤168. Downgrade to EZ if RHR is ~3+ bpm above baseline, HRV clearly low, sleep <6.5h, warm-up legs heavy, or otherwise unusually fatigued
-- **Wed** 6k EZ @ 6:50-7:20, ≤150 + flat strides only if recovered
-- **Thu** 7k as 5×3min at TT-informed 5K effort, 2min easy jog; adjust using TT plus threshold sessions and recovery, not the TT alone
-- **Fri** Rest + Core B only if recovered
-- **Sat** 12k EZ, ≤150; no fast finish
-- **Sun** 8k EZ @ 6:50-7:20, ≤150; hills only if calf is fine and recovery is good
+## W11 · Nov 30 · 39 km
+- **Mon** Strength A
+- **Tue** 6k as 2×8min SUT @ TT-based band (~5:25-5:35); 2min walk-jog, ≤168 bpm (easy 6k if recovery flagged)
+- **Wed** 6k EZ @ 6:50-7:20, ≤150 bpm + strides
+- **Thu** 7k as 5×3min at TT-based VO₂ band; 2min walk-jog, ≤172 bpm
+- **Fri** Rest + Core
+- **Sat** 12k EZ, HR ≤150; no fast finish
+- **Sun** 8k EZ; hills only if fully recovered
 
 ## W12 · Dec 7 · 47 km
 - **Mon** Strength A
-- **Tue** 9k as 3×10min SUT @ 5:28-5:35, 2-3min easy jog, ≤168
-- **Wed** 6k EZ @ 6:50-7:20, ≤150 + flat strides
-- **Thu** 9k as 3×2k @ 5:20-5:27, 2:30 easy jog, ≤170 (HM/10K bridge)
-- **Fri** Rest + Core B
-- **Sat** 15k: 12k EZ + optional 3k @ 5:40-5:50 if recovered; otherwise all EZ
-- **Sun** 8k EZ @ 6:50-7:20, ≤150 + optional hills if recovered
+- **Tue** 9k as 3×10min SUT @ 5:28-5:35; 2min walk-jog, ≤168 bpm
+- **Wed** 6k EZ @ 6:50-7:20, ≤150 bpm + 6-8 hills
+- **Thu** 9k as 3×2k @ 5:20-5:27; 2:30min walk-jog, ≤170 bpm (HM/10K bridge)
+- **Fri** Rest + Core
+- **Sat** 15k: 12k EZ + 3k @ 5:40-5:50/km if recovered; otherwise 15k EZ
+- **Sun** 8k EZ + optional hills if recovered
 
 ## W13 · Dec 14 · 49 km
 - **Mon** Strength A
-- **Tue** 9k as 3×10min SUT @ 5:28-5:35, 2-3min easy jog, ≤168
-- **Wed** 7k EZ @ 6:45-7:20, ≤150 + 5-6×20s flat strides, 75s walk
-- **Thu** 10k as 2×4k HM-specific @ 5:35-5:42, 3min easy jog, ≤169
-- **Fri** Rest + Core B
-- **Sat** 15k EZ, ≤150; no fast finish
-- **Sun** 8k EZ @ 6:50-7:20, ≤150 + optional hills if recovered
+- **Tue** 9k as 3×10min SUT @ 5:28-5:35; 2min walk-jog, ≤168 bpm
+- **Wed** 7k EZ @ 6:45-7:20, ≤150 bpm + 5×20s strides; 75s walk
+- **Thu** 10k as 2×4k @ 5:35-5:42; 3min walk-jog, ≤169 bpm (HM-specific)
+- **Fri** Rest + Core
+- **Sat** 15k EZ, HR ≤150; no fast finish
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 bpm with 6-8×10s hills
 
 ## W14 · Dec 21 · 38 km
 - **Mon** Strength A
-- **Tue** 6k as 2×8min SUT @ 5:25-5:35, 2min jog, ≤168
-- **Wed** 6k EZ @ 6:55-7:25, ≤150 + strides
-- **Thu** 6k as 5×75-90s hard, 90-120s recovery (anaerobic capacity)
-- **Fri** Rest + core
-- **Sat** 12K EZ
-- **Sun** 8k EZ @ 6:50-7:20, ≤150 w/ 6-8×10s hills
+- **Tue** 6k as 2×8min SUT @ 5:25-5:35; 2min walk-jog, ≤168 bpm
+- **Wed** 6k EZ @ 6:55-7:25, ≤150 bpm + strides
+- **Thu** 6k as 5×75-90s hard at 3-5K effort; 90-120s recovery (anaerobic capacity)
+- **Fri** Rest + Core
+- **Sat** 12k EZ, HR ≤150
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 bpm with 6-8×10s hills
 
 ## W15 · Dec 28 · 49 km
 - **Mon** Strength A
-- **Tue** 9k as 3×10min SUT @ 5:28-5:35, 2-3min easy jog, ≤168
-- **Wed** 6k EZ @ 6:50-7:20, ≤150 + 5-6×20s flat strides, 75s walk
-- **Thu** 9k as 3×2k @ 5:25-5:32, 2:30 easy jog, ≤170
-- **Fri** Rest + Core B
-- **Sat** 17k: 12k EZ + optional 5k @ 5:35-5:45 only if recovered; otherwise all EZ
-- **Sun** 8k EZ @ 6:50-7:20, ≤150; skip hills if Saturday finish was completed or legs feel tired
+- **Tue** 9k as 3×10min SUT @ 5:28-5:35; 2min walk-jog, ≤168 bpm
+- **Wed** 6k EZ @ 6:50-7:20, ≤150 bpm + 5×20s strides; 75s walk
+- **Thu** 9k as 3×2k @ 5:25-5:32; 2:30min walk-jog, ≤170 bpm (HM-specific)
+- **Fri** Rest + Core
+- **Sat** 17k: 12k EZ + optional 5k @ 5:35-5:45/km only if recovered; otherwise 17k EZ
+- **Sun** 8k EZ; skip hills if Saturday's finish was completed or legs feel tired
 
 ## W16 · Jan 4 · 49 km
 - **Mon** Strength A
-- **Tue** 9k as 2×15min SUT @ 5:30-5:36, 3min easy jog, ≤168
-- **Wed** 6k EZ @ 6:50-7:20, ≤150 + flat strides
-- **Thu** 9k as 3×2k @ 5:25-5:32, 2:30 easy jog, ≤170
-- **Fri** Rest + Core B
-- **Sat** 17k EZ, ≤150
-- **Sun** 8k EZ @ 6:50-7:20, ≤150 + optional hills if recovered
+- **Tue** 9k as 2×15min SUT @ 5:30-5:36; 3min walk-jog, ≤168 bpm
+- **Wed** 6k EZ @ 6:50-7:20, ≤150 bpm + 6-8 hills
+- **Thu** 9k as 3×2k @ 5:25-5:32; 2:30min walk-jog, ≤170 bpm
+- **Fri** Rest + Core
+- **Sat** 17k EZ, HR ≤150; no fast finish
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 bpm with 6-8×10s hills
 
-## W17 · Jan 11 · 51 km (peak)
-- **Mon** Strength A, moderate; avoid soreness
-- **Tue** 10k as 3×12min SUT @ 5:28-5:35, 3min easy jog, ≤169
-- **Wed** 6k EZ @ 6:45-7:20, ≤150 + 5-6×20s flat strides, 75s walk
-- **Thu** 9k as 2×3k HM-specific @ 5:28-5:35, 3min easy jog, ≤170; keep only if Tuesday/recovery were good, otherwise EZ + strides
-- **Fri** Rest + light Core B
-- **Sat** 18k EZ, ≤150; no fast finish
-- **Sun** 8k EZ @ 6:50-7:20, ≤150; hills optional only if fully recovered
+## W17 · Jan 11 · 51 km
+- **Mon** Strength A
+- **Tue** 10k as 3×12min SUT @ 5:28-5:35; 3min walk-jog, ≤169 bpm
+- **Wed** 6k EZ @ 6:45-7:20, ≤150 bpm + 5×20s strides; 75s walk
+- **Thu** 9k as 2×3k @ 5:28-5:35; 3min walk-jog, ≤170 bpm (if Tuesday was hard or sleep poor: 6k EZ + strides instead)
+- **Fri** Rest + Core
+- **Sat** 18k EZ (optional 4k @ 5:40-5:50 only if Thursday was swapped and you're fresh)
+- **Sun** 8k EZ; hills optional only if fully recovered, otherwise flat recovery
 
 ## W18 · Jan 18 · 48 km
 - **Mon** Strength A
-- **Tue** 9k as 2×15min SUT @ 5:30-5:36, 3min easy jog, ≤169
-- **Wed** 6k EZ @ 6:50-7:20, ≤150 + flat strides
-- **Thu** 9k as 3×2k @ 5:25-5:32, 2:30 easy jog, ≤170
-- **Fri** Rest + Core B
-- **Sat** 16k EZ, ≤150
-- **Sun** 8k EZ @ 6:50-7:20, ≤150 + optional hills if recovered
+- **Tue** 9k as 2×15min SUT @ 5:30-5:36; 3min walk-jog, ≤169 bpm
+- **Wed** 6k EZ @ 6:50-7:20, ≤150 bpm + strides
+- **Thu** 9k as 3×2k @ 5:25-5:32; 2:30 walk-jog, ≤170 bpm
+- **Fri** Rest + Core
+- **Sat** 16k EZ, HR ≤150; no fast finish
+- **Sun** 8k EZ @ 6:50-7:20, ≤150 bpm with 6-8×10s hills
 
 ## W19 · Jan 25 · 47 km
-- **Mon** Strength A; no heavy progression
-- **Tue** 7k as 3×8min SUT @ 5:25-5:32, 2min easy jog, ≤168
-- **Wed** 6k EZ @ 6:50-7:20, ≤150 + 5-6×20s flat strides, 75s walk
-- **Thu** 6k as 4×3min @ 5:05-5:12, 2min easy jog, ≤172 (10K support)
-- **Fri** Rest + Core B
-- **Sat** 20k: 15k EZ + optional 5k @ 5:35-5:45 only if fully recovered; otherwise all EZ
-- **Sun** 8k very easy @ 6:50-7:20, ≤150; skip hills after 20k, especially if optional finish was done
+- **Mon** Strength A
+- **Tue** 7k as 3×8min SUT @ 5:25-5:32; 2min walk-jog, ≤168 bpm
+- **Wed** 6k EZ @ 6:50-7:20, ≤150 bpm + 5×20s strides; 75s walk
+- **Thu** 6k as 4×3min @ 5:05-5:12; 2min walk-jog, ≤172 bpm
+- **Fri** Rest + Core
+- **Sat** 20k: 15k EZ + optional 5k @ 5:35-5:45/km if fully recovered; otherwise all 20k EZ
+- **Sun** 8k very easy; skip hills after the 20k long run, especially if the optional finish was done
 
 ## W20 · Feb 1 · 47 km
 - **Mon** Strength A
-- **Tue** 8k as 2×12min SUT @ 5:28-5:35, 3min easy jog, ≤168
-- **Wed** 6k EZ @ 6:50-7:20, ≤150; strides optional, skip if tired
-- **Thu** 9k as 3×2k @ 5:30-5:37, 2:30 easy jog, ≤169 (controlled HM-specific effort)
-- **Fri** Rest + light Core B
-- **Sat** 16k EZ, ≤150; no fast finish
-- **Sun** 8k recovery @ 7:00-7:40, ≤145; no hills
+- **Tue** 8k as 2×12min SUT @ 5:28-5:35; 3min walk-jog, ≤168 bpm
+- **Wed** 6k EZ @ 6:50-7:20, ≤150 bpm
+- **Thu** 9k as 3×2k @ 5:30-5:37; 2:30 walk-jog, ≤169 bpm
+- **Fri** Rest + Core
+- **Sat** 16k EZ, HR ≤150; no fast finish
+- **Sun** 8k recovery @ 7:00-7:40/km by feel; no hills
 
-## W21 · Feb 8 · 38 km (taper)
-- **Mon** Strength A, reduced to 1-2 easy sets; no soreness
-- **Tue** 6k as 2×8min SUT @ 5:25-5:35, 2min easy jog, ≤168; finish fresh
-- **Wed** 6k EZ @ 6:50-7:20, ≤150 + 4×20s relaxed strides, 75s walk
-- **Thu** 6k as 3×3min @ 5:05-5:12, 2min easy jog, ≤170; controlled, no straining
+## W21 · Feb 8 · 38 km
+- **Mon** Strength A
+- **Tue** 6k as 2×8min SUT @ 5:25-5:35; 2min walk-jog, ≤168 bpm
+- **Wed** 6k EZ @ 6:50-7:20, ≤150 bpm + 4×20s strides; 75s walk
+- **Thu** 6k as 3×3min @ 5:05-5:12; 2min walk-jog, ≤170 bpm (VO₂ maintenance)
 - **Fri** Rest
-- **Sat** 14k EZ, ≤150; no fast finish
-- **Sun** 6k recovery @ 7:05-7:45, ≤145; no hills
+- **Sat** 14k EZ, HR ≤150; no fast finish
+- **Sun** 6k recovery @ 7:05-7:45, ≤145 bpm; no hills
 
-## W22 · Feb 15 · ~39 km (RACE WEEK)
-- **Mon** Rest + mobility; no strength workout
-- **Tue** 6k as 2×6min @ 5:30-5:36, 2min easy jog, ≤166; comfortably controlled
-- **Wed** 4k EZ @ 6:55-7:25, ≤150 + 4×20s relaxed strides, 75s walk
-- **Thu** 5k as 3×3min @ 5:15-5:20, 2min easy jog, ≤168; crisp, not hard
-- **Fri** Full rest
-- **Sat** 3k shakeout + 3×15-20s strides, 75s walk
-- **Sun Feb 21** 🏁 **BHM HALF MARATHON 21.1k**
+## W22 · Feb 15 · 39.1 km (RACE WEEK)
+- **Mon** Strength A
+- **Tue** 6k as 2×6min @ ~5:30; 2min walk-jog, ≤166 bpm
+- **Wed** 4k EZ @ 6:55-7:25, ≤150 bpm + 4×20s strides; 75s walk
+- **Thu** 5k as 3×3min @ 5:15-5:20; 2min walk-jog, ≤168 bpm (crisp, not hard)
+- **Fri** Rest
+- **Sat** 3k shakeout + 3×20s strides; 75s walk
+- **Sun Feb 21** 🏁 BHM RACE — 21.1k
