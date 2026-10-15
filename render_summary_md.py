@@ -511,7 +511,7 @@ def _readiness_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[s
         if hrv7 is not None:
             bit += f" (7d avg: {hrv7:g}ms)"
         if balanced_low is not None and balanced_high is not None:
-            bit += f" · balanced range: {balanced_low:g}–{balanced_high:g}ms"
+            bit += f" · baseline: {balanced_low:g}–{balanced_high:g}ms"
         if band and band != "within":
             bit += f" — {band} balanced band"
         lines.append(bit)
