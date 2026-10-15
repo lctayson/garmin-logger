@@ -17,7 +17,7 @@
   - Intervals: 4 work reps · pace drift -5.9% · HR +9bpm
   - MS: 4.00k @ 5:09 166bpm 1.05m 182spm 238ms 8.2cm 331w
   - Readiness 63 → 34 (Find Time To Relax) · Recovery 1d 12h
-  - 🧠 The four 1 km reps averaged 5:09 /km (range 5:08‑5:10) with a steady HR climb from 160 bpm to 169 bpm, but the –5.9 % pace drift and –6.5 % power drift show a measurable drop in speed and efficiency across the set, ending slightly slower than the prescribed 5:00‑5:08 /km window for Thursday VO₂‑max work. Stamina fell from 99 % to 64 % (min 53 %) and the load of 185  points pushed the post‑run readiness down to 34, confirming a high acute stress that may have limited the intended VO₂ stimulus. Given your moderate morning readiness (score 63, sleep 75) and the known risk of insufficient anaerobic load, aim to hold the early‑rep pace (≈5:08) and limit drift by ensuring consistent power output, especially on the final rep, to secure a true VO₂max stimulus for the half‑marathon build.
+  - 🧠 Your 4 × 1 km reps hit the prescribed speed envelope (two at 5:08 /km, the last two only 1–2 s slower) and stayed comfortably below the ≤172 bpm HR ceiling, so the interval pacing and heart‑rate targets were met. However, the interval‑drift metrics show a ≈‑5.9 % pace‑efficiency decline and a +9 bpm HR rise across the set, while power dropped ~6.5 %, indicating the later reps required more cardiac effort for slightly less mechanical output. Stamina fell from 99 % to 64 % (low of 53 %), and your post‑run readiness plunged to 34, reflecting the high VO₂‑max load and suggesting you may need a bit more sharpness or a brief recovery before the next hard Thursday.
 
 ## Next Session
 - **Planned:** Fri, Oct 16 — Rest + Core
