@@ -36,7 +36,7 @@ def test_readiness_quick_reference_shows_hrv_band_sleep_need_and_recovery():
     rendered = "\n".join(lines)
 
     assert "RHR:** 57 bpm" in rendered
-    assert "HRV:** 54ms" in rendered
+    assert "HRV Status:** ◻ 47–57 ms Baseline 🟢 54 ms Balanced" in rendered
     assert "balanced range: 47–57ms" in rendered
     assert "Sleep:** 5h52 / 7h00 need (1h08 short)" in rendered
     assert "score 75" in rendered
