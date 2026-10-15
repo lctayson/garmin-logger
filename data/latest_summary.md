@@ -17,10 +17,10 @@
   - Intervals: 4 work reps · pace drift -5.9% · HR +9bpm
   - MS: 4.00k @ 5:09 166bpm 1.05m 182spm 238ms 8.2cm 331w
   - Readiness 63 → 34 (Find Time To Relax) · Recovery 1d 12h
-  - 🧠 Your 4 × 1 km VO₂max repeats hit the prescribed intensity: each rep averaged 5 : 09 /km, sitting inside the 5 : 00–5 : 12 window and staying well under the ≤172 bpm HR cap (rep HR rose from 160 to 169 bpm, with a 9‑bpm drift across the set). The –5.9 % pace‑efficiency drift reflects a modest slowing in the later reps (5 : 08 → 5 : 10), but the overall work remained on target and produced the expected VO₂max training effect (aerobic = 4.0, anaerobic ≈ 1.1). Stamina fell from 99 % to a low of 53 % during the session, which is typical for a hard VO₂max block and does not signal overreaching given your moderate morning readiness (score 63). The post‑run readiness drop to 34 is a normal acute response and not a concern for tomorrow’s easy run.
+  - 🧠 The four 1‑km reps averaged 5:09 /km (5:08‑5:10) with rep HR climbing from 160 bpm to 169 bpm, so you stayed comfortably below the ≤172 bpm ceiling but missed the prescribed 5:00‑5:08 pace window by about a second per kilometer. Interval drift shows a modest 9 bpm HR rise and a –5.9 % pace‑efficiency shift, while stamina fell from 99 % to a low of 53 %, indicating the VO₂‑max stimulus was real but left a noticeable fatigue bank. Your morning readiness was “Moderate” (63), yet the post‑run score plunged to 34 and acute load jumped to 693, suggesting today’s effort was taxing and recovery will need emphasis.
 
 ## Next Session
-- **Planned:** Fri, Oct 16 — Rest + core
+- **Planned:** Fri, Oct 16 — Rest + Core
 - **Recommendation:** Proceed as planned
 - **Reason:** short sleep last night (5.9h); low 7-day sleep average (6.2h).
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
