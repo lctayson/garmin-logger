@@ -17,7 +17,7 @@
   - Intervals: 4 work reps · pace drift -5.9% · HR +9bpm
   - MS: 4.00k @ 5:09 166bpm 1.05m 182spm 238ms 8.2cm 331w
   - Readiness 63 → 34 (Find Time To Relax) · Recovery 1d 12h
-  - 🧠 The four 1‑km reps landed at 5:08‑5:10 / km, just a second or two slower than the prescribed 5:00‑5:08 range, with heart‑rate climbing from 160 to 169 bpm and staying under the 172 bpm cap, so the VO₂max stimulus was present but the final two reps showed a measurable efficiency drift (‑5.9 % pace ef) and a modest HR rise. Stamina fell from 99 % to 64 % (low 53 % mid‑set), reflecting the high aerobic load (load 185, acute 693) and the post‑run readiness drop to 34 / 100 despite a moderate morning score (63). In the bridge phase this session delivered the needed hard work, but the early‑day readiness suggests you may need a slightly lighter recovery before the next hard day to avoid accumulating excessive fatigue.
+  - 🧠 The four 1‑km reps averaged 5:09 /km, staying within the Thursday VO2max window (≈5:00–5:12 /km) but showed a clear drift from 5:08 in the first two reps to 5:10 in the last, with HR climbing from 160 bpm to 169 bpm and a –5.9 % pace‑efficiency drop. Stamina fell from 99 % to a low of 53 % across the set, indicating the effort taxed your aerobic reserve as intended, and the 185‑point training load plus the –13 % body‑battery impact reflect a solid, albeit taxing, stimulus. Morning readiness was moderate (score 63), and the post‑run snapshot fell to 34, which is expected after a high‑intensity VO2max session and not a sign of chronic fatigue. Maintaining tighter pacing on the later reps will sharpen the anaerobic stimulus while preserving the same aerobic benefit for your half‑marathon goal.
 
 ## Next Session
 - **Planned:** Fri, Oct 16 — Rest + core
