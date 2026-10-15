@@ -467,7 +467,9 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
 
 def _readiness_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[str]:
     readiness = payload.get("readiness") or {}
+    sleep_data = payload.get("sleep") or {}
     s = summary.get("readiness") or {}
+    trends = summary.get("recovery_trends") or {}
     lines: list[str] = []
 
     score = s.get("score")
@@ -482,33 +484,67 @@ def _readiness_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[s
         lines.append(f"> {feedback}")
     lines.append("")
 
-    rhr = readiness.get("resting_hr")
+    rhr = _num(readiness.get("resting_hr"))
     if rhr is not None:
-        lines.append(f"- **RHR:** {int(_num(rhr) or 0)} bpm")
+        bit = f"- **RHR:** {rhr:g} bpm"
+        rhr7 = _num(trends.get("resting_hr_7d_avg"))
+        rhr_trend = trends.get("resting_hr_trend")
+        if rhr7 is not None:
+            bit += f" (7d avg: {rhr7:g} bpm"
+            if rhr_trend:
+                bit += f", trending {_ARROW.get(rhr_trend, rhr_trend)}"
+            bit += ")"
+        elif rhr_trend:
+            bit += f" (trending {_ARROW.get(rhr_trend, rhr_trend)})"
+        if rhr_trend == "rising":
+            bit = bit.replace("- **RHR:**", f"- {_flag(True)}**RHR:**", 1)
+        lines.append(bit)
 
-    hrv = readiness.get("hrv_last_night_avg_ms")
+    hrv = _num(readiness.get("hrv_last_night_avg_ms"))
     if hrv is not None:
-        hrv7 = readiness.get("hrv_7_day_avg_ms")
-        band = (summary.get("recovery_trends") or {}).get("hrv_vs_balanced_band")
-        bit = f"- {_flag(band not in (None, 'within'))}**HRV:** {int(_num(hrv) or 0)}ms"
+        hrv7 = _num(readiness.get("hrv_7_day_avg_ms"))
+        baseline = readiness.get("hrv_baseline") or {}
+        balanced_low = _num(baseline.get("balancedLow", baseline.get("balanced_low")))
+        balanced_high = _num(baseline.get("balancedUpper", baseline.get("balanced_upper")))
+        band = trends.get("hrv_vs_balanced_band")
+        bit = f"- {_flag(band not in (None, 'within'))}**HRV:** {hrv:g}ms"
         if hrv7 is not None:
-            bit += f" (7d avg: {int(_num(hrv7) or 0)}ms)"
+            bit += f" (7d avg: {hrv7:g}ms)"
+        if balanced_low is not None and balanced_high is not None:
+            bit += f" · balanced range: {balanced_low:g}–{balanced_high:g}ms"
         if band and band != "within":
             bit += f" — {band} balanced band"
         lines.append(bit)
 
-    sleep_h = readiness.get("sleep_hours")
+    sleep_h = _num(readiness.get("sleep_hours"))
     if sleep_h is not None:
-        sleep_score = readiness.get("sleep_score")
-        score_num = _num(sleep_score)
-        bit = f"- {_flag(score_num is not None and score_num < 70)}**Sleep:** {_hours(sleep_h)}"
+        sleep_score = _num(readiness.get("sleep_score"))
+        need_h = _num(sleep_data.get("need_h"))
+        if need_h is None:
+            need_h = _num(trends.get("sleep_need_h"))
+        bit = f"- {_flag((sleep_score is not None and sleep_score < 70) or (need_h is not None and sleep_h < need_h))}**Sleep:** {_hours(sleep_h)}"
+        if need_h is not None:
+            delta = sleep_h - need_h
+            if abs(delta) < 0.005:
+                bit += f" / {_hours(need_h)} need (met)"
+            elif delta < 0:
+                bit += f" / {_hours(need_h)} need ({_hours(abs(delta))} short)"
+            else:
+                bit += f" / {_hours(need_h)} need ({_hours(delta)} over)"
         if sleep_score is not None:
-            bit += f" (score {int(score_num or 0)})"
+            bit += f" · score {int(sleep_score)}"
+        sleep_avg = _num(trends.get("sleep_7d_avg_h"))
+        below = _num(trends.get("sleep_nights_below_need"))
+        if sleep_avg is not None:
+            bit += f" · 7d avg {_hours(sleep_avg)}"
+        if below is not None:
+            bit += f" · {int(below)}/7 nights below need"
         lines.append(bit)
 
-    recovery_h = readiness.get("recovery_hours")
+    recovery_h = _num(readiness.get("recovery_hours"))
     if recovery_h is not None:
-        lines.append(f"- {_flag(_num(recovery_h) and _num(recovery_h) >= 24)}**Recovery time:** {_num(recovery_h):g}h")
+        recovery_text = _hours(recovery_h) if recovery_h < 24 else f"{int(recovery_h // 24)}d {_hours(recovery_h % 24)}"
+        lines.append(f"- {_flag(recovery_h >= 24)}**Recovery remaining:** {recovery_text}")
 
     limiter = s.get("limiting_factor")
     if limiter:
