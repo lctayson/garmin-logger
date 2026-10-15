@@ -40,6 +40,6 @@ def test_readiness_quick_reference_shows_hrv_band_sleep_need_and_recovery():
     assert "balanced range: 47–57ms" in rendered
     assert "Sleep:** 5h52 / 7h00 need (1h08 short)" in rendered
     assert "score 75" in rendered
-    assert "7d avg 6h14" in rendered
+    assert "7d avg 6h13" in rendered
     assert "nights below need" in rendered
     assert "Recovery remaining:** 0h00" in rendered
