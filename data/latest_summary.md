@@ -17,7 +17,7 @@
   - Intervals: 4 work reps · pace drift -5.9% · HR +9bpm
   - MS: 4.00k @ 5:09 166bpm 1.05m 182spm 238ms 8.2cm 331w
   - Readiness 63 → 34 (Find Time To Relax) · Recovery 1d 12h
-  - 🧠 The four 1‑km reps averaged 5:09 /km (5:08‑5:10) with rep HR climbing from 160 bpm to 169 bpm, so you stayed comfortably below the ≤172 bpm ceiling but missed the prescribed 5:00‑5:08 pace window by about a second per kilometer. Interval drift shows a modest 9 bpm HR rise and a –5.9 % pace‑efficiency shift, while stamina fell from 99 % to a low of 53 %, indicating the VO₂‑max stimulus was real but left a noticeable fatigue bank. Your morning readiness was “Moderate” (63), yet the post‑run score plunged to 34 and acute load jumped to 693, suggesting today’s effort was taxing and recovery will need emphasis.
+  - 🧠 The four 1‑km reps averaged 5:09 /km, with the first two on target (5:08) but the last two slipping to 5:09–5:10 and a –5.9 % pace‑efficiency drift, while heart‑rate rose from 160 bpm to 169 bpm (Δ 9 bpm) indicating growing cardiovascular strain across the set. Stamina fell from 99 % at the start to 64 % (minimum 53 %), and the post‑run readiness score dropped to 34, reflecting the high acute load (185 ·) and a –13 % body‑battery impact. To secure a robust VO₂max stimulus in future Thursday sessions, aim to hold the 5:00–5:08 /km range for all reps and limit the late‑rep drift, then prioritize recovery the following day.
 
 ## Next Session
 - **Planned:** Fri, Oct 16 — Rest + Core
