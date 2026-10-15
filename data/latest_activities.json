@@ -630,7 +630,7 @@
         ]
       },
       "lap_count": 15,
-      "ai_analysis": "The four 1‑km reps were run at 5:08, 5:08, 5:09 and 5:10 km h⁻¹, so the first two met the prescribed 5:00‑5:08 window while the last two slipped just a second per km, mirrored by a steady HR rise from 160 to 169 bpm (+9 bpm). The interval‑drift metrics (‑5.9 % pace‑efficiency, ‑6.5 % power‑efficiency) line up with that slowdown and the increasing HR, indicating the expected fatigue buildup across the work set. Stamina dropped from 99 % to 64 % (minimum 53 %) and post‑run readiness plunged to 34, reflecting the high VO2‑max load (training effect 4.0 aerobic) against a moderate morning readiness score of 63.",
+      "ai_analysis": "Your 4 × 1 km VO₂max set delivered the intended stimulus – the first two reps hit the prescribed 5:08 /km target and the last two only slipped to 5:09‑5:10, with a modest -5.9 % pace‑efficiency drift and a 9 bpm rise in heart‑rate (160 → 169 bpm) indicating accumulating fatigue but still within the VO₂max HR window (≈170‑178 bpm). Stamina fell from 99 % to 64 % (minimum 53 %) and the training‑effect scores (aerobic 4.0, anaerobic 1.1) confirm a solid high‑intensity load, exactly what the bridge phase demands after the earlier sub‑threshold work. The post‑run readiness drop to 34 is expected after such a demanding session and doesn’t signal overreaching given your moderate morning score of 63.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
