@@ -29,20 +29,20 @@ HM-specific phase begins Nov 30, 2026 and runs through race day Feb 21,
 2027. Keep Tuesday SUT and Thursday quality (including VO2 maintenance and
 HM-specific sessions), introduce selected HM-effort work progressively,
 and avoid stacking a hard Thursday workout with a mandatory fast long-run
-finish. Wednesday strides stay flat; Sunday hill sprints are optional and
-only when recovered and calf-symptom-free.
+finish. Wednesday work is easy running plus the strides or hill work listed for
+that week; Sunday hills are used only where scheduled and should be skipped
+if recovery or calf symptoms make them inappropriate.
 
 ## Typical weekly schedule (current bridge phase)
 
-Day-of-week pattern the block currently follows -- for giving a specific
-"what today normally is, and how should readiness adjust it" recommendation
-on mornings with no activity logged yet, not for predicting results. Update
-this section when the HM-specific phase begins (Nov 30, 2026) or whenever
-the actual weekly structure changes.
+Day-of-week pattern for giving a specific "what today normally is, and how
+should readiness adjust it" recommendation on mornings with no activity
+logged yet, not for predicting results. Some weeks include hill work on
+Wednesday or Sunday; follow the specific weekly entry below.
 
 - **Monday**: Strength A (power/hip extension)
 - **Tuesday**: Threshold session (sub-threshold intervals, e.g. 3x8min)
-- **Wednesday**: Easy run + flat relaxed strides (no hills)
+- **Wednesday**: Easy run + strides or hill work as listed for that week
 - **Thursday**: Quality 2 -- VO2/shorter intervals in the bridge phase; later a mix of VO2 maintenance and HM-specific work
 - **Friday**: Core/hip stability strength, no running
 - **Saturday**: Long run, mostly easy; selected HM-effort finishes are optional and conditional
