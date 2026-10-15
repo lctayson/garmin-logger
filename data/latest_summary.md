@@ -18,16 +18,9 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Follow today’s plan: do the scheduled **core/hip‑stability strength session** and skip any running.  
+**Decision** – Proceed with today’s planned **Friday Rest + Core** session; no running required.  
 
-**Workout execution**  
-- **Warm‑up**: 5‑10 min low‑intensity mobility (leg swings, hip circles, body‑weight glute bridges).  
-- **Main set**: 3‑4 rounds of a core circuit – 45 s plank, 30 s each side‑plank, 12 × bird‑dog reps, 15 × glute bridges. Keep effort moderate; heart rate should stay well below 130 bpm.  
-- **Cool‑down**: 5‑8 min gentle stretch of hamstrings, hip flexors, lumbar spine and deep breathing.  
-
-**Readiness rationale** – Sleep 7.4 h (score 83) and balanced HRV (55 ms vs 7‑day 50 ms) indicate good recovery; resting HR 57 bpm is low and ACWR 1.0 is optimal. No red flags, so the prescribed strength work is appropriate and should feel easy to moderate.  
-
-**In‑session guardrails** – Monitor HR and perceived fatigue; if HR climbs >130 bpm, you feel unusually tight or fatigued, or any
+**Workout execution** – 1️⃣ Warm‑up: 5 min easy jog
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
