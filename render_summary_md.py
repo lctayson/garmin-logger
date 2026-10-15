@@ -507,13 +507,18 @@ def _readiness_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[s
         balanced_low = _num(baseline.get("balancedLow", baseline.get("balanced_low")))
         balanced_high = _num(baseline.get("balancedUpper", baseline.get("balanced_upper")))
         band = trends.get("hrv_vs_balanced_band")
-        bit = f"- {_flag(band not in (None, 'within'))}**HRV:** {hrv:g}ms"
-        if hrv7 is not None:
-            bit += f" (7d avg: {hrv7:g}ms)"
+        # Mirror Garmin's compact HRV status: baseline range plus current status.
+        bit = f"- **HRV Status:**"
         if balanced_low is not None and balanced_high is not None:
-            bit += f" · balanced range: {balanced_low:g}–{balanced_high:g}ms"
-        if band and band != "within":
-            bit += f" — {band} balanced band"
+            bit += f" ◻ {balanced_low:g}–{balanced_high:g} ms Baseline"
+        status = "Balanced" if band == "within" else (str(band).title() if band else None)
+        bit += f" 🟢 {hrv:g} ms"
+        if status:
+            bit += f" {status}"
+        else:
+            bit += " (status unavailable)"
+        if hrv7 is not None:
+            bit += f" · 7d avg: {hrv7:g} ms"
         lines.append(bit)
 
     sleep_h = _num(readiness.get("sleep_hours"))
