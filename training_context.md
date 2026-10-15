@@ -291,14 +291,14 @@ Legend: SUT = sub-threshold, EZ = easy, LSD = long run, RI = recovery interval
 - **Sat** 16k EZ, ≤150; no fast finish
 - **Sun** 8k recovery @ 7:00-7:40, ≤145; no hills
 
-## W21 · Feb 8 · 38 km
-- **Mon** Strength A
-- **Tue** 6k as 2×8min SUT @ 5:25-5:35, 2min jog, ≤168
-- **Wed** 6k EZ @ 6:50-7:20, ≤150 + 4×20s strides, 75s walk
-- **Thu** 6k as 3×3min @ 5:05-5:12, 2min jog, ≤170 (VO2 maintenance)
+## W21 · Feb 8 · 38 km (taper)
+- **Mon** Strength A, reduced to 1-2 easy sets; no soreness
+- **Tue** 6k as 2×8min SUT @ 5:25-5:35, 2min easy jog, ≤168; finish fresh
+- **Wed** 6k EZ @ 6:50-7:20, ≤150 + 4×20s relaxed strides, 75s walk
+- **Thu** 6k as 3×3min @ 5:05-5:12, 2min easy jog, ≤170; controlled, no straining
 - **Fri** Rest
-- **Sat** 14K EZ
-- **Sun** 6k recovery @ 7:05-7:45, ≤145 w/ 6-8×10s hills
+- **Sat** 14k EZ, ≤150; no fast finish
+- **Sun** 6k recovery @ 7:05-7:45, ≤145; no hills
 
 ## W22 · Feb 15 · ~39 km (RACE WEEK)
 - **Mon** Rest + mobility; no strength workout
