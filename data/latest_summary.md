@@ -18,9 +18,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Go ahead with the scheduled Friday “Rest + Core” session – no running is required today.  
-- **Warm‑up:** 5‑10 min of dynamic mobility (leg swings, hip circles, banded glute activation) to get the core temperature up.  
-- **Main set:** Perform your usual core circuit (e.g., 3 × 30 s
+- **Decision:** Proceed with today’s planned core/hip‑stability strength session; no need to downgrade or skip.  
+- **Execution:** 5‑10 min dynamic warm‑up (leg swings, hip circles, light band work); then the usual core circuit – e.g., 3 × 30‑45 s plank, side‑plank each side, dead‑bug, glute‑bridge with 30‑s rest between sets; finish with 2‑3 × 10 reps of hip‑extension band pulls.  
+- **Readiness rationale:** Sleep 7.4 h (score 83) and HRV 55 ms (balanced, above 7‑day avg) indicate good recovery; resting HR 57 bpm is low; recovery‑time 13.5 h and ACWR 1.0 are “optimal”. The moderate readiness score reflects only the aggregate metric – the underlying indicators are all green, so the session is well‑tolerated.  
+- **In‑session guardrails:** Keep the core work low‑intensity (HR < 120 bpm); if you feel joint pain, excessive fatigue, or HR spikes early, cut the volume in half or skip the final set. Stay hydrated for the early‑morning heat
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
