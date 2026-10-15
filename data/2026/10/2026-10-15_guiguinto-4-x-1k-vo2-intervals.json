@@ -630,7 +630,7 @@
         ]
       },
       "lap_count": 15,
-      "ai_analysis": "The four 1‑km reps hit the prescribed VO2‑max window (5:08–5:10 /km) but showed a modest slowdown of about 2 seconds from the first to the last rep, accompanied by a 9 bpm rise in HR (160→169 bpm) and a –5.9 % pace‑efficiency drift, indicating the stimulus was solid but fatigue was building across the set. Stamina fell from 99 % to a low of 53 % and the body‑battery impact was –13, confirming the cost of the hard work. Your morning readiness was only “moderate” (score 63) and the post‑exercise snapshot dropped to 34, but the drop reflects the acute load rather than a problem with the session itself. Overall, the interval was an effective VO2‑max stimulus, though keeping rep pace tighter in the later reps would preserve more stamina for the upcoming bridge‑phase work.",
+      "ai_analysis": "The four 1 km VO₂‑max reps averaged 5:09 /km (range 5:08–5:10), which sits comfortably inside the prescribed 4:50–5:15 /km window, but the 9 bpm rise in rep HR (160→169 bpm) and the –5.9 % pace‑efficiency drift indicate the work became progressively harder and the pacing slipped slightly toward the slower end of the target. Stamina fell from 99 % to 64 % (minimum 53 %), and the acute load of 185 AU pushed the post‑run readiness down to 34, a clear signal that today’s hard Thursday session taxed the system and will require a focused recovery before the Saturday easy run.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
