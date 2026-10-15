@@ -630,7 +630,7 @@
         ]
       },
       "lap_count": 15,
-      "ai_analysis": "The four 1‑km reps hit 5:08–5:10 km⁻¹, essentially on the slower edge of the prescribed 5:00–5:08 range, and the 9‑bpm rise in HR (160 → 169 bpm) shows you reached the intended VO2max intensity. A –5.9 % pace‑efficiency drift and a –6.5 % power‑efficiency drop across the reps indicate a modest decline in execution, reflected by stamina falling from 99 % to a low of 53 % by the end. With a moderate morning readiness score (63) the load was tolerable, but the combined drift and stamina dip suggest you should tighten pacing on the latter reps and monitor recovery before Thursday’s next hard session.",
+      "ai_analysis": "The four 1‑km reps came in at 5:08, 5:08, 5:09 and 5:10 km⁻¹, i.e., 1–2 s slower than the prescribed 5:00–5:08 window, which is reflected by the –5.9 % pacing‑efficiency drift across the set",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
