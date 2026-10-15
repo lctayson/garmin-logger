@@ -4,7 +4,7 @@
 > Balance Stress And Recovery
 
 - **RHR:** 57 bpm (7d avg: 57.9 bpm, trending down)
-- **HRV:** 54ms (7d avg: 49ms) · balanced range: 47–57ms
+- **HRV:** 54ms (7d avg: 49ms) · baseline: 47–57ms
 - ⚠️ **Sleep:** 5h52 / 7h00 need (1h08 short) · score 75 · 7d avg 6h13 · 5/7 nights below need
 - **Recovery remaining:** 0h00
 - ⚠️ **Limiter:** Sleep Score (62%)
@@ -17,7 +17,7 @@
   - Intervals: 4 work reps · pace drift -5.9% · HR +9bpm
   - MS: 4.00k @ 5:09 166bpm 1.05m 182spm 238ms 8.2cm 331w
   - Readiness 63 → 34 (Find Time To Relax) · Recovery 1d 12h
-  - 🧠 The four 1‑km reps came in at 5:08, 5:08, 5:09 and 5:10 km⁻¹, i.e., 1–2 s slower than the prescribed 5:00–5:08 window, which is reflected by the –5.9 % pacing‑efficiency drift across the set
+  - 🧠 Your 4 × 1 km VO₂max repeats hit the prescribed intensity: each rep averaged 5 : 09 /km, sitting inside the 5 : 00–5 : 12 window and staying well under the ≤172 bpm HR cap (rep HR rose from 160 to 169 bpm, with a 9‑bpm drift across the set). The –5.9 % pace‑efficiency drift reflects a modest slowing in the later reps (5 : 08 → 5 : 10), but the overall work remained on target and produced the expected VO₂max training effect (aerobic = 4.0, anaerobic ≈ 1.1). Stamina fell from 99 % to a low of 53 % during the session, which is typical for a hard VO₂max block and does not signal overreaching given your moderate morning readiness (score 63). The post‑run readiness drop to 34 is a normal acute response and not a concern for tomorrow’s easy run.
 
 ## Next Session
 - **Planned:** Fri, Oct 16 — Rest + core
