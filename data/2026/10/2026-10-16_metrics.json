@@ -1,13 +1,63 @@
 {
   "date": "2026-10-16",
   "readiness": {
+    "score": 61,
+    "level": "Moderate",
+    "feedback": "Well Rested",
     "resting_hr": 57,
-    "ai_analysis": "**Decision** – Proceed with today’s scheduled **Friday Core / hip‑stability session**; no running is prescribed, so keep the focus on strength work.\n\n**Workout execution** – 1️⃣ Warm‑up: 5 min easy dynamic mobility (leg swings, hip circles, body‑weight squats).  \n2️⃣ Main set (≈20 min): 3 circuits of 30 s each – glute bridges, side‑lying clamshells, single‑leg dead‑lifts, front‑plank, side‑plank, bird‑dog; 30 s rest between exercises, 2 min rest between circuits.  \n3️⃣ Cool‑down: 5 min gentle stretching for hamstrings, hip flexors, and lower back.\n\n**Readiness rationale** – Your resting HR of 57 bpm is low, indicating good autonomic recovery; with no elevated load reported and no sleep or HRV data suggesting strain, you appear ready for a moderate‑intensity core day. The low HR also suggests you can comfortably keep the session below a cardio‑stress threshold.\n\n**In‑session guardrails** – Watch for any sudden low‑back, hip, or knee discomfort; if form degrades or you feel unusually fatigued, cut the circuit length in half or replace the exercise with a low‑impact mobility",
+    "hrv_last_night_avg_ms": 55.0,
+    "hrv_7_day_avg_ms": 50.0,
+    "hrv_status": "BALANCED",
+    "sleep_hours": 7.43,
+    "sleep_hours_including_previous_day_nap": 7.43,
+    "sleep_score": 83,
+    "recovery_hours": 13.5,
+    "hrv_baseline": {
+      "lowUpper": 45.0,
+      "balancedLow": 47.0,
+      "balancedUpper": 57.0,
+      "markerValue": 0.3999939
+    },
+    "factor_details": {
+      "sleep_score": {
+        "percent": 76,
+        "feedback": "Good"
+      },
+      "sleep_history": {
+        "percent": 63,
+        "feedback": "Moderate"
+      },
+      "recovery_time": {
+        "percent": 78,
+        "feedback": "Good"
+      },
+      "acwr": {
+        "percent": 88,
+        "feedback": "Good"
+      },
+      "hrv": {
+        "percent": 100,
+        "feedback": "Very Good"
+      },
+      "stress_history": {
+        "percent": 57,
+        "feedback": "Moderate"
+      }
+    },
+    "ai_analysis": "**Decision** – Follow today’s plan: do the scheduled **core/hip‑stability strength session** and skip any running.  \n\n**Workout execution**  \n- **Warm‑up**: 5‑10 min low‑intensity mobility (leg swings, hip circles, body‑weight glute bridges).  \n- **Main set**: 3‑4 rounds of a core circuit – 45 s plank, 30 s each side‑plank, 12 × bird‑dog reps, 15 × glute bridges. Keep effort moderate; heart rate should stay well below 130 bpm.  \n- **Cool‑down**: 5‑8 min gentle stretch of hamstrings, hip flexors, lumbar spine and deep breathing.  \n\n**Readiness rationale** – Sleep 7.4 h (score 83) and balanced HRV (55 ms vs 7‑day 50 ms) indicate good recovery; resting HR 57 bpm is low and ACWR 1.0 is optimal. No red flags, so the prescribed strength work is appropriate and should feel easy to moderate.  \n\n**In‑session guardrails** – Monitor HR and perceived fatigue; if HR climbs >130 bpm, you feel unusually tight or fatigued, or any",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
+  "health": {
+    "steps": 14
+  },
   "sleep": {
+    "deep_h": 0.92,
+    "light_h": 4.92,
+    "rem_h": 1.6,
+    "awake_h": 0.33,
     "baseline_h": 7.0,
     "need_h": 7.5,
+    "next_need_h": 7.0,
     "feedback": "Increased",
     "training_feedback": "Todays Load And Chronic",
     "sleep_history_adjustment": "Increasing Low Quality",
@@ -15,11 +65,42 @@
     "nap_adjustment": "No Change",
     "previous_day_nap": null
   },
+  "load": {
+    "acute_load": 572,
+    "chronic_load": 536,
+    "acwr": 1.0,
+    "acwr_percent": 42,
+    "acwr_status": "Optimal",
+    "chronic_load_range": {
+      "min": 428.8,
+      "max": 804.0
+    },
+    "training_status": "Maintaining 2"
+  },
+  "vo2_max": 45.0,
   "race_predictions": {
     "5k": "27:19",
     "10k": "57:28",
     "half_marathon": "2:11:57",
     "marathon": "4:54:38"
+  },
+  "load_balance": {
+    "aerobic_low": 870.6,
+    "aerobic_low_target": [
+      380,
+      1033
+    ],
+    "aerobic_high": 1189.4,
+    "aerobic_high_target": [
+      816,
+      1468
+    ],
+    "anaerobic": 56.9,
+    "anaerobic_target": [
+      217,
+      652
+    ],
+    "load_focus": "Anaerobic Shortage"
   },
   "running_tolerance": {
     "acute_impact_load": 43.1,
@@ -146,6 +227,14 @@
         }
       ]
     }
+  },
+  "heat_acclimation": {
+    "percentage": 100,
+    "trend": "Acclimatized"
+  },
+  "altitude_acclimation": {
+    "percentage": 0,
+    "trend": null
   },
   "trend_recent_daily": {
     "columns": [
@@ -327,16 +416,16 @@
       [
         "2026-10-16",
         57,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        55.0,
+        50.0,
+        7.43,
+        83,
+        45.0,
+        "Maintaining 2",
+        572,
+        536,
+        1.0,
+        "Optimal",
         0,
         0.0,
         0.0,
@@ -711,16 +800,16 @@
         "2026-10-10",
         "2026-10-16",
         57,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        55.0,
+        50.0,
+        7.43,
+        83,
+        45.0,
+        "Maintaining 2",
+        572,
+        536,
+        1.0,
+        "Optimal",
         6,
         5.07,
         39.13,
@@ -795,9 +884,9 @@
       ],
       [
         "2026-10-16",
-        40,
-        0,
-        63,
+        64,
+        2,
+        87,
         23
       ]
     ]

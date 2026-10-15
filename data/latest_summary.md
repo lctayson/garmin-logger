@@ -1,26 +1,33 @@
 # Daily Check — 2026-10-16
 
-## Readiness: -/100
+## Readiness: 61/100 (Moderate)
+> Well Rested
 
 - **RHR:** 57 bpm (7d avg: 57.9 bpm, trending down)
+- **HRV:** 55ms (7d avg: 50ms) · baseline: 47–57ms
+- ⚠️ **Sleep:** 7h26 / 7h30 need (0h04 short) · score 83 · 7d avg 6h30 · 7/7 nights below need
+- **Recovery remaining:** 13h30
+- ⚠️ **Limiter:** Stress History (57%)
+- **Also soft:** Sleep History
 
 ## Today's Session
 - **Planned:** Fri, Oct 16 — Rest + Core
 - **Recommendation:** Proceed as planned
-- **Reason:** ongoing sleep debt (7-day average 6.3h), 6/7 nights below need.
+- **Reason:** ongoing sleep debt (7-day average 6.5h), 7/7 nights below need.
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **Friday Core / hip‑stability session**; no running is prescribed, so keep the focus on strength work.
+**Decision** – Follow today’s plan: do the scheduled **core/hip‑stability strength session** and skip any running.  
 
-**Workout execution** – 1️⃣ Warm‑up: 5 min easy dynamic mobility (leg swings, hip circles, body‑weight squats).  
-2️⃣ Main set (≈20 min): 3 circuits of 30 s each – glute bridges, side‑lying clamshells, single‑leg dead‑lifts, front‑plank, side‑plank, bird‑dog; 30 s rest between exercises, 2 min rest between circuits.  
-3️⃣ Cool‑down: 5 min gentle stretching for hamstrings, hip flexors, and lower back.
+**Workout execution**  
+- **Warm‑up**: 5‑10 min low‑intensity mobility (leg swings, hip circles, body‑weight glute bridges).  
+- **Main set**: 3‑4 rounds of a core circuit – 45 s plank, 30 s each side‑plank, 12 × bird‑dog reps, 15 × glute bridges. Keep effort moderate; heart rate should stay well below 130 bpm.  
+- **Cool‑down**: 5‑8 min gentle stretch of hamstrings, hip flexors, lumbar spine and deep breathing.  
 
-**Readiness rationale** – Your resting HR of 57 bpm is low, indicating good autonomic recovery; with no elevated load reported and no sleep or HRV data suggesting strain, you appear ready for a moderate‑intensity core day. The low HR also suggests you can comfortably keep the session below a cardio‑stress threshold.
+**Readiness rationale** – Sleep 7.4 h (score 83) and balanced HRV (55 ms vs 7‑day 50 ms) indicate good recovery; resting HR 57 bpm is low and ACWR 1.0 is optimal. No red flags, so the prescribed strength work is appropriate and should feel easy to moderate.  
 
-**In‑session guardrails** – Watch for any sudden low‑back, hip, or knee discomfort; if form degrades or you feel unusually fatigued, cut the circuit length in half or replace the exercise with a low‑impact mobility
+**In‑session guardrails** – Monitor HR and perceived fatigue; if HR climbs >130 bpm, you feel unusually tight or fatigued, or any
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -35,9 +42,14 @@ _Most recent activity (2026-10-15):_
 
 ## Load & Trends
 
+- **ACWR:** 1.0 (Optimal) — acute 572 / chronic 536 (chronic range 428.8–804)
 - **7-day volume:** 39.13km vs 28-day avg 35.7km (+10%)
 - **Running tolerance:** 68.7% (Medium) — 39.1km of 62.7km weekly cap, acute impact load 43.1
-- ⚠️ **Sleep (7d avg):** 6h20, 6/7 nights below need, trending up
+- **Aerobic Low:** 870.6 (target 380–1033 — in range)
+- **Aerobic High:** 1189.4 (target 816–1468 — in range)
+- ⚠️ **Anaerobic:** 56.9 (target 217–652 — -160 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- ⚠️ **Sleep (7d avg):** 6h30, 7/7 nights below need, trending up
 - **RHR (7d avg):** 57.9, trending down
 - **HRV:** trending up
 
