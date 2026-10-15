@@ -18,9 +18,9 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned **Friday Rest + Core** session; no running required.  
-
-**Workout execution** – 1️⃣ Warm‑up: 5 min easy jog
+- **Decision:** Go ahead with the scheduled Friday “Rest + Core” session – no running is required today.  
+- **Warm‑up:** 5‑10 min of dynamic mobility (leg swings, hip circles, banded glute activation) to get the core temperature up.  
+- **Main set:** Perform your usual core circuit (e.g., 3 × 30 s
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
