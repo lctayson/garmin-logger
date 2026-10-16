@@ -18,13 +18,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned “Rest + Core” session (no running). Your readiness score is moderate but the underlying metrics (resting HR 57 bpm, HRV balanced, 7.4 h sleep, ACWR 1.0 optimal) all signal good recovery, so a light strength workout is appropriate.
+**Decision** – Proceed with today’s planned **Friday Core/Hip‑Stability strength** session; no run is scheduled.
 
-**Workout execution** – Warm‑up: 5 min easy mobility (dynamic hip circles, leg swings, glute bridges). Main set: core/hip‑stability circuit (e.g., 3 × 30 s plank, 3 × 12 × bird‑dog, 3 × 15 × single‑leg glute bridge, 3 × 12 × side‑plank each side) with 30‑s rest between exercises; keep RPE ≤ 5. Cool‑down: 3‑5 min gentle stretching of hips, lower back, and hamstrings.
+**Workout execution** – 5‑10 min dynamic warm‑up (leg swings, hip circles, light band work). Then the prescribed core/hip circuit (e.g., planks, side‑planks, glute bridges, single‑leg dead‑lifts, band‑pull‑apart) for 20‑30 min, keeping effort in the “moderate” RPE zone. Finish with 5 min of gentle stretching for hips and lower back.
 
-**Readiness rationale** – Resting HR is low (57 bpm) and HRV is in the “balanced” band, indicating strong autonomic recovery; sleep score 83 and 13.5 h recovery time are both “good.” Load metrics (ACWR 1.0, acute 572 vs chronic 536) are within the optimal window, so the body is ready for a modest strength stimulus without risking cumulative fatigue.
+**Readiness rationale** – Sleep 7.4 h (score 83 = good), HRV 55 ms (100 % of baseline, “balanced”), resting HR 57 bpm (low, indicating good recovery), and ACWR 1.0 (optimal) all point to a well‑recovered state. The overall readiness score is moderate (61) but the detailed factors are all in the green, so there’s no need to downgrade today’s strength work.
 
-**In‑session guardrails** – If your heart rate spikes > 150 bpm during the core set, feel unusually fatigued, or notice any joint/pain signals, drop the volume (e.g., reduce reps by half or skip the
+**In‑session guardrails** – Watch for any sudden hip, knee, or low‑back discomfort; if HR spikes >120 bpm or you feel
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
