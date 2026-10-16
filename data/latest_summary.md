@@ -10,38 +10,28 @@
 - ⚠️ **Limiter:** Sleep Score (50%)
 - **Also soft:** Stress History, Sleep History
 
-## Today's Session
-- **Planned:** Sat, Oct 17 — 12k EZ
-- **Recommendation:** Keep it easy
+## Today's Workout
+
+- **Malolos Running** — 12.03km · 1:29:16 · 7:25/km · HR 146/155 max
+  - TE: Aerobic Base · aerobic 3.4 · anaerobic 0
+  - MS: 12.03k @ 7:25 145bpm 0.80m 168spm 278ms 7.9cm 239w
+  - Readiness 62 → 41 (Focus On Energy Levels) · Recovery 1d 4h 47m
+  - 🧠 Your 12 km easy run stayed broadly within the Sunday EZ window, but the average pace of 7:25 /km was a few seconds slower than the 6:50‑7:20 /km target and the rep range (7:10‑7:40) shows a modest positive drift toward the faster end in the latter half. Heart‑rate stayed under the 150 bpm ceiling for most of the set, rising from 126 bpm early to 152 bpm on the final rep, which is a typical progressive load for an EZ run in the heat. Morning readiness was moderate (score 62) with good sleep, and the post‑run drop to 41 is expected after a 108 AU load and does not indicate a problem on its own. No concerning spikes or missed anaerobic stimulus were observed.
+
+## Next Session
+- **Planned:** Sun, Oct 18 — 7k EZ @ 6:50-7:20, ≤150 bpm with 6-8×10s hills
+- **Recommendation:** Adjust the workout
 - **Reason:** short sleep last night (6.0h); resting heart rate is trending up; HRV is trending down; last-night HRV is below the balanced band; RHR-up/HRV-down recovery pattern.
-- **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
-
-### 🧠 AI Coaching Guidance
-
-**Decision** – Proceed with today’s planned **Saturday 12 km easy run**, but target the *slower* end of the easy zone (≈7:00 – 7:15 min / km) and be ready to trim the distance to ~8–10 km if fatigue or HR spikes appear.
-
-**Workout execution**  
-- **Warm‑up:** 10‑15 min easy jog (RPE ≈ 2, HR < 140 bpm).  
-- **Main set:** 12 km continuous easy run, stay ≤150 bpm, aim for 7:00‑7:15 / km.  
-- **Cool‑down:**
+- **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
-## Latest Activity
-
-_Most recent activity (2026-10-15):_
-- **Guiguinto - 4 x 1k VO₂ Intervals** — 8.03km · 53:27 · 6:39/km · HR 154/178 max
-  - TE: VO2 Max (High Aerobic) · aerobic 4 · anaerobic 1.1
-  - Intervals: 4 work reps · pace drift -5.9% · HR +9bpm
-  - MS: 4.00k @ 5:09 166bpm 1.05m 182spm 238ms 8.2cm 331w
-  - 🧠 Your 4 × 1 km reps hit the prescribed speed envelope (two at 5:08 /km, the last two only 1–2 s slower) and stayed comfortably below the ≤172 bpm HR ceiling, so the interval pacing and heart‑rate targets were met. However, the interval‑drift metrics show a ≈‑5.9 % pace‑efficiency decline and a +9 bpm HR rise across the set, while power dropped ~6.5 %, indicating the later reps required more cardiac effort for slightly less mechanical output. Stamina fell from 99 % to 64 % (low of 53 %), and your post‑run readiness plunged to 34, reflecting the high VO₂‑max load and suggesting you may need a bit more sharpness or a brief recovery before the next hard Thursday.
-
 ## Load & Trends
 
-- **ACWR:** 0.9 (Optimal) — acute 470 / chronic 518 (chronic range 414.4–777)
-- **7-day volume:** 28.1km vs 28-day avg 34.6km (-19%)
-- **Running tolerance:** 58.2% (Medium) — 28.1km of 62.7km weekly cap, acute impact load 36.5
-- **Aerobic Low:** 816.1 (target 303–822 — in range)
+- **ACWR:** 1.1 (Optimal) — acute 608 / chronic 543 (chronic range 434.4–814.5)
+- **7-day volume:** 40.13km vs 28-day avg 37.6km (+7%)
+- **Running tolerance:** 77.5% (Medium) — 40.1km of 62.7km weekly cap, acute impact load 48.6
+- ⚠️ **Aerobic Low:** 924.7 (target 303–822 — +103 over)
 - ⚠️ **Aerobic High:** 1189.4 (target 649–1169 — +20 over)
 - ⚠️ **Anaerobic:** 44.9 (target 173–519 — -128 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
@@ -59,8 +49,8 @@ _Most recent activity (2026-10-15):_
 | W | BHM W4: Run + Strides | 6k · 46:47 | 74 |
 | T | 4x1k VO₂ Int | 8k · 53:27 | 185 |
 | F | Rest | — | — |
-| S | Rest | — | — |
+| S | Malolos Run | 12k · 1:29:16 | 109 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 5 | 28.11 km | 3:43:02 | 477.6 |
+| 6 | 40.14 km | 5:12:18 | 586.2 |
