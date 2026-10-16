@@ -44,7 +44,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "**Decision – Proceed as planned** – today’s schedule is a Rest + Core strength day; the readiness numbers (7.4 h sleep, HRV balanced, resting HR 57 bpm, ACWR 1.0 optimal) show you’re well‑recovered, so the planned hip‑extension / core session is appropriate.  \n\n**Workout execution** – Warm‑up 10‑15 min of easy jogging or bike plus dynamic hip/leg drills; main set: 3 × 8 min of Strength A (hip‑extension, glute bridges, single‑leg deadlifts) at RPE 6‑7, followed by a 10‑min core circuit (planks, side‑planks, dead‑bugs); cool‑down 5 min of gentle stretching and foam‑rolling.  \n\n**Readiness rationale** – Sleep score 83 and 7.4 h give a solid recovery base; HRV (55 ms) is above your 7‑day avg, indicating balanced autonomic state; resting HR 57 bpm is low, confirming good adaptation; load metrics are flat (ACWR 1.0), so no cumulative fatigue flag.  \n\n**In‑session guardrails** – Keep an eye on heart‑rate spikes (>130 bpm) during the warm‑up or lifts—if they appear, cut the weight or add extra rest. Watch for any joint pain or excessive fatigue; if you feel “off,” swap the last set for a mobility circuit instead of heavy loading. Stay hydrated for the early‑morning heat and finish with",
+    "ai_analysis": "**Decision** – Proceed with today’s planned Friday session (core/hip‑stability strength). Your readiness score (61 – Moderate) is backed by solid sleep (7.4 h, 83 score), balanced HRV (55 ms vs 50 ms 7‑day avg), low resting HR (57 bpm) and an optimal ACWR (1.0). No red‑flag symptoms are present, so a normal strength day is appropriate.\n\n**Workout execution** – 1) Warm‑up: 5 min easy jog or bike + dynamic hip‑mobility (leg swings, hip circles) and 2 × 10 s glute bridges.  \n2) Main set: 3 × 12 rep core circuit (plank 30 s, side‑plank 30 s each side, bird‑dog 12 each side, dead‑bug 12 each side) with 60‑s active recovery (light marching or band‑pull‑apart).  \n3) Cool‑down: 5 min light stretching focusing on hip flexors, hamstrings, and low‑back; finish with 2‑minute diaphragmatic breathing.\n\n**Readiness rationale** – Sleep quantity/quality and HRV are both “Very Good,” indicating good autonomic recovery. Resting HR is lower than typical baseline, suggesting effective recovery. Load metrics (acute 572, chronic 536, ACWR 1.0) are in the optimal window, so the cumulative stress load is manageable. The moderate overall readiness score reflects the usual day‑to‑day variance and does not outweigh the positive signals.\n\n**In‑session guardrails** – If you feel unusually heavy‑legged, notice HR spiking > 150 bpm during core work, or",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
@@ -885,7 +885,7 @@
       [
         "2026-10-16",
         64,
-        10,
+        14,
         87,
         23
       ]
