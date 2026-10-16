@@ -44,11 +44,11 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "**Decision** – Proceed with today’s planned **core/hip‑stability strength** session; no need to replace it with a recovery run.  \n\n**Execution** – *Warm‑up*: 5‑10 min dynamic mobility (leg swings, inchworms, hip circles, light air‑squats).  \n*",
+    "ai_analysis": "**Decision** – Proceed with today’s scheduled “Rest + Core” session (strength/hip‑stability work). Your readiness is “Well‑Rested” (HRV balanced, low resting HR, good sleep) and ACWR is optimal, so a light‑to‑moderate strength day fits the recovery‑balanced load.\n\n**Workout execution**  \n- **Warm‑up**: 5 min dynamic mobility (leg swings, hip circles, inchworms) + 2 × 30‑sec plank‑walks to activate core.  \n- **Main set**: 3 circuits of: 45 s single‑leg glute bridge each side, 45 s side‑plank each side, 45 s bird‑dog, 45 s dead‑bug; 30‑sec rest between exercises, 1 min rest between circuits. Keep RPE ≤ 6; focus on quality, not load.  \n- **Recovery / cool‑down**: 5 min low‑intensity foam‑roll/hip‑flexor stretch, finish with 2 × 30‑sec diaphragmatic breathing.\n\n**Readiness rationale**  \n- Resting HR 57 bpm and HRV 55 ms (above 7‑day avg) indicate good autonomic recovery.  \n- Sleep 7.4 h, sleep‑score 83 (“Good",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
-    "steps": 14
+    "steps": 820
   },
   "sleep": {
     "deep_h": 0.92,
@@ -884,10 +884,10 @@
       ],
       [
         "2026-10-16",
-        64,
-        24,
+        66,
+        72,
         87,
-        23
+        17
       ]
     ]
   },
