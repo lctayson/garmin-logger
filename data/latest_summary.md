@@ -18,16 +18,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision – Proceed as planned** – Friday is a “Rest + Core” day. Your readiness looks solid (7.4 h sleep, HRV balanced, resting HR 57, ACWR 1.0), so you can complete the prescribed core session; do not add any run.
+**Decision** – Proceed with today’s scheduled **Strength A (power/hip‑extension) session**; no running is planned for Friday.  
 
-**Execution** – 1️⃣ Light mobility warm‑up (5 min dynamic stretches, hip circles, ankle rolls).  
-2️⃣ Core circuit as per your usual Strength A routine (e.g., 3 × 45‑s plank, 3 × 12 ‑ 15 single‑leg bridges, 3 × 12 ‑ 15 bird‑dogs, 3 × 15 ‑ 20 standing band rotations).  
-3️⃣ No running – keep HR ≤ 120 bpm throughout; stay hydrated.  
-4️⃣ Cool‑down: 3‑5 min gentle walking or standing stretch, focus on thoracic extension and hip flexor release.
+**Workout execution** – Warm‑up 5–10 min of easy jogging or dynamic mobility (leg swings, hip circles, body‑weight lunges). Perform the usual Strength A circuit (e.g., hip thrusts, glute bridges, single‑leg deadlifts, core planks) at a moderate load – 2–3 sets of 8–12 reps per exercise, focusing on quality over weight. Finish with 5 min of gentle stretching for hips, hamstrings and lower back.  
 
-**Readiness rationale** – Sleep score 83 and recovery‑hours 13.5 h indicate you’re well‑rested; HRV 55 ms (above 7‑day avg) and balanced status confirm good autonomic recovery. Acute load (572) vs chronic (536) is at the optimal ACWR 1.0, so the core load fits comfortably within your current fatigue budget.
+**Readiness rationale** – Readiness score 61 (moderate) but “Well‑Rested” feedback, HRV balanced (55 ms vs 7‑day avg 50 ms), low resting HR 57 bpm, sleep 7.4 h (score 83) and ACWR 1.0 (optimal) all indicate good acute recovery. No concerning trends; the data support completing the planned strength work at the usual intensity.  
 
-**In‑session guardrails** – If your HR spikes > 130 bpm during the core work, feel unusually heavy, or notice any lingering calf/hip pain, cut the volume in half or skip the session and opt for full rest. Keep a bottle of water nearby; early‑morning humidity can raise perceived effort even for non‑cardio work.
+**In‑session guardrails** – Watch for any sharp joint pain, unusual fatigue, or a sudden HR rise (>180 bpm) during the lifts; if any appear, drop the load, cut a set, or stop the session. Keep
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
