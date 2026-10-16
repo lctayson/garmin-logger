@@ -1,30 +1,28 @@
-# Daily Check — 2026-10-16
+# Daily Check — 2026-10-17
 
-## Readiness: 61/100 (Moderate)
-> Well Rested
+## Readiness: -/100
 
-- **RHR:** 57 bpm (7d avg: 57.9 bpm, trending down)
-- **HRV:** 55ms (7d avg: 50ms) · baseline: 47–57ms
-- ⚠️ **Sleep:** 7h26 / 7h30 need (0h04 short) · score 83 · 7d avg 6h30 · 7/7 nights below need
-- **Recovery remaining:** 13h30
-- ⚠️ **Limiter:** Stress History (57%)
-- **Also soft:** Sleep History
+- ⚠️ **RHR:** 60 bpm (7d avg: 58 bpm, trending up)
 
 ## Today's Session
-- **Planned:** Fri, Oct 16 — Rest + Core
+- **Planned:** Sat, Oct 17 — 12k EZ
 - **Recommendation:** Proceed as planned
-- **Reason:** ongoing sleep debt (7-day average 6.5h), 7/7 nights below need.
+- **Reason:** resting heart rate is trending up.
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Stick with today’s planned **core/hip‑stability strength session** – no run is scheduled.  
-- **Execution:** 10 min dynamic activation (leg swings, glute bridges, light band work), then the prescribed core circuit (planks, dead‑bugs, single‑leg RDLs, hip‑thrusts) at moderate load, finishing with 5 min gentle mobility stretching.  
-- **Readiness rationale:** Resting HR 57 bpm, HRV balanced (55 ms night vs 50 ms 7‑day avg), sleep 7.4 h (score 83) and 13.5 h recovery give a “Well Rested” signal; ACWR 1.0 is optimal, so the body is ready for a typical strength load.  
-- **Guardrails:**  
-  - Keep the core volume moderate (≈3 × 10 reps per exercise) and stop if heart rate climbs >150 bpm or you feel lingering fatigue.  
-  - If any joint pain or unusual tightness appears, drop the load or replace the exercise with a mobility drill.  
-  - Finish with a brief cool‑down walk and deep‑breathing to aid post‑session recovery.
+**Decision** – Proceed with today’s scheduled 12 km easy run, but be ready to trim distance or pace if heat or fatigue spikes.  
+
+**Workout execution** – - **Warm‑up:** 10–12 min easy jog (≈7:30 / km) + 2‑3 strides.  
+- **Main set:** 12 km steady easy pace, aim 6:50 – 7:20 / km, keep HR ≤150 bpm (adjust slower if temperature pushes HR higher).  
+- **Cool‑down:** 5–8 min very easy jog + brief stretch.  
+
+**Readiness rationale** – Resting HR 60 bpm is within your normal range and no elevated load data are present, indicating good acute recovery. With no sleep or HRV flags, the body appears ready for a low‑intensity effort; the easy zone is low‑risk for accumulating fatigue.  
+
+**In‑session guardrails** – - Watch HR; if it climbs >155 bpm for more than a minute, drop the pace or cut the run to 8–10 km.  
+- Monitor perceived effort and any early‑morning heat (28‑33 °C); stay hydrated and consider a slower pace if you feel unusually hot or heavy.  
+- If you notice unusual fatigue, dizziness, or calf discomfort, stop the run and prioritize recovery.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -39,29 +37,24 @@ _Most recent activity (2026-10-15):_
 
 ## Load & Trends
 
-- **ACWR:** 1.0 (Optimal) — acute 572 / chronic 536 (chronic range 428.8–804)
-- **7-day volume:** 39.13km vs 28-day avg 35.7km (+10%)
+- **7-day volume:** 28.1km vs 28-day avg 34.6km (-19%)
 - **Running tolerance:** 68.7% (Medium) — 39.1km of 62.7km weekly cap, acute impact load 43.1
-- **Aerobic Low:** 870.6 (target 380–1033 — in range)
-- **Aerobic High:** 1189.4 (target 816–1468 — in range)
-- ⚠️ **Anaerobic:** 56.9 (target 217–652 — -160 under)
-- ⚠️ **Load focus:** Anaerobic Shortage
-- ⚠️ **Sleep (7d avg):** 6h30, 7/7 nights below need, trending up
-- **RHR (7d avg):** 57.9, trending down
+- **Sleep (7d avg):** 6h39, 3/7 nights below need, trending flat
+- ⚠️ **RHR (7d avg):** 58.0, trending up
 - **HRV:** trending up
 
-## This Week (Oct 10–16)
+## This Week (Oct 11–17)
 
 | D | Activity | Volume | Load |
 |:---:|:---|---:|---:|
-| S | Malolos Run | 11k · 1:21:20 | 106 |
 | S | BHM W3: Rec Run | 6k · 48:10 | 44 |
 | M | Strength A | 20:37 | 2 |
 | T | 3x8min Thr | 8k · 54:01 | 173 |
 | W | BHM W4: Run + Strides | 6k · 46:47 | 74 |
 | T | 4x1k VO₂ Int | 8k · 53:27 | 185 |
 | F | Rest | — | — |
+| S | Rest | — | — |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 6 | 39.14 km | 5:04:22 | 584 |
+| 5 | 28.11 km | 3:43:02 | 477.6 |
