@@ -18,15 +18,17 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned Friday session (core/hip‑stability strength). Your readiness score (61 – Moderate) is backed by solid sleep (7.4 h, 83 score), balanced HRV (55 ms vs 50 ms 7‑day avg), low resting HR (57 bpm) and an optimal ACWR (1.0). No red‑flag symptoms are present, so a normal strength day is appropriate.
+**Decision** – Proceed with today’s planned **Friday Core/Hip‑stability strength session**; no need to skip or downgrade.
 
-**Workout execution** – 1) Warm‑up: 5 min easy jog or bike + dynamic hip‑mobility (leg swings, hip circles) and 2 × 10 s glute bridges.  
-2) Main set: 3 × 12 rep core circuit (plank 30 s, side‑plank 30 s each side, bird‑dog 12 each side, dead‑bug 12 each side) with 60‑s active recovery (light marching or band‑pull‑apart).  
-3) Cool‑down: 5 min light stretching focusing on hip flexors, hamstrings, and low‑back; finish with 2‑minute diaphragmatic breathing.
+**Workout execution** – Warm‑up: 5 min easy dynamic (leg swings, walking lunges, hip circles). Main set (example core/hip circuit, 2‑3 rounds, 30‑45 s each, moderate load):  
+- Glute bridges × 12‑15  
+- Side‑plank hold × 30 s/side  
+- Clamshells × 15 each side (band)  
+- Single‑leg Romanian deadlift × 8‑10 each leg  
+- Pallof press × 12 each side  
+Finish with 3‑5 min light mobility (foam roll, hip flexor stretch).
 
-**Readiness rationale** – Sleep quantity/quality and HRV are both “Very Good,” indicating good autonomic recovery. Resting HR is lower than typical baseline, suggesting effective recovery. Load metrics (acute 572, chronic 536, ACWR 1.0) are in the optimal window, so the cumulative stress load is manageable. The moderate overall readiness score reflects the usual day‑to‑day variance and does not outweigh the positive signals.
-
-**In‑session guardrails** – If you feel unusually heavy‑legged, notice HR spiking > 150 bpm during core work, or
+**Readiness rationale** – Sleep 7.4 h (score 83) and HRV 55 ms (balanced, 100 % of baseline) show solid recovery; resting HR
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
