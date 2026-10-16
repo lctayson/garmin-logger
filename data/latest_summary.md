@@ -18,17 +18,16 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned **Friday Core/Hip‑stability strength session**; no need to skip or downgrade.
+**Decision:** Proceed with today’s planned **Rest + Core/hip‑stability strength session** – no running is scheduled.
 
-**Workout execution** – Warm‑up: 5 min easy dynamic (leg swings, walking lunges, hip circles). Main set (example core/hip circuit, 2‑3 rounds, 30‑45 s each, moderate load):  
-- Glute bridges × 12‑15  
-- Side‑plank hold × 30 s/side  
-- Clamshells × 15 each side (band)  
-- Single‑leg Romanian deadlift × 8‑10 each leg  
-- Pallof press × 12 each side  
-Finish with 3‑5 min light mobility (foam roll, hip flexor stretch).
+**Workout execution:**  
+- **Warm‑up:** 5 min easy dynamic mobility (leg swings, hip circles, light glute activation).  
+- **Main set:** 3 × 45 s core/hip‑stability circuit (plank variations, single‑leg bridges, side‑plank + hip‑abduction), 15 s rest between each; aim for controlled tempo, not max speed.  
+- **Cool‑down:** 3 min gentle stretching of hip flexors, hamstrings, and lower back; finish with 2 min relaxed breathing.
 
-**Readiness rationale** – Sleep 7.4 h (score 83) and HRV 55 ms (balanced, 100 % of baseline) show solid recovery; resting HR
+**Readiness rationale:** Your readiness score is “Moderate” but the detailed factors are all in the “Good‑to‑Very Good” range (sleep 7.4 h, HRV balanced, resting HR 57 bpm, ACWR 1.0 optimal).  There are no red flags—sleep and recovery are solid, and acute load is only slightly above chronic, indicating you’re well‑recovered for a light strength day.
+
+**In‑session guardrails:** If during the warm‑up you feel unusually elevated heart rate (>150 bpm) or early fatigue, shorten the core intervals to 30 s or drop one set.  Keep the intensity “moderate” (RPE ≈ 5‑6) and stop any exercise that provokes joint pain or sharp discomfort.  Finish with the stretch and breathing work to ensure a calm transition to the rest of the day.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
