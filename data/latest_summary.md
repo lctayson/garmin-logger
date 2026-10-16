@@ -18,18 +18,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Stick to the scheduled Friday “Rest + Core/hip‑stability” session; no running is needed today.  
+**Decision** – Proceed with today’s planned **core/hip‑stability strength** session; no need to replace it with a recovery run.  
 
-**Workout execution** – 1️⃣ Warm‑up: 5‑7 min of low‑intensity mobility (leg swings, hip circles, light air‑squat walk). 2️⃣ Core circuit (3 × rounds, 30‑45 s each, 15 s rest):  
-- Plank (front)  
-- Side‑plank (each side)  
-- Bird‑dog (alternating)  
-- Glute bridge march  
-Keep the effort “moderate” (RPE ≈ 5–6) and focus on quality form. 3️⃣ Cool‑down: 3‑5 min of static stretch for hip flexors, hamstrings, and lower back.  
-
-**Readiness rationale** – Your sleep was solid (7.4 h, score 83) and HRV is actually *above* the 7‑day average (55 ms vs 50 ms, “BALANCED”), indicating good autonomic recovery. Resting HR 57 bpm is low, and the ACWR is exactly 1.0 (“Optimal”), so the system isn’t taxed. The moderate readiness score reflects the overall “well‑rested” feedback rather than a deficit, supporting a light strength day.  
-
-**In‑session guardrails** – If your heart rate spikes above 120 bpm during the core work, or you feel lingering
+**Execution** – *Warm‑up*: 5‑10 min dynamic mobility (leg swings, inchworms, hip circles, light air‑squats).  
+*
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
