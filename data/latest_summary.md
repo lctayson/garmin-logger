@@ -18,13 +18,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned **Friday Core/Hip‑Stability strength** session; no run is scheduled.
-
-**Workout execution** – 5‑10 min dynamic warm‑up (leg swings, hip circles, light band work). Then the prescribed core/hip circuit (e.g., planks, side‑planks, glute bridges, single‑leg dead‑lifts, band‑pull‑apart) for 20‑30 min, keeping effort in the “moderate” RPE zone. Finish with 5 min of gentle stretching for hips and lower back.
-
-**Readiness rationale** – Sleep 7.4 h (score 83 = good), HRV 55 ms (100 % of baseline, “balanced”), resting HR 57 bpm (low, indicating good recovery), and ACWR 1.0 (optimal) all point to a well‑recovered state. The overall readiness score is moderate (61) but the detailed factors are all in the green, so there’s no need to downgrade today’s strength work.
-
-**In‑session guardrails** – Watch for any sudden hip, knee, or low‑back discomfort; if HR spikes >120 bpm or you feel
+- **Decision:** Stick with today’s planned **core/hip‑stability strength session** – no run is scheduled.  
+- **Execution:** 10 min dynamic activation (leg swings, glute bridges, light band work), then the prescribed core circuit (planks, dead‑bugs, single‑leg RDLs, hip‑thrusts) at moderate load, finishing with 5 min gentle mobility stretching.  
+- **Readiness rationale:** Resting HR 57 bpm, HRV balanced (55 ms night vs 50 ms 7‑day avg), sleep 7.4 h (score 83) and 13.5 h recovery give a “Well Rested” signal; ACWR 1.0 is optimal, so the body is ready for a typical strength load.  
+- **Guardrails:**  
+  - Keep the core volume moderate (≈3 × 10 reps per exercise) and stop if heart rate climbs >150 bpm or you feel lingering fatigue.  
+  - If any joint pain or unusual tightness appears, drop the load or replace the exercise with a mobility drill.  
+  - Finish with a brief cool‑down walk and deep‑breathing to aid post‑session recovery.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
