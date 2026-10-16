@@ -18,9 +18,14 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled 12 km easy run, but treat it as a recovery‑oriented effort; be ready to back off pace or distance if you feel unusually fatigued.  
+**Decision** – Proceed with today’s scheduled 12 km easy run, but keep the option to trim to ~9 km if you feel unusually fatigued after the warm‑up.
 
-**Workout
+**Workout execution** –  
+- **Warm‑up:** 10‑15 min easy jog (≈7:30–8:00 /km) keeping HR < 145 bpm.  
+- **Main set:** 12 km at an easy aerobic pace of 6:50–7:20 /km, HR ≤ 150 bpm, no hard intervals.  
+- **Cool‑down:** 5‑10 min very easy jog or walk, HR back into recovery zone.  
+
+**Readiness rationale** – Sleep was modest (≈6 h) and HRV dropped to 40 ms (below your 7‑day avg of 49 ms), indicating a mild dip in autonomic recovery. Resting HR is normal (60 bpm) and ACWR is optimal (0.9), so overall load is manageable. Because today’s session is low‑intensity, a full
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
