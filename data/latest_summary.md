@@ -18,16 +18,18 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **core/hip‑stability strength** session (no run). Your readiness is “Well‑Rested” (7.4 h sleep, HRV balanced, resting HR 57 bpm) and ACWR is optimal, so a normal strength day is appropriate.
+**Decision** – Stick to the scheduled Friday “Rest + Core/hip‑stability” session; no running is needed today.  
 
-**Warm‑up / Main set / Cool‑down** – 1) 5‑min easy jog or dynamic mobility (leg swings, inchworms, hip circles) to raise HR to ~100 bpm.  
-2) Core/hip circuit (3 × ) – plank 30 s, side‑plank 30 s each side, glute bridges 15 reps, single‑leg dead‑lift 12 reps/leg, banded clamshells 15 reps/side; rest 30 s between exercises.  
-3) Finish with 3 × 30‑sec hollow‑body holds and 2 × 30‑sec bird‑dogs.  
-4) Cool‑down: 3‑5 min light walking + static stretch for hip flexors, hamstrings, calves.
+**Workout execution** – 1️⃣ Warm‑up: 5‑7 min of low‑intensity mobility (leg swings, hip circles, light air‑squat walk). 2️⃣ Core circuit (3 × rounds, 30‑45 s each, 15 s rest):  
+- Plank (front)  
+- Side‑plank (each side)  
+- Bird‑dog (alternating)  
+- Glute bridge march  
+Keep the effort “moderate” (RPE ≈ 5–6) and focus on quality form. 3️⃣ Cool‑down: 3‑5 min of static stretch for hip flexors, hamstrings, and lower back.  
 
-**Readiness rationale** – Sleep quantity & quality are solid, HRV is at the top of the balanced band, and resting HR is low, indicating good autonomic recovery. Load metrics (ACWR ≈ 1.0) show you’re not carrying excess fatigue. No red flags; the moderate overall readiness score reflects the modest stress history, not a need to skip the day’s planned work.
+**Readiness rationale** – Your sleep was solid (7.4 h, score 83) and HRV is actually *above* the 7‑day average (55 ms vs 50 ms, “BALANCED”), indicating good autonomic recovery. Resting HR 57 bpm is low, and the ACWR is exactly 1.0 (“Optimal”), so the system isn’t taxed. The moderate readiness score reflects the overall “well‑rested” feedback rather than a deficit, supporting a light strength day.  
 
-**In‑session guardrails** – If HR spikes >130 bpm during the warm‑up, or you feel unexpected joint pain or excessive fatigue, cut the circuit to 2 × instead of
+**In‑session guardrails** – If your heart rate spikes above 120 bpm during the core work, or you feel lingering
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
