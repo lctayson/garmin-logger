@@ -1,28 +1,28 @@
 # Daily Check — 2026-10-17
 
-## Readiness: -/100
+## Readiness: 62/100 (Moderate)
+> Good Sleep History
 
 - ⚠️ **RHR:** 60 bpm (7d avg: 58 bpm, trending up)
+- ⚠️ **HRV:** 40ms (7d avg: 49ms) · baseline: 47–57ms — below balanced band
+- ⚠️ **Sleep:** 5h57 / 7h00 need (1h03 short) · score 67 · 7d avg 6h33 · 4/7 nights below need
+- **Recovery remaining:** 0h00
+- ⚠️ **Limiter:** Sleep Score (50%)
+- **Also soft:** Stress History, Sleep History
 
 ## Today's Session
 - **Planned:** Sat, Oct 17 — 12k EZ
-- **Recommendation:** Proceed as planned
-- **Reason:** resting heart rate is trending up.
-- **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
+- **Recommendation:** Keep it easy
+- **Reason:** short sleep last night (6.0h); resting heart rate is trending up; HRV is trending down; last-night HRV is below the balanced band; RHR-up/HRV-down recovery pattern.
+- **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled 12 km easy run, but be ready to trim distance or pace if heat or fatigue spikes.  
+**Decision** – Proceed with today’s scheduled 12 km easy run, but be ready to trim distance or cut the pace back if you feel unusually fatigued or HR spikes early.  
 
-**Workout execution** – - **Warm‑up:** 10–12 min easy jog (≈7:30 / km) + 2‑3 strides.  
-- **Main set:** 12 km steady easy pace, aim 6:50 – 7:20 / km, keep HR ≤150 bpm (adjust slower if temperature pushes HR higher).  
-- **Cool‑down:** 5–8 min very easy jog + brief stretch.  
+**Workout execution** – Warm‑up: 10‑15 min easy jog (HR < 150 bpm). Main set: 12 km at an easy‑aerobic pace of ~6:50‑7:20 /km, keeping heart rate ≤150 bpm. No interval work is prescribed. Cool‑down: 5‑10 min very easy jog or walk to finish.  
 
-**Readiness rationale** – Resting HR 60 bpm is within your normal range and no elevated load data are present, indicating good acute recovery. With no sleep or HRV flags, the body appears ready for a low‑intensity effort; the easy zone is low‑risk for accumulating fatigue.  
-
-**In‑session guardrails** – - Watch HR; if it climbs >155 bpm for more than a minute, drop the pace or cut the run to 8–10 km.  
-- Monitor perceived effort and any early‑morning heat (28‑33 °C); stay hydrated and consider a slower pace if you feel unusually hot or heavy.  
-- If you notice unusual fatigue, dizziness, or calf discomfort, stop the run and prioritize recovery.
+**Readiness rationale** – Readiness score is “moderate” (62). Sleep was a bit short (≈6 h) but sleep‑history rating is good; HRV is down from a 7‑day average (
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -37,11 +37,16 @@ _Most recent activity (2026-10-15):_
 
 ## Load & Trends
 
+- **ACWR:** 0.9 (Optimal) — acute 470 / chronic 518 (chronic range 414.4–777)
 - **7-day volume:** 28.1km vs 28-day avg 34.6km (-19%)
-- **Running tolerance:** 68.7% (Medium) — 39.1km of 62.7km weekly cap, acute impact load 43.1
-- **Sleep (7d avg):** 6h39, 3/7 nights below need, trending flat
+- **Running tolerance:** 58.2% (Medium) — 28.1km of 62.7km weekly cap, acute impact load 36.5
+- **Aerobic Low:** 816.1 (target 303–822 — in range)
+- ⚠️ **Aerobic High:** 1189.4 (target 649–1169 — +20 over)
+- ⚠️ **Anaerobic:** 44.9 (target 173–519 — -128 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- ⚠️ **Sleep (7d avg):** 6h33, 4/7 nights below need, trending flat
 - ⚠️ **RHR (7d avg):** 58.0, trending up
-- **HRV:** trending up
+- ⚠️ **HRV:** trending down
 
 ## This Week (Oct 11–17)
 
