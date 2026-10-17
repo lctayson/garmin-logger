@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 3.4 · anaerobic 0
   - MS: 12.03k @ 7:25 145bpm 0.80m 168spm 278ms 7.9cm 239w
   - Readiness 62 → 41 (Focus On Energy Levels) · Recovery 1d 4h 47m
-  - 🧠 The 12 km run stayed in the easy‑zone heart‑rate range (average 146 bpm, ≤150 bpm target) but the overall pace of 7:25 min/km was a few seconds slower than the prescribed 6:50–7:20 min/km for Saturday easy runs. Within the main set the rep paces drifted modestly faster toward the end (7:40 → 7:10 min/km) while HR rose from 126 bpm to 152 bpm, indicating a typical gradual warm‑up rather than any anaerobic stimulus. Stamina dropped from 100 % to 78 % and body‑battery fell by 15 points, which aligns with the moderate‑readiness (score 62) you entered this morning. No concerning HR spikes or missed VO₂‑max work appeared, but the slightly slower average pace suggests you could push a bit more on easy days while still preserving recovery.
+  - 🧠 The 12‑rep set averaged 7:25 /km, squarely inside the prescribed easy‑aerobic range (7:10‑7:45 /km) and kept heart rate below the ≤150 bpm ceiling, with rep HR climbing from 126 bpm early to 152 bpm late, still in the easy‑to‑low‑steady zone. Pace drift was modestly negative
 
 ## Next Session
 - **Planned:** Sun, Oct 18 — 7k EZ @ 6:50-7:20, ≤150 bpm with 6-8×10s hills
