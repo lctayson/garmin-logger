@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 3.4 · anaerobic 0
   - MS: 12.03k @ 7:25 145bpm 0.80m 168spm 278ms 7.9cm 239w
   - Readiness 62 → 41 (Focus On Energy Levels) · Recovery 1d 4h 47m
-  - 🧠 This was a cleanly executed 12 km long run that adhered strictly to the session's ceiling. Your average heart rate of 146 bpm and rep averages staying between 126 and 152 bpm kept the entire 1:29:16 duration firmly within easy aerobic bounds. Pacing was disciplined and even, closing slightly quicker at 7:10/km without any excessive cardiac drift or late decoupling. You absorbed the planned volume exactly as intended without compromising your recovery for Sunday.
+  - 🧠 You executed this 12K long run exactly as prescribed for Week 4, staying disciplined on the aerobic ceiling with an average heart rate of 146 bpm and a peak of just 155 bpm. Pacing was steady throughout (7:10–7:40/km across kilometers), and cardiac drift remained well controlled even as heart rate nudged slightly into the low 150s over the final two kilometers. Starting off a moderate morning readiness of 62, this was clean aerobic volume that delivered the intended base stimulus without excessive systemic strain. Keep tomorrow’s 7K truly easy and only take on the scheduled short hills if your calves feel completely fresh.
 
 ## Load & Trends
 
