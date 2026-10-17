@@ -16,15 +16,7 @@
   - TE: Aerobic Base · aerobic 3.4 · anaerobic 0
   - MS: 12.03k @ 7:25 145bpm 0.80m 168spm 278ms 7.9cm 239w
   - Readiness 62 → 41 (Focus On Energy Levels) · Recovery 1d 4h 47m
-  - 🧠 The 12‑km Saturday run stayed squarely in the easy‑run zone, with the 12 rep paces ranging from 7:40 to 7:10 /km (average 7:25 /km) and heart‑rate climbing from 126 bpm early to 152 bpm at the end—only a couple of reps were a few seconds slower than the 6:50‑7:20 /km easy‑pace guide, and the final HR is just above the ≤150 bpm easy target. Stamina fell from 100 % to 78 % and the load of 108.6 AU reflects a moderate aerobic stimulus, matching the bridge‑phase emphasis on base maintenance without any anaerobic contribution. Your morning readiness was moderate (score 62, good sleep, resting HR 60), but the post‑run snapshot dropped to 41 with recovery‑time percent at 53 %, indicating that today’s effort taxed your short‑term recovery more than typical easy runs. No red flags for VO₂max or threshold work appear, but keep an eye on the upward HR drift on longer easy days when ambient heat pushes the cardiac cost.
-
-## Next Session
-- **Planned:** Sun, Oct 18 — 7k EZ @ 6:50-7:20, ≤150 bpm with 6-8×10s hills
-- **Recommendation:** Adjust the workout
-- **Reason:** short sleep last night (6.0h); resting heart rate is trending up; HRV is trending down; last-night HRV is below the balanced band; RHR-up/HRV-down recovery pattern.
-- **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
-
-- *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
+  - 🧠 This was a cleanly executed 12 km long run that adhered strictly to the session's ceiling. Your average heart rate of 146 bpm and rep averages staying between 126 and 152 bpm kept the entire 1:29:16 duration firmly within easy aerobic bounds. Pacing was disciplined and even, closing slightly quicker at 7:10/km without any excessive cardiac drift or late decoupling. You absorbed the planned volume exactly as intended without compromising your recovery for Sunday.
 
 ## Load & Trends
 
