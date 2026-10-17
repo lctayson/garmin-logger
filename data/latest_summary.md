@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 3.4 · anaerobic 0
   - MS: 12.03k @ 7:25 145bpm 0.80m 168spm 278ms 7.9cm 239w
   - Readiness 62 → 41 (Focus On Energy Levels) · Recovery 1d 4h 47m
-  - 🧠 The 12‑rep session stayed solidly in the easy aerobic zone, with rep paces ranging from 7:40 to 7:10 /km (average 7:25 /km) and heart rates climbing from 126 bpm early to 152 bpm at the finish—well below the ≤150 bpm target for a Saturday EZ run and without any anaerobic contribution. The modest upward drift in pace and HR across the reps is typical for a long, steady effort in the warm morning heat and matches the prescribed 6:50‑7:20 /km window, so execution was on‑track. Your morning readiness was moderate (score 62) and the post‑run drop to 41 reflects the 108.6 training load and a –15 body‑battery impact, but it does not indicate a problem beyond the expected cost of a 12‑km easy run.
+  - 🧠 The 12 km run stayed firmly in the easy aerobic zone, with rep HR climbing from 126 bpm early to 152 bpm at the end and never exceeding the 155‑bpm ceiling, matching the plan’s ≤150 bpm guideline for Saturday easy runs. However, the average pace of 7:25 /km is a few seconds slower than the target 6:50–7:20 /km range, indicating a modestly conservative effort despite a decent morning readiness score of 62. The training effect shows only aerobic benefit (AEROBIC_BASE 3.4) and zero anaerobic load, which is expected for this phase. The post‑run readiness drop to 41 reflects the normal cost of a 1‑hour‑30‑minute effort and does not signal a recovery issue.
 
 ## Next Session
 - **Planned:** Sun, Oct 18 — 7k EZ @ 6:50-7:20, ≤150 bpm with 6-8×10s hills
