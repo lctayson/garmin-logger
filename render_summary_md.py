@@ -13,11 +13,16 @@ than assuming whatever is in the activities file happened today.
 from __future__ import annotations
 
 import argparse
+import csv
 import glob
+import io
 import json
 import os
 import re
-from datetime import datetime
+import sys
+import urllib.parse
+import urllib.request
+from datetime import datetime, timedelta
 from decimal import ROUND_HALF_UP, Decimal
 from typing import Any
 
@@ -803,8 +808,124 @@ def _today_lines(
 
 
 
+TRAINING_PLAN_URL = (
+    "https://docs.google.com/spreadsheets/d/e/"
+    "2PACX-1vTv8AJfthvUUbO3w8H5H8cBQ2Mq0t1-huuJnE-wo9vZVYYRJ-9s14pLUw9NQlGidPqOeIeDubRdCWaH/"
+    "pubhtml?gid=810767784&single=true"
+)
+
+
+def _published_sheet_csv_url(sheet_url: str) -> str:
+    parsed = urllib.parse.urlparse(sheet_url)
+    query = dict(urllib.parse.parse_qsl(parsed.query, keep_blank_values=True))
+    query["output"] = "csv"
+    query.pop("single", None)
+    if parsed.path.endswith("/pubhtml"):
+        path = parsed.path[:-len("/pubhtml")] + "/pub"
+    elif parsed.path.endswith("/pub"):
+        path = parsed.path
+    else:
+        raise ValueError("Expected a published Google Sheets URL")
+    return urllib.parse.urlunparse(parsed._replace(path=path, query=urllib.parse.urlencode(query)))
+
+
+def _fetch_training_plan_rows(sheet_url: str = TRAINING_PLAN_URL) -> list[list[str]]:
+    request = urllib.request.Request(
+        _published_sheet_csv_url(sheet_url),
+        headers={"User-Agent": "garmin-logger-training-plan/1.0"},
+    )
+    with urllib.request.urlopen(request, timeout=20) as response:
+        raw = response.read().decode("utf-8-sig")
+    return list(csv.reader(io.StringIO(raw)))
+
+
+def _parse_week_start(value: str, target_year: int):
+    from datetime import date
+
+    value = value.strip()
+    if not value:
+        return None
+    for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%m/%d/%y", "%d/%m/%Y", "%b %d, %Y", "%B %d, %Y"):
+        try:
+            return datetime.strptime(value, fmt).date()
+        except ValueError:
+            pass
+    for fmt in ("%b %d", "%B %d", "%m/%d"):
+        try:
+            month_day = datetime.strptime(value, fmt)
+        except ValueError:
+            continue
+        candidates = []
+        for year in (target_year - 1, target_year, target_year + 1):
+            try:
+                candidates.append(date(year, month_day.month, month_day.day))
+            except ValueError:
+                continue
+        matching = [
+            candidate for candidate in candidates
+            if candidate <= date(target_year, month_day.month, month_day.day)
+            and date(target_year, month_day.month, month_day.day) <= candidate + timedelta(days=6)
+        ]
+        if matching:
+            return matching[0]
+        if candidates:
+            return min(candidates, key=lambda candidate: abs((candidate - date(target_year, month_day.month, month_day.day)).days))
+    return None
+
+
+def _flag_is_current(value: str) -> bool:
+    return value.strip().lower() in {"1", "true", "yes", "y", "x", "current", "active", "✓", "☑"}
+
+
+def _planned_session_from_sheet(next_day: Any, sheet_url: str) -> str | None:
+    """Read the live plan: column B is week start, C:I are Mon-Sun, M flags current week."""
+    from datetime import date, timedelta
+
+    rows = _fetch_training_plan_rows(sheet_url)
+    if not rows:
+        return None
+
+    # Find a row containing recognizable weekday headings, if present.
+    weekday_names = {"mon": 0, "monday": 0, "tue": 1, "tues": 1, "tuesday": 1,
+                     "wed": 2, "wednesday": 2, "thu": 3, "thur": 3, "thurs": 3,
+                     "thursday": 3, "fri": 4, "friday": 4, "sat": 5, "saturday": 5,
+                     "sun": 6, "sunday": 6}
+    day_columns = None
+    for row in rows[:12]:
+        found = {}
+        for index, cell in enumerate(row):
+            normalized = re.sub(r"[^a-z]", "", cell.strip().lower())
+            if normalized in weekday_names:
+                found[weekday_names[normalized]] = index
+        if len(found) >= 5:
+            day_columns = found
+            break
+    if day_columns is None:
+        day_columns = {day: day + 2 for day in range(7)}  # C:I, Monday-Sunday
+
+    candidates = []
+    for row in rows:
+        if len(row) < 2:
+            continue
+        week_start = _parse_week_start(row[1], next_day.year)
+        if week_start and week_start <= next_day <= week_start + timedelta(days=6):
+            flag = row[12] if len(row) > 12 else ""
+            candidates.append((week_start, _flag_is_current(flag), row))
+
+    if not candidates:
+        return None
+    # Prefer the row explicitly flagged in hidden column M when dates overlap.
+    _, _, selected = max(candidates, key=lambda item: (item[1], item[0]))
+    weekday_index = next_day.weekday()
+    column = day_columns.get(weekday_index)
+    if column is None or column >= len(selected):
+        return None
+    prescription = selected[column].strip()
+    return prescription or None
+
+
 def _planned_session(context_text: str, next_day: Any, plan_heading: str) -> str | None:
-    """Find the next day's prescription in the configured dated-plan section."""
+    """Find a dated prescription in Markdown first, then fall back to the live sheet."""
     from datetime import date, timedelta
 
     lines = context_text.splitlines()
@@ -841,12 +962,16 @@ def _planned_session(context_text: str, next_day: Any, plan_heading: str) -> str
             if day_line.startswith("## W"):
                 break
             day_match = day_pattern.match(day_line)
-            if not day_match:
-                continue
-            weekday, prescription = day_match.groups()
-            if weekday.lower() == next_day.strftime("%a").lower():
-                return prescription.strip()
-    return None
+            if day_match and day_match.group(1).lower() == next_day.strftime("%a").lower():
+                return day_match.group(2).strip()
+
+    sheet_match = re.search(r"https://docs\.google\.com/spreadsheets/d/e/[^\s)]+", "\n".join(section_lines))
+    sheet_url = sheet_match.group(0).rstrip("]>,.") if sheet_match else TRAINING_PLAN_URL
+    try:
+        return _planned_session_from_sheet(next_day, sheet_url)
+    except Exception as exc:
+        print(f"[render_summary_md] Could not read live training plan: {exc}", file=sys.stderr)
+        return None
 
 
 def _session_guidance_lines(metrics: dict[str, Any], data_dir: str | None = None, *, day_offset: int = 1) -> list[str]:
