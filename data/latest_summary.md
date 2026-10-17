@@ -10,29 +10,27 @@
 - ⚠️ **Limiter:** Sleep History (58%)
 - **Also soft:** Sleep Score, Stress History
 
-## Today's Session
-- **Planned:** Sun, Oct 18 — 7k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
-📌 CCM
-- **Recommendation:** Adjust the workout
+## Today's Workout
+
+- **Malolos Running** — 7.03km · 56:20 · 8:01/km · HR 137/150 max
+  - TE: Aerobic Base · aerobic 2.6 · anaerobic 0
+  - MS: 6.55k @ 7:45 137bpm 0.77m 167spm 282ms 7.9cm 228w
+  - Readiness 58 → 50 (Balance Stress And Recovery) · Recovery 18h 22m
+
+## Next Session
+- **Planned:** Mon, Oct 19 — Strength A
+- **Recommendation:** Proceed as planned
 - **Reason:** short sleep last night (5.8h); ongoing sleep debt (7-day average 6.6h), 7/7 nights below need.
-- **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
+- **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
-## Latest Activity
-
-_Most recent activity (2026-10-17):_
-- **Malolos Running** — 12.03km · 1:29:16 · 7:25/km · HR 146/155 max
-  - TE: Aerobic Base · aerobic 3.4 · anaerobic 0
-  - MS: 12.03k @ 7:25 145bpm 0.80m 168spm 278ms 7.9cm 239w
-  - 🧠 You executed this 12K long run exactly as prescribed for Week 4, staying disciplined on the aerobic ceiling with an average heart rate of 146 bpm and a peak of just 155 bpm. Pacing was steady throughout (7:10–7:40/km across kilometers), and cardiac drift remained well controlled even as heart rate nudged slightly into the low 150s over the final two kilometers. Starting off a moderate morning readiness of 62, this was clean aerobic volume that delivered the intended base stimulus without excessive systemic strain. Keep tomorrow’s 7K truly easy and only take on the scheduled short hills if your calves feel completely fresh.
-
 ## Load & Trends
 
-- **ACWR:** 0.9 (Optimal) — acute 501 / chronic 527 (chronic range 421.6–790.5)
-- **7-day volume:** 34.1km vs 28-day avg 35.1km (-3%)
-- **Running tolerance:** 67.0% (Medium) — 34.1km of 62.7km weekly cap, acute impact load 42
-- ⚠️ **Aerobic Low:** 924.7 (target 303–822 — +103 over)
+- **ACWR:** 1.0 (Optimal) — acute 572 / chronic 540 (chronic range 432–810)
+- **7-day volume:** 41.13km vs 28-day avg 36.9km (+12%)
+- **Running tolerance:** 78.3% (Medium) — 41.1km of 62.7km weekly cap, acute impact load 49.1
+- ⚠️ **Aerobic Low:** 980.4 (target 303–822 — +158 over)
 - **Aerobic High:** 911.2 (target 649–1169 — in range)
 - ⚠️ **Anaerobic:** 44.9 (target 173–519 — -128 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
@@ -50,8 +48,8 @@ _Most recent activity (2026-10-17):_
 | T | 4x1k VO₂ Int | 8k · 53:27 | 185 |
 | F | Rest | — | — |
 | S | Malolos Run | 12k · 1:29:16 | 109 |
-| S | Rest | — | — |
+| S | Malolos Run | 7k · 56:20 | 56 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 5 | 34.11 km | 4:24:08 | 542.6 |
+| 6 | 41.14 km | 5:20:28 | 598.2 |
