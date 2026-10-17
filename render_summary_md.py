@@ -965,7 +965,7 @@ def _planned_session(context_text: str, next_day: Any, plan_heading: str) -> str
             if day_match and day_match.group(1).lower() == next_day.strftime("%a").lower():
                 return day_match.group(2).strip()
 
-    sheet_match = re.search(r"https://docs\\.google\\.com/spreadsheets/d/e/[^\\s)]+", "\\n".join(section_lines))
+    sheet_match = re.search(r"https://docs\.google\.com/spreadsheets/d/e/[^\s)]+", "\n".join(section_lines))
     sheet_url = sheet_match.group(0).rstrip("]>,.") if sheet_match else TRAINING_PLAN_URL
     try:
         return _planned_session_from_sheet(next_day, sheet_url)
