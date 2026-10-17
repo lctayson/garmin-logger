@@ -25,6 +25,10 @@ import os
 import re
 import sys
 import time
+import csv
+import io
+import urllib.parse
+import urllib.request
 
 from render_summary_md import _find_dated_activity_file, _load_json
 
@@ -90,8 +94,59 @@ Durable coaching context (goal, current phase, methodology, risk factors, and da
 
 
 
+TRAINING_PLAN_URL = (
+    "https://docs.google.com/spreadsheets/d/e/"
+    "2PACX-1vTv8AJfthvUUbO3w8H5H8cBQ2Mq0t1-huuJnE-wo9vZVYYRJ-9s14pLUw9NQlGidPqOeIeDubRdCWaH/"
+    "pubhtml?gid=810767784&single=true"
+)
+
+
+def _published_sheet_csv_url(sheet_url: str) -> str:
+    """Convert a published Google Sheets HTML URL to its CSV export URL."""
+    parsed = urllib.parse.urlparse(sheet_url)
+    query = dict(urllib.parse.parse_qsl(parsed.query, keep_blank_values=True))
+    query["output"] = "csv"
+    query.pop("single", None)
+    path = parsed.path
+    if path.endswith("/pubhtml"):
+        path = path[:-len("/pubhtml")] + "/pub"
+    elif not path.endswith("/pub"):
+        raise ValueError("Expected a published Google Sheets URL ending in /pubhtml or /pub")
+    return urllib.parse.urlunparse(parsed._replace(path=path, query=urllib.parse.urlencode(query)))
+
+
+def _fetch_published_training_plan(sheet_url: str = TRAINING_PLAN_URL) -> str:
+    """Fetch the public plan as CSV and render it as a compact Markdown table."""
+    request = urllib.request.Request(
+        _published_sheet_csv_url(sheet_url),
+        headers={"User-Agent": "garmin-logger-training-context/1.0"},
+    )
+    with urllib.request.urlopen(request, timeout=20) as response:
+        raw = response.read().decode("utf-8-sig")
+    rows = list(csv.reader(io.StringIO(raw)))
+    while rows and not any(cell.strip() for cell in rows[-1]):
+        rows.pop()
+    if not rows:
+        raise ValueError("Published training plan CSV was empty")
+
+    width = max(len(row) for row in rows)
+    rows = [row + [""] * (width - len(row)) for row in rows]
+
+    def cell(value):
+        return value.strip().replace("|", "\\|").replace("\r\n", "<br>").replace("\n", "<br>")
+
+    lines = [
+        "| " + " | ".join(cell(value) for value in rows[0]) + " |",
+        "| " + " | ".join("---" for _ in rows[0]) + " |",
+    ]
+    for row in rows[1:]:
+        if any(value.strip() for value in row):
+            lines.append("| " + " | ".join(cell(value) for value in row) + " |")
+    return "\n".join(lines)
+
+
 def _compact_context(context_text: str, date_str: str) -> str:
-    """Keep durable coaching guidance plus only the plan week relevant to this date."""
+    """Keep durable coaching guidance plus the plan week relevant to this date."""
     plan_marker = "# BHM 2027 Training Plan"
     if plan_marker not in context_text:
         return context_text.strip()
@@ -100,7 +155,31 @@ def _compact_context(context_text: str, date_str: str) -> str:
     durable, plan = durable.strip(), plan.strip()
     week_matches = list(re.finditer(r"(?m)^## W\d+ · ([A-Za-z]{3}) (\d{1,2}) ·[^\n]*", plan))
     if not week_matches:
-        return durable
+        # training_context.md now links to the live plan rather than embedding
+        # dated workout rows. Fetch the published sheet so AI coaching still
+        # receives the actual workout prescriptions.
+        sheet_match = re.search(r"https://docs\.google\.com/spreadsheets/d/e/[^\s)]+", plan)
+        sheet_url = sheet_match.group(0).rstrip("]>,.") if sheet_match else TRAINING_PLAN_URL
+        try:
+            live_plan = _fetch_published_training_plan(sheet_url)
+        except Exception as exc:
+            print(
+                f"[generate_ai_analysis] Could not fetch live training plan ({exc}); "
+                "continuing with the plan overview only.",
+                file=sys.stderr,
+            )
+            live_plan = ""
+        pieces = [durable]
+        if plan:
+            pieces.append("# BHM 2027 plan overview\n" + plan)
+        if live_plan:
+            pieces.append(
+                "# Live BHM 2027 training plan (published Google Sheet)\n"
+                "Use the target date and day column to identify the exact planned session. "
+                "Preserve workout details; MS denotes completed results and 📌 denotes reminders.\n\n"
+                + live_plan
+            )
+        return "\n\n".join(pieces)
 
     target_date = datetime.date.fromisoformat(date_str)
     matching_week = None
@@ -123,6 +202,7 @@ def _compact_context(context_text: str, date_str: str) -> str:
     if matching_week:
         pieces.append("# Relevant training week\n" + matching_week)
     return "\n\n".join(pieces)
+
 
 def _parse_clock_seconds(value):
     """Parse Garmin split durations/pace strings such as '3:00' or '5:08'."""
