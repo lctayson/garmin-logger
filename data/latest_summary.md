@@ -10,6 +10,22 @@
 - ⚠️ **Limiter:** Sleep History (58%)
 - **Also soft:** Sleep Score, Stress History
 
+## Today's Session
+- **Planned:** Sun, Oct 18 — 7k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
+📌 CCM
+- **Recommendation:** Adjust the workout
+- **Reason:** short sleep last night (5.8h); ongoing sleep debt (7-day average 6.6h), 7/7 nights below need.
+- **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
+
+### 🧠 AI Coaching Guidance
+
+* **Decision:** Proceed with the planned Sunday easy run, but keep it strictly flat and skip any optional hill sprints.
+* **Workout execution:** Based on the current plan phase (Week 4, Oct 18), execute **7 km Easy @ 6:50–7:20/km with HR capped at ≤150 bpm** (ideally kept lower in the 140–145 bpm recovery zone). Warm-up and cool-down are integrated into the continuous easy aerobic effort; forego the scheduled 6–8×10s short hills today.
+* **Readiness rationale:** While your HRV is balanced (60 ms overnight vs. 51 ms 7-day average) and ACWR is optimal at 0.90 (acute load 501 / chronic load 527), sleep duration dipped short to 5.77 hours with moderate sleep history. Following yesterday's 12K long run, nervous system recovery is stable, but musculoskeletal freshness does not justify explosive neuromuscular hill work.
+* **In-session guardrails:** If early-morning heat or humidity pushes your heart rate above 150 bpm, immediately let the pace drift out toward 7:30–7:45+/km—effort and cardiac cap override the pace window entirely. If you experience heavy legs, elevated fatigue, or calf tightness during the first 15 minutes, cut the session short to an easy 5–6 km recovery jog.
+
+- *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
+
 ## Latest Activity
 
 _Most recent activity (2026-10-17):_
