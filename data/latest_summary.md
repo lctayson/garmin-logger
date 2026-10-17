@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 3.4 · anaerobic 0
   - MS: 12.03k @ 7:25 145bpm 0.80m 168spm 278ms 7.9cm 239w
   - Readiness 62 → 41 (Focus On Energy Levels) · Recovery 1d 4h 47m
-  - 🧠 The 12‑km Saturday run stayed comfortably in the easy zone – overall pace 7:25 /km (just a shade slower than the typical 6:50‑7:20 /km) and average HR 146 bpm, well under the ≤150 bpm guide. Your rep HR rose gradually from 126 to 152 bpm, showing a modest upward drift but still within easy‑run limits, and the aerobic training effect (3.4) confirms a solid base stimulus with no anaerobic load. Stamina fell from 100 % to 78 % and post‑run readiness dropped to 41, flagging accumulated fatigue; a focus on recovery (sleep, easy days) before Thursday’s quality session would be prudent.
+  - 🧠 The 12 km run stayed firmly in the easy‑aerobic zone, with average HR 146 bpm (well under the ≤150 bpm easy guideline) and rep paces ranging from 7:10 to 7:40 /km, matching the prescribed 6:50–7:20 /km EZ range despite the warm‑up/recovery structure in the main set. Your stamina score fell from 100 → 78, reflecting the cumulative load of 108.6 AU and the modest -15 body‑battery impact, but the training effect was purely aerobic (AEROBIC_BASE 3.4) with no anaerobic stimulus. Morning readiness was moderate (score 62) and, as expected after a 1 h 30 min effort, the post‑run snapshot dropped to 41; this change does not indicate a problem beyond the normal acute fatigue of the session. Overall, the workout executed as intended for the bridge phase’s easy‑run emphasis.
 
 ## Next Session
 - **Planned:** Sun, Oct 18 — 7k EZ @ 6:50-7:20, ≤150 bpm with 6-8×10s hills
