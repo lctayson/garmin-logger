@@ -567,7 +567,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The 12‑km run showed a clear negative‑pace drift: the first rep was 7:40 /km and the last was 7:10 /km while heart rate climbed from 126 bpm to 152 bpm, indicating that you were able to maintain—or even improve—your effort as fatigue set in. Because the workout prescription does not include a specific target pace for these reps, we can’t label the execution as “missed” or “on‑target,” but the progressive pace coupled with modest HR rise suggests an effective aerobic stimulus (training effect = 3.4 AEROBIC_BASE). Your morning readiness was 62 (moderate) and fell to 41 after the session, with stamina dropping to 78 % and a body‑battery impact of –15, which aligns with the 108‑point load of a 12‑km moderate effort. Overall, the run was consistent with the current bridge phase’s emphasis on steady aerobic volume and did not raise any red flags.",
+      "ai_analysis": "The 12 km Saturday run stayed comfortably in the easy‑aerobic zone, with rep paces ranging from 7:40 to 7:10 /km and corresponding HRs climbing from 126 bpm to 152 bpm—well below the ≤150 bpm guide for an EZ effort even with the early‑morning heat. Your average pace of 7:25 /km is a few seconds slower than the typical 6:50‑7:20 /km EZ window, which is consistent with the modest 22‑point stamina dip (100 → 78) and the –15 body‑battery impact. The aerobic training effect of 3.4 confirms a solid base stimulus, while the zero anaerobic score shows the session delivered no VO2‑max load, as intended for a recovery‑focused long run. With a moderate morning readiness score of 62, the easy intensity was appropriate and no red flags appear.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
