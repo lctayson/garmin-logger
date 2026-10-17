@@ -22,7 +22,7 @@ import re
 import sys
 import urllib.parse
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timedelta
 from decimal import ROUND_HALF_UP, Decimal
 from typing import Any
 
@@ -864,7 +864,7 @@ def _parse_week_start(value: str, target_year: int):
         matching = [
             candidate for candidate in candidates
             if candidate <= date(target_year, month_day.month, month_day.day)
-            and date(target_year, month_day.month, month_day.day) <= candidate + __import__("datetime").timedelta(days=6)
+            and date(target_year, month_day.month, month_day.day) <= candidate + timedelta(days=6)
         ]
         if matching:
             return matching[0]
