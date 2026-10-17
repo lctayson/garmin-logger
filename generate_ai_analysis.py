@@ -131,8 +131,10 @@ def _fetch_published_training_plan(sheet_url: str = TRAINING_PLAN_URL) -> str:
 
     width = max(len(row) for row in rows)
     rows = [row + [""] * (width - len(row)) for row in rows]
+
     def cell(value):
-        return value.strip().replace("|", "\\|").replace("\\r\\n", "<br>").replace("\\n", "<br>")
+        return value.strip().replace("|", "\\|").replace("\r\n", "<br>").replace("\n", "<br>")
+
     lines = [
         "| " + " | ".join(cell(value) for value in rows[0]) + " |",
         "| " + " | ".join("---" for _ in rows[0]) + " |",
@@ -140,7 +142,7 @@ def _fetch_published_training_plan(sheet_url: str = TRAINING_PLAN_URL) -> str:
     for row in rows[1:]:
         if any(value.strip() for value in row):
             lines.append("| " + " | ".join(cell(value) for value in row) + " |")
-    return "\\n".join(lines)
+    return "\n".join(lines)
 
 
 def _compact_context(context_text: str, date_str: str) -> str:
@@ -151,12 +153,12 @@ def _compact_context(context_text: str, date_str: str) -> str:
 
     durable, plan = context_text.split(plan_marker, 1)
     durable, plan = durable.strip(), plan.strip()
-    week_matches = list(re.finditer(r"(?m)^## W\\d+ · ([A-Za-z]{3}) (\\d{1,2}) ·[^\\n]*", plan))
+    week_matches = list(re.finditer(r"(?m)^## W\d+ · ([A-Za-z]{3}) (\d{1,2}) ·[^\n]*", plan))
     if not week_matches:
         # training_context.md now links to the live plan rather than embedding
-        # dated workout rows. Fetch the published sheet so the model still has
-        # exact workout prescriptions for the target date.
-        sheet_match = re.search(r"https://docs\\.google\\.com/spreadsheets/d/e/[^\\s)]+", plan)
+        # dated workout rows. Fetch the published sheet so AI coaching still
+        # receives the actual workout prescriptions.
+        sheet_match = re.search(r"https://docs\.google\.com/spreadsheets/d/e/[^\s)]+", plan)
         sheet_url = sheet_match.group(0).rstrip("]>,.") if sheet_match else TRAINING_PLAN_URL
         try:
             live_plan = _fetch_published_training_plan(sheet_url)
@@ -169,15 +171,15 @@ def _compact_context(context_text: str, date_str: str) -> str:
             live_plan = ""
         pieces = [durable]
         if plan:
-            pieces.append("# BHM 2027 plan overview\\n" + plan)
+            pieces.append("# BHM 2027 plan overview\n" + plan)
         if live_plan:
             pieces.append(
-                "# Live BHM 2027 training plan (published Google Sheet)\\n"
+                "# Live BHM 2027 training plan (published Google Sheet)\n"
                 "Use the target date and day column to identify the exact planned session. "
-                "Preserve workout details; MS denotes completed results and 📌 denotes reminders.\\n\\n"
+                "Preserve workout details; MS denotes completed results and 📌 denotes reminders.\n\n"
                 + live_plan
             )
-        return "\\n\\n".join(pieces)
+        return "\n\n".join(pieces)
 
     target_date = datetime.date.fromisoformat(date_str)
     matching_week = None
@@ -196,10 +198,10 @@ def _compact_context(context_text: str, date_str: str) -> str:
     overview = plan[:week_matches[0].start()].strip()
     pieces = [durable]
     if overview:
-        pieces.append("# BHM 2027 plan overview\\n" + overview)
+        pieces.append("# BHM 2027 plan overview\n" + overview)
     if matching_week:
-        pieces.append("# Relevant training week\\n" + matching_week)
-    return "\\n\\n".join(pieces)
+        pieces.append("# Relevant training week\n" + matching_week)
+    return "\n\n".join(pieces)
 
 
 def _parse_clock_seconds(value):
