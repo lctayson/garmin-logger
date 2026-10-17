@@ -8,7 +8,7 @@ def test_live_sheet_session_uses_column_b_week_start_and_hidden_m_flag(monkeypat
     # hides it. B is the Monday week-start date; C:I are Monday through Sunday.
     rows = [
         ["Week", "Week Start", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "", "", "", "Current Week"],
-        ["W4", "2026-10-12", "Strength A", "SUT 3x8min", "EZ + strides", "4x1k VO2", "Rest", "12k easy", "6k recovery", "", "", "", "TRUE"],
+        ["W4", "12 Oct", "Strength A", "SUT 3x8min", "EZ + strides", "4x1k VO2", "REST + Core", "12K EZ", "7k EZ @ 6:50–7:20 ≤150bpm w/ 6–8x10s hills", "", "", "", "TRUE"],
     ]
     monkeypatch.setattr(render_summary_md, "_fetch_training_plan_rows", lambda url: rows)
 
@@ -16,7 +16,7 @@ def test_live_sheet_session_uses_column_b_week_start_and_hidden_m_flag(monkeypat
         date(2026, 10, 18), render_summary_md.TRAINING_PLAN_URL
     )
 
-    assert session == "6k recovery"
+    assert session == "7k EZ @ 6:50–7:20 ≤150bpm w/ 6–8x10s hills"
 
 
 def test_planned_session_falls_back_to_live_sheet_when_context_only_links_sheet(monkeypatch):

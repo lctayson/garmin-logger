@@ -850,7 +850,7 @@ def _parse_week_start(value: str, target_year: int):
             return datetime.strptime(value, fmt).date()
         except ValueError:
             pass
-    for fmt in ("%b %d", "%B %d", "%m/%d"):
+    for fmt in ("%b %d", "%B %d", "%d %b", "%d %B", "%m/%d"):
         try:
             month_day = datetime.strptime(value, fmt)
         except ValueError:
