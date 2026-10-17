@@ -567,7 +567,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The 12‑rep set averaged 7:25 /km, squarely inside the prescribed easy‑aerobic range (7:10‑7:45 /km) and kept heart rate below the ≤150 bpm ceiling, with rep HR climbing from 126 bpm early to 152 bpm late, still in the easy‑to‑low‑steady zone. Pace drift was modestly negative",
+      "ai_analysis": "The 12‑km run stayed comfortably in the easy aerobic zone (overall 7:25 /km, HR 146 bpm, rep HR climbing from 126 → 152 bpm) and the interval‑style reps showed only a modest pace drift (fastest 7:10 /km, slowest 7:40 /km), indicating stable execution without any VO₂‑max stimulus. The training‑effect score (aerobic 3.4, anaerobic 0) aligns with the intended easy‑run load, and the morning readiness of 62 (moderate) was sufficient for this effort; the post‑run drop to 41 simply reflects the acute fatigue of the session. No red flags appear—just a solid, low‑stress mileage day that supports base maintenance ahead of the upcoming quality Thursday.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]

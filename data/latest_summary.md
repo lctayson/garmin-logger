@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 3.4 · anaerobic 0
   - MS: 12.03k @ 7:25 145bpm 0.80m 168spm 278ms 7.9cm 239w
   - Readiness 62 → 41 (Focus On Energy Levels) · Recovery 1d 4h 47m
-  - 🧠 The 12‑rep set averaged 7:25 /km, squarely inside the prescribed easy‑aerobic range (7:10‑7:45 /km) and kept heart rate below the ≤150 bpm ceiling, with rep HR climbing from 126 bpm early to 152 bpm late, still in the easy‑to‑low‑steady zone. Pace drift was modestly negative
+  - 🧠 The 12‑km run stayed comfortably in the easy aerobic zone (overall 7:25 /km, HR 146 bpm, rep HR climbing from 126 → 152 bpm) and the interval‑style reps showed only a modest pace drift (fastest 7:10 /km, slowest 7:40 /km), indicating stable execution without any VO₂‑max stimulus. The training‑effect score (aerobic 3.4, anaerobic 0) aligns with the intended easy‑run load, and the morning readiness of 62 (moderate) was sufficient for this effort; the post‑run drop to 41 simply reflects the acute fatigue of the session. No red flags appear—just a solid, low‑stress mileage day that supports base maintenance ahead of the upcoming quality Thursday.
 
 ## Next Session
 - **Planned:** Sun, Oct 18 — 7k EZ @ 6:50-7:20, ≤150 bpm with 6-8×10s hills
