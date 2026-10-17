@@ -855,13 +855,21 @@ def _parse_week_start(value: str, target_year: int):
             month_day = datetime.strptime(value, fmt)
         except ValueError:
             continue
+        candidates = []
         for year in (target_year - 1, target_year, target_year + 1):
             try:
-                candidate = date(year, month_day.month, month_day.day)
+                candidates.append(date(year, month_day.month, month_day.day))
             except ValueError:
                 continue
-            if candidate <= date(target_year, 12, 31) and abs((candidate - date(target_year, month_day.month, month_day.day)).days) == 0:
-                return candidate
+        matching = [
+            candidate for candidate in candidates
+            if candidate <= date(target_year, month_day.month, month_day.day)
+            and date(target_year, month_day.month, month_day.day) <= candidate + __import__("datetime").timedelta(days=6)
+        ]
+        if matching:
+            return matching[0]
+        if candidates:
+            return min(candidates, key=lambda candidate: abs((candidate - date(target_year, month_day.month, month_day.day)).days))
     return None
 
 
