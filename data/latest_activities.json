@@ -567,7 +567,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The 12‑km run stayed comfortably in the easy aerobic zone (overall 7:25 /km, HR 146 bpm, rep HR climbing from 126 → 152 bpm) and the interval‑style reps showed only a modest pace drift (fastest 7:10 /km, slowest 7:40 /km), indicating stable execution without any VO₂‑max stimulus. The training‑effect score (aerobic 3.4, anaerobic 0) aligns with the intended easy‑run load, and the morning readiness of 62 (moderate) was sufficient for this effort; the post‑run drop to 41 simply reflects the acute fatigue of the session. No red flags appear—just a solid, low‑stress mileage day that supports base maintenance ahead of the upcoming quality Thursday.",
+      "ai_analysis": "The 12.0 km effort remained in the easy aerobic zone, with an average rep pace of 7:25 /km (range 7:40 – 7:10) and a mean heart rate of 146 bpm, comfortably under the ≤150 bpm guide for Saturday easy runs. The slight acceleration in the latter reps (ending at 7:10 /km) produced a modest negative‑split tendency, but the overall speed is still a few seconds slower than the 6:50–7:20 /km target window for this phase. Stamina dropped from 100 % to 78 % and body‑battery fell ‑15 points, while the post‑run readiness score fell to 41, confirming a solid aerobic load with no anaer",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
