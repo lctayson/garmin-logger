@@ -10,7 +10,7 @@ def test_readiness_quick_reference_shows_hrv_band_sleep_need_and_recovery():
             "level": "Moderate",
             "feedback": "Balance Stress And Recovery",
             "resting_hr": 57,
-            "resting_hr_range": [58, 65],
+            "resting_hr_range": [55, 65],
             "hrv_last_night_avg_ms": 54,
             "hrv_7_day_avg_ms": 49,
             "sleep_hours": 5.87,
@@ -39,7 +39,7 @@ def test_readiness_quick_reference_shows_hrv_band_sleep_need_and_recovery():
     assert "RHR:** 57 bpm" in rendered
     assert "HRV:** 54ms" in rendered
     assert "· within 47–57ms" in rendered
-    assert "· below 58–65 bpm" in rendered
+    assert "· within 55–65 bpm" in rendered
     assert "Sleep:** 5h52 / 7h00 need (1h08 short)" in rendered
     assert "score 75" in rendered
     assert "7d avg 6h13" in rendered
