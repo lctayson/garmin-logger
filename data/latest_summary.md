@@ -18,10 +18,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-* **Decision**: Proceed as planned with your scheduled non-running day—no running workout on the schedule today.
-* **Workout execution**: Execute **Strength A** (power/hip extension: Bulgarian split squats, single-leg RDLs, calf raises, Copenhagen planks, and tibialis work), optionally paired with light evening mobility.
-* **Readiness rationale**: Autonomic recovery is solid with HRV balanced (57 ms last night vs. 52 ms 7-day average), 0 recovery hours remaining, and an optimal ACWR of 0.90 (acute load 476 vs. chronic 522). However, sleep duration was short at 5.64 hours (sleep score 74, sleep history flagged moderate), making a scheduled lifting day ideal rather than adding aerobic strain.
-* **In-session guardrails**: Focus on movement quality and control under the bar rather than pushing max loads or training to failure; if heavy legs or systemic grogginess from the short sleep persist through warm-up sets, reduce volume by one set per movement to ensure you are primed for Tuesday's sub-threshold session.
+* **Decision:** Proceed as planned with your scheduled non-running day.
+* **Workout execution:** No running is scheduled; execute **Strength A** (power/hip extension: Bulgarian split squats, single-leg RDLs, calf raises, Copenhagen planks, and tibialis work) or the scheduled optional 8–10 minute mobility routine.
+* **Readiness rationale:** Autonomic recovery is solid with HRV balanced (57 ms vs. 52 ms 7-day average), recovery hours cleared (0.0h), and an optimal ACWR of 0.90 (acute load 476 vs. chronic 522). However, sleep duration was short at 5.64 hours (sleep score 74) following moderate recent sleep history, which makes a lift/mobility day ideal to absorb recent running without compounding cardiovascular fatigue.
+* **In-session guardrails:** Keep the strength session crisp and focused on movement quality rather than grinding to failure; if heavy legs or systemic fatigue linger from the weekend, reduce working sets by one or swap entirely to the gentle mobility sequence (90/90s, adductor rock-backs, ankle rocks) to ensure full readiness for Tuesday's sub-threshold session. Prioritize an early bedtime tonight, as two consecutive nights under 6 hours would trigger a downgrade of tomorrow's quality run.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
