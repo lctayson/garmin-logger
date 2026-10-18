@@ -18,10 +18,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-* **Decision**: Proceed as planned with your scheduled non-running day; complete **Strength A** (or rest/mobility) with no running on the schedule.
-* **Workout execution**: No running session is prescribed for today. If executing the typical Monday strength block, focus on controlled power and hip extension mechanics; alternatively, use the optional 8–10 minute mobility routine (90/90 hip rotations, adductor rock-backs, hip flexor stretches, ankle dorsiflexion, and thoracic rotations).
-* **Readiness rationale**: Autonomic recovery is solid with HRV balanced (57 ms last night vs. 52 ms 7-day average), fully cleared recovery time (0.0h), and an optimal ACWR of 0.90 (acute 476 / chronic 522). However, sleep duration was short at 5.64 hours (sleep score 74, sleep history flagged moderate at 57%), making today's absence of running ideal to absorb the weekend volume without adding systemic stress.
-* **In-session guardrails**: If lifting today, keep loading strictly submaximal and technical—do not grind through reps under acute sleep debt. Prioritize early sleep tonight, as tomorrow brings scheduled quality work (Tuesday sub-threshold intervals) where neurological sharpness and cardiac stability will be tested in the morning heat.
+* **Decision**: Proceed as planned with your scheduled non-running day—no running workout on the schedule today.
+* **Workout execution**: Execute **Strength A** (power/hip extension: Bulgarian split squats, single-leg RDLs, calf raises, Copenhagen planks, and tibialis work), optionally paired with light evening mobility.
+* **Readiness rationale**: Autonomic recovery is solid with HRV balanced (57 ms last night vs. 52 ms 7-day average), 0 recovery hours remaining, and an optimal ACWR of 0.90 (acute load 476 vs. chronic 522). However, sleep duration was short at 5.64 hours (sleep score 74, sleep history flagged moderate), making a scheduled lifting day ideal rather than adding aerobic strain.
+* **In-session guardrails**: Focus on movement quality and control under the bar rather than pushing max loads or training to failure; if heavy legs or systemic grogginess from the short sleep persist through warm-up sets, reduce volume by one set per movement to ensure you are primed for Tuesday's sub-threshold session.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
