@@ -109,7 +109,7 @@
       "rem": 0.6,
       "awake": 0.1
     },
-    "total_steps": 10168
+    "total_steps": 10356
   },
   "training_status": {
     "status": "Maintaining 2",
@@ -926,14 +926,14 @@
     {
       "date": "2026-10-18",
       "charged": 69,
-      "drained": 16,
+      "drained": 17,
       "high": 74,
       "low": 5
     }
   ],
   "activities": [
     {
-      "name": "Malolos Running",
+      "name": "Recovery w/ Hills",
       "activity_id": 24761556529,
       "type": "running",
       "distance": 7.03,

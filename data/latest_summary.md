@@ -12,11 +12,10 @@
 
 ## Today's Workout
 
-- **Malolos Running** — 7.03km · 56:20 · 8:01/km · HR 137/150 max
+- **Recovery w/ Hills** — 7.03km · 56:20 · 8:01/km · HR 137/150 max
   - TE: Aerobic Base · aerobic 2.6 · anaerobic 0
   - MS: 6.55k @ 7:45 137bpm 0.77m 167spm 282ms 7.9cm 228w
   - Readiness 58 → 50 (Balance Stress And Recovery) · Recovery 18h 22m
-  - 🧠 Today’s 7.03 km recovery run was executed with solid discipline against the plan's ceiling, keeping average heart rate at 137 bpm and peaking exactly at the 150 bpm cap. Despite starting off a moderate morning readiness score of 58 and logging a slightly depressed performance condition (-2.7), you kept the work reps controlled between 7:32 and 8:07/km (with rep 7 reflecting an expected walk/recovery lull). This delivered a clean 2.6 Aerobic Base stimulus and a light 55.6 load, keeping the aerobic system ticking without adding fatigue ahead of Tuesday's quality work.
 
 ## Next Session
 - **Planned:** Mon, Oct 19 — Strength A
