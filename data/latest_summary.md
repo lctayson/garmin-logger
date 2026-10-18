@@ -4,7 +4,7 @@
 > Balance Stress And Recovery
 
 - **RHR:** 57 bpm (7d avg: 57.6 bpm, trending flat)
-- ⚠️ **HRV:** 60ms (7d avg: 51ms) · baseline: 47–56ms — above balanced band
+- ⚠️ **HRV:** 60ms (7d avg: 51ms) · above 47–56ms
 - ⚠️ **Sleep:** 5h46 / 7h30 need (1h44 short) · score 74 · 7d avg 6h35 · 7/7 nights below need
 - **Recovery remaining:** 6h54
 - ⚠️ **Limiter:** Sleep History (58%)
