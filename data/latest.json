@@ -6,9 +6,9 @@
     "hrv_last_night_avg_ms": 57.0,
     "hrv_7_day_avg_ms": 52.0,
     "hrv_status": "BALANCED",
-    "sleep_hours": 5.64,
-    "sleep_hours_including_previous_day_nap": 5.64,
-    "sleep_score": 74,
+    "sleep_hours": 7.57,
+    "sleep_hours_including_previous_day_nap": 7.57,
+    "sleep_score": 76,
     "training_status": "Maintaining 2",
     "acute_load": 476,
     "chronic_load": 522,
@@ -44,7 +44,32 @@
           "percent": 62,
           "feedback": "Moderate"
         }
-      }
+      },
+      "snapshots": [
+        {
+          "timestamp_local": "2026-10-19T07:42:04.0",
+          "context": "AFTER_WAKEUP_RESET",
+          "score": 65,
+          "feedback": "BALANCE_STRESS_AND_RECOVERY",
+          "recovery_minutes": 1,
+          "acute_load": 476,
+          "factor_overrides": {
+            "sleep_score": {
+              "percent": 64,
+              "feedback": "Moderate"
+            }
+          }
+        },
+        {
+          "timestamp_local": "2026-10-19T05:15:13.0",
+          "context": "AFTER_WAKEUP_RESET",
+          "score": 63,
+          "feedback": "FOCUS_ON_SLEEP_PATTERNS",
+          "recovery_minutes": 1,
+          "acute_load": 476,
+          "recovery_time_change": "NO_CHANGE_SLEEP"
+        }
+      ]
     },
     "sleep_need": {
       "baseline_hours": 7.0,
@@ -54,7 +79,7 @@
       "sleep_history_adjustment": "Increasing",
       "hrv_adjustment": "No Change",
       "nap_adjustment": "No Change",
-      "next_need_hours": 7.67
+      "next_need_hours": 7.0
     },
     "previous_day_nap": null
   },
@@ -71,15 +96,15 @@
         "markerValue": 0.527771
       }
     },
-    "sleep_score": 74,
-    "total_sleep_hours": 5.64,
+    "sleep_score": 76,
+    "total_sleep_hours": 7.57,
     "sleep_stages_hours": {
       "deep": 1.08,
-      "light": 3.95,
+      "light": 5.87,
       "rem": 0.62,
       "awake": 0.17
     },
-    "total_steps": 28
+    "total_steps": 48
   },
   "training_status": {
     "status": "Maintaining 2",
@@ -430,8 +455,8 @@
       "resting_heart_rate": 56,
       "hrv_last_night_avg_ms": 57.0,
       "hrv_seven_day_avg_ms": 52.0,
-      "total_sleep_hours": 5.64,
-      "sleep_score": 74,
+      "total_sleep_hours": 7.57,
+      "sleep_score": 76,
       "vo2_max": 44.0,
       "training_status": "Maintaining 2",
       "acute_load": 476,
@@ -814,8 +839,8 @@
       "resting_heart_rate": 56,
       "hrv_last_night_avg_ms": 57.0,
       "hrv_seven_day_avg_ms": 52.0,
-      "total_sleep_hours": 5.64,
-      "sleep_score": 74,
+      "total_sleep_hours": 7.57,
+      "sleep_score": 76,
       "vo2_max": 44.0,
       "training_status": "Maintaining 2",
       "acute_load": 476,
@@ -881,9 +906,9 @@
     },
     {
       "date": "2026-10-19",
-      "charged": 65,
-      "drained": 0,
-      "high": 81,
+      "charged": 66,
+      "drained": 2,
+      "high": 83,
       "low": 17
     }
   ],

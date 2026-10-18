@@ -5,7 +5,7 @@
 
 - **RHR:** 56 bpm (7d avg: 57.1 bpm, trending flat)
 - ⚠️ **HRV:** 57ms (7d avg: 52ms) · above 47–56ms
-- ⚠️ **Sleep:** 5h38 / 7h30 need (1h52 short) · score 74 · 7d avg 6h20 · 7/7 nights below need
+- **Sleep:** 7h34 / 7h30 need (0h04 over) · score 76 · 7d avg 6h36 · 6/7 nights below need
 - **Recovery remaining:** 0h00
 - ⚠️ **Limiter:** Sleep History (57%)
 - **Also soft:** Sleep Score, Stress History
@@ -13,15 +13,15 @@
 ## Today's Session
 - **Planned:** Mon, Oct 19 — Strength A
 - **Recommendation:** Proceed as planned
-- **Reason:** short sleep last night (5.6h); ongoing sleep debt (7-day average 6.3h), 7/7 nights below need.
+- **Reason:** ongoing sleep debt (7-day average 6.6h), 6/7 nights below need.
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
 ### 🧠 AI Coaching Guidance
 
-* **Decision:** Proceed with the scheduled Monday routine—no running is scheduled today, so focus on **Strength A** (power/hip extension) alongside optional light mobility.
-* **Workout execution:** There is no run prescribed on the plan for Monday. Execute Strength A as programmed (e.g., Bulgarian split squats, single-leg RDLs, calf raises, Copenhagen planks, and tibialis work), keeping mechanics sharp and avoiding lifting to absolute muscular failure.
-* **Readiness rationale:** Autonomic markers and recovery load are in great shape (HRV is balanced at 57 ms vs. 52 ms 7-day average, recovery time is 0 hours, and ACWR is optimal at 0.90). However, acute sleep duration is truncated at 5.64 hours with a moderate sleep history score (57%), which is the primary driver holding readiness at 63. 
-* **In-session guardrails:** Because poor sleep increases injury risk and reduces neuromuscular coordination, keep the warm-up thorough and prioritize movement quality over heavy loading. If you experience heavy central fatigue or sluggish bar speed during Strength A, reduce the working volume by one set per movement to ensure you are fully primed for Tuesday's scheduled sub-threshold session. Prioritize an early bedtime tonight to catch up on sleep debt before tomorrow's intervals.
+- **Decision**: Proceed as planned with scheduled **Strength A** (no running scheduled today).
+- **Workout Execution**: Complete the prescribed Monday strength session focusing on power, hip extension, and stability (Bulgarian split squats, single-leg RDLs, calf raises, Copenhagen planks, and tibialis raises); keep the effort controlled and technical without lifting to failure.
+- **Readiness Rationale**: Autonomic recovery is solid with overnight HRV at 57 ms (above the 52 ms 7-day average, BALANCED), a stable resting HR of 56 bpm, zero residual recovery time needed, and an optimal ACWR of 0.90 (acute load 476 vs. chronic 522). While sleep score is moderate (76, dragged slightly by multi-day sleep history), 7.57 hours of total sleep provides plenty of baseline restoration for a non-running strength day.
+- **In-Session Guardrails**: Treat this as neuromuscular prep for tomorrow's sub-threshold intervals; if lower-body fatigue, calf tightness, or heavy legs linger from Sunday's run, reduce loading or volume on split squats and calf raises rather than forcing heavy working sets.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -41,7 +41,7 @@ _Most recent activity (2026-10-18):_
 - **Aerobic High:** 911.2 (target 649–1169 — in range)
 - ⚠️ **Anaerobic:** 44.9 (target 173–519 — -128 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
-- ⚠️ **Sleep (7d avg):** 6h20, 7/7 nights below need, trending down
+- ⚠️ **Sleep (7d avg):** 6h36, 6/7 nights below need, trending flat
 - **RHR (7d avg):** 57.1, trending flat
 - **HRV:** trending flat
 
