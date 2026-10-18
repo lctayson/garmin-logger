@@ -18,10 +18,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-* **Decision:** Proceed as planned with your scheduled non-running day.
-* **Workout execution:** No running is scheduled; execute **Strength A** (power/hip extension: Bulgarian split squats, single-leg RDLs, calf raises, Copenhagen planks, and tibialis work) or the scheduled optional 8–10 minute mobility routine.
-* **Readiness rationale:** Autonomic recovery is solid with HRV balanced (57 ms vs. 52 ms 7-day average), recovery hours cleared (0.0h), and an optimal ACWR of 0.90 (acute load 476 vs. chronic 522). However, sleep duration was short at 5.64 hours (sleep score 74) following moderate recent sleep history, which makes a lift/mobility day ideal to absorb recent running without compounding cardiovascular fatigue.
-* **In-session guardrails:** Keep the strength session crisp and focused on movement quality rather than grinding to failure; if heavy legs or systemic fatigue linger from the weekend, reduce working sets by one or swap entirely to the gentle mobility sequence (90/90s, adductor rock-backs, ankle rocks) to ensure full readiness for Tuesday's sub-threshold session. Prioritize an early bedtime tonight, as two consecutive nights under 6 hours would trigger a downgrade of tomorrow's quality run.
+* **Decision:** Proceed with the scheduled Monday routine—no running is scheduled today, so focus on **Strength A** (power/hip extension) alongside optional light mobility.
+* **Workout execution:** There is no run prescribed on the plan for Monday. Execute Strength A as programmed (e.g., Bulgarian split squats, single-leg RDLs, calf raises, Copenhagen planks, and tibialis work), keeping mechanics sharp and avoiding lifting to absolute muscular failure.
+* **Readiness rationale:** Autonomic markers and recovery load are in great shape (HRV is balanced at 57 ms vs. 52 ms 7-day average, recovery time is 0 hours, and ACWR is optimal at 0.90). However, acute sleep duration is truncated at 5.64 hours with a moderate sleep history score (57%), which is the primary driver holding readiness at 63. 
+* **In-session guardrails:** Because poor sleep increases injury risk and reduces neuromuscular coordination, keep the warm-up thorough and prioritize movement quality over heavy loading. If you experience heavy central fatigue or sluggish bar speed during Strength A, reduce the working volume by one set per movement to ensure you are fully primed for Tuesday's scheduled sub-threshold session. Prioritize an early bedtime tonight to catch up on sleep debt before tomorrow's intervals.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
