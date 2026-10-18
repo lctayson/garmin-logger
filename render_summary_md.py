@@ -491,16 +491,27 @@ def _readiness_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[s
 
     rhr = _num(readiness.get("resting_hr"))
     if rhr is not None:
-        bit = f"- **RHR:** {rhr:g} bpm"
         rhr7 = _num(trends.get("resting_hr_7d_avg"))
         rhr_trend = trends.get("resting_hr_trend")
+        bit = f"- **RHR:** {rhr:g} bpm"
+        details = []
         if rhr7 is not None:
-            bit += f" (7d avg: {rhr7:g} bpm"
-            if rhr_trend:
-                bit += f", trending {_ARROW.get(rhr_trend, rhr_trend)}"
-            bit += ")"
-        elif rhr_trend:
-            bit += f" (trending {_ARROW.get(rhr_trend, rhr_trend)})"
+            details.append(f"7d avg: {rhr7:g} bpm")
+        if rhr_trend:
+            details.append(f"trending {_ARROW.get(rhr_trend, rhr_trend)}")
+        if details:
+            bit += " (" + ", ".join(details) + ")"
+        rhr_range = readiness.get("resting_hr_range") or readiness.get("rhr_range")
+        if isinstance(rhr_range, (list, tuple)) and len(rhr_range) == 2:
+            low, high = _num(rhr_range[0]), _num(rhr_range[1])
+        elif isinstance(rhr_range, dict):
+            low = _num(rhr_range.get("low", rhr_range.get("min")))
+            high = _num(rhr_range.get("high", rhr_range.get("max")))
+        else:
+            low = high = None
+        if low is not None and high is not None:
+            status = "within" if low <= rhr <= high else ("below" if rhr < low else "above")
+            bit += f" · {status} {low:g}–{high:g} bpm"
         if rhr_trend == "rising":
             bit = bit.replace("- **RHR:**", f"- {_flag(True)}**RHR:**", 1)
         lines.append(bit)
@@ -512,13 +523,14 @@ def _readiness_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[s
         balanced_low = _num(baseline.get("balancedLow", baseline.get("balanced_low")))
         balanced_high = _num(baseline.get("balancedUpper", baseline.get("balanced_upper")))
         band = trends.get("hrv_vs_balanced_band")
+        if band in (None, "within") and balanced_low is not None and balanced_high is not None:
+            band = "below" if hrv < balanced_low else ("above" if hrv > balanced_high else "within")
         bit = f"- {_flag(band not in (None, 'within'))}**HRV:** {hrv:g}ms"
         if hrv7 is not None:
             bit += f" (7d avg: {hrv7:g}ms)"
         if balanced_low is not None and balanced_high is not None:
-            bit += f" · baseline: {balanced_low:g}–{balanced_high:g}ms"
-        if band and band != "within":
-            bit += f" — {band} balanced band"
+            status = "within" if balanced_low <= hrv <= balanced_high else ("below" if hrv < balanced_low else "above")
+            bit += f" · {status} {balanced_low:g}–{balanced_high:g}ms"
         lines.append(bit)
 
     sleep_h = _num(readiness.get("sleep_hours"))
