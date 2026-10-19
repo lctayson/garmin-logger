@@ -18,10 +18,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-* **Decision**: Proceed as planned with your scheduled non-running strength day.
-* **Workout execution**: Complete **Strength A** (Bulgarian split squat 3×6–8/leg, SL RDL 2×8/leg, calf raise 2×10–12/leg, Copenhagen plank 2×20–30s, tibialis raises 2×12–15) with optional light mobility work; no running is scheduled today.
-* **Readiness rationale**: Your autonomic recovery is solid with HRV balanced at 57 ms (above your 52 ms 7-day average), fully cleared recovery time (0 hrs), and an optimal ACWR of 0.9 (acute load 476 vs. chronic 522). A moderate sleep score (76, though duration was adequate at ~7.6 h) pulled the overall readiness score to 63, but there is no underlying systemic fatigue signaling a need to cut back.
-* **In-session guardrails**: Focus on controlled movement quality and eccentric control rather than chasing maximum resistance. If you notice localized calf tightness or hip fatigue during the unilateral loading, reduce the rep ranges by 2 reps per set to ensure fresh legs for tomorrow's sub-threshold workout.
+* **Decision:** Proceed as planned with your scheduled Monday routine—no running, just **Strength A** (power/hip extension) and mobility.
+* **Workout execution:** Keep running off the table today per the plan. Focus on Strength A (Bulgarian split squats 3×6–8/leg, single-leg RDLs 2×8/leg, calf raises 2×10–12/leg, Copenhagen planks 2×20–30s, tibialis raises 2×12–15) plus your optional 8–10 minute lower-body mobility routine. 
+* **Readiness rationale:** Autonomic recovery is solid with a balanced HRV (57 ms vs. 52 ms 7-day average), resting HR steady at 56 bpm, zero recovery hours remaining, and an optimal ACWR of 0.90 (acute load 476, chronic 522). Sleep duration was decent at 7.6 hours, though moderate sleep history scores (57%) keep the overall readiness score at 63, which perfectly suits a non-running strength day.
+* **In-session guardrails:** If lower legs or calves feel stiff or sluggish from the weekend, keep the lifting controlled and reduce load or volume rather than grinding through heavy reps. The primary objective today is movement quality and injury resilience to set up tomorrow's Tuesday sub-threshold session.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
