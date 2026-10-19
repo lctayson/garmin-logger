@@ -470,6 +470,55 @@ def _this_week_lines(payload: dict[str, Any], data_dir: str | None = None) -> li
     return header + table_rows + footer
 
 
+
+def _four_week_lines(payload: dict[str, Any]) -> list[str]:
+    """Render the 28-day weekly endurance breakdown in a compact table."""
+    history = payload.get("training_history") or {}
+    rolling = history.get("28_day") or {}
+    weeks = rolling.get("weekly_total_endurance")
+    if not isinstance(weeks, list) or not weeks:
+        return []
+
+    def week_label(week: dict[str, Any]) -> str:
+        start = week.get("week_start")
+        end = week.get("week_end")
+        try:
+            start_date = datetime.strptime(str(start), "%Y-%m-%d").date()
+            end_date = datetime.strptime(str(end), "%Y-%m-%d").date()
+        except (TypeError, ValueError):
+            return str(start or "Week")
+        if start_date.year != end_date.year:
+            return f"{start_date.strftime('%b')} {start_date.day}–{end_date.strftime('%b')} {end_date.day}"
+        if start_date.month != end_date.month:
+            return f"{start_date.strftime('%b')} {start_date.day}–{end_date.strftime('%b')} {end_date.day}"
+        return f"{start_date.strftime('%b')} {start_date.day}–{end_date.day}"
+
+    avg_weekly = _num(rolling.get("avg_weekly_running_distance"))
+    lines = ["## Recent 4 Weeks"]
+    if avg_weekly is not None:
+        lines.append(f"_Average weekly running: {avg_weekly:g} km_")
+    lines.extend([
+        "",
+        "| Week | Running | Other endurance | Total load |",
+        "|:---|---:|---:|---:|",
+    ])
+    for week in weeks:
+        if not isinstance(week, dict):
+            continue
+        total = week.get("total_endurance") or {}
+        sports = week.get("sports") or {}
+        running = sports.get("running") or {}
+        other = sports.get("other") or {}
+        run_distance = _num(running.get("distance"))
+        other_hours = _num(other.get("duration_hours"))
+        load = _num(total.get("exercise_load"))
+        run_cell = f"{run_distance:.2f} km" if run_distance is not None else "—"
+        other_cell = f"{round(other_hours * 60)} min" if other_hours is not None else "—"
+        load_cell = f"{load:g}" if load is not None else "—"
+        lines.append(f"| {week_label(week)} | {run_cell} | {other_cell} | {load_cell} |")
+    return lines if len(lines) > (3 if avg_weekly is not None else 2) else []
+
+
 def _readiness_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[str]:
     readiness = payload.get("readiness") or {}
     sleep_data = payload.get("sleep") or {}
@@ -1186,6 +1235,11 @@ def render(metrics: dict[str, Any], activities: dict[str, Any] | None, data_dir:
     week_lines = _this_week_lines(metrics, data_dir)
     if week_lines:
         out.extend(week_lines)
+        out.append("")
+
+    four_week_lines = _four_week_lines(metrics)
+    if four_week_lines:
+        out.extend(four_week_lines)
         out.append("")
 
     cleaned: list[str] = []
