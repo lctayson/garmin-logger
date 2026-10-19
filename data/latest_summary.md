@@ -18,10 +18,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-* **Decision**: Proceed as planned with your scheduled Monday routine—no running, focus on Strength A and mobility.
-* **Workout Execution**: Complete **Strength A** (Bulgarian split squat 3×6–8/leg, single-leg RDL 2×8/leg, calf raise 2×10–12/leg, Copenhagen plank 2×20–30s, tibialis raises 2×12–15) paired with the optional 8–10 minute lower-body mobility routine. 
-* **Readiness Rationale**: Autonomic recovery and training load are completely in your favor—HRV is balanced at 57 ms (above your 52 ms 7-day average), RHR is steady at 56 bpm, recovery time is fully cleared (0 hours), and ACWR is optimal at 0.90. While recent sleep history has been only moderate, last night's 7.57 hours (score 76) provides plenty of baseline energy for quality gym work without cardiovascular strain.
-* **In-Session Guardrails**: Treat today as foundational support for tomorrow’s sub-threshold session; do not lift to muscular failure. If you experience any calf tightness or lingering adductor fatigue from the weekend, reduce loads by 10–15% or drop the final set to ensure legs are fresh for Tuesday intervals.
+* **Decision:** Proceed as planned with your scheduled Monday routine—no running is scheduled today.
+* **Workout execution:** Execute your **Strength A** session (Bulgarian split squat 3×6–8/leg, single-leg RDL 2×8/leg, calf raise 2×10–12/leg, Copenhagen plank 2×20–30s, tibialis raises 2×12–15) alongside the optional mobility routine; do not add any running.
+* **Readiness rationale:** Autonomic markers are solid with HRV balanced (57 ms vs. 52 ms 7-day average), resting HR steady at 56 bpm, fully cleared recovery time (0 hours), and an optimal ACWR of 0.90 (acute load 476, chronic 522). While trailing sleep history remains a moderate limiter, last night's 7.57 hours provides sufficient cushion to absorb strength work without carrying fatigue into tomorrow's quality session.
+* **Guardrails:** Keep the lifting controlled and strictly technical—avoid training to muscular failure or loading heavy enough to induce severe calf or adductor soreness. If feeling residual sluggishness, complete the mobility work first, reduce accessory volume by one set per movement, and preserve full lower-body readiness for Tuesday's sub-threshold work.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
