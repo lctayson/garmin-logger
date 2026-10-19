@@ -97,7 +97,7 @@
         ]
       },
       "lap_count": 1,
-      "ai_analysis": "This 25-minute Strength A session was executed exactly as intended for a non-running day, keeping cardiovascular strain minimal with an average heart rate of 99 bpm (peak 115 bpm) and an exercise load of just 4.3. Morning readiness sat at a moderate 63 with recovery fully cleared, meaning the neuromuscular work was absorbed without adding unwanted fatigue. You are set up cleanly for Tuesday's sub-threshold session.",
+      "ai_analysis": "Monday Strength A executed cleanly with minimal systemic strain, logging 25 minutes at an average HR of 99 bpm and a light training load of 4.3. Starting the day at a moderate readiness of 63 with a 56 bpm resting HR, keeping this routine controlled was the right move to absorb last week's volume without accumulating fatigue. You're set up well for tomorrow's sub-threshold session—stick strictly to the 5:25–5:35/km band and cap effort under 168 bpm.",
       "ai_analysis_provider": "gemini:gemini-3.8-flash"
     }
   ]
