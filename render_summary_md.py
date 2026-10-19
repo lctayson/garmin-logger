@@ -499,10 +499,10 @@ def _four_week_lines(payload: dict[str, Any]) -> list[str]:
         lines.append(f"_Average weekly running: {avg_weekly:g} km_")
     lines.extend([
         "",
-        "| Week | Running | Other endurance | Total load |",
+        "| Week | Running | Others | Load |",
         "|:---|---:|---:|---:|",
     ])
-    for week in weeks:
+    for week in reversed(weeks):
         if not isinstance(week, dict):
             continue
         total = week.get("total_endurance") or {}
