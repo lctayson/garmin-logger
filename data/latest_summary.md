@@ -16,13 +16,6 @@
 - **Reason:** ongoing sleep debt (7-day average 6.6h), 6/7 nights below need.
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
-### 🧠 AI Coaching Guidance
-
-- **Decision**: Proceed as planned with your scheduled non-running strength day; do not add running.
-- **Workout execution**: Complete **Strength A** focusing on hip power and extension (e.g., Bulgarian split squats 3×6–8/leg, single-leg RDLs 2×8/leg, calf raises 2×10–12/leg, Copenhagen planks, and tibialis raises), accompanied by your optional mobility routine.
-- **Readiness rationale**: Your physiological foundation is stable heading into Week 5 (benchmark & absorb week)—HRV is balanced with last night's 57 ms sitting above the 52 ms 7-day average, recovery time is fully cleared (0 hours), and ACWR is optimal at 0.91 (acute load 476 vs. chronic 522). The moderate readiness score (63) is dragged down primarily by recent sleep history and stress, though last night's 7.57 hours (score 76) provided solid rebound rest.
-- **In-session guardrails**: Keep lifting loads controlled and avoid taking sets to muscular failure so you do not carry heavy local fatigue or delayed soreness into tomorrow's scheduled sub-threshold session (3×6min or 2×10min SUT). If hip stabilizers or calves feel unusually tight or fatigued during warm-up movements, reduce the loading or volume immediately.
-
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
 ## Latest Activity
