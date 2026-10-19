@@ -33,8 +33,7 @@ def test_four_week_lines_renders_running_volume_and_average():
     rendered = "\n".join(_four_week_lines(payload))
 
     assert "Average weekly running: 36.9 km" in rendered
-    assert "| Sep 22–28 | 32.20 km | 18 min | 349.3 |" in rendered
-    assert "| Sep 29–Oct 5 | 37.14 km | 46 min | 544.5 |" in rendered
+    assert rendered.index("| Sep 29–Oct 5 | 37.14 km | 46 min | 544.5 |") < rendered.index("| Sep 22–28 | 32.20 km | 18 min | 349.3 |")
 
 
 def test_four_week_lines_omits_section_when_28_day_data_missing():
