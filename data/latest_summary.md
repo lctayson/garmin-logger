@@ -18,10 +18,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-* **Decision:** Proceed as planned with your scheduled Monday routine—no running, focus on Strength A and mobility.
-* **Workout Execution:** Complete the planned **Strength A** session (Bulgarian split squats 3×6–8/leg, single-leg RDLs 2×8/leg, calf raises 2×10–12/leg, Copenhagen planks 2×20–30s, tibialis raises 2×12–15) paired with optional 8–10 min hip and ankle mobility work.
-* **Readiness Rationale:** Physiology is in a solid place: HRV is balanced (57 ms last night vs. 52 ms 7-day average), recovery time is cleared at 0 hours, and ACWR is optimal at 0.90 (acute load 476, chronic load 522). While multi-day sleep history remains flagged as moderate, last night’s 7.57 hours (score 76) halted any acute slide and provides ample freshness for lifting.
-* **In-Session Guardrails:** Keep lifting loads controlled and prioritize crisp movement quality rather than grinding to failure; your primary objective today is priming power and hip extension without generating heavy residual fatigue ahead of tomorrow’s scheduled sub-threshold intervals.
+* **Decision**: Proceed as planned with your scheduled Monday routine—no running, focus on Strength A and mobility.
+* **Workout Execution**: Complete **Strength A** (Bulgarian split squat 3×6–8/leg, single-leg RDL 2×8/leg, calf raise 2×10–12/leg, Copenhagen plank 2×20–30s, tibialis raises 2×12–15) paired with the optional 8–10 minute lower-body mobility routine. 
+* **Readiness Rationale**: Autonomic recovery and training load are completely in your favor—HRV is balanced at 57 ms (above your 52 ms 7-day average), RHR is steady at 56 bpm, recovery time is fully cleared (0 hours), and ACWR is optimal at 0.90. While recent sleep history has been only moderate, last night's 7.57 hours (score 76) provides plenty of baseline energy for quality gym work without cardiovascular strain.
+* **In-Session Guardrails**: Treat today as foundational support for tomorrow’s sub-threshold session; do not lift to muscular failure. If you experience any calf tightness or lingering adductor fatigue from the weekend, reduce loads by 10–15% or drop the final set to ensure legs are fresh for Tuesday intervals.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
