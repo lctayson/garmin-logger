@@ -97,7 +97,7 @@
         ]
       },
       "lap_count": 1,
-      "ai_analysis": "Strength A was executed with minimal systemic cost, logging an average HR of 99 bpm (max 115 bpm) and an exercise load of just 4.3 over 25 minutes. Morning readiness opened at a moderate 63 with recovery fully cleared, leaving your legs fresh rather than depleted. This keeps you set up well for tomorrow’s Week 5 sub-threshold session (prescribed as 3×6min SUT, unless recovery clearly justifies the 2×10min progression).",
+      "ai_analysis": "Strength A was executed with minimal cardiovascular strain, keeping heart rate well under control (99 bpm average, 115 bpm peak) and adding negligible fatigue (load 4.3). Morning readiness sat at a moderate 63 with a 56 bpm resting heart rate, reflecting some sleep debt rather than systemic overload. This checked the neuromuscular box cleanly without compromising tomorrow's scheduled sub-threshold session.",
       "ai_analysis_provider": "gemini:gemini-3.8-flash"
     }
   ]

@@ -15,7 +15,7 @@
 - **Mon Strength A** — 0.0km · 25:00 · HR 99/115 max
   - TE: Aerobic Base · aerobic 0.3 · anaerobic 0
   - Readiness 65 → 65 (Balance Stress And Recovery) · Recovery 0h 1m
-  - 🧠 Strength A was executed with minimal systemic cost, logging an average HR of 99 bpm (max 115 bpm) and an exercise load of just 4.3 over 25 minutes. Morning readiness opened at a moderate 63 with recovery fully cleared, leaving your legs fresh rather than depleted. This keeps you set up well for tomorrow’s Week 5 sub-threshold session (prescribed as 3×6min SUT, unless recovery clearly justifies the 2×10min progression).
+  - 🧠 Strength A was executed with minimal cardiovascular strain, keeping heart rate well under control (99 bpm average, 115 bpm peak) and adding negligible fatigue (load 4.3). Morning readiness sat at a moderate 63 with a 56 bpm resting heart rate, reflecting some sleep debt rather than systemic overload. This checked the neuromuscular box cleanly without compromising tomorrow's scheduled sub-threshold session.
 
 ## Next Session
 - **Planned:** Tue, Oct 20 — 7k as 3×6min SUT @ 5:25–5:35; 2min walk-jog ≤168bpm
