@@ -15,7 +15,7 @@
 - **Mon Strength A** — 0.0km · 25:00 · HR 99/115 max
   - TE: Aerobic Base · aerobic 0.3 · anaerobic 0
   - Readiness 65 → 65 (Balance Stress And Recovery) · Recovery 0h 1m
-  - 🧠 Monday Strength A executed cleanly with minimal systemic strain, logging 25 minutes at an average HR of 99 bpm and a light training load of 4.3. Starting the day at a moderate readiness of 63 with a 56 bpm resting HR, keeping this routine controlled was the right move to absorb last week's volume without accumulating fatigue. You're set up well for tomorrow's sub-threshold session—stick strictly to the 5:25–5:35/km band and cap effort under 168 bpm.
+  - 🧠 A clean, low-impact Strength A session completed exactly as scheduled to open Week 5. Keeping the average heart rate at 99 bpm (max 115 bpm) and generating just 4.3 training load delivered the required neuromuscular stimulus without draining your aerobic tank. With morning readiness sitting at 63, this leaves you well-positioned for tomorrow’s Tuesday sub-threshold intervals.
 
 ## Next Session
 - **Planned:** Tue, Oct 20 — 7k as 3×6min SUT @ 5:25–5:35; 2min walk-jog ≤168bpm
