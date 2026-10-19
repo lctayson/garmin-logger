@@ -59,9 +59,9 @@ unless recovery is clearly good enough to justify
 ## Recent 4 Weeks
 _Average weekly running: 36.9 km_
 
-| Week | Running | Other endurance | Total load |
+| Week | Running | Others | Load |
 |:---|---:|---:|---:|
-| Sep 22–28 | 32.20 km | 18 min | 349.3 |
-| Sep 29–Oct 5 | 37.14 km | 46 min | 544.5 |
-| Oct 6–12 | 37.14 km | 40 min | 520.1 |
 | Oct 13–19 | 41.13 km | 25 min | 600.5 |
+| Oct 6–12 | 37.14 km | 40 min | 520.1 |
+| Sep 29–Oct 5 | 37.14 km | 46 min | 544.5 |
+| Sep 22–28 | 32.20 km | 18 min | 349.3 |
