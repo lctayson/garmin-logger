@@ -15,7 +15,7 @@
 - **Mon Strength A** — 0.0km · 25:00 · HR 99/115 max
   - TE: Aerobic Base · aerobic 0.3 · anaerobic 0
   - Readiness 65 → 65 (Balance Stress And Recovery) · Recovery 0h 1m
-  - 🧠 Clean execution on Monday Strength A, keeping cardiovascular strain negligible with an average HR of 99 bpm and a peak of 115 bpm across 25 minutes. With a minimal load of 4.3 and morning readiness at 63, this fulfilled its neuromuscular and injury-prevention purpose without taking anything out of the legs. You are well positioned to handle tomorrow's planned Tuesday sub-threshold session.
+  - 🧠 This 25-minute Strength A session was executed exactly as intended for a non-running day, keeping cardiovascular strain minimal with an average heart rate of 99 bpm (peak 115 bpm) and an exercise load of just 4.3. Morning readiness sat at a moderate 63 with recovery fully cleared, meaning the neuromuscular work was absorbed without adding unwanted fatigue. You are set up cleanly for Tuesday's sub-threshold session.
 
 ## Next Session
 - **Planned:** Tue, Oct 20 — 7k as 3×6min SUT @ 5:25–5:35; 2min walk-jog ≤168bpm
