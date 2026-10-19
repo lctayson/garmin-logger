@@ -16,6 +16,13 @@
 - **Reason:** ongoing sleep debt (7-day average 6.6h), 6/7 nights below need.
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
+### 🧠 AI Coaching Guidance
+
+- **Decision:** Proceed as planned with your scheduled Monday routine—no running is scheduled today.
+- **Workout execution:** Complete **Strength A** (Bulgarian split squats 3×6–8/leg, SL RDL 2×8/leg, calf raises 2×10–12/leg, Copenhagen planks 2×20–30s, tibialis raises 2×12–15), with an optional 8–10 minute evening mobility session focused on hips and ankles.
+- **Readiness rationale:** Autonomic recovery is solid with HRV balanced (57 ms last night vs. 52 ms 7-day baseline), RHR stable at 56 bpm, recovery hours fully cleared (0.0), and ACWR optimal at 0.90 (acute load 476 vs. chronic 522). Sleep duration was decent at 7.57 hours (score 76), though multi-day sleep history remains moderate, making a non-running strength day ideal to absorb recent work before Tuesday's quality.
+- **In-session guardrails:** Focus purely on clean movement mechanics and controlled tempo rather than lifting heavy or pushing to failure. If lower-body fatigue, hip stiffness, or any calf tightness surfaces during Bulgarian split squats or single-leg RDLs, reduce the load to bodyweight or cut sets to prioritize full recovery for tomorrow's sub-threshold session.
+
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
 ## Latest Activity
