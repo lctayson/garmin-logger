@@ -10,34 +10,29 @@
 - ⚠️ **Limiter:** Sleep History (57%)
 - **Also soft:** Sleep Score, Stress History
 
-## Today's Session
-- **Planned:** Mon, Oct 19 — Strength A
+## Today's Workout
+
+- **Mon Strength A** — 0.0km · 25:00 · HR 99/115 max
+  - TE: Aerobic Base · aerobic 0.3 · anaerobic 0
+  - Readiness 65 → 65 (Balance Stress And Recovery) · Recovery 0h 1m
+  - 🧠 Strength A was executed with minimal systemic cost, logging an average HR of 99 bpm (max 115 bpm) and an exercise load of just 4.3 over 25 minutes. Morning readiness opened at a moderate 63 with recovery fully cleared, leaving your legs fresh rather than depleted. This keeps you set up well for tomorrow’s Week 5 sub-threshold session (prescribed as 3×6min SUT, unless recovery clearly justifies the 2×10min progression).
+
+## Next Session
+- **Planned:** Tue, Oct 20 — 7k as 3×6min SUT @ 5:25–5:35; 2min walk-jog ≤168bpm
+unless recovery is clearly good enough to justify
+7k as 2×10min SUT @ 5:25–5:35; 2min walk-jog ≤168bpm
 - **Recommendation:** Proceed as planned
 - **Reason:** ongoing sleep debt (7-day average 6.6h), 6/7 nights below need.
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
-### 🧠 AI Coaching Guidance
-
-* **Decision:** Proceed as planned with your scheduled Monday routine—no running is scheduled today.
-* **Workout execution:** Execute your **Strength A** session (Bulgarian split squat 3×6–8/leg, single-leg RDL 2×8/leg, calf raise 2×10–12/leg, Copenhagen plank 2×20–30s, tibialis raises 2×12–15) alongside the optional mobility routine; do not add any running.
-* **Readiness rationale:** Autonomic markers are solid with HRV balanced (57 ms vs. 52 ms 7-day average), resting HR steady at 56 bpm, fully cleared recovery time (0 hours), and an optimal ACWR of 0.90 (acute load 476, chronic 522). While trailing sleep history remains a moderate limiter, last night's 7.57 hours provides sufficient cushion to absorb strength work without carrying fatigue into tomorrow's quality session.
-* **Guardrails:** Keep the lifting controlled and strictly technical—avoid training to muscular failure or loading heavy enough to induce severe calf or adductor soreness. If feeling residual sluggishness, complete the mobility work first, reduce accessory volume by one set per movement, and preserve full lower-body readiness for Tuesday's sub-threshold work.
-
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
-
-## Latest Activity
-
-_Most recent activity (2026-10-18):_
-- **Recovery w/ Hills** — 7.03km · 56:20 · 8:01/km · HR 137/150 max
-  - TE: Aerobic Base · aerobic 2.6 · anaerobic 0
-  - MS: 6.55k @ 7:45 137bpm 0.77m 167spm 282ms 7.9cm 228w
 
 ## Load & Trends
 
-- **ACWR:** 0.9 (Optimal) — acute 476 / chronic 522 (chronic range 417.6–783)
+- **ACWR:** 0.9 (Optimal) — acute 482 / chronic 523 (chronic range 418.4–784.5)
 - **7-day volume:** 41.13km vs 28-day avg 36.9km (+12%)
 - **Running tolerance:** 68.1% (Medium) — 41.1km of 63.4km weekly cap, acute impact load 43.2
-- ⚠️ **Aerobic Low:** 980.4 (target 303–822 — +158 over)
+- ⚠️ **Aerobic Low:** 984.6 (target 303–822 — +163 over)
 - **Aerobic High:** 911.2 (target 649–1169 — in range)
 - ⚠️ **Anaerobic:** 44.9 (target 173–519 — -128 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
@@ -55,11 +50,11 @@ _Most recent activity (2026-10-18):_
 | F | Rest | — | — |
 | S | Malolos Run | 12k · 1:29:16 | 109 |
 | S | Malolos Run | 7k · 56:20 | 56 |
-| M | Rest | — | — |
+| M | Strength A | 25:00 | 4 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 5 | 41.14 km | 4:59:51 | 596.2 |
+| 6 | 41.14 km | 5:24:51 | 600.5 |
 
 ## Recent 4 Weeks
 _Average weekly running: 36.9 km_
@@ -69,4 +64,4 @@ _Average weekly running: 36.9 km_
 | Sep 22–28 | 32.20 km | 18 min | 349.3 |
 | Sep 29–Oct 5 | 37.14 km | 46 min | 544.5 |
 | Oct 6–12 | 37.14 km | 40 min | 520.1 |
-| Oct 13–19 | 41.13 km | — | 596.2 |
+| Oct 13–19 | 41.13 km | 25 min | 600.5 |

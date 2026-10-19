@@ -10,8 +10,8 @@
     "sleep_hours_including_previous_day_nap": 7.57,
     "sleep_score": 76,
     "training_status": "Maintaining 2",
-    "acute_load": 476,
-    "chronic_load": 522,
+    "acute_load": 482,
+    "chronic_load": 523,
     "acwr": 0.9,
     "vo2_max": 44.0,
     "recovery_time_hours": 0.0,
@@ -68,6 +68,25 @@
           "recovery_minutes": 1,
           "acute_load": 476,
           "recovery_time_change": "NO_CHANGE_SLEEP"
+        },
+        {
+          "timestamp_local": "2026-10-19T18:53:44.0",
+          "context": "AFTER_POST_EXERCISE_RESET",
+          "score": 65,
+          "feedback": "BALANCE_STRESS_AND_RECOVERY",
+          "recovery_minutes": 1,
+          "acute_load": 482,
+          "recovery_time_change": "REACHED_ZERO",
+          "factor_overrides": {
+            "sleep_score": {
+              "percent": 64,
+              "feedback": "Moderate"
+            },
+            "acwr": {
+              "percent": 94,
+              "feedback": "Good"
+            }
+          }
         }
       ]
     },
@@ -109,11 +128,11 @@
   "training_status": {
     "status": "Maintaining 2",
     "training_load": {
-      "acute_load": 476,
-      "chronic_load": 522,
+      "acute_load": 482,
+      "chronic_load": 523,
       "chronic_load_range": {
-        "min": 417.6,
-        "max": 783.0
+        "min": 418.4,
+        "max": 784.5
       },
       "acwr": 0.9,
       "acwr_percent": 38,
@@ -122,7 +141,7 @@
     "recovery_time_hours": 0.0,
     "load_focus": "Anaerobic Shortage",
     "monthly_load_balance": {
-      "aerobic_low": 980.4,
+      "aerobic_low": 984.6,
       "aerobic_low_target_min": 303,
       "aerobic_low_target_max": 822,
       "aerobic_high": 911.2,
@@ -153,10 +172,10 @@
   "training_history": {
     "7_day": {
       "total_endurance": {
-        "activity_count": 5,
+        "activity_count": 6,
         "distance_km": 41.13,
-        "duration_hours": 5.0,
-        "exercise_load": 596.2
+        "duration_hours": 5.41,
+        "exercise_load": 600.5
       },
       "sports": {
         "running": {
@@ -164,6 +183,12 @@
           "distance_km": 41.13,
           "duration_hours": 5.0,
           "exercise_load": 596.2
+        },
+        "other": {
+          "activity_count": 1,
+          "distance_km": 0.0,
+          "duration_hours": 0.42,
+          "exercise_load": 4.3
         }
       }
     },
@@ -246,10 +271,10 @@
           "week_start": "2026-10-13",
           "week_end": "2026-10-19",
           "total_endurance": {
-            "activity_count": 5,
+            "activity_count": 6,
             "distance_km": 41.13,
-            "duration_hours": 5.0,
-            "exercise_load": 596.2
+            "duration_hours": 5.41,
+            "exercise_load": 600.5
           },
           "sports": {
             "running": {
@@ -257,6 +282,12 @@
               "distance_km": 41.13,
               "duration_hours": 5.0,
               "exercise_load": 596.2
+            },
+            "other": {
+              "activity_count": 1,
+              "distance_km": 0.0,
+              "duration_hours": 0.42,
+              "exercise_load": 4.3
             }
           }
         }
@@ -459,14 +490,22 @@
       "sleep_score": 76,
       "vo2_max": 44.0,
       "training_status": "Maintaining 2",
-      "acute_load": 476,
-      "chronic_load": 522,
+      "acute_load": 482,
+      "chronic_load": 523,
       "acwr": 0.9,
       "acwr_status": "Optimal",
-      "activity_count": 0,
-      "total_endurance_duration_hours": 0.0,
+      "activity_count": 1,
+      "total_endurance_duration_hours": 0.42,
       "total_endurance_distance_km": 0.0,
-      "sport_volume": {}
+      "sport_volume": {
+        "other": {
+          "activity_count": 1,
+          "distance_km": 0.0,
+          "duration_hours": 0.42,
+          "exercise_load": 4.3
+        }
+      },
+      "total_exercise_load": 4.3
     }
   ],
   "trend_long_range_weekly": [
@@ -843,12 +882,12 @@
       "sleep_score": 76,
       "vo2_max": 44.0,
       "training_status": "Maintaining 2",
-      "acute_load": 476,
-      "chronic_load": 522,
+      "acute_load": 482,
+      "chronic_load": 523,
       "acwr": 0.9,
       "acwr_status": "Optimal",
-      "activity_count": 5,
-      "total_endurance_duration_hours": 5.0,
+      "activity_count": 6,
+      "total_endurance_duration_hours": 5.41,
       "total_endurance_distance_km": 41.13,
       "sport_volume": {
         "running": {
@@ -856,9 +895,15 @@
           "distance_km": 41.13,
           "duration_hours": 5.0,
           "exercise_load": 596.2
+        },
+        "other": {
+          "activity_count": 1,
+          "distance_km": 0.0,
+          "duration_hours": 0.42,
+          "exercise_load": 4.3
         }
       },
-      "total_exercise_load": 596.2
+      "total_exercise_load": 600.5
     }
   ],
   "body_battery_trend": [
@@ -907,10 +952,50 @@
     {
       "date": "2026-10-19",
       "charged": 66,
-      "drained": 53,
+      "drained": 58,
       "high": 83,
       "low": 17
     }
   ],
-  "activities": []
+  "activities": [
+    {
+      "name": "Mon Strength A",
+      "activity_id": 24777022269,
+      "type": "strength_training",
+      "distance": 0.0,
+      "time": "25:00",
+      "elapsed_time": "25:00",
+      "moving_time": "13:55",
+      "avg_hr": 99.0,
+      "max_hr": 115,
+      "recovery_hr": 25,
+      "start_time_local": "2026-10-19T18:20:38.0",
+      "training_effect": {
+        "label": "AEROBIC_BASE",
+        "aerobic": 0.3,
+        "aerobic_message": "MINOR_AEROBIC_BENEFIT",
+        "anaerobic": 0.0,
+        "anaerobic_message": "NO_ANAEROBIC_BENEFIT"
+      },
+      "exercise_load": 4.3,
+      "body_battery_impact": -1.0,
+      "activity_splits": [
+        {
+          "lap": 1,
+          "time": "25:00",
+          "avg_hr": 99.0,
+          "max_hr": 115.0,
+          "start_hr": 89,
+          "min_hr": 81,
+          "end_hr": 114,
+          "moving_time": "13:55",
+          "elapsed_time": "25:00",
+          "calories": 112,
+          "time_seconds": 1499.727,
+          "distance": 0.0
+        }
+      ],
+      "lap_count": 1
+    }
+  ]
 }
