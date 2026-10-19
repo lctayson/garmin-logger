@@ -16,13 +16,6 @@
 - **Reason:** ongoing sleep debt (7-day average 6.6h), 6/7 nights below need.
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
-### 🧠 AI Coaching Guidance
-
-* **Decision:** Proceed as planned with your scheduled Monday session: Strength A (power/hip extension) with no running on the schedule.
-* **Workout Execution:** Complete Strength A as prescribed (Bulgarian split squats 3×6–8/leg, single-leg RDLs 2×8/leg, calf raises 2×10–12/leg, Copenhagen planks 2×20–30s, and tibialis raises 2×12–15), followed by optional hip and ankle mobility; keep it crisp and non-depleting.
-* **Readiness Rationale:** Your recovery metrics are solid heading into Week 5—HRV is balanced (57 ms vs. 52 ms 7-day average), recovery time is fully cleared (0 hours), and ACWR is in a safe, optimal zone (0.90 with 476 acute load). While sleep history is flagged moderate, last night's 7.57 hours (score 76) provides plenty of cushion for resistance work without running fatigue.
-* **In-session Guardrails:** Monitor calf and hamstring tension during the single-leg RDLs and calf raises; if there is any localized tightness from the weekend, reduce resistance rather than grinding through reps. Tomorrow begins the Week 5 benchmark cycle with Tuesday sub-threshold intervals, so leave today's strength session feeling stimulated rather than mechanically sore.
-
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
 ## Latest Activity
