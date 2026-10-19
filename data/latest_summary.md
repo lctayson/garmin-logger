@@ -16,6 +16,13 @@
 - **Reason:** ongoing sleep debt (7-day average 6.6h), 6/7 nights below need.
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
+### 🧠 AI Coaching Guidance
+
+* **Decision:** Proceed as planned with your scheduled Monday session—no running, just the dedicated **Strength A** routine (power/hip extension) plus optional mobility.
+* **Workout execution:** Complete the Strength A circuit: Bulgarian split squats (3×6–8/leg), single-leg RDLs (2×8/leg), calf raises (2×10–12/leg), Copenhagen planks (2×20–30s), and tibialis raises (2×12–15), followed by your 8–10 min hip and ankle mobility work. 
+* **Readiness rationale:** Autonomic recovery is solid with balanced HRV (last night 57 ms vs. 52 ms 7-day average), resting HR steady at 56 bpm, zero recovery hours needed, and an optimal ACWR of 0.90 (acute load 476 vs. chronic 522). While multi-night sleep consistency remains moderate, last night’s 7.6 hours provided ample restoration to handle the lifting stress without compromising tomorrow's quality.
+* **In-session guardrails:** Focus purely on clean movement mechanics, explosive hip extension, and eccentric control rather than grinding to failure; if calf tightness or neuromuscular fatigue surfaces from the weekend's mileage, drop the loads or volume by one set to keep the legs primed for Tuesday's sub-threshold work.
+
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
 ## Latest Activity
