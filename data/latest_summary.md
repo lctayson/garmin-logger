@@ -18,10 +18,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Proceed as planned with your scheduled Monday routine—no running is scheduled today.
-- **Workout execution:** Complete **Strength A** (Bulgarian split squats 3×6–8/leg, SL RDL 2×8/leg, calf raises 2×10–12/leg, Copenhagen planks 2×20–30s, tibialis raises 2×12–15), with an optional 8–10 minute evening mobility session focused on hips and ankles.
-- **Readiness rationale:** Autonomic recovery is solid with HRV balanced (57 ms last night vs. 52 ms 7-day baseline), RHR stable at 56 bpm, recovery hours fully cleared (0.0), and ACWR optimal at 0.90 (acute load 476 vs. chronic 522). Sleep duration was decent at 7.57 hours (score 76), though multi-day sleep history remains moderate, making a non-running strength day ideal to absorb recent work before Tuesday's quality.
-- **In-session guardrails:** Focus purely on clean movement mechanics and controlled tempo rather than lifting heavy or pushing to failure. If lower-body fatigue, hip stiffness, or any calf tightness surfaces during Bulgarian split squats or single-leg RDLs, reduce the load to bodyweight or cut sets to prioritize full recovery for tomorrow's sub-threshold session.
+* **Decision:** Proceed as planned with your scheduled Monday session: Strength A (power/hip extension) plus optional mobility, with no running today.
+* **Workout execution:** Execute Strength A (Bulgarian split squats 3×6–8/leg, single-leg RDL 2×8/leg, calf raises 2×10–12/leg, Copenhagen planks 2×20–30s, and tibialis raises 2×12–15) alongside the 8–10 min hip and ankle mobility routine. 
+* **Readiness rationale:** Autonomic recovery is fully stable—HRV is balanced (57 ms last night vs. 52 ms 7-day average), resting HR is steady at 56 bpm, and ACWR is optimal at 0.90 (acute load 476, chronic 522) with 0 recovery hours remaining. While recent sleep history has been only moderate, last night's 7.57 hours (score 76) provides adequate energy to complete heavy lifting safely before tomorrow's sub-threshold intervals.
+* **In-session guardrails:** Focus on controlled eccentric tempo and crisp mechanics rather than rushing through loads or sets. If lower-body fatigue, calf tightness, or adductor strain flags during Bulgarians or Copenhagens, trim one set across the board or reduce resistance to preserve freshness for Tuesday's SUT session.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -60,3 +60,13 @@ _Most recent activity (2026-10-18):_
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
 | 5 | 41.14 km | 4:59:51 | 596.2 |
+
+## Recent 4 Weeks
+_Average weekly running: 36.9 km_
+
+| Week | Running | Other endurance | Total load |
+|:---|---:|---:|---:|
+| Sep 22–28 | 32.20 km | 18 min | 349.3 |
+| Sep 29–Oct 5 | 37.14 km | 46 min | 544.5 |
+| Oct 6–12 | 37.14 km | 40 min | 520.1 |
+| Oct 13–19 | 41.13 km | — | 596.2 |
