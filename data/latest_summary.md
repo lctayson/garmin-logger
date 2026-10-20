@@ -17,7 +17,7 @@
   - Intervals: 3 work reps · pace drift -4.2% · HR +11bpm
   - MS: 3.29k @ 5:28 163bpm 1.00m 181spm 243ms 8.1cm 313w
   - Readiness 60 → 38 (Find Time To Relax) · Recovery 1d 7h 12m
-  - 🧠 You executed the 3×6-minute sub-threshold session cleanly within the prescribed 5:25–5:35/km window, progressing each rep from 5:33 down to 5:25 (5:29 average). Average heart rate stepped up systematically across the reps (157, 164, and 168 bpm), topping out right on the planned sub-threshold ceiling of 168 bpm while matching a 10-watt increase in power. Coming off a moderate morning readiness score of 60 and a 59 sleep score, opting for the 3×6-minute option over the heavier 2×10-minute alternative was the right call to absorb the stimulus without exceeding the target zone.
+  - 🧠 Execution on the 3×6min sub-threshold reps was exceptionally disciplined, progressing cleanly from 5:33 to 5:25/km to average 5:29/km directly inside the 5:25–5:35 target band. Average heart rate climbed predictably across reps (157 to 168 bpm) without breaching your sub-threshold ceiling, demonstrating controlled aerobic strain despite starting the morning on moderate readiness (score 60, sleep 59). With performance condition holding strong at +4 throughout, this was textbook sub-threshold accumulation that kept mechanical output stable without spilling over into an unsustainable effort.
 
 ## Next Session
 - **Planned:** Wed, Oct 21 — 6k EZ @ 6:55–7:25 ≤150bpm + strides
