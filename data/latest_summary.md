@@ -17,7 +17,6 @@
   - Intervals: 3 work reps · pace drift -4.2% · HR +11bpm
   - MS: 3.29k @ 5:28 163bpm 1.00m 181spm 243ms 8.1cm 313w
   - Readiness 60 → 38 (Find Time To Relax) · Recovery 1d 7h 12m
-  - 🧠 Clean execution on the 3×6min sub-threshold session, hitting the prescribed 5:25–5:35/km band squarely across all reps with a progressive negative split (5:33, 5:28, 5:25). Rep average heart rates climbed predictably from 157 to 168 bpm, topping out right at your sub-threshold ceiling while generating a solid 3.8 aerobic training effect. Despite a mediocre sleep score (59) and moderate morning readiness (60), performance condition held strong at +4 throughout the work.
 
 ## Next Session
 - **Planned:** Wed, Oct 21 — 6k EZ @ 6:55–7:25 ≤150bpm + strides
