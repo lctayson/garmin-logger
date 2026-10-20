@@ -18,11 +18,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-* **Decision:** Proceed with the scheduled easy session, but cap it strictly on the conservative end and keep it purely conversational.
-* **Workout execution:** Based on the current block's Wednesday structure (Week 5/6 transition), run 6 km easy at 6:50–7:25/km with heart rate strictly ≤150 bpm; include 4–5 × 20-second strides with 75–90 seconds walk recovery only if legs feel light in the final kilometer.
-* **Readiness rationale:** While training load is in an optimal sweet spot (ACWR 0.90, acute load 479) and HRV remains balanced (7-day 50 ms), the low readiness score (42) is driven by an acute sleep dip (5.88 hours, moderate sleep history) and a night HRV dip (41 ms vs. 50 ms baseline). 
-* **In-session guardrails:** Account for the early-morning heat/humidity in Malolos by running strictly to RPE (2–3/10) and heart rate rather than pace—let the pace slip to 7:30+/km if needed to keep cardiac cost under control.
-* **Fallback:** If warm-up feels heavy, cardiac drift pushes HR toward 155 bpm at an easy jog, or lingering fatigue from Tuesday is obvious, skip the strides entirely and turn this into a flat 5–6 km recovery jog (≤145 bpm) to preserve tomorrow’s quality interval session.
+* **Decision:** Proceed with today’s scheduled easy session, but treat it as strictly recovery-first to absorb yesterday's sub-threshold work and prepare for Thursday quality.
+* **Workout Execution:** Per Week 5 of the bridge plan, run **6 km EZ @ 6:55–7:25/km**, keeping HR strictly capped at **≤150 bpm**. Conclude with **4–6 short strides** (15–20s crisp, relaxed turnover) only if the legs feel completely loose; otherwise, drop them without hesitation.
+* **Readiness Rationale:** While the Garmin readiness score is pulled down to 42 primarily by truncated sleep (5.88 hours; moderate history), your underlying physiological markers remain solid: your ACWR is optimal at 0.91, recovery time is down to 13 hours, and HRV status remains categorized as balanced despite a modest single-night dip (41 ms vs. 50 ms 7-day average). Because this is an isolated sub-6-hour sleep rather than two consecutive nights and training load is well-managed, full cancellation is unwarranted, but intensity must stay locked down.
+* **In-Session Guardrails:** In Malolos morning heat and humidity, prioritize effort over the pace range. If warm-up cardiac drift pushes your HR above 150 bpm or effort climbs above RPE 3 even at 7:30/km pace, immediately slow into the recovery band (7:30–7:45+/km) and omit the strides entirely.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
