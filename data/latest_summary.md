@@ -16,6 +16,7 @@
   - TE: Aerobic Base · aerobic 2.5 · anaerobic 0.5
   - MS: 5.06k @ 7:48 141bpm 0.77m 168spm 282ms 7.8cm 227w
   - Readiness 42 → 38 (Focus On Sleep Quality) · Recovery 19h 20m
+  - 🧠 With morning readiness sitting low at 42, keeping this easy session fully in check was the right operational move. Across the 6 kilometers, your heart rate averaged 141 bpm and peaked at just 156 bpm, keeping cardiovascular strain well within the prescribed easy ceiling (≤150 bpm). The negative performance condition (-1 down to -6) reflects the underlying sleep and recovery deficit, but keeping the rep paces relaxed (averaging 7:47/km) protected tomorrow's scheduled quality session.
 
 ## Next Session
 - **Planned:** Thu, Oct 22 — 7k as 5×3min @ 5:06–5:12; 2min walk-jog ≤172bpm
