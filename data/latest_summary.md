@@ -12,7 +12,7 @@
 
 ## Today's Workout
 
-- **Malolos - Run + Strides/Hills** — 6.03km · 48:26 · 8:02/km · HR 141/156 max
+- **Malolos - Run + Strides** — 6.03km · 48:26 · 8:02/km · HR 141/156 max
   - TE: Aerobic Base · aerobic 2.5 · anaerobic 0.5
   - MS: 5.06k @ 7:48 141bpm 0.77m 168spm 282ms 7.8cm 227w
   - Readiness 42 → 38 (Focus On Sleep Quality) · Recovery 19h 20m

@@ -109,7 +109,7 @@
       "rem": 0.68,
       "awake": 0.08
     },
-    "total_steps": 9145
+    "total_steps": 9252
   },
   "training_status": {
     "status": "Maintaining 2",
@@ -932,14 +932,14 @@
     {
       "date": "2026-10-21",
       "charged": 43,
-      "drained": 1,
+      "drained": 10,
       "high": 48,
       "low": 5
     }
   ],
   "activities": [
     {
-      "name": "Malolos - Run + Strides/Hills",
+      "name": "Malolos - Run + Strides",
       "activity_id": 24796905291,
       "type": "running",
       "distance": 6.03,
