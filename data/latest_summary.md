@@ -17,7 +17,7 @@
   - Intervals: 3 work reps · pace drift -4.2% · HR +11bpm
   - MS: 3.29k @ 5:28 163bpm 1.00m 181spm 243ms 8.1cm 313w
   - Readiness 60 → 38 (Find Time To Relax) · Recovery 1d 7h 12m
-  - 🧠 Execution on the 3×6min sub-threshold reps was exceptionally disciplined, progressing cleanly from 5:33 to 5:25/km to average 5:29/km directly inside the 5:25–5:35 target band. Average heart rate climbed predictably across reps (157 to 168 bpm) without breaching your sub-threshold ceiling, demonstrating controlled aerobic strain despite starting the morning on moderate readiness (score 60, sleep 59). With performance condition holding strong at +4 throughout, this was textbook sub-threshold accumulation that kept mechanical output stable without spilling over into an unsustainable effort.
+  - 🧠 You executed the 3×6min sub-threshold session cleanly within the prescribed 5:25–5:35/km window, progressing reps from 5:33 down to 5:25/km for a 5:29/km average. Heart rate climbed appropriately across the work intervals (157 to 168 bpm), perfectly respecting your sub-threshold ceiling of ≤168 bpm despite the 11 bpm drift and morning readiness starting at a moderate 60. This was a textbook controlled Norwegian Singles effort that delivered the targeted aerobic threshold stimulus without tipping into excessive strain.
 
 ## Next Session
 - **Planned:** Wed, Oct 21 — 6k EZ @ 6:55–7:25 ≤150bpm + strides
