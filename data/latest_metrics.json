@@ -44,11 +44,11 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "* **Decision:** Proceed with today’s scheduled easy session, but treat it as strictly recovery-first to absorb yesterday's sub-threshold work and prepare for Thursday quality.\n* **Workout Execution:** Per Week 5 of the bridge plan, run **6 km EZ @ 6:55–7:25/km**, keeping HR strictly capped at **≤150 bpm**. Conclude with **4–6 short strides** (15–20s crisp, relaxed turnover) only if the legs feel completely loose; otherwise, drop them without hesitation.\n* **Readiness Rationale:** While the Garmin readiness score is pulled down to 42 primarily by truncated sleep (5.88 hours; moderate history), your underlying physiological markers remain solid: your ACWR is optimal at 0.91, recovery time is down to 13 hours, and HRV status remains categorized as balanced despite a modest single-night dip (41 ms vs. 50 ms 7-day average). Because this is an isolated sub-6-hour sleep rather than two consecutive nights and training load is well-managed, full cancellation is unwarranted, but intensity must stay locked down.\n* **In-Session Guardrails:** In Malolos morning heat and humidity, prioritize effort over the pace range. If warm-up cardiac drift pushes your HR above 150 bpm or effort climbs above RPE 3 even at 7:30/km pace, immediately slow into the recovery band (7:30–7:45+/km) and omit the strides entirely.",
+    "ai_analysis": "* **Decision:** Proceed with the scheduled easy session, but cap it strictly on effort and omit the strides if legs feel heavy during warm-up.\n* **Workout execution:** Based on the current block's Wednesday structure (Week 5/6 transition), complete 6 km easy aerobic running @ 6:50–7:25/km, keeping HR strictly ≤150 bpm, followed by 5–6 × 20s relaxed strides with full 75–90s walking recovery only if feeling fluid. \n* **Readiness rationale:** While training load is in an optimal sweet spot (ACWR 0.90) and HRV status remains balanced (41 ms last night vs. 50 ms 7-day average), overall readiness is low (42) due to short sleep (5.88 hours) and moderate sleep history; with 13.2 hours of lingering recovery needed, today must remain strictly low-stress to preserve Thursday's VO2 quality session.\n* **In-session guardrails:** Malolos morning heat will elevate cardiac cost, so prioritize RPE (2–3/10) and heart rate over target pace—let the pace slip to 7:30+/km if needed to stay under 150 bpm. If your warm-up feels sluggish, HR spikes early, or fatigue is prominent, cut the run to a flat 5 km recovery jog and skip the strides entirely.",
     "ai_analysis_provider": "gemini:gemini-3.8-flash"
   },
   "health": {
-    "steps": 33
+    "steps": 48
   },
   "sleep": {
     "deep_h": 0.6,
@@ -890,7 +890,7 @@
       [
         "2026-10-21",
         43,
-        0,
+        1,
         48,
         5
       ]
