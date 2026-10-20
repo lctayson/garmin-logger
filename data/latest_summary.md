@@ -17,7 +17,7 @@
   - Intervals: 3 work reps · pace drift -4.2% · HR +11bpm
   - MS: 3.29k @ 5:28 163bpm 1.00m 181spm 243ms 8.1cm 313w
   - Readiness 60 → 38 (Find Time To Relax) · Recovery 1d 7h 12m
-  - 🧠 Pacing execution on the 3×6-minute sub-threshold intervals was spot-on, progressing smoothly from 5:33 down to 5:25/km to average 5:29/km, right in the center of the 5:25–5:35 target band. Average heart rate rose predictably across reps (157 to 168 bpm) along with a 10W increase in power output, landing right at your prescribed sub-threshold ceiling of 168 bpm on the final interval. Despite starting with a moderate morning readiness of 60 following suboptimal sleep (score 59), this was a very clean, controlled Tuesday quality session that delivered the intended aerobic stimulus without overreaching.
+  - 🧠 You executed the 3×6-minute sub-threshold intervals cleanly within the 5:25–5:35/km prescribed target, progressing evenly from 5:33 to 5:28 down to 5:25/km. Heart rate rose predictably across reps (157, 164, and 168 bpm), perfectly capping out right at your 168 bpm sub-threshold ceiling on the final rep despite coming in off a mediocre morning sleep score (59). The 11 bpm cardiac creep and -4.2% pace efficiency drift across the set reflect standard cardiovascular accumulation as pace quickened, with performance condition holding steady at +4. This delivers exactly the controlled threshold stimulus needed for Week 5 without turning into an overcooked race effort.
 
 ## Next Session
 - **Planned:** Wed, Oct 21 — 6k EZ @ 6:55–7:25 ≤150bpm w/ strides
