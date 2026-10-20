@@ -17,9 +17,10 @@
   - Intervals: 3 work reps · pace drift -4.2% · HR +11bpm
   - MS: 3.29k @ 5:28 163bpm 1.00m 181spm 243ms 8.1cm 313w
   - Readiness 60 → 38 (Find Time To Relax) · Recovery 1d 7h 12m
+  - 🧠 Solid execution on the 3×6min sub-threshold session, hitting an average rep pace of 5:29/km (5:33, 5:28, 5:25) squarely within the prescribed 5:25–5:35/km band. Rep heart rates rose predictably from 157 bpm up to 168 bpm across the set, staying right at the 168 bpm ceiling without spilling into an uncontrolled effort. Given the mediocre sleep score (59) and moderate morning readiness of 60, holding discipline and finishing the final rep strong without blowing through your threshold cap was exactly what this session called for.
 
 ## Next Session
-- **Planned:** Wed, Oct 21 — 6k EZ @ 6:55–7:25 ≤150bpm + strides
+- **Planned:** Wed, Oct 21 — 6k EZ @ 6:55–7:25 ≤150bpm w/ strides
 - **Recommendation:** Proceed as planned
 - **Reason:** HRV is trending down; last-night HRV is below the balanced band.
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
