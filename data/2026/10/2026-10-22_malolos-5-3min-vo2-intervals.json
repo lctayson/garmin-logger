@@ -690,7 +690,7 @@
         ]
       },
       "lap_count": 17,
-      "ai_analysis": "You executed this 5 × 3min session right on target despite a low morning readiness score of 37 and mediocre sleep (56). Rep paces were remarkably consistent across the set, progressing from 5:12 down to 5:06/km (averaging 5:09/km) directly within the 5:06–5:12 target band. The cardiovascular response was textbook for this bridge phase, with rep average heart rates rising progressively from 151 to 165 bpm and peak HR topping out at 172 bpm without exceeding your quality cap. With Friday scheduled as full rest and core, prioritize sleep recovery tonight so this solid VO₂ stimulus absorbs properly ahead of the weekend.",
+      "ai_analysis": "You executed the 5 × 3-minute intervals with pinpoint pacing discipline, keeping every rep within the prescribed 5:06–5:12/km target band (ranging from 5:12 down to 5:06, averaging 5:09/km). Rep average heart rate climbed progressively from 151 to 165 bpm, topping out at 172 bpm to hit the intended high-aerobic stimulus without exceeding the planned ceiling. Managing this clean execution and negative split across the reps despite a low morning readiness score of 37 shows great control.",
       "ai_analysis_provider": "gemini:gemini-3.8-flash"
     }
   ]
