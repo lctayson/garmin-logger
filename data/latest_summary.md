@@ -10,36 +10,30 @@
 - ⚠️ **Limiter:** Sleep Score (38%)
 - **Also soft:** Stress History, Sleep History
 
-## Today's Session
-- **Planned:** Thu, Oct 22 — 7k as 5×3min @ 5:06–5:12; 2min walk-jog ≤172bpm
-- **Recommendation:** Adjust the workout
+## Today's Workout
+
+- **Malolos - 5 × 3min VO₂ Intervals** — 7.04km · 47:49 · 6:48/km · HR 148/172 max
+  - TE: VO2 Max (High Aerobic) · aerobic 3.6 · anaerobic 0.8
+  - Intervals: 5 work reps · pace drift -6.7% · HR +14bpm
+  - MS: 2.91k @ 5:09 159bpm 1.05m 184spm 236ms 8.1cm 329w
+  - Readiness 37 → 21 (Time To Recharge) · Recovery 1d 2h 24m
+  - 🧠 You executed this 5 × 3min session right on target despite a low morning readiness score of 37 and mediocre sleep (56). Rep paces were remarkably consistent across the set, progressing from 5:12 down to 5:06/km (averaging 5:09/km) directly within the 5:06–5:12 target band. The cardiovascular response was textbook for this bridge phase, with rep average heart rates rising progressively from 151 to 165 bpm and peak HR topping out at 172 bpm without exceeding your quality cap. With Friday scheduled as full rest and core, prioritize sleep recovery tonight so this solid VO₂ stimulus absorbs properly ahead of the weekend.
+
+## Next Session
+- **Planned:** Fri, Oct 23 — REST + Core
+- **Recommendation:** Keep it easy
 - **Reason:** low readiness (37/100); low 7-day sleep average (6.4h); resting heart rate is trending up; HRV is trending down; last-night HRV is below the balanced band; RHR-up/HRV-down recovery pattern.
-- **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
-
-### 🧠 AI Coaching Guidance
-
-* **Decision:** Proceed with the scheduled quality session, but treat prescribed paces as an upper ceiling and let effort and heart rate govern execution.
-* **Workout Execution:** Following the Week 5 Thursday plan (7 km total), run an easy warm-up, then **5 × 3 min @ 5:06–5:12/km** with **2 min walk-jog recovery** between reps (keep work interval HR ≤172 bpm), followed by an easy cool-down.
-* **Readiness Rationale:** While the low readiness score (37) is dragged down by poor sleep (6.0 h, score 56), your physiological recovery is intact—HRV is balanced (44 ms vs. 48 ms 7-day average), recovery time is essentially cleared (1.0 h), and training load is well-managed (ACWR 0.86 / acute load 450 vs. chronic 521).
-* **In-Session Guardrails:** During the warm-up, monitor heavy legs or unusually rapid cardiac drift in the morning heat; during the intervals, do not force 5:06–5:12/km if your HR spikes above 172 bpm early in the reps. 
-* **Fallback:** If warm-up RPE is high or the first two reps exceed 172 bpm before the 2-minute mark, cap the effort at steady/sub-threshold (~5:25–5:35/km) or convert the remainder of the session into a flat 6–7 km easy run (HR ≤150 bpm).
+- **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
-## Latest Activity
-
-_Most recent activity (2026-10-21):_
-- **Malolos - Run + Strides** — 6.03km · 48:26 · 8:02/km · HR 141/156 max
-  - TE: Aerobic Base · aerobic 2.5 · anaerobic 0.5
-  - MS: 5.06k @ 7:48 141bpm 0.77m 168spm 282ms 7.8cm 227w
-
 ## Load & Trends
 
-- **ACWR:** 0.8 (Optimal) — acute 450 / chronic 521 (chronic range 416.8–781.5)
-- **7-day volume:** 32.11km vs 28-day avg 35.9km (-11%)
-- **Running tolerance:** 63.2% (Medium) — 32.1km of 63.4km weekly cap, acute impact load 40.1
+- **ACWR:** 1.1 (Optimal) — acute 631 / chronic 553 (chronic range 442.4–829.5)
+- **7-day volume:** 39.14km vs 28-day avg 37.6km (+4%)
+- **Running tolerance:** 79.2% (Medium) — 39.1km of 63.4km weekly cap, acute impact load 50.2
 - **Aerobic Low:** 837.3 (target 649–1082 — in range)
-- **Aerobic High:** 1057.2 (target 649–1082 — in range)
+- ⚠️ **Aerobic High:** 1189 (target 649–1082 — +107 over)
 - ⚠️ **Anaerobic:** 44.9 (target 86–346 — -41 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
 - ⚠️ **Sleep (7d avg):** 6h26, 5/7 nights below need, trending flat
@@ -56,18 +50,18 @@ _Most recent activity (2026-10-21):_
 | M | Strength A | 25:00 | 4 |
 | T | 3x6min Thr | 7k · 46:35 | 153 |
 | W | Run + Strides/Hills | 6k · 48:26 | 59 |
-| T | Rest | — | — |
+| T | 5x3min VO₂ Int | 7k · 47:49 | 142 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 5 | 32.11 km | 4:25:37 | 380.6 |
+| 6 | 39.15 km | 5:13:26 | 522.5 |
 
 ## Recent 4 Weeks
-_Average weekly running: 35.9 km_
+_Average weekly running: 37.6 km_
 
 | Week | Running | Others | Load |
 |:---|---:|---:|---:|
-| Oct 16–22 | 32.11 km | 25 min | 380.6 |
+| Oct 16–22 | 39.14 km | 25 min | 522.5 |
 | Oct 9–15 | 39.13 km | 40 min | 587.1 |
 | Oct 2–8 | 36.14 km | 46 min | 521.5 |
 | Sep 25–Oct 1 | 36.14 km | 18 min | 525.9 |
