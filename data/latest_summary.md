@@ -12,11 +12,10 @@
 
 ## Today's Workout
 
-- **Malolos - Run + Strides/Hills** — 6.03km · 48:26 · 8:02/km · HR 141/156 max
+- **Malolos - Run + Strides** — 6.03km · 48:26 · 8:02/km · HR 141/156 max
   - TE: Aerobic Base · aerobic 2.5 · anaerobic 0.5
   - MS: 5.06k @ 7:48 141bpm 0.77m 168spm 282ms 7.8cm 227w
   - Readiness 42 → 38 (Focus On Sleep Quality) · Recovery 19h 20m
-  - 🧠 This was a well-managed easy session that properly respected your low morning readiness score of 42. You kept overall cardiovascular strain modest with an average HR of 141 bpm (peaking at 156 bpm during the faster strides/hills), well within your typical easy ceiling of 150 bpm across the 6.03 km. The negative performance condition drift from -1 down to -6 reflects carrying some acute fatigue, but holding your work reps to a disciplined 7:36–8:07/km pace kept the load light (59.1) ahead of Thursday's quality session.
 
 ## Next Session
 - **Planned:** Thu, Oct 22 — 7k as 5×3min @ 5:06–5:12; 2min walk-jog ≤172bpm
