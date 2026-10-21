@@ -16,6 +16,13 @@
 - **Reason:** low readiness (37/100); low 7-day sleep average (6.4h); resting heart rate is trending up; HRV is trending down; last-night HRV is below the balanced band; RHR-up/HRV-down recovery pattern.
 - **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
 
+### 🧠 AI Coaching Guidance
+
+* **Decision:** Proceed with the scheduled quality session, but strictly by effort rather than chasing the sharp end of the pace band. 
+* **Workout execution:** Based on Week 5 Thursday (Oct 22), run **7 km total as 5×3 min @ 5:06–5:12/km with 2 min walk-jog recoveries**, keeping HR strictly capped at **≤172 bpm**. Include an easy warm-up and cool-down to round out the 7 km.
+* **Readiness rationale:** While your readiness score is low (37) due to a poor night of sleep (6.0 h, score 56), your physiological recovery is intact—HRV is balanced at 44 ms (7-day avg 48 ms), resting HR is steady at 60 bpm, recovery time is cleared (1 hr), and ACWR is optimal (0.8). An isolated poor night of sleep is not a reason to cancel the stimulus, but it will raise your perceived exertion and cardiac cost.
+* **In-session guardrails:** Malolos morning heat combined with sleep debt will accelerate cardiac drift; ignore early interval HR lag and focus on a smooth, controlled rhythm rather than forcing 5:06/km. If your HR spikes over 172 bpm early in reps or your warm-up feels unusually heavy (RPE >4), back the intervals down to steady/sub-threshold effort (5:20–5:30/km) or convert the session to 6 km easy running (≤150 bpm).
+
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
 ## Latest Activity

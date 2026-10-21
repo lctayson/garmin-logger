@@ -79,7 +79,7 @@
       "rem": 0.42,
       "awake": 1.3
     },
-    "total_steps": 24,
+    "total_steps": 65,
     "naps": [
       {
         "start": "2026-10-21T05:55:00",
@@ -901,7 +901,7 @@
     {
       "date": "2026-10-22",
       "charged": 44,
-      "drained": 0,
+      "drained": 2,
       "high": 51,
       "low": 7
     }
