@@ -17,7 +17,7 @@
   - Intervals: 5 work reps · pace drift -6.7% · HR +14bpm
   - MS: 2.91k @ 5:09 159bpm 1.05m 184spm 236ms 8.1cm 329w
   - Readiness 37 → 21 (Time To Recharge) · Recovery 1d 2h 24m
-  - 🧠 You executed the 5 × 3-minute intervals with pinpoint pacing discipline, keeping every rep within the prescribed 5:06–5:12/km target band (ranging from 5:12 down to 5:06, averaging 5:09/km). Rep average heart rate climbed progressively from 151 to 165 bpm, topping out at 172 bpm to hit the intended high-aerobic stimulus without exceeding the planned ceiling. Managing this clean execution and negative split across the reps despite a low morning readiness score of 37 shows great control.
+  - 🧠 You executed the 5 × 3-minute intervals with tight pacing discipline, averaging 5:09/km across the set and hitting the planned 5:06–5:12 target perfectly on every rep. Despite starting the morning with low readiness (score 37, sleep score 56), you managed cardiac cost well—interval heart rates progressed steadily from 151 to 165 bpm, peaking right at your 172 bpm ceiling on rep 5. With 0.8 anaerobic benefit logged and an acute load jump to 631, take full advantage of Friday's rest and core session to absorb this quality before Saturday's long run.
 
 ## Next Session
 - **Planned:** Fri, Oct 23 — REST + Core
