@@ -109,7 +109,14 @@
       "rem": 0.68,
       "awake": 0.08
     },
-    "total_steps": 9252
+    "total_steps": 9462,
+    "naps": [
+      {
+        "start": "2026-10-21T05:55:00",
+        "end": "2026-10-21T06:58:00",
+        "duration_min": 63.0
+      }
+    ]
   },
   "training_status": {
     "status": "Maintaining 2",
@@ -931,8 +938,8 @@
     },
     {
       "date": "2026-10-21",
-      "charged": 43,
-      "drained": 10,
+      "charged": 45,
+      "drained": 38,
       "high": 48,
       "low": 5
     }
