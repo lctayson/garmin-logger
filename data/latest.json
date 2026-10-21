@@ -56,6 +56,24 @@
           "recovery_time_change": "NO_CHANGE_SLEEP"
         },
         {
+          "timestamp_local": "2026-10-21T18:42:11.0",
+          "context": "UPDATE_REALTIME_VARIABLES",
+          "score": 54,
+          "feedback": "BOOSTED_BY_NAPPING",
+          "recovery_minutes": 469,
+          "acute_load": 554,
+          "factor_overrides": {
+            "recovery_time": {
+              "percent": 87,
+              "feedback": "Good"
+            },
+            "acwr": {
+              "percent": 90,
+              "feedback": "Good"
+            }
+          }
+        },
+        {
           "timestamp_local": "2026-10-21T07:10:57.0",
           "context": "AFTER_POST_EXERCISE_RESET",
           "score": 38,
@@ -84,7 +102,7 @@
       "sleep_history_adjustment": "No Change",
       "hrv_adjustment": "No Change",
       "nap_adjustment": "No Change",
-      "next_need_hours": 7.5
+      "next_need_hours": 6.5
     },
     "previous_day_nap": null
   },
@@ -939,7 +957,7 @@
     {
       "date": "2026-10-21",
       "charged": 45,
-      "drained": 38,
+      "drained": 45,
       "high": 48,
       "low": 5
     }
