@@ -19,11 +19,14 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned Friday strength/hip‑stability session, but keep the load light‑to‑moderate (avoid heavy max‑effort lifts).  
+**Decision** – Proceed with today’s planned **core/hip‑stability strength** session, but **dial the load back** (≈50 % of usual volume or weight). If you feel unusually fatigued, sore, or notice a rapid HR rise, stop and treat the day as a full recovery.
 
-**Warm‑up → Main set → Cool‑down** – 5 min easy jog or bike + dynamic hip/leg drills; 2 × 10 min circuits of body‑weight/KB goblet squats, single‑leg glute bridges, hip‑extension bands, and core planks (≈2‑3 RPE); finish with 5 min of static stretching and foam‑rolling.  
+**Warm‑up / Main set / Cool‑down** – Follow the prescribed strength routine for Friday (hip‑extension/power circuit).  
+- Warm‑up: 5 min easy jog or bike + dynamic hip/leg swings, glute bridges, plank‑holds (1 × 30 s each).  
+- Main set: 2–3 sets of the listed core/hip exercises (e.g., single‑leg deadlifts, monster walks, clamshells, anti‑rotation planks). Keep the effort at **RPE 5–6**, avoid heavy loads or explosive jumps.  
+- Cool‑down: 3 min light foam‑roll/stretch of glutes, hamstrings, quads; deep breathing.
 
-**Readiness rationale** – Sleep ≈ 6 h (moderate deficit) and HRV 40 ms (↓ 7‑day avg, “unbalanced”) drive a low overall readiness score, but resting HR 61 bpm is normal and ACWR 0.9 is in the optimal zone, so a full‑hard strength day isn’t warranted; a reduced‑intensity
+**Readiness rationale** – Sleep was only 6.1 h (moderate 44 % score) and HRV dropped to 40 ms (below 7‑day avg 46 ms, “UNBALANCED”). Resting HR 61 bpm is a slight upward drift, suggesting incomplete recovery. Load metrics (ACWR 0.9, “Optimal”) are fine, but the **low‑readiness score
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
