@@ -17,7 +17,7 @@
   - Intervals: 5 work reps · pace drift -6.7% · HR +14bpm
   - MS: 2.91k @ 5:09 159bpm 1.05m 184spm 236ms 8.1cm 329w
   - Readiness 37 → 21 (Time To Recharge) · Recovery 1d 2h 24m
-  - 🧠 You executed the 5 × 3min session right inside the prescribed 5:06–5:12/km band, averaging 5:09/km with a disciplined progression down to 5:06 on the final rep. Despite starting the morning on low readiness (score 37, sleep 56), heart rate tracked well within parameters, stepping from 151 bpm up to 165 bpm across reps and peaking at 172 bpm without exceeding your quality ceiling. The -6.7% pace efficiency drift reflects normal cardiovascular rise and an 11W increase in work over the set rather than late degradation. Take advantage of Friday's core/rest day to let this 142-load stimulus absorb ahead of the weekend.
+  - 🧠 Solid pacing discipline across all five reps, tightly grouped between 5:06 and 5:12/km to hit the prescribed 5:06–5:12 band right on target with a 5:09 average. Heart rate climbed predictably across the intervals from 151 to 165 bpm, peaking at 172 bpm right at the ceiling for Thursday quality, which drove a -6.7% pace efficiency drift. Despite waking up with a low readiness score of 37 off a 56 sleep score, your performance condition held steady at +7 throughout the session. Take full advantage of Friday's scheduled rest and core day to absorb this work before Saturday's easy long run.
 
 ## Next Session
 - **Planned:** Fri, Oct 23 — REST + Core
