@@ -690,7 +690,7 @@
         ]
       },
       "lap_count": 17,
-      "ai_analysis": "The five 3‑minute VO₂max reps were executed at 5:12 – 5:06 /km (average 5:09 /km), staying comfortably within the prescribed 4:50‑5:15 /km VO₂ zone and even showing a modest negative‑split trend (‑6.7 % pace‑efficiency drift). Heart‑rate rose from 151 bpm in the first rep to 165 bpm in the last, matching the expected progressive stimulus and producing a solid aerobic training effect (3.6 VO₂‑max) with no meaningful anaerobic contribution. Given the low morning readiness score (37, “Low”) and the stamina dip to 73 % (min 58 %), you should prioritize recovery tonight to avoid cumulative fatigue before the next quality session.",
+      "ai_analysis": "Your 5 × 3‑minute VO₂max reps held a tight pace window (5:06–5:12 / km), staying within the prescribed VO₂max range (≈4:50–5:15 / km) and even edging a bit faster in the later reps (pace drift ‑6.7 %). Heart‑rate climbed from 151 bpm to 165 bpm (Δ 14 bpm), confirming the intended progressive intensity, while stamina dipped to 73 % (low 58 %) – a normal fatigue signal for this quality work. Morning readiness was already low (score 37, “Low”), and the post‑run snapshot fell to 21, reflecting the high acute load (631 AU) and limited recovery time left. Keep an eye on recovery hours and aim to schedule a lighter day after such demanding Thursday sessions.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]

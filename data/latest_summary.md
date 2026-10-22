@@ -3,7 +3,7 @@
 ## Readiness: 37/100 (Low)
 > Find Time To Relax
 
-- **VO₂max:** 44.6 ml/kg/min (Garmin precise)
+- **VO₂max:** 44.6 ml/kg/min (Garmin display: 45)
 - ⚠️ **RHR:** 60 bpm (7d avg: 58.4 bpm, trending up)
 - ⚠️ **HRV:** 44ms (7d avg: 48ms) · below 47–57ms
 - ⚠️ **Sleep:** 6h00 / 6h30 need (0h30 short) · score 56 · 7d avg 6h26 · 5/7 nights below need
@@ -18,7 +18,7 @@
   - Intervals: 5 work reps · pace drift -6.7% · HR +14bpm
   - MS: 2.91k @ 5:09 159bpm 1.05m 184spm 236ms 8.1cm 329w
   - Readiness 37 → 21 (Time To Recharge) · Recovery 1d 2h 24m
-  - 🧠 The five 3‑minute VO₂max reps were executed at 5:12 – 5:06 /km (average 5:09 /km), staying comfortably within the prescribed 4:50‑5:15 /km VO₂ zone and even showing a modest negative‑split trend (‑6.7 % pace‑efficiency drift). Heart‑rate rose from 151 bpm in the first rep to 165 bpm in the last, matching the expected progressive stimulus and producing a solid aerobic training effect (3.6 VO₂‑max) with no meaningful anaerobic contribution. Given the low morning readiness score (37, “Low”) and the stamina dip to 73 % (min 58 %), you should prioritize recovery tonight to avoid cumulative fatigue before the next quality session.
+  - 🧠 Your 5 × 3‑minute VO₂max reps held a tight pace window (5:06–5:12 / km), staying within the prescribed VO₂max range (≈4:50–5:15 / km) and even edging a bit faster in the later reps (pace drift ‑6.7 %). Heart‑rate climbed from 151 bpm to 165 bpm (Δ 14 bpm), confirming the intended progressive intensity, while stamina dipped to 73 % (low 58 %) – a normal fatigue signal for this quality work. Morning readiness was already low (score 37, “Low”), and the post‑run snapshot fell to 21, reflecting the high acute load (631 AU) and limited recovery time left. Keep an eye on recovery hours and aim to schedule a lighter day after such demanding Thursday sessions.
 
 ## Next Session
 - **Planned:** Fri, Oct 23 — REST + Core
