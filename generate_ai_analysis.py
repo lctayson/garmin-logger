@@ -115,7 +115,7 @@ def _published_sheet_csv_url(sheet_url: str) -> str:
     return urllib.parse.urlunparse(parsed._replace(path=path, query=urllib.parse.urlencode(query)))
 
 
-def _fetch_published_training_plan(sheet_url: str = TRAINING_PLAN_URL) -> str:
+def _fetch_published_training_plan(sheet_url: str = TRAINING_PLAN_URL, date_str: str | None = None) -> str:
     """Fetch the public plan as CSV and render it as a compact Markdown table."""
     request = urllib.request.Request(
         _published_sheet_csv_url(sheet_url),
@@ -131,6 +131,32 @@ def _fetch_published_training_plan(sheet_url: str = TRAINING_PLAN_URL) -> str:
 
     width = max(len(row) for row in rows)
     rows = [row + [""] * (width - len(row)) for row in rows]
+    if date_str:
+        target = datetime.date.fromisoformat(date_str)
+        # Keep only the week row whose date/range contains the requested date.
+        selected = []
+        month_pattern = r"(?i)\\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\\.?\\s+(\\d{1,2})(?:,?\\s*(\\d{4}))?"
+        for row in rows[1:]:
+            searchable = " ".join(row[:4])
+            dates = []
+            for match in re.finditer(month_pattern, searchable):
+                month = datetime.datetime.strptime(match.group(1).title(), "%b").month
+                year = int(match.group(3)) if match.group(3) else target.year
+                try:
+                    dates.append(datetime.date(year, month, int(match.group(2))))
+                except ValueError:
+                    pass
+            for match in re.finditer(r"\\b20\\d{2}-\\d{2}-\\d{2}\\b", searchable):
+                try:
+                    dates.append(datetime.date.fromisoformat(match.group(0)))
+                except ValueError:
+                    pass
+            hit = target in dates or any(a <= target <= b for a, b in zip(dates, dates[1:]))
+            if hit:
+                selected.append(row)
+        if not selected:
+            raise ValueError(f"Could not identify the plan row for {date_str}; refusing to send the whole plan")
+        rows = [rows[0]] + selected
 
     def cell(value):
         return value.strip().replace("|", "\\|").replace("\r\n", "<br>").replace("\n", "<br>")
@@ -161,7 +187,7 @@ def _compact_context(context_text: str, date_str: str) -> str:
         sheet_match = re.search(r"https://docs\.google\.com/spreadsheets/d/e/[^\s)]+", plan)
         sheet_url = sheet_match.group(0).rstrip("]>,.") if sheet_match else TRAINING_PLAN_URL
         try:
-            live_plan = _fetch_published_training_plan(sheet_url)
+            live_plan = _fetch_published_training_plan(sheet_url, date_str)
         except Exception as exc:
             print(
                 f"[generate_ai_analysis] Could not fetch live training plan ({exc}); "
@@ -170,15 +196,8 @@ def _compact_context(context_text: str, date_str: str) -> str:
             )
             live_plan = ""
         pieces = [durable]
-        if plan:
-            pieces.append("# BHM 2027 plan overview\n" + plan)
         if live_plan:
-            pieces.append(
-                "# Live BHM 2027 training plan (published Google Sheet)\n"
-                "Use the target date and day column to identify the exact planned session. "
-                "Preserve workout details; MS denotes completed results and 📌 denotes reminders.\n\n"
-                + live_plan
-            )
+            pieces.append("# Relevant training-plan row\n" + live_plan)
         return "\n\n".join(pieces)
 
     target_date = datetime.date.fromisoformat(date_str)
