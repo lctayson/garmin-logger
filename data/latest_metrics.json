@@ -1,6 +1,8 @@
 {
   "date": "2026-10-22",
   "readiness": {
+    "vo2_max": 45.0,
+    "vo2_max_precise": 44.6,
     "score": 37,
     "level": "Low",
     "feedback": "Find Time To Relax",
@@ -77,6 +79,7 @@
     "training_status": "Maintaining 2"
   },
   "vo2_max": 45.0,
+  "vo2_max_precise": 44.6,
   "race_predictions": {
     "5k": "27:18",
     "10k": "57:29",

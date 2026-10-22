@@ -145,7 +145,8 @@
       "anaerobic_target_max": 346
     },
     "vo2_max": {
-      "value": 45.0
+      "value": 45.0,
+      "precise_value": 44.6
     },
     "heat_acclimation": {
       "percentage": 100,
