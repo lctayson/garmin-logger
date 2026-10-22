@@ -18,7 +18,7 @@
   - Intervals: 5 work reps · pace drift -6.7% · HR +14bpm
   - MS: 2.91k @ 5:09 159bpm 1.05m 184spm 236ms 8.1cm 329w
   - Readiness 37 → 21 (Time To Recharge) · Recovery 1d 2h 24m
-  - 🧠 The five 3‑minute reps held steady in the VO2‑max zone (5:12 → 5:06 /km) and the 14 bpm rise in HR across the set aligns with the expected intensity progression, while the –6.7 % pace‑efficiency drift shows a modest speed gain rather than a slowdown. Stamina fell from 99 % to 73 % (bottoming at 58 %), indicating a noticeable but tolerable depletion for a quality Thursday session. Training‑effect scores (aerobic 3.6, anaerobic 0.8) confirm a solid VO2 stimulus with little anaerobic load, which matches the bridge‑phase focus. With a morning readiness score of 37 (Low) and only 1 hour of recovery logged, you may want to prioritize rest before the next hard effort.
+  - 🧠 Your five 3‑minute reps stayed tightly clustered at 5:06–5:12 /km (average 5:09), which sits squarely in the VO2‑max range prescribed for Thursday quality work, and the HR rose progressively from 151 bpm to 165 bpm (Δ 14 bpm), confirming the intended intensity buildup. The –6.7 % pace‑efficiency drift and the drop in stamina from 99 % to 73 % (bottoming at 58 %) reflect a solid anaerobic stimulus but also a noticeable fatigue cost for a 7 km session. Your morning readiness score was low (37 / Low) and fell to 21 after the workout, so prioritize recovery (e.g., easy run or rest) before the next hard effort.
 
 ## Next Session
 - **Planned:** Fri, Oct 23 — REST + Core
