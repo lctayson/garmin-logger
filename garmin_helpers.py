@@ -115,10 +115,15 @@ def get_training_status_details(api, target_date_str):
         result['monthly_load_balance'] = monthly
     vo2 = raw.get('mostRecentVO2Max',{}) or {}
     generic = vo2.get('generic',{}) if isinstance(vo2.get('generic'),dict) else {}
+    precise_value = _deep_get(generic, ['vo2MaxPreciseValue'])
+    try:
+        precise_value = float(precise_value) if precise_value is not None else None
+    except (TypeError, ValueError):
+        precise_value = None
     value = _safe_float(_deep_get(generic,['vo2MaxValue','vo2MaxPreciseValue','vo2Max']))
     status = generic.get('vo2MaxStatus') or generic.get('fitnessLevel') or generic.get('vo2MaxCategory') or generic.get('category') or _deep_get(vo2,['vo2MaxStatus','fitnessLevel'])
     if value is not None or status:
-        result['vo2_max'] = {'value':value,'status':humanize_enum(status) if isinstance(status,str) else status}
+        result['vo2_max'] = {'value':value,'precise_value':precise_value,'status':humanize_enum(status) if isinstance(status,str) else status}
         result['vo2_max'] = {k:v for k,v in result['vo2_max'].items() if v is not None}
     heat = vo2.get('heatAltitudeAcclimation',{}) or raw.get('heatAltitudeAcclimation',{}) or {}
     hp = heat.get('heatAcclimationPercentage'); ht = heat.get('heatTrend'); ap = heat.get('altitudeAcclimationPercentage') or heat.get('acclimationPercentage'); at = heat.get('altitudeTrend')

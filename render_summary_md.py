@@ -538,6 +538,13 @@ def _readiness_lines(payload: dict[str, Any], summary: dict[str, Any]) -> list[s
         lines.append(f"> {feedback}")
     lines.append("")
 
+    vo2_precise = _num(readiness.get("vo2_max_precise", payload.get("vo2_max_precise")))
+    vo2_value = _num(readiness.get("vo2_max", payload.get("vo2_max")))
+    if vo2_precise is not None:
+        lines.append(f"- **VO₂max:** {vo2_precise:g} ml/kg/min (Garmin precise)")
+    elif vo2_value is not None:
+        lines.append(f"- **VO₂max:** {vo2_value:g} ml/kg/min (precise value unavailable)")
+
     rhr = _num(readiness.get("resting_hr"))
     if rhr is not None:
         rhr7 = _num(trends.get("resting_hr_7d_avg"))

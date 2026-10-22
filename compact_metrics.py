@@ -103,6 +103,16 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
 
     if "readiness" in source and "daily_readiness" not in source:
         out = dict(source)
+        readiness = out.get("readiness")
+        if isinstance(readiness, dict):
+            precise = out.get("vo2_max_precise", readiness.get("vo2_max_precise"))
+            value = out.get("vo2_max", readiness.get("vo2_max"))
+            if precise is not None:
+                readiness["vo2_max_precise"] = precise
+            if value is not None:
+                readiness["vo2_max"] = value
+            first = [k for k in ("vo2_max", "vo2_max_precise") if k in readiness]
+            out["readiness"] = {**{k: readiness[k] for k in first}, **{k: v for k, v in readiness.items() if k not in first}}
         if "load" in out and isinstance(out["load"], dict) and "vo2_max" in out["load"]:
             out["load"] = dict(out["load"])
             out["load"]["vo2_max"] = _compact_current_vo2(out["load"]["vo2_max"])
@@ -222,7 +232,14 @@ def compact_metrics(source: dict[str, Any]) -> dict[str, Any]:
     # bundles them together. Same treatment as heat_acclimation /
     # altitude_acclimation: its own top-level key.
     if status.get("vo2_max") is not None:
-        out["vo2_max"] = _compact_current_vo2(status["vo2_max"])
+        vo2 = status["vo2_max"]
+        out["vo2_max"] = _compact_current_vo2(vo2)
+        if isinstance(vo2, dict) and vo2.get("precise_value") is not None:
+            out["vo2_max_precise"] = vo2["precise_value"]
+            readiness["vo2_max"] = out["vo2_max"]
+            readiness["vo2_max_precise"] = vo2["precise_value"]
+            first = [k for k in ("vo2_max", "vo2_max_precise") if k in readiness]
+            out["readiness"] = {**{k: readiness[k] for k in first}, **{k: v for k, v in readiness.items() if k not in first}}
 
     # Race Predictor times are almost entirely a function of vo2_max above,
     # not an independent signal -- kept as a goal-tracking marker (compare
