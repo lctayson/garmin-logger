@@ -19,14 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Keep today’s planned **core/hip‑stability strength session**, but scale it back to a light, form‑focused routine; skip any heavy loading or plyometrics.
+**Decision** – Proceed with today’s planned Friday strength/hip‑stability session, but keep the load light‑to‑moderate (avoid heavy max‑effort lifts).  
 
-**Execution** –  
-- **Warm‑up**: 5 min easy dynamic mobility (leg swings, hip circles, glute bridges).  
-- **Main set**: 2–3 sets of the prescribed core/hip exercises (e.g., planks, side‑planks, clamshells, single‑leg bridges) at a low‑to‑moderate effort—stop before you feel a “burn” that turns into fatigue.  
-- **Cool‑down**: 5 min gentle stretching and foam‑rolling of hips, glutes, and lower back.
+**Warm‑up → Main set → Cool‑down** – 5 min easy jog or bike + dynamic hip/leg drills; 2 × 10 min circuits of body‑weight/KB goblet squats, single‑leg glute bridges, hip‑extension bands, and core planks (≈2‑3 RPE); finish with 5 min of static stretching and foam‑rolling.  
 
-**Readiness rationale** – Your readiness score is low (25) driven by short sleep (≈6 h) and a dip in HRV (40 ms vs 7‑day avg 46 ms).  However, ACWR is optimal (0
+**Readiness rationale** – Sleep ≈ 6 h (moderate deficit) and HRV 40 ms (↓ 7‑day avg, “unbalanced”) drive a low overall readiness score, but resting HR 61 bpm is normal and ACWR 0.9 is in the optimal zone, so a full‑hard strength day isn’t warranted; a reduced‑intensity
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
