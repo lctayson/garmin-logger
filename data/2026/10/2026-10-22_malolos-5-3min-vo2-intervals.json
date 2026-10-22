@@ -690,7 +690,7 @@
         ]
       },
       "lap_count": 17,
-      "ai_analysis": "The five 3‑minute VO₂max repeats averaged 5:09 /km (range 5:12–5:06), sitting comfortably inside the prescribed 4:50–5:15 /km VO₂ zone, and the –6.7 % pace‑efficiency drift reflects the modest speed‑up to the final 5:06 /km rep while heart‑rate climbed from 151 bpm to 165 bpm (+14 bpm). The training‑effect output shows a solid aerobic VO₂‑max stimulus (aerobic 3.6) but virtually no anaerobic benefit (anaerobic 0.8), which is expected for 3‑minute intervals. However, stamina fell from 99 % to 73 % (bottoming at 58 %) and your readiness dropped from a low 37 pre‑run to 21 post‑run, indicating that recovery is limited and you should consider",
+      "ai_analysis": "The five 3‑minute reps held steady in the VO2‑max zone (5:12 → 5:06 /km) and the 14 bpm rise in HR across the set aligns with the expected intensity progression, while the –6.7 % pace‑efficiency drift shows a modest speed gain rather than a slowdown. Stamina fell from 99 % to 73 % (bottoming at 58 %), indicating a noticeable but tolerable depletion for a quality Thursday session. Training‑effect scores (aerobic 3.6, anaerobic 0.8) confirm a solid VO2 stimulus with little anaerobic load, which matches the bridge‑phase focus. With a morning readiness score of 37 (Low) and only 1 hour of recovery logged, you may want to prioritize rest before the next hard effort.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
