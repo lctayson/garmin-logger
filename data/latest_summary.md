@@ -3,7 +3,7 @@
 ## Readiness: 37/100 (Low)
 > Find Time To Relax
 
-- **VO₂max:** 45 ml/kg/min (precise value unavailable)
+- **VO₂max:** 44.6 ml/kg/min (Garmin precise; displayed rounded value: 45)
 - ⚠️ **RHR:** 60 bpm (7d avg: 58.4 bpm, trending up)
 - ⚠️ **HRV:** 44ms (7d avg: 48ms) · below 47–57ms
 - ⚠️ **Sleep:** 6h00 / 6h30 need (0h30 short) · score 56 · 7d avg 6h26 · 5/7 nights below need
