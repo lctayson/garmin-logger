@@ -18,6 +18,7 @@
   - Intervals: 5 work reps · pace drift -6.7% · HR +14bpm
   - MS: 2.91k @ 5:09 159bpm 1.05m 184spm 236ms 8.1cm 329w
   - Readiness 37 → 21 (Time To Recharge) · Recovery 1d 2h 24m
+  - 🧠 The five 3‑minute VO₂max reps were executed at 5:12 – 5:06 /km (average 5:09 /km), staying comfortably within the prescribed 4:50‑5:15 /km VO₂ zone and even showing a modest negative‑split trend (‑6.7 % pace‑efficiency drift). Heart‑rate rose from 151 bpm in the first rep to 165 bpm in the last, matching the expected progressive stimulus and producing a solid aerobic training effect (3.6 VO₂‑max) with no meaningful anaerobic contribution. Given the low morning readiness score (37, “Low”) and the stamina dip to 73 % (min 58 %), you should prioritize recovery tonight to avoid cumulative fatigue before the next quality session.
 
 ## Next Session
 - **Planned:** Fri, Oct 23 — REST + Core
