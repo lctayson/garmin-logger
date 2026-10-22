@@ -18,7 +18,7 @@
   - Intervals: 5 work reps · pace drift -6.7% · HR +14bpm
   - MS: 2.91k @ 5:09 159bpm 1.05m 184spm 236ms 8.1cm 329w
   - Readiness 37 → 21 (Time To Recharge) · Recovery 1d 2h 24m
-  - 🧠 Your 5 × 3‑minute VO₂max reps held a tight pace window (5:06–5:12 / km), staying within the prescribed VO₂max range (≈4:50–5:15 / km) and even edging a bit faster in the later reps (pace drift ‑6.7 %). Heart‑rate climbed from 151 bpm to 165 bpm (Δ 14 bpm), confirming the intended progressive intensity, while stamina dipped to 73 % (low 58 %) – a normal fatigue signal for this quality work. Morning readiness was already low (score 37, “Low”), and the post‑run snapshot fell to 21, reflecting the high acute load (631 AU) and limited recovery time left. Keep an eye on recovery hours and aim to schedule a lighter day after such demanding Thursday sessions.
+  - 🧠 Your 5 × 3‑minute VO₂max intervals averaged 5:09 /km (range 5:06–5:12), which sits squarely in the prescribed VO₂ zone (≈4:50–5:15 /km) and produced the expected HR climb from 151 bpm in the first rep to 165 bpm in the last, matching the +14 bpm drift reported. The –6.7 % pace‑efficiency drift and –5.4 % power‑efficiency drift indicate the reps got slightly faster and more economical despite the rising heart rate, confirming a solid aerobic stimulus (training‑effect VO₂MAX = 3.6) but no measurable anaerobic load. However, your morning readiness was low (score 37, “Low”) and stamina fell from 99 % to 73 % (minimum 58 %), so the session’s load (141.9) may be taxing your recovery budget; consider a lighter effort or additional rest before the next Thursday quality workout.
 
 ## Next Session
 - **Planned:** Fri, Oct 23 — REST + Core
