@@ -46,11 +46,11 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "**Decision** – Proceed with today’s planned **core/hip‑stability strength** session, but **dial the load back** (≈50 % of usual volume or weight). If you feel unusually fatigued, sore, or notice a rapid HR rise, stop and treat the day as a full recovery.\n\n**Warm‑up / Main set / Cool‑down** – Follow the prescribed strength routine for Friday (hip‑extension/power circuit).  \n- Warm‑up: 5 min easy jog or bike + dynamic hip/leg swings, glute bridges, plank‑holds (1 × 30 s each).  \n- Main set: 2–3 sets of the listed core/hip exercises (e.g., single‑leg deadlifts, monster walks, clamshells, anti‑rotation planks). Keep the effort at **RPE 5–6**, avoid heavy loads or explosive jumps.  \n- Cool‑down: 3 min light foam‑roll/stretch of glutes, hamstrings, quads; deep breathing.\n\n**Readiness rationale** – Sleep was only 6.1 h (moderate 44 % score) and HRV dropped to 40 ms (below 7‑day avg 46 ms, “UNBALANCED”). Resting HR 61 bpm is a slight upward drift, suggesting incomplete recovery. Load metrics (ACWR 0.9, “Optimal”) are fine, but the **low‑readiness score",
+    "ai_analysis": "**Decision** – Do the planned Friday Strength A session, but keep it light‑to‑moderate; skip heavy loads or max‑effort sets and treat the day as an active‑recovery strength workout.\n\n**Execution** –  \n- **Warm‑up:** 5–7 min dynamic mobility (leg swings, hip circles, body‑weight lunges).  \n- **Main set:** 2–3 rounds of hip‑extension/Power moves (glute bridges, single‑leg RDLs, banded monster walks) at 50‑60 % of your usual load; stop each set 1–2 reps short of failure.  \n- **Core/hip stability:** 2 × 30 s plank variations, 2 × 12 bird‑dogs per side.  \n- **Cool‑down:** 5 min gentle stretching (hamstrings, quads, hip flexors) and deep‑breathing.\n\n**Readiness rationale** – Sleep was only ≈ 6 h (moderate‑low score",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
-    "steps": 13
+    "steps": 20
   },
   "sleep": {
     "deep_h": 0.65,
@@ -899,9 +899,9 @@
       ],
       [
         "2026-10-23",
-        47,
-        0,
         53,
+        3,
+        58,
         6
       ]
     ]
