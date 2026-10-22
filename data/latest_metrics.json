@@ -10,8 +10,8 @@
     "hrv_last_night_avg_ms": 40.0,
     "hrv_7_day_avg_ms": 46.0,
     "hrv_status": "UNBALANCED",
-    "sleep_hours": 6.12,
-    "sleep_hours_including_previous_day_nap": 6.87,
+    "sleep_hours": 7.47,
+    "sleep_hours_including_previous_day_nap": 8.22,
     "sleep_score": 63,
     "recovery_hours": 6.2,
     "hrv_baseline": {
@@ -46,7 +46,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "**Decision** – Do the planned Friday Strength A session, but keep it light‑to‑moderate; skip heavy loads or max‑effort sets and treat the day as an active‑recovery strength workout.\n\n**Execution** –  \n- **Warm‑up:** 5–7 min dynamic mobility (leg swings, hip circles, body‑weight lunges).  \n- **Main set:** 2–3 rounds of hip‑extension/Power moves (glute bridges, single‑leg RDLs, banded monster walks) at 50‑60 % of your usual load; stop each set 1–2 reps short of failure.  \n- **Core/hip stability:** 2 × 30 s plank variations, 2 × 12 bird‑dogs per side.  \n- **Cool‑down:** 5 min gentle stretching (hamstrings, quads, hip flexors) and deep‑breathing.\n\n**Readiness rationale** – Sleep was only ≈ 6 h (moderate‑low score",
+    "ai_analysis": "**Decision** – Stick to today’s planned **core/hip‑stability strength** session, but keep the load light‑to‑moderate. If you feel unusually sluggish, tight, or notice any pain, consider skipping the heavier lifts and focus on mobility/activation only.\n\n**Workout execution** – Follow the exact routine prescribed for this Friday (e.g., activation drills, single‑leg work, glute bridges, planks, and the prescribed core circuit). Use the warm‑up, set/rep scheme, and cooldown that are already on the plan; do not add extra sets or heavier weights.\n\n**Readiness rationale** –  \n- HRV is down (40 ms vs 46 ms 7‑day avg) and flagged “unbalanced,” while sleep quality is only moderate (63 score, ~7.5 h).  \n- Resting HR is low (61 bpm), suggesting good baseline fitness but not enough to offset the HRV dip.  \n- Load metrics are fine (acute 510, chronic 540, ACWR 0.9 → optimal) and recovery time is good (90 %).  \nOverall, the low‑readiness signal is driven mainly by autonomic stress, not cumulative fatigue, so a light strength day is appropriate rather than a full‑intensity or hard run.\n\n**",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
@@ -54,7 +54,7 @@
   },
   "sleep": {
     "deep_h": 0.65,
-    "light_h": 5.25,
+    "light_h": 6.6,
     "rem_h": 0.22,
     "awake_h": 0.22,
     "baseline_h": 7.0,
@@ -427,7 +427,7 @@
         61,
         40.0,
         46.0,
-        6.12,
+        7.47,
         63,
         45.0,
         "Maintaining 2",
@@ -817,7 +817,7 @@
         61,
         40.0,
         46.0,
-        6.12,
+        7.47,
         63,
         45.0,
         "Maintaining 2",
@@ -900,7 +900,7 @@
       [
         "2026-10-23",
         53,
-        3,
+        4,
         58,
         6
       ]

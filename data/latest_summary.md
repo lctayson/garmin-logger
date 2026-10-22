@@ -6,7 +6,7 @@
 - **VO₂max:** 44.6 ml/kg/min (Garmin display: 45)
 - ⚠️ **RHR:** 61 bpm (7d avg: 59 bpm, trending up)
 - ⚠️ **HRV:** 40ms (7d avg: 46ms) · below 47–57ms
-- ⚠️ **Sleep:** 6h07 / 7h00 need (0h53 short) · score 63 · 7d avg 6h15 · 6/7 nights below need
+- ⚠️ **Sleep:** 7h28 / 7h00 need (0h28 over) · score 63 · 7d avg 6h26 · 5/7 nights below need
 - **Recovery remaining:** 6h12
 - ⚠️ **Limiter:** Sleep History (42%)
 - **Also soft:** Sleep Score, Stress History, Hrv
@@ -14,20 +14,22 @@
 ## Today's Session
 - **Planned:** Fri, Oct 23 — REST + Core
 - **Recommendation:** Keep it easy
-- **Reason:** very low readiness (25/100); ongoing sleep debt (7-day average 6.2h), 6/7 nights below need; resting heart rate is trending up; HRV is trending down; last-night HRV is below the balanced band; RHR-up/HRV-down recovery pattern.
+- **Reason:** very low readiness (25/100); low 7-day sleep average (6.4h); resting heart rate is trending up; HRV is trending down; last-night HRV is below the balanced band; RHR-up/HRV-down recovery pattern.
 - **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Do the planned Friday Strength A session, but keep it light‑to‑moderate; skip heavy loads or max‑effort sets and treat the day as an active‑recovery strength workout.
+**Decision** – Stick to today’s planned **core/hip‑stability strength** session, but keep the load light‑to‑moderate. If you feel unusually sluggish, tight, or notice any pain, consider skipping the heavier lifts and focus on mobility/activation only.
 
-**Execution** –  
-- **Warm‑up:** 5–7 min dynamic mobility (leg swings, hip circles, body‑weight lunges).  
-- **Main set:** 2–3 rounds of hip‑extension/Power moves (glute bridges, single‑leg RDLs, banded monster walks) at 50‑60 % of your usual load; stop each set 1–2 reps short of failure.  
-- **Core/hip stability:** 2 × 30 s plank variations, 2 × 12 bird‑dogs per side.  
-- **Cool‑down:** 5 min gentle stretching (hamstrings, quads, hip flexors) and deep‑breathing.
+**Workout execution** – Follow the exact routine prescribed for this Friday (e.g., activation drills, single‑leg work, glute bridges, planks, and the prescribed core circuit). Use the warm‑up, set/rep scheme, and cooldown that are already on the plan; do not add extra sets or heavier weights.
 
-**Readiness rationale** – Sleep was only ≈ 6 h (moderate‑low score
+**Readiness rationale** –  
+- HRV is down (40 ms vs 46 ms 7‑day avg) and flagged “unbalanced,” while sleep quality is only moderate (63 score, ~7.5 h).  
+- Resting HR is low (61 bpm), suggesting good baseline fitness but not enough to offset the HRV dip.  
+- Load metrics are fine (acute 510, chronic 540, ACWR 0.9 → optimal) and recovery time is good (90 %).  
+Overall, the low‑readiness signal is driven mainly by autonomic stress, not cumulative fatigue, so a light strength day is appropriate rather than a full‑intensity or hard run.
+
+**
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -49,7 +51,7 @@ _Most recent activity (2026-10-22):_
 - ⚠️ **Aerobic High:** 1189 (target 649–1082 — +107 over)
 - ⚠️ **Anaerobic:** 44.9 (target 86–346 — -41 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
-- ⚠️ **Sleep (7d avg):** 6h15, 6/7 nights below need, trending down
+- ⚠️ **Sleep (7d avg):** 6h26, 5/7 nights below need, trending flat
 - ⚠️ **RHR (7d avg):** 59.0, trending up
 - ⚠️ **HRV:** trending down
 

@@ -6,8 +6,8 @@
     "hrv_last_night_avg_ms": 40.0,
     "hrv_7_day_avg_ms": 46.0,
     "hrv_status": "UNBALANCED",
-    "sleep_hours": 6.12,
-    "sleep_hours_including_previous_day_nap": 6.87,
+    "sleep_hours": 7.47,
+    "sleep_hours_including_previous_day_nap": 8.22,
     "sleep_score": 63,
     "training_status": "Maintaining 2",
     "acute_load": 510,
@@ -72,10 +72,10 @@
       }
     },
     "sleep_score": 63,
-    "total_sleep_hours": 6.12,
+    "total_sleep_hours": 7.47,
     "sleep_stages_hours": {
       "deep": 0.65,
-      "light": 5.25,
+      "light": 6.6,
       "rem": 0.22,
       "awake": 0.22
     },
@@ -458,7 +458,7 @@
       "resting_heart_rate": 61,
       "hrv_last_night_avg_ms": 40.0,
       "hrv_seven_day_avg_ms": 46.0,
-      "total_sleep_hours": 6.12,
+      "total_sleep_hours": 7.47,
       "sleep_score": 63,
       "vo2_max": 45.0,
       "training_status": "Maintaining 2",
@@ -836,7 +836,7 @@
       "resting_heart_rate": 61,
       "hrv_last_night_avg_ms": 40.0,
       "hrv_seven_day_avg_ms": 46.0,
-      "total_sleep_hours": 6.12,
+      "total_sleep_hours": 7.47,
       "sleep_score": 63,
       "vo2_max": 45.0,
       "training_status": "Maintaining 2",
@@ -910,7 +910,7 @@
     {
       "date": "2026-10-23",
       "charged": 53,
-      "drained": 3,
+      "drained": 4,
       "high": 58,
       "low": 6
     }
