@@ -19,17 +19,7 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision:** Proceed, but keep today strictly an easy‑pace long run – skip any HM‑effort finish.  
-
-**Workout execution:**  
-- Warm‑up: 10‑15 min easy jog, HR ≤ 150 bpm, stay in Zone 6‑7.  
-- Main set: run at 7:10‑7:45 min/km (Recovery/Easy aerobic) for the scheduled duration (≈60‑90 min). No intervals or strides today.  
-- Cool‑down: 5‑10 min very easy jog + light stretching.  
-
-**Readiness rationale:** Sleep quality is the only weak link (6.7 h, sleep‑score 67 → low readiness score). Resting HR (59 bpm) and HRV are solid, ACWR is low (0.7) and recovery‑time is “Very Good,” so the body is not overloaded; the main risk is residual fatigue from poor sleep.  
-
-**In‑session guardrails:** - Keep HR ≤ 150 bpm; if it climbs early, trim the run by 10‑15 min.  
-- Monitor perceived effort – if you feel “hard” at an easy pace, stop
+**Decision** – Proceed with today’s Saturday
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
