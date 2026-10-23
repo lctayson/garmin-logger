@@ -19,15 +19,9 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Keep today’s scheduled **core/hip‑stability strength** session but **scale back the load** (light‑to‑moderate, no max‑effort lifts). If you feel unusually fatigued or any joint/pain warning pops up, stop and treat it as a full rest day.
+- **Decision** – Do the scheduled core/hip‑stability strength routine, but trim the volume/intensity (e.g., 1‑2 fewer sets or lighter load) to match today’s low‑readiness score.  
 
-**Workout execution** –  
-- **Warm‑up:** 5 min easy jog or brisk walk + dynamic hip‑mobility (leg swings, world’s greatest stretch) + 2 × 10 sec glute bridges.  
-- **Main set:** Choose 4‑5 core/hip exercises (e.g., single‑leg dead‑reach, side‑plank, clamshells, banded monster walks). Do **2 × 8‑12 reps** at a weight that feels easy‑moderate (RPE ≈ 5‑6), focusing on form.  
-- **Recovery:** 60‑90 s between sets; keep breathing steady, stay hydrated.  
-- **Cool‑down:** 4‑5 min gentle mobility (foam roll hips/IT band, light stretch).
-
-**Readiness rationale** – Your overall readiness score is low (25) driven by a dip in HRV (40 ms vs 7‑day avg 46 ms) and only moderate sleep quality, even though sleep duration and recovery time are acceptable and the ACWR is in the optimal zone (
+- **Workout execution** – Warm‑up 5 min of dynamic mobility (leg swings, hip circles, body‑weight glute bridges). Main‑set: 2–3 rounds of the prescribed core/hip circuit (planks, side‑planks, clamshells, single‑leg dead‑hits, banded hip‑abductions); keep each exercise at a moderate effort (RPE 5‑6) and focus on quality over load. Cool‑down 5
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
