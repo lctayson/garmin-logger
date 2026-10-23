@@ -19,7 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s Saturday
+**Decision** – Proceed with today’s Saturday long run, but treat it as an **easy, reduced‑volume** session; skip any HM‑effort finish and be ready to cut the run short if fatigue or heart‑rate spikes.
+
+**Workout execution**  
+- **Warm‑up:** 10‑15 min easy jog (Zone 6, ≈7:15–7:45 km⁻¹).  
+- **Main set:** Continuous easy
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
