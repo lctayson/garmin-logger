@@ -19,15 +19,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Stick with today’s scheduled **Friday core/hip‑stability strength** session, but run it at a **reduced load/volume** (light‑to‑moderate) and be ready to stop early if you feel unusually fatigued or notice joint pain.
+**Decision** – Keep today’s scheduled **core/hip‑stability strength** session but **scale back the load** (light‑to‑moderate, no max‑effort lifts). If you feel unusually fatigued or any joint/pain warning pops up, stop and treat it as a full rest day.
 
 **Workout execution** –  
-- **Warm‑up:** 5 min easy jog or bike + dynamic hip/leg mobility (leg swings, hip circles, glute bridges).  
-- **Main set:** Core circuit (plank variations, dead‑bugs, side‑planks) + hip‑stability moves (single‑leg RDLs, clamshells, banded hip abductors). Aim for 2 × 8‑12 reps per exercise at a weight you can control for 12‑15 s per rep; keep RPE ≤ 6.  
-- **Recovery:** 30‑60 s between sets, stretch gently after each circuit.  
-- **Cool‑down:** 5 min easy walk + static lower‑body stretch.
+- **Warm‑up:** 5 min easy jog or brisk walk + dynamic hip‑mobility (leg swings, world’s greatest stretch) + 2 × 10 sec glute bridges.  
+- **Main set:** Choose 4‑5 core/hip exercises (e.g., single‑leg dead‑reach, side‑plank, clamshells, banded monster walks). Do **2 × 8‑12 reps** at a weight that feels easy‑moderate (RPE ≈ 5‑6), focusing on form.  
+- **Recovery:** 60‑90 s between sets; keep breathing steady, stay hydrated.  
+- **Cool‑down:** 4‑5 min gentle mobility (foam roll hips/IT band, light stretch).
 
-**Readiness rationale** – HRV is down (40 ms vs 7‑day avg 46 ms) and sleep score is only moderate, driving the low readiness score. However, recovery‑time (90 %) and ACWR (0.9, “optimal”) are good, indicating you’re not cumulatively overreached. Thus a lighter strength day
+**Readiness rationale** – Your overall readiness score is low (25) driven by a dip in HRV (40 ms vs 7‑day avg 46 ms) and only moderate sleep quality, even though sleep duration and recovery time are acceptable and the ACWR is in the optimal zone (
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
