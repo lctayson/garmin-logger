@@ -1,66 +1,76 @@
-# Daily Check — 2026-10-23
+# Daily Check — 2026-10-24
 
-## Readiness: 25/100 (Low)
-> Listen To Your Body
+## Readiness: 44/100 (Low)
+> Focus On Sleep Quality
 
 - **VO₂max:** 44.6 ml/kg/min (Garmin display: 45)
-- ⚠️ **RHR:** 61 bpm (7d avg: 59 bpm, trending up)
-- ⚠️ **HRV:** 40ms (7d avg: 46ms) · below 47–57ms
-- ⚠️ **Sleep:** 7h28 / 7h00 need (0h28 over) · score 63 · 7d avg 6h26 · 5/7 nights below need
-- **Recovery remaining:** 6h12
-- ⚠️ **Limiter:** Sleep History (42%)
-- **Also soft:** Sleep Score, Stress History, Hrv
+- ⚠️ **RHR:** 59 bpm (7d avg: 59 bpm, trending up)
+- **HRV:** 50ms (7d avg: 48ms) · within 47–57ms
+- ⚠️ **Sleep:** 6h41 / 7h00 need (0h19 short) · score 67 · 7d avg 6h33 · 5/7 nights below need
+- **Recovery remaining:** 0h00
+- ⚠️ **Limiter:** Sleep History (41%)
+- **Also soft:** Sleep Score, Stress History
 
-## Today's Workout
-
-- **Friday Core/Hip Stability** — 0.0km · 30:23 · HR 91/109 max
-  - TE: Aerobic Base · aerobic 0.2 · anaerobic 0
-  - Readiness 25 → 35 (Improved By Napping) · Recovery 0h
-  - 🧠 The 30‑minute core/hip stability session delivered a negligible aerobic stimulus (aerobic TE 0.2, “MINOR_AEROBIC_BENEFIT”) and a modest negative body‑battery impact of –1, which is exactly what we expect from a Friday strength day that should not tax your cardio system. Your morning readiness was low (score 25, “Listen To Your Body”), but the post‑exercise snapshot shows a modest boost to 35 after a nap, and the acute load increase was only 3 points, so the workout did not meaningfully worsen your recovery balance. Given the minimal training effect and low load (2.8), this session fits the planned strength focus without jeopardizing your Tuesday/Thursday quality runs.
-
-## Next Session
+## Today's Session
 - **Planned:** Sat, Oct 24 — 10K EZ, HR ≤150; no fast finish
 - **Recommendation:** Keep it easy
-- **Reason:** very low readiness (25/100); low 7-day sleep average (6.4h); resting heart rate is trending up; HRV is trending down; last-night HRV is below the balanced band; RHR-up/HRV-down recovery pattern.
+- **Reason:** resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
 - **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
+
+### 🧠 AI Coaching Guidance
+
+- **Decision:** Keep today’s long‑run day, but scale back – treat it as an easy recovery run rather than the full‑distance Saturday session.  
+- **Execution (if you still run):**  
+  • Warm‑up: 10 min easy jog, staying ≤ 150 bpm (Zone 7‑8).  
+  • Main set: run at an easy aerobic pace (≈ 7:10–7:45 / km) for 50‑60 % of the planned distance; **skip any HM‑effort finish or fast finish** that may be listed.  
+  • Recovery: no structured intervals – just steady effort, monitoring HR to stay below ~155 bpm.  
+  • Cool‑down: 5‑10 min very easy jog + light stretching.  
+- **Readiness rationale:** Sleep quantity (6.7 h) and quality (score 67) are the main deficits; HRV is balanced and resting HR
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
+## Latest Activity
+
+_Most recent activity (2026-10-23):_
+- **Friday Core/Hip Stability** — 0.0km · 30:23 · HR 91/109 max
+  - TE: Aerobic Base · aerobic 0.2 · anaerobic 0
+  - 🧠 The 30‑minute core/hip stability session delivered a negligible aerobic stimulus (aerobic TE 0.2, “MINOR_AEROBIC_BENEFIT”) and a modest negative body‑battery impact of –1, which is exactly what we expect from a Friday strength day that should not tax your cardio system. Your morning readiness was low (score 25, “Listen To Your Body”), but the post‑exercise snapshot shows a modest boost to 35 after a nap, and the acute load increase was only 3 points, so the workout did not meaningfully worsen your recovery balance. Given the minimal training effect and low load (2.8), this session fits the planned strength focus without jeopardizing your Tuesday/Thursday quality runs.
+
 ## Load & Trends
 
-- **ACWR:** 0.9 (Optimal) — acute 513 / chronic 540 (chronic range 432–810)
-- **7-day volume:** 39.14km vs 28-day avg 37.6km (+4%)
-- **Running tolerance:** 66.9% (Medium) — 39.1km of 63.4km weekly cap, acute impact load 42.4
-- **Aerobic Low:** 840.1 (target 649–1082 — in range)
+- ⚠️ **ACWR:** 0.7 (Low) — acute 413 / chronic 523 (chronic range 418.4–784.5)
+- **7-day volume:** 27.11km vs 28-day avg 35.4km (-23%)
+- **Running tolerance:** 56.0% (Medium) — 27.1km of 63.4km weekly cap, acute impact load 35.5
+- **Aerobic Low:** 753.1 (target 649–1082 — in range)
 - ⚠️ **Aerobic High:** 1189 (target 649–1082 — +107 over)
 - ⚠️ **Anaerobic:** 44.9 (target 86–346 — -41 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
-- ⚠️ **Sleep (7d avg):** 6h26, 5/7 nights below need, trending flat
+- ⚠️ **Sleep (7d avg):** 6h33, 5/7 nights below need, trending flat
 - ⚠️ **RHR (7d avg):** 59.0, trending up
 - ⚠️ **HRV:** trending down
 
-## This Week (Oct 17–23)
+## This Week (Oct 18–24)
 
 | D | Activity | Volume | Load |
 |:---:|:---|---:|---:|
-| S | Malolos Run | 12k · 1:29:16 | 109 |
 | S | Malolos Run | 7k · 56:20 | 56 |
 | M | Strength A | 25:00 | 4 |
 | T | 3x6min Thr | 7k · 46:35 | 153 |
 | W | Run + Strides/Hills | 6k · 48:26 | 59 |
 | T | 5x3min VO₂ Int | 7k · 47:49 | 142 |
 | F | Core/Hip | 30:23 | 3 |
+| S | Rest | — | — |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 7 | 39.15 km | 5:43:49 | 525.3 |
+| 6 | 27.12 km | 4:14:33 | 416.7 |
 
 ## Recent 4 Weeks
-_Average weekly running: 37.6 km_
+_Average weekly running: 35.4 km_
 
 | Week | Running | Others | Load |
 |:---|---:|---:|---:|
-| Oct 17–23 | 39.14 km | 55 min | 525.3 |
-| Oct 10–16 | 39.13 km | 20 min | 584 |
-| Oct 3–9 | 36.14 km | 40 min | 521.6 |
-| Sep 26–Oct 2 | 36.14 km | 43 min | 528.9 |
+| Oct 18–24 | 27.11 km | 55 min | 416.7 |
+| Oct 11–17 | 40.13 km | 20 min | 586.2 |
+| Oct 4–10 | 37.15 km | 40 min | 534.8 |
+| Sep 27–Oct 3 | 37.14 km | 43 min | 535.1 |
