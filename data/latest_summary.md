@@ -19,17 +19,16 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Stick to today’s planned **core/hip‑stability strength** session, but keep the load light‑to‑moderate. If you feel unusually sluggish, tight, or notice any pain, consider skipping the heavier lifts and focus on mobility/activation only.
+**Decision:** Proceed with today’s scheduled **Friday core‑hip stability strength session**, but dial the load down (lighter weights, fewer reps) to match the low‑readiness signal.
 
-**Workout execution** – Follow the exact routine prescribed for this Friday (e.g., activation drills, single‑leg work, glute bridges, planks, and the prescribed core circuit). Use the warm‑up, set/rep scheme, and cooldown that are already on the plan; do not add extra sets or heavier weights.
+**Workout execution** (per the plan):
+- **Warm‑up:** 8‑10 min easy dynamic mobility (leg swings, hip circles, walking lunges) → finish with 2 × 30‑sec plank holds to gauge activation.  
+- **Main set:** Core/hip circuit – 3 rounds of 30‑sec each: plank, side‑plank (each side), glute bridge, clamshells, bird‑dog. Use body‑weight or light resistance; keep RPE ≤ 5.  
+- **Cool‑down:** 5 min gentle stretching of hip flexors, glutes, and lower back; finish with 1‑2 min diaphragmatic breathing.
 
-**Readiness rationale** –  
-- HRV is down (40 ms vs 46 ms 7‑day avg) and flagged “unbalanced,” while sleep quality is only moderate (63 score, ~7.5 h).  
-- Resting HR is low (61 bpm), suggesting good baseline fitness but not enough to offset the HRV dip.  
-- Load metrics are fine (acute 510, chronic 540, ACWR 0.9 → optimal) and recovery time is good (90 %).  
-Overall, the low‑readiness signal is driven mainly by autonomic stress, not cumulative fatigue, so a light strength day is appropriate rather than a full‑intensity or hard run.
-
-**
+**Readiness rationale:**  
+- HRV 40 ms (‑13 % vs 7‑day avg) and “UNBALANCED” status flag modest autonomic stress; sleep score 63 (moderate) and 7.5 h night suggest recovery is okay but not optimal.  
+- Resting HR 61 bpm is
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
