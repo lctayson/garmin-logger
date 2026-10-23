@@ -19,11 +19,14 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **core/hip‑stability strength session**, but drop the heavy load and keep the volume light‑to‑moderate.  
+**Decision** – Do the scheduled Friday core‑/hip‑stability strength session, but cut the volume/intensity by ~30 % and stay ready to stop if you feel unusually fatigued or any joint/pain signals appear.
 
-**Workout execution** – Warm‑up: 5 min easy jog or brisk walk + dynamic hip‑mobility (leg swings, hip circles). Main set: 2 × circuits of 8–12 reps each (glute bridges, clamshells, single‑leg dead‑bugs, side‑plank holds ≈ 30 s). Use body‑weight or very light resistance; avoid max‑effort lifts. Cool‑down: 5 min gentle stretching of hip flexors, hamstrings, glutes.
+**Workout execution** –  
+- **Warm‑up**: 5‑10 min of easy mobility (dynamic hip circles, glute bridges, body‑weight lunges).  
+- **Main set**: Follow your usual core/hip routine (e.g., planks, side‑planks, clamshells, single‑leg dead‑lifts). Perform 2–3 sets of each exercise at a moderate load – aim for a “7‑8/10” effort, not max.  
+- **Cool‑down**: 3‑5 min of gentle stretching for hips, hamstrings, and lower back.
 
-**Readiness rationale** – Sleep ≈ 7.5 h and recovery‑time ≈ 6 h are acceptable, but HRV dropped to 40 ms (below 7‑day avg 46 ms) and the overall readiness score is “Low”. Acute load is slightly below chronic (ACWR 0.9 → optimal), so the system isn’t over‑reached, but the autonom
+**Readiness rationale** – HRV is down (40 ms vs 7‑day avg
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
