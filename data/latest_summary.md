@@ -19,22 +19,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision – go ahead, but dial back the Saturday long‑run**  
-- Keep the session, but treat it as an easy‑aerobic run only; skip any HM‑effort finish or added mileage.
+**Decision** – Proceed, but convert today’s long‑run to an **easy recovery run**; skip any HM‑effort finish or added mileage.  
 
-**Workout execution (as per the plan)**  
-- **Warm‑up:** 10 min easy jog (≈7:30–7:45 /km) + 4‑6 × 20‑s strides, easy on the legs.  
-- **Main set:** 60‑70 min continuous run at easy aerobic pace (≈6:40–7:15 /km, HR ≤155 bpm).  
-- **Cool‑down:** 5‑10 min very easy jog + light stretching.
+**Workout** – Warm‑up: 10‑15 min easy jog (≈7:30 km / min) + 4×20 s strides, easy‑pace recovery.  
+Main: run at easy aerobic pace (≈7:10‑7:30 /km), keep HR ≤ 155 bpm (Zone 6) for the prescribed duration (use the plan’s time/distance but stay comfortable).  
+Cool‑down: 5 min relaxed jog + light stretching.  
 
-**Readiness rationale**  
-- Sleep quality is the only weak link (6.7 h, sleep‑score 67 → readiness “Low”).  
-- Resting HR (59 bpm) and HRV (balanced, 50 ms) are normal, and ACWR is low (0.7), indicating good systemic recovery.  
-- Hence the risk is limited to subjective fatigue; a modest, low‑stress run matches the data better than a hard finish.
-
-**In‑session guardrails**  
-- Watch your HR: if it climbs >160 bpm early or you feel unusually high exertion (RPE ≥ 7), cut the run back by 10‑15 min or stop.  
-- If heat/humidity feels oppressive, keep the pace on the slower end of the range and focus on steady effort rather than exact km
+**Readiness rationale** – Sleep quality is only moderate (6.7 h, sleep‑score 67) driving the low readiness score, but HRV is “balanced”, resting
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
