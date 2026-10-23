@@ -19,16 +19,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision:** Proceed with today’s scheduled **Friday core‑hip stability strength session**, but dial the load down (lighter weights, fewer reps) to match the low‑readiness signal.
+**Decision** – Stick with today’s scheduled **Friday core/hip‑stability strength** session, but run it at a **reduced load/volume** (light‑to‑moderate) and be ready to stop early if you feel unusually fatigued or notice joint pain.
 
-**Workout execution** (per the plan):
-- **Warm‑up:** 8‑10 min easy dynamic mobility (leg swings, hip circles, walking lunges) → finish with 2 × 30‑sec plank holds to gauge activation.  
-- **Main set:** Core/hip circuit – 3 rounds of 30‑sec each: plank, side‑plank (each side), glute bridge, clamshells, bird‑dog. Use body‑weight or light resistance; keep RPE ≤ 5.  
-- **Cool‑down:** 5 min gentle stretching of hip flexors, glutes, and lower back; finish with 1‑2 min diaphragmatic breathing.
+**Workout execution** –  
+- **Warm‑up:** 5 min easy jog or bike + dynamic hip/leg mobility (leg swings, hip circles, glute bridges).  
+- **Main set:** Core circuit (plank variations, dead‑bugs, side‑planks) + hip‑stability moves (single‑leg RDLs, clamshells, banded hip abductors). Aim for 2 × 8‑12 reps per exercise at a weight you can control for 12‑15 s per rep; keep RPE ≤ 6.  
+- **Recovery:** 30‑60 s between sets, stretch gently after each circuit.  
+- **Cool‑down:** 5 min easy walk + static lower‑body stretch.
 
-**Readiness rationale:**  
-- HRV 40 ms (‑13 % vs 7‑day avg) and “UNBALANCED” status flag modest autonomic stress; sleep score 63 (moderate) and 7.5 h night suggest recovery is okay but not optimal.  
-- Resting HR 61 bpm is
+**Readiness rationale** – HRV is down (40 ms vs 7‑day avg 46 ms) and sleep score is only moderate, driving the low readiness score. However, recovery‑time (90 %) and ACWR (0.9, “optimal”) are good, indicating you’re not cumulatively overreached. Thus a lighter strength day
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
