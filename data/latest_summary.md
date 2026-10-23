@@ -11,38 +11,27 @@
 - ⚠️ **Limiter:** Sleep History (42%)
 - **Also soft:** Sleep Score, Stress History, Hrv
 
-## Today's Session
-- **Planned:** Fri, Oct 23 — REST + Core
+## Today's Workout
+
+- **Friday Core/Hip Stability** — 0.0km · 30:23 · HR 91/109 max
+  - TE: Aerobic Base · aerobic 0.2 · anaerobic 0
+  - Readiness 25 → 35 (Improved By Napping) · Recovery 0h
+  - 🧠 The 30‑minute core/hip session produced only a minor aerobic stimulus (training‑effect aerobic 0.2, body‑battery –1.0, load 2.8) and heart‑rate stayed low (avg 91 bpm, max 109 bpm), so it contributed little to your VO₂max or threshold development and is appropriate for a recovery day in the bridge phase. Your morning readiness was low (score 25, sleep 63, recovery 6.2 h), but the post‑exercise nap lifted it to 35, indicating that the session itself did not add fatigue beyond the existing sleep deficit. Keep an eye on the low readiness for tomorrow’s Thursday quality workout; a well‑rested state will be needed to secure the VO₂max stimulus you’re targeting.
+
+## Next Session
+- **Planned:** Sat, Oct 24 — 10K EZ, HR ≤150; no fast finish
 - **Recommendation:** Keep it easy
 - **Reason:** very low readiness (25/100); low 7-day sleep average (6.4h); resting heart rate is trending up; HRV is trending down; last-night HRV is below the balanced band; RHR-up/HRV-down recovery pattern.
 - **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
 
-### 🧠 AI Coaching Guidance
-
-- **Decision:** Keep Friday’s planned *Core/Hip‑Stability Strength (Power / Hip‑Extension)* session, but trim volume/intensity (e.g., 2 sets instead of 3, lighter load) and be ready to skip it entirely if you feel unusually fatigued or joint‑painful.  
-- **Execution:**  
-  1. **Warm‑up:** 5 min easy jog or bike + dynamic mobility (leg swings, hip circles, body‑weight glute bridges).  
-  2. **Main set:** Follow your usual “Strength A” routine (power/hip‑extension) – aim for 2‑3 exercises (e.g., single‑leg hip thrusts, kettlebell dead‑lifts, banded monster walks) × 8‑12 reps; use a load that lets you finish the set with 2‑3 reps in reserve.  
-  3. **Recovery:** 60‑90 s between sets; keep breathing steady, stay hydrated.  
-  4. **Cool‑down:** 5
-
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
-
-## Latest Activity
-
-_Most recent activity (2026-10-22):_
-- **Malolos - 5 × 3min VO₂ Intervals** — 7.04km · 47:49 · 6:48/km · HR 148/172 max
-  - TE: VO2 Max (High Aerobic) · aerobic 3.6 · anaerobic 0.8
-  - Intervals: 5 work reps · pace drift -6.7% · HR +14bpm
-  - MS: 2.91k @ 5:09 159bpm 1.05m 184spm 236ms 8.1cm 329w
-  - 🧠 Your five 3‑minute reps stayed tightly clustered at 5:06–5:12 /km (average 5:09), which sits squarely in the VO2‑max range prescribed for Thursday quality work, and the HR rose progressively from 151 bpm to 165 bpm (Δ 14 bpm), confirming the intended intensity buildup. The –6.7 % pace‑efficiency drift and the drop in stamina from 99 % to 73 % (bottoming at 58 %) reflect a solid anaerobic stimulus but also a noticeable fatigue cost for a 7 km session. Your morning readiness score was low (37 / Low) and fell to 21 after the workout, so prioritize recovery (e.g., easy run or rest) before the next hard effort.
 
 ## Load & Trends
 
-- **ACWR:** 0.9 (Optimal) — acute 510 / chronic 540 (chronic range 432–810)
+- **ACWR:** 0.9 (Optimal) — acute 513 / chronic 540 (chronic range 432–810)
 - **7-day volume:** 39.14km vs 28-day avg 37.6km (+4%)
 - **Running tolerance:** 66.9% (Medium) — 39.1km of 63.4km weekly cap, acute impact load 42.4
-- **Aerobic Low:** 837.3 (target 649–1082 — in range)
+- **Aerobic Low:** 840.1 (target 649–1082 — in range)
 - ⚠️ **Aerobic High:** 1189 (target 649–1082 — +107 over)
 - ⚠️ **Anaerobic:** 44.9 (target 86–346 — -41 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
@@ -60,18 +49,18 @@ _Most recent activity (2026-10-22):_
 | T | 3x6min Thr | 7k · 46:35 | 153 |
 | W | Run + Strides/Hills | 6k · 48:26 | 59 |
 | T | 5x3min VO₂ Int | 7k · 47:49 | 142 |
-| F | Rest | — | — |
+| F | Core/Hip | 30:23 | 3 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 6 | 39.15 km | 5:13:26 | 522.5 |
+| 7 | 39.15 km | 5:43:49 | 525.3 |
 
 ## Recent 4 Weeks
 _Average weekly running: 37.6 km_
 
 | Week | Running | Others | Load |
 |:---|---:|---:|---:|
-| Oct 17–23 | 39.14 km | 25 min | 522.5 |
+| Oct 17–23 | 39.14 km | 55 min | 525.3 |
 | Oct 10–16 | 39.13 km | 20 min | 584 |
 | Oct 3–9 | 36.14 km | 40 min | 521.6 |
 | Sep 26–Oct 2 | 36.14 km | 43 min | 528.9 |
