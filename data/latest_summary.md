@@ -16,7 +16,7 @@
 - **Friday Core/Hip Stability** — 0.0km · 30:23 · HR 91/109 max
   - TE: Aerobic Base · aerobic 0.2 · anaerobic 0
   - Readiness 25 → 35 (Improved By Napping) · Recovery 0h
-  - 🧠 The 30‑minute core/hip session produced only a minor aerobic stimulus (aerobic 0.2, no anaerobic load) and stayed well within low‑intensity HR zones (avg 91 bpm, max 109 bpm), matching the expected cardio impact of a strength day. Morning readiness was low (score 25, “Listen To Your Body”), likely driven by sub‑optimal sleep (sleep 63) rather than the workout itself; the post‑exercise snapshot rose to 35 after a nap, confirming the session didn’t further tax recovery. Given the bridge phase’s focus on sub‑threshold and VO₂ work, today’s negligible load (load 2.8, body‑battery ‑1) is appropriate, but continue to prioritize sleep to raise baseline readiness for upcoming Tuesday threshold intervals.
+  - 🧠 The 30‑minute core/hip stability session delivered a negligible aerobic stimulus (aerobic TE 0.2, “MINOR_AEROBIC_BENEFIT”) and a modest negative body‑battery impact of –1, which is exactly what we expect from a Friday strength day that should not tax your cardio system. Your morning readiness was low (score 25, “Listen To Your Body”), but the post‑exercise snapshot shows a modest boost to 35 after a nap, and the acute load increase was only 3 points, so the workout did not meaningfully worsen your recovery balance. Given the minimal training effect and low load (2.8), this session fits the planned strength focus without jeopardizing your Tuesday/Thursday quality runs.
 
 ## Next Session
 - **Planned:** Sat, Oct 24 — 10K EZ, HR ≤150; no fast finish
