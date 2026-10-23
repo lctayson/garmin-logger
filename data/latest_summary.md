@@ -19,14 +19,12 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Do the scheduled Friday core‑/hip‑stability strength session, but cut the volume/intensity by ~30 % and stay ready to stop if you feel unusually fatigued or any joint/pain signals appear.
-
-**Workout execution** –  
-- **Warm‑up**: 5‑10 min of easy mobility (dynamic hip circles, glute bridges, body‑weight lunges).  
-- **Main set**: Follow your usual core/hip routine (e.g., planks, side‑planks, clamshells, single‑leg dead‑lifts). Perform 2–3 sets of each exercise at a moderate load – aim for a “7‑8/10” effort, not max.  
-- **Cool‑down**: 3‑5 min of gentle stretching for hips, hamstrings, and lower back.
-
-**Readiness rationale** – HRV is down (40 ms vs 7‑day avg
+- **Decision:** Keep Friday’s planned *Core/Hip‑Stability Strength (Power / Hip‑Extension)* session, but trim volume/intensity (e.g., 2 sets instead of 3, lighter load) and be ready to skip it entirely if you feel unusually fatigued or joint‑painful.  
+- **Execution:**  
+  1. **Warm‑up:** 5 min easy jog or bike + dynamic mobility (leg swings, hip circles, body‑weight glute bridges).  
+  2. **Main set:** Follow your usual “Strength A” routine (power/hip‑extension) – aim for 2‑3 exercises (e.g., single‑leg hip thrusts, kettlebell dead‑lifts, banded monster walks) × 8‑12 reps; use a load that lets you finish the set with 2‑3 reps in reserve.  
+  3. **Recovery:** 60‑90 s between sets; keep breathing steady, stay hydrated.  
+  4. **Cool‑down:** 5
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
