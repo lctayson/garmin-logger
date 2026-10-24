@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 7.02k @ 7:20 141bpm 0.81m 168spm 276ms 7.9cm 239w
   - Readiness 52 → 38 (Listen To Your Body) · Recovery 19h 46m
-  - 🧠 The seven rep paces stayed tightly clustered in the easy‑aerobic zone (7:11–7:42 /km) with only a modest early‑rep slowdown, and the corresponding HR rose from 122 bpm to 149 bpm, staying well below sub‑threshold levels. Stamina dropped from 100 % to 86 % and the post‑run readiness fell to 38, reflecting the moderate morning score (52) and the aerobic load (training effect = 3 AEROBIC_BASE) rather than any anaerobic stimulus. As this session aligns with the bridge phase’s easy‑run focus, the execution was on target, but the lack of higher‑intensity work means you’ll still need a dedicated Thursday quality session to secure the VO2‑max stimulus needed for the sub‑1:58 half‑marathon goal.
+  - 🧠 The seven reps stayed firmly in the easy‑aerobic range (≈7:11‑7:42 min/km) and HR rose steadily from 122 bpm to 149 bpm, so the session delivered a solid aerobic base stimulus (Aerobic = 3.0) but no measurable VO2‑max or anaerobic load. Stamina fell from 100 % to 86 % and post‑run readiness dropped to 38, reflecting the moderate acute load (75.9) and limited recovery hours (≈1.3 h). Since Thursday’s quality work in the bridge phase is meant to provide a VO2‑max stimulus, the lack of higher‑intensity reps suggests today’s effort was under‑target for that purpose and should be followed by a more focused interval or tempo session later in the week.
 
 ## Next Session
 - **Planned:** Mon, Oct 26 — Strength A
