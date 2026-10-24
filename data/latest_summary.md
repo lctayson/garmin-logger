@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3.3 · anaerobic 0
   - MS: 10.03k @ 7:16 145bpm 0.82m 168spm 278ms 8.1cm 242w
   - Readiness 44 → 26 (Focus On Sleep Quality) · Recovery 1d 0h 47m
-  - 🧠 The ten‑rep segment stayed tightly clustered around the overall 7:16 /km average, with the early reps (7:38–7:14) running slower and heart rate rising from 126 bpm to 156 bpm by the final 6:47 /km rep, showing a sensible progressive effort rather than a flat interval pace. Because the workout was prescribed as an easy aerobic run, the lack of any anaerobic training effect (0.0) and the modest HR (max 160 bpm) are exactly as expected. Morning readiness was low (score 44, sleep 67) yet you still covered the full 10 km, but the relatively low early HR suggests residual fatigue limited the initial speed. Prioritize sleep and recovery tonight to preserve the progressive pacing you demonstrated today.
+  - 🧠 The 10 km was run in the easy‑aerobic range, with rep paces from 7:38 /km down to a quick 6:47 /km and HR climbing steadily from 126 to 156 bpm, which aligns with the bridge‑phase long‑run prescription. The session produced a solid aerobic training effect (3.3 AEROBIC_BASE) but no anaerobic stimulus (anaerobic = 0), matching the intended load of about 102 AU. Your morning readiness score was low (44, “Low”) and sleep quality was only 67, indicating you were under‑recovered going into the run. Prioritizing sleep and recovery before the next Thursday quality workout should help you extract the intended VO₂max stimulus.
 
 ## Next Session
 - **Planned:** Sun, Oct 25 — 8k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
