@@ -19,13 +19,14 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Run today, but keep it strictly easy/recovery. Skip the optional hill‑sprint block unless you feel completely fresh and calf‑pain‑free.  
+**Decision** – Proceed with today’s scheduled Sunday run, but treat it as a *recovery‑focused* session; drop any optional hill‑sprint block if you feel any lingering fatigue or calf tightness.
 
-**Workout** –  
-- **Warm‑up:** 10‑15 min easy jog (≈7:30 /km) + 3‑4 dynamic drills (leg swings, high‑knees).  
-- **Main set:** 30‑45 min continuous run in the **easy aerobic zone** (6:40–7:15 /km, HR ≤ 155 bpm, RPE ≤ 5).  
-- **Optional:** 6‑8 × 10 s hill sprints at a hard effort only if you’re symptom‑free; otherwise finish the run at the easy pace.  
-- **Cool‑down:** 5‑10 min light jog + full‑
+**Workout execution** – - **Warm‑up**: 10 min easy jog (≈7:30 km / min, HR ≤150 bpm).  
+- **Main set**: 45‑60 min continuous easy run at recovery/easy aerobic pace (7:10‑7:45 /km, HR 145‑155 bpm).  
+- **Optional hills**: 6‑8 × 10‑s hill sprints at a hard but controlled effort (HR < 170 bpm, stop if calf aches). Skip them if you’re not fully recovered.  
+- **Cool‑down**: 5‑10 min very easy jog + gentle stretching.
+
+**Readiness rationale** – Sleep was only 6.4 h (moderate deficit) and HRV is flagged “unbalanced,” suggesting limited acute recovery. Resting HR (56 bpm) and ACWR (0.8,
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
