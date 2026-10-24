@@ -46,7 +46,7 @@
         "feedback": "Good"
       }
     },
-    "ai_analysis": "**Decision – Proceed, but trim the hill work**  \nYour readiness is “moderate” (score 52) with adequate ACWR and good recovery time, but sleep (6.4 h) and HRV are low. An easy Sunday run is fine; skip or reduce the optional hill sprints to protect recovery.\n\n**Workout execution**  \n- **Warm‑up:** 10 min easy jog + 4 × 20‑s strides (gradual acceleration, no full‑speed effort).  \n- **Main set:** 45‑60 min steady easy run at **6:40‑7:15 min/km** (HR ≈ 145‑155 bpm).  \n- **Hill sprints (optional):** If you feel fully recovered and calves are pain‑free, do **4‑5 × 10 s uphill sprints** with full walk‑back recovery; otherwise omit.  \n- **Cool‑down:** 5‑8 min",
+    "ai_analysis": "**Decision** – Proceed, but keep it strictly an easy/recovery run; skip any planned hill‑sprint set if it’s on today’s list.\n\n**Workout execution (as per the Sunday template)**  \n- **Warm‑up:** 10‑15 min easy jog (≈7",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
