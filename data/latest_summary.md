@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3.3 · anaerobic 0
   - MS: 10.03k @ 7:16 145bpm 0.82m 168spm 278ms 8.1cm 242w
   - Readiness 44 → 26 (Focus On Sleep Quality) · Recovery 1d 0h 47m
-  - 🧠 The 10‑km run stayed solidly in your easy aerobic zone (overall 7:16 /km, avg HR 145 bpm) and the rep‑by‑rep data show a gradual uptick in effort, with HR climbing from 126 bpm early to 156 bpm on the final kilometer while the pace dipped to a sub‑7‑minute effort (6:47 /km). Stamina fell to 80 % by the end, matching the modest aerobic load you logged (Aerobic 3.3, no anaerobic benefit). Given a low morning readiness score of 44 and a sleep score of 67, the session was appropriate but you should prioritize sleep recovery before tackling any harder Thursday quality work.
+  - 🧠 The ten‑rep main set held a steady easy‑aerobic effort (pace 7:38 → 6:47 min/km, HR 126 → 156 bpm), staying well inside your prescribed easy zone (≈6:40‑7:15 min/km, ≤155 bpm) and producing only an aerobic training effect (3.3 AEROBIC_BASE) with zero anaerobic contribution, which is exactly what the Thursday quality session should look like during the bridge phase. Your overall pace (7:16 min/km) and the modest pace drift (fastest rep 6:47, slowest 7:38) indicate consistent execution without any missed target or fatigue‑driven slowdown. However, the morning readiness score was low (44, “Low”) and the post‑run snapshot dropped to 26, reflecting poor sleep (score 67) and limited recovery time; prioritize sleep quality tonight to ensure you can sustain the planned training load and avoid unnecessary fatigue accumulation.
 
 ## Next Session
 - **Planned:** Sun, Oct 25 — 8k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
