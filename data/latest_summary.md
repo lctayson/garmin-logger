@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3.3 · anaerobic 0
   - MS: 10.03k @ 7:16 145bpm 0.82m 168spm 278ms 8.1cm 242w
   - Readiness 44 → 26 (Focus On Sleep Quality) · Recovery 1d 0h 47m
-  - 🧠 The 10 km run stayed squarely in the easy‑aerobic zone (rep HR 126‑156 bpm, paces 7:38‑6:47 /km, overall 7:16 /km) and produced a modest aerobic training effect (aerobic 3.3, no anaerobic load). The pace drifted slightly faster toward the end (final rep 6:47 /km) while HR climbed, showing a gentle progressive effort rather than a flat, under‑stimulating session. With a body‑battery impact of –17 and a low readiness score (44, sleep 67), recovery is limited, so today’s easy load is appropriate but should be followed by a lighter day or additional sleep before the next quality Thursday session.
+  - 🧠 The ten‑rep main set stayed tightly clustered around a 7:16 /km average (range 6:47–7:38) with a modest negative‑split drift, ending faster (6:47 /km) while heart rate rose from 126 bpm in the first rep to 156 bpm in the last—exactly the profile of an easy aerobic effort (≈145 bpm) rather than the VO2‑max stimulus your Thursday quality sessions require. The aerobic training effect was 3.3 AEROBIC_BASE and there was no anaerobic contribution (0.0), while stamina fell from 100 % to 80 % and the overall load was 102, indicating a solid base‑building run but not the higher‑intensity work needed to address the known anaerobic development gap. Your morning readiness was low (score 44, “Low” level, sleep score 67, resting HR 59), so consider prioritizing sleep recovery before the next scheduled quality session.
 
 ## Next Session
 - **Planned:** Sun, Oct 25 — 8k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
