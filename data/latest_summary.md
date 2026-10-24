@@ -11,39 +11,30 @@
 - ⚠️ **Limiter:** Sleep History (41%)
 - **Also soft:** Sleep Score, Stress History
 
-## Today's Session
-- **Planned:** Sat, Oct 24 — 10K EZ, HR ≤150; no fast finish
-- **Recommendation:** Keep it easy
+## Today's Workout
+
+- **Guiguinto Running** — 10.03km · 1:12:55 · 7:16/km · HR 145/160 max
+  - TE: Aerobic Base · aerobic 3.3 · anaerobic 0
+  - MS: 10.03k @ 7:16 145bpm 0.82m 168spm 278ms 8.1cm 242w
+  - Readiness 44 → 26 (Focus On Sleep Quality) · Recovery 1d 0h 47m
+  - 🧠 The ten‑rep segment stayed tightly clustered around the overall 7:16 /km average, with the early reps (7:38–7:14) running slower and heart rate rising from 126 bpm to 156 bpm by the final 6:47 /km rep, showing a sensible progressive effort rather than a flat interval pace. Because the workout was prescribed as an easy aerobic run, the lack of any anaerobic training effect (0.0) and the modest HR (max 160 bpm) are exactly as expected. Morning readiness was low (score 44, sleep 67) yet you still covered the full 10 km, but the relatively low early HR suggests residual fatigue limited the initial speed. Prioritize sleep and recovery tonight to preserve the progressive pacing you demonstrated today.
+
+## Next Session
+- **Planned:** Sun, Oct 25 — 8k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
+- **Recommendation:** Adjust the workout
 - **Reason:** resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
-- **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
-
-### 🧠 AI Coaching Guidance
-
-**Decision** – Proceed, but convert today’s long‑run to an **easy recovery run**; skip any HM‑effort finish or added mileage.  
-
-**Workout** – Warm‑up: 10‑15 min easy jog (≈7:30 km / min) + 4×20 s strides, easy‑pace recovery.  
-Main: run at easy aerobic pace (≈7:10‑7:30 /km), keep HR ≤ 155 bpm (Zone 6) for the prescribed duration (use the plan’s time/distance but stay comfortable).  
-Cool‑down: 5 min relaxed jog + light stretching.  
-
-**Readiness rationale** – Sleep quality is only moderate (6.7 h, sleep‑score 67) driving the low readiness score, but HRV is “balanced”, resting
+- **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
-## Latest Activity
-
-_Most recent activity (2026-10-23):_
-- **Friday Core/Hip Stability** — 0.0km · 30:23 · HR 91/109 max
-  - TE: Aerobic Base · aerobic 0.2 · anaerobic 0
-  - 🧠 The 30‑minute core/hip stability session delivered a negligible aerobic stimulus (aerobic TE 0.2, “MINOR_AEROBIC_BENEFIT”) and a modest negative body‑battery impact of –1, which is exactly what we expect from a Friday strength day that should not tax your cardio system. Your morning readiness was low (score 25, “Listen To Your Body”), but the post‑exercise snapshot shows a modest boost to 35 after a nap, and the acute load increase was only 3 points, so the workout did not meaningfully worsen your recovery balance. Given the minimal training effect and low load (2.8), this session fits the planned strength focus without jeopardizing your Tuesday/Thursday quality runs.
-
 ## Load & Trends
 
-- ⚠️ **ACWR:** 0.7 (Low) — acute 413 / chronic 523 (chronic range 418.4–784.5)
-- **7-day volume:** 27.11km vs 28-day avg 35.4km (-23%)
-- **Running tolerance:** 56.0% (Medium) — 27.1km of 63.4km weekly cap, acute impact load 35.5
-- **Aerobic Low:** 753.1 (target 649–1082 — in range)
-- ⚠️ **Aerobic High:** 1189 (target 649–1082 — +107 over)
-- ⚠️ **Anaerobic:** 44.9 (target 86–346 — -41 under)
+- **ACWR:** 0.9 (Optimal) — acute 543 / chronic 546 (chronic range 436.8–819)
+- **7-day volume:** 37.14km vs 28-day avg 37.9km (-2%)
+- **Running tolerance:** 71.8% (Medium) — 37.1km of 63.4km weekly cap, acute impact load 45.5
+- **Aerobic Low:** 855.3 (target 816–1360 — in range)
+- **Aerobic High:** 1189 (target 816–1360 — in range)
+- ⚠️ **Anaerobic:** 44.9 (target 108–435 — -63 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
 - ⚠️ **Sleep (7d avg):** 6h33, 5/7 nights below need, trending flat
 - ⚠️ **RHR (7d avg):** 59.0, trending up
@@ -59,18 +50,18 @@ _Most recent activity (2026-10-23):_
 | W | Run + Strides/Hills | 6k · 48:26 | 59 |
 | T | 5x3min VO₂ Int | 7k · 47:49 | 142 |
 | F | Core/Hip | 30:23 | 3 |
-| S | Rest | — | — |
+| S | Guiguinto Run | 10k · 1:12:55 | 102 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 6 | 27.12 km | 4:14:33 | 416.7 |
+| 7 | 37.15 km | 5:27:28 | 518.8 |
 
 ## Recent 4 Weeks
-_Average weekly running: 35.4 km_
+_Average weekly running: 37.9 km_
 
 | Week | Running | Others | Load |
 |:---|---:|---:|---:|
-| Oct 18–24 | 27.11 km | 55 min | 416.7 |
+| Oct 18–24 | 37.14 km | 55 min | 518.8 |
 | Oct 11–17 | 40.13 km | 20 min | 586.2 |
 | Oct 4–10 | 37.15 km | 40 min | 534.8 |
 | Sep 27–Oct 3 | 37.14 km | 43 min | 535.1 |
