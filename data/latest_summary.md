@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 7.02k @ 7:20 141bpm 0.81m 168spm 276ms 7.9cm 239w
   - Readiness 52 → 38 (Listen To Your Body) · Recovery 19h 46m
-  - 🧠 The 7‑km recovery run stayed squarely in the easy‑pace window (7:11 – 7:42 min/km, average 7:20) and heart‑rate rose from 122 bpm early to 149 bpm at the end, still well below your LTHR of 171 bpm. Stamina slipped from 100 % to 86 % and body‑battery fell 13 points, matching the modest aerobic load (AE 3.0, load ≈ 76). Your morning readiness was only moderate (score 52, 1.3 h recovery), so the post‑run readiness drop to 38 is expected and not a cause for concern. No anaerobic stimulus was
+  - 🧠 The 7 km recovery run stayed within the prescribed recovery zone (7:42‑7:11 min/km) and heart rate stayed ≤149 bpm, matching the 7:10‑7:45 min/km and ≤150 bpm targets. Stamina dropped from 100 % to 86 % and body‑battery fell 13 points, yielding a modest aerobic load of 75.9 and a slight negative performance‑condition (-0.1), which is expected for a recovery effort. Your morning readiness of 52 (moderate) declined to 38 after the session, reflecting the added acute load (536 vs 440) but not indicating excessive fatigue.
 
 ## Next Session
 - **Planned:** Mon, Oct 26 — Strength A
@@ -59,9 +59,9 @@
 ## Recent 4 Weeks
 _Average weekly running: 38.1 km_
 
-| Week | Running | Others | Load |
+| Week | Runs | Others | Load |
 |:---|---:|---:|---:|
-| Oct 19–25 | 37.14 km | 55 min | 539.1 |
-| Oct 12–18 | 41.13 km | 20 min | 598.2 |
-| Oct 5–11 | 37.14 km | 40 min | 520 |
-| Sep 28–Oct 4 | 37.14 km | 43 min | 545.5 |
+| Oct 19–25 | 37.14k | 55 min | 539.1 |
+| Oct 12–18 | 41.13k | 20 min | 598.2 |
+| Oct 5–11 | 37.14k | 40 min | 520 |
+| Sep 28–Oct 4 | 37.14k | 43 min | 545.5 |
