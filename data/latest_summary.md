@@ -19,10 +19,12 @@
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Proceed as planned with Monday's scheduled Strength A session (power/hip extension); no running scheduled today.
-- **Workout Execution:** Execute Strength A focusing on power and hip extension quality, keeping movement crisp with full rest between sets rather than grinding to failure. 
-- **Readiness Rationale:** Sleep was strong last night (7.9 hours, 88 score), full recovery time is cleared (0.0 hours remaining), and ACWR sits in an optimal zone (0.80, acute load 447 vs chronic 529). While HRV is flagged "UNBALANCED," last night's 55 ms is actually elevated above your 46 ms 7-day average (RHR stable at 57 bpm)—reflecting parasympathetic rebound rather than acute fatigue. 
-- **In-Session Guardrails:** During the warm-up, monitor for residual neuromuscular or calf tightness from the weekend. If heavy sluggishness or poor movement mechanics persist after your dynamic warm-up, reduce external loads by 15–20% and prioritize clean movement patterns to keep tomorrow's Tuesday sub-threshold session fully protected.
+- **Decision:** Proceed with today’s planned **Strength A (hip‑extension power)** session, but keep the load a notch lighter than usual (≈ 70 % of your typical working weight) to respect the modest HRV dip.  
+- **Execution:**  
+  1. **Warm‑up:** 5 min dynamic mobility (leg swings, hip circles, body‑weight glute bridges).  
+  2. **Main set:** Follow the prescribed Strength A routine (e.g., hip thrusts, single‑leg bridges, kettlebell swings). Perform the prescribed reps/sets at a controlled tempo, aiming for RPE 6‑7; stop a set early if you feel unusually tight or your heart rate spikes >10 bpm above resting (≈ 67 bpm).  
+  3. **Cool‑down:** 5 min light mobility and foam‑rolling of hips/glutes.  
+- **Readiness rationale:** Sleep was solid (7.9 h, score 88) and ACWR is optimal (0.8), so overall load tolerance is good. The HRV drop (55 ms vs 7‑day avg 46 ms, flagged “UN
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
