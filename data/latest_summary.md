@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 7.02k @ 7:20 141bpm 0.81m 168spm 276ms 7.9cm 239w
   - Readiness 52 → 38 (Listen To Your Body) · Recovery 19h 46m
-  - 🧠 The seven‑rep main set stayed squarely in the easy‑aerobic zone, with rep paces ranging from 7:42 to 7:11 km⁻¹ and average HR climbing from 122 bpm in the first rep to 149 bpm by the last, matching the overall 7:20 /km average and the prescribed 6:40–7:15 /km easy range. Stamina fell from 100 % to 86 % and the training‑effect score of 3.0 AEROBIC_BASE confirm a modest aerobic stimulus without any anaerobic contribution. Your morning readiness was moderate (score 52), and the post‑run drop to 38 reflects the 75.9 load and a 13‑point body‑battery dip, so today’s effort was appropriate but adds noticeable acute fatigue.
+  - 🧠 The seven work reps stayed tightly clustered (7:11–7:42 /km) with a modest upward HR trend from 122 bpm to 149 bpm, showing a gradual increase in effort but no notable pacing drift. The aerobic training effect of 3.0 is appropriate for a sub‑threshold–type volume, while the zero anaerobic contribution matches the low‑intensity pace. Stamina fell from 100 % to 86 % and body‑battery dropped 13 points, which, together with the post‑run readiness dip to 38, suggests the session taxed you more than the moderate (52) morning readiness allowed. For the bridge phase, keep the rep intensity in this easy‑zone and prioritize a bit more recovery before the next Thursday quality workout.
 
 ## Next Session
 - **Planned:** Mon, Oct 26 — Strength A
