@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 7.02k @ 7:20 141bpm 0.81m 168spm 276ms 7.9cm 239w
   - Readiness 52 → 38 (Listen To Your Body) · Recovery 19h 46m
-  - 🧠 The seven‑rep main set stayed firmly in the easy‑aerobic range, with rep paces drifting from 7:42 /km early to 7:11 /km late while heart rate climbed from 122 bpm to 149 bpm, matching the expected gradual intensity rise of a bridge‑phase easy run. Overall average pace (7:20 /km) is a touch slower than the typical easy target (≈6:40‑7:15 /km), likely reflecting the modest 1.3 h of recovery and the warm‑morning heat rather than any pacing error. Your moderate morning readiness (score 52) dropped to 38 after the effort, indicating the acute load is already significant; consider a lighter or fully rest day before Thursday’s VO2‑max quality session.
+  - 🧠 The seven work reps averaged 7:20 /km (range 7:11‑7:42) with a clear upward HR trend from 122 bpm in the first rep to 149 bpm in the last, confirming a steady aerobic effort rather than a VO2‑max stimulus—consistent with the bridge‑phase easy/steady‑day prescription. Stamina fell from 100
 
 ## Next Session
 - **Planned:** Mon, Oct 26 — Strength A
