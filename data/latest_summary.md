@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 7.02k @ 7:20 141bpm 0.81m 168spm 276ms 7.9cm 239w
   - Readiness 52 → 38 (Listen To Your Body) · Recovery 19h 46m
-  - 🧠 This was an exceptionally disciplined recovery-pace effort, with the 7 km settling cleanly between 7:11 and 7:21/km after a conservative 7:42 opening lap. Heart rate tracked appropriately across the run, drifting up to just 149 bpm on the final rep and topping out at 152 bpm, keeping the internal cost strictly within true aerobic base territory. Given the modest 52 morning readiness score, absorbing 76 load points without encroaching on steady or sub-threshold effort is exactly what this slot required.
+  - 🧠 The seven repeat paces clustered tightly between 7:11 and 7:42 km (average 7:20), with heart rate rising from 122 to 149 bpm, staying well below your LTHR and matching the easy‑aerobic zone for the bridge phase. Stamina fell from 100 to 86 and the post‑exercise readiness dropped to 38, reflecting a moderate aerobic load (training effect AEROBIC_BASE 3.0) but no anaerobic stimulus. Given your “Moderate” morning readiness (score 52) and the modest acute‑load increase (440 → 536), today’s session was appropriately scoped for recovery while still providing a useful aerobic boost.
 
 ## Next Session
 - **Planned:** Mon, Oct 26 — Strength A
