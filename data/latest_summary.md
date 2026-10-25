@@ -19,13 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **Monday Strength‑A (hip‑extension) session**, but dial the load back ≈ ‑20 % (e.g., fewer reps or lighter weight) given a moderate readiness score and a low/unbalanced HRV signal.
+**Decision** – Proceed with today’s planned **Strength A (power/hip‑extension)** session; keep the load moderate (≈6‑7 RPE) and be ready to cut a set or reduce weight if you feel unusually fatigued.
 
-**Execution** – Warm‑up: 5 min dynamic mobility (leg swings, hip circles, glute bridges).  
-Main set: the prescribed hip‑extension circuit (e.g., hip thrusts, single‑leg RDLs, banded walks) – keep the reps/sets as listed but use the reduced weight/intensity and focus on clean technique.  
-Cool‑down: 5 min light stretching/mobility for hips and hamstrings.
-
-**Readiness rationale** – Sleep was solid (7.9 h, score 88) and resting HR is low (57 bpm), indicating good baseline recovery. Acute load (447) is below chronic (
+**Workout execution** –  
+- **Warm‑up (5‑10 min):** dynamic hip mobility – leg swings, walking lunges, glute bridges, banded monster walks.  
+- **Main‑set (3 rounds):** single‑leg glute bridge 8‑10 rep, kettlebell swing 12‑15 rep, banded monster walk 20 m, Bulgarian split‑squat 8‑10 rep each leg. Rest 60‑90 s between exercises, 2 min between rounds; aim for RPE 6‑7
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
