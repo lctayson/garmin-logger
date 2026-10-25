@@ -13,11 +13,11 @@
 
 ## Today's Workout
 
-- **Malolos Running** — 7.02km · 51:28 · 7:20/km · HR 141/152 max
+- **BHM W5: Recovery Run** — 7.02km · 51:28 · 7:20/km · HR 141/152 max
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 7.02k @ 7:20 141bpm 0.81m 168spm 276ms 7.9cm 239w
   - Readiness 52 → 38 (Listen To Your Body) · Recovery 19h 46m
-  - 🧠 The 7‑rep effort over 7 km held rep paces between 7:11 and 7:42 /km, averaging 7:20 /km, while heart rate rose from 122 bpm to 149 bpm—well within the easy aerobic zone for the bridge phase. The early slower rep
+  - 🧠 The 7‑km recovery run stayed squarely in the easy‑pace window (7:11 – 7:42 min/km, average 7:20) and heart‑rate rose from 122 bpm early to 149 bpm at the end, still well below your LTHR of 171 bpm. Stamina slipped from 100 % to 86 % and body‑battery fell 13 points, matching the modest aerobic load (AE 3.0, load ≈ 76). Your morning readiness was only moderate (score 52, 1.3 h recovery), so the post‑run readiness drop to 38 is expected and not a cause for concern. No anaerobic stimulus was
 
 ## Next Session
 - **Planned:** Mon, Oct 26 — Strength A
@@ -50,7 +50,7 @@
 | T | 5x3min VO₂ Int | 7k · 47:49 | 142 |
 | F | Core/Hip | 30:23 | 3 |
 | S | Guiguinto Run | 10k · 1:12:55 | 102 |
-| S | Malolos Run | 7k · 51:28 | 76 |
+| S | BHM W5: Rec Run | 7k · 51:28 | 76 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|

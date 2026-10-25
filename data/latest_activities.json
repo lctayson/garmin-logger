@@ -12,7 +12,7 @@
   },
   "activities": [
     {
-      "name": "Malolos Running",
+      "name": "BHM W5: Recovery Run",
       "activity_id": 24840742885,
       "type": "running",
       "distance": 7.02,
@@ -417,7 +417,7 @@
         ]
       },
       "lap_count": 8,
-      "ai_analysis": "The 7‑rep effort over 7 km held rep paces between 7:11 and 7:42 /km, averaging 7:20 /km, while heart rate rose from 122 bpm to 149 bpm—well within the easy aerobic zone for the bridge phase. The early slower rep",
+      "ai_analysis": "The 7‑km recovery run stayed squarely in the easy‑pace window (7:11 – 7:42 min/km, average 7:20) and heart‑rate rose from 122 bpm early to 149 bpm at the end, still well below your LTHR of 171 bpm. Stamina slipped from 100 % to 86 % and body‑battery fell 13 points, matching the modest aerobic load (AE 3.0, load ≈ 76). Your morning readiness was only moderate (score 52, 1.3 h recovery), so the post‑run readiness drop to 38 is expected and not a cause for concern. No anaerobic stimulus was",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
