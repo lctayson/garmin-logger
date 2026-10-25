@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 7.02k @ 7:20 141bpm 0.81m 168spm 276ms 7.9cm 239w
   - Readiness 52 → 38 (Listen To Your Body) · Recovery 19h 46m
-  - 🧠 The 7 km run stayed squarely in the easy‑aerobic zone, with rep paces ranging from 7:11 to 7:42 /km (average 7:20) and heart rate rising from 122 bpm to 149 bpm—well below the ~155 bpm ceiling for that zone. Stamina dropped from 100 % to 86 % and the training effect logged an Aerobic TE 3.0 with zero anaerobic contribution, confirming that the session delivered the intended base work without excess intensity. Your morning readiness was moderate (score 52), and the post‑run dip to 38 is the normal acute cost of a 51‑minute effort
+  - 🧠 This was an exceptionally disciplined recovery-pace effort, with the 7 km settling cleanly between 7:11 and 7:21/km after a conservative 7:42 opening lap. Heart rate tracked appropriately across the run, drifting up to just 149 bpm on the final rep and topping out at 152 bpm, keeping the internal cost strictly within true aerobic base territory. Given the modest 52 morning readiness score, absorbing 76 load points without encroaching on steady or sub-threshold effort is exactly what this slot required.
 
 ## Next Session
 - **Planned:** Mon, Oct 26 — Strength A
