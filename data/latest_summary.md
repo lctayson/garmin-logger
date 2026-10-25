@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 7.02k @ 7:20 141bpm 0.81m 168spm 276ms 7.9cm 239w
   - Readiness 52 → 38 (Listen To Your Body) · Recovery 19h 46m
-  - 🧠 The seven repeat paces clustered tightly between 7:11 and 7:42 km (average 7:20), with heart rate rising from 122 to 149 bpm, staying well below your LTHR and matching the easy‑aerobic zone for the bridge phase. Stamina fell from 100 to 86 and the post‑exercise readiness dropped to 38, reflecting a moderate aerobic load (training effect AEROBIC_BASE 3.0) but no anaerobic stimulus. Given your “Moderate” morning readiness (score 52) and the modest acute‑load increase (440 → 536), today’s session was appropriately scoped for recovery while still providing a useful aerobic boost.
+  - 🧠 The seven work reps held a steady 7:11‑7:42 /km pace (average 7:20 /km) while heart rate rose from 122 bpm to 149 bpm, staying well below your LTHR of 171 bpm and delivering only aerobic benefit (Aerobic TE 3.0, Anaerobic TE 0). Stamina fell from 100 % to 86 % and body‑battery dropped –13, reflecting a solid aerobic load that matches the moderate morning readiness score of 52. The post‑run readiness dip to 38 is a consequence of this effort rather than an indication
 
 ## Next Session
 - **Planned:** Mon, Oct 26 — Strength A
