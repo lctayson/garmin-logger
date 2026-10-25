@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 7.02k @ 7:20 141bpm 0.81m 168spm 276ms 7.9cm 239w
   - Readiness 52 → 38 (Listen To Your Body) · Recovery 19h 46m
-  - 🧠 The seven work reps averaged 7:20 /km (range 7:11‑7:42) with a clear upward HR trend from 122 bpm in the first rep to 149 bpm in the last, confirming a steady aerobic effort rather than a VO2‑max stimulus—consistent with the bridge‑phase easy/steady‑day prescription. Stamina fell from 100
+  - 🧠 The 7‑rep main set averaged 7:20 /km, ranging from 7:42 to 7:11 /km, so pace drift was modest (
 
 ## Next Session
 - **Planned:** Mon, Oct 26 — Strength A

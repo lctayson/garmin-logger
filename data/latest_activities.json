@@ -417,7 +417,7 @@
         ]
       },
       "lap_count": 8,
-      "ai_analysis": "The seven work reps averaged 7:20 /km (range 7:11‑7:42) with a clear upward HR trend from 122 bpm in the first rep to 149 bpm in the last, confirming a steady aerobic effort rather than a VO2‑max stimulus—consistent with the bridge‑phase easy/steady‑day prescription. Stamina fell from 100",
+      "ai_analysis": "The 7‑rep main set averaged 7:20 /km, ranging from 7:42 to 7:11 /km, so pace drift was modest (",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
