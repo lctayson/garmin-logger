@@ -1,13 +1,65 @@
 {
   "date": "2026-10-26",
   "readiness": {
-    "resting_hr": 61,
-    "ai_analysis": "- **Decision:** Proceed with today’s planned Strength A (power/hip‑extension) session; the resting HR of 61 bpm is low‑normal and there are no other recovery flags.  \n- **Workout execution:** Begin with 5‑10 min of dynamic mobility (leg swings, hip circles, light jogging) to raise core temp. Perform the prescribed hip‑extension circuit (e.g., 3 × 10 single‑leg glute bridges, 3 × 12 banded monster walks, 3 × 8 single‑leg Romanian dead‑lifts) at a moderate load that allows good form. Finish with 5 min of easy stretching/foam‑rolling.  \n- **Readiness rationale:** Only the resting HR is available; 61 bpm suggests good autonomic recovery and no acute stress. With no sleep or HRV data indicating deficiency, the evidence does not warrant downgrading the strength load.  \n- **In‑session guardrails:** Watch for unexpected joint pain, excessive fatigue, or a sudden HR spike during the warm‑up; if any appear, cut the load in half or skip the session and replace it with light mobility work. Keep the tempo controlled—quality of movement outweighs chasing a specific rep count.",
-    "ai_analysis_provider": "groq:openai/gpt-oss-120b"
+    "vo2_max": 45.0,
+    "vo2_max_precise": 44.5,
+    "score": 67,
+    "level": "Moderate",
+    "feedback": "Listen To Your Body",
+    "resting_hr": 57,
+    "hrv_last_night_avg_ms": 55.0,
+    "hrv_7_day_avg_ms": 46.0,
+    "hrv_status": "UNBALANCED",
+    "sleep_hours": 7.9,
+    "sleep_hours_including_previous_day_nap": 7.9,
+    "sleep_score": 88,
+    "recovery_hours": 0.0,
+    "hrv_baseline": {
+      "lowUpper": 45.0,
+      "balancedLow": 47.0,
+      "balancedUpper": 58.0,
+      "markerValue": 0.16107178
+    },
+    "factor_details": {
+      "sleep_score": {
+        "percent": 86,
+        "feedback": "Good"
+      },
+      "sleep_history": {
+        "percent": 62,
+        "feedback": "Moderate"
+      },
+      "recovery_time": {
+        "percent": 100,
+        "feedback": "Very Good"
+      },
+      "acwr": {
+        "percent": 98,
+        "feedback": "Good"
+      },
+      "hrv": {
+        "percent": 48,
+        "feedback": "Moderate"
+      },
+      "stress_history": {
+        "percent": 69,
+        "feedback": "Moderate"
+      }
+    },
+    "ai_analysis": "- **Decision:** Proceed as planned with Monday's scheduled Strength A session (power/hip extension); no running scheduled today.\n- **Workout Execution:** Execute Strength A focusing on power and hip extension quality, keeping movement crisp with full rest between sets rather than grinding to failure. \n- **Readiness Rationale:** Sleep was strong last night (7.9 hours, 88 score), full recovery time is cleared (0.0 hours remaining), and ACWR sits in an optimal zone (0.80, acute load 447 vs chronic 529). While HRV is flagged \"UNBALANCED,\" last night's 55 ms is actually elevated above your 46 ms 7-day average (RHR stable at 57 bpm)—reflecting parasympathetic rebound rather than acute fatigue. \n- **In-Session Guardrails:** During the warm-up, monitor for residual neuromuscular or calf tightness from the weekend. If heavy sluggishness or poor movement mechanics persist after your dynamic warm-up, reduce external loads by 15–20% and prioritize clean movement patterns to keep tomorrow's Tuesday sub-threshold session fully protected.",
+    "ai_analysis_provider": "gemini:gemini-3.8-flash"
+  },
+  "health": {
+    "steps": 29
   },
   "sleep": {
+    "deep_h": 0.98,
+    "light_h": 5.42,
+    "rem_h": 1.5,
+    "awake_h": 0.22,
     "baseline_h": 7.0,
     "need_h": 7.33,
+    "next_need_h": 7.0,
     "feedback": "Increased",
     "training_feedback": "Chronic",
     "sleep_history_adjustment": "No Change",
@@ -15,11 +67,43 @@
     "nap_adjustment": "No Change",
     "previous_day_nap": null
   },
+  "load": {
+    "acute_load": 447,
+    "chronic_load": 529,
+    "acwr": 0.8,
+    "acwr_percent": 33,
+    "acwr_status": "Optimal",
+    "chronic_load_range": {
+      "min": 423.2,
+      "max": 793.5
+    },
+    "training_status": "Maintaining 2"
+  },
+  "vo2_max": 45.0,
+  "vo2_max_precise": 44.5,
   "race_predictions": {
     "5k": "27:20",
     "10k": "57:32",
     "half_marathon": "2:11:57",
     "marathon": "4:54:47"
+  },
+  "load_balance": {
+    "aerobic_low": 880.3,
+    "aerobic_low_target": [
+      649,
+      1082
+    ],
+    "aerobic_high": 1189.0,
+    "aerobic_high_target": [
+      649,
+      1082
+    ],
+    "anaerobic": 44.9,
+    "anaerobic_target": [
+      86,
+      346
+    ],
+    "load_focus": "Anaerobic Shortage"
   },
   "running_tolerance": {
     "acute_impact_load": 39.8,
@@ -152,6 +236,14 @@
         }
       ]
     }
+  },
+  "heat_acclimation": {
+    "percentage": 100,
+    "trend": "Acclimatized"
+  },
+  "altitude_acclimation": {
+    "percentage": 0,
+    "trend": null
   },
   "trend_recent_daily": {
     "columns": [
@@ -332,17 +424,17 @@
       ],
       [
         "2026-10-26",
-        61,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        57,
+        55.0,
+        46.0,
+        7.9,
+        88,
+        45.0,
+        "Maintaining 2",
+        447,
+        529,
+        0.8,
+        "Optimal",
         0,
         0.0,
         0.0,
@@ -734,17 +826,17 @@
         "2026-10-26",
         "2026-10-20",
         "2026-10-26",
-        61,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        57,
+        55.0,
+        46.0,
+        7.9,
+        88,
+        45.0,
+        "Maintaining 2",
+        447,
+        529,
+        0.8,
+        "Optimal",
         6,
         4.96,
         37.14,
@@ -819,9 +911,9 @@
       ],
       [
         "2026-10-26",
-        6,
+        71,
         0,
-        25,
+        91,
         20
       ]
     ]
