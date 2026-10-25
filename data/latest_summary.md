@@ -19,12 +19,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Proceed with today’s planned **Strength A (hip‑extension power)** session, but keep the load a notch lighter than usual (≈ 70 % of your typical working weight) to respect the modest HRV dip.  
-- **Execution:**  
-  1. **Warm‑up:** 5 min dynamic mobility (leg swings, hip circles, body‑weight glute bridges).  
-  2. **Main set:** Follow the prescribed Strength A routine (e.g., hip thrusts, single‑leg bridges, kettlebell swings). Perform the prescribed reps/sets at a controlled tempo, aiming for RPE 6‑7; stop a set early if you feel unusually tight or your heart rate spikes >10 bpm above resting (≈ 67 bpm).  
-  3. **Cool‑down:** 5 min light mobility and foam‑rolling of hips/glutes.  
-- **Readiness rationale:** Sleep was solid (7.9 h, score 88) and ACWR is optimal (0.8), so overall load tolerance is good. The HRV drop (55 ms vs 7‑day avg 46 ms, flagged “UN
+**Decision** – Proceed with today’s scheduled **Monday Strength‑A (hip‑extension) session**, but dial the load back ≈ ‑20 % (e.g., fewer reps or lighter weight) given a moderate readiness score and a low/unbalanced HRV signal.
+
+**Execution** – Warm‑up: 5 min dynamic mobility (leg swings, hip circles, glute bridges).  
+Main set: the prescribed hip‑extension circuit (e.g., hip thrusts, single‑leg RDLs, banded walks) – keep the reps/sets as listed but use the reduced weight/intensity and focus on clean technique.  
+Cool‑down: 5 min light stretching/mobility for hips and hamstrings.
+
+**Readiness rationale** – Sleep was solid (7.9 h, score 88) and resting HR is low (57 bpm), indicating good baseline recovery. Acute load (447) is below chronic (
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
