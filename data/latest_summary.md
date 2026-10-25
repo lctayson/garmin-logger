@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 7.02k @ 7:20 141bpm 0.81m 168spm 276ms 7.9cm 239w
   - Readiness 52 → 38 (Listen To Your Body) · Recovery 19h 46m
-  - 🧠 The seven paced reps averaged 7:20 /km, ranging from 7:11 to 7:42 /km, which sits just outside your easy‑aerobic zone (6:40–7:15 /km) and remained well below sub‑threshold effort, confirming the session delivered pure aerobic volume with no measurable anaerobic load (anaerobic TE = 0). Heart‑rate rose steadily from 122 bpm in the first rep to 149 bpm in the last, showing a modest cardiovascular drift but still far under LTHR (171 bpm), while stamina dropped from 100 → 86, matching the moderate load (≈76 AU). Your morning readiness was moderate (score 52), and the post‑run snapshot fell to 38, reflecting the accumulated fatigue of the day rather than a problem with the workout itself. No red flags appear for your current bridge phase, but keep an eye on the slight pacing slowdown if heat spikes again.
+  - 🧠 The 7‑rep effort over 7 km held rep paces between 7:11 and 7:42 /km, averaging 7:20 /km, while heart rate rose from 122 bpm to 149 bpm—well within the easy aerobic zone for the bridge phase. The early slower rep
 
 ## Next Session
 - **Planned:** Mon, Oct 26 — Strength A
