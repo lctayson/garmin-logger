@@ -499,7 +499,7 @@ def _four_week_lines(payload: dict[str, Any]) -> list[str]:
         lines.append(f"_Average weekly running: {avg_weekly:g} km_")
     lines.extend([
         "",
-        "| Week | Running | Others | Load |",
+        "| Week | Runs | Others | Load |",
         "|:---|---:|---:|---:|",
     ])
     for week in reversed(weeks):
@@ -512,7 +512,7 @@ def _four_week_lines(payload: dict[str, Any]) -> list[str]:
         run_distance = _num(running.get("distance"))
         other_hours = _num(other.get("duration_hours"))
         load = _num(total.get("exercise_load"))
-        run_cell = f"{run_distance:.2f} km" if run_distance is not None else "—"
+        run_cell = f"{run_distance:.2f}k" if run_distance is not None else "—"
         other_cell = f"{round(other_hours * 60)} min" if other_hours is not None else "—"
         load_cell = f"{load:g}" if load is not None else "—"
         lines.append(f"| {week_label(week)} | {run_cell} | {other_cell} | {load_cell} |")
