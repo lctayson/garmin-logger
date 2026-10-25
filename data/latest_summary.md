@@ -19,11 +19,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned **Strength A (power/hip‑extension)** session; keep the load moderate (≈6‑7 RPE) and be ready to cut a set or reduce weight if you feel unusually fatigued.
+**Decision** – Proceed with today’s planned **Strength A (power/hip‑extension)** session; keep the load moderate and be ready to dial back if you feel unusually fatigued or any joint discomfort appears.
 
-**Workout execution** –  
-- **Warm‑up (5‑10 min):** dynamic hip mobility – leg swings, walking lunges, glute bridges, banded monster walks.  
-- **Main‑set (3 rounds):** single‑leg glute bridge 8‑10 rep, kettlebell swing 12‑15 rep, banded monster walk 20 m, Bulgarian split‑squat 8‑10 rep each leg. Rest 60‑90 s between exercises, 2 min between rounds; aim for RPE 6‑7
+**Workout execution** – - **Warm‑up**: 5 min easy jog or bike + dynamic hip‑mobility series (leg swings, hip circles, body‑weight glute bridges).  
+- **Main set**: follow your usual Strength A prescription (e
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
