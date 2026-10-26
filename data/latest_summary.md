@@ -19,13 +19,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned Strength A (hip‑extension/power) session, but keep the load moderate; if you feel unusually tight or your heart rate spikes early, back‑off the weight or cut a set.
+**Decision – Proceed as planned (Strength A), but stay ready to dial back the load if you feel unusually heavy or any joint/hip discomfort emerges.**  
 
-**Workout execution** – 1️⃣ Warm‑up: 5 min easy jog or bike + dynamic mobility (leg swings, hip circles, body‑weight glute bridges).  
-2️⃣ Main‑set (as written in the plan): e.g., 3 × 10 hip‑thrusts, 3 × 8 single‑leg Romanian dead‑lifts, 3 × 12 banded glute bridges, 3 × 10 standing cable abductors. Rest 60‑90 s between sets, focus on controlled tempo and explosive hip drive.  
-3️⃣ Cool‑down: 5 min light jog/walk + static stretching for hamstrings, glutes, and hip flexors.
+**Workout execution – Follow today’s prescribed strength routine (Power/Hip‑Extension):**  
+- Warm‑up: 5 min easy jog or bike + dynamic hip‑mobility drills (leg swings, glute bridges).  
+- Main set: 3‑4 sets of the listed hip‑extension/ power‑movement (e.g., single‑leg RDL, kettlebell swings) at a weight you can control for 8‑12 reps; keep RPE around 6‑7.  
+- Recovery: 60‑90 s rest between sets, longer if heart rate stays elevated > 130 bpm.  
+- Cool‑down: 5 min light cardio + static stretch of hamstrings, glutes, hip flexors.
 
-**Readiness rationale** – Sleep was solid (7.9 h, score 88) and resting HR is low (57 bpm), indicating good recovery.
+**Readiness rationale – **Your sleep was solid (7.9 h, score 88) and resting HR is low (57 bpm), indicating good baseline recovery. HRV is a bit low/unbalanced (
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
