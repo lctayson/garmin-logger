@@ -19,12 +19,9 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision:** Proceed with today’s planned **Strength A (hip‑extension/power)** session – the moderate readiness score and optimal ACWR suggest you’re recovered enough for a normal strength load.  
+**Decision** – Proceed with today’s Monday Strength A, but trim the load (≈10 % lighter or one fewer rep per set) given a moderate readiness score and a low‑HRV “unbalanced” signal.  
 
-**Workout execution:**  
-- **Warm‑up (≈10 min):** Light jog or brisk walk (5 min) + dynamic hip‑mobility drills (leg swings, world’s greatest stretch, glute bridges).  
-- **Main set:** 3 × 8‑10 reps each of hip‑thrusts, single‑leg Romanian dead‑lifts, and reverse lunges, focusing on explosive drive on the concentric phase; keep rest 60‑90 s between sets.  
-- **Cool‑down (5‑7 min):** Gentle foam‑rolling of glutes/hamstrings and static stretches (pigeon, standing ham
+**Execution** – Warm‑up: 5‑10 min easy jog or bike + dynamic hip mobility (leg swings, hip circles, walking lunges). Main set (
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
