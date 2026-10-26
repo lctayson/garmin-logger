@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -5.9% · HR +7bpm
   - MS: 5.36k @ 5:36 165bpm 0.99m 180spm 247ms 8.2cm 308w
   - Readiness 59 → 24 (Time To Slow Down) · Recovery 1d 19h 12m
-  - 🧠 The three 10‑minute threshold reps hit the intended sub‑threshold zone (5:33–5:40 /km), with the first two on target and the third slipping a few seconds, which aligns with the –5.9 % pace‑efficiency drift and the 7‑bpm rise in HR across reps. Stamina dropped from 99 % to 61 % and the aerobic training effect was high (4.3) while anaerobic benefit remained negligible, confirming the session delivered the planned threshold stimulus but also left a sizable fatigue debt. Given a moderate morning readiness (score 59) and the pronounced post‑run score drop to 24, you’ll want to prioritize recovery before Thursday’s VO₂max‑type quality to avoid compounding the fatigue.
+  - 🧠 The three 10‑minute threshold reps were essentially on target for the first two intervals (5:34 / 5:33 min/km) but slipped to 5:40 min/km in the third, matching the –5.9 % pace‑efficiency drift and a steady HR rise from 161 to 168 bpm. Stamina fell from 99 % to 61 % and the training‑effect report shows only lactate‑threshold benefit with no anaerobic gain, confirming the session delivered the intended sub‑threshold stimulus but lacked any higher‑intensity load. Your morning readiness was moderate (score 59), yet the post‑run snapshot dropped to 24 with a high acute load (629) and poor recovery‑time rating, suggesting the effort taxed your system more than usual and you may need extra recovery before the next quality day.
 
 ## Next Session
 - **Planned:** Wed, Oct 28 — 6k EZ @ 6:50–7:20 ≤150bpm w/ 5×20s strides; 75s WALK
