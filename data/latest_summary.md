@@ -19,15 +19,12 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision – Proceed as planned (Strength A), but stay ready to dial back the load if you feel unusually heavy or any joint/hip discomfort emerges.**  
+**Decision:** Proceed with today’s planned **Strength A (hip‑extension/power)** session – the moderate readiness score and optimal ACWR suggest you’re recovered enough for a normal strength load.  
 
-**Workout execution – Follow today’s prescribed strength routine (Power/Hip‑Extension):**  
-- Warm‑up: 5 min easy jog or bike + dynamic hip‑mobility drills (leg swings, glute bridges).  
-- Main set: 3‑4 sets of the listed hip‑extension/ power‑movement (e.g., single‑leg RDL, kettlebell swings) at a weight you can control for 8‑12 reps; keep RPE around 6‑7.  
-- Recovery: 60‑90 s rest between sets, longer if heart rate stays elevated > 130 bpm.  
-- Cool‑down: 5 min light cardio + static stretch of hamstrings, glutes, hip flexors.
-
-**Readiness rationale – **Your sleep was solid (7.9 h, score 88) and resting HR is low (57 bpm), indicating good baseline recovery. HRV is a bit low/unbalanced (
+**Workout execution:**  
+- **Warm‑up (≈10 min):** Light jog or brisk walk (5 min) + dynamic hip‑mobility drills (leg swings, world’s greatest stretch, glute bridges).  
+- **Main set:** 3 × 8‑10 reps each of hip‑thrusts, single‑leg Romanian dead‑lifts, and reverse lunges, focusing on explosive drive on the concentric phase; keep rest 60‑90 s between sets.  
+- **Cool‑down (5‑7 min):** Gentle foam‑rolling of glutes/hamstrings and static stretches (pigeon, standing ham
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
