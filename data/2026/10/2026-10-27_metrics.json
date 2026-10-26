@@ -46,7 +46,7 @@
         "feedback": "Good"
       }
     },
-    "ai_analysis": "**Decision** – Proceed with today’s Tuesday sub‑threshold session, but trim the volume by one repeat (e.g., 2 × 8 min instead of 3 × 8 min) if you feel any early fatigue or the heat feels oppressive.\n\n**Workout execution (",
+    "ai_analysis": "**Decision** – Proceed with today’s Tuesday sub‑threshold workout, but trim the volume by one interval (e.g., 2 × 8 min instead of 3) to respect the modest sleep (6.4 h) and the “moderate” readiness score.  \n\n**Execution** – Warm",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {

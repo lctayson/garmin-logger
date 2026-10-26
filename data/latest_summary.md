@@ -22,9 +22,9 @@ If HR hits 168 before about minute 7 of rep 3, ease to about 5:38 and finish the
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s Tuesday sub‑threshold session, but trim the volume by one repeat (e.g., 2 × 8 min instead of 3 × 8 min) if you feel any early fatigue or the heat feels oppressive.
+**Decision** – Proceed with today’s Tuesday sub‑threshold workout, but trim the volume by one interval (e.g., 2 × 8 min instead of 3) to respect the modest sleep (6.4 h) and the “moderate” readiness score.  
 
-**Workout execution (
+**Execution** – Warm
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
