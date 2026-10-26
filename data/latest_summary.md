@@ -22,9 +22,9 @@ If HR hits 168 before about minute 7 of rep 3, ease to about 5:38 and finish the
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Sub‑Threshold Tuesday (SUT) session, but keep the intensity a touch easier than usual in case the moderate sleep and “unbalanced” HRV turn into early fatigue.  
+**Decision** – Proceed with today’s Tuesday sub‑threshold interval session, but keep the option to trim one interval or shorten the work if you feel unusually fatigued or overheated.  
 
-**Workout outline** – *Warm‑up*: 12 min easy jog (≈7:30 km⁻¹, HR < 150 bpm) + 4 × 20‑s strides. *Main set*: 3 × 8 min sub‑threshold intervals at 5:20–5:35 km⁻¹ (HR ≈ 158‑168 bpm, RPE ≈ 7‑8) with 2‑min easy jog recovery between reps. *Cool‑down*: 8 min easy jog.
+**Workout outline (as per the plan)** – Warm‑up: 10‑12 min easy jog + 3‑4 short strides. Main set: *
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
