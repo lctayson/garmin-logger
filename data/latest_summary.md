@@ -19,9 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s Monday Strength A, but trim the load (≈10 % lighter or one fewer rep per set) given a moderate readiness score and a low‑HRV “unbalanced” signal.  
+**Decision** – Proceed with today’s planned **Strength A (power/hip‑extension) session**, but keep the load moderate (≈70 % of your recent max) and be ready to cut a set or drop weight if you feel unusually fatigued or your heart rate stays high after the warm‑up.
 
-**Execution** – Warm‑up: 5‑10 min easy jog or bike + dynamic hip mobility (leg swings, hip circles, walking lunges). Main set (
+**Workout execution** – 1) **Warm‑up (10 min):** light cardio (e.g., 5 min easy jog or bike) + dynamic hip‑mobility drills (leg swings, walking lunges, glute bridges).  
+2) **Main set:** 3‑4 core hip‑extension moves (e.g., hip thrusts, single‑leg Romanian dead‑lifts, kettlebell swings, step‑ups). Aim for 3 × 8‑10 reps each, controlled tempo, focus on power output rather than max load.  
+3) **Rest intervals:** 60‑90 s between sets, enough to
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
