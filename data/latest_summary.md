@@ -16,7 +16,7 @@
 - **Mon Strength A** — 0.0km · 27:30 · HR 103/139 max
   - TE: Aerobic Base · aerobic 0.6 · anaerobic 0.1
   - Readiness 67 → 67 (Listen To Your Body) · Recovery 0h
-  - 🧠 The 27‑minute Strength A session delivered a modest aerobic stimulus (Aerobic TE 0.6, “MINOR_AEROBIC_BENEFIT”) and essentially no anaerobic load, matching the low overall training load of 9.8 and a slight body‑battery dip (‑3). Your morning readiness was “Moderate” (score 67) despite a strong sleep score (88) and a low resting HR (57 bpm), suggesting you’re not overly fatigued but should keep the day’s intensity light. Given the low cardiovascular demand, today’s effort fits the prescribed strength work for the bridge phase without jeopardizing recovery for tomorrow’s sub‑threshold run.
+  - 🧠 Your strength‑A session was low‑impact as intended, delivering a minor aerobic stimulus (aerobic TE 0.6, “MINOR_AEROBIC_BENEFIT”) with negligible anaerobic load (0.10, “NO_ANAEROBIC_BENEFIT”) and a modest body‑battery dip of –3. The acute load rose only from 447 to 459, keeping the ACWR at 97 % (still in the “Good” zone). With a morning readiness score of 67 (moderate) and an excellent sleep score (88), today’s load should be comfortably recoverable and not compromise the upcoming Tuesday sub‑threshold run. No red flags appear in the data.
 
 ## Next Session
 - **Planned:** Tue, Oct 27 — 9k as 3×10min SUT @ 5:25–5:33; 2min walk-jog ≤168bpm
