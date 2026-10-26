@@ -46,11 +46,11 @@
         "feedback": "Good"
       }
     },
-    "ai_analysis": "**Decision** – Proceed with today’s Tuesday sub‑threshold interval session, but keep the option to trim one interval or shorten the work if you feel unusually fatigued or overheated.  \n\n**Workout outline (as per the plan)** – Warm‑up: 10‑12 min easy jog + 3‑4 short strides. Main set: *",
+    "ai_analysis": "**Decision** – Proceed with today’s Tuesday sub‑threshold session, but trim the volume by one repeat (e.g., 2 × 8 min instead of 3 × 8 min) if you feel any early fatigue or the heat feels oppressive.\n\n**Workout execution (",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
-    "steps": 43
+    "steps": 495
   },
   "sleep": {
     "deep_h": 0.68,
@@ -912,7 +912,7 @@
       [
         "2026-10-27",
         47,
-        1,
+        9,
         89,
         42
       ]

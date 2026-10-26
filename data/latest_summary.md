@@ -22,9 +22,9 @@ If HR hits 168 before about minute 7 of rep 3, ease to about 5:38 and finish the
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s Tuesday sub‑threshold interval session, but keep the option to trim one interval or shorten the work if you feel unusually fatigued or overheated.  
+**Decision** – Proceed with today’s Tuesday sub‑threshold session, but trim the volume by one repeat (e.g., 2 × 8 min instead of 3 × 8 min) if you feel any early fatigue or the heat feels oppressive.
 
-**Workout outline (as per the plan)** – Warm‑up: 10‑12 min easy jog + 3‑4 short strides. Main set: *
+**Workout execution (
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
