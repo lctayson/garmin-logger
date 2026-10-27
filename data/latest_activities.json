@@ -570,7 +570,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The three 10‑minute threshold reps were mostly on tempo: the first two at 5:33–5:34 /km sit inside the prescribed 5:20‑5:35 /km window, while the third slipped to 5:40 /km with a –5.9 % pace‑efficiency drift and HR climbing from 161 to 168 bpm, indicating the expected fatigue accumulation (stamina fell from 99 % to 61 %). The training‑effect scores (high aerobic 4.3, negligible anaerobic 0.6) confirm the session delivered the intended lactate‑threshold stimulus without anaerobic overload. Morning readiness was moderate (score 59), and the post‑run drop to 24 reflects the acute load rather than a chronic issue, so recovery focus is appropriate.",
+      "ai_analysis": "Your three 10‑minute threshold reps hit the prescribed 5:20‑5:35 /km range for the first two intervals (5:34 and 5:33) but slipped to 5:40 on the third, matching the –5.9 % pace‑efficiency drift and a 7 bpm rise in average HR (161 → 168 bpm) across reps. Stamina fell from 99 % to 61 % and the training‑effect shows a strong lactate‑threshold stimulus (aerobic 4.3) with essentially no anaerobic load, which is appropriate for a Thursday VO2/threshold day. Your morning readiness was moderate (score 59), but the post‑run snapshot dropped to 24 with a high acute load (629) and a “poor” recovery‑time factor (≈34 %), signalling that today’s effort will demand extra recovery before the next hard session.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
