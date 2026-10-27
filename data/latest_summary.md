@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -5.9% · HR +7bpm
   - MS: 5.36k @ 5:36 165bpm 0.99m 180spm 247ms 8.2cm 308w
   - Readiness 59 → 24 (Time To Slow Down) · Recovery 1d 19h 12m
-  - 🧠 The first two 10‑minute reps hit the prescribed threshold zone (5:33–5:34 /km) but the third slowed to 5:40 /km, reflecting a -5.9 % pace drift across the set. HR rose from 161 bpm in rep 1 to 168 bpm in rep 3 (Δ +7 bpm) while stamina fell from 99 % to 61 %, consistent with the observed fatigue and the modest negative drift. Your morning readiness was moderate (score 59), yet post‑run readiness dropped to 24 and recovery‑time metrics are flagged “Poor,” indicating you’ll need ample recovery before the next quality session.
+  - 🧠 The three 10‑minute threshold reps were executed close to the prescribed 5:20‑5:35 /km zone, with the first two at 5:33‑5:34 /km and a modest slowdown to 5:40 /km in the third while heart rate climbed from 161 bpm to 168 bpm, reflecting a small efficiency drift (‑5.9 %). Stamina fell from 99 % to 61 % and the lactate‑threshold training effect was high (4.3), confirming a solid aerobic stimulus, but the lack of anaerobic benefit aligns with the session’s threshold focus. Your morning readiness was only moderate (score 59) and dropped sharply post‑run, so today’s load (204 AU) suggests you should prioritize recovery before the next quality day.
 
 ## Next Session
 - **Planned:** Wed, Oct 28 — 6k EZ @ 6:50–7:20 ≤150bpm w/ 5×20s strides; 75s WALK
