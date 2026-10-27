@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -5.9% · HR +7bpm
   - MS: 5.36k @ 5:36 165bpm 0.99m 180spm 247ms 8.2cm 308w
   - Readiness 59 → 24 (Time To Slow Down) · Recovery 1d 19h 12m
-  - 🧠 The three 10‑min threshold reps averaged 5:36 /km, with the first two (5:34, 5:33) within the prescribed 5:20‑5:35 /km range but the third slowed to
+  - 🧠 The first two 10‑minute reps hit the prescribed threshold zone (5:33–5:34 /km) but the third slowed to 5:40 /km, reflecting a -5.9 % pace drift across the set. HR rose from 161 bpm in rep 1 to 168 bpm in rep 3 (Δ +7 bpm) while stamina fell from 99 % to 61 %, consistent with the observed fatigue and the modest negative drift. Your morning readiness was moderate (score 59), yet post‑run readiness dropped to 24 and recovery‑time metrics are flagged “Poor,” indicating you’ll need ample recovery before the next quality session.
 
 ## Next Session
 - **Planned:** Wed, Oct 28 — 6k EZ @ 6:50–7:20 ≤150bpm w/ 5×20s strides; 75s WALK
