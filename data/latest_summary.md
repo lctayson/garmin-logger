@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -5.9% · HR +7bpm
   - MS: 5.36k @ 5:36 165bpm 0.99m 180spm 247ms 8.2cm 308w
   - Readiness 59 → 24 (Time To Slow Down) · Recovery 1d 19h 12m
-  - 🧠 The three 10‑min threshold reps were run at 5:34, 5:33 and 5:40 /km (average 5:36), staying inside the sub‑threshold zone, but the final rep slowed by ~7 s as heart rate climbed from 161 to 168 bpm—mirrored by a –5.9 % pace‑efficiency drift and a +7 bpm HR delta across the set. Stamina fell from 99 % to
+  - 🧠 The three 10‑min threshold reps averaged 5:36 /km, with the first two (5:34, 5:33) within the prescribed 5:20‑5:35 /km range but the third slowed to
 
 ## Next Session
 - **Planned:** Wed, Oct 28 — 6k EZ @ 6:50–7:20 ≤150bpm w/ 5×20s strides; 75s WALK

@@ -570,7 +570,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The three 10‑min threshold reps were run at 5:34, 5:33 and 5:40 /km (average 5:36), staying inside the sub‑threshold zone, but the final rep slowed by ~7 s as heart rate climbed from 161 to 168 bpm—mirrored by a –5.9 % pace‑efficiency drift and a +7 bpm HR delta across the set. Stamina fell from 99 % to",
+      "ai_analysis": "The three 10‑min threshold reps averaged 5:36 /km, with the first two (5:34, 5:33) within the prescribed 5:20‑5:35 /km range but the third slowed to",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
