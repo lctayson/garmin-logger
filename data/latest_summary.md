@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -5.9% · HR +7bpm
   - MS: 5.36k @ 5:36 165bpm 0.99m 180spm 247ms 8.2cm 308w
   - Readiness 59 → 24 (Time To Slow Down) · Recovery 1d 19h 12m
-  - 🧠 The three 10‑minute threshold reps were executed at 5:34, 5:33 and 5:40 /km, with the last interval slipping 5‑6 % slower (pace_ef_drift ‑5.9 %) while heart rate rose from 161 bpm to 168 bpm, indicating a clear fatigue‑driven deceleration rather than a pacing error. The training effect reflects a strong lactate‑threshold stimulus (aerobic 4.3) and virtually no anaerobic benefit, which aligns with the session’s purpose. Although your morning readiness was “moderate” (score 59), the post‑run drop to 24, a –16 body‑battery impact, and stamina falling to 61 % suggest you’ll need ample recovery before Thursday’s VO₂‑max quality workout.
+  - 🧠 The three 10‑min threshold reps were run at 5:34, 5:33 and 5:40 /km (average 5:36), staying inside the sub‑threshold zone, but the final rep slowed by ~7 s as heart rate climbed from 161 to 168 bpm—mirrored by a –5.9 % pace‑efficiency drift and a +7 bpm HR delta across the set. Stamina fell from 99 % to
 
 ## Next Session
 - **Planned:** Wed, Oct 28 — 6k EZ @ 6:50–7:20 ≤150bpm w/ 5×20s strides; 75s WALK
