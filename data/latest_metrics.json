@@ -46,7 +46,7 @@
         "feedback": "Good"
       }
     },
-    "ai_analysis": "**Decision** – Proceed with today’s scheduled Wednesday easy run (plus any listed strides). Keep the session short‑to‑moderate; if you feel unusually fatigued, trim the distance or skip the strides.\n\n**Workout execution** – - Warm‑up: 10‑15 min easy jog in the Recovery/Easy zone (7:10‑7:15 /km, HR ≤ 155 bpm) plus dynamic leg drills.  \n- Main set: run the prescribed easy‑run distance at Easy aerobic pace (≈6:40‑7:15 /km, HR ≈ 145‑155 bpm).  \n- Strides (if programmed): 6 × 100 m strides, building up to ~90 % effort, with 30‑45 s easy jog recovery between each.  \n- Cool‑down: 5‑10 min very easy jog (Recovery zone) and gentle stretch.\n\n**Readiness rationale** – Sleep was only 6 h (moderate score) and",
+    "ai_analysis": "**Decision**  \n- Proceed, but keep today’s effort easy – treat it as a recovery run and skip or shorten the stride portion if you feel any residual fatigue.\n\n**Workout execution (Wednesday – easy + optional strides)**  \n- **Warm‑up:** 10‑15 min easy jog (zone 2, HR ≈",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
