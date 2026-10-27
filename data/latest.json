@@ -117,7 +117,7 @@
       "sleep_history_adjustment": "Decreasing",
       "hrv_adjustment": "Increasing",
       "nap_adjustment": "No Change",
-      "next_need_hours": 7.33
+      "next_need_hours": 7.0
     },
     "previous_day_nap": null
   },
@@ -142,7 +142,14 @@
       "rem": 0.28,
       "awake": 0.18
     },
-    "total_steps": 11774
+    "total_steps": 12457,
+    "naps": [
+      {
+        "start": "2026-10-27T07:50:00",
+        "end": "2026-10-27T08:26:00",
+        "duration_min": 36.0
+      }
+    ]
   },
   "training_status": {
     "status": "Maintaining 2",
@@ -985,10 +992,10 @@
     },
     {
       "date": "2026-10-27",
-      "charged": 48,
-      "drained": 37,
+      "charged": 50,
+      "drained": 78,
       "high": 89,
-      "low": 42
+      "low": 14
     }
   ],
   "activities": [
