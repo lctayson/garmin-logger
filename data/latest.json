@@ -109,7 +109,7 @@
       "rem": 0.78,
       "awake": 0.4
     },
-    "total_steps": 8203,
+    "total_steps": 8250,
     "naps": [
       {
         "start": "2026-10-27T07:50:00",
@@ -961,7 +961,7 @@
   ],
   "activities": [
     {
-      "name": "Malolos - Run + Strides/Hills",
+      "name": "Malolos - Run + Strides",
       "activity_id": 24875503395,
       "type": "running",
       "distance": 6.04,

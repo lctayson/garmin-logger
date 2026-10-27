@@ -13,11 +13,10 @@
 
 ## Today's Workout
 
-- **Malolos - Run + Strides/Hills** — 6.04km · 45:28 · 7:31/km · HR 142/158 max
+- **Malolos - Run + Strides** — 6.04km · 45:28 · 7:31/km · HR 142/158 max
   - TE: Aerobic Base · aerobic 3 · anaerobic 1
   - MS: 5.05k @ 7:19 142bpm 0.81m 169spm 275ms 7.9cm 240w
   - Readiness 48 → 46 (Find Time To Relax) · Recovery 23h 33m
-  - 🧠 The six work reps stayed between 7:37 /km and 6:59 /km (average 7:16 /km) while heart rate rose steadily from 125 bpm to 152 bpm, indicating a gradual increase in effort that remained in the easy‑aerobic range rather than reaching the VO₂‑max zone prescribed for Thursday quality work. Stamina dipped from 98 % at the start to 82 % (low of 73 %) and the body‑battery impact was –11, consistent with the low readiness score of 48 and the modest aerobic training effect (AEROBIC_BASE 3.0). Given today’s low readiness, the session’s execution was appropriate—maintaining easy‑pace effort rather than forcing higher intensity that the data suggest the body was not prepared for.
 
 ## Next Session
 - **Planned:** Thu, Oct 29 — 6k as 6×75s @ 3–5K (5:00-5:12) effort; 90s walk-jog
