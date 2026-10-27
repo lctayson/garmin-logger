@@ -570,7 +570,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The three 10‑minute threshold reps were run at 5:34, 5:33 and 5:40 /km, so the first two fell within the prescribed 5:20–5:35 /km threshold range while the final rep slipped about 5 seconds slower as pace‑efficiency drift fell –5.9 % and HR rose from 161 to 168 bpm. The stamina drop from 99 % to",
+      "ai_analysis": "The three 10‑min threshold reps were mostly on target – the first two at 5:34 and 5:33 /km sit inside the prescribed 5:20‑5:35 /km window, while the third slowed to 5:40 /km, matching the –5.9 %",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
