@@ -570,7 +570,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The three 10‑minute threshold reps were largely on‑tempo (5:34 and 5:33 /km sit within the prescribed 5:20‑5:35 /km range), but the final rep slowed to 5:40 /km as HR climbed from 161 to 168 bpm, reflected in the –5.9 % pace‑efficiency drift and a –6.3 % power‑efficiency drop. Stamina fell from 99 % to 61 % over the set, indicating noticeable fatigue despite the overall moderate readiness score of 59 in the morning. Post‑run metrics show a sharp readiness drop to 24 and a “poor” recovery‑time factor (≈34 % of needed recovery), suggesting the session added a substantial acute load (204.7) that will require extended recovery before the next quality workout.",
+      "ai_analysis": "Your three 10‑minute threshold reps were essentially on target (5:34 and 5:33 km⁻¹) but the last rep slipped to 5:40 km⁻¹, matching the –5.9 % pace‑efficiency drift and the 7 bpm HR rise from 161 → 168 bpm, indicating fatigue setting in toward the end of the set. The steep stamina drop from 99 % to 61 % and a training‑effect score of 4.3 aerobic confirm a solid lactate‑threshold stimulus, though the “NO ANAEROBIC BENEFIT” label shows you didn’t hit VO₂‑max intensity as expected for Thursday quality work. With a moderate morning readiness (score 59) but a post‑run readiness of 24 and “Poor” recovery‑time percent, be cautious about stacking another hard session before you’ve fully recovered.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
