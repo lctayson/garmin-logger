@@ -11,35 +11,31 @@
 - ⚠️ **Limiter:** Sleep History (58%)
 - **Also soft:** Stress History, Sleep Score
 
-## Today's Session
-- **Planned:** Thu, Oct 29 — 6k as 6×75s @ 3–5K (5:00-5:12) effort; 90s walk-jog
-Run reps 1-2 at the slow end (about 5:10-5:12) and let the rest settle around 5:05-5:08.
-It’s 3-5K effort, not a sprint, so don’t chase 5:00
+## Today's Workout
+
+- **Malolos - 6 x 75s 3-5K Reps** — 6.03km · 42:02 · 6:58/km · HR 144/165 max
+  - TE: Tempo (High Aerobic) · aerobic 3.3 · anaerobic 1.7
+  - Intervals: 6 work reps · pace drift -4.1% · HR +12bpm
+  - MS: 1.51k @ 4:58 154bpm 1.07m 185spm 234ms 8.2cm 340w
+  - Readiness 65 → 49 (Find Time To Relax) · Recovery 22h 18m
+  - 🧠 The six 75‑second reps averaged a 4:58 /km pace (range 4:53‑5:04), which sits squarely inside the VO2‑max zone prescribed for Thursday quality work, and the –4.1 % pace drift shows the reps actually got a bit faster rather than fading. Heart rate rose steadily from 146 bpm in the first rep to 158 bpm in the last, matching the expected progressive load for this interval length, while stamina fell from 99 % to 76 % (minimum 62 %)—a normal dip given the intensity and early‑morning heat. Morning readiness was moderate (score 65), and the post‑run drop to 49 reflects the acute load (126 AU) rather than a problem with execution. Overall, the session delivered a solid VO2‑max stimulus without any clear execution shortfall.
+
+## Next Session
+- **Planned:** Fri, Oct 30 — REST + Core
 - **Recommendation:** Proceed as planned
 - **Reason:** Available readiness, recovery-trend, and load indicators do not show a combination of major warnings.
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
-### 🧠 AI Coaching Guidance
-
-**Decision** – Proceed with today’s Thursday quality session (VO₂max/short‑interval work) but keep the intensity
-
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
-
-## Latest Activity
-
-_Most recent activity (2026-10-28):_
-- **Malolos - Run + Strides** — 6.04km · 45:28 · 7:31/km · HR 142/158 max
-  - TE: Aerobic Base · aerobic 3 · anaerobic 1
-  - MS: 5.05k @ 7:19 142bpm 0.81m 169spm 275ms 7.9cm 240w
 
 ## Load & Trends
 
-- **ACWR:** 0.9 (Optimal) — acute 529 / chronic 547 (chronic range 437.6–820.5)
-- **7-day volume:** 32.12km vs 28-day avg 36.6km (-12%)
-- **Running tolerance:** 62.4% (Medium) — 32.1km of 63.8km weekly cap, acute impact load 39.8
-- **Aerobic Low:** 913.4 (target 649–1082 — in range)
-- ⚠️ **Aerobic High:** 1085 (target 649–1082 — +3 over)
-- ⚠️ **Anaerobic:** 39.2 (target 86–346 — -47 under)
+- **ACWR:** 1.1 (Optimal) — acute 690 / chronic 576 (chronic range 460.8–864)
+- **7-day volume:** 38.15km vs 28-day avg 38.1km (+0%)
+- **Running tolerance:** 75.1% (Medium) — 38.1km of 63.8km weekly cap, acute impact load 47.9
+- **Aerobic Low:** 913.4 (target 816–1360 — in range)
+- **Aerobic High:** 1190.8 (target 816–1360 — in range)
+- ⚠️ **Anaerobic:** 59.9 (target 108–435 — -48 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
 - ⚠️ **Sleep (7d avg):** 6h44, 4/7 nights below need, trending flat
 - **RHR (7d avg):** 58.0, trending down
@@ -55,18 +51,18 @@ _Most recent activity (2026-10-28):_
 | M | Strength A | 27:30 | 10 |
 | T | 3x10min Thr | 9k · 59:37 | 205 |
 | W | Run + Strides/Hills | 6k · 45:28 | 86 |
-| T | Rest | — | — |
+| T | 6x75s 3-5K Reps | 6k · 42:02 | 126 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 6 | 32.12 km | 4:47:21 | 481.4 |
+| 7 | 38.15 km | 5:29:23 | 607.8 |
 
 ## Recent 4 Weeks
-_Average weekly running: 36.6 km_
+_Average weekly running: 38.1 km_
 
 | Week | Runs | Others | Load |
 |:---|---:|---:|---:|
-| Oct 23–29 | 32.12k | 58 min | 481.4 |
+| Oct 23–29 | 38.15k | 58 min | 607.8 |
 | Oct 16–22 | 39.14k | 25 min | 522.5 |
 | Oct 9–15 | 39.13k | 40 min | 587.1 |
 | Oct 2–8 | 36.14k | 46 min | 521.5 |
