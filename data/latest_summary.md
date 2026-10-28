@@ -21,11 +21,7 @@ It’s 3-5K effort, not a sprint, so don’t chase 5:00
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s Thursday quality session (VO₂‑max/short‑interval workout) as prescribed.  
-
-**Execution (follow the plan exactly)** – - Warm‑up: the duration/intensity listed in your plan (e.g., easy jog + a few strides).  
-- Main set: perform the interval count, length and target pace/effort exactly as written (e.g., the prescribed 3‑5 × 3‑min VO₂ intervals at ~4:55 /km with the recovery jog/recovery time your plan specifies).  
--
+**Decision** – Proceed with today’s Thursday quality session (VO₂max/short‑interval work) but keep the intensity
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
