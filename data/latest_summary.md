@@ -21,13 +21,11 @@ It’s 3-5K effort, not a sprint, so don’t chase 5:00
 
 ### 🧠 AI Coaching Guidance
 
-**Decision – go ahead, but trim the volume**  
-Your overall readiness is moderate (score 65) with excellent HRV, low resting HR (59 bpm) and optimal ACWR (0.9). The only mild red flag is a short night of sleep (≈6 h) and a “Balance Stress & Recovery” feedback. That’s enough to shave one interval off a VO2‑max session without compromising its stimulus.
+**Decision** – Proceed with today’s Thursday quality session (VO₂‑max/short‑interval workout) as prescribed.  
 
-**Planned Thursday quality (VO2‑max) – adjusted**  
-- **Warm‑up**: 10 min easy (≈7:30 / km) → 4 × 80 m strides, gradually increasing to sub‑threshold HR.  
-- **Main set**: **5 × 800 m** at VO2‑max pace (≈4:55 / km, ~170‑176 bpm) with **2 min jog** recovery between reps (instead of the usual 6).  
-- **Cool‑down**: 8‑10 min
+**Execution (follow the plan exactly)** – - Warm‑up: the duration/intensity listed in your plan (e.g., easy jog + a few strides).  
+- Main set: perform the interval count, length and target pace/effort exactly as written (e.g., the prescribed 3‑5 × 3‑min VO₂ intervals at ~4:55 /km with the recovery jog/recovery time your plan specifies).  
+-
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
