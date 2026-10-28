@@ -53,7 +53,7 @@
       }
     ]
   },
-  "health": {"steps": 8805},
+  "health": {"steps": 8812},
   "sleep": {
     "deep_h": 0.73,
     "light_h": 4.58,
