@@ -18,7 +18,7 @@
   - Intervals: 6 work reps · pace drift -4.1% · HR +12bpm
   - MS: 1.51k @ 4:58 154bpm 1.07m 185spm 234ms 8.2cm 340w
   - Readiness 65 → 49 (Find Time To Relax) · Recovery 22h 18m
-  - 🧠 The six 75‑second reps were executed at 4:53–5:04 /km (average 4:58 /km), well below the overall 6:58 /km because warm‑up and cooldown dilute the average. Across the set the pace‑efficiency drift was –4.1 % while heart‑rate rose 12 bpm and power‑efficiency drift –4.5 %, indicating a genuine VO₂‑max stimulus with modest cardiovascular cost despite the heat. Your stamina fell from 99 % to 76 % (lowest 62 %), which is typical for this intensity, and the post‑run readiness dip to 49 reflects the acute load rather than a chronic issue.
+  - 🧠 Your six 75‑second reps delivered a clear progressive stimulus, dropping from 5:04 to 4:53 /km (average 4:58 /km) and climbing HR from 146 to 158 bpm, which lands squarely in the VO2max range rather than the sub‑threshold zone prescribed for Thursday quality work. The ‑4.1 % pace‑efficiency drift and ‑4.5 % power‑efficiency drift show a modest gain in effort per rep, while stamina fell from 99 % to 76 % (min 62 %) indicating substantial fatigue accumulation. The aerobic training effect (3.3) and a small anaerobic contribution (1.7) align with the intended intensity, but the post‑run readiness drop to 49 suggests you’ll need extra recovery before the next hard session.
 
 ## Next Session
 - **Planned:** Fri, Oct 30 — REST + Core
