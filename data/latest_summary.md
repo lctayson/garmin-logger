@@ -18,7 +18,7 @@
   - Intervals: 6 work reps · pace drift -4.1% · HR +12bpm
   - MS: 1.51k @ 4:58 154bpm 1.07m 185spm 234ms 8.2cm 340w
   - Readiness 65 → 49 (Find Time To Relax) · Recovery 22h 18m
-  - 🧠 The six 75‑second reps averaged 4:58 /km, comfortably inside the VO2max interval window (≈4:50‑5:15 /km) for Thursday quality work, and the –4.1 % pace drift indicates the reps actually got faster rather than slowing down. Heart‑rate rose steadily from 146 bpm in the first rep to 158 bpm in the last, aligning with the expected aerobic strain and supporting the modest anaerobic effect (TEA ≈ 1.7). Stamina fell from 99 % to 76 % (low of 62 %) and the post‑run recovery score dropped to ~64 % of baseline, reflecting
+  - 🧠 The six 75‑second reps were run in a tight 4:53‑5:04 /km window, ending slightly quicker than they began, which matches the –4.1 % pace‑efficiency drift and shows the intended VO2‑max stimulus was delivered. Heart‑rate rose steadily from 146 to 158 bpm (≈12 bpm Δ), confirming the expected cardiovascular load as the reps progressed, while stamina fell from 99 % to 76 % (minimum 62 %) indicating accumulating fatigue but no alarming collapse. Morning readiness was moderate (score 65) and the acute load after the session jumped to 690, so consider a lighter recovery day before the next Thursday quality workout.
 
 ## Next Session
 - **Planned:** Fri, Oct 30 — REST + Core
