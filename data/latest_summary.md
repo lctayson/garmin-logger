@@ -18,7 +18,7 @@
   - Intervals: 6 work reps · pace drift -4.1% · HR +12bpm
   - MS: 1.51k @ 4:58 154bpm 1.07m 185spm 234ms 8.2cm 340w
   - Readiness 65 → 49 (Find Time To Relax) · Recovery 22h 18m
-  - 🧠 The six 75‑second reps averaged 4:58 /km (range 4:53–5:04), which sits squarely in the prescribed VO2‑max interval window (≈4:50–5:15 /km) for Thursday quality work, and the –4.1 % pace‑efficiency drift shows a modest speed gain across the set. Heart‑rate rose from 146 bpm in the first rep to 158 bpm in the last, matching the expected HR elevation for VO2‑max intensity, while the stamina metric fell from 99 % to 76 % (min 62 %), indicating normal fatigue for this short‑interval load. Your morning readiness was “Moderate” (score 65); the session’s load (126 AU, anaerobic ≈1.7 T) was appropriate given that readiness, though the post‑exercise readiness dip to 49 signals a need for good recovery before the next hard day.
+  - 🧠 The six 75‑second reps averaged 4:58 /km (range 4:53–5:04), squarely inside the prescribed VO₂‑max zone (≈4:50–5:15 /km) and even got 1–2 seconds faster in the later reps, reflected by the –4.1 % pace‑efficiency drift. Heart rate rose steadily from 146 bpm to 158 bpm (Δ 12 bpm) while stamina fell from 99 % to 76 % (minimum 62 %), indicating a typical anaerobic load without excessive cardiovascular strain. The training‑effect scores (aerobic 3.3, anaerobic 1.7) confirm a solid aerobic stimulus with a modest VO₂‑max benefit, matching the Thursday quality session’s intent. Morning readiness was moderate (score 65); the post‑run drop to 49 is expected after a hard interval day and does not alone signal a recovery problem.
 
 ## Next Session
 - **Planned:** Fri, Oct 30 — REST + Core
