@@ -39,6 +39,18 @@
         "recovery_time_change": "NO_CHANGE_SLEEP"
       },
       {
+        "timestamp_local": "2026-10-29T08:22:59.0",
+        "context": "UPDATE_REALTIME_VARIABLES",
+        "score": 50,
+        "feedback": "LISTEN_TO_YOUR_BODY",
+        "recovery_minutes": 1262,
+        "acute_load": 690,
+        "factor_overrides": {
+          "recovery_time": {"percent": 66, "feedback": "Moderate"},
+          "acwr": {"percent": 82, "feedback": "Good"}
+        }
+      },
+      {
         "timestamp_local": "2026-10-29T07:06:32.0",
         "context": "AFTER_POST_EXERCISE_RESET",
         "score": 49,

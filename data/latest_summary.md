@@ -18,7 +18,7 @@
   - Intervals: 6 work reps · pace drift -4.1% · HR +12bpm
   - MS: 1.51k @ 4:58 154bpm 1.07m 185spm 234ms 8.2cm 340w
   - Readiness 65 → 49 (Find Time To Relax) · Recovery 22h 18m
-  - 🧠 The six 75‑second reps averaged 4:58 /km, right in the prescribed VO2max window (≈4:50–5:15 /km), and heart rate climbed steadily from 146 bpm to 158 bpm, confirming the intended intensity. A ‑4.1 % pace‑efficiency drift reflects the modest speed gain across the set (fastest rep 4:53 /km), while the stamina metric fell from 99 % to 76 % (min 62 %) and body‑battery dropped 10 points, indicating the session was taxing but within expected load (126 AU). With a morning readiness of 65 (moderate) and a post‑run dip to 49, the fatigue aligns with a solid Thursday quality workout in the bridge phase and does not signal any acute recovery issue.
+  - 🧠 The six 75‑second reps averaged 4:58 /km, comfortably inside the prescribed VO2max range (≈4:50–5:15 /km), and the pace drift was –4.1 % – the reps actually got a bit quicker, not slower. Heart‑rate rose steadily from 146 bpm in the first rep to 158 bpm in the last, matching the expected HR climb for a VO2max effort and supporting the modest 12‑bpm HR delta. Stamina fell from 99 % to 76 % (min 62 %) and the body‑battery impact was –10, indicating a noticeable but manageable fatigue load for a Thursday quality session. Your morning readiness was moderate (score 65), and the post‑run drop to the high‑40s is typical after a hard interval workout; no extra recovery flag is needed beyond your usual Thursday protocol.
 
 ## Next Session
 - **Planned:** Fri, Oct 30 — REST + Core
