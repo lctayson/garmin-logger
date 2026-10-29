@@ -19,11 +19,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Proceed with today’s scheduled Friday core/hip‑stability strength session – no running is planned. Your readiness score (70 → “Moderate”) is paired with “Well Rested” feedback, balanced HRV and a low resting HR (56 bpm), so you’re in a good state to hit the prescribed strength work.  
+**Decision** – Proceed as scheduled: today is the planned **core/hip‑stability strength session** (no running).  
 
-- **Execution:** Warm‑up 8‑10 min of easy mobility (dynamic lunges, leg swings, glute bridges) and light cardio (slow jog or bike). Follow the plan’s strength A routine (e.g., 3 × 8‑10 hip‑thrusts, 3 × 10‑12 single‑leg deadlifts, 3 × 12‑15 side‑plank holds per side) with 60‑90 s rest between sets. Finish with a brief 5‑min cool‑down of static stretches for the glutes, hamstrings, and hip flexors.  
+**Workout execution** – Warm‑up: 5 min light cardio (e.g., easy jog or bike) + dynamic hip/leg mobility (leg swings, world‑gears). Main set: 3 × 12 min of core/hip circuit (e.g., planks, side‑planks, glute bridges, single‑leg Romanian dead‑lifts, banded clams) with 30 s rest between exercises; aim for RPE ≈ 6–7, keep heart‑rate in the easy‑aerobic band (≤155 bpm). Cool‑down: 5 min gentle stretching focusing on hip flexors, hamstrings, and lower back.  
 
-- **Readiness rationale:** Your sleep (7.4 h, score 80) and HRV (53 ms, “Balanced”) are both above baseline, and the acute‑to‑chronic load ratio is optimal (1.0
+**Readiness rationale** – Sleep (7.4 h, score 80) and HRV (balanced, 53 ms vs 7‑day avg 51 ms) indicate good recovery; resting HR 56 bpm is low, suggesting a rested autonomic state. Load metrics are flat (acute 567 ≈ chronic 562, ACWR 1.0 optimal), so there’s no cumulative fatigue flag. The “moderate” readiness score is driven mainly by the composite algorithm, not by any red‑flag in your key indicators, so a normal strength day is appropriate.  
+
+**In‑session guardrails** – If during the warm‑up your HR spikes > 155 bpm or you feel unusually tight, shorten the cardio warm‑up and add extra mobility. Watch form: any loss of spinal alignment or hip stability warrants dropping the load or switching to a lighter band. Should fatigue set in before the last circuit, cut the volume in half and finish
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
