@@ -19,13 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **core/hip‑stability strength session** (no run).  
+- **Decision:** Proceed with today’s scheduled Friday core/hip‑stability strength session – no running is planned. Your readiness score (70 → “Moderate”) is paired with “Well Rested” feedback, balanced HRV and a low resting HR (56 bpm), so you’re in a good state to hit the prescribed strength work.  
 
-**Workout execution** – Warm‑up: 5‑10 min easy mobility (leg swings, glute bridges, inchworms). Main set: 3 × 8‑12 reps each of single‑leg deadlift, banded clamshells, plank‑variations, and side‑lying hip abductions; keep rest 45‑60 s between sets. Cool‑down: 5 min gentle stretching of hip flexors, hamstrings, and glutes.  
+- **Execution:** Warm‑up 8‑10 min of easy mobility (dynamic lunges, leg swings, glute bridges) and light cardio (slow jog or bike). Follow the plan’s strength A routine (e.g., 3 × 8‑10 hip‑thrusts, 3 × 10‑12 single‑leg deadlifts, 3 × 12‑15 side‑plank holds per side) with 60‑90 s rest between sets. Finish with a brief 5‑min cool‑down of static stretches for the glutes, hamstrings, and hip flexors.  
 
-**Readiness rationale** – Sleep 7.4 h (good) and sleep‑score 80, HRV balanced (53 ms vs 7‑day 51 ms), resting HR 56 bpm (low, indicating good recovery), and ACWR = 1.0 (optimal) all point to a well‑recovered state. The “Moderate” readiness score is driven mainly by the composite algorithm; the underlying metrics are all in the green, so there’s no reason to skip or downgrade the session.  
-
-**In‑session guardrails** – Watch for a sudden spike in perceived effort or a rapid HR rise above 150 bpm during the warm‑up; if form deteriorates or fatigue feels out‑of‑proportion, cut the set count by ½ or replace the last exercise with a lighter activation (e.g., body‑weight glute bridges). Stay
+- **Readiness rationale:** Your sleep (7.4 h, score 80) and HRV (53 ms, “Balanced”) are both above baseline, and the acute‑to‑chronic load ratio is optimal (1.0
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 

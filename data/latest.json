@@ -909,7 +909,7 @@
     {
       "date": "2026-10-30",
       "charged": 71,
-      "drained": 0,
+      "drained": 1,
       "high": 89,
       "low": 18
     }
