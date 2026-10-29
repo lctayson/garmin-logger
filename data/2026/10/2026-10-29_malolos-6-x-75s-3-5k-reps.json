@@ -750,7 +750,7 @@
         ]
       },
       "lap_count": 19,
-      "ai_analysis": "The six 75‑second reps averaged a 4:58 /km pace (range 4:53–5:04), which sits comfortably inside the prescribed VO2max interval window (≈4:50–5:15 /km) and actually drifted 4 % faster across the set, indicating you maintained or increased intensity despite the heat. Heart‑rate rose by ~12 bpm from the first to the last rep, ending at 158 bpm—still well below your LTHR of 171 bpm—so the aerobic load was strong without crossing into threshold territory, reflected by a modest anaerobic training effect of 1.7. Stamina fell from 99 % to 76 % (minimum 62 %), which aligns with the expected fatigue from a VO2max session and matches the observed negative pace drift. Your morning readiness was “Moderate” (score 65) and the post‑exercise snapshot dropped to 49, a typical acute response given the load (126 AU) and the modest body‑battery impact (‑10).",
+      "ai_analysis": "Your six 75‑second reps averaged 4:58 /km, comfortably inside the VO2‑max window (≈4:50–5:15 /km) prescribed for Thursday quality work, and the –4.1 % pace drift shows you actually got faster, ending at 4:53 /km rather than slowing. Heart‑rate rose 12 bpm across the set (146 → 158 bpm) and stamina fell from 99 % to 76 % (minimum 62 %), confirming a solid anaerobic stimulus (anaerobic TE ≈ 1.7) without excessive fatigue. Your morning readiness was moderate (score 65), and the post‑exercise drop to 49 reflects the acute load (acute load 690, load 126.4) rather than a problem with recovery. Overall, the session hit the intended intensity and progression for the current bridge phase.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
