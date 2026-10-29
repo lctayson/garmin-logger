@@ -19,11 +19,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned Friday core/hip‑stability strength session; the readiness profile is solid enough to handle moderate load.  
+**Decision** – Proceed with today’s scheduled **core/hip‑stability strength session** (no run).  
 
-**Workout execution (as per your plan)** – Warm‑up 5 min easy jog or dynamic mobility (leg swings, hip circles). Follow the scheduled strength routine (e.g., 2–3 × 10–12 reps of hip thrusts, glute bridges, clamshells, single‑leg dead‑lifts, plus 2 × 30‑s planks). Finish with 5 min light stretching/foam‑roll. *(If the exact exercise list isn’t in front of you, use the same movements you’ve used in previous Friday sessions.)*  
+**Workout execution** – Warm‑up: 5‑10 min easy mobility (leg swings, glute bridges, inchworms). Main set: 3 × 8‑12 reps each of single‑leg deadlift, banded clamshells, plank‑variations, and side‑lying hip abductions; keep rest 45‑60 s between sets. Cool‑down: 5 min gentle stretching of hip flexors, hamstrings, and glutes.  
 
-**Readiness rationale** – Score 70 (moderate) but “Well Rested” feedback, HRV balanced (53 ms vs 7‑day avg 51 ms), low resting HR
+**Readiness rationale** – Sleep 7.4 h (good) and sleep‑score 80, HRV balanced (53 ms vs 7‑day 51 ms), resting HR 56 bpm (low, indicating good recovery), and ACWR = 1.0 (optimal) all point to a well‑recovered state. The “Moderate” readiness score is driven mainly by the composite algorithm; the underlying metrics are all in the green, so there’s no reason to skip or downgrade the session.  
+
+**In‑session guardrails** – Watch for a sudden spike in perceived effort or a rapid HR rise above 150 bpm during the warm‑up; if form deteriorates or fatigue feels out‑of‑proportion, cut the set count by ½ or replace the last exercise with a lighter activation (e.g., body‑weight glute bridges). Stay
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
