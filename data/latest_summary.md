@@ -1,8 +1,15 @@
 # Daily Check — 2026-10-30
 
-## Readiness: -/100
+## Readiness: 70/100 (Moderate)
+> Well Rested
 
+- **VO₂max:** 44.6 ml/kg/min (Garmin display: 45)
 - **RHR:** 56 bpm (7d avg: 56.9 bpm, trending down)
+- **HRV:** 53ms (7d avg: 51ms) · within 47–57ms
+- **Sleep:** 7h24 / 7h00 need (0h24 over) · score 80 · 7d avg 6h43 · 5/7 nights below need
+- **Recovery remaining:** 0h00
+- ⚠️ **Limiter:** Stress History (61%)
+- **Also soft:** Sleep History, Sleep Score
 
 ## Today's Session
 - **Planned:** Fri, Oct 30 — REST + Core
@@ -12,16 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned Friday strength‑/core day. Your resting HR (56 bpm) is low, indicating good autonomic recovery; no other red flags are present.
+**Decision** – Proceed with today’s planned Friday core/hip‑stability strength session; the readiness profile is solid enough to handle moderate load.  
 
-**Workout execution** –   
-- **Warm‑up**: 5 min easy jog or bike + dynamic hip‑mobility drills (leg swings, glute bridges, inchworms).  
-- **Main set**: 3 × circuits of: 12 × single‑leg dead‑lifts, 15 × banded monster‑walks, 20 s plank, 15 × side‑lying clamshells, 30 s rest between circuits. Keep the tempo controlled; focus on hip extension power, not maximal load.  
-- **Cool‑down**: 5 min light stretching of hamstrings, glutes, hip flexors and foam‑roll calves.
+**Workout execution (as per your plan)** – Warm‑up 5 min easy jog or dynamic mobility (leg swings, hip circles). Follow the scheduled strength routine (e.g., 2–3 × 10–12 reps of hip thrusts, glute bridges, clamshells, single‑leg dead‑lifts, plus 2 × 30‑s planks). Finish with 5 min light stretching/foam‑roll. *(If the exact exercise list isn’t in front of you, use the same movements you’ve used in previous Friday sessions.)*  
 
-**Readiness rationale** – A resting HR of 56 bpm is well below your typical baseline (≈60 bpm) and suggests good recovery from recent load. Without sleep or HRV data, we treat this as a neutral‑to‑positive signal; nothing forces a recovery‑only day.
-
-**In‑session guardrails** – Watch for any sudden dip in form, excessive low‑back fatigue, or shoulder/neck tension during the dead‑lifts. If you feel tightness or the HR spikes > 140 bpm (unusual for strength work), cut the load or shorten the circuit. Keep the effort moderate; the goal is quality neuromuscular stimulus, not maximal fatigue.
+**Readiness rationale** – Score 70 (moderate) but “Well Rested” feedback, HRV balanced (53 ms vs 7‑day avg 51 ms), low resting HR
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -36,9 +38,14 @@ _Most recent activity (2026-10-29):_
 
 ## Load & Trends
 
+- **ACWR:** 1.0 (Optimal) — acute 567 / chronic 562 (chronic range 449.6–843)
 - **7-day volume:** 38.15km vs 28-day avg 38.1km (+0%)
 - **Running tolerance:** 63.6% (Medium) — 38.1km of 63.8km weekly cap, acute impact load 40.6
-- ⚠️ **Sleep (7d avg):** 6h37, 5/7 nights below need, trending down
+- **Aerobic Low:** 910.5 (target 816–1360 — in range)
+- **Aerobic High:** 1190.8 (target 816–1360 — in range)
+- ⚠️ **Anaerobic:** 59.9 (target 108–435 — -48 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- ⚠️ **Sleep (7d avg):** 6h43, 5/7 nights below need, trending down
 - **RHR (7d avg):** 56.9, trending down
 - **HRV:** trending up
 
