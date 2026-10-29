@@ -750,7 +750,7 @@
         ]
       },
       "lap_count": 19,
-      "ai_analysis": "Your six 75‑second reps averaged 4:58 /km, comfortably inside the VO2‑max window (≈4:50–5:15 /km) prescribed for Thursday quality work, and the –4.1 % pace drift shows you actually got faster, ending at 4:53 /km rather than slowing. Heart‑rate rose 12 bpm across the set (146 → 158 bpm) and stamina fell from 99 % to 76 % (minimum 62 %), confirming a solid anaerobic stimulus (anaerobic TE ≈ 1.7) without excessive fatigue. Your morning readiness was moderate (score 65), and the post‑exercise drop to 49 reflects the acute load (acute load 690, load 126.4) rather than a problem with recovery. Overall, the session hit the intended intensity and progression for the current bridge phase.",
+      "ai_analysis": "The six 75‑second reps averaged 4:58 /km, right in the prescribed VO2max window (≈4:50–5:15 /km), and heart rate climbed steadily from 146 bpm to 158 bpm, confirming the intended intensity. A ‑4.1 % pace‑efficiency drift reflects the modest speed gain across the set (fastest rep 4:53 /km), while the stamina metric fell from 99 % to 76 % (min 62 %) and body‑battery dropped 10 points, indicating the session was taxing but within expected load (126 AU). With a morning readiness of 65 (moderate) and a post‑run dip to 49, the fatigue aligns with a solid Thursday quality workout in the bridge phase and does not signal any acute recovery issue.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
