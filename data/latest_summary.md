@@ -19,13 +19,16 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed as scheduled: today is the planned **core/hip‑stability strength session** (no running).  
-
-**Workout execution** – Warm‑up: 5 min light cardio (e.g., easy jog or bike) + dynamic hip/leg mobility (leg swings, world‑gears). Main set: 3 × 12 min of core/hip circuit (e.g., planks, side‑planks, glute bridges, single‑leg Romanian dead‑lifts, banded clams) with 30 s rest between exercises; aim for RPE ≈ 6–7, keep heart‑rate in the easy‑aerobic band (≤155 bpm). Cool‑down: 5 min gentle stretching focusing on hip flexors, hamstrings, and lower back.  
-
-**Readiness rationale** – Sleep (7.4 h, score 80) and HRV (balanced, 53 ms vs 7‑day avg 51 ms) indicate good recovery; resting HR 56 bpm is low, suggesting a rested autonomic state. Load metrics are flat (acute 567 ≈ chronic 562, ACWR 1.0 optimal), so there’s no cumulative fatigue flag. The “moderate” readiness score is driven mainly by the composite algorithm, not by any red‑flag in your key indicators, so a normal strength day is appropriate.  
-
-**In‑session guardrails** – If during the warm‑up your HR spikes > 155 bpm or you feel unusually tight, shorten the cardio warm‑up and add extra mobility. Watch form: any loss of spinal alignment or hip stability warrants dropping the load or switching to a lighter band. Should fatigue set in before the last circuit, cut the volume in half and finish
+- **Decision:** Stick with today’s scheduled **core/hip‑stability strength session** – no need to swap for a run or skip the work.  
+- **Workout execution:**  
+  1. **Warm‑up (5 min):** Light jog or brisk walk + dynamic hip/leg drills (leg swings, hip circles, walking lunges).  
+  2. **Main set:** 3 × 10 min circuits of core/hip stability moves (plank variations, side‑lying clamshells, single‑leg bridges, banded monster walks). Keep each exercise at a controlled RPE ≈ 5‑6; rest 60 s between circuits.  
+  3. **Cool‑down (3 min):** Gentle stretch of glutes, hamstrings, hip flexors and deep breathing.  
+- **Readiness rationale:** Your readiness score is “moderate” (70) but every underlying metric is solid – HRV balanced, resting HR 56 bpm (low), sleep 7.4 h with an 80 sleep‑score, and ACWR = 1.0 (optimal). The pattern shows consistent recovery, so the planned strength work is appropriate.  
+- **In‑session guardrails:**  
+  - Watch for any sudden hip or low‑back discomfort; if pain spikes, cut the set or replace the move with a less demanding variation.  
+  - If heart rate spikes unusually high during the warm‑up (well above 150 bpm) or you feel excessive fatigue, shorten the session by dropping the third circuit.  
+  - Early‑morning heat is modest for strength work, but stay hydrated and keep the effort moderate rather than
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
