@@ -19,16 +19,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – ✅ Proceed with today’s scheduled Friday session: core/hip‑stability strength (no running).  
+**Decision** – Proceed with today’s scheduled **Friday Core/Hip‑Stability Strength session** (no running).  
 
-**Execution** –  
-- **Warm‑up**: 5 min easy jog or brisk walk + dynamic hip‑mobility (leg swings, hip circles) + 2 × 30 s glute bridges.  
-- **Main set** (as per the plan): core & hip‑stability circuit – e.g., planks, side‑planks, bird‑dogs, clamshells, single‑leg dead‑lifts; 3 × 12‑15 reps each, 60‑90 s rest between exercises.  
-- **Cool‑down**: 5 min gentle walking + static stretches for hip flexors, glutes, and lower back.  
+**Workout execution** – 1️⃣ Warm‑up: 5‑10 min of dynamic mobility (leg swings, hip circles, body‑weight glute bridges).  
+2️⃣ Main set: follow the prescribed Strength A circuit (e.g., 3 × 12‑15 reps of planks, side‑planks, glute bridges, single‑leg dead‑lifts, clamshells, and hip‑thrusts) with the tempo and rest intervals listed in the plan.  
+3️⃣ Cool‑down: 5 min of static hip and hamstring stretches.  
 
-**Readiness rationale** – Sleep 7.4 h (score 80, “Good”), HRV balanced (53 ms vs 7‑day avg 51 ms), resting HR 56 bpm (low, indicating good recovery), and ACWR 1.0 (optimal). All factors cluster in the “well‑rested” zone; no single red flag outweighs the overall positive picture.  
+**Readiness rationale** – Sleep 7.4 h (score 80) and HRV 53 ms (balanced, 7‑day avg 51 ms) indicate good recovery; resting HR 56 bpm is low, supporting a “well‑rested” status. ACWR 1.0 and acute/chronic loads are stable, so there’s no physiological signal to cut back.  
 
-**In‑session guardrails** – Keep an eye on hip/knee joint comfort
+**In‑session guardrails** – If heart‑rate spikes > 150 bpm during core work, feels unusually shaky, or you notice joint pain, drop the load
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
