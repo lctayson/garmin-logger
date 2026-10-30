@@ -1,23 +1,28 @@
 # Daily Check — 2026-10-31
 
-## Readiness: -/100
+## Readiness: 63/100 (Moderate)
+> Good Sleep History
 
+- **VO₂max:** 44.6 ml/kg/min (Garmin display: 45)
 - ⚠️ **RHR:** 60 bpm (7d avg: 57 bpm, trending up)
+- ⚠️ **HRV:** 45ms (7d avg: 51ms) · below 47–57ms
+- ⚠️ **Sleep:** 6h10 / 7h00 need (0h50 short) · score 62 · 7d avg 6h39 · 5/7 nights below need
+- **Recovery remaining:** 0h00
+- ⚠️ **Limiter:** Sleep Score (43%)
+- **Also soft:** Sleep History, Stress History
 
 ## Today's Session
 - **Planned:** Sat, Oct 31 — 13K EZ, HR ≤150; no fast finish
 📌 MRC Glow Walk
-- **Recommendation:** Proceed as planned
-- **Reason:** resting heart rate is trending up.
-- **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
+- **Recommendation:** Keep it easy
+- **Reason:** resting heart rate is trending up; HRV is trending down; last-night HRV is below the balanced band; RHR-up/HRV-down recovery pattern.
+- **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Proceed with today’s scheduled Saturday long‑run (easy aerobic) – your resting HR of 60 bpm suggests good recovery; no other warning signs are present.  
-- **Workout execution (typical bridge‑phase Saturday):** Warm‑up 5 min easy jog, then the main set: 60–90 min steady run at Easy‑Aerobic pace (≈ 6:40–7:15 km⁻¹, HR ≈ 145‑155 bpm). If you feel fresh after the first hour, add a brief HM‑effort finish – 2–3 km at Sub‑threshold pace (≈ 5:25 km⁻¹, HR ≈ 158‑168 bpm). Cool‑down 5 min easy jog + light stretching.  
-- **Readiness rationale:** A low resting HR is a positive recovery indicator; with no sleep, HRV, or load data showing stress, the overall picture is “well‑recovered.”  This outweighs any minor, unreported fluctuations.  
-- **In‑session guardrails:** - Keep an eye on HR; if it spikes > 160 bpm within the first 20 min or you feel RPE ≥ 7, trim the duration or drop the finish.  
-‑ Stay hydrated and watch the early‑morning heat (28‑30 °C); if it feels unusually oppressive, reduce pace by
+- **Decision**: Proceed with today’s scheduled long‑run, but keep it strictly easy – no tempo or finish‑fast work unless you feel fully fresh.  
+- **Workout execution**:  
+  1. **Warm‑up** – 10‑15 min easy jog (≈7:30‑7:45 / km)
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -30,11 +35,16 @@ _Most recent activity (2026-10-30):_
 
 ## Load & Trends
 
+- **ACWR:** 0.8 (Optimal) — acute 469 / chronic 545 (chronic range 436–817.5)
 - **7-day volume:** 28.12km vs 28-day avg 35.6km (-21%)
 - **Running tolerance:** 53.6% (Medium) — 28.1km of 63.8km weekly cap, acute impact load 34.2
-- ⚠️ **Sleep (7d avg):** 6h44, 4/7 nights below need, trending down
+- **Aerobic Low:** 821 (target 649–1082 — in range)
+- ⚠️ **Aerobic High:** 1190.8 (target 649–1082 — +109 over)
+- ⚠️ **Anaerobic:** 59.9 (target 86–346 — -26 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- ⚠️ **Sleep (7d avg):** 6h39, 5/7 nights below need, trending down
 - ⚠️ **RHR (7d avg):** 57.0, trending up
-- **HRV:** trending flat
+- ⚠️ **HRV:** trending down
 
 ## This Week (Oct 25–31)
 

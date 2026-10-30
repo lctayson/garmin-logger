@@ -1,16 +1,65 @@
 {
   "date": "2026-10-31",
   "readiness": {
+    "vo2_max": 45.0,
+    "vo2_max_precise": 44.6,
+    "score": 63,
+    "level": "Moderate",
+    "feedback": "Good Sleep History",
     "resting_hr": 60,
-    "ai_analysis": "- **Decision:** Proceed with today’s scheduled Saturday long‑run (easy aerobic) – your resting HR of 60 bpm suggests good recovery; no other warning signs are present.  \n- **Workout execution (typical bridge‑phase Saturday):** Warm‑up 5 min easy jog, then the main set: 60–90 min steady run at Easy‑Aerobic pace (≈ 6:40–7:15 km⁻¹, HR ≈ 145‑155 bpm). If you feel fresh after the first hour, add a brief HM‑effort finish – 2–3 km at Sub‑threshold pace (≈ 5:25 km⁻¹, HR ≈ 158‑168 bpm). Cool‑down 5 min easy jog + light stretching.  \n- **Readiness rationale:** A low resting HR is a positive recovery indicator; with no sleep, HRV, or load data showing stress, the overall picture is “well‑recovered.”  This outweighs any minor, unreported fluctuations.  \n- **In‑session guardrails:** - Keep an eye on HR; if it spikes > 160 bpm within the first 20 min or you feel RPE ≥ 7, trim the duration or drop the finish.  \n‑ Stay hydrated and watch the early‑morning heat (28‑30 °C); if it feels unusually oppressive, reduce pace by",
+    "hrv_last_night_avg_ms": 45.0,
+    "hrv_7_day_avg_ms": 51.0,
+    "hrv_status": "BALANCED",
+    "sleep_hours": 6.17,
+    "sleep_hours_including_previous_day_nap": 6.17,
+    "sleep_score": 62,
+    "recovery_hours": 0.0,
+    "hrv_baseline": {
+      "lowUpper": 45.0,
+      "balancedLow": 47.0,
+      "balancedUpper": 57.0,
+      "markerValue": 0.44999695
+    },
+    "factor_details": {
+      "sleep_score": {
+        "percent": 43,
+        "feedback": "Moderate"
+      },
+      "sleep_history": {
+        "percent": 69,
+        "feedback": "Moderate"
+      },
+      "recovery_time": {
+        "percent": 100,
+        "feedback": "Very Good"
+      },
+      "acwr": {
+        "percent": 97,
+        "feedback": "Good"
+      },
+      "hrv": {
+        "percent": 100,
+        "feedback": "Very Good"
+      },
+      "stress_history": {
+        "percent": 69,
+        "feedback": "Moderate"
+      }
+    },
+    "ai_analysis": "- **Decision**: Proceed with today’s scheduled long‑run, but keep it strictly easy – no tempo or finish‑fast work unless you feel fully fresh.  \n- **Workout execution**:  \n  1. **Warm‑up** – 10‑15 min easy jog (≈7:30‑7:45 / km)",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
     "steps": 38
   },
   "sleep": {
+    "deep_h": 0.5,
+    "light_h": 4.92,
+    "rem_h": 0.75,
+    "awake_h": 1.03,
     "baseline_h": 7.0,
     "need_h": 7.0,
+    "next_need_h": 7.5,
     "feedback": "No Change No Adjustments",
     "training_feedback": "No Change",
     "sleep_history_adjustment": "No Change",
@@ -18,11 +67,43 @@
     "nap_adjustment": "No Change",
     "previous_day_nap": null
   },
+  "load": {
+    "acute_load": 469,
+    "chronic_load": 545,
+    "acwr": 0.8,
+    "acwr_percent": 33,
+    "acwr_status": "Optimal",
+    "chronic_load_range": {
+      "min": 436.0,
+      "max": 817.5
+    },
+    "training_status": "Maintaining 2"
+  },
+  "vo2_max": 45.0,
+  "vo2_max_precise": 44.6,
   "race_predictions": {
     "5k": "27:11",
     "10k": "57:26",
     "half_marathon": "2:11:22",
     "marathon": "4:53:10"
+  },
+  "load_balance": {
+    "aerobic_low": 821.0,
+    "aerobic_low_target": [
+      649,
+      1082
+    ],
+    "aerobic_high": 1190.8,
+    "aerobic_high_target": [
+      649,
+      1082
+    ],
+    "anaerobic": 59.9,
+    "anaerobic_target": [
+      86,
+      346
+    ],
+    "load_focus": "Anaerobic Shortage"
   },
   "running_tolerance": {
     "acute_impact_load": 34.2,
@@ -155,6 +236,14 @@
         }
       ]
     }
+  },
+  "heat_acclimation": {
+    "percentage": 100,
+    "trend": "Acclimatized"
+  },
+  "altitude_acclimation": {
+    "percentage": 0,
+    "trend": null
   },
   "trend_recent_daily": {
     "columns": [
@@ -336,16 +425,16 @@
       [
         "2026-10-31",
         60,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        45.0,
+        51.0,
+        6.17,
+        62,
+        45.0,
+        "Maintaining 2",
+        469,
+        545,
+        0.8,
+        "Optimal",
         0,
         0.0,
         0.0,
@@ -738,16 +827,16 @@
         "2026-10-25",
         "2026-10-31",
         60,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        45.0,
+        51.0,
+        6.17,
+        62,
+        45.0,
+        "Maintaining 2",
+        469,
+        545,
+        0.8,
+        "Optimal",
         6,
         4.32,
         28.12,
@@ -822,9 +911,9 @@
       ],
       [
         "2026-10-31",
-        45,
+        49,
         0,
-        71,
+        75,
         26
       ]
     ]
