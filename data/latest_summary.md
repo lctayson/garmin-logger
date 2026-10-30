@@ -13,14 +13,14 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled long‑run (easy + optional HM‑effort finish).  
+**Decision** – Proceed with today’s scheduled Saturday long run, but keep it in the easy‑aerobic range; add any HM‑effort finish only if you feel fully recovered.
 
-**Workout execution** – • Warm‑up: 10‑15 min easy jog (stay ≤ 150 bpm).  
-• Main set: run 90‑120 min at easy aerobic pace (≈ 6:40‑7:15 /km, HR ≈ 145‑155 bpm).  
-• If you feel fresh after the first hour, add a short HM‑effort finish (e.g., 3 × 5 min at sub‑threshold pace ≈ 5:20‑5:35 /km with 2‑min easy jog recoveries).  
-• Cool‑down: 5‑10 min very easy jog or walk, HR back below 130 bpm.  
+**Workout execution** – 1) Warm‑up: 10‑15 min easy jog (≈7:30 km⁻¹, HR ≤150 bpm).  
+2) Main set: steady easy run for the prescribed duration (typically 90–120 min) at easy‑aerobic pace (≈6:40–7:15 /km, HR 145‑155 bpm).  
+3) Optional finish (if you’re “good”: 2–3 km at sub‑threshold effort, ~5:30 /km, HR 158‑168 bpm).  
+4) Cool‑down: 5‑10 min very easy jog + light stretch.
 
-**Readiness rationale** – Resting HR = 60 bpm (well below your LTHR) signals good acute recovery; no recent load data suggests low cumulative fatigue. With no sleep or HRV info, the low resting HR is the strongest positive cue,
+**Readiness rationale** – Resting HR 60 bpm is low, indicating good autonomic recovery. No sleep, HRV,
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
