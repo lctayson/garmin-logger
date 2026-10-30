@@ -19,16 +19,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Stick with today’s scheduled **core/hip‑stability strength session** – no need to swap for a run or skip the work.  
-- **Workout execution:**  
-  1. **Warm‑up (5 min):** Light jog or brisk walk + dynamic hip/leg drills (leg swings, hip circles, walking lunges).  
-  2. **Main set:** 3 × 10 min circuits of core/hip stability moves (plank variations, side‑lying clamshells, single‑leg bridges, banded monster walks). Keep each exercise at a controlled RPE ≈ 5‑6; rest 60 s between circuits.  
-  3. **Cool‑down (3 min):** Gentle stretch of glutes, hamstrings, hip flexors and deep breathing.  
-- **Readiness rationale:** Your readiness score is “moderate” (70) but every underlying metric is solid – HRV balanced, resting HR 56 bpm (low), sleep 7.4 h with an 80 sleep‑score, and ACWR = 1.0 (optimal). The pattern shows consistent recovery, so the planned strength work is appropriate.  
-- **In‑session guardrails:**  
-  - Watch for any sudden hip or low‑back discomfort; if pain spikes, cut the set or replace the move with a less demanding variation.  
-  - If heart rate spikes unusually high during the warm‑up (well above 150 bpm) or you feel excessive fatigue, shorten the session by dropping the third circuit.  
-  - Early‑morning heat is modest for strength work, but stay hydrated and keep the effort moderate rather than
+**Decision** – Proceed with today’s planned **Friday core/hip‑stability strength session**. Your readiness score (70 / moderate) is supported by balanced HRV, low resting HR (56 bpm), solid sleep (7.4 h, score 80), and an optimal ACWR (1.0). No red flags demand a recovery day.
+
+**Workout execution** – - **Warm‑up**: 5‑10 min easy cardio (e.g., brisk walk or light jog) + dynamic hip/leg mobility (leg swings, hip circles, world’s greatest stretch).  
+- **Main set**: Follow the specific core/hip‑stability routine programmed for this week (e.g., planks, side‑planks, glute bridges, single‑leg dead‑lifts, clamshells, etc.) with the prescribed sets/reps and tempo.  
+- **Recovery**: Keep rest intervals as written in the plan (usually 30‑60 s between sets).  
+- **Cool‑down**: 5 min gentle mobility + static stretches for hip flexors, glutes, and lower back.
+
+**Readiness rationale** – - **HRV** = 53 ms (balanced & 2 ms above 7‑day avg) → indicates good autonomic recovery.  
+- **Resting HR**
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
