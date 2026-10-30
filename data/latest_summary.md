@@ -16,7 +16,7 @@
 - **Friday Core/Hip Stability** — 0.0km · 32:50 · HR 96/112 max
   - TE: Aerobic Base · aerobic 0.3 · anaerobic 0
   - Readiness 70 → 70 (Well Rested) · Recovery 0h
-  - 🧠 The 32‑minute core/hip session generated a very low aerobic stimulus (aerobic TE 0.3, “minor aerobic benefit”) and no anaerobic load, which is exactly what you want on a strength day. Your readiness score stayed at 70 (moderate) with “Well Rested” feedback, and the acute load only rose from 567 to 572, indicating the workout didn’t meaningfully tax your cardiovascular system. The −2 Body Battery impact is typical for a light‑intensity strength session and doesn’t suggest any recovery issue. Overall, the session aligns with the bridge‑phase plan to preserve running freshness while maintaining core stability.
+  - 🧠 The 33‑minute core/hip stability session delivered a very modest aerobic stimulus (aerobic TE 0.3) and no anaerobic benefit, which is exactly what a Friday strength day should look like. The low training load (3.7) and slight body‑battery dip (‑2 pts) indicate the workout was easy on the cardiovascular system, matching the modest 96 bpm average heart rate. Your morning readiness was “Moderate” (score 70) with a good sleep score (80) and a resting HR of 56 bpm, suggesting you recovered well and the session did not meaningfully tax your overall readiness. This aligns with the bridge phase plan of keeping strength work low‑impact while preserving capacity for the upcoming quality runs.
 
 ## Next Session
 - **Planned:** Sat, Oct 31 — 13K EZ, HR ≤150; no fast finish
