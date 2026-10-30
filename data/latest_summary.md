@@ -19,15 +19,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **Friday Core/Hip‑Stability Strength session** (no running).  
+**Decision** – Proceed with today’s scheduled **Friday Strength A (hip‑extension/power)** session; the readiness profile is solid and there’s no signal to cut it or switch to recovery.
 
-**Workout execution** – 1️⃣ Warm‑up: 5‑10 min of dynamic mobility (leg swings, hip circles, body‑weight glute bridges).  
-2️⃣ Main set: follow the prescribed Strength A circuit (e.g., 3 × 12‑15 reps of planks, side‑planks, glute bridges, single‑leg dead‑lifts, clamshells, and hip‑thrusts) with the tempo and rest intervals listed in the plan.  
-3️⃣ Cool‑down: 5 min of static hip and hamstring stretches.  
+**Execution (as per the plan)** – *Warm‑up*: 5 min easy jog or bike + dynamic hip‑mobility (leg swings, hip circles, glute bridges).  
+*Main work*: follow the Strength A prescription (e.g., 3 × 8‑12 reps of single‑leg hip thrusts, kettlebell swings, banded monster walks, core‑stability circuit). Keep rest 60‑90 s between sets; focus on controlled tempo and quality of movement.  
+*Cool‑down*: 5 min light mobility + static stretch of hip flexors, glutes, hamstrings.
 
-**Readiness rationale** – Sleep 7.4 h (score 80) and HRV 53 ms (balanced, 7‑day avg 51 ms) indicate good recovery; resting HR 56 bpm is low, supporting a “well‑rested” status. ACWR 1.0 and acute/chronic loads are stable, so there’s no physiological signal to cut back.  
-
-**In‑session guardrails** – If heart‑rate spikes > 150 bpm during core work, feels unusually shaky, or you notice joint pain, drop the load
+**Readiness rationale** – Sleep 7.4 h (score 80, “Good”), HRV balanced and slightly above 7‑day average, resting HR 56 bpm (well below typical LTHR), ACWR ≈ 1.0 (optimal). All factors cluster in the “well‑rested” zone, so the body is primed for a moderate‑intensity strength
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
