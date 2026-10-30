@@ -19,11 +19,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Your readiness is solid (moderate score, balanced HRV, low resting HR, optimal ACWR). Proceed with today’s scheduled **Friday Strength A** session as planned; no need to downgrade or skip.  
+- **Decision:** Proceed with today’s scheduled Friday strength‑/hip‑extension session (no running). The readiness profile is “Well‑Rested” with balanced HRV, low resting HR (56 bpm), and an optimal ACWR ≈ 1.0, so the neuromuscular work is supported.  
 
-**Workout execution** – Warm‑up: 5‑10 min easy jog or bike plus dynamic hip‑mobility moves (leg swings, glute bridges). Main set: follow your usual Strength A routine (hip‑extension/Power circuit – e.g., hip thrusts, single‑leg Romanian dead‑lifts, kettlebell swings, core plank variations) with the rep/weight scheme you’ve logged for this block. Cool‑down: 5 min light stretching focused on hips, hamstrings, and calves.  
+- **Workout execution:** *Warm‑up* – 5‑10 min of joint‑mobility (hip circles, leg swings, body‑weight glute bridges). *Main set* – 3 × 8‑10 reps each of hip thrusts, single‑leg Romanian deadlifts, and banded monster walks; RPE 6‑7, 90‑120 s rest between sets. *Cool‑down* – 5 min of static hip/hamstring stretches and gentle foam‑rolling.  
 
-**Readiness rationale** – Sleep 7.4 h (score 80) and HRV 53 ms (balanced) indicate good recovery; resting HR 56 bpm is lower than baseline, suggesting a rested
+- **Readiness rationale:** Sleep 7.4 h (score 80) and a sleep‑history rating of “moderate” give a solid base; HRV is in the balanced band (53 ms vs 7‑day avg 51 ms) and resting HR is unusually low, indicating good autonomic recovery. Load metrics (acute 567, chronic 562, ACWR 1.0) are within the optimal window, and recent training has been light (strength day) – no single factor flags a need to skip or downgrade.  
+
+- **In‑session guardrails:** Watch
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
