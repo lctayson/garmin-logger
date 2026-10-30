@@ -19,13 +19,12 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **Friday Strength A (hip‑extension/power)** session; the readiness profile is solid and there’s no signal to cut it or switch to recovery.
+**Decision – Proceed as planned**  
+Your Friday “core/hip‑stability” strength day lines up with the training plan, and today’s readiness profile (moderate score 70, well‑rested feedback, HRV balanced, resting HR 56 bpm, ACWR 1.0 optimal) shows you’re adequately recovered for a non‑running session.
 
-**Execution (as per the plan)** – *Warm‑up*: 5 min easy jog or bike + dynamic hip‑mobility (leg swings, hip circles, glute bridges).  
-*Main work*: follow the Strength A prescription (e.g., 3 × 8‑12 reps of single‑leg hip thrusts, kettlebell swings, banded monster walks, core‑stability circuit). Keep rest 60‑90 s between sets; focus on controlled tempo and quality of movement.  
-*Cool‑down*: 5 min light mobility + static stretch of hip flexors, glutes, hamstrings.
-
-**Readiness rationale** – Sleep 7.4 h (score 80, “Good”), HRV balanced and slightly above 7‑day average, resting HR 56 bpm (well below typical LTHR), ACWR ≈ 1.0 (optimal). All factors cluster in the “well‑rested” zone, so the body is primed for a moderate‑intensity strength
+**Workout execution**  
+- **Warm‑up**: 5‑10 min easy jog or brisk walk plus dynamic hip‑mobility drills (leg swings, hip circles, world’s greatest stretch).  
+- **Main set**: Perform the prescribed core/hip‑stability circuit (e.g., planks, side‑planks, glute bridges, single‑leg dead‑lifts, clamshells) with the rep/hold scheme your plan lists – keep the tempo controlled,
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
