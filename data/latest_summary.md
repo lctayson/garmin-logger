@@ -13,14 +13,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Saturday long run, but keep it in the easy‑aerobic range; add any HM‑effort finish only if you feel fully recovered.
-
-**Workout execution** – 1) Warm‑up: 10‑15 min easy jog (≈7:30 km⁻¹, HR ≤150 bpm).  
-2) Main set: steady easy run for the prescribed duration (typically 90–120 min) at easy‑aerobic pace (≈6:40–7:15 /km, HR 145‑155 bpm).  
-3) Optional finish (if you’re “good”: 2–3 km at sub‑threshold effort, ~5:30 /km, HR 158‑168 bpm).  
-4) Cool‑down: 5‑10 min very easy jog + light stretch.
-
-**Readiness rationale** – Resting HR 60 bpm is low, indicating good autonomic recovery. No sleep, HRV,
+- **Decision:** Proceed with today’s scheduled Saturday long‑run (easy aerobic) – your resting HR of 60 bpm suggests good recovery; no other warning signs are present.  
+- **Workout execution (typical bridge‑phase Saturday):** Warm‑up 5 min easy jog, then the main set: 60–90 min steady run at Easy‑Aerobic pace (≈ 6:40–7:15 km⁻¹, HR ≈ 145‑155 bpm). If you feel fresh after the first hour, add a brief HM‑effort finish – 2–3 km at Sub‑threshold pace (≈ 5:25 km⁻¹, HR ≈ 158‑168 bpm). Cool‑down 5 min easy jog + light stretching.  
+- **Readiness rationale:** A low resting HR is a positive recovery indicator; with no sleep, HRV, or load data showing stress, the overall picture is “well‑recovered.”  This outweighs any minor, unreported fluctuations.  
+- **In‑session guardrails:** - Keep an eye on HR; if it spikes > 160 bpm within the first 20 min or you feel RPE ≥ 7, trim the duration or drop the finish.  
+‑ Stay hydrated and watch the early‑morning heat (28‑30 °C); if it feels unusually oppressive, reduce pace by
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
