@@ -11,39 +11,28 @@
 - ⚠️ **Limiter:** Stress History (61%)
 - **Also soft:** Sleep History, Sleep Score
 
-## Today's Session
-- **Planned:** Fri, Oct 30 — REST + Core
+## Today's Workout
+
+- **Friday Core/Hip Stability** — 0.0km · 32:50 · HR 96/112 max
+  - TE: Aerobic Base · aerobic 0.3 · anaerobic 0
+  - Readiness 70 → 70 (Well Rested) · Recovery 0h
+  - 🧠 The 33‑minute core/hip stability session produced only a minor aerobic load (aerobic 0.3, training‑effect label AEROBIC_BASE) and essentially no anaerobic stimulus, which aligns with the prescribed strength day in your bridge phase. Your morning readiness was “Moderate” (score 70) with a resting HR of 56 and a solid sleep score of 80, and the small body‑battery dip (‑2) is typical after a low‑intensity strength effort. No red flags appear; the session fulfilled its purpose without compromising your overall recovery.
+
+## Next Session
+- **Planned:** Sat, Oct 31 — 13K EZ, HR ≤150; no fast finish
+📌 MRC Glow Walk
 - **Recommendation:** Proceed as planned
 - **Reason:** Available readiness, recovery-trend, and load indicators do not show a combination of major warnings.
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
-### 🧠 AI Coaching Guidance
-
-- **Decision:** Proceed with today’s scheduled Friday strength‑/hip‑extension session (no running). The readiness profile is “Well‑Rested” with balanced HRV, low resting HR (56 bpm), and an optimal ACWR ≈ 1.0, so the neuromuscular work is supported.  
-
-- **Workout execution:** *Warm‑up* – 5‑10 min of joint‑mobility (hip circles, leg swings, body‑weight glute bridges). *Main set* – 3 × 8‑10 reps each of hip thrusts, single‑leg Romanian deadlifts, and banded monster walks; RPE 6‑7, 90‑120 s rest between sets. *Cool‑down* – 5 min of static hip/hamstring stretches and gentle foam‑rolling.  
-
-- **Readiness rationale:** Sleep 7.4 h (score 80) and a sleep‑history rating of “moderate” give a solid base; HRV is in the balanced band (53 ms vs 7‑day avg 51 ms) and resting HR is unusually low, indicating good autonomic recovery. Load metrics (acute 567, chronic 562, ACWR 1.0) are within the optimal window, and recent training has been light (strength day) – no single factor flags a need to skip or downgrade.  
-
-- **In‑session guardrails:** Watch
-
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
-
-## Latest Activity
-
-_Most recent activity (2026-10-29):_
-- **Malolos - 6 x 75s 3-5K Reps** — 6.03km · 42:02 · 6:58/km · HR 144/165 max
-  - TE: Tempo (High Aerobic) · aerobic 3.3 · anaerobic 1.7
-  - Intervals: 6 work reps · pace drift -4.1% · HR +12bpm
-  - MS: 1.51k @ 4:58 154bpm 1.07m 185spm 234ms 8.2cm 340w
-  - 🧠 The six 75‑second reps were run in a tight 4:53‑5:04 /km window, ending slightly quicker than they began, which matches the –4.1 % pace‑efficiency drift and shows the intended VO2‑max stimulus was delivered. Heart‑rate rose steadily from 146 to 158 bpm (≈12 bpm Δ), confirming the expected cardiovascular load as the reps progressed, while stamina fell from 99 % to 76 % (minimum 62 %) indicating accumulating fatigue but no alarming collapse. Morning readiness was moderate (score 65) and the acute load after the session jumped to 690, so consider a lighter recovery day before the next Thursday quality workout.
 
 ## Load & Trends
 
-- **ACWR:** 1.0 (Optimal) — acute 567 / chronic 562 (chronic range 449.6–843)
+- **ACWR:** 1.0 (Optimal) — acute 572 / chronic 563 (chronic range 450.4–844.5)
 - **7-day volume:** 38.15km vs 28-day avg 38.1km (+0%)
 - **Running tolerance:** 63.6% (Medium) — 38.1km of 63.8km weekly cap, acute impact load 40.6
-- **Aerobic Low:** 910.5 (target 816–1360 — in range)
+- **Aerobic Low:** 914.1 (target 816–1360 — in range)
 - **Aerobic High:** 1190.8 (target 816–1360 — in range)
 - ⚠️ **Anaerobic:** 59.9 (target 108–435 — -48 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
@@ -61,18 +50,18 @@ _Most recent activity (2026-10-29):_
 | T | 3x10min Thr | 9k · 59:37 | 205 |
 | W | Run + Strides/Hills | 6k · 45:28 | 86 |
 | T | 6x75s 3-5K Reps | 6k · 42:02 | 126 |
-| F | Rest | — | — |
+| F | Core/Hip | 32:50 | 4 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 6 | 38.15 km | 4:59:00 | 605 |
+| 7 | 38.15 km | 5:31:50 | 608.7 |
 
 ## Recent 4 Weeks
 _Average weekly running: 38.1 km_
 
 | Week | Runs | Others | Load |
 |:---|---:|---:|---:|
-| Oct 24–30 | 38.15k | 28 min | 605 |
+| Oct 24–30 | 38.15k | 61 min | 608.7 |
 | Oct 17–23 | 39.14k | 55 min | 525.3 |
 | Oct 10–16 | 39.13k | 20 min | 584 |
 | Oct 3–9 | 36.14k | 40 min | 521.6 |
