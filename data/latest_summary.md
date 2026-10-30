@@ -19,11 +19,16 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned Friday strength session (Core/hip‑stability, no running).  
+**Decision** – ✅ Proceed with today’s scheduled Friday session: core/hip‑stability strength (no running).  
 
-**Workout execution** – 1️⃣ Dynamic warm‑up (5‑7 min: leg swings, walking lunges, hip circles).  
-2️⃣ Strength “Power/hip‑extension” circuit – 3 sets of 8‑10 reps each: glute‑bridge/hip thrust, single‑leg RDL, banded hip‑abduction, weighted step‑up; 60‑90 s rest between sets.  
-3️⃣ Finish with a
+**Execution** –  
+- **Warm‑up**: 5 min easy jog or brisk walk + dynamic hip‑mobility (leg swings, hip circles) + 2 × 30 s glute bridges.  
+- **Main set** (as per the plan): core & hip‑stability circuit – e.g., planks, side‑planks, bird‑dogs, clamshells, single‑leg dead‑lifts; 3 × 12‑15 reps each, 60‑90 s rest between exercises.  
+- **Cool‑down**: 5 min gentle walking + static stretches for hip flexors, glutes, and lower back.  
+
+**Readiness rationale** – Sleep 7.4 h (score 80, “Good”), HRV balanced (53 ms vs 7‑day avg 51 ms), resting HR 56 bpm (low, indicating good recovery), and ACWR 1.0 (optimal). All factors cluster in the “well‑rested” zone; no single red flag outweighs the overall positive picture.  
+
+**In‑session guardrails** – Keep an eye on hip/knee joint comfort
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
