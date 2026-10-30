@@ -19,16 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision – Proceed as planned**  
-Your readiness is “Moderate” (score 70) with good sleep, balanced HRV, low resting HR (56 bpm) and optimal ACWR (1.0). No red‑flag signals suggest you need to skip today’s strength work.
+**Decision** – Your readiness is solid (moderate score, balanced HRV, low resting HR, optimal ACWR). Proceed with today’s scheduled **Friday Strength A** session as planned; no need to downgrade or skip.  
 
-**Workout execution (strength‑only day)**  
-- **Warm‑up:** 5–10 min of easy dynamic moves (leg swings, hip circles, body‑weight glute bridges) to raise core temperature.  
-- **Main set:** Perform your usual core‑hip stability circuit (e.g., planks, side‑planks, bird‑dogs, single‑leg dead‑lifts, hip‑thrusts). Keep reps/sets as prescribed in your Friday program; aim for controlled tempo and good form rather than max load.  
-- **Cool‑down:** 3–5 min of gentle stretching for hip flexors, glutes, and lower back, plus a few deep‑breathing rounds.
+**Workout execution** – Warm‑up: 5‑10 min easy jog or bike plus dynamic hip‑mobility moves (leg swings, glute bridges). Main set: follow your usual Strength A routine (hip‑extension/Power circuit – e.g., hip thrusts, single‑leg Romanian dead‑lifts, kettlebell swings, core plank variations) with the rep/weight scheme you’ve logged for this block. Cool‑down: 5 min light stretching focused on hips, hamstrings, and calves.  
 
-**Readiness rationale**  
-- **Sleep:** 7.4 h,
+**Readiness rationale** – Sleep 7.4 h (score 80) and HRV 53 ms (balanced) indicate good recovery; resting HR 56 bpm is lower than baseline, suggesting a rested
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
