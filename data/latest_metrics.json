@@ -46,7 +46,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "**Decision – Proceed as planned**  \nYour Friday “core/hip‑stability” strength day lines up with the training plan, and today’s readiness profile (moderate score 70, well‑rested feedback, HRV balanced, resting HR 56 bpm, ACWR 1.0 optimal) shows you’re adequately recovered for a non‑running session.\n\n**Workout execution**  \n- **Warm‑up**: 5‑10 min easy jog or brisk walk plus dynamic hip‑mobility drills (leg swings, hip circles, world’s greatest stretch).  \n- **Main set**: Perform the prescribed core/hip‑stability circuit (e.g., planks, side‑planks, glute bridges, single‑leg dead‑lifts, clamshells) with the rep/hold scheme your plan lists – keep the tempo controlled,",
+    "ai_analysis": "**Decision – Proceed as planned**  \nYour readiness is “Moderate” (score 70) with good sleep, balanced HRV, low resting HR (56 bpm) and optimal ACWR (1.0). No red‑flag signals suggest you need to skip today’s strength work.\n\n**Workout execution (strength‑only day)**  \n- **Warm‑up:** 5–10 min of easy dynamic moves (leg swings, hip circles, body‑weight glute bridges) to raise core temperature.  \n- **Main set:** Perform your usual core‑hip stability circuit (e.g., planks, side‑planks, bird‑dogs, single‑leg dead‑lifts, hip‑thrusts). Keep reps/sets as prescribed in your Friday program; aim for controlled tempo and good form rather than max load.  \n- **Cool‑down:** 3–5 min of gentle stretching for hip flexors, glutes, and lower back, plus a few deep‑breathing rounds.\n\n**Readiness rationale**  \n- **Sleep:** 7.4 h,",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
