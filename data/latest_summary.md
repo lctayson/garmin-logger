@@ -20,7 +20,12 @@
 
 ### 🧠 AI Coaching Guidance
 
--
+**Decision** – Proceed with today’s scheduled long‑run, but keep it fully easy (no HM‑effort finish).  
+
+**Workout execution** –  
+- **Warm‑up**: 10‑12 min easy jog, HR ≤ 150 bpm, light dynamic stretches.  
+- **Main set**: 60‑90 min continuous run at recovery/easy aerobic pace (≈ 7:10‑7:45 / km, HR 145‑155 bpm).  
+- **Cool‑down**: 5‑8 min very easy jog + brief mobility
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
