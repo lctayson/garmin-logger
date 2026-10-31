@@ -20,10 +20,14 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled long‑run, but keep it strictly easy (recovery/easy‑aerobic zones). Treat any HM‑effort finish as optional; skip it if you feel any lingering fatigue or heat stress.
+**Decision** – Proceed with today’s scheduled long‑run (easy aerobic) but keep the effort modest; if you feel unusually fatigued, trim 10‑15 % off the distance.
 
-**Workout execution** – - Warm‑up: 10‑12 min easy jog (≈7:30–7:45 /km, HR ≤150 bpm).  
-- Main set: 70‑90 min continuous run at recovery/easy‑aerobic pace (≈7:10–7:45 /km, HR 145‑155 bpm). If you’re feeling fresh, finish with 4 × 20‑s strides (
+**Workout execution** –  
+- **Warm‑up:** 10‑15 min easy jog (≈7:30 – 7:45 / km) + a few short strides.  
+- **Main set:** Run at easy aerobic pace (≈6:40 – 7:15 / km), staying in HR zone ≈ 145‑155 bpm for the planned duration (typically 90‑120 min).  No hard intervals are prescribed today.  
+- **Cool‑down:** 5‑10 min very easy jog + gentle stretching.
+
+**Readiness rationale** – Sleep was only 6.2 h (moderate) and HRV 45 ms is a touch below your
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
