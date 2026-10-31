@@ -20,9 +20,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Saturday long‑run, but treat any “HM‑effort finish” as optional; skip it if you feel any fatigue or heat strain.
+**Decision** – Proceed with today’s scheduled Saturday long run, but keep it strictly easy (no HM‑effort finish).  
 
-**Workout execution** – Warm‑up: 10–15 min easy jog + 2‑3 min of dynamic leg swings and high‑knees. Main set: run at easy‑aerobic pace (≈6 : 40‑7 : 15 /km), HR ≈ 145‑155 bpm, RPE 2‑3, for the prescribed distance (≈14‑16 km per plan). If the plan lists a final 2‑km tempo/threshold chunk, omit it
+**Workout execution** –   
+- **Warm‑up**: 10 min easy jog (≈7:30 /km) + 4 × 20‑sec strides, easy jog back to start.  
+- **Main set**: 90 min continuous easy run at easy‑aerobic pace (≈6:45 – 7:15 /km, HR ≈ 145‑155 bpm).  
+- **Optional finish**: Skip any fast “HM‑effort” pickup; stop at the 90‑min mark.  
+- **Cool‑down**: 5‑10 min very easy jog + light stretching.  
+
+**Readiness rationale** – Your sleep was only 6.2 h (moderate score) but HRV is in the balanced band and resting HR is low (60 bpm), indicating good autonomic recovery. ACWR is optimal (0.8) and acute load is below chronic, so overall fatigue load is modest. The
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
