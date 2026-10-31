@@ -46,11 +46,11 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "**Decision** – Proceed with today’s scheduled Saturday long run, but keep it strictly easy (no HM‑effort finish).  \n\n**Workout execution** –   \n- **Warm‑up**: 10 min easy jog (≈7:30 /km) + 4 × 20‑sec strides, easy jog back to start.  \n- **Main set**: 90 min continuous easy run at easy‑aerobic pace (≈6:45 – 7:15 /km, HR ≈ 145‑155 bpm).  \n- **Optional finish**: Skip any fast “HM‑effort” pickup; stop at the 90‑min mark.  \n- **Cool‑down**: 5‑10 min very easy jog + light stretching.  \n\n**Readiness rationale** – Your sleep was only 6.2 h (moderate score) but HRV is in the balanced band and resting HR is low (60 bpm), indicating good autonomic recovery. ACWR is optimal (0.8) and acute load is below chronic, so overall fatigue load is modest. The",
+    "ai_analysis": "**Decision** – Proceed with today’s scheduled Saturday long‑run, but keep it strictly easy. Skip any “HM‑effort finish” and aim for a relaxed aerobic volume.\n\n**Workout execution (per plan)** – - Warm‑up: 10‑15 min easy jog (≈7:30 – 8:00 /km) + 2‑3 × 20‑sec strides, easy effort.  \n- Main set: steady easy run at your easy‑aerobic zone (≈6:40 – 7:15 /km, HR ≈145‑155 bpm) for the prescribed distance/time for this week’s long run.  \n- Cool‑down: 5‑10 min very easy jog + gentle stretching.\n\n**Readiness rationale** – - Sleep: 6.2 h (moderate) and sleep‑score 62 → modest sleep debt but not critical.  \n- HRV: 45 ms (balanced) is below the 7‑day avg (51 ms) → slight dip, but resting HR 60",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
-    "steps": 38
+    "steps": 75
   },
   "sleep": {
     "deep_h": 0.5,
@@ -912,7 +912,7 @@
       [
         "2026-10-31",
         49,
-        0,
+        11,
         75,
         26
       ]
