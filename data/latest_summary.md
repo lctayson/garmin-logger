@@ -17,11 +17,11 @@
   - TE: Aerobic Base · aerobic 3.5 · anaerobic 0
   - MS: 13.04k @ 7:47 146bpm 0.80m 161spm 278ms 7.7cm 226w
   - Readiness 63 → 63 (Good Sleep History) · Recovery 0h
-  - 🧠 The 13 km run stayed largely in the easy‑aerobic zone, with rep paces ranging from 7:08
+  - 🧠 The 13 km run stayed in the easy‑aerobic HR range (average 146 bpm, ending at 155 bpm) but the overall pace of 7:47 min/km sits well below the prescribed easy zone (6:40–7:15 min/km), driven largely by a 10:04 min/km outlier rep that likely was a walk‑break. Stamina fell from 99 % to 72 % and body‑battery dropped 13 points, indicating the heat‑induced cardiac cost and the cumulative fatigue of the long effort. Morning readiness was moderate (score 63), yet the post‑run snapshot fell to 41, reflecting the acute load of 630 and the sizable stamina depletion. No anaerobic stimulus was present (training‑effect anaerobic = 0), which is appropriate for a Saturday easy run in the bridge phase.
 - **Malolos Walking** — 2.01km · 32:54 · 16:24/km · HR 94/110 max
   - TE: Recovery (Low Aerobic) · aerobic 0.4 · anaerobic 0.1
   - MS: 2.01k @ 16:22 94bpm 100spm
-  - 🧠 The two walking reps averaged a 16 min 26 s / km pace (18:13 then 14:39 / km) with HR staying under 100 bpm, keeping the session firmly in the recovery zone (aerobic effect 0.4, anaerobic 0.1). The overall load of 6.4 and training‑effect label “RECOVERY” align with the intended low‑intensity day, and the modest HR response confirms minimal cardiovascular strain. Your morning readiness was moderate (score 63, resting HR 60) and the post‑exercise snapshot fell to 41, reflecting the acute cost of the activity rather than a concerning fatigue signal. No deviations from the prescribed recovery focus are evident.
+  - 🧠 The two walking reps were uneven – the first at 18:13 / km and the second at 14:39 / km, producing an overall rep average of 16:26 / km, which sits comfortably in the recovery‑pace zone (≈7:45–8:15 / km). Heart rate stayed low (93–95 bpm) and the training‑effect profile (aerobic 0.4, anaerobic 0.10) confirms a minimal cardiovascular load, matching the modest load score of 6.4. Morning readiness was moderate (score 63, “Good Sleep History”), and the post‑exercise dip to 41 reflects the normal acute fatigue from even a light session rather than a concerning overload. No red flags appear for this day’s bridge‑phase schedule.
 
 ## Next Session
 - **Planned:** Sun, Nov 1 — 6-8k EZ @ 6:50–7:20 ≤150bpm no hills if RHR is ≤59 and legs are normal, otherwise a 30-40 min bike at RPE 2
