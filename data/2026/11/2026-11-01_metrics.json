@@ -79,7 +79,7 @@
         }
       }
     ],
-    "ai_analysis": "**Decision** – Proceed with today’s scheduled **easy/recovery run**; skip the optional hill sprints because HRV (39 ms) is below your 7‑day average and the readiness score is only moderate.\n\n**Workout** – 1) Warm‑up: 10 min light jog (keep HR ≤ 145 bpm, RPE ≤ 3).  \n2) Main set: 30–45 min steady easy run at 7:10–7:45 min/km (HR ≈ 145‑155 bpm, RPE 4–5).  \n3) No interval work today – treat the run as continuous.  \n4) Cool‑down: 5 min easy jog + 5 min gentle stretch.\n\n**Readiness rationale** – Sleep was 7.2 h",
+    "ai_analysis": "**Decision – Proceed as planned**  \nYour readiness score is modest (51 = Moderate) but all key markers – low resting HR (60 bpm), balanced HRV, good recovery‑time (18 h) and optimal ACWR (0.9) – indicate you’ve recovered enough for the scheduled Sunday easy/recovery run. No red‑flag symptoms",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
