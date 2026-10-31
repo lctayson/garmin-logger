@@ -20,14 +20,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Run the planned easy long‑run as scheduled, but skip the optional half‑marathon‑pace finish.  
-
-**Workout execution** –  
-- **Warm‑up**: 10‑12 min easy jog (≈7:30 / km, keep HR ≤150 bpm).  
-- **Main set**: 90‑120 min steady run at easy‑aerobic pace (≈6:45–7:10 / km, HR ~145‑155 bpm, RPE 3‑4).  
-- **Cool‑down**: 5‑8 min very easy jog + 3‑4 min of gentle stretching.  
-
-**Readiness rationale** – Your overall readiness is “Moderate” (score 63)
+- **Decision:** Proceed with today’s scheduled long‑run, but keep it fully easy – skip any optional HM‑effort finish.  
+- **Workout execution:** Warm‑up 10 min easy jog (≈7:30 km / min, HR ≤ 150 bpm). Main set: 60‑90 min continuous run at easy aerobic pace (7:10‑7:45 /km, HR ≈ 145‑155 bpm). Cool‑down 5‑10 min easy jog + light stretch.  
+- **Readiness rationale:** Score 63 (moderate) is driven mainly by a short night of sleep (6.2 h). HRV is “balanced” and resting HR 60 bpm is solid; ACWR 0.8 is optimal, so overall load is manageable. Because the only mild stressor is sleep, an easy aerobic effort is appropriate; avoid adding extra intensity that could compound fatigue.  
+- **In‑session guardrails:** Watch HR – if it climbs > 155 bpm within the first 15 min or you feel unusually breathless, back‑off pace or cut 10‑15 % off the planned duration. Stay hydrated and watch for heat‑related discomfort (early‑morning 28‑33 °C). If any sharp pain, excessive fatigue, or abnormal HR response occurs, end the run and recover.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
