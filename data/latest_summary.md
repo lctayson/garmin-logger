@@ -20,14 +20,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Saturday long‑run, but keep it strictly easy. Skip any “HM‑effort finish” and aim for a relaxed aerobic volume.
+**Decision** – Proceed with today’s scheduled long‑run, but keep it strictly easy (recovery/easy‑aerobic zones). Treat any HM‑effort finish as optional; skip it if you feel any lingering fatigue or heat stress.
 
-**Workout execution (per plan)** – - Warm‑up: 10‑15 min easy jog (≈7:30 – 8:00 /km) + 2‑3 × 20‑sec strides, easy effort.  
-- Main set: steady easy run at your easy‑aerobic zone (≈6:40 – 7:15 /km, HR ≈145‑155 bpm) for the prescribed distance/time for this week’s long run.  
-- Cool‑down: 5‑10 min very easy jog + gentle stretching.
-
-**Readiness rationale** – - Sleep: 6.2 h (moderate) and sleep‑score 62 → modest sleep debt but not critical.  
-- HRV: 45 ms (balanced) is below the 7‑day avg (51 ms) → slight dip, but resting HR 60
+**Workout execution** – - Warm‑up: 10‑12 min easy jog (≈7:30–7:45 /km, HR ≤150 bpm).  
+- Main set: 70‑90 min continuous run at recovery/easy‑aerobic pace (≈7:10–7:45 /km, HR 145‑155 bpm). If you’re feeling fresh, finish with 4 × 20‑s strides (
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
