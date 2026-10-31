@@ -20,14 +20,14 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Saturday long run, but keep it strictly easy‑pace only; skip any “HM‑effort finish” that might be listed for this week.
+**Decision** – Run the planned easy long‑run as scheduled, but skip the optional half‑marathon‑pace finish.  
 
-**Workout execution** – - Warm‑up: 10‑15 min easy jog, staying ≤ 150 bpm.  
-- Main set: continuous easy run at Zone 6 (≈ 6:40‑7:15 /km, HR ≈ 145‑155 bpm) for the prescribed duration/distance of the long‑run slot.  
-- No intervals, strides, or finish‑pace work today.  
-- Cool‑down: 5‑10 min very easy jog, HR back below 140 bpm.
+**Workout execution** –  
+- **Warm‑up**: 10‑12 min easy jog (≈7:30 / km, keep HR ≤150 bpm).  
+- **Main set**: 90‑120 min steady run at easy‑aerobic pace (≈6:45–7:10 / km, HR ~145‑155 bpm, RPE 3‑4).  
+- **Cool‑down**: 5‑8 min very easy jog + 3‑4 min of gentle stretching.  
 
-**Readiness rationale** – Sleep was only 6.2 h (moderate) and nightly HRV dropped to 45 ms (below the 7‑day avg 51 ms), suggesting limited acute recovery despite an “optimal” AC
+**Readiness rationale** – Your overall readiness is “Moderate” (score 63)
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
