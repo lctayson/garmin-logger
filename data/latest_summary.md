@@ -11,42 +11,34 @@
 - ⚠️ **Limiter:** Sleep Score (43%)
 - **Also soft:** Sleep History, Stress History
 
-## Today's Session
-- **Planned:** Sat, Oct 31 — 13K EZ, HR ≤150; no fast finish
-📌 MRC Glow Walk
+## Today's Workout
+
+- **Malolos Running** — 13.04km · 1:41:29 · 7:47/km · HR 146/161 max
+  - TE: Aerobic Base · aerobic 3.5 · anaerobic 0
+  - MS: 13.04k @ 7:47 146bpm 0.80m 161spm 278ms 7.7cm 226w
+  - Readiness 63 → 63 (Good Sleep History) · Recovery 0h
+  - 🧠 The 13 km run stayed squarely in the easy‑aerobic zone (average rep pace ≈ 7:47 /km, HR ending at 155 bpm, just at the top of zone 6), and the gradual rise in rep‑average HR from 132 to 155 bpm mirrors the expected fatigue‑related drift without any clear target pace violation. Stamina dropped from 99 % to 72 % and the training‑effect shows a solid aerobic base stimulus (AEROBIC = 3.5) while providing no anaerobic load, which aligns with today’s long‑run purpose. Your morning readiness was moderate (score 63, good sleep) and the post‑run dip to 41 is normal after a 1 h 41 min effort; just ensure the recovery minutes and ACWR stay in the “good” range before Thursday’s VO2‑max interval session.
+- **Malolos Walking** — 2.01km · 32:54 · 16:24/km · HR 94/110 max
+  - TE: Recovery (Low Aerobic) · aerobic 0.4 · anaerobic 0.1
+  - MS: 2.01k @ 16:22 94bpm 100spm
+  - 🧠 The 2‑km walk stayed squarely in the recovery zone (average rep pace 16:26 min/km, HR ~94 bpm) and produced a modest aerobic training effect (0.4) with essentially no anaerobic load, which aligns with its purpose as a low‑impact recovery activity. The two reps varied from 18:13 to 14:39 min/km, but both remain well within easy‑aerobic thresholds, so there’s no concerning drift or pacing issue to flag. Morning readiness was moderate (score 63, good sleep), and the post‑exercise readiness dip to 41 reflects the added acute load rather than any execution problem. Overall load was low (6.4), indicating the session contributed minimally to fatigue and fits the current bridge phase’s recovery emphasis.
+
+## Next Session
+- **Planned:** Sun, Nov 1 — 6-8k EZ @ 6:50–7:20 ≤150bpm no hills if RHR is ≤59 and legs are normal, otherwise a 30-40 min bike at RPE 2
 - **Recommendation:** Keep it easy
 - **Reason:** resting heart rate is trending up; HRV is trending down; last-night HRV is below the balanced band; RHR-up/HRV-down recovery pattern.
 - **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
 
-### 🧠 AI Coaching Guidance
-
-**Decision – Go ahead, but dial back the volume/intensity.**  
-Your readiness is “moderate” (score 63) with good recovery metrics (HRV balanced, ACWR 0.8) but sleep was only 6.2 h, so keep today’s long run easy and skip any aggressive finish.
-
-**Workout – Follow the scheduled Saturday long run (easy‑pace) as written:**  
-- **Warm‑up:** 10‑15 min easy jog + 4 × 20‑sec dynamic strides.  
-- **Main set:** Run 60‑90 min at easy‑aerobic pace (≈7:10‑7:45 /km, HR ≤ 155 bpm). If you feel fresh, you may add a **optional 10‑15 min HM‑effort finish** at ~5:30‑5:35 /km, but only if HR stays ≤ 170 bpm and RPE ≤ 6.  
-- **Cool‑down:** 5‑10 min very easy jog + lower‑body stretching.
-
-**Readiness rationale – Why the
-
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
-
-## Latest Activity
-
-_Most recent activity (2026-10-30):_
-- **Friday Core/Hip Stability** — 0.0km · 32:50 · HR 96/112 max
-  - TE: Aerobic Base · aerobic 0.3 · anaerobic 0
-  - 🧠 The 33‑minute core/hip session delivered a very modest aerobic stimulus (aerobic 0.3, no anaerobic benefit) and a low training load (3.7 AU), which is exactly what the bridge phase calls for on Fridays. Your average HR stayed under 100 bpm and body‑battery dropped only 2 points, indicating the work was primarily neuromuscular without taxing your cardiovascular system. Readiness remained at a moderate 70 (“Well Rested”) both before and after the session, with acute load nudging from 567 to 572 and ACWR at 90 %—a “Good” level that suggests today’s strength work fit comfortably within your recovery budget.
 
 ## Load & Trends
 
-- **ACWR:** 0.8 (Optimal) — acute 469 / chronic 545 (chronic range 436–817.5)
-- **7-day volume:** 28.12km vs 28-day avg 35.6km (-21%)
-- **Running tolerance:** 53.6% (Medium) — 28.1km of 63.8km weekly cap, acute impact load 34.2
-- **Aerobic Low:** 821 (target 649–1082 — in range)
-- ⚠️ **Aerobic High:** 1190.8 (target 649–1082 — +109 over)
-- ⚠️ **Anaerobic:** 59.9 (target 86–346 — -26 under)
+- **ACWR:** 1.0 (Optimal) — acute 630 / chronic 574 (chronic range 459.2–861)
+- **7-day volume:** 43.17km vs 28-day avg 38.9km (+11%)
+- **Running tolerance:** 74.3% (Medium) — 41.2km of 63.8km weekly cap, acute impact load 47.4
+- **Aerobic Low:** 946.7 (target 816–1360 — in range)
+- **Aerobic High:** 1190.8 (target 816–1360 — in range)
+- ⚠️ **Anaerobic:** 59.9 (target 108–435 — -48 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
 - ⚠️ **Sleep (7d avg):** 6h39, 5/7 nights below need, trending down
 - ⚠️ **RHR (7d avg):** 57.0, trending up
@@ -62,18 +54,18 @@ _Most recent activity (2026-10-30):_
 | W | Run + Strides/Hills | 6k · 45:28 | 86 |
 | T | 6x75s 3-5K Reps | 6k · 42:02 | 126 |
 | F | Core/Hip | 32:50 | 4 |
-| S | Rest | — | — |
+| S | Malolos Run/Malolos Walk | 15k · 2:14:23 | 127 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 6 | 28.12 km | 4:18:55 | 506.6 |
+| 8 | 43.16 km | 6:33:18 | 633.6 |
 
 ## Recent 4 Weeks
-_Average weekly running: 35.6 km_
+_Average weekly running: 38.9 km_
 
 | Week | Runs | Others | Load |
 |:---|---:|---:|---:|
-| Oct 25–31 | 28.12k | 61 min | 506.6 |
+| Oct 25–31 | 41.16k | 93 min | 633.6 |
 | Oct 18–24 | 37.14k | 55 min | 518.8 |
 | Oct 11–17 | 40.13k | 20 min | 586.2 |
 | Oct 4–10 | 37.15k | 40 min | 534.8 |
