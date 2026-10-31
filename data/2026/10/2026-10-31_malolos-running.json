@@ -597,7 +597,7 @@
         ]
       },
       "lap_count": 14,
-      "ai_analysis": "The 13 km run stayed squarely in the easy‑aerobic zone (average rep pace ≈ 7:47 /km, HR ending at 155 bpm, just at the top of zone 6), and the gradual rise in rep‑average HR from 132 to 155 bpm mirrors the expected fatigue‑related drift without any clear target pace violation. Stamina dropped from 99 % to 72 % and the training‑effect shows a solid aerobic base stimulus (AEROBIC = 3.5) while providing no anaerobic load, which aligns with today’s long‑run purpose. Your morning readiness was moderate (score 63, good sleep) and the post‑run dip to 41 is normal after a 1 h 41 min effort; just ensure the recovery minutes and ACWR stay in the “good” range before Thursday’s VO2‑max interval session.",
+      "ai_analysis": "The 13 km run stayed largely in the easy‑aerobic zone, with rep paces ranging from 7:08",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
@@ -760,7 +760,7 @@
         "condition": "Haze"
       },
       "lap_count": 3,
-      "ai_analysis": "The 2‑km walk stayed squarely in the recovery zone (average rep pace 16:26 min/km, HR ~94 bpm) and produced a modest aerobic training effect (0.4) with essentially no anaerobic load, which aligns with its purpose as a low‑impact recovery activity. The two reps varied from 18:13 to 14:39 min/km, but both remain well within easy‑aerobic thresholds, so there’s no concerning drift or pacing issue to flag. Morning readiness was moderate (score 63, good sleep), and the post‑exercise readiness dip to 41 reflects the added acute load rather than any execution problem. Overall load was low (6.4), indicating the session contributed minimally to fatigue and fits the current bridge phase’s recovery emphasis.",
+      "ai_analysis": "The two walking reps averaged a 16 min 26 s / km pace (18:13 then 14:39 / km) with HR staying under 100 bpm, keeping the session firmly in the recovery zone (aerobic effect 0.4, anaerobic 0.1). The overall load of 6.4 and training‑effect label “RECOVERY” align with the intended low‑intensity day, and the modest HR response confirms minimal cardiovascular strain. Your morning readiness was moderate (score 63, resting HR 60) and the post‑exercise snapshot fell to 41, reflecting the acute cost of the activity rather than a concerning fatigue signal. No deviations from the prescribed recovery focus are evident.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
