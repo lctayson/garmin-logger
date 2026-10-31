@@ -16,18 +16,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Run today, but keep it strictly easy/recovery. Skip the optional hill‑sprints unless you feel completely fresh and calf‑pain‑free.
+**Decision** – Proceed with today’s scheduled Sunday easy/recovery run. Because your HRV is at 100 % and resting HR is low (60 bpm), the moderate overall readiness is driven mainly by sleep‑history and recovery‑time scores; you have enough buffer to run, but keep the intensity light.  
 
-**Workout** –  
-- **Warm‑up**: 10 min easy jog (≈7:30 km⁻¹, HR ≤150 bpm).  
-- **Main set**: 30‑40 min continuous easy run at the same pace/HR zone (Recovery‑Easy, 7:10‑7:45 km⁻¹, HR 145‑155 bpm).  
-- **Cool‑down**: 5 min light jog + gentle stretching.
+**Workout execution** –  
+- **Warm‑up:** 8‑10 min easy jog (≈7:30 km⁻¹, HR ≤150 bpm).  
+- **Main set:** 30‑45 min continuous easy run at easy aerobic pace (≈6:45‑7:10 km⁻¹, HR 145‑155 bpm).  
+- **Optional hill sprints:** If you feel calf‑symptom‑free and the heat isn’t oppressive, add 6‑8 × 10 s uphill sprints (≈90 % effort, 30 s walk‑down recovery).  
+- **Cool‑down:** 5‑8 min easy jog + gentle stretch.  
 
-**Readiness rationale** – HRV is at 100 % (very good) and resting HR is low (60 bpm), indicating good autonomic recovery. However the overall readiness score (52 / Moderate) and “Recovery In Progress” flag, plus only moderate sleep history, suggest you’re not fully topped‑up. On a recovery‑day this level is acceptable, but the extra load of hill sprints could tip you toward fatigue.
-
-**In‑session guardrails** –  
-- Watch HR: if it climbs above ~165 bpm early or you feel unusually breathless, cut the run back or switch to a walk‑jog.  
-- Monitor perceived
+**Readiness rationale** – HRV (100 %) and resting HR (60
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
