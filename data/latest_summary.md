@@ -3,7 +3,7 @@
 ## Readiness: 52/100 (Moderate)
 > Recovery In Progress
 
-- ⚠️ **RHR:** 61 bpm (7d avg: 57.7 bpm, trending up)
+- ⚠️ **RHR:** 60 bpm (7d avg: 57.6 bpm, trending up)
 - ⚠️ **Recovery remaining:** 1d 1h30
 - ⚠️ **Limiter:** Sleep Score (0%)
 - **Also soft:** Sleep History, Recovery Time, Stress History
@@ -16,16 +16,18 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision – proceed, but keep it easy** – Do the scheduled Sunday easy run; skip the optional hill‑sprints and keep the effort firmly in the easy‑aerobic zone.
+**Decision** – Run today, but keep it strictly easy/recovery. Skip the optional hill‑sprints unless you feel completely fresh and calf‑pain‑free.
 
-**Workout execution (as per the plan)**  
-- Warm‑up: 10 min easy jog + 4 × 100 m strides (gradually building to race‑pace effort).  
-- Main set: 45–60 min continuous run at ~6:40–7:15 min/km (HR ≈ 145‑155 bpm, RPE ≈ 3‑4).  
-- Cool‑down: 5 min very easy jog + light stretching.
+**Workout** –  
+- **Warm‑up**: 10 min easy jog (≈7:30 km⁻¹, HR ≤150 bpm).  
+- **Main set**: 30‑40 min continuous easy run at the same pace/HR zone (Recovery‑Easy, 7:10‑7:45 km⁻¹, HR 145‑155 bpm).  
+- **Cool‑down**: 5 min light jog + gentle stretching.
 
-**Readiness rationale**  
-- HRV is at 100 % (very good) and resting HR is low (61 bpm) → cardiovascular system is fresh.  
-- ACWR ≈ 94 % (good load balance) and you’ve
+**Readiness rationale** – HRV is at 100 % (very good) and resting HR is low (60 bpm), indicating good autonomic recovery. However the overall readiness score (52 / Moderate) and “Recovery In Progress” flag, plus only moderate sleep history, suggest you’re not fully topped‑up. On a recovery‑day this level is acceptable, but the extra load of hill sprints could tip you toward fatigue.
+
+**In‑session guardrails** –  
+- Watch HR: if it climbs above ~165 bpm early or you feel unusually breathless, cut the run back or switch to a walk‑jog.  
+- Monitor perceived
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -46,7 +48,7 @@ _Most recent activity (2026-10-31):_
 - **7-day volume:** 36.15km vs 28-day avg 37.4km (-3%)
 - **Running tolerance:** 64.1% (Medium) — 34.1km of 63.8km weekly cap, acute impact load 40.9
 - ⚠️ **Sleep (7d avg):** 6h41, 5/7 nights below need, trending flat
-- ⚠️ **RHR (7d avg):** 57.7, trending up
+- ⚠️ **RHR (7d avg):** 57.6, trending up
 - ⚠️ **HRV:** trending down
 
 ## This Week (Oct 26 – Nov 1)

@@ -2,7 +2,7 @@
   "date": "2026-11-01",
   "_measurement_system": "metric",
   "daily_readiness": {
-    "resting_hr_bpm": 61,
+    "resting_hr_bpm": 60,
     "recovery_time_hours": 25.5,
     "readiness": {
       "score": 52,
@@ -48,9 +48,10 @@
     "sleep_hours_including_previous_day_nap": null
   },
   "health_stats": {
-    "resting_heart_rate": 61,
+    "resting_heart_rate": 60,
     "hrv": {},
-    "sleep_stages_hours": {}
+    "sleep_stages_hours": {},
+    "total_steps": 30
   },
   "training_status": {
     "recovery_time_hours": 25.5
@@ -389,7 +390,7 @@
       "window_start": "2026-11-01",
       "window_end": "2026-11-01",
       "window_days": 1,
-      "resting_heart_rate": 61,
+      "resting_heart_rate": 60,
       "activity_count": 0,
       "total_endurance_duration_hours": 0.0,
       "total_endurance_distance_km": 0.0,
@@ -769,7 +770,7 @@
       "window_start": "2026-10-26",
       "window_end": "2026-11-01",
       "window_days": 7,
-      "resting_heart_rate": 61,
+      "resting_heart_rate": 60,
       "activity_count": 7,
       "total_endurance_duration_hours": 5.7,
       "total_endurance_distance_km": 36.15,
@@ -835,9 +836,9 @@
     },
     {
       "date": "2026-11-01",
-      "charged": 24,
+      "charged": 45,
       "drained": 0,
-      "high": 31,
+      "high": 52,
       "low": 7
     }
   ],

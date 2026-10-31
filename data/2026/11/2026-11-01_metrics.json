@@ -4,7 +4,7 @@
     "score": 52,
     "level": "Moderate",
     "feedback": "Recovery In Progress",
-    "resting_hr": 61,
+    "resting_hr": 60,
     "recovery_hours": 25.5,
     "factor_details": {
       "sleep_score": {
@@ -32,8 +32,11 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "**Decision – proceed, but keep it easy** – Do the scheduled Sunday easy run; skip the optional hill‑sprints and keep the effort firmly in the easy‑aerobic zone.\n\n**Workout execution (as per the plan)**  \n- Warm‑up: 10 min easy jog + 4 × 100 m strides (gradually building to race‑pace effort).  \n- Main set: 45–60 min continuous run at ~6:40–7:15 min/km (HR ≈ 145‑155 bpm, RPE ≈ 3‑4).  \n- Cool‑down: 5 min very easy jog + light stretching.\n\n**Readiness rationale**  \n- HRV is at 100 % (very good) and resting HR is low (61 bpm) → cardiovascular system is fresh.  \n- ACWR ≈ 94 % (good load balance) and you’ve",
+    "ai_analysis": "**Decision** – Run today, but keep it strictly easy/recovery. Skip the optional hill‑sprints unless you feel completely fresh and calf‑pain‑free.\n\n**Workout** –  \n- **Warm‑up**: 10 min easy jog (≈7:30 km⁻¹, HR ≤150 bpm).  \n- **Main set**: 30‑40 min continuous easy run at the same pace/HR zone (Recovery‑Easy, 7:10‑7:45 km⁻¹, HR 145‑155 bpm).  \n- **Cool‑down**: 5 min light jog + gentle stretching.\n\n**Readiness rationale** – HRV is at 100 % (very good) and resting HR is low (60 bpm), indicating good autonomic recovery. However the overall readiness score (52 / Moderate) and “Recovery In Progress” flag, plus only moderate sleep history, suggest you’re not fully topped‑up. On a recovery‑day this level is acceptable, but the extra load of hill sprints could tip you toward fatigue.\n\n**In‑session guardrails** –  \n- Watch HR: if it climbs above ~165 bpm early or you feel unusually breathless, cut the run back or switch to a walk‑jog.  \n- Monitor perceived",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
+  },
+  "health": {
+    "steps": 30
   },
   "sleep": {
     "baseline_h": 7.0,
@@ -368,7 +371,7 @@
       ],
       [
         "2026-11-01",
-        61,
+        60,
         null,
         null,
         null,
@@ -770,7 +773,7 @@
         "2026-11-01",
         "2026-10-26",
         "2026-11-01",
-        61,
+        60,
         null,
         null,
         null,
@@ -855,9 +858,9 @@
       ],
       [
         "2026-11-01",
-        24,
+        45,
         0,
-        31,
+        52,
         7
       ]
     ]
