@@ -20,14 +20,7 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled long‑run (easy aerobic) but keep the effort modest; if you feel unusually fatigued, trim 10‑15 % off the distance.
-
-**Workout execution** –  
-- **Warm‑up:** 10‑15 min easy jog (≈7:30 – 7:45 / km) + a few short strides.  
-- **Main set:** Run at easy aerobic pace (≈6:40 – 7:15 / km), staying in HR zone ≈ 145‑155 bpm for the planned duration (typically 90‑120 min).  No hard intervals are prescribed today.  
-- **Cool‑down:** 5‑10 min very easy jog + gentle stretching.
-
-**Readiness rationale** – Sleep was only 6.2 h (moderate) and HRV 45 ms is a touch below your
+-
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
