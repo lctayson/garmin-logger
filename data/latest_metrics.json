@@ -1,23 +1,37 @@
 {
   "date": "2026-11-01",
   "readiness": {
-    "score": 52,
+    "vo2_max": 45.0,
+    "vo2_max_precise": 44.6,
+    "score": 51,
     "level": "Moderate",
-    "feedback": "Recovery In Progress",
+    "feedback": "Good Recovery",
     "resting_hr": 60,
-    "recovery_hours": 25.5,
+    "hrv_last_night_avg_ms": 39.0,
+    "hrv_7_day_avg_ms": 50.0,
+    "hrv_status": "BALANCED",
+    "sleep_hours": 7.24,
+    "sleep_hours_including_previous_day_nap": 7.24,
+    "sleep_score": 75,
+    "recovery_hours": 18.2,
+    "hrv_baseline": {
+      "lowUpper": 45.0,
+      "balancedLow": 47.0,
+      "balancedUpper": 57.0,
+      "markerValue": 0.3999939
+    },
     "factor_details": {
       "sleep_score": {
-        "percent": 0,
-        "feedback": "None"
+        "percent": 62,
+        "feedback": "Moderate"
       },
       "sleep_history": {
         "percent": 52,
         "feedback": "Moderate"
       },
       "recovery_time": {
-        "percent": 59,
-        "feedback": "Moderate"
+        "percent": 71,
+        "feedback": "Good"
       },
       "acwr": {
         "percent": 94,
@@ -28,19 +42,57 @@
         "feedback": "Very Good"
       },
       "stress_history": {
-        "percent": 69,
-        "feedback": "Moderate"
+        "percent": 70,
+        "feedback": "Good"
       }
     },
-    "ai_analysis": "**Decision** – Proceed with today’s scheduled Sunday easy/recovery run. Because your HRV is at 100 % and resting HR is low (60 bpm), the moderate overall readiness is driven mainly by sleep‑history and recovery‑time scores; you have enough buffer to run, but keep the intensity light.  \n\n**Workout execution** –  \n- **Warm‑up:** 8‑10 min easy jog (≈7:30 km⁻¹, HR ≤150 bpm).  \n- **Main set:** 30‑45 min continuous easy run at easy aerobic pace (≈6:45‑7:10 km⁻¹, HR 145‑155 bpm).  \n- **Optional hill sprints:** If you feel calf‑symptom‑free and the heat isn’t oppressive, add 6‑8 × 10 s uphill sprints (≈90 % effort, 30 s walk‑down recovery).  \n- **Cool‑down:** 5‑8 min easy jog + gentle stretch.  \n\n**Readiness rationale** – HRV (100 %) and resting HR (60",
+    "snapshots": [
+      {
+        "timestamp_local": "2026-11-01T07:29:12.0",
+        "context": "AFTER_WAKEUP_RESET",
+        "score": 51,
+        "feedback": "GOOD_RECOVERY",
+        "recovery_minutes": 1092,
+        "acute_load": 518,
+        "recovery_time_change": "NO_CHANGE_SLEEP"
+      },
+      {
+        "timestamp_local": "2026-11-01T00:10:17.0",
+        "context": "UPDATE_REALTIME_VARIABLES",
+        "score": 52,
+        "feedback": "RECOVERY_IN_PROGRESS",
+        "recovery_minutes": 1531,
+        "acute_load": 630,
+        "factor_overrides": {
+          "sleep_score": {
+            "percent": 0,
+            "feedback": "None"
+          },
+          "recovery_time": {
+            "percent": 59,
+            "feedback": "Moderate"
+          },
+          "stress_history": {
+            "percent": 69,
+            "feedback": "Moderate"
+          }
+        }
+      }
+    ],
+    "ai_analysis": "**Decision** – Proceed with today’s scheduled **easy/recovery run**; skip the optional hill sprints because HRV (39 ms) is below your 7‑day average and the readiness score is only moderate.\n\n**Workout** – 1) Warm‑up: 10 min light jog (keep HR ≤ 145 bpm, RPE ≤ 3).  \n2) Main set: 30–45 min steady easy run at 7:10–7:45 min/km (HR ≈ 145‑155 bpm, RPE 4–5).  \n3) No interval work today – treat the run as continuous.  \n4) Cool‑down: 5 min easy jog + 5 min gentle stretch.\n\n**Readiness rationale** – Sleep was 7.2 h",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
     "steps": 30
   },
   "sleep": {
+    "deep_h": 1.0,
+    "light_h": 5.45,
+    "rem_h": 0.8,
+    "awake_h": 0.95,
     "baseline_h": 7.0,
     "need_h": 7.5,
+    "next_need_h": 7.0,
     "feedback": "Increased",
     "training_feedback": "Chronic",
     "sleep_history_adjustment": "Increasing Low Quality",
@@ -48,11 +100,43 @@
     "nap_adjustment": "No Change",
     "previous_day_nap": null
   },
+  "load": {
+    "acute_load": 518,
+    "chronic_load": 558,
+    "acwr": 0.9,
+    "acwr_percent": 38,
+    "acwr_status": "Optimal",
+    "chronic_load_range": {
+      "min": 446.4,
+      "max": 837.0
+    },
+    "training_status": "Maintaining 2"
+  },
+  "vo2_max": 45.0,
+  "vo2_max_precise": 44.6,
   "race_predictions": {
     "5k": "27:12",
     "10k": "57:24",
     "half_marathon": "2:11:06",
     "marathon": "4:53:02"
+  },
+  "load_balance": {
+    "aerobic_low": 888.3,
+    "aerobic_low_target": [
+      649,
+      1082
+    ],
+    "aerobic_high": 1190.8,
+    "aerobic_high_target": [
+      649,
+      1082
+    ],
+    "anaerobic": 59.9,
+    "anaerobic_target": [
+      86,
+      346
+    ],
+    "load_focus": "Anaerobic Shortage"
   },
   "running_tolerance": {
     "acute_impact_load": 40.9,
@@ -185,6 +269,14 @@
         }
       ]
     }
+  },
+  "heat_acclimation": {
+    "percentage": 100,
+    "trend": "Acclimatized"
+  },
+  "altitude_acclimation": {
+    "percentage": 0,
+    "trend": null
   },
   "trend_recent_daily": {
     "columns": [
@@ -372,16 +464,16 @@
       [
         "2026-11-01",
         60,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        39.0,
+        50.0,
+        7.24,
+        75,
+        45.0,
+        "Maintaining 2",
+        518,
+        558,
+        0.9,
+        "Optimal",
         0,
         0.0,
         0.0,
@@ -774,16 +866,16 @@
         "2026-10-26",
         "2026-11-01",
         60,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        39.0,
+        50.0,
+        7.24,
+        75,
+        45.0,
+        "Maintaining 2",
+        518,
+        558,
+        0.9,
+        "Optimal",
         7,
         5.7,
         36.15,
@@ -858,9 +950,9 @@
       ],
       [
         "2026-11-01",
-        45,
+        50,
         0,
-        52,
+        57,
         7
       ]
     ]
