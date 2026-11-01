@@ -19,7 +19,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Sunday session (easy recovery run). Skip the optional
+**Decision** – Proceed with today’s scheduled Sunday run (easy + optional hill sprints). Your overall readiness is “moderate” but the feedback reads **Good Recovery**, HRV is balanced, resting HR is low (60 bpm) and ACWR is optimal (0.9). No red flags demand a full recovery day.  
+
+**Workout execution** – 1️⃣ Warm‑up: 10 min easy jog (zone 6, 6:40‑7:15 km) + 2‑3 dynamic drills (leg swings, high‑knees).  
+2️⃣ Main set: 30‑45 min steady easy run staying ≤ 155 bpm (RPE ≤ 4). If you feel fully recovered and calves are symptom‑free
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
