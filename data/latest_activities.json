@@ -243,7 +243,7 @@
         ]
       },
       "lap_count": 3,
-      "ai_analysis": "The three work reps were tightly clustered (2:30–2:43 /km) with a modest upward HR trend (119 → 135 bpm), indicating you stayed within a low‑intensity recovery band throughout the set. Stamina dropped from 100 % to 89 % and the aerobic training effect stayed at 1.7 RECOVERY, which aligns with the prescribed recovery ride rather than a VO₂max stimulus. Your morning readiness was “Moderate” (score 51) with ample recovery hours (18 h) and a solid sleep score (75), so the session’s low load is consistent with your current recovery state. No concerns appear; the ride served its intended purpose of gentle aerobic upkeep.",
+      "ai_analysis": "The three reps averaged 2:35 /km (range 2:30–2:43) while heart rate climbed from 119 bpm in the first interval to 135 bpm by the third, matching the modest “RECOVERY” training effect and the aerobic‑dominant zone you target for bridge‑phase work. Stamina fell from 100 % to a low of 89 % during the 29‑minute session, which is typical for a short, sub‑threshold effort but worth noting if the drop deepens in future rides. Your morning readiness score was 51 (moderate) and dipped to 46 after the bike, reflecting the modest load (load 21.6) rather than any acute fatigue; the post‑exercise snapshot even shows a 50 % reduction in recovery‑time demand thanks to a nap.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
