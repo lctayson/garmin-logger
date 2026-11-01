@@ -19,11 +19,8 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Sunday easy/recovery run. Keep the optional hill‑sprint block only if you feel fully rested, calf‑symptom‑free, and the heat (≈28‑33 °C) isn’t adding excessive strain.  
-
-**Workout execution** – Warm‑up: 10 min easy jog + 3 × dynamic drills (high‑knees, butt‑kicks, leg swings). Main set: 40‑45 min steady easy run at 7:10‑7:45 min / km (HR ≈ 145‑150 bpm, RPE ≤ 3). Optional: 6‑8 × 10 s hill sprints (≈5‑6 % grade) with 1½‑2 min walking recovery each; skip if any calf tightness or elevated fatigue. Cool‑down: 5‑10 min very easy jog + light stretching.  
-
-**Readiness rationale** – Overall readiness is “Moderate” (
+**Decision – Go ahead as planned**  
+- Today’s schedule is an easy/recovery Sunday run with optional 6‑8 × 10‑sec hill sprints (only if you feel rested and calves are clear). Your readiness is “moderate” but all key markers (HRV balanced, resting HR 60 bpm, ACWR ≈ 1.0) indicate you’ve recovered enough for a
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
