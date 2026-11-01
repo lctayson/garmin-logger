@@ -19,16 +19,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s Monday Strength A session, but keep the load moderate (avoid maximal or heavy‑eccentric work).  
+**Decision – Proceed as planned** – Monday’s “Strength A (power/hip‑extension)” session fits today’s readiness profile (moderate overall score but good sleep, low resting HR, balanced HRV, optimal ACWR).  
 
-**Execution** – • Warm‑up: 5 min light cardio (jog or bike) + dynamic hip‑mobility drills (leg swings, hip circles).  
-• Main set: Power/hip‑extension circuit (e.g., glute bridges, single‑leg RDLs, kettlebell swings, banded hip thrusts) – 3 × 10‑12 reps each, using a weight that lets you stay ~RPE 6‑7.  
-• Core/hip stability finisher: 2 × 30‑sec plank variations.  
-• Cool‑down: 5 min easy stretch focusing on glutes, hamstrings, hip flexors.  
+**Workout execution** –  
+- **Warm‑up**: 5 min easy jog or bike + dynamic hip‑mobility drills (leg swings, hip circles, body‑weight glute bridges).  
+- **Main set** (as per the plan): 3 × 8–10 reps each of glute bridge, single‑leg Romanian deadlift, banded hip‑thrust, and reverse‑lunge with knee‑drive; keep tempo ~2‑1‑2 (2 s eccentric, 1 s pause, 2 s concentric).  
+- **Recovery**: 60‑90 s rest between sets; focus on full‑range, quality movement.  
+- **Cool‑down**: 5 min light walk + static hip/hamstring stretch (30 s each).  
 
-**Readiness rationale** – Sleep was solid (7.3 h, sleep‑score 74) and HRV is balanced (≈50 ms, 94 % of baseline). Resting HR 58 bpm is low, indicating good autonomic recovery. ACWR 0.8 is in the optimal zone, so the training load is well‑tolerated. The moderate overall readiness score reflects a slight dip in sleep‑history percent, but nothing warrants skipping or heavy‑load work.  
-
-**In‑session guardrails** – -
+**Readiness rationale** – Sleep (7.3 h, score 74) and recovery hours (18.8 h) are “good”; HRV is balanced (50 ms vs 49 ms 7‑day avg); resting HR 58 bpm is low, indicating good autonomic recovery. Acute load (449) is well below chronic (544) with ACWR 0.8 (optimal),
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
