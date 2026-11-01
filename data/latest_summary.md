@@ -17,7 +17,7 @@
   - TE: Recovery (Low Aerobic) · aerobic 1.7 · anaerobic 0
   - MS: 11.13k @ 2:36 126bpm 89w
   - Readiness 51 → 46 (Improved By Napping) · Recovery 1d 6h 50m
-  - 🧠 The three work intervals stayed firmly in recovery intensity, with paces between 2:30–2:43 /km and heart rate rising modestly from 119 to 135 bpm, which aligns with the low aerobic training effect (1.7) and zero anaerobic contribution. Stamina fell to 89 and the total load was 21.6 with a ‑2 body‑battery impact, matching your morning readiness score of 51 (moderate) and a solid sleep score (75). No concerning drift or excess fatigue appears; the ride provided the intended recovery stimulus without jeopardizing the upcoming Thursday VO₂‑max quality session.
+  - 🧠 The three work reps were tightly clustered (2:30–2:43 /km) with a modest upward HR trend (119 → 135 bpm), indicating you stayed within a low‑intensity recovery band throughout the set. Stamina dropped from 100 % to 89 % and the aerobic training effect stayed at 1.7 RECOVERY, which aligns with the prescribed recovery ride rather than a VO₂max stimulus. Your morning readiness was “Moderate” (score 51) with ample recovery hours (18 h) and a solid sleep score (75), so the session’s low load is consistent with your current recovery state. No concerns appear; the ride served its intended purpose of gentle aerobic upkeep.
 
 ## Next Session
 - **Planned:** Mon, Nov 2 — Strength A
