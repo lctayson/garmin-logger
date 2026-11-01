@@ -17,7 +17,7 @@
   - TE: Recovery (Low Aerobic) · aerobic 1.7 · anaerobic 0
   - MS: 11.13k @ 2:36 126bpm 89w
   - Readiness 51 → 46 (Improved By Napping) · Recovery 1d 6h 50m
-  - 🧠 The three reps averaged 2:35 /km (range 2:30–2:43) while heart rate climbed from 119 bpm in the first interval to 135 bpm by the third, matching the modest “RECOVERY” training effect and the aerobic‑dominant zone you target for bridge‑phase work. Stamina fell from 100 % to a low of 89 % during the 29‑minute session, which is typical for a short, sub‑threshold effort but worth noting if the drop deepens in future rides. Your morning readiness score was 51 (moderate) and dipped to 46 after the bike, reflecting the modest load (load 21.6) rather than any acute fatigue; the post‑exercise snapshot even shows a 50 % reduction in recovery‑time demand thanks to a nap.
+  - 🧠 The three work reps averaged 2:35 km (range 2:30‑2:43) while heart rate rose from 119 to 135 bpm, staying comfortably below the recovery‑zone ceiling of 140 bpm and showing a slight, expected increase in effort across the set. Stamina fell to 89 % by the end, matching the modest 21.6 load and aerobic training effect of 1.7, so the session provided the intended low‑intensity stimulus. With a morning readiness score of 51 (moderate) and sleep score 75, the post‑exercise dip to 46 is normal after a recovery bike and does not signal overreaching or recovery issues.
 
 ## Next Session
 - **Planned:** Mon, Nov 2 — Strength A
