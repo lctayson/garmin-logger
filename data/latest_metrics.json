@@ -1,13 +1,65 @@
 {
   "date": "2026-11-02",
   "readiness": {
-    "resting_hr": 61,
-    "ai_analysis": "**Decision:** Proceed with today’s scheduled Strength A (hip‑extension/power) session – no reason to skip or downgrade.\n\n**Execution:** - **Warm‑up:** 10‑15 min of easy jogging or bike plus dynamic leg swings, glute activation (band walks, body‑weight glute bridges).  \n- **Main set:** Follow the prescribed Strength A routine (hip‑thrusts, single‑leg RDLs, kettlebell swings, etc.) with the usual rep/weight scheme you’ve been using.  \n- **Recovery between sets:** 60‑90 s active rest (light marching or step‑downs).  \n- **Cool‑down:** 5‑10 min of gentle mobility/stretch for hips, hamstrings, and lower back.\n\n**Readiness rationale:** Resting HR 61 bpm is low‑normal, indicating good autonomic recovery; with no sleep or HRV alerts, the body appears ready for a moderate‑intensity strength day. No acute load spikes are reported, so the session’s volume is appropriate.",
+    "vo2_max": 45.0,
+    "vo2_max_precise": 44.6,
+    "score": 52,
+    "level": "Moderate",
+    "feedback": "Good Sleep History",
+    "resting_hr": 58,
+    "hrv_last_night_avg_ms": 50.0,
+    "hrv_7_day_avg_ms": 49.0,
+    "hrv_status": "BALANCED",
+    "sleep_hours": 7.27,
+    "sleep_hours_including_previous_day_nap": 8.0,
+    "sleep_score": 74,
+    "recovery_hours": 18.8,
+    "hrv_baseline": {
+      "lowUpper": 45.0,
+      "balancedLow": 47.0,
+      "balancedUpper": 58.0,
+      "markerValue": 0.3408966
+    },
+    "factor_details": {
+      "sleep_score": {
+        "percent": 61,
+        "feedback": "Moderate"
+      },
+      "sleep_history": {
+        "percent": 55,
+        "feedback": "Moderate"
+      },
+      "recovery_time": {
+        "percent": 70,
+        "feedback": "Good"
+      },
+      "acwr": {
+        "percent": 98,
+        "feedback": "Good"
+      },
+      "hrv": {
+        "percent": 94,
+        "feedback": "Good"
+      },
+      "stress_history": {
+        "percent": 76,
+        "feedback": "Good"
+      }
+    },
+    "ai_analysis": "- **Decision:** Proceed with today’s planned Strength A (hip‑extension/Power) session, but keep the load a touch lighter than a “hard” day (e.g., 2 × 5 instead of 3 × 5 reps) given the moderate readiness score.  \n\n- **Workout execution (as per the plan):**  \n  1. **Warm‑up:** 8‑10 min easy jog or bike + dynamic hip‑mobility drills (leg swings, glute bridges).  \n  2. **Main set:** Hip‑thrusts, single‑leg Romanian dead‑lifts, kettlebell swings, and banded hip‑abductions – follow the prescribed reps/sets from Strength A (e.g., 3 × 8 @ 70 % 1RM).  \n  3. **Recovery:** 1‑2 min active rest between sets; focus on breathing to keep HR in the easy zone (<130 bpm).  \n  4. **Cool‑down:** 5 min light walk + static stretching of glutes, hamstrings, and quads.  \n\n- **Readiness rationale:** Sleep was adequate (7.3 h, sleep‑score 74 → moderate) and HRV is in the balanced band (50 ms, 94 %",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
+  "health": {
+    "steps": 25
+  },
   "sleep": {
+    "deep_h": 0.68,
+    "light_h": 6.0,
+    "rem_h": 0.58,
+    "awake_h": 0.52,
     "baseline_h": 7.0,
     "need_h": 6.5,
+    "next_need_h": 7.0,
     "feedback": "Decreased",
     "training_feedback": "Chronic",
     "sleep_history_adjustment": "No Change",
@@ -15,11 +67,43 @@
     "nap_adjustment": "Decreasing",
     "previous_day_nap": 44.0
   },
+  "load": {
+    "acute_load": 449,
+    "chronic_load": 544,
+    "acwr": 0.8,
+    "acwr_percent": 33,
+    "acwr_status": "Optimal",
+    "chronic_load_range": {
+      "min": 435.2,
+      "max": 816.0
+    },
+    "training_status": "Maintaining 2"
+  },
+  "vo2_max": 45.0,
+  "vo2_max_precise": 44.6,
   "race_predictions": {
     "5k": "27:11",
     "10k": "57:24",
     "half_marathon": "2:11:05",
     "marathon": "4:53:00"
+  },
+  "load_balance": {
+    "aerobic_low": 908.0,
+    "aerobic_low_target": [
+      649,
+      1082
+    ],
+    "aerobic_high": 1190.8,
+    "aerobic_high_target": [
+      649,
+      1082
+    ],
+    "anaerobic": 59.9,
+    "anaerobic_target": [
+      86,
+      346
+    ],
+    "load_focus": "Anaerobic Shortage"
   },
   "running_tolerance": {
     "acute_impact_load": 35.5,
@@ -164,6 +248,14 @@
         }
       ]
     }
+  },
+  "heat_acclimation": {
+    "percentage": 100,
+    "trend": "Acclimatized"
+  },
+  "altitude_acclimation": {
+    "percentage": 0,
+    "trend": null
   },
   "trend_recent_daily": {
     "columns": [
@@ -350,17 +442,17 @@
       ],
       [
         "2026-11-02",
-        61,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        58,
+        50.0,
+        49.0,
+        7.27,
+        74,
+        45.0,
+        "Maintaining 2",
+        449,
+        544,
+        0.8,
+        "Optimal",
         0,
         0.0,
         0.0,
@@ -758,17 +850,17 @@
         "2026-11-02",
         "2026-10-27",
         "2026-11-02",
-        61,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        58,
+        50.0,
+        49.0,
+        7.27,
+        74,
+        45.0,
+        "Maintaining 2",
+        449,
+        544,
+        0.8,
+        "Optimal",
         7,
         5.72,
         47.28,
@@ -849,9 +941,9 @@
       ],
       [
         "2026-11-02",
-        31,
+        64,
         0,
-        56,
+        89,
         25
       ]
     ]

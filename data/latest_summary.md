@@ -1,8 +1,15 @@
 # Daily Check — 2026-11-02
 
-## Readiness: -/100
+## Readiness: 52/100 (Moderate)
+> Good Sleep History
 
-- ⚠️ **RHR:** 61 bpm (7d avg: 58.1 bpm, trending up)
+- **VO₂max:** 44.6 ml/kg/min (Garmin display: 45)
+- ⚠️ **RHR:** 58 bpm (7d avg: 57.7 bpm, trending up)
+- **HRV:** 50ms (7d avg: 49ms) · within 47–58ms
+- **Sleep:** 7h16 / 6h30 need (0h46 over) · score 74 · 7d avg 6h41 · 4/7 nights below need
+- **Recovery remaining:** 18h48
+- ⚠️ **Limiter:** Sleep History (55%)
+- **Also soft:** Sleep Score, Recovery Time
 
 ## Today's Session
 - **Planned:** Mon, Nov 2 — Strength A
@@ -12,14 +19,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision:** Proceed with today’s scheduled Strength A (hip‑extension/power) session – no reason to skip or downgrade.
+- **Decision:** Proceed with today’s planned Strength A (hip‑extension/Power) session, but keep the load a touch lighter than a “hard” day (e.g., 2 × 5 instead of 3 × 5 reps) given the moderate readiness score.  
 
-**Execution:** - **Warm‑up:** 10‑15 min of easy jogging or bike plus dynamic leg swings, glute activation (band walks, body‑weight glute bridges).  
-- **Main set:** Follow the prescribed Strength A routine (hip‑thrusts, single‑leg RDLs, kettlebell swings, etc.) with the usual rep/weight scheme you’ve been using.  
-- **Recovery between sets:** 60‑90 s active rest (light marching or step‑downs).  
-- **Cool‑down:** 5‑10 min of gentle mobility/stretch for hips, hamstrings, and lower back.
+- **Workout execution (as per the plan):**  
+  1. **Warm‑up:** 8‑10 min easy jog or bike + dynamic hip‑mobility drills (leg swings, glute bridges).  
+  2. **Main set:** Hip‑thrusts, single‑leg Romanian dead‑lifts, kettlebell swings, and banded hip‑abductions – follow the prescribed reps/sets from Strength A (e.g., 3 × 8 @ 70 % 1RM).  
+  3. **Recovery:** 1‑2 min active rest between sets; focus on breathing to keep HR in the easy zone (<130 bpm).  
+  4. **Cool‑down:** 5 min light walk + static stretching of glutes, hamstrings, and quads.  
 
-**Readiness rationale:** Resting HR 61 bpm is low‑normal, indicating good autonomic recovery; with no sleep or HRV alerts, the body appears ready for a moderate‑intensity strength day. No acute load spikes are reported, so the session’s volume is appropriate.
+- **Readiness rationale:** Sleep was adequate (7.3 h, sleep‑score 74 → moderate) and HRV is in the balanced band (50 ms, 94 %
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -33,10 +41,15 @@ _Most recent activity (2026-11-01):_
 
 ## Load & Trends
 
+- **ACWR:** 0.8 (Optimal) — acute 449 / chronic 544 (chronic range 435.2–816)
 - **7-day volume:** 47.28km vs 28-day avg 37.4km (+26%)
 - **Running tolerance:** 56.3% (Medium) — 34.1km of 63km weekly cap, acute impact load 35.5
-- ⚠️ **Sleep (7d avg):** 6h35, 4/7 nights below need, trending up
-- ⚠️ **RHR (7d avg):** 58.1, trending up
+- **Aerobic Low:** 908 (target 649–1082 — in range)
+- ⚠️ **Aerobic High:** 1190.8 (target 649–1082 — +109 over)
+- ⚠️ **Anaerobic:** 59.9 (target 86–346 — -26 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- ⚠️ **Sleep (7d avg):** 6h41, 4/7 nights below need, trending up
+- ⚠️ **RHR (7d avg):** 57.7, trending up
 - ⚠️ **HRV:** trending down
 
 ## This Week (Oct 27 – Nov 2)
