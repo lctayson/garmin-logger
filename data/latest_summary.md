@@ -19,10 +19,14 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled easy/recovery run. Skip the optional hill sprints unless you feel completely fresh and calf‑pain‑free.
+**Decision** – Proceed with today’s scheduled Sunday session, but treat it as a pure recovery run; add the optional hill‑sprints only if you feel fully refreshed and calf‑pain‑free.  
 
-**Workout execution** – *Warm‑up*: 5‑10 min easy jog (HR < 150 bpm).  
-*Main set*: 40‑60 min steady run at 7:10‑7
+**Workout execution** – 1️⃣ Warm‑up: 10–12 min easy jog (≈7:30 /km, HR ≈ 145 bpm) + 2‑3 short strides.  
+2️⃣ Main set: 45–60 min steady easy run at easy‑aerobic pace (6:40–7:15 /km, HR 145‑155 bpm).  
+3️⃣ Optional: 6‑8 × 10 s hill sprints (≈5 % grade), full walk‑back recovery; skip if any calf tightness or HR spikes.  
+4️⃣ Cool‑down: 5 min easy jog + gentle stretching.  
+
+**Readiness rationale** –
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
