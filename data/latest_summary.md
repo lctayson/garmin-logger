@@ -19,18 +19,16 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned **Monday Strength A (hip‑extension/power) session**, but keep the volume moderate given a “Moderate” readiness score.
+**Decision** – Proceed with today’s Monday Strength A session, but keep the load moderate (avoid maximal or heavy‑eccentric work).  
 
-**Workout execution** – 1️⃣ Dynamic warm‑up (5 min: leg swings, high‑knee skips, body‑weight lunges).  
-2️⃣ Main‑set (example format – keep to the prescribed routine):  
-  - Hip‑thrusts 3 × 8‑10 reps @ 70‑75 % 1RM  
-  - Single‑leg glute bridges 3 × 8‑10 reps each side  
-  - Romanian dead‑lifts 3 × 8‑10 reps @ 65‑70 % 1RM  
-  - Core plank series (3 × 30‑45 s).  
-3️⃣ Recovery – 2‑3 min active rest between sets; focus on controlled breathing.  
-4️⃣ Cool‑down – 5 min light mobility (foam‑roll hips, hamstrings, calves) and gentle stretching.
+**Execution** – • Warm‑up: 5 min light cardio (jog or bike) + dynamic hip‑mobility drills (leg swings, hip circles).  
+• Main set: Power/hip‑extension circuit (e.g., glute bridges, single‑leg RDLs, kettlebell swings, banded hip thrusts) – 3 × 10‑12 reps each, using a weight that lets you stay ~RPE 6‑7.  
+• Core/hip stability finisher: 2 × 30‑sec plank variations.  
+• Cool‑down: 5 min easy stretch focusing on glutes, hamstrings, hip flexors.  
 
-**Readiness rationale** – Resting HR 58
+**Readiness rationale** – Sleep was solid (7.3 h, sleep‑score 74) and HRV is balanced (≈50 ms, 94 % of baseline). Resting HR 58 bpm is low, indicating good autonomic recovery. ACWR 0.8 is in the optimal zone, so the training load is well‑tolerated. The moderate overall readiness score reflects a slight dip in sleep‑history percent, but nothing warrants skipping or heavy‑load work.  
+
+**In‑session guardrails** – -
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
