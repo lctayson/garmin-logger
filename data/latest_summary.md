@@ -19,15 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned Sunday session, but keep it strictly easy/recovery‑oriented. Skip the optional hill‑sprint block unless you feel completely fresh and calf‑pain‑free.
+**Decision** – Proceed with today’s scheduled Sunday easy/recovery run. Keep the optional hill‑sprint block only if you feel fully rested, calf‑symptom‑free, and the heat (≈28‑33 °C) isn’t adding excessive strain.  
 
-**Workout execution (as per the plan)**  
-- **Warm‑up**: 10 min easy jog (≈7:30 / km, HR ≤150 bpm) + 4 × 20‑sec strides, easy jog back.  
-- **Main set**: 45–60 min continuous easy run in Zone 2 (7:10‑7:45 / km, HR 145‑155 bpm).  
-- **Cool‑down**: 5 min very easy jog + light stretching.  
-*(If the week’s plan listed the 6‑8 × 10‑s hill sprints, treat them as optional and only do them if you’re fully recovered and have no calf soreness.)*
+**Workout execution** – Warm‑up: 10 min easy jog + 3 × dynamic drills (high‑knees, butt‑kicks, leg swings). Main set: 40‑45 min steady easy run at 7:10‑7:45 min / km (HR ≈ 145‑150 bpm, RPE ≤ 3). Optional: 6‑8 × 10 s hill sprints (≈5‑6 % grade) with 1½‑2 min walking recovery each; skip if any calf tightness or elevated fatigue. Cool‑down: 5‑10 min very easy jog + light stretching.  
 
-**Readiness rationale** – Your overnight HRV (39 ms) is well above the 7‑day average (50 ms) and flagged “BALANCED,” resting HR is a low 60 bpm, and ACWR is 0.9 (optimal). Sleep quantity (7.2 h) and sleep‑score are only moderate, pulling the overall readiness score to 51 (moderate). The profile suggests you’re recovered enough for an easy aerobic effort but not the high‑int
+**Readiness rationale** – Overall readiness is “Moderate” (
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
