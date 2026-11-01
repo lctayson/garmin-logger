@@ -19,8 +19,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision – Go ahead as planned**  
-- Today’s schedule is an easy/recovery Sunday run with optional 6‑8 × 10‑sec hill sprints (only if you feel rested and calves are clear). Your readiness is “moderate” but all key markers (HRV balanced, resting HR 60 bpm, ACWR ≈ 1.0) indicate you’ve recovered enough for a
+**Decision** – Proceed with today’s scheduled easy/recovery run. Skip the optional hill sprints unless you feel completely fresh and calf‑pain‑free.
+
+**Workout execution** – *Warm‑up*: 5‑10 min easy jog (HR < 150 bpm).  
+*Main set*: 40‑60 min steady run at 7:10‑7
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
