@@ -19,15 +19,18 @@
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Proceed with today’s planned Strength A (hip‑extension/Power) session, but keep the load a touch lighter than a “hard” day (e.g., 2 × 5 instead of 3 × 5 reps) given the moderate readiness score.  
+**Decision** – Proceed with today’s planned **Monday Strength A (hip‑extension/power) session**, but keep the volume moderate given a “Moderate” readiness score.
 
-- **Workout execution (as per the plan):**  
-  1. **Warm‑up:** 8‑10 min easy jog or bike + dynamic hip‑mobility drills (leg swings, glute bridges).  
-  2. **Main set:** Hip‑thrusts, single‑leg Romanian dead‑lifts, kettlebell swings, and banded hip‑abductions – follow the prescribed reps/sets from Strength A (e.g., 3 × 8 @ 70 % 1RM).  
-  3. **Recovery:** 1‑2 min active rest between sets; focus on breathing to keep HR in the easy zone (<130 bpm).  
-  4. **Cool‑down:** 5 min light walk + static stretching of glutes, hamstrings, and quads.  
+**Workout execution** – 1️⃣ Dynamic warm‑up (5 min: leg swings, high‑knee skips, body‑weight lunges).  
+2️⃣ Main‑set (example format – keep to the prescribed routine):  
+  - Hip‑thrusts 3 × 8‑10 reps @ 70‑75 % 1RM  
+  - Single‑leg glute bridges 3 × 8‑10 reps each side  
+  - Romanian dead‑lifts 3 × 8‑10 reps @ 65‑70 % 1RM  
+  - Core plank series (3 × 30‑45 s).  
+3️⃣ Recovery – 2‑3 min active rest between sets; focus on controlled breathing.  
+4️⃣ Cool‑down – 5 min light mobility (foam‑roll hips, hamstrings, calves) and gentle stretching.
 
-- **Readiness rationale:** Sleep was adequate (7.3 h, sleep‑score 74 → moderate) and HRV is in the balanced band (50 ms, 94 %
+**Readiness rationale** – Resting HR 58
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
