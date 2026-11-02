@@ -19,15 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision – Proceed as planned** – Monday’s “Strength A (power/hip‑extension)” session fits today’s readiness profile (moderate overall score but good sleep, low resting HR, balanced HRV, optimal ACWR).  
-
-**Workout execution** –  
-- **Warm‑up**: 5 min easy jog or bike + dynamic hip‑mobility drills (leg swings, hip circles, body‑weight glute bridges).  
-- **Main set** (as per the plan): 3 × 8–10 reps each of glute bridge, single‑leg Romanian deadlift, banded hip‑thrust, and reverse‑lunge with knee‑drive; keep tempo ~2‑1‑2 (2 s eccentric, 1 s pause, 2 s concentric).  
-- **Recovery**: 60‑90 s rest between sets; focus on full‑range, quality movement.  
-- **Cool‑down**: 5 min light walk + static hip/hamstring stretch (30 s each).  
-
-**Readiness rationale** – Sleep (7.3 h, score 74) and recovery hours (18.8 h) are “good”; HRV is balanced (50 ms vs 49 ms 7‑day avg); resting HR 58 bpm is low, indicating good autonomic recovery. Acute load (449) is well below chronic (544) with ACWR 0.8 (optimal),
+- **Decision:** Proceed with today’s planned Strength A (hip‑extension/power) session – no need to downgrade or skip.  
+- **Warm‑up:** 5‑10 min of dynamic moves (leg swings, body‑weight lunges, glute bridges) to raise core temp and prime the hips.  
+- **Main set (per the plan):** Power/hip‑extension circuit – e.g., 3 × 10 hip thrusts, 3 × 8 single‑leg glute bridges, 3 × 12 kettlebell swings, 3 × 8 step‑ups; keep rest 60‑90 s between sets and focus on explosive form rather than heavy load.  
+- **Cool‑down:** 3‑5 min of easy static stretching for glutes, hamstrings, and hip flexors; finish with light foam‑rolling if needed.  
+- **Readiness rationale:**
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
