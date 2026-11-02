@@ -19,13 +19,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s Tuesday sub‑threshold session as scheduled; the readiness score is moderate but all key markers (low resting HR, balanced HRV, low ACWR) are in the green.
+**Decision** – Proceed with today’s scheduled Tuesday sub‑threshold (SUT) workout, but keep an eye on how you feel; the moderate sleep (6.5 h) suggests a slight “listen‑to‑your‑body” approach rather than a full cut‑back.  
 
-**Workout execution** – Warm‑up: 10‑12 min easy jog (≈7:30 km⁻¹) + 2‑3 × 20‑s strides. Main set: 3 × 8 min sub‑threshold intervals at 5:20‑5:35 km⁻¹ (HR ≈158‑168 bpm), with 2‑3 min easy jog recovery between reps. Cool‑down: 8‑10 min easy jog + light stretching.
+**Workout execution** – **Warm‑up**: 10 min easy (≈7:30 / km) + 3 × 20‑s strides. **Main set**: 3 × 8 min sub‑threshold intervals at 5:20–5:35 / km (≈158–168 bpm), with 2 min jog recovery between each. **Cool‑down**: 8–10 min easy, finish with a few relaxed strides.  
 
-**Readiness rationale** – Sleep was 6.5 h (moderate) but HRV is balanced (52 ms vs 7‑day avg 49 ms) and resting HR is low (56 bpm), indicating good autonomic recovery. Acute load is well below chronic (ACWR 0.6), so cumulative fatigue is low. The moderate overall readiness score is driven mainly by sleep history, not by cardiovascular stress, so the session is still appropriate.
+**Readiness rationale** – Resting HR is low (56 bpm) and HRV is balanced (52 ms vs 7‑day avg 49 ms), indicating good autonomic recovery. ACWR is low (0.6) and acute load is well below chronic, so overall fatigue load is modest. The only modest signal is the sleep‑history factor (≈61 %); it’s enough to warrant a “soft” check‑in but not enough to abort the session.  
 
-**In‑
+**In‑session guardrails** – During the warm‑up, if HR climbs >165 bpm or you feel unusually heavy, trim the interval length to 6 min. In the main set, stay in the sub‑threshold HR zone; if you breach 170 bpm or RPE spikes >7, drop the pace by ~10 s /
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
