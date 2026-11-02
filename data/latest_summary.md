@@ -1,66 +1,79 @@
-# Daily Check — 2026-11-02
+# Daily Check — 2026-11-03
 
-## Readiness: 52/100 (Moderate)
+## Readiness: 73/100 (Moderate)
 > Good Sleep History
 
 - **VO₂max:** 44.6 ml/kg/min (Garmin display: 45)
-- ⚠️ **RHR:** 58 bpm (7d avg: 57.7 bpm, trending up)
-- **HRV:** 50ms (7d avg: 49ms) · within 47–58ms
-- **Sleep:** 7h16 / 6h30 need (0h46 over) · score 74 · 7d avg 6h41 · 4/7 nights below need
-- **Recovery remaining:** 18h48
-- ⚠️ **Limiter:** Sleep History (55%)
-- **Also soft:** Sleep Score, Recovery Time
+- ⚠️ **RHR:** 56 bpm (7d avg: 57.6 bpm, trending up)
+- **HRV:** 52ms (7d avg: 49ms) · within 47–58ms
+- ⚠️ **Sleep:** 6h32 / 7h00 need (0h28 short) · score 76 · 7d avg 6h41 · 4/7 nights below need
+- **Recovery remaining:** 0h00
+- ⚠️ **Limiter:** Sleep History (61%)
+- **Also soft:** Sleep Score
 
-## Today's Workout
-
-- **Mon Strength A** — 0.0km · 27:20 · HR 99/121 max
-  - TE: Aerobic Base · aerobic 0.4 · anaerobic 0
-  - Readiness 52 → 62 (Good Sleep History) · Recovery 6h 12m
-  - 🧠 The strength‑training session delivered a modest aerobic stimulus (AEROBIC_BASE 0.4, minor benefit) with a low average heart rate of 99 bpm and a small body‑battery dip (‑1), which is exactly what a “Strength A” day should look like. Your morning readiness was moderate (score 52) despite a solid sleep score (74) and ample recovery hours (≈19 h), and the post‑exercise readiness rise to 62 reflects the brief load rather than any fatigue. Given the low training load (5) and negligible anaerobic effect, the session fits the bridge phase’s emphasis on strength without jeopardizing your upcoming Thursday quality work. Continue to monitor recovery minutes and aim for a similar low‑impact strength day before your next hard interval.
-
-## Next Session
+## Today's Session
 - **Planned:** Tue, Nov 3 — 8k as 2×12min SUT @ 5:25–5:33; 3min walk-jog ≤168bpm
 - **Recommendation:** Adjust the workout
 - **Reason:** resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
 - **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
 
+### 🧠 AI Coaching Guidance
+
+**Decision** – Proceed with today’s scheduled Tuesday sub‑threshold (SUT) interval session, but keep the intensity slightly “effort‑first”: if you feel unusually hot or fatigued, be ready to trim the interval length or drop a repeat.
+
+**Workout execution**  
+- **Warm‑up**: 12 min easy jog (≈7:30 /km) + 4 × 20 s strides, light dynamic drills.  
+- **Main set**: 3 × 8 min sub‑threshold at 5:20‑5:35 /km (≈158‑168 bpm, RPE 7‑8). Recovery: 2 min easy jog between reps.  
+- **Cool‑down**: 10 min easy jog back to <145 bpm, finish with gentle stretching.
+
+**Readiness rationale** – Score 73 (moderate) is driven mainly by a modest 6.5 h sleep night; HRV (52 ms) is above the 7‑day average and “BALANCED,” resting HR is low (56 bpm), and ACWR is low (0.6). The overall profile suggests you’re recovered enough for a quality SUT effort, though the sleep dip warns against pushing beyond the prescribed intensity.
+
+**In
+
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
+
+## Latest Activity
+
+_Most recent activity (2026-11-02):_
+- **Mon Strength A** — 0.0km · 27:20 · HR 99/121 max
+  - TE: Aerobic Base · aerobic 0.4 · anaerobic 0
+  - 🧠 The strength‑training session delivered a modest aerobic stimulus (AEROBIC_BASE 0.4, minor benefit) with a low average heart rate of 99 bpm and a small body‑battery dip (‑1), which is exactly what a “Strength A” day should look like. Your morning readiness was moderate (score 52) despite a solid sleep score (74) and ample recovery hours (≈19 h), and the post‑exercise readiness rise to 62 reflects the brief load rather than any fatigue. Given the low training load (5) and negligible anaerobic effect, the session fits the bridge phase’s emphasis on strength without jeopardizing your upcoming Thursday quality work. Continue to monitor recovery minutes and aim for a similar low‑impact strength day before your next hard interval.
 
 ## Load & Trends
 
-- **ACWR:** 0.8 (Optimal) — acute 455 / chronic 545 (chronic range 436–817.5)
-- **7-day volume:** 47.28km vs 28-day avg 37.4km (+26%)
-- **Running tolerance:** 56.3% (Medium) — 34.1km of 63km weekly cap, acute impact load 35.5
+- ⚠️ **ACWR:** 0.6 (Low) — acute 358 / chronic 526 (chronic range 420.8–789)
+- **7-day volume:** 38.25km vs 28-day avg 35.6km (+7%)
+- **Running tolerance:** 46.0% (Low 1Days) — 25.1km of 63km weekly cap, acute impact load 29
 - **Aerobic Low:** 913 (target 649–1082 — in range)
-- ⚠️ **Aerobic High:** 1190.8 (target 649–1082 — +109 over)
+- **Aerobic High:** 1048.1 (target 649–1082 — in range)
 - ⚠️ **Anaerobic:** 59.9 (target 86–346 — -26 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
 - ⚠️ **Sleep (7d avg):** 6h41, 4/7 nights below need, trending up
-- ⚠️ **RHR (7d avg):** 57.7, trending up
+- ⚠️ **RHR (7d avg):** 57.6, trending up
 - ⚠️ **HRV:** trending down
 
-## This Week (Oct 27 – Nov 2)
+## This Week (Oct 28 – Nov 3)
 
 | D | Activity | Volume | Load |
 |:---:|:---|---:|---:|
-| T | 3x10min Thr | 9k · 59:37 | 205 |
 | W | Run + Strides/Hills | 6k · 45:28 | 86 |
 | T | 6x75s 3-5K Reps | 6k · 42:02 | 126 |
 | F | Core/Hip | 32:50 | 4 |
 | S | Malolos Run/Malolos Walk | 15k · 2:14:23 | 127 |
 | S | Indoor Ride | 11.1k · 29:01 | 22 |
 | M | Strength A | 27:20 | 5 |
+| T | Rest | — | — |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 8 | 47.27 km | 6:10:41 | 574.5 |
+| 7 | 38.24 km | 5:11:04 | 369.8 |
 
 ## Recent 4 Weeks
-_Average weekly running: 37.4 km_
+_Average weekly running: 35.6 km_
 
 | Week | Runs | Others | Load |
 |:---|---:|---:|---:|
-| Oct 27–Nov 2 | 34.14k | 93 min | 574.5 |
-| Oct 20–26 | 37.14k | 58 min | 544.6 |
-| Oct 13–19 | 41.13k | 25 min | 600.5 |
-| Oct 6–12 | 37.14k | 40 min | 520.1 |
+| Oct 28–Nov 3 | 25.11k | 93 min | 369.8 |
+| Oct 21–27 | 39.14k | 58 min | 596.3 |
+| Oct 14–20 | 40.13k | 25 min | 580.6 |
+| Oct 7–13 | 38.13k | 40 min | 539.6 |
