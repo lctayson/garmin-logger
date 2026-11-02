@@ -19,13 +19,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **Strength A (hip‑extension/power)** session; readiness is moderate but all key markers (sleep, HRV, resting‑HR, ACWR) are in the “good” band, so the load is appropriate.
+**Decision** – Proceed with today’s Strength A (hip‑extension/power) session, but keep the load moderate (≈70 % of your usual 1‑RM) given the “moderate” readiness score.
 
-**Workout execution** – 1️⃣ Warm‑up: 5–10 min easy jog or bike + dynamic leg‑mobility (leg swings, hip circles, body‑weight glute bridges).  
-2️⃣ Main set: follow the prescribed strength circuit (e.g., hip thrusts, glute bridges, single‑leg RDL, kettlebell swings) – 2–3 sets of 8–12 reps per exercise at a moderate load (RPE 6‑7), 2–3 min rest between sets.  
-3️⃣ Cool‑down: 5 min light‑tempo movement + static stretch of hips, hamstrings, calves.
+**Workout execution** – 1️⃣ Warm‑up: 5 min easy jog or bike + 2 × 10 m dynamic lunges + 2 × 10 m A‑skips.  
+2️⃣ Main‑set (prescribed): 3 × 8 reps each of single‑leg hip thrust, kettlebell swing, and split‑squat; rest 60 s between sets.  
+3️⃣ Cool‑down: 5 min light mobility (hip circles, glute stretches, foam roll).
 
-**Readiness rationale** – Sleep ≈ 7.3 h, sleep‑score 74 and “Good Sleep History” indicate sufficient recovery; HRV is balanced (50 ms vs 7‑day avg 49 ms) and
+**Readiness rationale** – Sleep = 7.3 h, sleep‑score 74 (“good”) and HRV balanced (50 ms, 94 % of baseline) show good recovery; resting HR 58 bpm is low, indicating adequate autonomic tone. Acute‑load 449 vs chronic 544 gives ACWR 0.8 (optimal). The modest overall readiness score (52, “moderate”) is driven mainly by the composite algorithm, not any red flag—so a full strength session is reasonable, just avoid pushing to maximal intensity.
+
+**In‑session guardrails** – If HR spikes > 150 bpm during warm‑up, drop the load by one level. If form degrades or you feel unusual fatigue, cut the reps to 6 per set or replace one exercise with a body‑weight variant. Monitor any sharp calf or lower‑
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
