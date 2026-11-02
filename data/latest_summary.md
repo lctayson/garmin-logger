@@ -19,11 +19,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Proceed with today’s planned Strength A (hip‑extension/power) session – no need to downgrade or skip.  
-- **Warm‑up:** 5‑10 min of dynamic moves (leg swings, body‑weight lunges, glute bridges) to raise core temp and prime the hips.  
-- **Main set (per the plan):** Power/hip‑extension circuit – e.g., 3 × 10 hip thrusts, 3 × 8 single‑leg glute bridges, 3 × 12 kettlebell swings, 3 × 8 step‑ups; keep rest 60‑90 s between sets and focus on explosive form rather than heavy load.  
-- **Cool‑down:** 3‑5 min of easy static stretching for glutes, hamstrings, and hip flexors; finish with light foam‑rolling if needed.  
-- **Readiness rationale:**
+- **Decision:** Proceed with today’s planned **Strength A (power/hip‑extension) session** – the readiness profile is overall solid (balanced HRV, low resting HR, optimal ACWR) and there’s no indication you need to cut back or swap for recovery.  
+
+- **Workout execution:** Start with a 5‑minute light jog or dynamic mobility circuit (leg swings, hip circles, body‑weight glutes) to raise core temperature; then perform the prescribed hip‑extension/strength circuit (e.g., 3 × 8‑12 reps per leg at a load that feels “moderate‑hard” – RPE ≈ 7), keeping rest intervals of 60‑90 s between sets; finish with 5‑10 min of gentle stretching and foam‑rolling for hips, hamstrings, and calves.  
+
+- **Readiness rationale:** Your sleep‑hours (7.3 h) and sleep‑score (74) are in the “good” range, HRV is balanced (50 ms vs 7‑day avg 49 ms), resting HR is low (58 bpm), and ACWR is 0.8 (optimal).  The only modest flag is the overall readiness score of 52 (“moderate”), but that reflects the composite weighting—not a red‑flag on any single metric—so a normal strength load is appropriate.  
+
+- **In‑session guardrails:** Watch for unusually high heart‑rate spikes during the lifts or a sudden drop in RPE; if you feel excessive joint/muscle fatigue, cut the sets by
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
