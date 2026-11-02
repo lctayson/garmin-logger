@@ -19,13 +19,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Proceed with today’s planned **Strength A (power/hip‑extension) session** – the readiness profile is overall solid (balanced HRV, low resting HR, optimal ACWR) and there’s no indication you need to cut back or swap for recovery.  
+**Decision** – Proceed with today’s planned **Monday Strength A (hip‑extension / power)** session; no need to downgrade or skip.
 
-- **Workout execution:** Start with a 5‑minute light jog or dynamic mobility circuit (leg swings, hip circles, body‑weight glutes) to raise core temperature; then perform the prescribed hip‑extension/strength circuit (e.g., 3 × 8‑12 reps per leg at a load that feels “moderate‑hard” – RPE ≈ 7), keeping rest intervals of 60‑90 s between sets; finish with 5‑10 min of gentle stretching and foam‑rolling for hips, hamstrings, and calves.  
+**Workout execution** – 1️⃣ Dynamic warm‑up (5‑10 min: leg swings, high‑knee march, glute bridges, light band work).  
+2️⃣ Main strength circuit (3 sets of 8‑12 reps each, 2‑min rest): hip thrusts, single‑leg Romanian dead‑lifts, kettlebell swings, banded monster walks. Use a load that feels “moderate‑hard” (RPE ≈ 6‑7) but lets you keep form.  
+3️⃣ Cool‑down (5 min): static hamstring/hip‑flexor stretch, deep‑breathing, light foam‑roll.
 
-- **Readiness rationale:** Your sleep‑hours (7.3 h) and sleep‑score (74) are in the “good” range, HRV is balanced (50 ms vs 7‑day avg 49 ms), resting HR is low (58 bpm), and ACWR is 0.8 (optimal).  The only modest flag is the overall readiness score of 52 (“moderate”), but that reflects the composite weighting—not a red‑flag on any single metric—so a normal strength load is appropriate.  
+**Readiness rationale** – Resting HR 58 bpm (well below LTHR) and balanced HRV (50 ms) show good autonomic recovery; ACWR 0.8 is in the optimal zone and you logged ~19 h of recovery time. Sleep was solid (7.3 h, score 74), so the moderate overall readiness score reflects only a mild dip in the composite, not a red flag.
 
-- **In‑session guardrails:** Watch for unusually high heart‑rate spikes during the lifts or a sudden drop in RPE; if you feel excessive joint/muscle fatigue, cut the sets by
+**In‑session guardrails** – If your heart
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
