@@ -19,14 +19,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned **Strength A (power/hip‑extension)** session; the readiness profile is overall solid (good sleep, balanced HRV, optimal ACWR) and there’s no red‑flag indicating a recovery‑only day.
+**Decision** – Proceed with today’s scheduled **Strength A (hip‑extension/power)** session; readiness is moderate but all key markers (sleep, HRV, resting‑HR, ACWR) are in the “good” band, so the load is appropriate.
 
-**Workout execution** –  
-- **Warm‑up:** 5‑10 min of dynamic mobility (leg swings, hip circles, light body‑weight squats).  
-- **Main set (strength focus):** 3‑4 hip‑dominant exercises (e.g., single‑leg deadlift, glute bridge, kettlebell swing, hip thrust). Aim for 3 × 8‑12 reps at a moderate load, emphasizing controlled tempo and full range of motion.  
-- **Cool‑down:** 5 min of gentle static stretching for glutes, hamstrings, and hip flexors.
+**Workout execution** – 1️⃣ Warm‑up: 5–10 min easy jog or bike + dynamic leg‑mobility (leg swings, hip circles, body‑weight glute bridges).  
+2️⃣ Main set: follow the prescribed strength circuit (e.g., hip thrusts, glute bridges, single‑leg RDL, kettlebell swings) – 2–3 sets of 8–12 reps per exercise at a moderate load (RPE 6‑7), 2–3 min rest between sets.  
+3️⃣ Cool‑down: 5 min light‑tempo movement + static stretch of hips, hamstrings, calves.
 
-**Readiness rationale** – Sleep ≈ 7.3 h with a 74 sleep score and “Good” recovery hours; HR
+**Readiness rationale** – Sleep ≈ 7.3 h, sleep‑score 74 and “Good Sleep History” indicate sufficient recovery; HRV is balanced (50 ms vs 7‑day avg 49 ms) and
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
