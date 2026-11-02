@@ -19,15 +19,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned **Monday Strength A (hip‑extension / power)** session; no need to downgrade or skip.
-
-**Workout execution** – 1️⃣ Dynamic warm‑up (5‑10 min: leg swings, high‑knee march, glute bridges, light band work).  
-2️⃣ Main strength circuit (3 sets of 8‑12 reps each, 2‑min rest): hip thrusts, single‑leg Romanian dead‑lifts, kettlebell swings, banded monster walks. Use a load that feels “moderate‑hard” (RPE ≈ 6‑7) but lets you keep form.  
-3️⃣ Cool‑down (5 min): static hamstring/hip‑flexor stretch, deep‑breathing, light foam‑roll.
-
-**Readiness rationale** – Resting HR 58 bpm (well below LTHR) and balanced HRV (50 ms) show good autonomic recovery; ACWR 0.8 is in the optimal zone and you logged ~19 h of recovery time. Sleep was solid (7.3 h, score 74), so the moderate overall readiness score reflects only a mild dip in the composite, not a red flag.
-
-**In‑session guardrails** – If your heart
+- **Decision**: Proceed with today’s Monday Strength‑A (hip‑extension/power) session as scheduled; the overall readiness (moderate score 52, balanced HRV, low resting HR, optimal ACWR) supports a normal training load.  
+- **Warm‑up / Main set / Cool‑down**: Exact rep scheme isn’t logged, but follow the plan’s prescribed routine – e.g., 10 min dynamic warm‑up (leg swings, glute bridges, light lunges), then the prescribed strength circuit (e.g., 3 × 8‑12 reps per exercise at the usual load), finishing with 5 min of light mobility work and stretching.  
+- **Readiness rationale**: Sleep was solid (7.3 h, sleep‑score 74) and recovery hours are high (18.8 h). HRV is in the “balanced” band and matches your 7‑day average, while resting HR is low (58 bpm), indicating good autonomic recovery. The ACWR of 0.8 is optimal, so there’s no overload signal to force a cut‑back.  
+- **In‑session guardrails**: Watch for any unusual joint pain, excessive muscle fatigue, or a sudden
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
