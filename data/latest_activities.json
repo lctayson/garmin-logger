@@ -97,7 +97,7 @@
         ]
       },
       "lap_count": 1,
-      "ai_analysis": "The 27‑minute Strength A session generated only a modest aerobic training effect (0.4 AEROBIC_BASE) and a very low load (5), which is exactly what the bridge phase calls for on Monday to preserve leg power without adding meaningful cardio fatigue. Your morning readiness was moderate (score 52) but rose to 62 after the workout, and the recovery‑time factor stayed at 90 %—both indicating the session was well‑tolerated and didn’t erode your recovery buffer. No red flags appear; the strength work is on target to support hip‑extension strength for the upcoming half‑marathon build‑up.",
+      "ai_analysis": "The 27‑minute Strength A session generated only a minor aerobic stimulus (Aerobic 0.4, no anaerobic contribution) and a very low training load (5 AU), which is exactly what a strength‑only day should look like. Your morning readiness was moderate (score 52) despite excellent sleep (74) and ample recovery time (≈19 h), and the post‑exercise snapshot rose to 62 – a normal post‑activity boost rather than a sign that the workout altered your baseline readiness. Overall, the session aligns with the bridge phase’s plan to keep cardio impact minimal on strength days while you maintain good sleep and recovery.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
