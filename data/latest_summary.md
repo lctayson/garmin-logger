@@ -19,15 +19,14 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **Monday Strength A (hip‑extension/power) session**.  Readiness is moderate (score 52) but all key markers (HRV ≈ baseline, resting HR 58 bpm, ACWR 0.8) are in the “good/optimal” range, so a full strength workout is acceptable; just stay attuned to any sudden fatigue.
+**Decision** – Proceed with today’s planned **Strength A (power/hip‑extension)** session; the readiness profile is overall solid (good sleep, balanced HRV, optimal ACWR) and there’s no red‑flag indicating a recovery‑only day.
 
-**Workout execution**  
-- **Warm‑up (10 min):** 5 min light cardio (e.g., easy jog or bike) + dynamic hip‑mobility drills (leg swings, glute bridges, walking lunges).  
-- **Main set:** 3‑4 × 8‑10 reps of hip‑extension power moves (e.g., single‑leg Romanian dead‑lift, kettlebell swing, banded hip thrust), 2‑3 × 8 reps of core/hip‑stability (plank variations, clamshells). Use a load that feels “moderately heavy” (RPE 6‑7) – you should finish the last rep with good form but a noticeable challenge.  
-- **Recovery between sets:** 60‑90 s active recovery (light marching or walking) to keep HR low.  
-- **Cool‑down (5 min):** Gentle stretching for hamstrings, glutes, and hip flexors; foam‑roll any tight spots.
+**Workout execution** –  
+- **Warm‑up:** 5‑10 min of dynamic mobility (leg swings, hip circles, light body‑weight squats).  
+- **Main set (strength focus):** 3‑4 hip‑dominant exercises (e.g., single‑leg deadlift, glute bridge, kettlebell swing, hip thrust). Aim for 3 × 8‑12 reps at a moderate load, emphasizing controlled tempo and full range of motion.  
+- **Cool‑down:** 5 min of gentle static stretching for glutes, hamstrings, and hip flexors.
 
-**Readiness rationale** – Your HRV is balanced and resting HR is low, indicating good autonomic recovery; ACWR 0.8 shows you’re not carrying excess cumulative stress. Sleep quantity (7.3 h) and quality (score 74)
+**Readiness rationale** – Sleep ≈ 7.3 h with a 74 sleep score and “Good” recovery hours; HR
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
