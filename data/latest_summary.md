@@ -16,7 +16,7 @@
 - **Mon Strength A** — 0.0km · 27:20 · HR 99/121 max
   - TE: Aerobic Base · aerobic 0.4 · anaerobic 0
   - Readiness 52 → 62 (Good Sleep History) · Recovery 6h 12m
-  - 🧠 The Monday Strength A session logged a modest 5‑point training load and a minor aerobic benefit (aerobic = 0.4) with average HR ≈ 99 bpm, which is exactly what the program expects for a low‑impact strength day. Your morning readiness was moderate (score 52, recovery ≈ 18.8 h), and the post‑exercise snapshot rose to 62, reflecting the system’s factor overrides rather than a measurable impact from the workout itself. Overall, the session was unremarkable and aligns with the current bridge phase plan, with no evident risk signals.
+  - 🧠 The strength‑training session delivered a modest aerobic stimulus (AEROBIC_BASE 0.4, minor benefit) with a low average heart rate of 99 bpm and a small body‑battery dip (‑1), which is exactly what a “Strength A” day should look like. Your morning readiness was moderate (score 52) despite a solid sleep score (74) and ample recovery hours (≈19 h), and the post‑exercise readiness rise to 62 reflects the brief load rather than any fatigue. Given the low training load (5) and negligible anaerobic effect, the session fits the bridge phase’s emphasis on strength without jeopardizing your upcoming Thursday quality work. Continue to monitor recovery minutes and aim for a similar low‑impact strength day before your next hard interval.
 
 ## Next Session
 - **Planned:** Tue, Nov 3 — 8k as 2×12min SUT @ 5:25–5:33; 3min walk-jog ≤168bpm
