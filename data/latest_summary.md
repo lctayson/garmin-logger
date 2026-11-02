@@ -19,10 +19,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision**: Proceed with today’s Monday Strength‑A (hip‑extension/power) session as scheduled; the overall readiness (moderate score 52, balanced HRV, low resting HR, optimal ACWR) supports a normal training load.  
-- **Warm‑up / Main set / Cool‑down**: Exact rep scheme isn’t logged, but follow the plan’s prescribed routine – e.g., 10 min dynamic warm‑up (leg swings, glute bridges, light lunges), then the prescribed strength circuit (e.g., 3 × 8‑12 reps per exercise at the usual load), finishing with 5 min of light mobility work and stretching.  
-- **Readiness rationale**: Sleep was solid (7.3 h, sleep‑score 74) and recovery hours are high (18.8 h). HRV is in the “balanced” band and matches your 7‑day average, while resting HR is low (58 bpm), indicating good autonomic recovery. The ACWR of 0.8 is optimal, so there’s no overload signal to force a cut‑back.  
-- **In‑session guardrails**: Watch for any unusual joint pain, excessive muscle fatigue, or a sudden
+- **Decision** – Proceed with today’s scheduled **Strength A (hip‑extension/power) session**; the moderate readiness score is offset by strong sleep, balanced HRV, low resting‑HR and optimal ACWR, so no need to downgrade or skip.  
+- **Execution** – Warm‑up 10‑12 min of dynamic mobility (leg swings, hip circles, light glute bridges). Follow the exact Strength A prescription (e.g., 3 × 8‑12 reps of hip thrusts, single‑leg dead‑lifts, kettlebell swings, plus core‑stability work) and finish with 5 min of static stretching. Keep the rest intervals you normally use (≈60‑90 s) and aim for RPE 6‑7.  
+- **Readiness rationale** – Resting HR 58 bpm (well below baseline) and HRV ≈ 50 ms (balanced) show good autonomic recovery; sleep 7.3 h with a 74 score and 18.8 h of recovery time are “good”; ACWR 0.8 is optimal. The moderate overall score reflects the scoring algorithm, not a physiological deficit, so the session is appropriate.  
+- **In‑session guardrails** – Track your effort: if heart rate spikes >150 bpm early or RPE climbs above 7, trim
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
