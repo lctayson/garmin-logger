@@ -19,16 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Tuesday sub‑threshold (SUT) interval session, but keep the intensity slightly “effort‑first”: if you feel unusually hot or fatigued, be ready to trim the interval length or drop a repeat.
+**Decision** – Proceed with today’s scheduled Tuesday sub‑threshold (SUT) workout; no red flags in the readiness data that require a recovery day or major tweak.  
 
-**Workout execution**  
-- **Warm‑up**: 12 min easy jog (≈7:30 /km) + 4 × 20 s strides, light dynamic drills.  
-- **Main set**: 3 × 8 min sub‑threshold at 5:20‑5:35 /km (≈158‑168 bpm, RPE 7‑8). Recovery: 2 min easy jog between reps.  
-- **Cool‑down**: 10 min easy jog back to <145 bpm, finish with gentle stretching.
+**Execution** – Warm‑up: 12‑15 min easy run (≈7:30 km⁻¹, HR < 150 bpm) + 4 × 20 s strides. Main set: 3 × 8 min sub‑threshold intervals at ~5:20‑5:35 km⁻¹ (HR ≈ 158‑168 bpm, RPE 7‑8) with 2 min easy jog recovery between reps. Cool‑down: 10 min easy jog, finish with light stretching.  
 
-**Readiness rationale** – Score 73 (moderate) is driven mainly by a modest 6.5 h sleep night; HRV (52 ms) is above the 7‑day average and “BALANCED,” resting HR is low (56 bpm), and ACWR is low (0.6). The overall profile suggests you’re recovered enough for a quality SUT effort, though the sleep dip warns against pushing beyond the prescribed intensity.
-
-**In
+**Readiness rationale** – Sleep = 6.5 h (moderate but “Good Sleep History”), HRV balanced and slightly above
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
