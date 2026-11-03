@@ -510,7 +510,7 @@
         ]
       },
       "lap_count": 11,
-      "ai_analysis": "The two 12‑minute threshold reps held the prescribed sub‑threshold pace (5:31 – 5:32 /km) and stayed within the 5:20‑5:35 /km window, but the second rep’s HR rose to 169 bpm (vs. 163 bpm in the first) and the −3.8 % pace‑efficiency drift indicates a modest slowdown as fatigue set in, reflected by stamina dropping from 99 % to 66 % by the end. The training‑effect scores (aerobic 4.0, anaerobic 0.4) confirm a strong lactate‑threshold stimulus with negligible anaerobic load, matching the bridge‑phase focus on sub‑threshold volume. Morning readiness was moderate (score 73) with good sleep, yet the post‑run readiness plunge to 45 underscores the session’s acute cost and suggests you’ll need a lighter recovery day before the next quality workout.",
+      "ai_analysis": "The two 12‑minute threshold reps held a consistent pace of 5:31‑5:32 /km, right in the prescribed sub‑threshold range (≈5:20‑5:35 /km) and with HR climbing from 163 to 169 bpm, indicating the effort stayed on target but accumulated a modest cardiovascular load across reps. Interval‑drift shows a –3.8 % pace‑efficiency change and –4.2 % power‑efficiency decline, matching the 6 bpm HR rise and the stamina metric falling from 99 % to 66 % by the end of the set. Morning readiness was moderate (score 73) with good sleep, yet the post‑run snapshot dropped to 45, reflecting the acute strain of the session rather than a lack of pre‑run preparedness. Overall, the workout delivered the expected threshold stimulus without any pacing shortfall.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
