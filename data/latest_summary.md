@@ -18,7 +18,7 @@
   - Intervals: 2 work reps · pace drift -3.8% · HR +6bpm
   - MS: 4.34k @ 5:32 166bpm 1.01m 179spm 247ms 8.3cm 311w
   - Readiness 73 → 45 (Focus On Energy Levels) · Recovery 1d 12h
-  - 🧠 The two 12‑min threshold reps were held at 5:31 and 5:32 /km, squarely inside the prescribed sub‑threshold/threshold range (≈5:20–5:35 /km), and HR rose from 163 bpm to 169 bpm, edging toward your LTHR of 171 bpm in the second rep. The –3.8 % pace‑efficiency drift and –4.2 % power‑efficiency drift show a modest improvement in effort despite the
+  - 🧠 Your two 12‑minute threshold reps held steady at 5:31–5:32 /km, staying inside the prescribed sub‑threshold window (5:20–5:35 /km); the 6 bpm HR rise and –3.8 % pace‑efficiency drift across reps show a modest slowdown but not a loss of quality. Stamina fell from 99 % to 66 % and the training‑effect scores confirm a strong lactate‑threshold stimulus with essentially no anaerobic contribution, which is exactly what a Thursday quality session should deliver. Morning readiness was moderate (73) and the 176‑point load is appropriate for this phase, so the session fits the current bridge‑to‑HM plan without flagging any red‑flag issues.
 
 ## Next Session
 - **Planned:** Wed, Nov 4 — 6k EZ @ 6:50–7:20 ≤150bpm w/ 5×20s strides; 75s WALK
