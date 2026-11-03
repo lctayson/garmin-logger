@@ -510,7 +510,7 @@
         ]
       },
       "lap_count": 11,
-      "ai_analysis": "The two 12‑minute threshold reps held tightly to the prescribed sub‑threshold range (5:31 – 5:32 /km) but showed a modest slowdown and a 6 bpm HR rise across reps (163 → 169 bpm), reflected in the –3.8 % pace‑efficiency drift and –4.2 % power‑efficiency drift. Stamina fell from 99 % to 66 % and the lactate‑threshold training effect was high (aerobic = 4.0) while anaerobic contribution remained negligible, confirming the session delivered the intended threshold stimulus without the VO₂‑max load you need on Thursdays. Morning readiness was moderate (score 73) and the acute load of 176.5, coupled with a –15 body‑battery impact, drove the post‑run readiness dip to 45, suggesting the day’s cumulative stress was sizable but not unexpected for a hard threshold workout.",
+      "ai_analysis": "The two 12‑minute threshold reps were paced at 5:31 km⁻¹ and 5:32 km⁻¹, right inside the prescribed 5:20–5:35 km⁻¹ sub‑threshold window, and the modest 6 bpm rise in HR (163→169) with a –3.8 % pace‑efficiency drift reflects the expected physiological cost of maintaining threshold intensity in the early‑morning heat. Stamina fell from 99 % to 66 % and the lactate‑threshold training effect scored a solid 4.0 aerobic, confirming the session’s primary purpose without generating any anaerobic load, which is appropriate for this bridge‑phase Tuesday workout. Morning readiness was moderate (73) with good sleep, and the post‑run drop to 45 aligns with the high acute load (176.5) and a –15 point body‑battery impact, so no recovery concerns arise beyond the normal fatigue pattern.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
