@@ -18,7 +18,7 @@
   - Intervals: 2 work reps · pace drift -3.8% · HR +6bpm
   - MS: 4.34k @ 5:32 166bpm 1.01m 179spm 247ms 8.3cm 311w
   - Readiness 73 → 45 (Focus On Energy Levels) · Recovery 1d 12h
-  - 🧠 The two 12‑minute threshold reps were 5:31 and 5:32 /​km, squarely within the prescribed 5:20‑5:35 /​km sub‑threshold range, but HR rose from 163 bpm to 169 bpm and the pace‑efficiency drift was –3.8 % (power drift –4.2 %), showing the effort became marginally harder in the second rep. Stamina fell from 99 % to 66 % and body‑battery dropped –15, indicating a substantial fatigue load for a typical threshold
+  - 🧠 The two 12‑minute threshold reps were spot‑on the prescribed sub‑threshold window (5:31 – 5:32 /km), with only a 1‑second drift and the expected HR rise from 163 bpm to 169 bpm, confirming a solid VO₂‑max‑adjacent stimulus. The –3.8 % pace‑efficiency drift and –4.2 % power‑efficiency drift indicate a slight slowdown and power drop in the second rep, which is typical as stamina fell from 99 % to 66 % across the set. Training‑effect scores (aerobic 4.0, anaerobic ≈0.4) align with the bridge phase goal of sharpening lactate‑threshold without adding anaerobic load. Morning readiness was moderate (score 73) and the session’s acute load of 176.5 produced a –15 % body‑battery impact, so recovery focus is warranted before the next hard Thursday.
 
 ## Next Session
 - **Planned:** Wed, Nov 4 — 6k EZ @ 6:50–7:20 ≤150bpm w/ 5×20s strides; 75s WALK
