@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.5
   - MS: 5.06k @ 7:23 141bpm 0.81m 168spm 278ms 8.0cm 240w
   - Readiness 64 → 58 (Recovery In Progress) · Recovery 19h 44m
-  - 🧠 The six rep paces hovered between 7:42 and 6:43 min/km, with the bulk (5 of 6) clustering around 7:15–7:22 min/km and corresponding HRs of 125‑149 bpm—well within your easy‑aerobic zone and matching the intended “run + strides/hills” purpose. The final, quicker 6:43 min/km rep pushed into the low‑end of the steady zone, suggesting you were able to add a brief, slightly harder effort without exceeding the HR ceiling (max 156 bpm). Stamina dipped from 99 % to 85 % (min 80 %) and the aerobic training effect was 2.8 AE, both indicating a modest but appropriate load for a 6 km session. Your morning readiness was moderate (64) and fell to 58 after the workout, reflecting the expected short‑term recovery demand without any red flag.
+  - 🧠 The six work reps averaged a 7:17 /km pace with a modest spread (7:42 → 6:43 /km) and heart rates climbing from 125 bpm early to ~149 bpm late, staying inside your easy‑aerobic to low‑steady zone and delivering only a 0.5 anaerobic training effect as expected for a mixed run‑plus‑strides/hills session. Your stamina metric fell from 99 % to 85 % (bottoming at 80 %), which aligns with the 45‑minute effort and the 76.6 load rating, showing a typical moderate fatigue without indicating overreaching. Morning readiness was “moderate” (score 64) and the post‑exercise snapshot dropped to 58, a normal dip given the session intensity and your current recovery‑hour budget.
 
 ## Next Session
 - **Planned:** Thu, Nov 5 — 9k as 5×1K @ 5:08–5:12; 2min walk-jog ≤172bpm (5:05 only if controlled)
