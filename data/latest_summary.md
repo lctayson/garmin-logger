@@ -18,7 +18,7 @@
   - Intervals: 2 work reps · pace drift -3.8% · HR +6bpm
   - MS: 4.34k @ 5:32 166bpm 1.01m 179spm 247ms 8.3cm 311w
   - Readiness 73 → 45 (Focus On Energy Levels) · Recovery 1d 12h
-  - 🧠 Your two 12‑minute reps hit the prescribed sub‑threshold pace (5:31 – 5:32 /km) and stayed within the target HR window (163 → 169 bpm), with only a modest 6 bpm rise and a –3.8 % pace drift that reflects the tiny slowdown from the first to the second interval. Stamina fell from 99 % to 66 %, which is typical for a threshold effort of this length, and the training‑effect scores confirm a solid lactate‑threshold stimulus but essentially no anaerobic gain. Since Thursday in the bridge phase is meant to deliver VO₂‑max‑level work, this session provided the right sub‑threshold load but fell short of the higher‑intensity stimulus you need to address the earlier anaerobic‑development gap.
+  - 🧠 The two 12‑min threshold reps were held at 5:31 and 5:32 /km, squarely inside the prescribed sub‑threshold/threshold range (≈5:20–5:35 /km), and HR rose from 163 bpm to 169 bpm, edging toward your LTHR of 171 bpm in the second rep. The –3.8 % pace‑efficiency drift and –4.2 % power‑efficiency drift show a modest improvement in effort despite the
 
 ## Next Session
 - **Planned:** Wed, Nov 4 — 6k EZ @ 6:50–7:20 ≤150bpm w/ 5×20s strides; 75s WALK
