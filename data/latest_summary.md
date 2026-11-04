@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.5
   - MS: 5.06k @ 7:23 141bpm 0.81m 168spm 278ms 8.0cm 240w
   - Readiness 64 → 58 (Recovery In Progress) · Recovery 19h 44m
-  - 🧠 The six reps showed a clear forward drift, starting at 7:42 /km with 125 bpm and finishing at 6:43 /km while HR rose to about 149 bpm, giving an average rep pace of 7:17 /km. The training effect stayed in the aerobic‑base zone (aerobic 2.8, anaerobic 0.5), so the session delivered the intended easy‑threshold stimulus but provided little true VO2‑max or anaerobic load. With a moderate morning readiness score of 64 that dropped to 58 after a load of 76.6 and a –12 body‑battery impact, a focus on recovery before Thursday’s quality workout is warranted.
+  - 🧠 The six reps averaged 7:17 /km, ending with a 6:43 /km pickup, and heart rate rose from 125 to 149 bpm—well within the
 
 ## Next Session
 - **Planned:** Thu, Nov 5 — 9k as 5×1K @ 5:08–5:12; 2min walk-jog ≤172bpm (5:05 only if controlled)
