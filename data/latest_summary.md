@@ -19,7 +19,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Readiness is moderate but all key markers (sleep ≈ 6.5 h, HRV balanced, resting HR 59 bpm, ACWR 0.8 optimal) are solid. Proceed with today’s planned Thursday quality session
+**Decision – go ahead as planned**  
+Your readiness score (69 / moderate) is paired with “Recovered and Ready,” low resting HR (59 bpm), balanced HRV and an optimal ACWR (0.8). Sleep was a solid 6.5 h with a good sleep‑score, so there’s no red flag that warrants skipping today’s Thursday quality workout.
+
+**Workout execution (typical Bridge‑phase Thursday)**  
+- **Warm‑up:** 12‑15 min easy jog (≈7:30 – 7:45 /km) + 4 × 100 m strides, gradually building to sub‑threshold HR.  
+- **Main set:** 5 × 1000 m at VO2‑max pace (≈4:55 – 5:10 /km, HR 170‑178 bpm) with 2‑3 min easy jog recovery between reps.  
+- **Cool‑down:** 10 min easy run back to recovery HR (<150 bpm) plus light mobility.  
+
+*(If your week’s specific plan lists a different interval
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
