@@ -717,7 +717,7 @@
         ]
       },
       "lap_count": 18,
-      "ai_analysis": "The six main‑set",
+      "ai_analysis": "The six reps showed a clear forward drift, starting at 7:42 /km with 125 bpm and finishing at 6:43 /km while HR rose to about 149 bpm, giving an average rep pace of 7:17 /km. The training effect stayed in the aerobic‑base zone (aerobic 2.8, anaerobic 0.5), so the session delivered the intended easy‑threshold stimulus but provided little true VO2‑max or anaerobic load. With a moderate morning readiness score of 64 that dropped to 58 after a load of 76.6 and a –12 body‑battery impact, a focus on recovery before Thursday’s quality workout is warranted.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
