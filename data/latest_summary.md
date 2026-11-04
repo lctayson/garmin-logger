@@ -17,14 +17,6 @@
 - **Reason:** Available readiness, recovery-trend, and load indicators do not show a combination of major warnings.
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
-### 🧠 AI Coaching Guidance
-
-**Decision** – Readiness is “Recovered and Ready” (score 69, balanced HRV, low resting‑HR, optimal ACWR). No red flags; go ahead with today’s Thursday quality session as prescribed.  
-
-**Workout execution** – *Warm‑up*: 12 min easy jog in Zone 2 (≈7:00 km) + 4 × 100 m strides, gradually increasing cadence. *Main set* (as per the bridge‑phase plan): 5 × 1 000 m at VO2‑max pace (≈4:55 /km, HR climbing toward 170‑178 bpm) with 2‑3 min jog recovery between reps. *Cool‑down*: 10 min very easy run, back‑to‑back with gentle stretching.  
-
-**Readiness rationale** – Sleep was a bit short (6.5 h) but scored 84, HRV is within the balanced band (47 ms vs 48 ms 7‑day avg), resting HR is low (59 bpm) and ACWR is 0.8 (optimal). Together these indicate adequate recovery; the moderate overall score is driven mainly by the modest sleep volume,
-
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
 ## Latest Activity
