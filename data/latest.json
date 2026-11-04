@@ -84,7 +84,7 @@
       "sleep_history_adjustment": "No Change",
       "hrv_adjustment": "No Change",
       "nap_adjustment": "Decreasing",
-      "next_need_hours": 6.67
+      "next_need_hours": 6.5
     },
     "previous_day_nap": 65.0
   },
@@ -109,12 +109,17 @@
       "rem": 0.98,
       "awake": 0.15
     },
-    "total_steps": 8812,
+    "total_steps": 9577,
     "naps": [
       {
         "start": "2026-11-03T05:53:52",
         "end": "2026-11-03T06:58:52",
         "duration_min": 65.0
+      },
+      {
+        "start": "2026-11-04T06:29:13",
+        "end": "2026-11-04T06:56:13",
+        "duration_min": 27.0
       }
     ]
   },
@@ -978,9 +983,9 @@
     {
       "date": "2026-11-04",
       "charged": 57,
-      "drained": 20,
+      "drained": 63,
       "high": 83,
-      "low": 27
+      "low": 21
     }
   ],
   "activities": [

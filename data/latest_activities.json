@@ -717,7 +717,7 @@
         ]
       },
       "lap_count": 18,
-      "ai_analysis": "The six interval reps stayed close to the intended easy‑aerobic range, with the first rep at 7:42 /km and a progressive tightening to a 6:43 /km finish, while average heart rate rose from 125 to ~149 bpm across the set—showing a modest pacing drift upward rather than a decline in effort. Overall aerobic load (AEROBIC_BASE 2.8) and the negligible anaerobic contribution (0.5) align with the bridge‑phase focus on sub‑threshold volume, and the stamina drop from 99 % to 85 % (bottoming at 80 %) mirrors the expected fatigue from this volume. Morning readiness was moderate (score 64), and the post‑run dip to 58 reflects the acute load (574) and the stamina depletion, but does not indicate any concerning overreaching.",
+      "ai_analysis": "The six main‑set reps stayed tightly clustered around 7:15‑7:22 km h⁻¹, with the last rep dropping to 6:43 km h⁻¹ while heart rate rose from 125 bpm to 149 bpm, indicating a modest pace‑downward drift that delivered a clear aerobic stimulus but no meaningful anaerobic load (anaerobic TE 0.5). Stamina fell from 99 % to 85 % (low 80 % minimum) and the session’s load of 76.6 AU, together with the post‑exercise readiness dip to 58, are consistent with a solid base‑building effort rather than a taxing quality workout. Given your moderate morning readiness (score 64) and the lack of a VO2‑max‑level stimulus, today’s run aligns with the bridge phase’s easy‑run + strides/hills purpose and does not raise any immediate red flags.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]

@@ -53,7 +53,7 @@
       }
     ]
   },
-  "health": {"steps": 8812},
+  "health": {"steps": 9577},
   "sleep": {
     "deep_h": 1.15,
     "light_h": 4.47,
@@ -61,7 +61,7 @@
     "awake_h": 0.15,
     "baseline_h": 7.0,
     "need_h": 6.5,
-    "next_need_h": 6.67,
+    "next_need_h": 6.5,
     "feedback": "Decreased",
     "training_feedback": "Chronic",
     "sleep_history_adjustment": "No Change",
@@ -279,7 +279,7 @@
     ["2026-11-01", 62, 44, 57, 7],
     ["2026-11-02", 81, 73, 89, 22],
     ["2026-11-03", 79, 85, 94, 14],
-    ["2026-11-04", 57, 20, 83, 27]
+    ["2026-11-04", 57, 63, 83, 21]
   ]
   },
   "units": {
