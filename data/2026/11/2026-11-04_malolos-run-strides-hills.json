@@ -717,7 +717,7 @@
         ]
       },
       "lap_count": 18,
-      "ai_analysis": "The six‑rep main set stayed within the intended easy‑aerobic range (≈6:40‑7:45 /km), with the first two reps a touch slower (7:42) and the final stride/hill rep hitting 6:43, matching the planned faster finish. Heart‑rate rose from 125 bpm to around 149 bpm across the reps, reflecting the expected progression without generating a meaningful anaerobic stimulus (training_effect.anaerobic = 0.5, “NO_ANAER",
+      "ai_analysis": "The six reps stayed in the easy‑aerobic range (≈6:40–7:15 /km) except the first at 7:42 /km, while the final",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
