@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.5
   - MS: 5.06k @ 7:23 141bpm 0.81m 168spm 278ms 8.0cm 240w
   - Readiness 64 → 58 (Recovery In Progress) · Recovery 19h 44m
-  - 🧠 The six work reps averaged a 7:17 /km pace with a modest spread (7:42 → 6:43 /km) and heart rates climbing from 125 bpm early to ~149 bpm late, staying inside your easy‑aerobic to low‑steady zone and delivering only a 0.5 anaerobic training effect as expected for a mixed run‑plus‑strides/hills session. Your stamina metric fell from 99 % to 85 % (bottoming at 80 %), which aligns with the 45‑minute effort and the 76.6 load rating, showing a typical moderate fatigue without indicating overreaching. Morning readiness was “moderate” (score 64) and the post‑exercise snapshot dropped to 58, a normal dip given the session intensity and your current recovery‑hour budget.
+  - 🧠 The six reps stayed in the easy‑aerobic range (7:42 → 7:17 km) until the last rep accelerated to 6:43 km, matching the brief stride/hill effort and a rise in rep HR to ~149 bpm. Training‑effect scores (Aerobic 2.8, Anaerobic 0.5) and the stamina dip from 99 → 85 (min 80) reflect a typical Wednesday easy + strides session with only modest anaerobic stimulus. Your morning readiness was 64 (moderate) and the post‑run drop to 58, together
 
 ## Next Session
 - **Planned:** Thu, Nov 5 — 9k as 5×1K @ 5:08–5:12; 2min walk-jog ≤172bpm (5:05 only if controlled)
