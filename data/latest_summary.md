@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.5
   - MS: 5.06k @ 7:23 141bpm 0.81m 168spm 278ms 8.0cm 240w
   - Readiness 64 → 58 (Recovery In Progress) · Recovery 19h 44m
-  - 🧠 The six main‑set reps stayed tightly clustered around 7:15‑7:22 km h⁻¹, with the last rep dropping to 6:43 km h⁻¹ while heart rate rose from 125 bpm to 149 bpm, indicating a modest pace‑downward drift that delivered a clear aerobic stimulus but no meaningful anaerobic load (anaerobic TE 0.5). Stamina fell from 99 % to 85 % (low 80 % minimum) and the session’s load of 76.6 AU, together with the post‑exercise readiness dip to 58, are consistent with a solid base‑building effort rather than a taxing quality workout. Given your moderate morning readiness (score 64) and the lack of a VO2‑max‑level stimulus, today’s run aligns with the bridge phase’s easy‑run + strides/hills purpose and does not raise any immediate red flags.
+  - 🧠 The six‑rep main set stayed within the intended easy‑aerobic range (≈6:40‑7:45 /km), with the first two reps a touch slower (7:42) and the final stride/hill rep hitting 6:43, matching the planned faster finish. Heart‑rate rose from 125 bpm to around 149 bpm across the reps, reflecting the expected progression without generating a meaningful anaerobic stimulus (training_effect.anaerobic = 0.5, “NO_ANAER
 
 ## Next Session
 - **Planned:** Thu, Nov 5 — 9k as 5×1K @ 5:08–5:12; 2min walk-jog ≤172bpm (5:05 only if controlled)
