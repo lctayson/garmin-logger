@@ -17,6 +17,10 @@
 - **Reason:** Available readiness, recovery-trend, and load indicators do not show a combination of major warnings.
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
+### 🧠 AI Coaching Guidance
+
+**Decision** – Readiness is moderate but all key markers (sleep ≈ 6.5 h, HRV balanced, resting HR 59 bpm, ACWR 0.8 optimal) are solid. Proceed with today’s planned Thursday quality session
+
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
 ## Latest Activity
