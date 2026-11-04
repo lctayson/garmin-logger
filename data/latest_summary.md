@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.5
   - MS: 5.06k @ 7:23 141bpm 0.81m 168spm 278ms 8.0cm 240w
   - Readiness 64 → 58 (Recovery In Progress) · Recovery 19h 44m
-  - 🧠 The six work reps averaged 7:17 /km, dropping from a slower 7:42 early on to a brisk 6:43 on the final rep while heart rate climbed from 125 bpm to the high‑140s, indicating a purposeful acceleration that delivered the expected aerobic stimulus (aerobic TE 2.8) without any measurable anaerobic benefit. Stamina dipped from 99 % to 85 % (minimum 80 %) and body‑battery fell by 12 points, matching the modest load of 76.6 and the modest performance‑condition dip (‑1.3). Your morning readiness was 64 (moderate) and fell to 58 post‑run, so the recovery‑in‑progress score aligns with the physiological cost of the session.
+  - 🧠 The six main‑set
 
 ## Next Session
 - **Planned:** Thu, Nov 5 — 9k as 5×1K @ 5:08–5:12; 2min walk-jog ≤172bpm (5:05 only if controlled)
