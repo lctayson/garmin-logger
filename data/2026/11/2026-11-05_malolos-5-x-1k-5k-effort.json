@@ -690,7 +690,7 @@
         ]
       },
       "lap_count": 17,
-      "ai_analysis": "The five 1‑km reps stayed tightly clustered around the 5 k‑effort range (5:10–5:13/km) with an average of 5:11/km, delivering the VO2‑max stimulus reflected in the 4.4 aerobic score, while the “NO ANAEROBIC BENEFIT” tag is appropriate for this sub‑max interval prescription. Across the set the pace‑efficiency drift was –7.1 % and HR rose 13 bpm (157 → 170 bpm), showing a modest fatigue build‑up that pushed the last rep to 5:13/km. Stamina fell from 99 % to 59 % (min 48 %), a typical dip for a quality Thursday session in the bridge phase. Morning readiness was moderate (score 69), but the post‑run snapshot dropped to 25, reflecting the high acute load (738) rather than any chronic readiness issue.",
+      "ai_analysis": "The five 1‑km reps were run very consistently (5:10–5:13 /km, 5:11 /km average), matching the prescribed 5 k‑effort pace for this bridge‑phase quality day. However, interval_drift shows a –7.1 % pace‑efficiency drop alongside a 13 bpm rise in HR (157 → 170 bpm) and a stamina decline from 99 % to 59 % (min 48 %), indicating that fatigue accumulated noticeably across the set. The VO₂max training effect (aerobic 4.4, anaerobic 0.6) confirms a solid aerobic stimulus but little true anaerobic loading, which aligns with the session’s goal of maintaining VO₂max rather than adding anaerobic stress. Morning readiness was moderate (score 69), so the observed drift reflects the intended hard quality work rather than a failure of recovery.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
