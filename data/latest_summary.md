@@ -3,7 +3,7 @@
 ## Readiness: 69/100 (Moderate)
 > Recovered And Ready
 
-- **VO₂max:** 44.7 ml/kg/min (Garmin display: 45)
+- **VO₂max:** 44.9 ml/kg/min (Garmin display: 45)
 - **RHR:** 59 bpm (7d avg: 58 bpm, trending down)
 - **HRV:** 47ms (7d avg: 48ms) · within 47–58ms
 - **Sleep:** 6h32 / 6h30 need (0h02 over) · score 84 · 7d avg 6h49 · 1/7 nights below need
@@ -11,37 +11,31 @@
 - ⚠️ **Limiter:** Stress History (66%)
 - **Also soft:** Sleep History
 
-## Today's Session
-- **Planned:** Thu, Nov 5 — 9k as 5×1K @ 5:08–5:12; 2min walk-jog ≤172bpm (5:05 only if controlled)
+## Today's Workout
+
+- **Malolos - 5 x 1k @5k Effort** — 9.04km · 58:40 · 6:29/km · HR 156/179 max
+  - TE: VO2 Max (High Aerobic) · aerobic 4.4 · anaerobic 0.6
+  - Intervals: 5 work reps · pace drift -7.1% · HR +13bpm
+  - MS: 5.00k @ 5:11 166bpm 1.06m 182spm 239ms 8.3cm 329w
+  - Readiness 69 → 25 (High Recovery Needs) · Recovery 1d 21h 36m
+  - 🧠 The five 1‑km reps stayed tightly clustered around the 5 k‑effort range (5:10–5:13/km) with an average of 5:11/km, delivering the VO2‑max stimulus reflected in the 4.4 aerobic score, while the “NO ANAEROBIC BENEFIT” tag is appropriate for this sub‑max interval prescription. Across the set the pace‑efficiency drift was –7.1 % and HR rose 13 bpm (157 → 170 bpm), showing a modest fatigue build‑up that pushed the last rep to 5:13/km. Stamina fell from 99 % to 59 % (min 48 %), a typical dip for a quality Thursday session in the bridge phase. Morning readiness was moderate (score 69), but the post‑run snapshot dropped to 25, reflecting the high acute load (738) rather than any chronic readiness issue.
+
+## Next Session
+- **Planned:** Fri, Nov 6 — REST + Core
 - **Recommendation:** Proceed as planned
 - **Reason:** Available readiness, recovery-trend, and load indicators do not show a combination of major warnings.
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
-### 🧠 AI Coaching Guidance
-
-**Decision** – Readiness looks solid (good sleep, balanced HRV, low resting HR, ACWR 0.8). Proceed with today’s planned Thursday VO₂‑max quality session; no need to cut volume, just stay flexible on intensity if conditions feel harsh.  
-
-**Workout (as per the plan for this week)** – *Warm‑up*: 10 min easy jog (≈7:30 km⁻¹) + 4 × 100 m strides, gradually increasing cadence.  
-*Main set*: the scheduled VO₂ intervals (e.g., 5 × 3 min at ~4:55 km⁻¹ or the prescribed pace/effort) with **
-
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
-
-## Latest Activity
-
-_Most recent activity (2026-11-04):_
-- **Malolos - Run + Strides/Hills** — 6.04km · 45:53 · 7:36/km · HR 141/156 max
-  - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.5
-  - MS: 5.06k @ 7:23 141bpm 0.81m 168spm 278ms 8.0cm 240w
-  - 🧠 The six work reps averaged 7:17
 
 ## Load & Trends
 
-- **ACWR:** 0.8 (Optimal) — acute 467 / chronic 549 (chronic range 439.2–823.5)
-- **7-day volume:** 40.24km vs 28-day avg 35.9km (+12%)
-- **Running tolerance:** 55.1% (Medium) — 27.1km of 63km weekly cap, acute impact load 34.7
-- **Aerobic Low:** 928.5 (target 649–1082 — in range)
-- ⚠️ **Aerobic High:** 1085.1 (target 649–1082 — +3 over)
-- ⚠️ **Anaerobic:** 47.3 (target 86–346 — -39 under)
+- **ACWR:** 1.2 (Optimal) — acute 738 / chronic 598 (chronic range 478.4–897)
+- **7-day volume:** 49.28km vs 28-day avg 38.1km (+29%)
+- **Running tolerance:** 76.7% (Medium) — 36.1km of 63km weekly cap, acute impact load 48.3
+- **Aerobic Low:** 928.5 (target 816–1360 — in range)
+- **Aerobic High:** 1289.7 (target 816–1360 — in range)
+- ⚠️ **Anaerobic:** 47.3 (target 108–435 — -61 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
 - **Sleep (7d avg):** 6h49, 1/7 nights below need, trending flat
 - **RHR (7d avg):** 58.0, trending down
@@ -57,18 +51,18 @@ _Most recent activity (2026-11-04):_
 | M | Strength A | 27:20 | 5 |
 | T | 2x12min Thr | 8k · 52:45 | 176 |
 | W | Run + Strides/Hills | 6k · 45:53 | 77 |
-| T | Rest | — | — |
+| T | 5x1k @5k Effort | 9k · 58:40 | 213 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 7 | 40.24 km | 5:22:12 | 410.4 |
+| 8 | 49.28 km | 6:20:52 | 623 |
 
 ## Recent 4 Weeks
-_Average weekly running: 35.9 km_
+_Average weekly running: 38.1 km_
 
 | Week | Runs | Others | Load |
 |:---|---:|---:|---:|
-| Oct 30–Nov 5 | 27.10k | 93 min | 410.4 |
+| Oct 30–Nov 5 | 36.14k | 93 min | 623 |
 | Oct 23–29 | 38.15k | 58 min | 607.8 |
 | Oct 16–22 | 39.14k | 25 min | 522.5 |
 | Oct 9–15 | 39.13k | 40 min | 587.1 |
