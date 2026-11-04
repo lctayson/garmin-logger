@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.5
   - MS: 5.06k @ 7:23 141bpm 0.81m 168spm 278ms 8.0cm 240w
   - Readiness 64 → 58 (Recovery In Progress) · Recovery 19h 44m
-  - 🧠 The six‑rep main set stayed within a narrow pace window (7:42 → 6:43 min/km) and the HR rose progressively from 125 bpm to around 149 bpm, indicating that the later reps—likely the strides/hills—were genuinely harder despite the overall easy‑run average (7:36 min/km). The aerobic training effect of 2.8 AEROBIC_BASE with only 0.5 ANAEROBIC suggests the session delivered the intended base work but no meaningful VO₂max stimulus, which is appropriate for a Wednesday easy + stride day. Stamina dropped from 99 % to 85 % (minimum 80 %), and the post‑run readiness fell to 58 % with an acute load increase to 574, reflecting a modest cost that aligns with the moderate morning readiness score of 64. Overall, the workout was executed as planned for an easy run with a brief higher‑intensity finish, without any red flags for overreaching.
+  - 🧠 The six work reps averaged 7:17 /km, dropping from a slower 7:42 early on to a brisk 6:43 on the final rep while heart rate climbed from 125 bpm to the high‑140s, indicating a purposeful acceleration that delivered the expected aerobic stimulus (aerobic TE 2.8) without any measurable anaerobic benefit. Stamina dipped from 99 % to 85 % (minimum 80 %) and body‑battery fell by 12 points, matching the modest load of 76.6 and the modest performance‑condition dip (‑1.3). Your morning readiness was 64 (moderate) and fell to 58 post‑run, so the recovery‑in‑progress score aligns with the physiological cost of the session.
 
 ## Next Session
 - **Planned:** Thu, Nov 5 — 9k as 5×1K @ 5:08–5:12; 2min walk-jog ≤172bpm (5:05 only if controlled)
