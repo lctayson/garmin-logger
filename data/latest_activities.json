@@ -717,7 +717,7 @@
         ]
       },
       "lap_count": 18,
-      "ai_analysis": "The six reps stayed in the easy‑aerobic range (7:42 → 7:17 km) until the last rep accelerated to 6:43 km, matching the brief stride/hill effort and a rise in rep HR to ~149 bpm. Training‑effect scores (Aerobic 2.8, Anaerobic 0.5) and the stamina dip from 99 → 85 (min 80) reflect a typical Wednesday easy + strides session with only modest anaerobic stimulus. Your morning readiness was 64 (moderate) and the post‑run drop to 58, together",
+      "ai_analysis": "Your six‑rep main set averaged 7:17 /km, staying firmly in the easy aerobic zone (HR 125‑149 bpm) and ending with a single 6:43 /km effort that likely reflects the hill/stride segment. The modest stamina dip to 80 % and the post‑run readiness drop to 58 (from a morning 64) are consistent with the measured aerobic load (AEROBIC_BASE 2.8) and the negligible anaerobic contribution (ANAEROBIC 0.5). Overall, the session delivered the intended easy‑run plus brief strength work for this bridge phase without any concerning pace or HR",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
