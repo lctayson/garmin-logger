@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 2.8 · anaerobic 0.5
   - MS: 5.06k @ 7:23 141bpm 0.81m 168spm 278ms 8.0cm 240w
   - Readiness 64 → 58 (Recovery In Progress) · Recovery 19h 44m
-  - 🧠 The six reps stayed in the easy‑aerobic range (≈6:40–7:15 /km) except the first at 7:42 /km, while the final
+  - 🧠 The six work reps averaged 7:17
 
 ## Next Session
 - **Planned:** Thu, Nov 5 — 9k as 5×1K @ 5:08–5:12; 2min walk-jog ≤172bpm (5:05 only if controlled)
