@@ -717,7 +717,7 @@
         ]
       },
       "lap_count": 18,
-      "ai_analysis": "The six reps averaged 7:17 /km, ending with a 6:43 /km pickup, and heart rate rose from 125 to 149 bpm—well within the",
+      "ai_analysis": "Your six reps stayed largely in the easy‑aerobic zone (average 7:17 /km, range 7:42–6:43 /km) with a steady HR climb from 125 bpm to 149 bpm, indicating the later faster rep was a genuine stride/hill effort rather than a pacing slip. The modest aerobic training effect (2.8) and negligible anaerobic contribution (0.5) match the session’s intent, while stamina fell from 99 % to 85 % (min 80 %) – a typical dip for an easy run that includes a brief higher‑intensity push. Morning readiness was “moderate” (score 64) and dropped to 58 post‑run, reflecting the expected recovery demand given the 76.6 load and HR rise. No red flags appear; the workout delivered the planned aerobic stimulus without overreaching.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
