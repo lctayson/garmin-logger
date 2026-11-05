@@ -18,7 +18,7 @@
   - Intervals: 5 work reps · pace drift -7.1% · HR +13bpm
   - MS: 5.00k @ 5:11 166bpm 1.06m 182spm 239ms 8.3cm 329w
   - Readiness 69 → 25 (High Recovery Needs) · Recovery 1d 21h 36m
-  - 🧠 The five 1‑km reps were run at 5:10–5:13 km⁻¹ (average 5:11), which sits squarely in the VO2‑max range (≈4:50–5:15 km⁻¹) prescribed for Thursday quality work, so the interval intensity was on target. Across the set the pace‑efficiency drift was –7.1 % and HR rose ~13 bpm (157 → 170 bpm), reflecting the expected progressive cardiovascular load rather than a loss of form, while stamina fell from 99 % to a low of 48 %—a typical fatigue profile for a VO2‑max session. Morning readiness was moderate (score 69, “Recovered and Ready”), and the post‑run drop to 25 simply records the acute cost of the workout; it does not imply a recovery issue beyond what the stamina dip already shows.
+  - 🧠 The five 1‑km reps stayed tightly clustered at 5:10‑5:13 /km (average 5:11), matching the prescribed 5 k‑effort target, but the interval‑drift metrics show a –7.1 % pace efficiency drop and a +13 bpm HR rise across reps, indicating a loss of sharpness toward the end. Stamina fell from 99 % to 59 % (minimum 48 %) and power efficiency drifted –8.2 %, confirming the accumulated fatigue despite the solid pace execution. The VO₂‑max training effect was strong (aerobic 4.4) while the anaerobic contribution was negligible, which aligns with the current bridge phase but suggests you may still need a dedicated anaerobic stimulus in future sessions. Morning readiness was moderate (score 69), yet the post‑run score of 25 simply reflects the acute load of this hard quality workout, not a failure of recovery.
 
 ## Next Session
 - **Planned:** Fri, Nov 6 — REST + Core
