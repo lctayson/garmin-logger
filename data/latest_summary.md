@@ -6,7 +6,7 @@
 - **VO₂max:** 44.9 ml/kg/min (Garmin display: 45)
 - **RHR:** 59 bpm (7d avg: 58.4 bpm, trending down)
 - ⚠️ **HRV:** 46ms (7d avg: 47ms) · below 48–58ms
-- ⚠️ **Sleep:** 6h13 / 7h00 need (0h47 short) · score 81 · 7d avg 6h39 · 5/7 nights below need
+- ⚠️ **Sleep:** 6h59 / 7h00 need (0h01 short) · score 79 · 7d avg 6h46 · 5/7 nights below need
 - ⚠️ **Recovery remaining:** 1d 0h24
 - ⚠️ **Limiter:** Stress History (49%)
 - **Also soft:** Recovery Time, Hrv
@@ -19,10 +19,14 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled core/hip‑stability strength session, but scale back volume/intensity (RPE ≈ 5–6) to honor the low‑readiness score.
+**Decision** – Stick to today’s scheduled **core/hip‑stability strength session**, but keep the load light‑to‑moderate. The low readiness score is driven mainly by a modest HRV dip; your resting HR (59 bpm) and sleep quality are fine, and ACWR is optimal, so a full strength day is still safe.
 
-**Workout execution** – • Dynamic warm‑up (5 min: leg swings, hip circles, light air‑squat walk).  
-• Main circuit: 2–3 rounds of the prescribed core/hip moves (e.g., single
+**Workout execution** –  
+- **Warm‑up**: 5 min easy jog or brisk walk + dynamic hip‑mobility drills (leg swings, hip circles).  
+- **Main set**: 2 × circuits of: 30 s plank, 12 × glute bridges, 12 × single‑leg dead‑bugs, 12 × banded clamshells per side. Use a light resistance band and focus on controlled tempo; avoid heavy weighted lifts.  
+- **Cool‑down**: 4‑5 min gentle stretching of hamstrings, hip flexors, and thoracic spine.
+
+**Readiness rationale** – Sleep (~7 h, score 79) and resting HR are solid, and your acute load (606) vs chronic (584) gives an AC
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -44,7 +48,7 @@ _Most recent activity (2026-11-05):_
 - **Aerobic High:** 1289.7 (target 816–1360 — in range)
 - ⚠️ **Anaerobic:** 47.3 (target 108–435 — -61 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
-- ⚠️ **Sleep (7d avg):** 6h39, 5/7 nights below need, trending down
+- ⚠️ **Sleep (7d avg):** 6h46, 5/7 nights below need, trending flat
 - **RHR (7d avg):** 58.4, trending down
 - **HRV:** trending up
 
