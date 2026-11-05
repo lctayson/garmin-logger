@@ -18,7 +18,6 @@
   - Intervals: 5 work reps · pace drift -7.1% · HR +13bpm
   - MS: 5.00k @ 5:11 166bpm 1.06m 182spm 239ms 8.3cm 329w
   - Readiness 69 → 25 (High Recovery Needs) · Recovery 1d 21h 36m
-  - 🧠 The five 1‑km reps averaged 5:11 /km (range 5:10‑5:13), which sits at the fast end of your VO2‑max/threshold window for a true 5
 
 ## Next Session
 - **Planned:** Fri, Nov 6 — REST + Core
