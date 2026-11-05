@@ -1,24 +1,27 @@
 # Daily Check — 2026-11-06
 
-## Readiness: -/100
+## Readiness: 39/100 (Low)
+> Listen To Your Body
 
-- **RHR:** 60 bpm (7d avg: 58.6 bpm, trending down)
+- **VO₂max:** 44.9 ml/kg/min (Garmin display: 45)
+- **RHR:** 59 bpm (7d avg: 58.4 bpm, trending down)
+- ⚠️ **HRV:** 46ms (7d avg: 47ms) · below 48–58ms
+- ⚠️ **Sleep:** 6h13 / 7h00 need (0h47 short) · score 81 · 7d avg 6h39 · 5/7 nights below need
+- ⚠️ **Recovery remaining:** 1d 0h24
+- ⚠️ **Limiter:** Stress History (49%)
+- **Also soft:** Recovery Time, Hrv
 
 ## Today's Session
 - **Planned:** Fri, Nov 6 — REST + Core
-- **Recommendation:** Proceed as planned
-- **Reason:** Available readiness, recovery-trend, and load indicators do not show a combination of major warnings.
-- **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
+- **Recommendation:** Keep it easy
+- **Reason:** low readiness (39/100); elevated remaining recovery time (24.4h); last-night HRV is below the balanced band.
+- **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Friday core/hip‑stability strength session (no running).  
+**Decision** – Proceed with today’s Friday core/hip‑stability session, but cut the load (~30 % fewer sets/reps) and keep intensity light.  
 
-**Workout execution** – *Warm‑up*: 8‑10 min of easy jogging or bike plus dynamic hip/leg drills (leg swings, glute bridges, inchworms).  
-*Main set*: whatever the “Core/hip stability” routine calls for (e.g., plank variations, side‑plank, clamshells, single‑leg balance, hip‑thrusts). Aim for 2–3 sets of 8–12 reps per exercise at a load that lets you keep strict form; rest 60–90 s between sets.  
-*Cool‑down*: 5 min of gentle stretching for hips, hamstrings, and lower back.  
-
-**Readiness rationale** – Resting HR = 60 bpm, well within your typical baseline,
+**Workout execution** – *Warm‑up*: 5 min easy dynamic mobility (leg swings, hip circles, glute bridges). *Main set*: perform the prescribed core/hip circuit (e.g., planks, side‑planks, clamshells, single‑leg dead‑lift variations) at 2 – 3 sets of 8‑12 reps each, using a weight or resistance band that feels easy‑to‑moderate (RPE ≈ 4/10). *Recovery
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -33,10 +36,15 @@ _Most recent activity (2026-11-05):_
 
 ## Load & Trends
 
+- **ACWR:** 1.0 (Optimal) — acute 606 / chronic 584 (chronic range 467.2–876)
 - **7-day volume:** 49.28km vs 28-day avg 38.1km (+29%)
 - **Running tolerance:** 64.8% (Medium) — 36.1km of 63km weekly cap, acute impact load 40.8
-- ⚠️ **Sleep (7d avg):** 6h43, 4/7 nights below need, trending down
-- **RHR (7d avg):** 58.6, trending down
+- **Aerobic Low:** 925.4 (target 816–1360 — in range)
+- **Aerobic High:** 1289.7 (target 816–1360 — in range)
+- ⚠️ **Anaerobic:** 47.3 (target 108–435 — -61 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- ⚠️ **Sleep (7d avg):** 6h39, 5/7 nights below need, trending down
+- **RHR (7d avg):** 58.4, trending down
 - **HRV:** trending up
 
 ## This Week (Oct 31 – Nov 6)

@@ -1,13 +1,65 @@
 {
   "date": "2026-11-06",
   "readiness": {
-    "resting_hr": 60,
-    "ai_analysis": "**Decision** – Proceed with today’s scheduled Friday core/hip‑stability strength session (no running).  \n\n**Workout execution** – *Warm‑up*: 8‑10 min of easy jogging or bike plus dynamic hip/leg drills (leg swings, glute bridges, inchworms).  \n*Main set*: whatever the “Core/hip stability” routine calls for (e.g., plank variations, side‑plank, clamshells, single‑leg balance, hip‑thrusts). Aim for 2–3 sets of 8–12 reps per exercise at a load that lets you keep strict form; rest 60–90 s between sets.  \n*Cool‑down*: 5 min of gentle stretching for hips, hamstrings, and lower back.  \n\n**Readiness rationale** – Resting HR = 60 bpm, well within your typical baseline,",
+    "vo2_max": 45.0,
+    "vo2_max_precise": 44.9,
+    "score": 39,
+    "level": "Low",
+    "feedback": "Listen To Your Body",
+    "resting_hr": 59,
+    "hrv_last_night_avg_ms": 46.0,
+    "hrv_7_day_avg_ms": 47.0,
+    "hrv_status": "UNBALANCED",
+    "sleep_hours": 6.22,
+    "sleep_hours_including_previous_day_nap": 6.22,
+    "sleep_score": 81,
+    "recovery_hours": 24.4,
+    "hrv_baseline": {
+      "lowUpper": 45.0,
+      "balancedLow": 48.0,
+      "balancedUpper": 58.0,
+      "markerValue": 0.22743225
+    },
+    "factor_details": {
+      "sleep_score": {
+        "percent": 72,
+        "feedback": "Good"
+      },
+      "sleep_history": {
+        "percent": 76,
+        "feedback": "Good"
+      },
+      "recovery_time": {
+        "percent": 61,
+        "feedback": "Moderate"
+      },
+      "acwr": {
+        "percent": 89,
+        "feedback": "Good"
+      },
+      "hrv": {
+        "percent": 64,
+        "feedback": "Moderate"
+      },
+      "stress_history": {
+        "percent": 49,
+        "feedback": "Moderate"
+      }
+    },
+    "ai_analysis": "**Decision** – Proceed with today’s Friday core/hip‑stability session, but cut the load (~30 % fewer sets/reps) and keep intensity light.  \n\n**Workout execution** – *Warm‑up*: 5 min easy dynamic mobility (leg swings, hip circles, glute bridges). *Main set*: perform the prescribed core/hip circuit (e.g., planks, side‑planks, clamshells, single‑leg dead‑lift variations) at 2 – 3 sets of 8‑12 reps each, using a weight or resistance band that feels easy‑to‑moderate (RPE ≈ 4/10). *Recovery",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
+  "health": {
+    "steps": 57
+  },
   "sleep": {
+    "deep_h": 1.08,
+    "light_h": 3.93,
+    "rem_h": 1.22,
+    "awake_h": 0.38,
     "baseline_h": 7.0,
     "need_h": 7.0,
+    "next_need_h": 7.0,
     "feedback": "No Change No Adjustments",
     "training_feedback": "No Change",
     "sleep_history_adjustment": "No Change",
@@ -15,11 +67,43 @@
     "nap_adjustment": "No Change",
     "previous_day_nap": null
   },
+  "load": {
+    "acute_load": 606,
+    "chronic_load": 584,
+    "acwr": 1.0,
+    "acwr_percent": 42,
+    "acwr_status": "Optimal",
+    "chronic_load_range": {
+      "min": 467.2,
+      "max": 876.0
+    },
+    "training_status": "Maintaining 2"
+  },
+  "vo2_max": 45.0,
+  "vo2_max_precise": 44.9,
   "race_predictions": {
     "5k": "27:01",
     "10k": "57:17",
     "half_marathon": "2:10:26",
     "marathon": "4:51:12"
+  },
+  "load_balance": {
+    "aerobic_low": 925.4,
+    "aerobic_low_target": [
+      816,
+      1360
+    ],
+    "aerobic_high": 1289.7,
+    "aerobic_high_target": [
+      816,
+      1360
+    ],
+    "anaerobic": 47.3,
+    "anaerobic_target": [
+      108,
+      435
+    ],
+    "load_focus": "Anaerobic Shortage"
   },
   "running_tolerance": {
     "acute_impact_load": 40.8,
@@ -164,6 +248,14 @@
         }
       ]
     }
+  },
+  "heat_acclimation": {
+    "percentage": 100,
+    "trend": "Acclimatized"
+  },
+  "altitude_acclimation": {
+    "percentage": 0,
+    "trend": null
   },
   "trend_recent_daily": {
     "columns": [
@@ -350,17 +442,17 @@
       ],
       [
         "2026-11-06",
-        60,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        59,
+        46.0,
+        47.0,
+        6.22,
+        81,
+        45.0,
+        "Maintaining 2",
+        606,
+        584,
+        1.0,
+        "Optimal",
         0,
         0.0,
         0.0,
@@ -746,17 +838,17 @@
         "2026-11-06",
         "2026-10-31",
         "2026-11-06",
-        60,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        59,
+        46.0,
+        47.0,
+        6.22,
+        81,
+        45.0,
+        "Maintaining 2",
+        606,
+        584,
+        1.0,
+        "Optimal",
         7,
         5.8,
         49.28,
@@ -837,9 +929,9 @@
       ],
       [
         "2026-11-06",
-        23,
+        61,
         0,
-        38,
+        76,
         15
       ]
     ]
