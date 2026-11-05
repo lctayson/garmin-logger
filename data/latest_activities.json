@@ -690,7 +690,7 @@
         ]
       },
       "lap_count": 17,
-      "ai_analysis": "The five 1‑km reps stayed tightly clustered (5:10–5:13 km, avg 5:11) and the HR rose ~13 bpm across the set, matching the –7 % pace‑efficiency drift reported, so the interval intensity was maintained but showed a modest loss of efficiency toward the end. Stamina fell from 99 % to 59 % (min 48 %), which is typical for a VO₂‑max‑focused session, yet the training‑effect flags essentially no anaerobic benefit, indicating the effort was just below true VO₂‑max intensity. With a morning readiness score of 69 (moderate) and good sleep, the session was appropriate for the bridge phase, but you may want to tighten the target pace or shorten recovery to ensure a stronger VO₂‑max stimulus in future Thursday quality workouts.",
+      "ai_analysis": "The five 1‑km reps were run at 5:10–5:13 km⁻¹ (average 5:11), which sits squarely in the VO2‑max range (≈4:50–5:15 km⁻¹) prescribed for Thursday quality work, so the interval intensity was on target. Across the set the pace‑efficiency drift was –7.1 % and HR rose ~13 bpm (157 → 170 bpm), reflecting the expected progressive cardiovascular load rather than a loss of form, while stamina fell from 99 % to a low of 48 %—a typical fatigue profile for a VO2‑max session. Morning readiness was moderate (score 69, “Recovered and Ready”), and the post‑run drop to 25 simply records the acute cost of the workout; it does not imply a recovery issue beyond what the stamina dip already shows.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
