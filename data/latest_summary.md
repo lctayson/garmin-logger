@@ -18,7 +18,7 @@
   - Intervals: 5 work reps · pace drift -7.1% · HR +13bpm
   - MS: 5.00k @ 5:11 166bpm 1.06m 182spm 239ms 8.3cm 329w
   - Readiness 69 → 25 (High Recovery Needs) · Recovery 1d 21h 36m
-  - 🧠 The five 1‑km reps clustered tightly around the intended 5‑k effort (5:10–5:13 /km), but the –7.1 % pace‑efficiency drift and a 13‑bpm rise in heart rate from the first to the last rep show a clear fatigue‑related slowdown, echoed by the stamina metric falling from 99 % to 59 % (minimum 48 %). VO₂‑max training effect was strong (aerobic 4.4) while the anaerobic contribution remained negligible, confirming the session delivered the desired aerobic stimulus but did not add meaningful anaerobic load. Morning readiness was moderate (score 69), yet the post‑run snapshot dropped to 25 with an acute load of 738, indicating substantial recovery demand after this quality effort. Consider modestly extending the recovery interval or trimming the set if consistency across reps becomes harder to maintain in future Thursday VO₂ sessions.
+  - 🧠 The five 1‑km reps averaged 5:11 /km (range 5:10‑5:13), which sits at the fast end of your VO2‑max/threshold window for a true 5
 
 ## Next Session
 - **Planned:** Fri, Nov 6 — REST + Core
