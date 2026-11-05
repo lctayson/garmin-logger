@@ -19,13 +19,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **core/hip‑stability strength** session, but trim volume/intensity by ~20 % if you feel noticeably fatigued or the warm‑up feels unusually hard.
+**Decision** – Proceed with today’s scheduled core/hip‑stability strength session, but scale back volume/intensity (RPE ≈ 5–6) to honor the low‑readiness score.
 
-**Workout execution** – *Warm‑up*: 5 min easy jog or bike + dynamic hip‑mobility drills (leg swings, hip circles). *Main set*: the prescribed core/hip routine (e.g., planks, side‑planks, glute bridges, single‑leg dead‑lifts, banded clamshells). Keep each exercise to a moderate effort (RPE ≈ 5–6) and stop a set early if form degrades. *Cool‑down*: 5 min light walking + static stretching for hips, glutes, and lower back.
-
-**Readiness rationale** – - Sleep ≈ 6.2 h (below ideal ≥ 7 h) and HRV 46 ms (1 ms below 7‑day avg) signal modest overnight stress.  
-- Resting HR 59 bpm is normal, and ACWR 1.0 shows training load is balanced with chronic load.  
-- Overall readiness score is low (39) but the “moderate” factor scores (HRV,
+**Workout execution** – • Dynamic warm‑up (5 min: leg swings, hip circles, light air‑squat walk).  
+• Main circuit: 2–3 rounds of the prescribed core/hip moves (e.g., single
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
