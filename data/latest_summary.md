@@ -18,7 +18,7 @@
   - Intervals: 5 work reps · pace drift -7.1% · HR +13bpm
   - MS: 5.00k @ 5:11 166bpm 1.06m 182spm 239ms 8.3cm 329w
   - Readiness 69 → 25 (High Recovery Needs) · Recovery 1d 21h 36m
-  - 🧠 The five 1‑km reps held a tight 5:10‑5:13 km pace (average 5:11), which sits squarely in the VO₂max‑interval window and matches the prescribed 5 k‑effort intensity. The –7.1 % pace‑efficiency drift shows the reps actually got a bit quicker despite a 13 bpm rise in heart‑rate across the set, indicating a genuine progressive stimulus rather than a pacing slip. Stamina fell from 99 % to 59 % (bottoming at 48 %), confirming a solid anaerobic load consistent with the VO₂MAX training effect reported (aerobic 4.4, anaerobic 0.6). Morning readiness was “moderate” (score 69); the post‑run drop to 25 simply reflects the acute load of this hard interval session and does not imply inadequate recovery.
+  - 🧠 Your five 1‑km reps held a tight pace window (5:10–5:13 /km, avg 5:11) but the -7.1 % pace‑efficiency drift and the 13 bpm rise in heart‑rate from the first to the last rep (157 → 170 bpm) show a noticeable loss of economy across the set. The VO₂‑max training effect was strong (aerobic 4.4) while anaerobic credit was nil, which aligns with a true 5‑k effort rather than a pure VO₂max stimulus. Morning readiness was moderate (score 69), yet the post‑run snapshot fell to 25, reflecting the acute load of this quality Thursday session rather than a failure of recovery. Going forward, try to cap the HR rise to ≤10 bpm and keep rep pace variation within ~2 seconds to preserve efficiency and secure the intended VO₂max stimulus.
 
 ## Next Session
 - **Planned:** Fri, Nov 6 — REST + Core
