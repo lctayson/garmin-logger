@@ -19,9 +19,22 @@
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Keep the scheduled Friday core‑/hip‑stability strength session, but dial the volume/intensity down (e.g., 2 × the usual circuit, lighter loads) and be ready to stop early if fatigue spikes.  
-- **Execution:** 5‑10 min dynamic warm‑up (glute bridges, monster walks, hip CARs); 2–3 rounds of the prescribed core/hip circuit (plank variations, side‑lying clams, single‑leg bridges) at moderate effort; finish with 5 min gentle stretching/mobility. No running pace or intervals are required.  
-- **Readiness rationale:** Score 39 (Low) is driven by modest sleep (≈7 h) and a slightly unbalanced HRV (46 ms vs 7‑day avg 47 ms). Resting HR is normal (59 bpm) and acute load is low (606) with ACWR at the optimal 1.0, so systemic fatigue is limited. The modest “moderate” recovery‑time
+**Decision – Go ahead with the scheduled Friday strength day, but keep the load light‑to‑moderate.**  
+
+**Workout execution**  
+- **Warm‑up:** 5 min easy dynamic mobility (leg swings, hip circles, glute bridges).  
+- **Main set:** Core/hip‑stability circuit (e.g., planks, side‑planks, single‑leg dead‑lifts, clamshells, bird‑dogs). Aim for the prescribed reps/sets from the plan, but stop the set early if you feel excessive fatigue or heart rate spikes > 150 bpm.  
+- **Cool‑down:** 3 min gentle stretching of hips, hamstrings, and lower back.
+
+**Readiness rationale**  
+- Sleep ≈ 7 h (good) but HRV is low (46 ms, 64 % of baseline) and the overall readiness score is “Low” (39).  
+- Acute load is high (606) though ACWR is optimal, suggesting accumulated fatigue.  
+- Resting HR is normal (59 bpm), so the body isn’t overtly stressed, but the moderate‑low HRV flags limited autonomic recovery.  
+- Therefore a full‑intensity strength session could push you into non‑recovery; a light version respects the recovery need while still maintaining weekly stimulus.
+
+**In‑session guardrails**  
+- Watch your heart rate during the circuit; if it climbs > 150 bpm or you feel unusually breathless, cut the set and switch to a lower‑impact core activation (e.g., dead‑bugs).  
+- If any joint pain or calf discomfort appears, skip the offending exercise and replace
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
