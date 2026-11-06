@@ -1,66 +1,83 @@
-# Daily Check — 2026-11-06
+# Daily Check — 2026-11-07
 
-## Readiness: 39/100 (Low)
-> Listen To Your Body
+## Readiness: 66/100 (Moderate)
+> Good Sleep History
 
 - **VO₂max:** 44.9 ml/kg/min (Garmin display: 45)
-- **RHR:** 59 bpm (7d avg: 58.4 bpm, trending down)
-- ⚠️ **HRV:** 46ms (7d avg: 47ms) · below 48–58ms
-- ⚠️ **Sleep:** 6h59 / 7h00 need (0h01 short) · score 79 · 7d avg 6h46 · 5/7 nights below need
-- ⚠️ **Recovery remaining:** 1d 0h24
-- ⚠️ **Limiter:** Stress History (49%)
-- **Also soft:** Recovery Time, Hrv
+- **RHR:** 58 bpm (7d avg: 58.1 bpm, trending flat)
+- **HRV:** 50ms (7d avg: 47ms) · within 47–58ms
+- ⚠️ **Sleep:** 5h45 / 6h30 need (0h45 short) · score 77 · 7d avg 6h42 · 1/7 nights below need
+- **Recovery remaining:** 0h12
+- ⚠️ **Limiter:** Sleep Score (65%)
+- **Also soft:** Stress History
 
-## Today's Workout
-
-- **Friday Core & Stability** — 0.0km · 21:40 · HR 95/118 max
-  - TE: Aerobic Base · aerobic 0.3 · anaerobic 0
-  - Readiness 39 → 53 (Boosted By Napping) · Recovery 9h 42m
-  - 🧠 The 21‑minute core & stability session delivered only a minor aerobic stimulus (aerobic = 0.3, load ≈ 4) and kept heart rate well below any training zone (avg 95 bpm, max 118 bpm), so it did not add meaningful cardiovascular fatigue. Your morning readiness was low (score 39, “Listen To Your Body”) with moderate sleep‑score impact (68 % of expected) and a short recovery window (~23 h), which aligns with the slight negative body‑battery impact (‑1) from today’s work. The afternoon snapshot shows a modest boost to 53 after a nap, but the overall readiness profile still suggests taking it easy on the upcoming Tuesday sub‑threshold run.
-
-## Next Session
+## Today's Session
 - **Planned:** Sat, Nov 7 — 14K: 11K EZ + optional 3K @ 5:45–5:55/km, only if first 11K felt easy and HR stayed ≤150
-- **Recommendation:** Keep it easy
-- **Reason:** low readiness (39/100); elevated remaining recovery time (24.4h); last-night HRV is below the balanced band.
-- **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
+- **Recommendation:** Proceed as planned
+- **Reason:** short sleep last night (5.8h).
+- **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
+
+### 🧠 AI Coaching Guidance
+
+**Decision – go ahead, but keep it easy**  
+- Proceed with today’s scheduled long‑run (easy aerobic pace, optional HM‑effort finish).  
+- If you feel unusually fatigued after the warm‑up, skip the HM‑effort segment and stay at easy pace.
+
+**Workout execution**  
+- **Warm‑up:** 10 min easy jog (≈7:15 / km) + 4‑5 short strides (20 s) to prime the legs.  
+- **Main set:** Run 90–120 min at easy aerobic zone (≈6:40 – 7:15 / km, HR ≈ 145–155 bpm).  
+- **Optional finish (if you feel good):** 4 × 5 min at target half‑marathon effort (≈5:30 / km, HR ≈ 160‑165 bpm) with 2 min easy jog recovery.  
+- **Cool‑down:** 10 min easy jog + gentle stretching.
+
+**Readiness rationale**  
+- Sleep was short (5.8 h) despite a “good” sleep‑history score, so moderate readiness (66) is expected.  
+- Resting HR is low (58 bpm) and HRV is balanced, indicating good autonomic recovery.  
+- Load metrics are favorable (ACWR 0.8,
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
+## Latest Activity
+
+_Most recent activity (2026-11-06):_
+- **Friday Core & Stability** — 0.0km · 21:40 · HR 95/118 max
+  - TE: Aerobic Base · aerobic 0.3 · anaerobic 0
+  - 🧠 The 21‑minute core & stability session delivered only a minor aerobic stimulus (aerobic = 0.3, load ≈ 4) and kept heart rate well below any training zone (avg 95 bpm, max 118 bpm), so it did not add meaningful cardiovascular fatigue. Your morning readiness was low (score 39, “Listen To Your Body”) with moderate sleep‑score impact (68 % of expected) and a short recovery window (~23 h), which aligns with the slight negative body‑battery impact (‑1) from today’s work. The afternoon snapshot shows a modest boost to 53 after a nap, but the overall readiness profile still suggests taking it easy on the upcoming Tuesday sub‑threshold run.
+
 ## Load & Trends
 
-- **ACWR:** 1.0 (Optimal) — acute 611 / chronic 585 (chronic range 468–877.5)
-- **7-day volume:** 49.28km vs 28-day avg 38.1km (+29%)
-- **Running tolerance:** 64.8% (Medium) — 36.1km of 63km weekly cap, acute impact load 40.8
-- **Aerobic Low:** 929.3 (target 816–1360 — in range)
+- **ACWR:** 0.8 (Optimal) — acute 504 / chronic 567 (chronic range 453.6–850.5)
+- **7-day volume:** 34.24km vs 28-day avg 35.4km (-3%)
+- **Running tolerance:** 55.4% (Medium) — 23.1km of 63km weekly cap, acute impact load 34.9
+- **Aerobic Low:** 822.9 (target 816–1360 — in range)
 - **Aerobic High:** 1289.7 (target 816–1360 — in range)
 - ⚠️ **Anaerobic:** 47.3 (target 108–435 — -61 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
-- ⚠️ **Sleep (7d avg):** 6h46, 5/7 nights below need, trending flat
-- **RHR (7d avg):** 58.4, trending down
-- **HRV:** trending up
+- **Sleep (7d avg):** 6h42, 1/7 nights below need, trending down
+- **RHR (7d avg):** 58.1, trending flat
+- **HRV:** trending flat
 
-## This Week (Oct 31 – Nov 6)
+## This Week (Nov 1–7)
 
 | D | Activity | Volume | Load |
 |:---:|:---|---:|---:|
-| S | Malolos Run/Malolos Walk | 15k · 2:14:23 | 127 |
 | S | Indoor Ride | 11.1k · 29:01 | 22 |
 | M | Strength A | 27:20 | 5 |
 | T | 2x12min Thr | 8k · 52:45 | 176 |
 | W | Run + Strides/Hills | 6k · 45:53 | 77 |
 | T | 5x1k @5k Effort | 9k · 58:40 | 213 |
 | F | Core & | 21:40 | 4 |
+| S | Rest | — | — |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 8 | 49.28 km | 6:09:42 | 623.2 |
+| 6 | 34.24 km | 3:55:19 | 496.2 |
 
 ## Recent 4 Weeks
-_Average weekly running: 38.1 km_
+_Average weekly running: 35.4 km_
 
 | Week | Runs | Others | Load |
 |:---|---:|---:|---:|
-| Oct 31–Nov 6 | 36.14k | 82 min | 623.2 |
-| Oct 24–30 | 38.15k | 61 min | 608.7 |
-| Oct 17–23 | 39.14k | 55 min | 525.3 |
-| Oct 10–16 | 39.13k | 20 min | 584 |
+| Nov 1–7 | 23.10k | 49 min | 496.2 |
+| Oct 25–31 | 41.16k | 93 min | 633.6 |
+| Oct 18–24 | 37.14k | 55 min | 518.8 |
+| Oct 11–17 | 40.13k | 20 min | 586.2 |
