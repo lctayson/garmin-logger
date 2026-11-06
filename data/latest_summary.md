@@ -16,7 +16,7 @@
 - **Friday Core & Stability** — 0.0km · 21:40 · HR 95/118 max
   - TE: Aerobic Base · aerobic 0.3 · anaerobic 0
   - Readiness 39 → 53 (Boosted By Napping) · Recovery 9h 42m
-  - 🧠 The Friday core‑and‑stability session delivered a very modest aerobic stimulus (AEROBIC_BASE 0.3, load 3.9) and kept heart rate comfortably low (avg 95 bpm, max 118 bpm), which aligns with the intended low‑impact strength focus. Morning readiness was low (score 39, “Listen To Your Body”) but a mid‑day nap boosted the score to the low‑mid 50s, and given the minimal load and negligible anaerobic effect, the session likely did not exacerbate any fatigue risk. No red flags appear for the current bridge phase; just keep an eye on overall recovery when higher‑intensity runs return later in the week.
+  - 🧠 The 22‑minute core and stability session produced a very modest aerobic stimulus (training‑effect AEROBIC_BASE 0.3, aerobic = 0.3, anaerobic = 0) and kept average HR at 95 bpm, which is exactly what a recovery‑oriented strength day should look like. Your morning readiness score was low (39 / Low) with moderate sleep‑score and recovery‑time factors, and the post‑exercise snapshot rose to 53 after a nap, reflecting a short‑term boost rather than any training‑induced fatigue. The body‑battery impact of –1 and overall load of 3.9 are in line with the planned low‑stress strength work, so you’re well‑positioned to recover for Thursday’s VO2‑max interval session.
 
 ## Next Session
 - **Planned:** Sat, Nov 7 — 14K: 11K EZ + optional 3K @ 5:45–5:55/km, only if first 11K felt easy and HR stayed ≤150
