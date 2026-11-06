@@ -17,6 +17,20 @@
 - **Reason:** short sleep last night (5.8h).
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
+### 🧠 AI Coaching Guidance
+
+**Decision** – Proceed with today’s planned long‑run, but keep it strictly easy (no HM‑effort finish) given a moderate readiness score and sub‑optimal sleep (≈5¾ h).
+
+**Workout execution (as the plan prescribes only “easy long run”)**  
+- Warm‑up: 10 min easy jog, HR ≤ 150 bpm, light dynamic leg swings.  
+- Main set: Run at easy‑aerobic pace (≈6:40 – 7:15 min/km, HR ≈ 145‑155 bpm) for the scheduled distance.  
+- Cool‑down: 5‑8 min very easy jog + 2‑3 min of gentle stretching.  
+
+**Readiness rationale** – Resting HR is low (58 bpm) and HRV is balanced, indicating good chronic recovery; ACWR is optimal (0.8). The only red flag is limited sleep (5.75 h) and a moderate overall readiness score (66). That pattern suggests you’re capable of volume but should avoid high‑intensity effort.  
+
+**In‑session guardrails** –  
+- Keep an eye on HR; if it climbs > 165
+
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
 ## Latest Activity
