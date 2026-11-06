@@ -19,11 +19,9 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed, but scale the strength work down (light‑weight, fewer sets) and treat it as a recovery‑oriented session.  
-
-**Workout execution** – 1️⃣ Warm‑up: 5 min easy jog or brisk walk + dynamic hip/leg moves (leg swings, world’s greatest stretch). 2️⃣ Main set: core/hip circuit (e.g., 3 × 30 s plank, 3 × 12 × glute bridges, 3 × 12 × single‑leg dead‑lifts, 3 × 12 × clamshells) using body‑weight or very light kettlebells; keep rest 30‑45 s between exercises. 3️⃣ Cool‑down: 5 min gentle mobility (hip flexor stretch, foam roll, deep breathing).  
-
-**Readiness rationale** – Sleep was near 7 h and rated “Good,” recovery time ~24 h and ACWR is optimal (1.0), so overall load is acceptable. The low readiness score
+- **Decision:** Keep the scheduled Friday core‑/hip‑stability strength session, but dial the volume/intensity down (e.g., 2 × the usual circuit, lighter loads) and be ready to stop early if fatigue spikes.  
+- **Execution:** 5‑10 min dynamic warm‑up (glute bridges, monster walks, hip CARs); 2–3 rounds of the prescribed core/hip circuit (plank variations, side‑lying clams, single‑leg bridges) at moderate effort; finish with 5 min gentle stretching/mobility. No running pace or intervals are required.  
+- **Readiness rationale:** Score 39 (Low) is driven by modest sleep (≈7 h) and a slightly unbalanced HRV (46 ms vs 7‑day avg 47 ms). Resting HR is normal (59 bpm) and acute load is low (606) with ACWR at the optimal 1.0, so systemic fatigue is limited. The modest “moderate” recovery‑time
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
