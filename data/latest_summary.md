@@ -19,10 +19,12 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned core/hip‑stability strength session, but **scale back the volume/intensity** (e.g., drop a set or use lighter resistance) to respect the low readiness score.
+**Decision**  
+- Low‑readiness flag, but today is a non‑running core/hip strength day – proceed **with the planned session**, scaling volume/intensity to a light‑to‑moderate effort.  
 
-**Workout execution** –  
-- **Warm‑up**: 5‑8 min easy jog or bike + dynamic hip/leg drills (leg swings
+**Workout execution (as per the plan)**  
+- **Warm‑up:** 5‑10 min easy jog or brisk walk + dynamic hip‑mobility (leg swings, hip circles).  
+- **Main set:** Core/hip stability circuit – e.g. 2 × (30 s plank, 30 s side‑plank each side,
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
