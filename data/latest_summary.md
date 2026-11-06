@@ -16,7 +16,7 @@
 - **Friday Core & Stability** — 0.0km · 21:40 · HR 95/118 max
   - TE: Aerobic Base · aerobic 0.3 · anaerobic 0
   - Readiness 39 → 53 (Boosted By Napping) · Recovery 9h 42m
-  - 🧠 The 21‑minute core and stability session produced a very low aerobic stimulus (aerobic TE 0.3, no anaerobic benefit) and a negligible body‑battery impact (‑1 pts), matching the intended low‑load strength day. Your morning readiness was low (score 39, “Listen To Your Body”), likely reflecting modest sleep quality (68 % of normal) and limited recovery time (63 % of target). The post‑exercise snapshot shows a boost to 53 after a nap, but the low pre‑run readiness still suggests holding off on any hard quality work tomorrow and focusing on recovery.
+  - 🧠 The 21‑minute core & stability session delivered only a minor aerobic stimulus (aerobic = 0.3, load ≈ 4) and kept heart rate well below any training zone (avg 95 bpm, max 118 bpm), so it did not add meaningful cardiovascular fatigue. Your morning readiness was low (score 39, “Listen To Your Body”) with moderate sleep‑score impact (68 % of expected) and a short recovery window (~23 h), which aligns with the slight negative body‑battery impact (‑1) from today’s work. The afternoon snapshot shows a modest boost to 53 after a nap, but the overall readiness profile still suggests taking it easy on the upcoming Tuesday sub‑threshold run.
 
 ## Next Session
 - **Planned:** Sat, Nov 7 — 14K: 11K EZ + optional 3K @ 5:45–5:55/km, only if first 11K felt easy and HR stayed ≤150
