@@ -75,7 +75,7 @@
         "recovery_time_change": "NO_CHANGE_SLEEP"
       }
     ],
-    "ai_analysis": "**Decision** – Proceed with today’s planned Friday strength session, but scale back to a light, mobility‑focused routine (no heavy loads or max‑effort lifts).  \n\n**Workout execution** – Warm‑up: 8‑10 min of dynamic mobility (leg swings, hip circles, inchworms) + 2 × 30‑sec glute‑band walks. Main set: body‑weight glute bridges, clamshells, banded monster walks",
+    "ai_analysis": "**Decision** – Proceed, but scale the strength work down (light‑weight, fewer sets) and treat it as a recovery‑oriented session.  \n\n**Workout execution** – 1️⃣ Warm‑up: 5 min easy jog or brisk walk + dynamic hip/leg moves (leg swings, world’s greatest stretch). 2️⃣ Main set: core/hip circuit (e.g., 3 × 30 s plank, 3 × 12 × glute bridges, 3 × 12 × single‑leg dead‑lifts, 3 × 12 × clamshells) using body‑weight or very light kettlebells; keep rest 30‑45 s between exercises. 3️⃣ Cool‑down: 5 min gentle mobility (hip flexor stretch, foam roll, deep breathing).  \n\n**Readiness rationale** – Sleep was near 7 h and rated “Good,” recovery time ~24 h and ACWR is optimal (1.0), so overall load is acceptable. The low readiness score",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
