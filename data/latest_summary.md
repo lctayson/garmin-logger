@@ -3,7 +3,7 @@
 ## Readiness: 66/100 (Moderate)
 > Good Sleep History
 
-- **VO₂max:** 44.9 ml/kg/min (Garmin display: 45)
+- **VO₂max:** 44.8 ml/kg/min (Garmin display: 45)
 - **RHR:** 58 bpm (7d avg: 58.1 bpm, trending flat)
 - **HRV:** 50ms (7d avg: 47ms) · within 47–58ms
 - ⚠️ **Sleep:** 5h45 / 6h30 need (0h45 short) · score 77 · 7d avg 6h42 · 1/7 nights below need
@@ -11,35 +11,28 @@
 - ⚠️ **Limiter:** Sleep Score (65%)
 - **Also soft:** Stress History
 
-## Today's Session
-- **Planned:** Sat, Nov 7 — 14K: 11K EZ + optional 3K @ 5:45–5:55/km, only if first 11K felt easy and HR stayed ≤150
+## Today's Workout
+
+- **Malolos Running** — 14.03km · 1:42:20 · 7:18/km · HR 146/154 max
+  - TE: Aerobic Base · aerobic 3.5 · anaerobic 0
+  - MS: 14.03k @ 7:18 146bpm 0.81m 170spm 276ms 7.9cm 243w
+  - Readiness 66 → 43 (Focus On Energy Levels) · Recovery 1d 7h 13m
+  - 🧠 The 14‑km run stayed solidly in the easy aerobic zone, with split paces tightening from 7:36 early to 7:09 at the finish and an average rep pace of 7:18 matching the overall average. Heart‑rate rose steadily from ~131 bpm on the first split to 152 bpm on the last, confirming a gradual build‑up of effort but still below the sub‑threshold HR range (≈158 bpm). Stamina dropped from 100 % to 71 % and the post‑run readiness fell to 43, which is expected after a moderate‑load (load ≈ 130) session and does not indicate any acute issue.
+
+## Next Session
+- **Planned:** Sun, Nov 8 — 8k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
 - **Recommendation:** Proceed as planned
 - **Reason:** short sleep last night (5.8h).
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
-### 🧠 AI Coaching Guidance
-
-**Decision** – Proceed with today’s scheduled long run, but treat it as an *easy* effort only; skip any HM‑effort finish.
-
-**Workout execution**  
-- **Warm‑up:** 10‑15 min easy jog + 3‑4 min of dynamic drills (leg swings, high‑knees).  
-- **Main set:** Run 12‑14 km at easy
-
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
-
-## Latest Activity
-
-_Most recent activity (2026-11-06):_
-- **Friday Core & Stability** — 0.0km · 21:40 · HR 95/118 max
-  - TE: Aerobic Base · aerobic 0.3 · anaerobic 0
-  - 🧠 The 21‑minute core & stability session delivered only a minor aerobic stimulus (aerobic = 0.3, load ≈ 4) and kept heart rate well below any training zone (avg 95 bpm, max 118 bpm), so it did not add meaningful cardiovascular fatigue. Your morning readiness was low (score 39, “Listen To Your Body”) with moderate sleep‑score impact (68 % of expected) and a short recovery window (~23 h), which aligns with the slight negative body‑battery impact (‑1) from today’s work. The afternoon snapshot shows a modest boost to 53 after a nap, but the overall readiness profile still suggests taking it easy on the upcoming Tuesday sub‑threshold run.
 
 ## Load & Trends
 
-- **ACWR:** 0.8 (Optimal) — acute 504 / chronic 567 (chronic range 453.6–850.5)
-- **7-day volume:** 34.24km vs 28-day avg 35.4km (-3%)
-- **Running tolerance:** 55.4% (Medium) — 23.1km of 63km weekly cap, acute impact load 34.9
-- **Aerobic Low:** 822.9 (target 816–1360 — in range)
+- **ACWR:** 1.1 (Optimal) — acute 670 / chronic 597 (chronic range 477.6–895.5)
+- **7-day volume:** 48.26km vs 28-day avg 38.9km (+24%)
+- **Running tolerance:** 77.8% (Medium) — 37.1km of 63km weekly cap, acute impact load 49
+- **Aerobic Low:** 953.5 (target 816–1360 — in range)
 - **Aerobic High:** 1289.7 (target 816–1360 — in range)
 - ⚠️ **Anaerobic:** 47.3 (target 108–435 — -61 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
@@ -57,18 +50,18 @@ _Most recent activity (2026-11-06):_
 | W | Run + Strides/Hills | 6k · 45:53 | 77 |
 | T | 5x1k @5k Effort | 9k · 58:40 | 213 |
 | F | Core & | 21:40 | 4 |
-| S | Rest | — | — |
+| S | Malolos Run | 14k · 1:42:20 | 131 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 6 | 34.24 km | 3:55:19 | 496.2 |
+| 7 | 48.27 km | 5:37:39 | 626.8 |
 
 ## Recent 4 Weeks
-_Average weekly running: 35.4 km_
+_Average weekly running: 38.9 km_
 
 | Week | Runs | Others | Load |
 |:---|---:|---:|---:|
-| Nov 1–7 | 23.10k | 49 min | 496.2 |
+| Nov 1–7 | 37.13k | 49 min | 626.8 |
 | Oct 25–31 | 41.16k | 93 min | 633.6 |
 | Oct 18–24 | 37.14k | 55 min | 518.8 |
 | Oct 11–17 | 40.13k | 20 min | 586.2 |
