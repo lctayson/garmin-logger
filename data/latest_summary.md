@@ -17,23 +17,6 @@
 - **Reason:** short sleep last night (5.8h).
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
-### 🧠 AI Coaching Guidance
-
-**Decision – go ahead, but keep it easy**  
-- Proceed with today’s scheduled long‑run (easy aerobic pace, optional HM‑effort finish).  
-- If you feel unusually fatigued after the warm‑up, skip the HM‑effort segment and stay at easy pace.
-
-**Workout execution**  
-- **Warm‑up:** 10 min easy jog (≈7:15 / km) + 4‑5 short strides (20 s) to prime the legs.  
-- **Main set:** Run 90–120 min at easy aerobic zone (≈6:40 – 7:15 / km, HR ≈ 145–155 bpm).  
-- **Optional finish (if you feel good):** 4 × 5 min at target half‑marathon effort (≈5:30 / km, HR ≈ 160‑165 bpm) with 2 min easy jog recovery.  
-- **Cool‑down:** 10 min easy jog + gentle stretching.
-
-**Readiness rationale**  
-- Sleep was short (5.8 h) despite a “good” sleep‑history score, so moderate readiness (66) is expected.  
-- Resting HR is low (58 bpm) and HRV is balanced, indicating good autonomic recovery.  
-- Load metrics are favorable (ACWR 0.8,
-
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
 ## Latest Activity
