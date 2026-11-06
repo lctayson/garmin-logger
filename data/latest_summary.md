@@ -19,9 +19,14 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Do the scheduled Friday core/hip‑stability strength session, but trim the load/volume (e.g., drop a set or use lighter resistance).  
+**Decision** – Stick to today’s **Friday strength/hip‑stability session**, but keep the load moderate (skip heavy max‑effort lifts).  
 
-**Execution** – 1️⃣ Warm‑up: 5‑8 min easy dynamic mobility (leg swings, hip circles, glute bridges). 2️⃣ Main set: follow the prescribed core/hip circuit, aiming for R
+**Workout execution** –  
+- **Warm‑up:** 5 min easy jog or bike + dynamic hip‑mobility (leg swings, hip circles) and 2 × 10 glute‑activation drills (banded clamshells, monster walks).  
+- **Main set:** Follow the prescribed “Strength A” routine (e.g., 3 × 8–10 reps of hip thrusts, single‑leg RDLs, goblet squats, core planks). Use a weight that feels **~6‑7/10 RPE**—you should finish the last rep with good form and a few reps in reserve.  
+- **Cool‑down:** 5 min light walking + static stretch of hip flexors, hamstrings, calves.  
+
+**Readiness rationale** – Your sleep was just under 7 h (score 79) and HRV is slightly below your 7‑day average (46 ms vs 47 ms), giving a **low readiness score (39) and “listen to your body” flag**. Resting HR is solid (59 bpm) and ACWR is optimal, so the overall training load isn’t the issue; the
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
