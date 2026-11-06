@@ -19,14 +19,9 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Stick to today’s scheduled **core/hip‑stability strength session**, but keep the load light‑to‑moderate. The low readiness score is driven mainly by a modest HRV dip; your resting HR (59 bpm) and sleep quality are fine, and ACWR is optimal, so a full strength day is still safe.
+**Decision** – Do the scheduled Friday core/hip‑stability strength session, but trim the load/volume (e.g., drop a set or use lighter resistance).  
 
-**Workout execution** –  
-- **Warm‑up**: 5 min easy jog or brisk walk + dynamic hip‑mobility drills (leg swings, hip circles).  
-- **Main set**: 2 × circuits of: 30 s plank, 12 × glute bridges, 12 × single‑leg dead‑bugs, 12 × banded clamshells per side. Use a light resistance band and focus on controlled tempo; avoid heavy weighted lifts.  
-- **Cool‑down**: 4‑5 min gentle stretching of hamstrings, hip flexors, and thoracic spine.
-
-**Readiness rationale** – Sleep (~7 h, score 79) and resting HR are solid, and your acute load (606) vs chronic (584) gives an AC
+**Execution** – 1️⃣ Warm‑up: 5‑8 min easy dynamic mobility (leg swings, hip circles, glute bridges). 2️⃣ Main set: follow the prescribed core/hip circuit, aiming for R
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
