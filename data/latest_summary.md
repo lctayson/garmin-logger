@@ -19,9 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled long‑run, but keep it easy and be ready to cut back distance or finish early if fatigue or heat become limiting.
+**Decision** – Proceed with today’s scheduled long run, but treat it as an *easy* effort only; skip any HM‑effort finish.
 
-**Workout execution (as per the plan)** – Warm‑up: 10 min easy jog + 3‑4 dynamic drills (leg swings, high‑knees). Main set: steady‑state aerobic run at easy
+**Workout execution**  
+- **Warm‑up:** 10‑15 min easy jog + 3‑4 min of dynamic drills (leg swings, high‑knees).  
+- **Main set:** Run 12‑14 km at easy
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 

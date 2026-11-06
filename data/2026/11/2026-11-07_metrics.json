@@ -46,7 +46,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "**Decision** – Proceed with today’s scheduled long‑run, but keep it easy and be ready to cut back distance or finish early if fatigue or heat become limiting.\n\n**Workout execution (as per the plan)** – Warm‑up: 10 min easy jog + 3‑4 dynamic drills (leg swings, high‑knees). Main set: steady‑state aerobic run at easy",
+    "ai_analysis": "**Decision** – Proceed with today’s scheduled long run, but treat it as an *easy* effort only; skip any HM‑effort finish.\n\n**Workout execution**  \n- **Warm‑up:** 10‑15 min easy jog + 3‑4 min of dynamic drills (leg swings, high‑knees).  \n- **Main set:** Run 12‑14 km at easy",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
