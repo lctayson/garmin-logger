@@ -1,67 +1,53 @@
-# Daily Check — 2026-11-07
+# Daily Check — 2026-11-08
 
-## Readiness: 66/100 (Moderate)
-> Good Sleep History
+## Readiness: -/100
 
-- **VO₂max:** 44.8 ml/kg/min (Garmin display: 45)
-- **RHR:** 58 bpm (7d avg: 58.1 bpm, trending flat)
-- **HRV:** 50ms (7d avg: 47ms) · within 47–58ms
-- ⚠️ **Sleep:** 5h45 / 6h30 need (0h45 short) · score 77 · 7d avg 6h42 · 1/7 nights below need
-- **Recovery remaining:** 0h12
-- ⚠️ **Limiter:** Sleep Score (65%)
-- **Also soft:** Stress History
-
-## Today's Workout
-
-- **Malolos Running** — 14.03km · 1:42:20 · 7:18/km · HR 146/154 max
-  - TE: Aerobic Base · aerobic 3.5 · anaerobic 0
-  - MS: 14.03k @ 7:18 146bpm 0.81m 170spm 276ms 7.9cm 243w
-  - Readiness 66 → 43 (Focus On Energy Levels) · Recovery 1d 7h 13m
-  - 🧠 The 14‑rep main set averaged 7:18 /km (range 7:09–7:36 /km), placing most reps at the upper edge of your easy‑aerobic zone (6:40–7:15 /km) and seeing heart‑rate climb from 131 bpm to 152 bpm, which nudged the later reps into low steady‑zone intensity. Stamina dropped from 100 % to 71 % during the workout and the training‑effect
-
-## Next Session
+## Today's Session
 - **Planned:** Sun, Nov 8 — 8k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
-- **Recommendation:** Proceed as planned
-- **Reason:** short sleep last night (5.8h).
-- **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
+- **Recommendation:** Adjust the workout
+- **Reason:** resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
+- **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
+## Latest Activity
+
+_Most recent activity (2026-11-07):_
+- **Malolos Running** — 14.03km · 1:42:20 · 7:18/km · HR 146/154 max
+  - TE: Aerobic Base · aerobic 3.5 · anaerobic 0
+  - MS: 14.03k @ 7:18 146bpm 0.81m 170spm 276ms 7.9cm 243w
+  - 🧠 The 14‑rep main set averaged 7:18 /km (range 7:09–7:36 /km), placing most reps at the upper edge of your easy‑aerobic zone (6:40–7:15 /km) and seeing heart‑rate climb from 131 bpm to 152 bpm, which nudged the later reps into low steady‑zone intensity. Stamina dropped from 100 % to 71 % during the workout and the training‑effect
+
 ## Load & Trends
 
-- **ACWR:** 1.1 (Optimal) — acute 670 / chronic 597 (chronic range 477.6–895.5)
-- **7-day volume:** 48.26km vs 28-day avg 38.9km (+24%)
+- **7-day volume:** 37.13km vs 28-day avg 37.4km (-1%)
 - **Running tolerance:** 77.8% (Medium) — 37.1km of 63km weekly cap, acute impact load 49
-- **Aerobic Low:** 953.5 (target 816–1360 — in range)
-- **Aerobic High:** 1289.7 (target 816–1360 — in range)
-- ⚠️ **Anaerobic:** 47.3 (target 108–435 — -61 under)
-- ⚠️ **Load focus:** Anaerobic Shortage
-- **Sleep (7d avg):** 6h42, 1/7 nights below need, trending down
-- **RHR (7d avg):** 58.1, trending flat
-- **HRV:** trending flat
+- ⚠️ **Sleep (7d avg):** 6h37, 5/7 nights below need, trending down
+- ⚠️ **RHR (7d avg):** 57.8, trending up
+- ⚠️ **HRV:** trending down
 
-## This Week (Nov 1–7)
+## This Week (Nov 2–8)
 
 | D | Activity | Volume | Load |
 |:---:|:---|---:|---:|
-| S | Indoor Ride | 11.1k · 29:01 | 22 |
 | M | Strength A | 27:20 | 5 |
 | T | 2x12min Thr | 8k · 52:45 | 176 |
 | W | Run + Strides/Hills | 6k · 45:53 | 77 |
 | T | 5x1k @5k Effort | 9k · 58:40 | 213 |
 | F | Core & | 21:40 | 4 |
 | S | Malolos Run | 14k · 1:42:20 | 131 |
+| S | Rest | — | — |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 7 | 48.27 km | 5:37:39 | 626.8 |
+| 6 | 37.14 km | 5:08:38 | 605.2 |
 
 ## Recent 4 Weeks
-_Average weekly running: 38.9 km_
+_Average weekly running: 37.4 km_
 
 | Week | Runs | Others | Load |
 |:---|---:|---:|---:|
-| Nov 1–7 | 37.13k | 49 min | 626.8 |
-| Oct 25–31 | 41.16k | 93 min | 633.6 |
-| Oct 18–24 | 37.14k | 55 min | 518.8 |
-| Oct 11–17 | 40.13k | 20 min | 586.2 |
+| Nov 2–8 | 37.13k | 49 min | 605.2 |
+| Oct 26–Nov 1 | 34.14k | 93 min | 579.3 |
+| Oct 19–25 | 37.14k | 55 min | 539.1 |
+| Oct 12–18 | 41.13k | 20 min | 598.2 |
