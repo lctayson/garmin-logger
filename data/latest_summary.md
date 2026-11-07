@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3.5 · anaerobic 0
   - MS: 14.03k @ 7:18 146bpm 0.81m 170spm 276ms 7.9cm 243w
   - Readiness 66 → 43 (Focus On Energy Levels) · Recovery 1d 7h 13m
-  - 🧠 The 14‑km main set held an average rep pace of 7:18 /km (range 7:09‑7:36) while heart rate rose steadily from ~131 bpm to 152 bpm, staying well below your LTHR of 171 bpm and firmly in the easy‑aerobic zone. The session produced an aerobic‑base training effect (3.5) with no anaerobic stimulus, and stamina fell to 71 %—a typical dip for a 14‑km effort in the current bridge phase. Morning readiness was moderate (score 66) with good sleep, and the post‑run drop to 43 reflects the acute load rather than a problem with recovery. Overall, the run was executed as planned and provides a solid aerobic foundation without overreaching.
+  - 🧠 The 14 km run stayed firmly in the easy aerobic zone, with rep paces ranging from 7:36 to 7:09 min/km (average 7:18) and no rep approaching the VO2max target range. Heart rate climbed gradually from 131 bpm in the first rep to 152 bpm in
 
 ## Next Session
 - **Planned:** Sun, Nov 8 — 8k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
