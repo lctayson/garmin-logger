@@ -19,10 +19,12 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Sunday session (easy run + optional hill sprints). Keep the intensity low; if you feel any calf tightness, early‑morning heat stress, or HR drift upward, drop the hill work.
+**Decision** – Run today, but keep it strictly easy/recovery. Skip the optional hill sprints because sleep was under 6 h and HRV is a touch below your 7‑day average, even though overall readiness is still “moderate” and the ACWR is optimal.
 
-**Workout execution**  
-- **Warm‑up:**
+**Workout execution** –  
+- **Warm‑up**: 8‑10 min relaxed jog (stay ≤ 150 bpm).  
+- **Main set**: 40‑50 min continuous easy run at 6:40‑7:15 min/km (HR ≈ 145‑155 bpm, RPE ≈ 3‑4).  
+- **Optional hill work**: Omit today; only add 6‑8 ×
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
