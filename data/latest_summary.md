@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3.5 · anaerobic 0
   - MS: 14.03k @ 7:18 146bpm 0.81m 170spm 276ms 7.9cm 243w
   - Readiness 66 → 43 (Focus On Energy Levels) · Recovery 1d 7h 13m
-  - 🧠 The 14 km run stayed firmly in the easy aerobic zone, with rep paces ranging from 7:36 to 7:09 min/km (average 7:18) and no rep approaching the VO2max target range. Heart rate climbed gradually from 131 bpm in the first rep to 152 bpm in
+  - 🧠 The 14 km run stayed solidly in the easy‑aerobic range, with rep paces drifting from 7:09 /km early to 7:36 /km late and heart rate climbing from 131 bpm to 152 bpm—both metrics align with the prescribed easy‑run zone (≈6:40‑7:15 /km, 145‑155 bpm). Stamina dipped to a low of 71 % but did not breach the 70 % warning threshold, indicating the session’s aerobic load was sustainable despite the warm‑morning heat. Morning readiness was moderate (score 66, good sleep), and the post‑run drop to 43 reflects the expected acute fatigue from a 130‑point training load.
 
 ## Next Session
 - **Planned:** Sun, Nov 8 — 8k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
