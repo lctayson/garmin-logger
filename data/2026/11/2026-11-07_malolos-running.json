@@ -627,7 +627,7 @@
         ]
       },
       "lap_count": 15,
-      "ai_analysis": "The 14‑km run stayed solidly in the easy aerobic zone, with split paces tightening from 7:36 early to 7:09 at the finish and an average rep pace of 7:18 matching the overall average. Heart‑rate rose steadily from ~131 bpm on the first split to 152 bpm on the last, confirming a gradual build‑up of effort but still below the sub‑threshold HR range (≈158 bpm). Stamina dropped from 100 % to 71 % and the post‑run readiness fell to 43, which is expected after a moderate‑load (load ≈ 130) session and does not indicate any acute issue.",
+      "ai_analysis": "The 14 km run was paced between 7:36 and 7:09 min/km, showing a modest 21‑second rep‑pace improvement as HR rose from 131 to 152 bpm, which kept you within the easy‑aerobic zone (≈6:40‑7:15 min/km). The aerobic training effect of 3.5 and zero anaerobic contribution confirm the session stayed sub‑threshold, while stamina dropped from 100 % to 71 % and body‑battery fell 22 points, indicating a solid but not excessive load. Your morning readiness score of 66 (moderate) was followed by a post‑exercise score of 43 with a high recovery‑time estimate, reflecting the 130‑point acute",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
