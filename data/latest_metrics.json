@@ -46,7 +46,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "**Decision** – Run today, but keep it strictly easy/recovery. Skip the optional hill sprints because sleep was under 6 h and HRV is a touch below your 7‑day average, even though overall readiness is still “moderate” and the ACWR is optimal.\n\n**Workout execution** –  \n- **Warm‑up**: 8‑10 min relaxed jog (stay ≤ 150 bpm).  \n- **Main set**: 40‑50 min continuous easy run at 6:40‑7:15 min/km (HR ≈ 145‑155 bpm, RPE ≈ 3‑4).  \n- **Optional hill work**: Omit today; only add 6‑8 ×",
+    "ai_analysis": "**Decision** – Proceed with today’s scheduled Sunday recovery run, but keep the hill‑sprint portion optional.  \n\n**Workout execution** – *Warm‑up*: 10‑15 min easy jog (zone 7, ≤150 bpm).  \n*Main*: 30‑45 min steady easy run (≈6:40‑7:15 /km, HR 145‑155 bpm).  \nIf you feel fully recovered and calves are pain‑free, add 6‑8 × 10‑s hill sprints (hard effort,",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
