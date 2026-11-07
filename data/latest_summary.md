@@ -19,17 +19,14 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Run the scheduled Sunday easy/recovery run, but skip the optional hill‑sprint block.  
+**Decision** – Run today, but keep it strictly easy. Skip the optional hill‑sprint set (sleep was only 5.7 h, and the modest dip in HRV suggests you’re not fully refreshed for any high‑intensity work).  
 
 **Workout execution** –  
-- **Warm‑up:** 10 min easy jog (≈7:30 / km) + 2‑3 straight‑leg strides.  
-- **Main set:** 45‑60 min continuous easy aerobic running at 6:40–7:15 / km (≈145‑155 bpm, RPE 4‑5).  
-- **Cool‑down:** 5 min relaxed jog + light stretching.  
+- **Warm‑up**: 10‑15 min easy jog + 2‑3 × 30 s dynamic drills (high‑knee, butt‑kick).  
+- **Main set**: 30‑45 min continuous easy‑aerobic running at ~6:40‑7:15 / km, aiming for HR ≈ 145‑155 bpm (RPE 3‑4).  
+- **Cool‑down**: 5‑10 min very easy jog + light stretching.  
 
-**Readiness rationale** – Your overall readiness is “Moderate” (score 57) with balanced HRV (46 ms vs 7‑day 49 ms) and a low resting HR (59 bpm), indicating good cardiovascular recovery. The main concern is limited sleep last night (5.65 h) and a modest dip in HRV; however, ACWR is optimal (0.9) and recent load is stable, so a low‑intensity session is appropriate while avoiding extra stress.  
-
-**In‑session guardrails** –  
-- Keep HR ≤155 bpm; if it spikes early, trim the run by 10
+**Readiness rationale**
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
