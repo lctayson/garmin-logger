@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3.5 · anaerobic 0
   - MS: 14.03k @ 7:18 146bpm 0.81m 170spm 276ms 7.9cm 243w
   - Readiness 66 → 43 (Focus On Energy Levels) · Recovery 1d 7h 13m
-  - 🧠 The 14 km run stayed solidly in the easy‑aerobic range, with rep paces drifting from 7:09 /km early to 7:36 /km late and heart rate climbing from 131 bpm to 152 bpm—both metrics align with the prescribed easy‑run zone (≈6:40‑7:15 /km, 145‑155 bpm). Stamina dipped to a low of 71 % but did not breach the 70 % warning threshold, indicating the session’s aerobic load was sustainable despite the warm‑morning heat. Morning readiness was moderate (score 66, good sleep), and the post‑run drop to 43 reflects the expected acute fatigue from a 130‑point training load.
+  - 🧠 The 14 km run stayed in the easy aerobic zone (average HR 146 bpm, average pace 7:18 /km) and showed a modest negative pace drift, ending at 7:09 /km after an opening 7:36 /km – a pattern that suggests you held back early and finished slightly faster despite the heat. Stamina dipped to 71 % and body‑battery fell by 22 points, which aligns with the moderate‑high load (130.6) and the very low recovery hours recorded that morning. Because this session is a Saturday long run in the bridge phase, the lack of anaerobic load (AE 0.0) is expected, but the stamina dip signals you may need extra recovery before the next Tuesday sub‑threshold interval.
 
 ## Next Session
 - **Planned:** Sun, Nov 8 — 8k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
