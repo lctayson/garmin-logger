@@ -1,12 +1,28 @@
 # Daily Check — 2026-11-08
 
-## Readiness: -/100
+## Readiness: 57/100 (Moderate)
+> Well Rested
+
+- **VO₂max:** 44.8 ml/kg/min (Garmin display: 45)
+- ⚠️ **RHR:** 59 bpm (7d avg: 58 bpm, trending up)
+- ⚠️ **HRV:** 46ms (7d avg: 49ms) · below 47–58ms
+- ⚠️ **Sleep:** 5h39 / 7h00 need (1h21 short) · score 81 · 7d avg 6h28 · 6/7 nights below need
+- **Recovery remaining:** 9h12
+- ⚠️ **Limiter:** Stress History (60%)
+- **Also soft:** Sleep History
 
 ## Today's Session
 - **Planned:** Sun, Nov 8 — 8k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
 - **Recommendation:** Adjust the workout
-- **Reason:** resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
+- **Reason:** short sleep last night (5.7h); ongoing sleep debt (7-day average 6.5h), 6/7 nights below need; resting heart rate is trending up; HRV is trending down; last-night HRV is below the balanced band; RHR-up/HRV-down recovery pattern.
 - **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
+
+### 🧠 AI Coaching Guidance
+
+**Decision** – Proceed with today’s scheduled Sunday session (easy run + optional hill sprints). Keep the intensity low; if you feel any calf tightness, early‑morning heat stress, or HR drift upward, drop the hill work.
+
+**Workout execution**  
+- **Warm‑up:**
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -20,10 +36,15 @@ _Most recent activity (2026-11-07):_
 
 ## Load & Trends
 
+- **ACWR:** 0.9 (Optimal) — acute 557 / chronic 579 (chronic range 463.2–868.5)
 - **7-day volume:** 37.13km vs 28-day avg 37.4km (-1%)
-- **Running tolerance:** 77.8% (Medium) — 37.1km of 63km weekly cap, acute impact load 49
-- ⚠️ **Sleep (7d avg):** 6h37, 5/7 nights below need, trending down
-- ⚠️ **RHR (7d avg):** 57.8, trending up
+- **Running tolerance:** 68.3% (Medium) — 37.1km of 63km weekly cap, acute impact load 43
+- **Aerobic Low:** 909.9 (target 649–1082 — in range)
+- ⚠️ **Aerobic High:** 1289.7 (target 649–1082 — +208 over)
+- ⚠️ **Anaerobic:** 47.3 (target 86–346 — -39 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- ⚠️ **Sleep (7d avg):** 6h28, 6/7 nights below need, trending down
+- ⚠️ **RHR (7d avg):** 58.0, trending up
 - ⚠️ **HRV:** trending down
 
 ## This Week (Nov 2–8)
