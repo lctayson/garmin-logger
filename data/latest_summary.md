@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3.5 · anaerobic 0
   - MS: 14.03k @ 7:18 146bpm 0.81m 170spm 276ms 7.9cm 243w
   - Readiness 66 → 43 (Focus On Energy Levels) · Recovery 1d 7h 13m
-  - 🧠 The 14 km run was paced between 7:36 and 7:09 min/km, showing a modest 21‑second rep‑pace improvement as HR rose from 131 to 152 bpm, which kept you within the easy‑aerobic zone (≈6:40‑7:15 min/km). The aerobic training effect of 3.5 and zero anaerobic contribution confirm the session stayed sub‑threshold, while stamina dropped from 100 % to 71 % and body‑battery fell 22 points, indicating a solid but not excessive load. Your morning readiness score of 66 (moderate) was followed by a post‑exercise score of 43 with a high recovery‑time estimate, reflecting the 130‑point acute
+  - 🧠 The 14 km run stayed tightly within the easy‑aerobic zone (rep paces 7:09–7:36 / km) and HR rose smoothly from the low‑130s to 152 bpm, showing a modest cumulative load but no pace drift beyond the prescribed range. The training effect (Aerobic Base 3.5, anaerobic 0) matches the bridge‑phase goal of building endurance without adding VO₂‑max stimulus. A body‑battery drop of ‑22 and the post‑run readiness fall to 43 reflect the 130 ACWR load and are in line with the expected recovery cost of a 1:42 h effort in early‑morning heat. No concerning deviations were observed.
 
 ## Next Session
 - **Planned:** Sun, Nov 8 — 8k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
