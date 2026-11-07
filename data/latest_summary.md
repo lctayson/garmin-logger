@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3.5 · anaerobic 0
   - MS: 14.03k @ 7:18 146bpm 0.81m 170spm 276ms 7.9cm 243w
   - Readiness 66 → 43 (Focus On Energy Levels) · Recovery 1d 7h 13m
-  - 🧠 The 14 km run stayed in the easy aerobic zone (average HR 146 bpm, average pace 7:18 /km) and showed a modest negative pace drift, ending at 7:09 /km after an opening 7:36 /km – a pattern that suggests you held back early and finished slightly faster despite the heat. Stamina dipped to 71 % and body‑battery fell by 22 points, which aligns with the moderate‑high load (130.6) and the very low recovery hours recorded that morning. Because this session is a Saturday long run in the bridge phase, the lack of anaerobic load (AE 0.0) is expected, but the stamina dip signals you may need extra recovery before the next Tuesday sub‑threshold interval.
+  - 🧠 The 14 km run stayed solidly in the easy‑aerobic zone (overall 7:18 /km, HR 146 bpm, max 154 bpm) with a modest pacing drift from 7:36 early to 7:09 in the final rep while heart rate gradually rose from 131 bpm to 152 bpm, indicating a typical progressive effort rather than any loss of form. The aerobic training effect of 3.5 and a load of ~131 AU reflect a useful base‑building stimulus for the bridge phase, but the zero anaerobic contribution confirms the session delivered no VO₂max or threshold stimulus. Stamina fell from 100 % to 71 % and body‑battery dropped 22 points, which aligns with the moderate‑intensity volume and the post‑run readiness dip to 43, so today’s fatigue appears proportional and not a red flag.
 
 ## Next Session
 - **Planned:** Sun, Nov 8 — 8k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
