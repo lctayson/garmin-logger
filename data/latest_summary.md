@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 8.03k @ 7:18 140bpm 0.81m 169spm 276ms 7.9cm 241w
   - Readiness 57 → 48 (Focus On Sleep Patterns) · Recovery 21h 20m
-  - 🧠 The eight‑rep progression held a steady HR rise from 125 bpm to 149 bpm while the pace improved from 7:43 /km to 6:57 /km, ending just inside the steady‑zone threshold and delivering the expected easy‑aerobic load (AEROBIC_BASE = 3.0, no anaerobic benefit). With a morning readiness score of 57 (“Moderate”) and a solid sleep score of 81, the session fit the bridge‑phase Wednesday easy‑run prescription and the modest post‑exercise readiness dip to 48 reflects the acute load rather than a recovery problem. No execution gaps are evident, but the workout did not provide a VO2‑max stimulus, which is appropriate for today’s easy‑run focus.
+  - 🧠 The eight‑rep interval set showed a clear, steady acceleration—paces fell from 7:43 /km to 6:57 /km while average heart rate rose from 125 bpm to 149 bpm, indicating the intended progressive effort without any obvious pacing lapses. Training‑effect metrics confirm a solid aerobic stimulus (aerobic = 3.0, anaerobic = 0.0) and a modest stamina dip to 83 % of start, which aligns with the bridge‑phase VO2‑max focus rather than a heavy anaerobic load. Morning readiness was moderate (score 57, “Well Rested”), but the post‑run snapshot dropped to 48, reflecting the 85‑point training load and a –12 % body‑battery impact from today’s session. Overall, the workout executed as prescribed and contributed appropriate aerobic stress for the current phase.
 
 ## Next Session
 - **Planned:** Mon, Nov 9 — Strength A
