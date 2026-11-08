@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 8.03k @ 7:18 140bpm 0.81m 169spm 276ms 7.9cm 241w
   - Readiness 57 → 48 (Focus On Sleep Patterns) · Recovery 21h 20m
-  - 🧠 The eight‑rep interval set showed a clear, steady acceleration—paces fell from 7:43 /km to 6:57 /km while average heart rate rose from 125 bpm to 149 bpm, indicating the intended progressive effort without any obvious pacing lapses. Training‑effect metrics confirm a solid aerobic stimulus (aerobic = 3.0, anaerobic = 0.0) and a modest stamina dip to 83 % of start, which aligns with the bridge‑phase VO2‑max focus rather than a heavy anaerobic load. Morning readiness was moderate (score 57, “Well Rested”), but the post‑run snapshot dropped to 48, reflecting the 85‑point training load and a –12 % body‑battery impact from today’s session. Overall, the workout executed as prescribed and contributed appropriate aerobic stress for the current phase.
+  - 🧠 The eight reps drifted from 7 :43 /km to 6 :57 /km while heart rate climbed steadily from 125 to 149 bpm, keeping the entire set firmly within the easy‑aerobic zone (≈7 :10–7 :45 /km) and delivering the modest aerobic‑base effect reflected in the 3.0 aerobic TE and zero anaerobic contribution. Stamina fell from 100 % to 83 % and body‑battery dropped 12 points, indicating a noticeable cumulative load (85.3) for a session that lacked any VO2‑max intensity. Morning readiness was moderate (score 57) but dipped to 48 post‑run, consistent with the observed aerobic fatigue rather than a failure to meet a specific interval target.
 
 ## Next Session
 - **Planned:** Mon, Nov 9 — Strength A
