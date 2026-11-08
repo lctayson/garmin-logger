@@ -56,6 +56,24 @@
           "recovery_time_change": "NO_CHANGE_SLEEP"
         },
         {
+          "timestamp_local": "2026-11-08T10:11:19.0",
+          "context": "UPDATE_REALTIME_VARIABLES",
+          "score": 50,
+          "feedback": "WELL_RESTED",
+          "recovery_minutes": 1124,
+          "acute_load": 666,
+          "factor_overrides": {
+            "recovery_time": {
+              "percent": 70,
+              "feedback": "Good"
+            },
+            "acwr": {
+              "percent": 86,
+              "feedback": "Good"
+            }
+          }
+        },
+        {
           "timestamp_local": "2026-11-08T07:35:04.0",
           "context": "AFTER_POST_EXERCISE_RESET",
           "score": 48,
@@ -109,7 +127,7 @@
       "rem": 0.75,
       "awake": 0.05
     },
-    "total_steps": 11397
+    "total_steps": 11787
   },
   "training_status": {
     "status": "Productive 3",
@@ -965,7 +983,7 @@
     {
       "date": "2026-11-08",
       "charged": 57,
-      "drained": 23,
+      "drained": 38,
       "high": 62,
       "low": 5
     }
