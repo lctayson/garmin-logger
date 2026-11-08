@@ -19,10 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-* **Decision:** Proceed as planned with **Strength A (power/hip extension)**; no running is scheduled today.
-* **Workout execution:** Execute your standard Strength A routine focusing on power and hip extension mechanics; keep movement quality high and avoid training to absolute muscular failure ahead of tomorrow's sub-threshold session.
-* **Readiness rationale:** Readiness is solid to absorb lifting—HRV is stable and balanced (49 ms vs 48 ms 7-day average), resting HR is steady at 58 bpm, ACWR is optimal at 0.90 (acute load 559 vs chronic 580), and last night provided a solid 7.0 hours of sleep (score 88) with minimal lingering recovery time (2.9 hours).
-* **In-session guardrails:** If you experience lingering lower-body tightness from the weekend or sluggish movement during warm-up sets, cap the loads/intensity to preserve leg freshness for Tuesday's threshold intervals.
+**Decision** – Readiness is “moderate” but all sub‑metrics (sleep 7 h, sleep score 88, HRV balanced, resting HR 58 bpm, ACWR 0.9) are solid. Proceed with today’s scheduled **Strength A (power/hip‑extension)** session; no need to downgrade or skip.
+
+**Workout execution (as per the plan)** – *Warm‑up*: 5‑10 min of dynamic mobility (leg swings, hip circles, body‑weight lunges). *Main set*: the Strength A routine you’ve been using (e.g., hip thrusts, single‑leg glute bridges, kettlebell swings) – typically 3‑4 sets of 8‑12 reps at a load that feels “moderately heavy” (RPE ≈ 7). *Cool‑down*: 5 min of gentle stretching focusing on hips, hamstrings, and lower back.
+
+**Readiness rationale** –
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
