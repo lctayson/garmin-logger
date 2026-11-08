@@ -19,17 +19,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision – Proceed as planned** – Your readiness score (69 / Moderate) is paired with “Well Rested,” balanced HRV, low resting HR (58 bpm), and an optimal ACWR (0.9).  All indicators point to adequate recovery for today’s Strength A session.
-
-**Workout execution** –  
-- **Warm‑up:** 5 min light cardio (e.g., easy jog or bike) + dynamic hip‑mobility drills (leg swings, hip circles).  
-- **Main set:** Power/hip‑extension circuit – 3 × 8 reps each of single‑leg glute bridges, kettlebell swings, and Bulgarian split squats, using a load that feels “moderately hard” (RPE ≈ 6–7) for the last 2‑3 reps.  
-- **Rest:** 60‑90 s between exercises, 2 min between circuits.  
-- **Cool‑down:** 5 min gentle stretching focusing on glutes, hamstrings, and hip flexors.
-
-**Readiness rationale** – Sleep (7 h, score 88) and recovery‑time (2.9 h) are solid; HRV is balanced (49 ms avg vs 48 ms 7‑day avg), and your acute load is slightly below chronic (559 vs 580), indicating you’re not carrying excess fatigue.  The only modest flag is the “Moderate” overall readiness level, but it is driven mainly by the composite score, not any specific deficit, so there’s no reason to cut volume today.
-
-**In‑session guardrails** – Keep an eye on hip‑joint comfort and heart‑rate drift during the circuit; if you notice sudden spikes above 150
+* **Decision:** Proceed as planned with **Strength A (power/hip extension)**; no running is scheduled today.
+* **Workout execution:** Execute your standard Strength A routine focusing on power and hip extension mechanics; keep movement quality high and avoid training to absolute muscular failure ahead of tomorrow's sub-threshold session.
+* **Readiness rationale:** Readiness is solid to absorb lifting—HRV is stable and balanced (49 ms vs 48 ms 7-day average), resting HR is steady at 58 bpm, ACWR is optimal at 0.90 (acute load 559 vs chronic 580), and last night provided a solid 7.0 hours of sleep (score 88) with minimal lingering recovery time (2.9 hours).
+* **In-session guardrails:** If you experience lingering lower-body tightness from the weekend or sluggish movement during warm-up sets, cap the loads/intensity to preserve leg freshness for Tuesday's threshold intervals.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
