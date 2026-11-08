@@ -1,13 +1,65 @@
 {
   "date": "2026-11-09",
   "readiness": {
-    "resting_hr": 60,
-    "ai_analysis": "- **Decision:** Proceed with today’s scheduled **Strength A (power/hip‑extension)** session; the low resting HR (60 bpm) suggests good recovery and no reason to skip or downgrade.  \n- **Execution:** Start with 5‑10 min of dynamic mobility (leg swings, hip circles, body‑weight glutes) → follow your usual Strength A prescription (hip‑hinge, single‑leg, and explosive hip‑extension work) → finish with 5 min of light stretching/foam‑rolling.  Keep reps/sets and rest intervals exactly as they’re written in your program; do not alter the load unless you feel unusually fatigued.  \n- **Readiness rationale:** Resting HR is at the low end of your typical range, indicating adequate autonomic recovery.  No sleep, HRV, or load data suggest stress, so the overall readiness picture is neutral‑positive—no need for a recovery‑only day.  \n- **Guardrails:** During the warm‑up watch for a sudden HR jump above 130 bpm or loss of smooth movement; if that occurs, reduce the weight or cut the set.  While training, monitor form and perceived effort—if you notice joint pain, excessive muscle soreness, or a RPE > 8, stop the current set and finish with light core/ mobility work instead.  Keep hydration up for the early‑morning heat, and if temperature spikes > 31 °C, consider a slightly longer rest between sets to keep heart‑rate manageable.",
+    "vo2_max": 45.0,
+    "vo2_max_precise": 44.9,
+    "score": 69,
+    "level": "Moderate",
+    "feedback": "Well Rested",
+    "resting_hr": 58,
+    "hrv_last_night_avg_ms": 49.0,
+    "hrv_7_day_avg_ms": 48.0,
+    "hrv_status": "BALANCED",
+    "sleep_hours": 7.0,
+    "sleep_hours_including_previous_day_nap": 7.0,
+    "sleep_score": 88,
+    "recovery_hours": 2.9,
+    "hrv_baseline": {
+      "lowUpper": 45.0,
+      "balancedLow": 47.0,
+      "balancedUpper": 58.0,
+      "markerValue": 0.29544067
+    },
+    "factor_details": {
+      "sleep_score": {
+        "percent": 86,
+        "feedback": "Good"
+      },
+      "sleep_history": {
+        "percent": 69,
+        "feedback": "Moderate"
+      },
+      "recovery_time": {
+        "percent": 95,
+        "feedback": "Good"
+      },
+      "acwr": {
+        "percent": 92,
+        "feedback": "Good"
+      },
+      "hrv": {
+        "percent": 88,
+        "feedback": "Good"
+      },
+      "stress_history": {
+        "percent": 50,
+        "feedback": "Moderate"
+      }
+    },
+    "ai_analysis": "**Decision – Proceed as planned** – Your readiness score (69 / Moderate) is paired with “Well Rested,” balanced HRV, low resting HR (58 bpm), and an optimal ACWR (0.9).  All indicators point to adequate recovery for today’s Strength A session.\n\n**Workout execution** –  \n- **Warm‑up:** 5 min light cardio (e.g., easy jog or bike) + dynamic hip‑mobility drills (leg swings, hip circles).  \n- **Main set:** Power/hip‑extension circuit – 3 × 8 reps each of single‑leg glute bridges, kettlebell swings, and Bulgarian split squats, using a load that feels “moderately hard” (RPE ≈ 6–7) for the last 2‑3 reps.  \n- **Rest:** 60‑90 s between exercises, 2 min between circuits.  \n- **Cool‑down:** 5 min gentle stretching focusing on glutes, hamstrings, and hip flexors.\n\n**Readiness rationale** – Sleep (7 h, score 88) and recovery‑time (2.9 h) are solid; HRV is balanced (49 ms avg vs 48 ms 7‑day avg), and your acute load is slightly below chronic (559 vs 580), indicating you’re not carrying excess fatigue.  The only modest flag is the “Moderate” overall readiness level, but it is driven mainly by the composite score, not any specific deficit, so there’s no reason to cut volume today.\n\n**In‑session guardrails** – Keep an eye on hip‑joint comfort and heart‑rate drift during the circuit; if you notice sudden spikes above 150",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
+  "health": {
+    "steps": 33
+  },
   "sleep": {
+    "deep_h": 1.05,
+    "light_h": 4.93,
+    "rem_h": 1.02,
+    "awake_h": 0.08,
     "baseline_h": 7.0,
     "need_h": 7.0,
+    "next_need_h": 7.0,
     "feedback": "No Change No Adjustments",
     "training_feedback": "No Change",
     "sleep_history_adjustment": "No Change",
@@ -15,11 +67,43 @@
     "nap_adjustment": "No Change",
     "previous_day_nap": null
   },
+  "load": {
+    "acute_load": 559,
+    "chronic_load": 580,
+    "acwr": 0.9,
+    "acwr_percent": 38,
+    "acwr_status": "Optimal",
+    "chronic_load_range": {
+      "min": 464.0,
+      "max": 870.0
+    },
+    "training_status": "Productive 3"
+  },
+  "vo2_max": 45.0,
+  "vo2_max_precise": 44.9,
   "race_predictions": {
     "5k": "27:05",
     "10k": "57:16",
     "half_marathon": "2:10:21",
     "marathon": "4:51:32"
+  },
+  "load_balance": {
+    "aerobic_low": 993.2,
+    "aerobic_low_target": [
+      816,
+      1360
+    ],
+    "aerobic_high": 1289.7,
+    "aerobic_high_target": [
+      816,
+      1360
+    ],
+    "anaerobic": 47.3,
+    "anaerobic_target": [
+      108,
+      435
+    ],
+    "load_focus": "Anaerobic Shortage"
   },
   "running_tolerance": {
     "acute_impact_load": 45.3,
@@ -158,6 +242,14 @@
         }
       ]
     }
+  },
+  "heat_acclimation": {
+    "percentage": 100,
+    "trend": "Acclimatized"
+  },
+  "altitude_acclimation": {
+    "percentage": 0,
+    "trend": null
   },
   "trend_recent_daily": {
     "columns": [
@@ -338,17 +430,17 @@
       ],
       [
         "2026-11-09",
-        60,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        58,
+        49.0,
+        48.0,
+        7.0,
+        88,
+        45.0,
+        "Productive 3",
+        559,
+        580,
+        0.9,
+        "Optimal",
         0,
         0.0,
         0.0,
@@ -752,17 +844,17 @@
         "2026-11-09",
         "2026-11-03",
         "2026-11-09",
-        60,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        58,
+        49.0,
+        48.0,
+        7.0,
+        88,
+        45.0,
+        "Productive 3",
+        559,
+        580,
+        0.9,
+        "Optimal",
         6,
         5.66,
         45.16,
@@ -837,9 +929,9 @@
       ],
       [
         "2026-11-09",
-        15,
+        65,
         0,
-        25,
+        76,
         11
       ]
     ]

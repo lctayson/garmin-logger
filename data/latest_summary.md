@@ -1,21 +1,35 @@
 # Daily Check — 2026-11-09
 
-## Readiness: -/100
+## Readiness: 69/100 (Moderate)
+> Well Rested
 
-- ⚠️ **RHR:** 60 bpm (7d avg: 58.3 bpm, trending up)
+- **VO₂max:** 44.9 ml/kg/min (Garmin display: 45)
+- ⚠️ **RHR:** 58 bpm (7d avg: 58 bpm, trending up)
+- **HRV:** 49ms (7d avg: 48ms) · within 47–58ms
+- **Sleep:** 7h00 / 7h00 need (met) · score 88 · 7d avg 6h26 · 6/7 nights below need
+- **Recovery remaining:** 2h54
+- ⚠️ **Limiter:** Stress History (50%)
+- **Also soft:** Sleep History
 
 ## Today's Session
 - **Planned:** Mon, Nov 9 — Strength A
 - **Recommendation:** Keep it easy
-- **Reason:** ongoing sleep debt (7-day average 6.3h), 6/7 nights below need; resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
+- **Reason:** ongoing sleep debt (7-day average 6.4h), 6/7 nights below need; resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
 - **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Proceed with today’s scheduled **Strength A (power/hip‑extension)** session; the low resting HR (60 bpm) suggests good recovery and no reason to skip or downgrade.  
-- **Execution:** Start with 5‑10 min of dynamic mobility (leg swings, hip circles, body‑weight glutes) → follow your usual Strength A prescription (hip‑hinge, single‑leg, and explosive hip‑extension work) → finish with 5 min of light stretching/foam‑rolling.  Keep reps/sets and rest intervals exactly as they’re written in your program; do not alter the load unless you feel unusually fatigued.  
-- **Readiness rationale:** Resting HR is at the low end of your typical range, indicating adequate autonomic recovery.  No sleep, HRV, or load data suggest stress, so the overall readiness picture is neutral‑positive—no need for a recovery‑only day.  
-- **Guardrails:** During the warm‑up watch for a sudden HR jump above 130 bpm or loss of smooth movement; if that occurs, reduce the weight or cut the set.  While training, monitor form and perceived effort—if you notice joint pain, excessive muscle soreness, or a RPE > 8, stop the current set and finish with light core/ mobility work instead.  Keep hydration up for the early‑morning heat, and if temperature spikes > 31 °C, consider a slightly longer rest between sets to keep heart‑rate manageable.
+**Decision – Proceed as planned** – Your readiness score (69 / Moderate) is paired with “Well Rested,” balanced HRV, low resting HR (58 bpm), and an optimal ACWR (0.9).  All indicators point to adequate recovery for today’s Strength A session.
+
+**Workout execution** –  
+- **Warm‑up:** 5 min light cardio (e.g., easy jog or bike) + dynamic hip‑mobility drills (leg swings, hip circles).  
+- **Main set:** Power/hip‑extension circuit – 3 × 8 reps each of single‑leg glute bridges, kettlebell swings, and Bulgarian split squats, using a load that feels “moderately hard” (RPE ≈ 6–7) for the last 2‑3 reps.  
+- **Rest:** 60‑90 s between exercises, 2 min between circuits.  
+- **Cool‑down:** 5 min gentle stretching focusing on glutes, hamstrings, and hip flexors.
+
+**Readiness rationale** – Sleep (7 h, score 88) and recovery‑time (2.9 h) are solid; HRV is balanced (49 ms avg vs 48 ms 7‑day avg), and your acute load is slightly below chronic (559 vs 580), indicating you’re not carrying excess fatigue.  The only modest flag is the “Moderate” overall readiness level, but it is driven mainly by the composite score, not any specific deficit, so there’s no reason to cut volume today.
+
+**In‑session guardrails** – Keep an eye on hip‑joint comfort and heart‑rate drift during the circuit; if you notice sudden spikes above 150
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -29,10 +43,15 @@ _Most recent activity (2026-11-08):_
 
 ## Load & Trends
 
+- **ACWR:** 0.9 (Optimal) — acute 559 / chronic 580 (chronic range 464–870)
 - **7-day volume:** 45.16km vs 28-day avg 39.4km (+15%)
 - **Running tolerance:** 70.1% (Medium) — 45.2km of 64.6km weekly cap, acute impact load 45.3
-- ⚠️ **Sleep (7d avg):** 6h20, 6/7 nights below need, trending down
-- ⚠️ **RHR (7d avg):** 58.3, trending up
+- **Aerobic Low:** 993.2 (target 816–1360 — in range)
+- **Aerobic High:** 1289.7 (target 816–1360 — in range)
+- ⚠️ **Anaerobic:** 47.3 (target 108–435 — -61 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- ⚠️ **Sleep (7d avg):** 6h26, 6/7 nights below need, trending flat
+- ⚠️ **RHR (7d avg):** 58.0, trending up
 - ⚠️ **HRV:** trending down
 
 ## This Week (Nov 3–9)
