@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 8.03k @ 7:18 140bpm 0.81m 169spm 276ms 7.9cm 241w
   - Readiness 57 → 48 (Focus On Sleep Patterns) · Recovery 21h 20m
-  - 🧠 The eight reps progressed from 7:43 /km to 6:57 /km while average heart rate rose from 125 bpm to 149 bpm, staying within the easy‑aerobic (≈7:15 /km, ≤155 bpm) and low‑steady (≈6:20 /km, ≤162 bpm) zones rather than delivering any VO₂‑max stimulus. Stamina dropped from 100 % to 83 % and body‑battery fell 12 points, which is typical for a moderate‑intensity interval block but signals a noticeable acute cost. Your morning readiness was “Moderate” (score 57) and the post‑run snapshot fell to 48, reflecting the expected depletion from this effort rather than a recovery issue. No anaerobic load was recorded, so the session aligned with the bridge phase’s easy‑run focus.
+  - 🧠 The eight reps drifted from 7:43 /km to 6:57 /km while heart rate rose steadily from 125 to 149 bpm, staying well below LTHR and confirming the session stayed in easy‑to‑sub‑threshold intensity rather than delivering a true VO2‑max stimulus (training effect reports 0 % anaerobic). Pace progression was smooth—the average rep pace (7:18) matches the overall average, so execution was on target for a recovery/steady‑state effort. Morning readiness was moderate (score 57) and the post‑run drop to 48 reflects the higher acute load (666 vs 557) rather than any acute fatigue concern. Overall the workout was as‑expected for a Thursday quality session in the bridge phase, but it did not provide the anaerobic load needed for VO2 development.
 
 ## Next Session
 - **Planned:** Mon, Nov 9 — Strength A
