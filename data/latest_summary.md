@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 8.03k @ 7:18 140bpm 0.81m 169spm 276ms 7.9cm 241w
   - Readiness 57 → 48 (Focus On Sleep Patterns) · Recovery 21h 20m
-  - 🧠 The eight‑rep interval set showed a consistent negative pace drift, dropping from 7:43 on the first rep to 6:57 on the last—a roughly 10 % speed increase while heart rate rose steadily from 125 bpm to 149 bpm, indicating the intended progressive intensity but still within an aerobic zone (max HR 152). The session’s training effect was purely aerobic (AEROBIC_BASE 3.0, NO_ANAEROBIC_BENEFIT), matching the bridge‑phase focus on sub‑threshold/VO₂‑max work without the anaerobic stimulus that should be introduced later. With a morning readiness score of 57 (moderate) and stamina falling to 83 % by the end, the load was appreciable but not excessive for today’s training plan.
+  - 🧠 The eight‑rep interval set drifted from 7:43 km⁻¹ to 6:57 km⁻¹ while heart rate rose from 125 to 149 bpm, staying well below the VO2max zone (≈4:50–5:15 km⁻¹, 170–178 bpm) expected for Thursday quality work, so the session delivered only an aerobic base stimulus (AEROBIC_BASE 3.0) and no anaerobic benefit. Pace progression was smooth, with about a 6 % speed gain by the final rep, but the overall intensity missed the prescribed VO2 target. Morning readiness was moderate (score
 
 ## Next Session
 - **Planned:** Mon, Nov 9 — Strength A
