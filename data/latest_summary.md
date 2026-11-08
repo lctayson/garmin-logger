@@ -19,11 +19,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Readiness is “moderate” but all sub‑metrics (sleep 7 h, sleep score 88, HRV balanced, resting HR 58 bpm, ACWR 0.9) are solid. Proceed with today’s scheduled **Strength A (power/hip‑extension)** session; no need to downgrade or skip.
+**Decision** – Proceed with today’s scheduled **Strength A (hip‑extension/power)** session; no need to downgrade or swap for recovery.
 
-**Workout execution (as per the plan)** – *Warm‑up*: 5‑10 min of dynamic mobility (leg swings, hip circles, body‑weight lunges). *Main set*: the Strength A routine you’ve been using (e.g., hip thrusts, single‑leg glute bridges, kettlebell swings) – typically 3‑4 sets of 8‑12 reps at a load that feels “moderately heavy” (RPE ≈ 7). *Cool‑down*: 5 min of gentle stretching focusing on hips, hamstrings, and lower back.
+**Execution** – 1️⃣ Warm‑up: 5 min easy jog or bike + dynamic hip/leg drills (leg swings, walking lunges).  
+2️⃣ Main‑set (your prescribed Strength A routine): work the hip‑extension lifts (e.g., single‑leg glute bridges, Bulgarian split‑squat, Romanian deadlift) at **RPE 6‑7**, 3‑4 × 8‑10 reps per exercise, focusing on explosiveness and clean form.  
+3️⃣ Cool‑down: 5 min light mobility + static stretch for glutes, hamstrings, quads.
 
-**Readiness rationale** –
+**Readiness rationale** – Sleep 7 h (score 88
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
