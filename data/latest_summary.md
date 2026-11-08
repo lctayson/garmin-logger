@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 8.03k @ 7:18 140bpm 0.81m 169spm 276ms 7.9cm 241w
   - Readiness 57 → 48 (Focus On Sleep Patterns) · Recovery 21h 20m
-  - 🧠 The eight‑rep main set showed a clear pace progression from 7:43 /km to 6:57 /km while average heart rate rose from 125 bpm to 149 bpm, indicating the effort was executed as intended and stayed within an aerobic stimulus (AEROBIC_BASE = 3.0, no anaerobic benefit). The overall load of 85 AU and a stamina drop to 83 % are typical for a sub‑threshold/steady‑state session in the bridge phase and match the moderate readiness score of 57 (morning) that fell to 48 after the run, reflecting expected acute fatigue rather than overreaching.
+  - 🧠 The eight‑rep work set tapered smoothly from 7:43 /km to 6:57 /km while heart‑rate climbed steadily from 125 bpm to 149 bpm, showing a consistent acceleration rather than any pacing drift. Because the average rep pace (7:18 /km) matches the overall average, the session stayed firmly in the easy‑to‑steady zone appropriate for this bridge‑phase development work. The load of 85 and a –12‑point body‑battery impact, combined with the post‑run readiness drop to 48 (down from a morning score of 57), indicate a moderate aerobic stimulus that was taxing but still within the athlete’s current recovery capacity.
 
 ## Next Session
 - **Planned:** Mon, Nov 9 — Strength A
