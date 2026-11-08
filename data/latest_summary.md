@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 8.03k @ 7:18 140bpm 0.81m 169spm 276ms 7.9cm 241w
   - Readiness 57 → 48 (Focus On Sleep Patterns) · Recovery 21h 20m
-  - 🧠 The eight‑rep main set stayed firmly in the easy‑aerobic zone (paces 7:43 – 6:57 min/km, HR 125 – 149 bpm), matching the Thursday quality session’s intended sub‑threshold intensity and showing a modest, expected pace improvement across reps. The incremental HR rise parallels the faster reps, indicating consistent effort rather than a premature fatigue spike, and the training effect (AEROBIC_BASE = 3.0, no anaerobic gain) aligns with the prescribed stimulus. Morning readiness was “moderate” (score 57, sleep 81, 9.2 h recovery) and the post‑run dip to 48 is typical given the 85‑point load and –12 body‑battery impact. No abnormal drift or risk‑factor signals were observed.
+  - 🧠 The eight work reps gradually accelerated from 7:43 /km to 6:57 /km while heart rate climbed from 125 bpm to 149 bpm, staying well below your LTHR (171 bpm) and confirming the effort remained in the easy‑to‑sub‑threshold range. The session’s training effect (AEROBIC_BASE = 3.0, ANAEROBIC = 0) aligns with the modest pace and HR profile, indicating no true VO2‑max stimulus was achieved despite the interval format. Your morning readiness was “Well Rested” (score 57), and the post‑run drop to 48 reflects the acute load rather than a problem with execution. Overall, the workout was on‑target for aerobic base work but would benefit from a higher intensity interval set to generate the desired anaerobic stimulus for the upcoming HM phase.
 
 ## Next Session
 - **Planned:** Mon, Nov 9 — Strength A
