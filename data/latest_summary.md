@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 8.03k @ 7:18 140bpm 0.81m 169spm 276ms 7.9cm 241w
   - Readiness 57 → 48 (Focus On Sleep Patterns) · Recovery 21h 20m
-  - 🧠 The eight‑rep work set tapered smoothly from 7:43 /km to 6:57 /km while heart‑rate climbed steadily from 125 bpm to 149 bpm, showing a consistent acceleration rather than any pacing drift. Because the average rep pace (7:18 /km) matches the overall average, the session stayed firmly in the easy‑to‑steady zone appropriate for this bridge‑phase development work. The load of 85 and a –12‑point body‑battery impact, combined with the post‑run readiness drop to 48 (down from a morning score of 57), indicate a moderate aerobic stimulus that was taxing but still within the athlete’s current recovery capacity.
+  - 🧠 The eight‑rep interval set showed a consistent negative pace drift, dropping from 7:43 on the first rep to 6:57 on the last—a roughly 10 % speed increase while heart rate rose steadily from 125 bpm to 149 bpm, indicating the intended progressive intensity but still within an aerobic zone (max HR 152). The session’s training effect was purely aerobic (AEROBIC_BASE 3.0, NO_ANAEROBIC_BENEFIT), matching the bridge‑phase focus on sub‑threshold/VO₂‑max work without the anaerobic stimulus that should be introduced later. With a morning readiness score of 57 (moderate) and stamina falling to 83 % by the end, the load was appreciable but not excessive for today’s training plan.
 
 ## Next Session
 - **Planned:** Mon, Nov 9 — Strength A
