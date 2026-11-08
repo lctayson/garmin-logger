@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 8.03k @ 7:18 140bpm 0.81m 169spm 276ms 7.9cm 241w
   - Readiness 57 → 48 (Focus On Sleep Patterns) · Recovery 21h 20m
-  - 🧠 The eight work reps gradually accelerated from 7:43 /km to 6:57 /km while heart rate climbed from 125 bpm to 149 bpm, staying well below your LTHR (171 bpm) and confirming the effort remained in the easy‑to‑sub‑threshold range. The session’s training effect (AEROBIC_BASE = 3.0, ANAEROBIC = 0) aligns with the modest pace and HR profile, indicating no true VO2‑max stimulus was achieved despite the interval format. Your morning readiness was “Well Rested” (score 57), and the post‑run drop to 48 reflects the acute load rather than a problem with execution. Overall, the workout was on‑target for aerobic base work but would benefit from a higher intensity interval set to generate the desired anaerobic stimulus for the upcoming HM phase.
+  - 🧠 Your eight‑rep set progressed from 7:43 /km to 6:57 /km while heart rate rose from 125 bpm to 149 bpm, so the pacing drift was modest and the physiological load increased in a controlled manner. The average rep pace of 7:18 /km aligns with the overall 7:18 /km average, confirming you stayed within your easy‑aerobic zone rather than reaching VO2‑max intensity. Stamina fell from 100 % to 83 % and the training load was 85 AU, which together explain the post‑run readiness drop from 57 to 48. Given today’s moderate morning readiness (score 57) and the modest aerobic stimulus, the session was appropriate for the bridge phase’s sub‑threshold focus.
 
 ## Next Session
 - **Planned:** Mon, Nov 9 — Strength A
