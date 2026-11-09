@@ -17,7 +17,7 @@
   - TE: Threshold (High Aerobic) · aerobic 3.7 · anaerobic 0.4
   - MS: 3.65k @ 5:29 161bpm 1.00m 181spm 244ms 8.1cm 313w
   - Readiness 59 → 38 (Find Time To Relax) · Recovery 1d 4h 48m
-  - 🧠 Because no interval‐set data were provided, the pace of the prescribed threshold reps cannot be verified; the overall average of 6:27 min/km is well slower than the sub‑threshold target (≈5:20–5:35 min/km). Nonetheless, the 150 bpm mean HR sits near the low end of the sub‑threshold zone and the training‑effect summary (aerobic 3.7, anaerobic 0.4 → “NO ANAEROBIC BENEFIT”) matches a primarily lactate‑threshold stimulus with little VO₂max load. The stamina metric fell from 100 % to 71 % and the body‑battery impact was –12, which together explain the post‑run readiness drop to 38 (the morning score of 59 was the baseline).
+  - 🧠 Without the interval‑by‑interval rep data, we can’t confirm whether the prescribed 5:20–5:35 km threshold pace was hit; the overall
 
 ## Next Session
 - **Planned:** Wed, Nov 11 — 7k EZ @ 6:45–7:20 ≤150bpm w/ strides
