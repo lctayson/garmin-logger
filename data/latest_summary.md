@@ -19,11 +19,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Readiness is “moderate‑good” (score 69, balanced HRV, low resting HR, ACWR 0.9). You’re cleared to do today’s planned **Strength A – power/hip‑extension** session; no need to cut volume or switch to recovery.  
-- **Warm‑up / Main set:** 5 min easy jog or bike + dynamic hip‑mobility drills, then 2 × 10 reps of body‑weight glute bridges, 1 × 8 reps of banded hip thrusts, followed by the prescribed load (e.g., 3 × 8 reps @ 70 % 1RM kettlebell swings, 3 × 10 reps @ 60 % 1RM single‑leg deadlifts). Keep rest intervals at 90 s between sets.  
-- **Cool‑down:** 5 min light cardio + static hip‑flexor, hamstring and glute stretches; foam‑roll calves if they feel tight.  
-- **Readiness rationale:** Sleep 7 h (score 88) and HRV ≈ baseline indicate good recovery; resting HR 58 bpm is low, suggesting systemic freshness. Load metrics (acute 559 vs chronic 580, ACWR 0.9) are within optimal range, so the strength stimulus is appropriate.  
-- **In‑session guardrails:** Watch for unusually high heart‑rate or early fatigue during the warm‑up – if HR stays > 150 bpm after the
+**Decision** – Proceed with today’s scheduled **Monday Strength A (hip‑extension/power)** session. Your readiness is “Moderate” but all sub‑metrics (sleep 7 h, HRV balanced, resting HR 58 bpm, ACWR 0.9 optimal) indicate solid recovery; no reason to downgrade or skip.  
+
+**Workout execution** – 1️⃣ Warm‑up: 5 min easy jog or bike + dynamic hip‑mobility (leg swings, walking lunges, glute bridges).  
+2️⃣ Main set (Strength A): follow the prescribed routine (e.g., hip thrusts, single‑leg deadlifts, kettlebell swings, core‑stability work) – 3 – 4 sets, 8‑12 reps each, focus on controlled power output, rest 60‑90 s between sets.  
+3️⃣ Cool‑down: 5 min light cardio + static stretching of glutes, hamstrings, hip flexors.  
+
+**Readiness rationale** – Sleep score 88 (“Good”) and 7 h duration give ample restorative time; HRV 49 ms matches your 7‑day average, confirming balanced autonomic balance. Resting HR 58 bpm is lower than typical, a sign of good cardiovascular freshness. Load metrics (acute 559,
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
