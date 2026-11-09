@@ -96,7 +96,7 @@
         ]
       },
       "lap_count": 1,
-      "ai_analysis": "The 44‑minute Strength A session delivered a very light aerobic stimulus (AEROBIC 0.2, “minor aerobic benefit”) with an average HR of 89 bpm and a low training load of 3.5, exactly what the Monday strength day is meant to provide. The body‑battery impact of –1 point and the unchanged morning readiness score of 69 (moderate, “Well Rested”) indicate the workout did not tax your recovery capacity, especially given your solid sleep score (88) and 2.9 h of recovery time. The post‑exercise readiness spike to 76 reflects a temporary boost rather than a shift in your baseline readiness, so you can approach tomorrow’s Tuesday sub‑threshold run without concern for residual fatigue.",
+      "ai_analysis": "The 44‑minute Strength A session delivered a very light cardio stimulus (average HR 89 bpm, max 114 bpm) and a modest aerobic training effect of 0.2 aerobic points, matching the low‑load purpose of Monday strength work in the bridge phase. Body‑Battery dropped by 1 point and the Garmin load metric was only 3.5, indicating the session contributed minimal systemic fatigue while still providing the planned neuromuscular stimulus. Your morning readiness was “Moderate” (score 69) with good sleep (88) but only 2.9 h of reported recovery, and the post‑exercise snapshot rose to 76 likely reflecting the afternoon nap rather than the workout itself.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
