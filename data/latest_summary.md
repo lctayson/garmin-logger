@@ -16,7 +16,7 @@
 - **Mon Strength A** — 0.0km · 44:18 · HR 89/114 max
   - TE: Aerobic Base · aerobic 0.2 · anaerobic 0
   - Readiness 69 → 76 (Energizing Nap) · Recovery 0h
-  - 🧠 The 44‑minute Strength A session delivered a very light cardio stimulus (average HR 89 bpm, max 114 bpm) and a modest aerobic training effect of 0.2 aerobic points, matching the low‑load purpose of Monday strength work in the bridge phase. Body‑Battery dropped by 1 point and the Garmin load metric was only 3.5, indicating the session contributed minimal systemic fatigue while still providing the planned neuromuscular stimulus. Your morning readiness was “Moderate” (score 69) with good sleep (88) but only 2.9 h of reported recovery, and the post‑exercise snapshot rose to 76 likely reflecting the afternoon nap rather than the workout itself.
+  - 🧠 The 44‑minute Strength A session delivered a very low aerobic stimulus (AEROBIC 0.2 TE, avg HR 89 bpm, max 114 bpm) and a modest body‑battery dip of –1, which is exactly what the plan calls for on a Monday strength day. Your morning readiness was “Moderate” (score 69) with a solid sleep score (88) and 2.9 h of recovery, so the minor fatigue indicated by the body‑battery drop is not unexpected. The later rise to a 76‑point readiness score reflects the “energizing nap” snapshot rather than any physiological benefit from the strength work itself.
 
 ## Next Session
 - **Planned:** Tue, Nov 10 — 7k as 20min continuous SUT @ 5:25–5:35 ≤168bpm
