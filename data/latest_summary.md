@@ -3,7 +3,7 @@
 ## Readiness: 59/100 (Moderate)
 > Balance Stress And Recovery
 
-- **VO₂max:** 44.9 ml/kg/min (Garmin display: 45)
+- **VO₂max:** 45 ml/kg/min (Garmin display: 45)
 - **RHR:** 57 bpm (7d avg: 58 bpm, trending down)
 - ⚠️ **HRV:** 60ms (7d avg: 49ms) · above 47–58ms
 - ⚠️ **Sleep:** 6h24 / 6h30 need (0h06 short) · score 67 · 7d avg 6h25 · 3/7 nights below need
@@ -11,36 +11,30 @@
 - ⚠️ **Limiter:** Sleep Score (50%)
 - **Also soft:** Stress History
 
-## Today's Session
-- **Planned:** Tue, Nov 10 — 7k as 20min continuous SUT @ 5:25–5:35 ≤168bpm
+## Today's Workout
+
+- **Malolos - 20min Threshold** — 7.03km · 45:19 · 6:27/km · HR 150/174 max
+  - TE: Threshold (High Aerobic) · aerobic 3.7 · anaerobic 0.4
+  - MS: 3.65k @ 5:29 161bpm 1.00m 181spm 244ms 8.1cm 313w
+  - Readiness 59 → 38 (Find Time To Relax) · Recovery 1d 4h 48m
+  - 🧠 The session delivered a solid lactate‑threshold stimulus (aerobic TE ≈ 3.7) with virtually no anaerobic contribution, matching the bridge‑phase goal of sub‑threshold work on Tuesdays. Because the workout JSON lacks a main‑set breakdown, the 6:27 /km average pace cannot be used to judge whether the prescribed 20‑minute threshold interval hit its target pace. Stamina fell from 100 % to 71 % and body‑battery dropped 12 points, while the morning readiness was moderate (59) and the post‑run snapshot fell to 38, indicating the effort was taxing but consistent with the expected load (≈152 AU).
+
+## Next Session
+- **Planned:** Wed, Nov 11 — 7k EZ @ 6:45–7:20 ≤150bpm w/ strides
+sleep ≥6.5 h, RHR ≤58, legs normal, else 6k
 - **Recommendation:** Proceed as planned
 - **Reason:** low 7-day sleep average (6.4h).
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
-### 🧠 AI Coaching Guidance
-
-**Decision** – Proceed with today’s planned Tuesday sub‑threshold (SUT) interval session. Your overall load is optimal, HRV and resting HR are solid, and the only mild flag is a modest sleep score.
-
-**Workout execution** – Warm‑up: 12‑15 min easy run (≈7:30 km⁻¹) + 4 × 100 m strides. Main set: 3 × 8 min sub‑threshold effort, target pace ~5:25 km⁻¹ (HR ≈ 158‑168 bpm, RPE ≈ 7), with 2 min easy jog between reps. Cool‑down: 10 min easy jog back to recovery HR.
-
-**Readiness rationale** – Sleep = 6.4 h (moderate score) but HRV is balanced (60 ms vs 49 ms 7‑day avg) and resting HR is low (
-
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
-
-## Latest Activity
-
-_Most recent activity (2026-11-09):_
-- **Mon Strength A** — 0.0km · 44:18 · HR 89/114 max
-  - TE: Aerobic Base · aerobic 0.2 · anaerobic 0
-  - 🧠 The 44‑minute Strength A session delivered a very low aerobic stimulus (AEROBIC 0.2 TE, avg HR 89 bpm, max 114 bpm) and a modest body‑battery dip of –1, which is exactly what the plan calls for on a Monday strength day. Your morning readiness was “Moderate” (score 69) with a solid sleep score (88) and 2.9 h of recovery, so the minor fatigue indicated by the body‑battery drop is not unexpected. The later rise to a 76‑point readiness score reflects the “energizing nap” snapshot rather than any physiological benefit from the strength work itself.
 
 ## Load & Trends
 
-- **ACWR:** 0.8 (Optimal) — acute 456 / chronic 561 (chronic range 448.8–841.5)
-- **7-day volume:** 37.13km vs 28-day avg 37.4km (-1%)
-- **Running tolerance:** 59.9% (Medium) — 37.1km of 64.6km weekly cap, acute impact load 38.7
+- **ACWR:** 1.0 (Optimal) — acute 650 / chronic 596 (chronic range 476.8–894)
+- **7-day volume:** 44.16km vs 28-day avg 39.1km (+13%)
+- **Running tolerance:** 74.6% (Medium) — 44.2km of 64.6km weekly cap, acute impact load 48.2
 - **Aerobic Low:** 996.7 (target 816–1360 — in range)
-- **Aerobic High:** 1127.9 (target 816–1360 — in range)
+- **Aerobic High:** 1274.7 (target 816–1360 — in range)
 - ⚠️ **Anaerobic:** 47.3 (target 108–435 — -61 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
 - **Sleep (7d avg):** 6h25, 3/7 nights below need, trending down
@@ -57,18 +51,18 @@ _Most recent activity (2026-11-09):_
 | S | Malolos Run | 14k · 1:42:20 | 131 |
 | S | Malolos Run | 8k · 58:34 | 85 |
 | M | Strength A | 44:18 | 4 |
-| T | Rest | — | — |
+| T | 20m Thr | 7k · 45:19 | 152 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 6 | 37.14 km | 5:31:25 | 512.5 |
+| 7 | 44.17 km | 6:16:44 | 664.9 |
 
 ## Recent 4 Weeks
-_Average weekly running: 37.4 km_
+_Average weekly running: 39.1 km_
 
 | Week | Runs | Others | Load |
 |:---|---:|---:|---:|
-| Nov 4–10 | 37.13k | 66 min | 512.5 |
+| Nov 4–10 | 44.16k | 66 min | 664.9 |
 | Oct 28–Nov 3 | 33.14k | 93 min | 546.3 |
 | Oct 21–27 | 39.14k | 58 min | 596.3 |
 | Oct 14–20 | 40.13k | 25 min | 580.6 |
