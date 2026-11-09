@@ -19,7 +19,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Readiness is “Moderate” (score 69) but all underlying factors (7 h sleep, sleep‑score 88, HRV balanced, resting HR 58, ACWR 0.9) are solid. Proceed with today’s planned **Strength A (hip‑extension / power)** session; no need to
+**Decision** – Proceed with today’s planned **Strength A (hip‑extension power)** session; readiness factors are solid (good sleep, balanced HRV, low resting HR, optimal ACWR).
+
+**Workout execution** –  
+- **Warm‑up (5‑10 min):** light jog or jump‑rope (
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
