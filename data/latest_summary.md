@@ -19,9 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Proceed with today’s planned **Monday Strength‑A (power/hip‑extension) session** – the readiness profile is overall solid (good sleep, balanced HRV, low resting HR, optimal ACWR). No reason to downgrade to recovery or modify the workout intensity.  
-- **Execution cue (as written in the plan):** Warm‑up with 5 min easy jog or dynamic mobility (leg swings, hip circles). Then perform the prescribed Strength‑A circuit (e.g., hip thrusts, single‑leg dead‑lifts, glute bridges, core‑stability work) at the load/reps listed in the training‑plan sheet. Finish with 5 min light stretching or foam‑roll to cool‑down.  
-- **Readiness rationale:** Sleep 7 h, sleep‑score 88 (>85 = good); HRV ≈ balance (49 ms vs 7‑day 48 ms); resting HR 58 bpm (well below LTHR); recovery‑time 2.9 h and ACWR 0.9 (optimal). The
+- **Decision:** Readiness is “moderate‑good” (score 69, balanced HRV, low resting HR, ACWR 0.9). You’re cleared to do today’s planned **Strength A – power/hip‑extension** session; no need to cut volume or switch to recovery.  
+- **Warm‑up / Main set:** 5 min easy jog or bike + dynamic hip‑mobility drills, then 2 × 10 reps of body‑weight glute bridges, 1 × 8 reps of banded hip thrusts, followed by the prescribed load (e.g., 3 × 8 reps @ 70 % 1RM kettlebell swings, 3 × 10 reps @ 60 % 1RM single‑leg deadlifts). Keep rest intervals at 90 s between sets.  
+- **Cool‑down:** 5 min light cardio + static hip‑flexor, hamstring and glute stretches; foam‑roll calves if they feel tight.  
+- **Readiness rationale:** Sleep 7 h (score 88) and HRV ≈ baseline indicate good recovery; resting HR 58 bpm is low, suggesting systemic freshness. Load metrics (acute 559 vs chronic 580, ACWR 0.9) are within optimal range, so the strength stimulus is appropriate.  
+- **In‑session guardrails:** Watch for unusually high heart‑rate or early fatigue during the warm‑up – if HR stays > 150 bpm after the
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
