@@ -16,7 +16,7 @@
 - **Mon Strength A** — 0.0km · 44:18 · HR 89/114 max
   - TE: Aerobic Base · aerobic 0.2 · anaerobic 0
   - Readiness 69 → 76 (Energizing Nap) · Recovery 0h
-  - 🧠 The 44‑minute Strength A session delivered a very modest aerobic stimulus (AEROBIC_BASE 0.2, load 3.5, body‑battery –1) and no anaerobic load, which is exactly what the Monday strength day is meant to provide. Your morning readiness was 69 (moderate) with a solid sleep score (88) and resting HR 58, and the post‑exercise snapshot rose to 76, reflecting the light cardio demand of the workout rather than any fatigue. This low‑impact strength work fits the bridge phase’s focus on maintaining hip‑extension power without taxing your aerobic budget for the upcoming Tuesday threshold session. No red flags appear; you’re on track for today’s planned training load.
+  - 🧠 The 44‑minute Strength A session delivered a very light aerobic stimulus (AEROBIC 0.2, “minor aerobic benefit”) with an average HR of 89 bpm and a low training load of 3.5, exactly what the Monday strength day is meant to provide. The body‑battery impact of –1 point and the unchanged morning readiness score of 69 (moderate, “Well Rested”) indicate the workout did not tax your recovery capacity, especially given your solid sleep score (88) and 2.9 h of recovery time. The post‑exercise readiness spike to 76 reflects a temporary boost rather than a shift in your baseline readiness, so you can approach tomorrow’s Tuesday sub‑threshold run without concern for residual fatigue.
 
 ## Next Session
 - **Planned:** Tue, Nov 10 — 7k as 20min continuous SUT @ 5:25–5:35 ≤168bpm
