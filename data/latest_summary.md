@@ -19,10 +19,14 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned **Strength A (hip‑extension power)** session; readiness factors are solid (good sleep, balanced HRV, low resting HR, optimal ACWR).
+- **Decision**: Proceed with today’s Strength A (power/hip‑extension) session as scheduled. Your readiness score (69 – moderate) is backed by good sleep (7 h, 88 % score), balanced HRV, low resting HR (58 bpm) and optimal ACWR (0.9), so you’re not in need of extra recovery.  
 
-**Workout execution** –  
-- **Warm‑up (5‑10 min):** light jog or jump‑rope (
+- **Workout execution** (follow the plan’s exact prescription):  
+  • **Warm‑up** – 8‑10 min of dynamic mobility (leg swings, hip circles, light body‑weight squats).  
+  • **Main set** – Perform the listed hip‑extension/strength moves (e.g., hip thrusts, glute bridges, single‑leg RDLs) with the prescribed reps/sets and load; keep rest intervals as specified (usually 60‑90 s).  
+  • **Cool‑down** – 5 min of light stretching focusing on glutes, hamstrings, and lower back.  
+
+- **Readiness rationale**: Your resting HR is low, HRV is on‑track with the 7‑day average, and recovery hours are high (2.9 h). Acute load (559) is slightly below chronic (580), giving a comfortable load margin. The moderate readiness level reflects the “Well‑Rest
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
