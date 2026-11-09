@@ -19,13 +19,7 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned **Strength A (hip‑extension/power) session**. Readiness is moderate‑good (sleep 7 h, HRV balanced, resting HR 58 bpm, ACWR 0.9), so a normal strength load is appropriate.
-
-**Workout execution** – *Warm‑up*: 5 min easy jog or bike + dynamic leg swings, walking lunges, glute‑activation band walks. *Main set*: 3 × 8–10 reps of hip‑thrusts, single‑leg RDLs, and kettlebell swings at RPE 6–7; keep rest 90 s between sets. *Core/hip stability*: 2 × 30 s side‑plank + 2 × 12 bird‑dogs. *Cool‑down*: 5 min light mobility (hip flexor stretch, foam‑roll glutes).
-
-**Readiness rationale** – Sleep score 88 % and balanced HRV show good recovery; low resting HR confirms cardiovascular freshness. Load metrics (acute 559, chronic 580, ACWR 0.9) are in the optimal zone, and no stress spikes appear. Thus there’s no evidence to cut volume or shift to full recovery.
-
-**In‑session guardrails** – If your
+**Decision** – Proceed with
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
