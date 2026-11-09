@@ -17,7 +17,7 @@
   - TE: Threshold (High Aerobic) · aerobic 3.7 · anaerobic 0.4
   - MS: 3.65k @ 5:29 161bpm 1.00m 181spm 244ms 8.1cm 313w
   - Readiness 59 → 38 (Find Time To Relax) · Recovery 1d 4h 48m
-  - 🧠 The session delivered a solid lactate‑threshold stimulus (aerobic TE ≈ 3.7) with virtually no anaerobic contribution, matching the bridge‑phase goal of sub‑threshold work on Tuesdays. Because the workout JSON lacks a main‑set breakdown, the 6:27 /km average pace cannot be used to judge whether the prescribed 20‑minute threshold interval hit its target pace. Stamina fell from 100 % to 71 % and body‑battery dropped 12 points, while the morning readiness was moderate (59) and the post‑run snapshot fell to 38, indicating the effort was taxing but consistent with the expected load (≈152 AU).
+  - 🧠 The 20‑minute threshold effort produced a solid lactate‑threshold stimulus (aerobic TE ≈ 3.7) with essentially no anaerobic benefit, matching the intended sub‑threshold focus. Because the main‑set rep data weren’t supplied, the exact work‑interval pace can’t be confirmed, but the overall 6:27 /km average (well above the 5:20–5:35 /km sub‑threshold target) suggests the session was run at an easy‑to‑steady intensity rather than a true threshold effort. Stamina fell from 100 % to 71 % and the acute load jumped to 650, which explains the post‑run readiness score dropping to 38 despite a moderate morning score of 59. This fatigue profile is typical for a high‑load threshold day in the bridge phase, but future sessions should aim for a faster rep pace to secure the desired VO₂max‑level stimulus.
 
 ## Next Session
 - **Planned:** Wed, Nov 11 — 7k EZ @ 6:45–7:20 ≤150bpm w/ strides
