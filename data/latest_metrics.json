@@ -46,11 +46,36 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "**Decision** – Proceed with",
+    "snapshots": [
+      {
+        "timestamp_local": "2026-11-09T06:06:24.0",
+        "context": "AFTER_WAKEUP_RESET",
+        "score": 69,
+        "feedback": "WELL_RESTED",
+        "recovery_minutes": 171,
+        "acute_load": 559,
+        "recovery_time_change": "NO_CHANGE_SLEEP"
+      },
+      {
+        "timestamp_local": "2026-11-09T16:00:24.0",
+        "context": "UPDATE_REALTIME_VARIABLES",
+        "score": 76,
+        "feedback": "ENERGIZING_NAP",
+        "recovery_minutes": 0,
+        "acute_load": 559,
+        "factor_overrides": {
+          "recovery_time": {
+            "percent": 100,
+            "feedback": "Very Good"
+          }
+        }
+      }
+    ],
+    "ai_analysis": "**Decision** – Proceed with today’s scheduled **Strength A (power/hip‑extension)** session; no need to downgrade or replace it.\n\n**Workout execution** – 1️⃣ **Warm‑up**: 5‑10 min light cardio (easy jog or bike) + dynamic mobility (leg swings, hip circles, glute bridges).  \n2️⃣ **Main set**: Follow your prescribed Strength A protocol (e.g., 3 × 8–10 reps of Bulgarian split‑squat, hip‑thrusts, kettlebell swings, single‑leg dead‑lift, etc.) at a challenging but controlled load; keep rest intervals 60‑90 s.  \n3️⃣ **Cool‑down**: 5 min gentle mobility + static stretching of hips, hamstrings, quads; foam‑roll any tight spots.\n\n**Readiness rationale** – - Resting HR 58 bpm (well below baseline) and balanced HRV (49 ms vs 48 ms 7‑day avg) indicate good autonomic recovery.  \n- Sleep 7 h with a score of 88",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b"
   },
   "health": {
-    "steps": 33
+    "steps": 3169
   },
   "sleep": {
     "deep_h": 1.05,
@@ -59,7 +84,7 @@
     "awake_h": 0.08,
     "baseline_h": 7.0,
     "need_h": 7.0,
-    "next_need_h": 7.0,
+    "next_need_h": 6.5,
     "feedback": "No Change No Adjustments",
     "training_feedback": "No Change",
     "sleep_history_adjustment": "No Change",
@@ -930,7 +955,7 @@
       [
         "2026-11-09",
         65,
-        0,
+        42,
         76,
         11
       ]

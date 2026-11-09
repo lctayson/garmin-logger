@@ -19,7 +19,14 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with
+**Decision** – Proceed with today’s scheduled **Strength A (power/hip‑extension)** session; no need to downgrade or replace it.
+
+**Workout execution** – 1️⃣ **Warm‑up**: 5‑10 min light cardio (easy jog or bike) + dynamic mobility (leg swings, hip circles, glute bridges).  
+2️⃣ **Main set**: Follow your prescribed Strength A protocol (e.g., 3 × 8–10 reps of Bulgarian split‑squat, hip‑thrusts, kettlebell swings, single‑leg dead‑lift, etc.) at a challenging but controlled load; keep rest intervals 60‑90 s.  
+3️⃣ **Cool‑down**: 5 min gentle mobility + static stretching of hips, hamstrings, quads; foam‑roll any tight spots.
+
+**Readiness rationale** – - Resting HR 58 bpm (well below baseline) and balanced HRV (49 ms vs 48 ms 7‑day avg) indicate good autonomic recovery.  
+- Sleep 7 h with a score of 88
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
