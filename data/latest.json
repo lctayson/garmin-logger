@@ -10,7 +10,7 @@
     "sleep_hours_including_previous_day_nap": 7.0,
     "sleep_score": 88,
     "training_status": "Productive 3",
-    "acute_load": 559,
+    "acute_load": 563,
     "chronic_load": 580,
     "acwr": 0.9,
     "vo2_max": 45.0,
@@ -54,6 +54,21 @@
           "recovery_minutes": 171,
           "acute_load": 559,
           "recovery_time_change": "NO_CHANGE_SLEEP"
+        },
+        {
+          "timestamp_local": "2026-11-09T19:23:54.0",
+          "context": "AFTER_POST_EXERCISE_RESET",
+          "score": 76,
+          "feedback": "ENERGIZING_NAP",
+          "recovery_minutes": 0,
+          "acute_load": 563,
+          "recovery_time_change": "REACHED_ZERO",
+          "factor_overrides": {
+            "recovery_time": {
+              "percent": 100,
+              "feedback": "Very Good"
+            }
+          }
         },
         {
           "timestamp_local": "2026-11-09T16:00:24.0",
@@ -104,7 +119,7 @@
       "rem": 1.02,
       "awake": 0.08
     },
-    "total_steps": 3169,
+    "total_steps": 3222,
     "naps": [
       {
         "start": "2026-11-09T06:19:22",
@@ -116,7 +131,7 @@
   "training_status": {
     "status": "Productive 3",
     "training_load": {
-      "acute_load": 559,
+      "acute_load": 563,
       "chronic_load": 580,
       "chronic_load_range": {
         "min": 464.0,
@@ -129,7 +144,7 @@
     "recovery_time_hours": 2.9,
     "load_focus": "Anaerobic Shortage",
     "monthly_load_balance": {
-      "aerobic_low": 993.2,
+      "aerobic_low": 996.7,
       "aerobic_low_target_min": 816,
       "aerobic_low_target_max": 1360,
       "aerobic_high": 1289.7,
@@ -161,10 +176,10 @@
   "training_history": {
     "7_day": {
       "total_endurance": {
-        "activity_count": 6,
+        "activity_count": 7,
         "distance_km": 45.16,
-        "duration_hours": 5.66,
-        "exercise_load": 685.5
+        "duration_hours": 6.4,
+        "exercise_load": 689.0
       },
       "sports": {
         "running": {
@@ -174,10 +189,10 @@
           "exercise_load": 681.6
         },
         "other": {
-          "activity_count": 1,
+          "activity_count": 2,
           "distance_km": 0.0,
-          "duration_hours": 0.36,
-          "exercise_load": 3.9
+          "duration_hours": 1.1,
+          "exercise_load": 7.4
         }
       }
     },
@@ -266,10 +281,10 @@
           "week_start": "2026-11-03",
           "week_end": "2026-11-09",
           "total_endurance": {
-            "activity_count": 6,
+            "activity_count": 7,
             "distance_km": 45.16,
-            "duration_hours": 5.66,
-            "exercise_load": 685.5
+            "duration_hours": 6.4,
+            "exercise_load": 689.0
           },
           "sports": {
             "running": {
@@ -279,10 +294,10 @@
               "exercise_load": 681.6
             },
             "other": {
-              "activity_count": 1,
+              "activity_count": 2,
               "distance_km": 0.0,
-              "duration_hours": 0.36,
-              "exercise_load": 3.9
+              "duration_hours": 1.1,
+              "exercise_load": 7.4
             }
           }
         }
@@ -493,14 +508,22 @@
       "sleep_score": 88,
       "vo2_max": 45.0,
       "training_status": "Productive 3",
-      "acute_load": 559,
+      "acute_load": 563,
       "chronic_load": 580,
       "acwr": 0.9,
       "acwr_status": "Optimal",
-      "activity_count": 0,
-      "total_endurance_duration_hours": 0.0,
+      "activity_count": 1,
+      "total_endurance_duration_hours": 0.74,
       "total_endurance_distance_km": 0.0,
-      "sport_volume": {}
+      "sport_volume": {
+        "other": {
+          "activity_count": 1,
+          "distance_km": 0.0,
+          "duration_hours": 0.74,
+          "exercise_load": 3.5
+        }
+      },
+      "total_exercise_load": 3.5
     }
   ],
   "trend_long_range_weekly": [
@@ -895,12 +918,12 @@
       "sleep_score": 88,
       "vo2_max": 45.0,
       "training_status": "Productive 3",
-      "acute_load": 559,
+      "acute_load": 563,
       "chronic_load": 580,
       "acwr": 0.9,
       "acwr_status": "Optimal",
-      "activity_count": 6,
-      "total_endurance_duration_hours": 5.66,
+      "activity_count": 7,
+      "total_endurance_duration_hours": 6.4,
       "total_endurance_distance_km": 45.16,
       "sport_volume": {
         "running": {
@@ -910,13 +933,13 @@
           "exercise_load": 681.7
         },
         "other": {
-          "activity_count": 1,
+          "activity_count": 2,
           "distance_km": 0.0,
-          "duration_hours": 0.36,
-          "exercise_load": 3.9
+          "duration_hours": 1.1,
+          "exercise_load": 7.4
         }
       },
-      "total_exercise_load": 685.5
+      "total_exercise_load": 689.0
     }
   ],
   "body_battery_trend": [
@@ -965,10 +988,49 @@
     {
       "date": "2026-11-09",
       "charged": 65,
-      "drained": 42,
+      "drained": 55,
       "high": 76,
       "low": 11
     }
   ],
-  "activities": []
+  "activities": [
+    {
+      "name": "Mon Strength A",
+      "activity_id": 25018092097,
+      "type": "strength_training",
+      "distance": 0.0,
+      "time": "44:18",
+      "elapsed_time": "44:18",
+      "moving_time": "16:33",
+      "avg_hr": 89.0,
+      "max_hr": 114,
+      "start_time_local": "2026-11-09T18:38:14.0",
+      "training_effect": {
+        "label": "AEROBIC_BASE",
+        "aerobic": 0.2,
+        "aerobic_message": "MINOR_AEROBIC_BENEFIT",
+        "anaerobic": 0.0,
+        "anaerobic_message": "NO_ANAEROBIC_BENEFIT"
+      },
+      "exercise_load": 3.5,
+      "body_battery_impact": -1.0,
+      "activity_splits": [
+        {
+          "lap": 1,
+          "time": "44:18",
+          "avg_hr": 89.0,
+          "max_hr": 114.0,
+          "start_hr": 78,
+          "min_hr": 73,
+          "end_hr": 97,
+          "moving_time": "16:33",
+          "elapsed_time": "44:18",
+          "calories": 153,
+          "time_seconds": 2658.33,
+          "distance": 0.0
+        }
+      ],
+      "lap_count": 1
+    }
+  ]
 }

@@ -11,39 +11,27 @@
 - ⚠️ **Limiter:** Stress History (50%)
 - **Also soft:** Sleep History
 
-## Today's Session
-- **Planned:** Mon, Nov 9 — Strength A
+## Today's Workout
+
+- **Mon Strength A** — 0.0km · 44:18 · HR 89/114 max
+  - TE: Aerobic Base · aerobic 0.2 · anaerobic 0
+  - Readiness 69 → 76 (Energizing Nap) · Recovery 0h
+  - 🧠 The 44‑minute Strength A session delivered a very modest aerobic stimulus (AEROBIC_BASE 0.2, load 3.5, body‑battery –1) and no anaerobic load, which is exactly what the Monday strength day is meant to provide. Your morning readiness was 69 (moderate) with a solid sleep score (88) and resting HR 58, and the post‑exercise snapshot rose to 76, reflecting the light cardio demand of the workout rather than any fatigue. This low‑impact strength work fits the bridge phase’s focus on maintaining hip‑extension power without taxing your aerobic budget for the upcoming Tuesday threshold session. No red flags appear; you’re on track for today’s planned training load.
+
+## Next Session
+- **Planned:** Tue, Nov 10 — 7k as 20min continuous SUT @ 5:25–5:35 ≤168bpm
 - **Recommendation:** Keep it easy
 - **Reason:** ongoing sleep debt (7-day average 6.4h), 6/7 nights below need; resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
 - **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
 
-### 🧠 AI Coaching Guidance
-
-**Decision** – Proceed with today’s scheduled **Strength A (power/hip‑extension)** session; no need to downgrade or replace it.
-
-**Workout execution** – 1️⃣ **Warm‑up**: 5‑10 min light cardio (easy jog or bike) + dynamic mobility (leg swings, hip circles, glute bridges).  
-2️⃣ **Main set**: Follow your prescribed Strength A protocol (e.g., 3 × 8–10 reps of Bulgarian split‑squat, hip‑thrusts, kettlebell swings, single‑leg dead‑lift, etc.) at a challenging but controlled load; keep rest intervals 60‑90 s.  
-3️⃣ **Cool‑down**: 5 min gentle mobility + static stretching of hips, hamstrings, quads; foam‑roll any tight spots.
-
-**Readiness rationale** – - Resting HR 58 bpm (well below baseline) and balanced HRV (49 ms vs 48 ms 7‑day avg) indicate good autonomic recovery.  
-- Sleep 7 h with a score of 88
-
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
-
-## Latest Activity
-
-_Most recent activity (2026-11-08):_
-- **Malolos Running** — 8.03km · 58:34 · 7:18/km · HR 140/152 max
-  - TE: Aerobic Base · aerobic 3 · anaerobic 0
-  - MS: 8.03k @ 7:18 140bpm 0.81m 169spm 276ms 7.9cm 241w
-  - 🧠 The eight‑rep interval set drifted from 7:43 km⁻¹ to 6:57 km⁻¹ while heart rate rose from 125 to 149 bpm, staying well below the VO2max zone (≈4:50–5:15 km⁻¹, 170–178 bpm) expected for Thursday quality work, so the session delivered only an aerobic base stimulus (AEROBIC_BASE 3.0) and no anaerobic benefit. Pace progression was smooth, with about a 6 % speed gain by the final rep, but the overall intensity missed the prescribed VO2 target. Morning readiness was moderate (score
 
 ## Load & Trends
 
-- **ACWR:** 0.9 (Optimal) — acute 559 / chronic 580 (chronic range 464–870)
+- **ACWR:** 0.9 (Optimal) — acute 563 / chronic 580 (chronic range 464–870)
 - **7-day volume:** 45.16km vs 28-day avg 39.4km (+15%)
 - **Running tolerance:** 70.1% (Medium) — 45.2km of 64.6km weekly cap, acute impact load 45.3
-- **Aerobic Low:** 993.2 (target 816–1360 — in range)
+- **Aerobic Low:** 996.7 (target 816–1360 — in range)
 - **Aerobic High:** 1289.7 (target 816–1360 — in range)
 - ⚠️ **Anaerobic:** 47.3 (target 108–435 — -61 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
@@ -61,18 +49,18 @@ _Most recent activity (2026-11-08):_
 | F | Core & | 21:40 | 4 |
 | S | Malolos Run | 14k · 1:42:20 | 131 |
 | S | Malolos Run | 8k · 58:34 | 85 |
-| M | Rest | — | — |
+| M | Strength A | 44:18 | 4 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 6 | 45.17 km | 5:39:52 | 685.5 |
+| 7 | 45.17 km | 6:24:10 | 689 |
 
 ## Recent 4 Weeks
 _Average weekly running: 39.4 km_
 
 | Week | Runs | Others | Load |
 |:---|---:|---:|---:|
-| Nov 3–9 | 45.16k | 22 min | 685.5 |
+| Nov 3–9 | 45.16k | 66 min | 689 |
 | Oct 27–Nov 2 | 34.14k | 93 min | 574.5 |
 | Oct 20–26 | 37.14k | 58 min | 544.6 |
 | Oct 13–19 | 41.13k | 25 min | 600.5 |
