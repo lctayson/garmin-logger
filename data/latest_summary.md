@@ -19,11 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled sub‑threshold (Tuesday) session, but keep the volume flexible; if you feel unusually fatigued early, trim the interval length or pace a step back.
+**Decision** – Proceed with today’s planned Tuesday sub‑threshold (SUT) interval session. Your overall load is optimal, HRV and resting HR are solid, and the only mild flag is a modest sleep score.
 
-**Workout execution** –   
-- **Warm‑up:** 12 min easy jog (zone 6, ~6:40–7:15 km) + 4 × 100 m strides, gradual build‑up.  
-- **Main set:** 3 × 8 min sub‑threshold intervals at ~5:30 km (HR ≈ 158‑168 bpm, RPE
+**Workout execution** – Warm‑up: 12‑15 min easy run (≈7:30 km⁻¹) + 4 × 100 m strides. Main set: 3 × 8 min sub‑threshold effort, target pace ~5:25 km⁻¹ (HR ≈ 158‑168 bpm, RPE ≈ 7), with 2 min easy jog between reps. Cool‑down: 10 min easy jog back to recovery HR.
+
+**Readiness rationale** – Sleep = 6.4 h (moderate score) but HRV is balanced (60 ms vs 49 ms 7‑day avg) and resting HR is low (
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
