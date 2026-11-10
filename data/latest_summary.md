@@ -20,13 +20,9 @@ sleep ≥6.5 h, RHR ≤58, legs normal, else 6k
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Wednesday workout (easy run + strides).  
+**Decision** – Proceed with today’s planned Wednesday easy‑run + strides. All readiness markers (low resting HR, balanced HRV, good sleep & recovery, ACWR 0.9) indicate you’re well‑recovered; the “moderate” score is offset by the strong individual factors.
 
-**Workout execution** – Warm‑up: 10‑15 min easy jog in zone 2 (≈6:40‑7:15 /km) + 4‑5 dynamic drills. Main set: 45‑60 min steady easy run at the same zone (keep HR ≈145‑155 bpm). Strides: 6 × 100 m strides, 20‑30 s jog recovery between each. Cool‑down: 5‑10 min easy jog + light stretch.  
-
-**Readiness rationale** – Sleep was a bit short (6.2 h) but sleep‑score 85, HRV 55 ms (balanced, 100 % of baseline), and resting HR 57 bpm all indicate good recovery. Acute load (539) vs chronic (578) gives an ACWR of 0.9 (optimal), and overall readiness score 70 (moderate) with “Well Rested” feedback – no red flags to cut today’s easy effort.  
-
-**In‑session guardrails** – If HR climbs >165
+**Workout execution** – Warm‑up: 10 min easy jog (≈7:30 km⁻¹) + 3
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
