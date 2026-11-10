@@ -17,7 +17,7 @@
   - TE: Threshold (High Aerobic) · aerobic 3.7 · anaerobic 0.4
   - MS: 3.65k @ 5:29 161bpm 1.00m 181spm 244ms 8.1cm 313w
   - Readiness 59 → 38 (Find Time To Relax) · Recovery 1d 4h 48m
-  - 🧠 The 20‑minute work interval was executed at a 5:29 /km pace with an average HR of 161 bpm, placing it squarely within the prescribed sub‑threshold zone (5:20‑5:35 /km, 158‑168 bpm) for this bridge phase. The training‑effect output (“IMPROVING_LACTATE_THRESHOLD” with aerobic 3.7) confirms that the stimulus was appropriate, while the negligible anaerobic score aligns with the session’s intended intensity. Although stamina fell to 71 % by the end, your morning readiness score of 59 (moderate) suggests you had adequate capacity for the workout, and the post‑run readiness dip reflects normal acute fatigue rather than a missed target.
+  - 🧠 The 20‑minute threshold rep was run at 5:29 /km with an average HR of 161 bpm, landing solidly inside the prescribed sub‑threshold/threshold zone (5:20‑5:35 /km, 158‑168 bpm). The training‑effect score of 3.7 aerobic and “NO ANAEROBIC BENEFIT” matches the session’s purpose—delivering a strong lactate‑threshold stimulus without the intended VO₂max load. Stamina fell from 100 % to 71 % during the block, which is typical for a hard 20‑minute effort and not alarming given the moderate (59) morning readiness.
 
 ## Next Session
 - **Planned:** Wed, Nov 11 — 7k EZ @ 6:45–7:20 ≤150bpm w/ strides
