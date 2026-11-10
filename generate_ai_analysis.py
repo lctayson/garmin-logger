@@ -66,8 +66,9 @@ MAX_OUTPUT_TOKENS = 600
 SYSTEM_PREFIX = """You are Onin's endurance running coach. Write a short, specific analysis of a single workout, grounded in the actual data. Avoid generic praise, canned templates, and manufactured concerns. Write 2–4 complete sentences; never end mid-sentence.
 
 Workout-analysis rules:
-- For interval sessions, assess execution from the actual work reps in the supplied main_set data, not from whole-activity average pace. Overall pace includes warm-up, recoveries, and cooldown.
-- Compare rep pace with a prescribed target only when that target is explicitly supported by the workout prescription or durable coaching context. If rep data is missing, say pace execution cannot be verified; do not infer a miss from overall average pace.
+- For any structured workout, assess the prescribed work block(s) from supplied main_set data, never from whole-activity average pace or HR. Whole-activity averages include warm-up, strides, recoveries, and cooldown and are context only; they must not be compared with work-block targets.
+- A continuous work block can be a valid main_set even when it is a single split (for example, one 20-minute threshold rep). Do not require two or more reps to recognize it.
+- Compare the main-set pace/HR with a prescribed target only when that target is explicitly supported by the workout prescription or durable coaching context. If main-set data is missing, say execution cannot be verified; do not infer a miss from overall averages.
 - interval_drift.pace_ef_drift_pct is a change in pace/efficiency across reps, not the percentage by which the rep pace missed its target. Interpret it alongside rep paces and HR/power changes; do not conflate the measures.
 - Do not claim the workout's cardiovascular load came mainly from HR spikes, or attribute drift to heat/fatigue, unless the supplied evidence supports it.
 - Treat readiness_that_day as the morning readiness score, not a post-run readiness snapshot.
@@ -249,7 +250,9 @@ def _format_clock_pace(seconds):
 
 
 def _main_set_summary(activity):
-    """Extract the largest-duration group of work splits without copying all laps into the prompt."""
+    """Extract the principal work block, excluding warm-up, strides, recoveries,
+    and cooldown. A single continuous work split is valid (e.g. 20-minute
+    threshold); multiple reps are not required."""
     splits = activity.get("splits")
     if not isinstance(splits, dict):
         return None
@@ -260,31 +263,34 @@ def _main_set_summary(activity):
     if not all(name in col for name in ("step_type", "time", "avg_pace")):
         return None
 
+    def cell(row, name):
+        idx = col.get(name)
+        return row[idx] if idx is not None and idx < len(row) else None
+
     active = [
         row for row in rows
         if isinstance(row, list)
         and col["step_type"] < len(row)
         and str(row[col["step_type"]]).upper() in ("ACTIVE", "INTERVAL")
     ]
-    if len(active) < 2:
+    if not active:
         return None
-
-    def cell(row, name):
-        idx = col.get(name)
-        return row[idx] if idx is not None and idx < len(row) else None
 
     def duration(row):
         return _parse_clock_seconds(cell(row, "time")) or 0
 
+    # Prefer Garmin's workout step index: it separates short strides from the
+    # actual continuous/interval work even though both are marked ACTIVE.
     step_col = col.get("workout_step_index")
     groups = {}
     if step_col is not None:
         for row in active:
-            groups.setdefault(cell(row, "workout_step_index"), []).append(row)
-    if len(groups) <= 1:
-        # Some Garmin exports omit step indexes; separate long work reps from
-        # short strides using duration, matching the summary renderer's rule.
-        groups = {}
+            key = cell(row, "workout_step_index")
+            if key is not None:
+                groups.setdefault(key, []).append(row)
+
+    # If indexes are absent, group longer work reps separately from strides.
+    if not groups:
         for row in active:
             key = "long" if duration(row) >= 60 else "short"
             groups.setdefault(key, []).append(row)
@@ -296,22 +302,27 @@ def _main_set_summary(activity):
     for row in work_rows:
         pace = cell(row, "avg_pace")
         pace_seconds = _parse_clock_seconds(pace)
-        if pace_seconds is None or duration(row) <= 0:
+        rep_duration = duration(row)
+        if pace_seconds is None or rep_duration <= 0:
             continue
         rep = {"duration": cell(row, "time"), "pace": pace}
         hr = cell(row, "avg_hr")
         if hr is not None:
             rep["avg_hr"] = hr
-        reps.append((pace_seconds, rep))
-    if len(reps) < 2:
+        reps.append((pace_seconds, rep, rep_duration))
+    if not reps:
         return None
 
     pace_seconds = [item[0] for item in reps]
     durations = [item[1]["duration"] for item in reps]
+    total_seconds = sum(item[2] for item in reps)
     result = {
         "work_reps": len(reps),
+        "total_work_duration": _format_clock_pace(total_seconds),
         "rep_paces": [item[1]["pace"] for item in reps],
-        "average_rep_pace": _format_clock_pace(sum(pace_seconds) / len(pace_seconds)),
+        "average_rep_pace": _format_clock_pace(
+            sum(item[0] * item[2] for item in reps) / total_seconds
+        ),
         "pace_range": [
             _format_clock_pace(min(pace_seconds)),
             _format_clock_pace(max(pace_seconds)),
@@ -321,8 +332,10 @@ def _main_set_summary(activity):
         result["rep_duration"] = durations[0]
     if all("avg_hr" in item[1] for item in reps):
         result["rep_avg_hr"] = [item[1]["avg_hr"] for item in reps]
+        result["time_weighted_avg_hr"] = round(
+            sum(float(item[1]["avg_hr"]) * item[2] for item in reps) / total_seconds
+        )
     return result
-
 
 def _build_prompt(activity, metrics):
     fields = (
