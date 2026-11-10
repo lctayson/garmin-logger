@@ -67,7 +67,7 @@ AI_ANALYSIS_VERSION = 2
 SYSTEM_PREFIX = """You are Onin's endurance running coach. Write a short, specific analysis of a single workout, grounded in the actual data. Avoid generic praise, canned templates, and manufactured concerns. Write 2–4 complete sentences; never end mid-sentence.
 
 Workout-analysis rules:
-- For any structured workout, assess the prescribed work block(s) from supplied main_set data, never from whole-activity average pace or HR. Whole-activity averages include warm-up, strides, recoveries, and cooldown and are context only; they must not be compared with work-block targets.
+- For any structured workout, assess the prescribed work block(s) from supplied main_set data, not from whole-activity average pace or HR. Whole-activity averages include warm-up, strides, recoveries, and cooldown and are context only; they must not be compared with work-block targets.
 - A continuous work block can be a valid main_set even when it is a single split (for example, one 20-minute threshold rep). Do not require two or more reps to recognize it.
 - Compare the main-set pace/HR with a prescribed target only when that target is explicitly supported by the workout prescription or durable coaching context. If main-set data is missing, say execution cannot be verified; do not infer a miss from overall averages.
 - interval_drift.pace_ef_drift_pct is a change in pace/efficiency across reps, not the percentage by which the rep pace missed its target. Interpret it alongside rep paces and HR/power changes; do not conflate the measures.
@@ -137,7 +137,7 @@ def _fetch_published_training_plan(sheet_url: str = TRAINING_PLAN_URL, date_str:
         target = datetime.date.fromisoformat(date_str)
         # Keep only the week row whose date/range contains the requested date.
         selected = []
-        month_pattern = r"(?i)\\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\\.?\\s+(\\d{1,2})(?:,?\\s*(\\d{4}))?"
+        month_pattern = r"(?i)\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2})(?:,?\s*(\d{4}))?"
         for row in rows[1:]:
             searchable = " ".join(row[:4])
             dates = []
@@ -148,7 +148,7 @@ def _fetch_published_training_plan(sheet_url: str = TRAINING_PLAN_URL, date_str:
                     dates.append(datetime.date(year, month, int(match.group(2))))
                 except ValueError:
                     pass
-            for match in re.finditer(r"\\b20\\d{2}-\\d{2}-\\d{2}\\b", searchable):
+            for match in re.finditer(r"\b20\d{2}-\d{2}-\d{2}\b", searchable):
                 try:
                     dates.append(datetime.date.fromisoformat(match.group(0)))
                 except ValueError:
@@ -199,7 +199,7 @@ def _compact_context(context_text: str, date_str: str) -> str:
             live_plan = ""
         pieces = [durable]
         if live_plan:
-            pieces.append("# Relevant training-plan row\n" + live_plan)
+            pieces.append("# Live BHM 2027 training plan — relevant row\n" + (plan.splitlines()[0] if plan.splitlines() else "Source of truth: the updated BHM 2027 Plan spreadsheet.") + "\n\n" + live_plan)
         return "\n\n".join(pieces)
 
     target_date = datetime.date.fromisoformat(date_str)
