@@ -17,7 +17,7 @@
   - TE: Threshold (High Aerobic) · aerobic 3.7 · anaerobic 0.4
   - MS: 3.65k @ 5:29 161bpm 1.00m 181spm 244ms 8.1cm 313w
   - Readiness 59 → 38 (Find Time To Relax) · Recovery 1d 4h 48m
-  - 🧠 The 20‑minute threshold run averaged 6:27 /km (150 bpm) and finished with stamina falling to 71 %, indicating the effort stayed well within the easy–steady HR zone rather than the sub‑threshold range (≈158‑168 bpm, 5:20‑5:35 /km) prescribed for this phase. Because the activity log lacks a detailed main‑set breakdown, we cannot verify the exact pacing of the intended threshold reps, but the overall metrics suggest the stimulus was below the intended intensity. Morning readiness was moderate (score 59), and the post‑exercise snapshot dropped to 38, which is expected after a fatigue‑inducing session but should not be read as a cause‑and‑effect relationship. Overall, the workout delivered modest aerobic benefit (LACTATE_THRESHOLD 3.7) with minimal anaerobic load, aligning with the bridge phase’s focus on sub‑threshold volume rather than VO2max stimulus.
+  - 🧠 Because the activity JSON does not include a main_set with interval repetitions, the actual work‑rep paces cannot be verified, so we cannot confirm whether the prescribed threshold pace (≈5:20–5:35 /km) was achieved. The session still delivered a solid aerobic threshold stimulus (aerobic 3.7, “IMPROVING_LACTATE_THRESHOLD”) with minimal anaerobic benefit (0.4, “NO_ANAEROBIC_BENEFIT”), matching the modest average HR of 150 bpm and a max of 174
 
 ## Next Session
 - **Planned:** Wed, Nov 11 — 7k EZ @ 6:45–7:20 ≤150bpm w/ strides
