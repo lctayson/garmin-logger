@@ -20,18 +20,15 @@ sleep ≥6.5 h, RHR ≤58, legs normal, else 6k
 
 ### 🧠 AI Coaching Guidance
 
-**Decision – Go ahead:** Your readiness score is “Moderate – Well Rested,” HRV is balanced (55 ms, above your 7‑day avg), resting HR is low (57 bpm) and ACWR is optimal (0.9).  No red flags; today’s easy‑run day fits the current state.
+**Decision** – Proceed with today’s scheduled Wednesday session (easy run + strides). The readiness profile is “moderate” but all sub‑components (HRV balanced, resting HR low, ACWR optimal, recovery > 90 %) are solid; no red flag demands a recovery‑only day.
 
-**Workout – as per plan:**  
-- **Warm‑up:** 10 min easy jog (≈7:30 /km, HR ≈ 145–150 bpm).  
-- **Main set:** 40–45 min steady easy run (zone 6, 6:40–7:15 /km, HR ≈ 145–155 bpm).  
-- **Strides:** 6 × 100 m strides, 20‑sec jog back, focus on relaxed form.  
-- **Cool‑down:** 5 min very easy jog + light stretch.
+**Workout execution (as per plan)**  
+- **Warm‑up**: 8‑10 min easy jog (stay ≤ 150 bpm).  
+- **Main set**: 5‑7 km at easy aerobic pace (≈ 6:40‑7:15 /km, HR ≈ 145‑155 bpm).  
+- **Strides**: 5‑6 × 100 m strides, jog‑back recovery; aim for ~5:00 /km effort, focus on relaxed form.  
+- **Cool‑down**: 5 min light jog + brief stretching.
 
-**Readiness rationale:** Sleep was a bit short (6.2 h) but sleep‑score is solid (85) and recovery‑time is 91 % – enough to cover the modest volume.  HRV is in the “very good” band and resting HR is lower than usual, indicating good parasympathetic recovery.  Load balance (acute 539 vs chronic 578, ACWR 0.9) shows you’re not accumulating excess stress.
-
-**In‑session guardrails:** - Keep HR ≤ 155 bpm; if it spikes early or you feel unusually heavy, trim the run by 10 min.  
-- Watch for any sudden fatigue, calf tightness, or
+**Readiness rationale** – Sleep was a bit short (6.2 h) but sleep‑score 85 and recovery‑hours 5.5 keep you in the “well‑rested” band. HRV is
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
