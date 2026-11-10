@@ -62,6 +62,7 @@ PROVIDER_CONFIGS = {
 }
 
 MAX_OUTPUT_TOKENS = 600
+AI_ANALYSIS_VERSION = 2
 
 SYSTEM_PREFIX = """You are Onin's endurance running coach. Write a short, specific analysis of a single workout, grounded in the actual data. Avoid generic praise, canned templates, and manufactured concerns. Write 2–4 complete sentences; never end mid-sentence.
 
@@ -574,7 +575,7 @@ def _run_readiness_mode(args, model, context_text, metrics, metrics_path):
         return
 
     readiness = metrics["readiness"]
-    if readiness.get("ai_analysis") and not args.force:
+    if readiness.get("ai_analysis") and readiness.get("ai_analysis_version") == AI_ANALYSIS_VERSION and not args.force:
         print("[generate_ai_analysis] Readiness analysis already set for this date -- skipping (use --force to regenerate).", file=sys.stderr)
         return
 
@@ -593,6 +594,7 @@ def _run_readiness_mode(args, model, context_text, metrics, metrics_path):
 
     readiness["ai_analysis"] = analysis
     readiness["ai_analysis_provider"] = f"{args.provider}:{model}"
+    readiness["ai_analysis_version"] = AI_ANALYSIS_VERSION
     print(f"[generate_ai_analysis] Generated readiness-based analysis via {args.provider} (no activity logged yet).", file=sys.stderr)
 
     with open(metrics_path, "w", encoding="utf-8") as f:
@@ -605,6 +607,7 @@ def _run_readiness_mode(args, model, context_text, metrics, metrics_path):
         if isinstance(latest_metrics, dict) and latest_metrics.get("date") == args.date:
             latest_metrics.setdefault("readiness", {})["ai_analysis"] = analysis
             latest_metrics["readiness"]["ai_analysis_provider"] = f"{args.provider}:{model}"
+            latest_metrics["readiness"]["ai_analysis_version"] = AI_ANALYSIS_VERSION
             with open(latest_metrics_path, "w", encoding="utf-8") as f:
                 json.dump(latest_metrics, f, indent=2, ensure_ascii=False)
                 f.write("\n")
@@ -682,7 +685,7 @@ def main():
     for activity in activities:
         if not isinstance(activity, dict):
             continue
-        if activity.get("ai_analysis") and not args.force:
+        if activity.get("ai_analysis") and activity.get("ai_analysis_version") == AI_ANALYSIS_VERSION and not args.force:
             continue
         try:
             analysis = generate_for_activity(args.provider, model, context_text, activity, metrics)
