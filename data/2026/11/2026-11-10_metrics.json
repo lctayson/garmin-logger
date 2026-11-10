@@ -39,6 +39,18 @@
         "recovery_time_change": "REACHED_ZERO"
       },
       {
+        "timestamp_local": "2026-11-10T16:00:24.0",
+        "context": "UPDATE_REALTIME_VARIABLES",
+        "score": 50,
+        "feedback": "BOOSTED_BY_NAPPING",
+        "recovery_minutes": 1116,
+        "acute_load": 650,
+        "factor_overrides": {
+          "recovery_time": {"percent": 70, "feedback": "Good"},
+          "acwr": {"percent": 87, "feedback": "Good"}
+        }
+      },
+      {
         "timestamp_local": "2026-11-10T07:07:27.0",
         "context": "AFTER_POST_EXERCISE_RESET",
         "score": 38,
@@ -53,7 +65,7 @@
       }
     ]
   },
-  "health": {"steps": 9541},
+  "health": {"steps": 10152},
   "sleep": {
     "deep_h": 0.97,
     "light_h": 5.17,
@@ -61,7 +73,7 @@
     "awake_h": 0.1,
     "baseline_h": 7.0,
     "need_h": 6.5,
-    "next_need_h": 7.0,
+    "next_need_h": 6.5,
     "feedback": "Decreased",
     "training_feedback": "Chronic",
     "sleep_history_adjustment": "No Change",
@@ -273,7 +285,7 @@
     ["2026-11-07", 54, 63, 80, 5],
     ["2026-11-08", 63, 57, 62, 5],
     ["2026-11-09", 79, 64, 76, 11],
-    ["2026-11-10", 66, 22, 92, 26]
+    ["2026-11-10", 66, 42, 92, 26]
   ]
   },
   "units": {

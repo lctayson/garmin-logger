@@ -3,7 +3,7 @@
 ## Readiness: 59/100 (Moderate)
 > Balance Stress And Recovery
 
-- **VO₂max:** 45 ml/kg/min (Garmin display: 45)
+- **VO₂max:** 45 ml/kg/min (Garmin precise)
 - **RHR:** 57 bpm (7d avg: 58 bpm, trending down)
 - ⚠️ **HRV:** 60ms (7d avg: 49ms) · above 47–58ms
 - ⚠️ **Sleep:** 6h24 / 6h30 need (0h06 short) · score 67 · 7d avg 6h25 · 3/7 nights below need
@@ -17,7 +17,7 @@
   - TE: Threshold (High Aerobic) · aerobic 3.7 · anaerobic 0.4
   - MS: 3.65k @ 5:29 161bpm 1.00m 181spm 244ms 8.1cm 313w
   - Readiness 59 → 38 (Find Time To Relax) · Recovery 1d 4h 48m
-  - 🧠 The 20-minute main set averaged 5:29/km at 161 bpm, squarely within the prescribed sub-threshold pace (5:20–5:35/km) and HR (158–168 bpm) ranges. The 6:27/km and 150 bpm whole-activity averages include the 10-minute warm-up, short strides and recoveries, and 9:49 cooldown, so they do not indicate that the work block was too easy; Garmin also classified the session as lactate-threshold with an aerobic training effect of 3.7. The main set therefore delivered the intended threshold stimulus; there is no reason to chase faster pace or higher HR on the basis of the whole-run averages.
+  - 🧠 The 20‑minute work block held a steady 5:29 /km with a time‑weighted HR of 161 bpm, landing solidly inside the prescribed sub‑threshold zone (5:20‑5:35 /km, 158‑168 bpm) and earning a “Lactate Threshold” training effect. The stamina metric fell to 71 % by the end of the rep, reflecting a typical fatigue cost for a single threshold interval in the bridge phase. Your morning readiness was “Moderate” (score 59), but the post‑run snapshot dropped to 38, which is expected after a hard threshold effort and does not imply a pre‑run readiness issue. Overall, the session hit the intended intensity and provided the desired threshold stimulus without any anaerobic overload.
 
 ## Next Session
 - **Planned:** Wed, Nov 11 — 7k EZ @ 6:45–7:20 ≤150bpm w/ strides
@@ -62,7 +62,7 @@ _Average weekly running: 39.1 km_
 
 | Week | Runs | Others | Load |
 |:---|---:|---:|---:|
-| Nov 4–10 | 44.16k | 66 min | 664.9 |
-| Oct 28–Nov 3 | 33.14k | 93 min | 546.3 |
-| Oct 21–27 | 39.14k | 58 min | 596.3 |
-| Oct 14–20 | 40.13k | 25 min | 580.6 |
+| Nov 4–10 | 44.16 km | 66 min | 664.9 |
+| Oct 28–Nov 3 | 33.14 km | 93 min | 546.3 |
+| Oct 21–27 | 39.14 km | 58 min | 596.3 |
+| Oct 14–20 | 40.13 km | 25 min | 580.6 |
