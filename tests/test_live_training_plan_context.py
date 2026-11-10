@@ -19,7 +19,7 @@ def test_compact_context_includes_live_sheet_plan(monkeypatch):
     monkeypatch.setattr(
         generate_ai_analysis,
         "_fetch_published_training_plan",
-        lambda url: "| Week | Monday | Tuesday |\n| --- | --- | --- |\n| W4 | Strength | SUT 3x8min |",
+        lambda url, date_str=None: "| Week | Monday | Tuesday |\n| --- | --- | --- |\n| W4 | Strength | SUT 3x8min |",
     )
     context = """Coaching notes.
 
