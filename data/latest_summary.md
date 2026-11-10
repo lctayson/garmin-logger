@@ -17,7 +17,7 @@
   - TE: Threshold (High Aerobic) · aerobic 3.7 · anaerobic 0.4
   - MS: 3.65k @ 5:29 161bpm 1.00m 181spm 244ms 8.1cm 313w
   - Readiness 59 → 38 (Find Time To Relax) · Recovery 1d 4h 48m
-  - 🧠 Because the activity JSON does not include a main_set with interval repetitions, the actual work‑rep paces cannot be verified, so we cannot confirm whether the prescribed threshold pace (≈5:20–5:35 /km) was achieved. The session still delivered a solid aerobic threshold stimulus (aerobic 3.7, “IMPROVING_LACTATE_THRESHOLD”) with minimal anaerobic benefit (0.4, “NO_ANAEROBIC_BENEFIT”), matching the modest average HR of 150 bpm and a max of 174
+  - 🧠 The 20‑minute “threshold” run came out at a 6:27 /km average pace with a mean HR of 150 bpm, which sits in the easy aerobic zone rather than the prescribed sub‑threshold range of ~5:20‑5:35 /km (HR ≈ 158‑168 bpm), so the intensity fell short of the intended threshold stimulus. The training effect reflects that, showing a solid aerobic benefit (3.7) but virtually no anaerobic impact (0.4 → “NO_ANAEROBIC_BENEFIT”). Stamina dropped from 100 % to 71 % and the acute load of 152 points pushed the post‑exercise readiness score down to 38, confirming a noticeable fatigue cost from the session. With a morning readiness of 59 (moderate), the dip is expected, but future threshold days should aim for the faster pace/HR range to secure the needed sub‑threshold load for the upcoming half‑marathon phase.
 
 ## Next Session
 - **Planned:** Wed, Nov 11 — 7k EZ @ 6:45–7:20 ≤150bpm w/ strides
