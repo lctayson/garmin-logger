@@ -17,7 +17,7 @@
   - TE: Threshold (High Aerobic) · aerobic 3.7 · anaerobic 0.4
   - MS: 3.65k @ 5:29 161bpm 1.00m 181spm 244ms 8.1cm 313w
   - Readiness 59 → 38 (Find Time To Relax) · Recovery 1d 4h 48m
-  - 🧠 The 45‑minute, 7.0‑km effort averaged 6:27 /km and 150 bpm, which is well below the sub‑threshold target range of ~5:20–5:35 /km and 158–168 bpm, so the session delivered primarily aerobic stimulus (training‑effect aerobic 3.7, anaerobic 0.4) rather than the intended threshold load. The 29‑point drop in stamina (100 → 71) and a –12 body‑battery impact reflect the cumulative fatigue from the longer duration, even though the intensity was modest. Morning readiness was moderate (score 59), and the post‑run dip to 38 aligns with the observed load (152 AU) and stamina loss, but does not indicate an acute recovery issue beyond the expected cost of the workout. For the bridge phase, you’ll want to bring the pace and HR up into the true sub‑threshold zone on these Thursday quality days to ensure the required lactate‑threshold stimulus.
+  - 🧠 The 20-minute main set averaged 5:29/km at 161 bpm, squarely within the prescribed sub-threshold pace (5:20–5:35/km) and HR (158–168 bpm) ranges. The 6:27/km and 150 bpm whole-activity averages include the 10-minute warm-up, short strides and recoveries, and 9:49 cooldown, so they do not indicate that the work block was too easy; Garmin also classified the session as lactate-threshold with an aerobic training effect of 3.7. The main set therefore delivered the intended threshold stimulus; there is no reason to chase faster pace or higher HR on the basis of the whole-run averages.
 
 ## Next Session
 - **Planned:** Wed, Nov 11 — 7k EZ @ 6:45–7:20 ≤150bpm w/ strides
