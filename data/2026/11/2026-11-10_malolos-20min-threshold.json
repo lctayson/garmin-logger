@@ -443,8 +443,8 @@
         ]
       },
       "lap_count": 9,
-      "ai_analysis": "Without the interval‑by‑interval rep data, we can’t confirm whether the prescribed 5:20–5:35 km threshold pace was hit; the overall",
-      "ai_analysis_provider": "groq:openai/gpt-oss-120b"
+      "ai_analysis": "Because rep-level splits are missing from the data, specific pace execution across the 20-minute threshold block cannot be directly verified against the 5:15–5:30/km target. However, reaching a peak heart rate of 174 bpm alongside a 3.7 aerobic Training Effect confirms you spent meaningful time working at and slightly above your 171 bpm lactate threshold. Your performance condition steadily climbed to +4 during the run despite starting off a modest 59 morning readiness score, signaling strong physiological responsiveness throughout the effort.",
+      "ai_analysis_provider": "gemini:gemini-3.8-flash"
     }
   ]
 }

@@ -17,7 +17,7 @@
   - TE: Threshold (High Aerobic) · aerobic 3.7 · anaerobic 0.4
   - MS: 3.65k @ 5:29 161bpm 1.00m 181spm 244ms 8.1cm 313w
   - Readiness 59 → 38 (Find Time To Relax) · Recovery 1d 4h 48m
-  - 🧠 Without the interval‑by‑interval rep data, we can’t confirm whether the prescribed 5:20–5:35 km threshold pace was hit; the overall
+  - 🧠 Because rep-level splits are missing from the data, specific pace execution across the 20-minute threshold block cannot be directly verified against the 5:15–5:30/km target. However, reaching a peak heart rate of 174 bpm alongside a 3.7 aerobic Training Effect confirms you spent meaningful time working at and slightly above your 171 bpm lactate threshold. Your performance condition steadily climbed to +4 during the run despite starting off a modest 59 morning readiness score, signaling strong physiological responsiveness throughout the effort.
 
 ## Next Session
 - **Planned:** Wed, Nov 11 — 7k EZ @ 6:45–7:20 ≤150bpm w/ strides
