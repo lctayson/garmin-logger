@@ -17,7 +17,7 @@
   - TE: Threshold (High Aerobic) · aerobic 3.7 · anaerobic 0.4
   - MS: 3.65k @ 5:29 161bpm 1.00m 181spm 244ms 8.1cm 313w
   - Readiness 59 → 38 (Find Time To Relax) · Recovery 1d 4h 48m
-  - 🧠 Because interval split data is missing, exact work rep pacing cannot be verified, but peaking at 174 bpm against an overall average of 150 bpm confirms you successfully reached threshold effort right around your 171 bpm LTHR. Performance condition trending upward from 0 to +4 indicates strong output throughout the 45 minutes despite starting with a moderate morning readiness of 59. The resulting 3.7 aerobic training effect delivered the intended threshold stimulus cleanly without excessive strain.
+  - 🧠 The morning readiness snapshot was moderate (score 59), but the post‑run snapshot fell to 38, reflecting the substantial acute load (152 AU) and a 29‑point drop in stamina (100 → 71). Because the activity record lacks a detailed main_set, we can’t verify whether the 20‑minute threshold reps hit the prescribed 5:20–5:35 /km pace, but the overall average pace (6:27 /km) and average HR (150 bpm) sit firmly in the easy aerobic zone rather than the sub‑threshold HR range (≈158–168 bpm). Given the bridge phase’s focus on genuine sub‑threshold stimulus, you may want to tighten pacing or monitor HR more closely in future Thursday quality sessions to ensure the intended lactate‑threshold load is achieved.
 
 ## Next Session
 - **Planned:** Wed, Nov 11 — 7k EZ @ 6:45–7:20 ≤150bpm w/ strides
