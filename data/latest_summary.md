@@ -19,9 +19,8 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Readiness is moderate (score 68) with decent HRV and optimal ACWR, so you can **proceed with today’s Thursday VO2‑max quality session**, but keep the option to trim volume if you feel unusually heavy.  
-
-**Workout execution (as written in the plan)** – - Warm‑up: 10‑12 min
+- **Decision:** Proceed with today’s scheduled Thursday VO2/short‑interval quality session, but keep the intensity a shade easier than “all‑out” (target the lower end of the VO2‑max pace range) given the modest sleep deficit.  
+- **Workout outline (as per plan):** Warm‑up 10‑12 min easy (6:40‑7:15 /km) plus a few short strides; main set — short VO2 intervals (e.g., 5‑6 reps of 800 m–1 km at ~4:50‑5:10 /km effort) with 2–3 min jog/recovery; cool‑down
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
