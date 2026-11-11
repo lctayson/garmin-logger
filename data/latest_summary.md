@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 2.7 · anaerobic 0.5
   - MS: 6.06k @ 7:33 139bpm 0.79m 167spm 281ms 7.9cm 237w
   - Readiness 70 → 59 (Well Rested) · Recovery 19h 40m
-  - 🧠 The 45‑minute main set averaged 7:34 /km (139 bpm), keeping the effort squarely in the easy aerobic zone (≈6:40–7:15 /km, ≤155 bpm) and never approaching your sub‑threshold target of ~5:20–5:35 /km or the 158–168 bpm HR range. Pace drift was actually negative, moving from a slow 7:56 /km in the first rep to a brisk 7:13 /km by the final rep, but the overall stimulus remained low‑intensity, matching the training effect’s “NO ANAEROBIC BENEFIT.” Your morning readiness was moderate (score 70, “Well Rested”), and the post‑run snapshot dropped to 59, a typical acute dip after a 45‑minute easy effort rather than a red flag.
+  - 🧠 The seven‑rep main set stayed comfortably in the easy‑aerobic zone, with average rep pace 7:34 /km (range 7:56‑7:13) and heart rates climbing from 123 bpm to 149 bpm, matching the 145‑155 bpm target for Wednesday easy‑run/strides work. The progressive speed‑up across reps (pace drift ≈ ‑13 % overall) indicates the run got easier rather than fatigued, and the 14 % stamina drop (100 → 86 %) is typical for a 45‑minute effort in the early‑morning heat. Readiness was moderate (score 70) and the post‑run snapshot shows no concerning recovery‑time penalty, so execution was on‑track for the bridge phase. No anaerobic stimulus was expected, and none appears in the data.
 
 ## Next Session
 - **Planned:** Thu, Nov 12 — 9k as 3×2K @ 5:18–5:25 ≤170bpm; 2:30 walk-jog
