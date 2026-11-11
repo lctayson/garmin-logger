@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -3.8% · HR +7bpm
   - MS: 6.00k @ 5:25 166bpm 1.02m 181spm 243ms 8.2cm 319w
   - Readiness 68 → 29 (High Recovery Needs) · Recovery 1d 19h 12m
-  - 🧠 The three 2‑km reps averaged 5:25 /km (range 5:24‑5:26), right inside the prescribed sub‑threshold zone of 5:20‑5:35 /km, and the HR climbed from 162 bpm in the first rep to 169 bpm in the third, still within the 158‑168 bpm sub‑threshold window but edging high on the last effort. The –3.8 % pace‑efficiency drift shows a modest speed gain despite the HR rise, while stamina fell from 99 % to 59 % and the VO₂‑max training effect (4.3 aerobic, 0.7 anaerobic) signals a solid aerobic stimulus with little anaerobic contribution, matching the bridge‑phase focus on sub‑threshold volume. Morning readiness was moderate (68), and the post‑run score of 29 reflects the expected acute fatigue after a high‑intensity threshold session. No red flags appear for this Tuesday workout; the execution aligns with the current training objectives.
+  - 🧠 The three 2‑km reps were run at an average 5:25 /km (5:24–5:26), which sits squarely inside the prescribed sub‑threshold range (5:20–5:35 /km). Heart‑rate rose from 162 bpm in the first rep to 169 bpm in the last, edging just above the upper sub‑threshold HR target (168 bpm) while the pace drift was –3.8 % (slightly faster), indicating a modest efficiency gain but accumulating cardiovascular cost. Stamina dropped from 99 % to 59 % over the 32‑minute work block, a red flag for recovery given today’s moderate readiness score (68). The VO₂max training effect is high, but the lack of anaerobic stimulus aligns with the bridge phase’s focus on sub‑threshold work.
 
 ## Next Session
 - **Planned:** Fri, Nov 13 — REST + Core
