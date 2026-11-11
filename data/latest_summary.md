@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 2.7 · anaerobic 0.5
   - MS: 6.06k @ 7:33 139bpm 0.79m 167spm 281ms 7.9cm 237w
   - Readiness 70 → 59 (Well Rested) · Recovery 19h 40m
-  - 🧠 The 7‑rep main set averaged 7:34 /km while heart rate rose from 123 bpm to 149 bpm, keeping the work in a recovery‑to‑easy aerobic range rather than the prescribed easy‑aerobic zone (≈6:40‑7:15 /km, 145‑155 bpm). Stamina fell from 100 % to 86 % and the post‑run recovery‑time factor dropped to 68 % (moderate), which aligns with the moderate readiness score of 70 and shows the session was comfortably tolerated. No meaningful anaerobic load appeared (anaerobic effect 0.5), as expected for a Wednesday easy run with strides/hills in
+  - 🧠 The 7‑rep main set stayed solidly in easy‑aerobic territory (average rep pace 7:34 /km, HR 139 bpm) and even showed a modest negative pace drift, ending at 7:13 /km with HR 149 bpm, which is exactly the progression expected for a run + strides/hills day. The aerobic training effect (2.7) and negligible anaerobic contribution (0.5) line up with the bridge‑phase goal of maintaining base without adding VO2‑max stress. Stamina fell from 100 % to 86 % during the session, a typical dip given the 71.4 load and the warm ambient temperature, and the post‑run readiness drop to 59 % reflects that dip but remains within the “moderate” range flagged by the factor overrides. No red flags appear; the workout executed as prescribed.
 
 ## Next Session
 - **Planned:** Thu, Nov 12 — 9k as 3×2K @ 5:18–5:25 ≤170bpm; 2:30 walk-jog
