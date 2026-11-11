@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 2.7 · anaerobic 0.5
   - MS: 6.06k @ 7:33 139bpm 0.79m 167spm 281ms 7.9cm 237w
   - Readiness 70 → 59 (Well Rested) · Recovery 19h 40m
-  - 🧠 The seven‑rep main set lasted 45:47 min, with pace slipping from 7:56 km⁻¹ in the first rep to 7:13 km⁻¹ by the final rep while average HR rose steadily from 123 bpm to 149 bpm, placing the work firmly in the easy‑aerobic zone rather than the sub‑threshold target for a Tuesday session. The gradual pace and HR drift indicate a progressive warm‑up into a modest effort, which aligns with the planned Wednesday easy run + hill/stride work and explains the low anaerobic training effect (0.5) and the modest stamina drop from 100 % to 86 %. With a morning readiness score of 70 (moderate) and no marked recovery penalty, the workout was appropriately scaled for the current bridge phase.
+  - 🧠 The 7‑rep main set lasted 45 min 47 s and drifted from a slow 7:56 /km opening to a 7:13 /km finish, with average heart rate climbing from 123 to 149 bpm, staying within the easy‑to‑steady zone expected for a Wednesday “run + strides/hills” day. The overall rep pace (≈7:34 /km) is a touch slower than your typical easy aerobic range (6:40–7:15 /km), which is consistent with the early‑morning heat (28‑33 °C) and the progressive hill effort rather than a pacing shortfall. Training‑effect scores (aerobic 2.7, anaerobic 0.5) and the modest –12 body‑battery impact match the intended low‑stress stimulus, and your morning readiness (score 70, “Well Rested”) suggests no recovery concerns for today’s session.
 
 ## Next Session
 - **Planned:** Thu, Nov 12 — 9k as 3×2K @ 5:18–5:25 ≤170bpm; 2:30 walk-jog
