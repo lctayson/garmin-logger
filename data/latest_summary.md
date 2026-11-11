@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 2.7 · anaerobic 0.5
   - MS: 6.06k @ 7:33 139bpm 0.79m 167spm 281ms 7.9cm 237w
   - Readiness 70 → 59 (Well Rested) · Recovery 19h 40m
-  - 🧠 The main‑set consisted of seven continuous reps totaling 45:47 min with an average pace of 7:34 /km (range 7:13–7:56) and a steady HR climb from 123 bpm to 149 bpm, staying well within the easy aerobic zone (≤7:45 /km, ≤155 bpm) prescribed for today’s Wednesday easy + strides/hills. The modest HR drift and the 14‑point stamina drop (100 → 86) reflect the expected cumulative load of a longer easy run plus a brief, slightly faster finish, without any anaerobic stimulus (anaerobic TE 0.5). Morning readiness was “moderate” (score 70, 5.5 h recovery) and the post‑run snapshot shows no acute‑load alarm, so the session was executed as planned and did not raise any risk flags.
+  - 🧠 The seven work‑reps averaged 7:34 /km (range 7:56 – 7:13) with a time‑weighted HR of 139 bpm, keeping the entire main set solidly in the recovery/easy aerobic zone (≈7:10‑7:45 /km, ≤150 bpm) as prescribed for Wednesday easy runs with strides/hills. The progressive speed‑up from the first to the last rep (≈23 s faster) mirrors a typical warm‑up effect rather than any drift‑related fatigue, and the training‑effect profile (aerobic 2.7, anaerobic 0.5) confirms only aerobic base maintenance, which aligns with the session’s intent. Readiness was moderate (70) before the run and fell to 59 post‑exercise, a normal short‑term dip given the modest load (71 AU). No red flags appear for this workout.
 
 ## Next Session
 - **Planned:** Thu, Nov 12 — 9k as 3×2K @ 5:18–5:25 ≤170bpm; 2:30 walk-jog
