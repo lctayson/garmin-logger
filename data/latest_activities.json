@@ -747,7 +747,7 @@
         ]
       },
       "lap_count": 19,
-      "ai_analysis": "The seven‑rep main set stayed comfortably in the easy‑aerobic zone, with average rep pace 7:34 /km (range 7:56‑7:13) and heart rates climbing from 123 bpm to 149 bpm, matching the 145‑155 bpm target for Wednesday easy‑run/strides work. The progressive speed‑up across reps (pace drift ≈ ‑13 % overall) indicates the run got easier rather than fatigued, and the 14 % stamina drop (100 → 86 %) is typical for a 45‑minute effort in the early‑morning heat. Readiness was moderate (score 70) and the post‑run snapshot shows no concerning recovery‑time penalty, so execution was on‑track for the bridge phase. No anaerobic stimulus was expected, and none appears in the data.",
+      "ai_analysis": "The main‑set consisted of seven continuous reps totaling 45:47 min with an average pace of 7:34 /km (range 7:13–7:56) and a steady HR climb from 123 bpm to 149 bpm, staying well within the easy aerobic zone (≤7:45 /km, ≤155 bpm) prescribed for today’s Wednesday easy + strides/hills. The modest HR drift and the 14‑point stamina drop (100 → 86) reflect the expected cumulative load of a longer easy run plus a brief, slightly faster finish, without any anaerobic stimulus (anaerobic TE 0.5). Morning readiness was “moderate” (score 70, 5.5 h recovery) and the post‑run snapshot shows no acute‑load alarm, so the session was executed as planned and did not raise any risk flags.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
