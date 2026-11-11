@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 2.7 · anaerobic 0.5
   - MS: 6.06k @ 7:33 139bpm 0.79m 167spm 281ms 7.9cm 237w
   - Readiness 70 → 59 (Well Rested) · Recovery 19h 40m
-  - 🧠 The main set comprised seven continuous reps totalling 45:47, with paces slipping from 7:56 → 7:13 min/km (average 7:34
+  - 🧠 The 45‑minute main set consisted of seven easy‑pace reps that drifted faster (7:56 → 7:13 /km), landing at an average 7:34 /km—well inside the prescribed easy aerobic zone (7:10‑7:45 /km) and with rep HR climbing from 123 bpm to 149 bpm, still below the sub‑threshold ceiling (≈158 bpm). The training‑effect profile (Aerobic 2.7, Anaerobic 0.5) confirms that the session delivered the intended aerobic base stimulus without any meaningful VO2‑max load, which aligns with the bridge‑phase Wednesday easy‑run + strides/hills prescription. Stamina dipped from 100 % to a low of 84 % and the post‑run readiness score fell to 59, a typical response to a near‑hour run in warm (≈30 °C) conditions and not a sign of overreaching. Overall the workout was executed as planned and supports the current sub‑threshold/threshold focus for the upcoming half‑marathon build.
 
 ## Next Session
 - **Planned:** Thu, Nov 12 — 9k as 3×2K @ 5:18–5:25 ≤170bpm; 2:30 walk-jog
