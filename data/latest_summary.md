@@ -19,7 +19,8 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Readiness is
+**1️⃣ Decision – Proceed, but dial the intensity back a touch**  
+Your overall readiness is “moderate” (score 68). Sleep was a bit short (6.5 h) and night‑HRV dipped slightly (46 ms vs 7‑day 50 ms), yet
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 

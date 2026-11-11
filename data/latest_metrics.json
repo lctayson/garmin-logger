@@ -46,7 +46,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "**Decision** – Readiness is",
+    "ai_analysis": "**1️⃣ Decision – Proceed, but dial the intensity back a touch**  \nYour overall readiness is “moderate” (score 68). Sleep was a bit short (6.5 h) and night‑HRV dipped slightly (46 ms vs 7‑day 50 ms), yet",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
