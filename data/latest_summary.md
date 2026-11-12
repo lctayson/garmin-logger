@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -3.8% · HR +7bpm
   - MS: 6.00k @ 5:25 166bpm 1.02m 181spm 243ms 8.2cm 319w
   - Readiness 68 → 29 (High Recovery Needs) · Recovery 1d 19h 12m
-  - 🧠 Spot-on pacing across all three 2 km reps, locking in a razor-thin 5:24–5:26/km spread that fits right into your 5:20–5:35/km sub-threshold target. Average heart rate progressed cleanly from 162 to 169 bpm across reps (+7 bpm delta) while staying appropriately bounded by your 171 bpm LTHR, yielding a manageable -3.8% pace efficiency drift over 32:30 of total work. You absorbed 218 load points smoothly from a moderate 68 morning readiness, executing the exact Norwegian-style aerobic stimulus intended for this session.
+  - 🧠 The three 2‑km reps hit the prescribed threshold range (5:20‑5:35 /km) with paces of 5:24‑5:26 /km and averaged 166 bpm, but the final rep’s HR of 169 bpm nudged just above the target 158‑168 bpm zone, likely reflecting accumulating heat‑related cardiac cost. A –3.8 % pace‑efficiency drift and a 7‑bpm HR rise across the set show a modest uptick in effort as the workout progressed, while stamina dropped from 99 % to 59 % and the VO₂‑max training effect was high (4.3) with no anaerobic benefit, matching the intended sub‑threshold stimulus. Morning readiness was moderate (68), yet the post‑run snapshot fell to 29, underscoring the acute fatigue from this threshold session rather than any chronic recovery deficit.
 
 ## Next Session
 - **Planned:** Fri, Nov 13 — REST + Core
