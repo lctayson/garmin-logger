@@ -570,7 +570,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The three 2‑km reps were run at an average 5:25 /km (5:24–5:26), which sits squarely inside the prescribed sub‑threshold range (5:20–5:35 /km). Heart‑rate rose from 162 bpm in the first rep to 169 bpm in the last, edging just above the upper sub‑threshold HR target (168 bpm) while the pace drift was –3.8 % (slightly faster), indicating a modest efficiency gain but accumulating cardiovascular cost. Stamina dropped from 99 % to 59 % over the 32‑minute work block, a red flag for recovery given today’s moderate readiness score (68). The VO₂max training effect is high, but the lack of anaerobic stimulus aligns with the bridge phase’s focus on sub‑threshold work.",
+      "ai_analysis": "The three 2‑km threshold reps averaged 5:25 /km (5:24–5:26) with rep HRs of 162‑169 bpm, landing squarely in the prescribed sub‑threshold/threshold window (5:20‑5:35 /km, ~158‑169 bpm). Despite a 7 bpm rise in HR across the set, the –3.8 % pace‑efficiency drift shows the pace actually nudged faster in the final rep (5:24 /km), indicating you maintained the intended stimulus even as fatigue set in (stamina fell from 99 % to 59 %). Morning readiness was moderate (68), and the post‑run drop to 29 reflects the acute load rather than a problem with execution.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
