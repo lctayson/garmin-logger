@@ -1,0 +1,70 @@
+{
+  "endpoints": {
+    "running_tolerance": {
+      "available": true,
+      "data": [
+        {
+          "acuteDistance": 44160,
+          "acuteImpactLoad": 48216,
+          "acuteTolerance": 64587,
+          "calendarDate": "2026-11-10",
+          "runningToleranceFeedBackPhrase": "MEDIUM_LOAD",
+          "userProfilePK": 2835325
+        },
+        {
+          "acuteDistance": 45287,
+          "acuteImpactLoad": 48884,
+          "acuteTolerance": 64587,
+          "calendarDate": "2026-11-13",
+          "runningToleranceFeedBackPhrase": "MEDIUM_LOAD",
+          "userProfilePK": 2835325
+        },
+        {
+          "acuteDistance": 45155,
+          "acuteImpactLoad": 51046,
+          "acuteTolerance": 63015,
+          "calendarDate": "2026-11-08",
+          "runningToleranceFeedBackPhrase": "MEDIUM_LOAD",
+          "userProfilePK": 2835325
+        },
+        {
+          "acuteDistance": 45146,
+          "acuteImpactLoad": 50730,
+          "acuteTolerance": 64587,
+          "calendarDate": "2026-11-11",
+          "runningToleranceFeedBackPhrase": "MEDIUM_LOAD",
+          "userProfilePK": 2835325
+        },
+        {
+          "acuteDistance": 45155,
+          "acuteImpactLoad": 45290,
+          "acuteTolerance": 64587,
+          "calendarDate": "2026-11-09",
+          "runningToleranceFeedBackPhrase": "MEDIUM_LOAD",
+          "userProfilePK": 2835325
+        },
+        {
+          "acuteDistance": 45287,
+          "acuteImpactLoad": 57382,
+          "acuteTolerance": 64587,
+          "calendarDate": "2026-11-12",
+          "runningToleranceFeedBackPhrase": "HIGH_LOAD",
+          "userProfilePK": 2835325
+        },
+        {
+          "acuteDistance": 37130,
+          "acuteImpactLoad": 48994,
+          "acuteTolerance": 63015,
+          "calendarDate": "2026-11-07",
+          "runningToleranceFeedBackPhrase": "MEDIUM_LOAD",
+          "userProfilePK": 2835325
+        }
+      ]
+    }
+  },
+  "retrieved_at": "2026-11-12T22:51:57.723648+00:00",
+  "source": "Garmin Connect API",
+  "target_date": "2026-11-13",
+  "window_end": "2026-11-13",
+  "window_start": "2026-11-07"
+}
