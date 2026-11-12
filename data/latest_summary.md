@@ -19,11 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned Friday strength/hip‑stability session, but keep the load light‑to‑moderate; if you feel unusually heavy‑legged or notice elevated resting HR, pause or replace with gentle mobility work.
+**Decision** – Go ahead with today’s planned Friday strength day, but dial the load back – treat it as a “recovery‑strength” session (light‑to‑moderate core/hip work, no heavy max lifts).  
 
-**Execution** – Warm‑up 5 min easy dynamic mobility (leg swings, hip circles, body‑weight glute bridges). Follow the prescribed core/hip routine (e.g., 2–3 sets of glute bridges, clamshells, side‑planks, single‑leg dead‑lift variations) at a RPE ≈ 5–6, focusing on quality over volume. Finish with 5 min easy low‑intensity walk or foam‑roll to cool down.
-
-**Readiness rationale** – HRV is “balanced” and at 100 % of your 7‑day norm, resting HR is low (57 bpm), and ACWR is optimal (1.0). The low readiness score is driven mainly by a modest sleep score (66) and the “Find time to relax” feedback; it isn’t a
+**Workout execution** –  
+- **Warm‑up**: 5‑10 min of easy dynamic mobility (leg swings, hip circles, body‑weight glute bridges).  
+- **Main set**: Follow your usual core/hip routine (e.g., planks, side‑planks, clamshells, single‑leg dead‑bugs) at a tempo that feels easy‑moderate; keep sets ≤ 12 reps, 2 × instead of the
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
