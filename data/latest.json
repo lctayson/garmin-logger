@@ -109,7 +109,7 @@
       "rem": 0.87,
       "awake": 0.55
     },
-    "total_steps": 11681
+    "total_steps": 11774
   },
   "training_status": {
     "status": "Productive 3",
@@ -965,7 +965,7 @@
     {
       "date": "2026-11-12",
       "charged": 47,
-      "drained": 24,
+      "drained": 36,
       "high": 69,
       "low": 22
     }
