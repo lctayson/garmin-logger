@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -3.8% · HR +7bpm
   - MS: 6.00k @ 5:25 166bpm 1.02m 181spm 243ms 8.2cm 319w
   - Readiness 68 → 29 (High Recovery Needs) · Recovery 1d 19h 12m
-  - 🧠 The three 2‑km threshold reps were spot‑on for the bridge phase: the average rep pace of 5:25 /km sits comfortably within the prescribed 5:20–5:35 /km window, and the HRs (162 → 167 → 169 bpm) stayed at the high end of the sub‑threshold/threshold range (≈158–168 bpm) with only a modest 7 bpm rise across reps. The –3.8 % pace‑efficiency drift shows the reps actually got a touch faster while HR climbed, indicating a genuine VO₂‑max stimulus despite the “NO ANAEROBIC_BENEFIT” label. Stamina fell from 99 % to 59 % over the 32:30 min work block, which is typical for a hard threshold session and matches the moderate morning readiness score of 68. The post‑run readiness plunge to 29 reflects the acute load, not a problem with the workout itself.
+  - 🧠 The three 2‑km threshold reps were run at 5:24–5:26 /km (average 5:25), which sits squarely inside the prescribed sub‑threshold/threshold window of 5:20–5:35 /km, and the pace drift was –3.8 % (slightly faster across reps). Heart‑rate rose from 162 bpm to 169 bpm, ending just above the typical threshold ceiling of 168 bpm, and stamina fell from 99 % to 59 % over the set, indicating accumulating cardiovascular stress. Although the aerobic training effect was high (VO2‑max 4.3) and the anaerobic contribution was negligible—as expected for a pure threshold workout—the post‑run readiness drop to 29 reflects the acute load rather than a chronic issue.
 
 ## Next Session
 - **Planned:** Fri, Nov 13 — REST + Core
