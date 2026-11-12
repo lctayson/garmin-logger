@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -3.8% · HR +7bpm
   - MS: 6.00k @ 5:25 166bpm 1.02m 181spm 243ms 8.2cm 319w
   - Readiness 68 → 29 (High Recovery Needs) · Recovery 1d 19h 12m
-  - 🧠 The three 2‑km threshold reps were run at 5:24‑5:26 /km (average 5:25), comfortably inside the prescribed 5:20‑5:35 /km zone, and the rep‑average HR rose from 162 bpm to 169 bpm, matching the target 158‑169 bpm range. A –3.8 % pace drift indicates the reps got slightly faster despite a 7 bpm HR increase, and stamina dropped from 99 % to 59 %—a normal fatigue pattern for a 32‑minute work block. Morning readiness was moderate (score 68); the post‑run snapshot of 29 reflects the acute load impact rather than a failure to meet the session’s targets. Overall
+  - 🧠 The three 2‑km reps were run at a steady 5:24‑5:26
 
 ## Next Session
 - **Planned:** Fri, Nov 13 — REST + Core

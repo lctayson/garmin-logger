@@ -570,7 +570,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The three 2‑km threshold reps were run at 5:24‑5:26 /km (average 5:25), comfortably inside the prescribed 5:20‑5:35 /km zone, and the rep‑average HR rose from 162 bpm to 169 bpm, matching the target 158‑169 bpm range. A –3.8 % pace drift indicates the reps got slightly faster despite a 7 bpm HR increase, and stamina dropped from 99 % to 59 %—a normal fatigue pattern for a 32‑minute work block. Morning readiness was moderate (score 68); the post‑run snapshot of 29 reflects the acute load impact rather than a failure to meet the session’s targets. Overall",
+      "ai_analysis": "The three 2‑km reps were run at a steady 5:24‑5:26",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
