@@ -16,11 +16,21 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled core/hip‑stability strength session, but keep the load moderate (e.g., lighter than a “hard” leg day) in case lingering fatigue shows up.
+**Decision:** Proceed with today’s planned Friday core/hip‑stability strength session; keep the load moderate‑intensity given a “moderate” overall readiness (score 50) but note the excellent HRV (100 %) and low resting HR (57 bpm) – you’re physiologically primed, just be mindful of the sub‑optimal sleep score.
 
-**Execution** – - Warm‑up: 5 min easy mobility (hip circles, glute bridges, dynamic lunges).  
-- Main set: follow your prescribed core/hip circuit (e.g., planks, side‑planks, single‑leg dead‑lifts, clamshells, banded monster walks). Keep each exercise 2–3 × 8‑12 reps, focusing on quality over maximal weight.  
-- Cool‑down: 5 min gentle stretching of hips, hamstrings
+**Workout execution:**  
+- **Warm‑up (5‑7 min):** Light dynamic mobility (leg swings, hip circles, glute bridges, inch‑worms) → 2 × 30‑s plank walks to raise core temperature.  
+- **Main set:** 3‑4 circuits of core/hip moves, 45 s work / 15 s rest each:  
+  1. Single‑leg Romanian dead‑lift (body‑weight or light dumbbell)  
+  2. Side‑plank with hip‑dip (each side)  
+  3. Band‑resisted monster walks (2 × 15 steps)  
+  4. Bird‑dog (slow, focus on control)  
+  Finish with a **2‑minute** glute‑bridge hold.  
+- **Cool‑down (3‑5 min):** Gentle static stretches for hamstrings, hip flexors, glutes; breathing reset.
+
+**Readiness rationale:**  
+- HRV at 100 % and resting HR 57 bpm indicate good autonomic recovery.  
+- Sleep history is only “moderate” (69 %); the day‑of‑sleep score is missing, so treat the moderate overall readiness as a cue to keep intensity below “hard” – avoid max‑load lifts or high
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
