@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -3.8% · HR +7bpm
   - MS: 6.00k @ 5:25 166bpm 1.02m 181spm 243ms 8.2cm 319w
   - Readiness 68 → 29 (High Recovery Needs) · Recovery 1d 19h 12m
-  - 🧠 The three 2‑km reps were run at a steady 5:24‑5:26
+  - 🧠 The three 2‑km threshold reps averaged 5:25 /km (range 5:24‑5:26), which sits squarely in the prescribed 5:20‑5:35 /km threshold zone, and the time‑weighted heart rate of 166 bpm aligns with the target 160‑169 bpm range. The -3.8 % pace‑efficiency drift indicates the pace actually got a touch faster across the reps while HR rose by about 7 bpm, a typical cost‑of‑heat pattern for a 28‑33 °C morning. Stamina fell from 99 % to 59 % during the set, reflecting the expected physiological strain of a solid threshold workout. Morning readiness was moderate (score 68); the post‑run dip to 29 reflects the acute load, not a failure of preparation.
 
 ## Next Session
 - **Planned:** Fri, Nov 13 — REST + Core
