@@ -19,11 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Because today is the scheduled **core/hip‑stability strength day (no running)** and your readiness score is low (40) despite good HRV and resting HR, treat this as a **recovery‑focused strength session**. Do the prescribed movements but keep the volume/intensity light; if you feel unusually fatigued, skip the session and do gentle mobility instead.
+**Decision** – Proceed with today’s planned Friday strength/hip‑stability session, but keep the load light‑to‑moderate; if you feel unusually heavy‑legged or notice elevated resting HR, pause or replace with gentle mobility work.
 
-**Workout execution (as per the plan)**  
-- **Warm‑up:** 5‑7 min of easy dynamic mobility (leg swings, hip circles, cat‑cow, light marching).  
-- **Main set:** Core/hip circuit – 2 rounds of 30 s each: plank, side‑plank each side, bird‑dog,
+**Execution** – Warm‑up 5 min easy dynamic mobility (leg swings, hip circles, body‑weight glute bridges). Follow the prescribed core/hip routine (e.g., 2–3 sets of glute bridges, clamshells, side‑planks, single‑leg dead‑lift variations) at a RPE ≈ 5–6, focusing on quality over volume. Finish with 5 min easy low‑intensity walk or foam‑roll to cool down.
+
+**Readiness rationale** – HRV is “balanced” and at 100 % of your 7‑day norm, resting HR is low (57 bpm), and ACWR is optimal (1.0). The low readiness score is driven mainly by a modest sleep score (66) and the “Find time to relax” feedback; it isn’t a
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
