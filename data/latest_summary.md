@@ -19,11 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Go ahead with today’s planned Friday strength day, but dial the load back – treat it as a “recovery‑strength” session (light‑to‑moderate core/hip work, no heavy max lifts).  
+**Decision** – Stick to today’s **Friday core/hip‑stability session**, but dial the load back (e.g., 2 × instead of 3 × sets or lighter resistance).  
 
 **Workout execution** –  
-- **Warm‑up**: 5‑10 min of easy dynamic mobility (leg swings, hip circles, body‑weight glute bridges).  
-- **Main set**: Follow your usual core/hip routine (e.g., planks, side‑planks, clamshells, single‑leg dead‑bugs) at a tempo that feels easy‑moderate; keep sets ≤ 12 reps, 2 × instead of the
+- **Warm‑up**: 5 min easy jog or brisk walk + 5 min dynamic hip mobility (leg swings, hip circles).  
+- **Main set**: Core/hip circuit – glute bridges, clamshells, side‑plank, bird‑dog, single‑leg
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
