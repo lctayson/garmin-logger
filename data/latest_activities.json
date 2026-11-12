@@ -570,8 +570,8 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The three 2‑km threshold reps were spot‑on for the bridge phase: each interval averaged 5:25 /km (within the 5:15–5:30 /km target) and HR rose from 162 bpm to 169 bpm, ending at a time‑weighted 166 bpm, which sits squarely in the prescribed 160–169 bpm threshold zone. The –3.8 % pace‑efficiency drift reflects a slight acceleration in the final rep (5:24 vs. 5:26) while the +7 bpm HR delta shows the expected cardiovascular load buildup, and the VO₂max training effect (aerobic 4.3, anaerobic ≈0.7) confirms that the session delivered the intended aerobic stimulus without significant anaerobic contribution. Although your morning readiness was moderate (score 68), the post‑run snapshot dropped to 29, signalling a substantial acute fatigue cost that will require a full recovery day before the next hard quality session.",
-      "ai_analysis_provider": "groq:openai/gpt-oss-120b"
+      "ai_analysis": "Spot-on pacing across all three 2 km reps, locking in a razor-thin 5:24–5:26/km spread that fits right into your 5:20–5:35/km sub-threshold target. Average heart rate progressed cleanly from 162 to 169 bpm across reps (+7 bpm delta) while staying appropriately bounded by your 171 bpm LTHR, yielding a manageable -3.8% pace efficiency drift over 32:30 of total work. You absorbed 218 load points smoothly from a moderate 68 morning readiness, executing the exact Norwegian-style aerobic stimulus intended for this session.",
+      "ai_analysis_provider": "gemini:gemini-3.8-flash"
     }
   ]
 }
