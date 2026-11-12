@@ -1,36 +1,29 @@
 # Daily Check — 2026-11-13
 
-## Readiness: 50/100 (Moderate)
-> Recovery In Progress
+## Readiness: 40/100 (Low)
+> Find Time To Relax
 
+- **VO₂max:** 45 ml/kg/min (Garmin precise)
 - **RHR:** 57 bpm (7d avg: 57.6 bpm, trending down)
-- ⚠️ **Recovery remaining:** 1d 2h54
-- ⚠️ **Limiter:** Sleep Score (0%)
+- **HRV:** 50ms (7d avg: 51ms) · within 47–58ms
+- ⚠️ **Sleep:** 6h57 / 7h20 need (0h23 short) · score 66 · 7d avg 6h21 · 7/7 nights below need
+- **Recovery remaining:** 19h48
+- ⚠️ **Limiter:** Sleep Score (49%)
 - **Also soft:** Stress History, Recovery Time, Sleep History
 
 ## Today's Session
 - **Planned:** Fri, Nov 13 — REST + Core
 - **Recommendation:** Proceed as planned
-- **Reason:** elevated remaining recovery time (26.9h); ongoing sleep debt (7-day average 6.2h), 6/7 nights below need.
+- **Reason:** low readiness (40/100); ongoing sleep debt (7-day average 6.3h), 7/7 nights below need.
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
 ### 🧠 AI Coaching Guidance
 
-**Decision:** Proceed with today’s planned Friday core/hip‑stability strength session; keep the load moderate‑intensity given a “moderate” overall readiness (score 50) but note the excellent HRV (100 %) and low resting HR (57 bpm) – you’re physiologically primed, just be mindful of the sub‑optimal sleep score.
+**Decision** – Because today is the scheduled **core/hip‑stability strength day (no running)** and your readiness score is low (40) despite good HRV and resting HR, treat this as a **recovery‑focused strength session**. Do the prescribed movements but keep the volume/intensity light; if you feel unusually fatigued, skip the session and do gentle mobility instead.
 
-**Workout execution:**  
-- **Warm‑up (5‑7 min):** Light dynamic mobility (leg swings, hip circles, glute bridges, inch‑worms) → 2 × 30‑s plank walks to raise core temperature.  
-- **Main set:** 3‑4 circuits of core/hip moves, 45 s work / 15 s rest each:  
-  1. Single‑leg Romanian dead‑lift (body‑weight or light dumbbell)  
-  2. Side‑plank with hip‑dip (each side)  
-  3. Band‑resisted monster walks (2 × 15 steps)  
-  4. Bird‑dog (slow, focus on control)  
-  Finish with a **2‑minute** glute‑bridge hold.  
-- **Cool‑down (3‑5 min):** Gentle static stretches for hamstrings, hip flexors, glutes; breathing reset.
-
-**Readiness rationale:**  
-- HRV at 100 % and resting HR 57 bpm indicate good autonomic recovery.  
-- Sleep history is only “moderate” (69 %); the day‑of‑sleep score is missing, so treat the moderate overall readiness as a cue to keep intensity below “hard” – avoid max‑load lifts or high
+**Workout execution (as per the plan)**  
+- **Warm‑up:** 5‑7 min of easy dynamic mobility (leg swings, hip circles, cat‑cow, light marching).  
+- **Main set:** Core/hip circuit – 2 rounds of 30 s each: plank, side‑plank each side, bird‑dog,
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -45,9 +38,14 @@ _Most recent activity (2026-11-12):_
 
 ## Load & Trends
 
+- **ACWR:** 1.0 (Optimal) — acute 647 / chronic 613 (chronic range 490.4–919.5)
 - **7-day volume:** 45.29km vs 28-day avg 39.7km (+14%)
 - **Running tolerance:** 75.7% (Medium) — 45.3km of 64.6km weekly cap, acute impact load 48.9
-- ⚠️ **Sleep (7d avg):** 6h15, 6/7 nights below need, trending flat
+- **Aerobic Low:** 995.4 (target 816–1360 — in range)
+- **Aerobic High:** 1311.9 (target 816–1360 — in range)
+- ⚠️ **Anaerobic:** 33.7 (target 108–435 — -74 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- ⚠️ **Sleep (7d avg):** 6h21, 7/7 nights below need, trending up
 - **RHR (7d avg):** 57.6, trending down
 - **HRV:** trending up
 

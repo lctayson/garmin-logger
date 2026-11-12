@@ -1,22 +1,36 @@
 {
   "date": "2026-11-13",
   "readiness": {
-    "score": 50,
-    "level": "Moderate",
-    "feedback": "Recovery In Progress",
+    "vo2_max": 45.0,
+    "vo2_max_precise": 45.0,
+    "score": 40,
+    "level": "Low",
+    "feedback": "Find Time To Relax",
     "resting_hr": 57,
-    "recovery_hours": 26.9,
+    "hrv_last_night_avg_ms": 50.0,
+    "hrv_7_day_avg_ms": 51.0,
+    "hrv_status": "BALANCED",
+    "sleep_hours": 6.95,
+    "sleep_hours_including_previous_day_nap": 6.95,
+    "sleep_score": 66,
+    "recovery_hours": 19.8,
+    "hrv_baseline": {
+      "lowUpper": 45.0,
+      "balancedLow": 47.0,
+      "balancedUpper": 58.0,
+      "markerValue": 0.43180847
+    },
     "factor_details": {
       "sleep_score": {
-        "percent": 0,
-        "feedback": "None"
+        "percent": 49,
+        "feedback": "Moderate"
       },
       "sleep_history": {
         "percent": 69,
         "feedback": "Moderate"
       },
       "recovery_time": {
-        "percent": 56,
+        "percent": 68,
         "feedback": "Moderate"
       },
       "acwr": {
@@ -28,17 +42,58 @@
         "feedback": "Very Good"
       },
       "stress_history": {
-        "percent": 54,
+        "percent": 53,
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "**Decision:** Proceed with today’s planned Friday core/hip‑stability strength session; keep the load moderate‑intensity given a “moderate” overall readiness (score 50) but note the excellent HRV (100 %) and low resting HR (57 bpm) – you’re physiologically primed, just be mindful of the sub‑optimal sleep score.\n\n**Workout execution:**  \n- **Warm‑up (5‑7 min):** Light dynamic mobility (leg swings, hip circles, glute bridges, inch‑worms) → 2 × 30‑s plank walks to raise core temperature.  \n- **Main set:** 3‑4 circuits of core/hip moves, 45 s work / 15 s rest each:  \n  1. Single‑leg Romanian dead‑lift (body‑weight or light dumbbell)  \n  2. Side‑plank with hip‑dip (each side)  \n  3. Band‑resisted monster walks (2 × 15 steps)  \n  4. Bird‑dog (slow, focus on control)  \n  Finish with a **2‑minute** glute‑bridge hold.  \n- **Cool‑down (3‑5 min):** Gentle static stretches for hamstrings, hip flexors, glutes; breathing reset.\n\n**Readiness rationale:**  \n- HRV at 100 % and resting HR 57 bpm indicate good autonomic recovery.  \n- Sleep history is only “moderate” (69 %); the day‑of‑sleep score is missing, so treat the moderate overall readiness as a cue to keep intensity below “hard” – avoid max‑load lifts or high",
+    "snapshots": [
+      {
+        "timestamp_local": "2026-11-13T07:08:39.0",
+        "context": "AFTER_WAKEUP_RESET",
+        "score": 40,
+        "feedback": "FIND_TIME_TO_RELAX",
+        "recovery_minutes": 1189,
+        "acute_load": 647,
+        "recovery_time_change": "NO_CHANGE_SLEEP"
+      },
+      {
+        "timestamp_local": "2026-11-13T00:00:24.0",
+        "context": "UPDATE_REALTIME_VARIABLES",
+        "score": 50,
+        "feedback": "RECOVERY_IN_PROGRESS",
+        "recovery_minutes": 1617,
+        "acute_load": 790,
+        "factor_overrides": {
+          "sleep_score": {
+            "percent": 0,
+            "feedback": "None"
+          },
+          "recovery_time": {
+            "percent": 56,
+            "feedback": "Moderate"
+          },
+          "stress_history": {
+            "percent": 54,
+            "feedback": "Moderate"
+          }
+        }
+      }
+    ],
+    "ai_analysis": "**Decision** – Because today is the scheduled **core/hip‑stability strength day (no running)** and your readiness score is low (40) despite good HRV and resting HR, treat this as a **recovery‑focused strength session**. Do the prescribed movements but keep the volume/intensity light; if you feel unusually fatigued, skip the session and do gentle mobility instead.\n\n**Workout execution (as per the plan)**  \n- **Warm‑up:** 5‑7 min of easy dynamic mobility (leg swings, hip circles, cat‑cow, light marching).  \n- **Main set:** Core/hip circuit – 2 rounds of 30 s each: plank, side‑plank each side, bird‑dog,",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
+  "health": {
+    "steps": 28
+  },
   "sleep": {
+    "deep_h": 0.7,
+    "light_h": 5.93,
+    "rem_h": 0.32,
+    "awake_h": 0.42,
     "baseline_h": 7.0,
     "need_h": 7.33,
+    "next_need_h": 7.0,
     "feedback": "Increased",
     "training_feedback": "Todays Load And Chronic",
     "sleep_history_adjustment": "No Change",
@@ -46,11 +101,43 @@
     "nap_adjustment": "No Change",
     "previous_day_nap": null
   },
+  "load": {
+    "acute_load": 647,
+    "chronic_load": 613,
+    "acwr": 1.0,
+    "acwr_percent": 42,
+    "acwr_status": "Optimal",
+    "chronic_load_range": {
+      "min": 490.4,
+      "max": 919.5
+    },
+    "training_status": "Productive 3"
+  },
+  "vo2_max": 45.0,
+  "vo2_max_precise": 45.0,
   "race_predictions": {
     "5k": "26:51",
     "10k": "57:06",
     "half_marathon": "2:09:37",
     "marathon": "4:49:47"
+  },
+  "load_balance": {
+    "aerobic_low": 995.4,
+    "aerobic_low_target": [
+      816,
+      1360
+    ],
+    "aerobic_high": 1311.9,
+    "aerobic_high_target": [
+      816,
+      1360
+    ],
+    "anaerobic": 33.7,
+    "anaerobic_target": [
+      108,
+      435
+    ],
+    "load_focus": "Anaerobic Shortage"
   },
   "running_tolerance": {
     "acute_impact_load": 48.9,
@@ -189,6 +276,14 @@
         }
       ]
     }
+  },
+  "heat_acclimation": {
+    "percentage": 100,
+    "trend": "Acclimatized"
+  },
+  "altitude_acclimation": {
+    "percentage": 0,
+    "trend": null
   },
   "trend_recent_daily": {
     "columns": [
@@ -370,16 +465,16 @@
       [
         "2026-11-13",
         57,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        50.0,
+        51.0,
+        6.95,
+        66,
+        45.0,
+        "Productive 3",
+        647,
+        613,
+        1.0,
+        "Optimal",
         0,
         0.0,
         0.0,
@@ -778,16 +873,16 @@
         "2026-11-07",
         "2026-11-13",
         57,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        50.0,
+        51.0,
+        6.95,
+        66,
+        45.0,
+        "Productive 3",
+        647,
+        613,
+        1.0,
+        "Optimal",
         6,
         6.07,
         45.29,
@@ -864,7 +959,7 @@
         "2026-11-13",
         32,
         0,
-        47,
+        77,
         15
       ]
     ]
