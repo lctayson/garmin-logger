@@ -570,7 +570,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The three 2‑km threshold reps were spot‑on: each held a 5:24‑5:26 /km pace and a 162‑169 bpm HR, squarely inside the prescribed threshold zone (≈5:15‑5:30 /km, 160‑169 bpm). The –3.8 % pace‑efficiency drift shows a modest quickening across the reps, while HR rose 7 bpm, indicating a typical progressive load without loss of quality. Stamina fell from 99 % to 59 % during the set, a normal dip for a hard Tuesday SUT but a reminder to monitor recovery before Thursday’s VO2 work. Morning readiness was moderate (68), yet the post‑run readiness plunge to 29 reflects the acute cost of this session rather than a chronic issue.",
+      "ai_analysis": "The three 2‑km threshold reps were spot‑on for the bridge phase: each interval averaged 5:25 /km (within the 5:15–5:30 /km target) and HR rose from 162 bpm to 169 bpm, ending at a time‑weighted 166 bpm, which sits squarely in the prescribed 160–169 bpm threshold zone. The –3.8 % pace‑efficiency drift reflects a slight acceleration in the final rep (5:24 vs. 5:26) while the +7 bpm HR delta shows the expected cardiovascular load buildup, and the VO₂max training effect (aerobic 4.3, anaerobic ≈0.7) confirms that the session delivered the intended aerobic stimulus without significant anaerobic contribution. Although your morning readiness was moderate (score 68), the post‑run snapshot dropped to 29, signalling a substantial acute fatigue cost that will require a full recovery day before the next hard quality session.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
