@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -3.8% · HR +7bpm
   - MS: 6.00k @ 5:25 166bpm 1.02m 181spm 243ms 8.2cm 319w
   - Readiness 68 → 29 (High Recovery Needs) · Recovery 1d 19h 12m
-  - 🧠 Your 3 × 2 km threshold work was run at 5:24‑5:26 /km (average 5:25), comfortably inside the 5:20‑5:35 /km target
+  - 🧠 The three 2‑km threshold reps were run at 5:24–5:26 /km (average 5:25), which sits comfortably within the prescribed 5:20–5:35 /km threshold range, and HR rose from 162 bpm to 169 bpm, matching the expected 158–169 bpm zone. Pace efficiency drift was –3.8 % (slightly faster across reps) while HR increased only +7 bpm, showing the stimulus was held steady without a slowdown. Stamina dropped from 99 % to 59 % and the VO2‑max training effect was high (aerobic 4.3, anaerobic ≈0.7), reflecting a solid quality session for the bridge phase. Morning readiness
 
 ## Next Session
 - **Planned:** Fri, Nov 13 — REST + Core
