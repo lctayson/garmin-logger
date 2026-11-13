@@ -46,7 +46,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "**Decision – Proceed, but dial back the volume/intensity**  \nYour ACWR is optimal (0.8) and resting HR is normal, but sleep was under 6 h and night‑HRV dropped to 41 ms (well below the 7‑day avg of 49 ms). That pattern flags moderate fatigue – enough to merit a lighter‑than‑usual long run rather than a hard finish.\n\n**Workout – Saturday long run (Bridge phase)**  \n- **Warm‑up:** 10 min easy jog (6:40‑7:15 / km) + 3 × 20‑sec strides at zone 5, easy jog back.  \n- **Main set:** Run at easy aerobic pace (≈ 6:45 / km, HR ≈ 145‑155 bpm). Keep the total",
+    "ai_analysis": "**Decision** – Proceed with today’s scheduled long‑run, but keep it strictly easy and **skip any HM‑effort finish**.  \n\n**Workout execution** – *Warm‑up*: 10 min easy jog (≈7:30 km / min, HR ≤ 150 bpm). *Main set*: steady easy run for the planned duration (usually 60–90 min) at your easy‑aerobic pace (≈6:40–7:15 /km, HR 145–155 bpm). *Cool‑down*: 5–10 min very easy jog + light stretching.  \n\n**Readiness rationale** – Your overall readiness is “moderate” (score 58). Sleep was only 5.9 h and HRV (41 ms) is below the",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
