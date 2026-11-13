@@ -19,14 +19,12 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned Friday strength session, but dial the load back to a recovery‑oriented effort (light‑to‑moderate weight, focus on quality and mobility).
+**Decision** – Stick to the Friday strength day but **scale back** to a light, mobility‑focused core/hip routine (no heavy loads).  
 
-**Workout execution**  
-- **Warm‑up**: 8‑10 min easy dynamic routine (leg swings, hip circles, walking lunges, 2 × 30‑s plank).  
-- **Main set**: 3 × 8 reps of each hip‑extension/hip‑strength exercise (hip thrust, single‑leg glute bridge, kettlebell dead‑lift) at RPE 6‑7; 2 × 10 reps of core work (bird‑dog, dead‑bug) in a circuit, 30‑s rest between sets.  
-- **Cool‑down**: 5 min gentle stretching/foam‑rolling for hips, glutes, and lower back.
-
-**Readiness rationale** – Sleep was just under 7 h with a moderate sleep‑score, but HRV is balanced (50 ms, 100 % of baseline) and resting HR is low (57 bpm), indicating good autonomic
+**Workout execution** –  
+- **Warm‑up:** 5 min easy dynamic mobility (leg swings, hip circles, marching).  
+- **Main set:** 2 rounds of body‑weight core/hip stability moves (e.g., 30‑s plank, 12 glute bridges, 12 clamshells/side, 12 bird‑dogs each side). Keep effort at RPE 4–5; rest 30‑45 s between exercises.  
+- **Cool‑down:** 5
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
