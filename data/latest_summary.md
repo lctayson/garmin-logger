@@ -16,7 +16,7 @@
 - **Friday Core & Stability** — 0.0km · 23:51 · HR 94/126 max
   - TE: Aerobic Base · aerobic 0.3 · anaerobic 0
   - Readiness 40 → 49 (Find Time To Relax) · Recovery 7h 32m
-  - 🧠 The 24‑minute core and stability session delivered a very low aerobic stimulus (aerobic = 0.3 AEROBIC_BASE) and modest mechanical load (load ≈ 3.8), which aligns with its purpose of maintaining stability without taxing your cardiovascular system. Your morning readiness was low (score 40, “Find Time To Relax”) and the sleep score of 66 suggests limited recovery capacity, so the minor load here is appropriate and unlikely to exacerbate fatigue. The post‑exercise snapshot shows a modest rise to 49 and a “good” recovery‑time factor (88 %), indicating the session was well tolerated and should not interfere with your upcoming Tuesday sub‑threshold run.
+  - 🧠 The Friday core‑stability session delivered only a minor aerobic stimulus (Aerobic 0.3 AEROBIC_BASE) and a negligible body‑battery impact (‑1 point), which is typical for a non‑running strength day. Your morning readiness score is low (40 / Low) with a modest sleep score (66) and 19.8 h of estimated recovery, so the session’s low load (3.8) aligns well with today’s recovery needs. No running main‑set data are present, so there’s nothing to verify against pacing or HR targets. Focus on rest and nutrition tonight to bring the readiness score back up for the upcoming Tuesday sub‑threshold workout.
 
 ## Next Session
 - **Planned:** Sat, Nov 14 — 14K EZ, HR ≤150; no fast finish
