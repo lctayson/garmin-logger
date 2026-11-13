@@ -19,13 +19,14 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Run today, but keep it strictly easy. Skip any hard finish or HM‑specific effort and treat it as a recovery‑oriented long run.  
+**Decision** – Run the scheduled easy long run, but keep it strictly aerobic and skip any HM‑effort finish.  
 
-**Workout execution** –  
-- **Warm‑up**: 10‑15 min easy jog (≈7:30 / km, HR ≤ 150 bpm).  
-- **Main set**: 90‑120 min continuous run at easy aerobic pace (≈6:40‑7:15 / km, HR ≈ 145‑155 bpm).  
-- **Optional finish**: **Do not** add tempo or VO₂‑max intervals; stop when you feel the usual easy‑run fatigue level.  
-- **Cool‑down**: 5‑10
+**Execution** –  
+- **Warm‑up**: 10‑15 min easy jog, HR ≤ 150 bpm.  
+- **Main set**: 90 min (or up to 2 h if you feel solid) at easy aerobic pace ≈ 6:45‑7:15 /km, HR ≈ 145‑155 bpm, RPE ≤ 4.  
+- **Cool‑down**: 10 min very easy jog + a few gentle strides.  
+
+**Readiness rationale** – Sleep was only 5.9 h and night‑time HRV (41 ms) is below your 7‑day average
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
