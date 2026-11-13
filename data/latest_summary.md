@@ -19,18 +19,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision – adjust, don’t skip**  
-Your readiness score is low (40 → “Find time to relax”), but HRV is balanced, resting HR is low (57 bpm), and ACWR is optimal. Treat today as a **reduced‑intensity strength day** – keep the core/hip session, but cut volume/weight by ~30 % and focus on quality and mobility.
-
-**Workout execution**  
-- **Warm‑up (10 min):** 5 min light jog or brisk walk, then dynamic hip‑mobility (leg swings, world’s greatest stretch) and 2 × 10 m A‑skips.  
-- **Main set:** Core/hip stability circuit (e.g., 3 × 30‑sec plank variations, 3 × 12‑15 single‑leg glute bridges, 3 × 12 banded clamshells). Use body‑weight or light resistance; stop the set if you feel excessive fatigue or joint pain.  
-- **Cool‑down (5 min):** Gentle stretching for hips, hamstrings, and lower back; finish with 2 min diaphragmatic breathing.
-
-**Readiness rationale**  
-- Sleep ≈ 7 h (moderate) and HRV at 100 % of baseline show your autonomic system is OK, but the low composite score flags overall stress.  
-- Acute load (647) is only slightly above chronic (613) → no acute overload, but the “low” flag suggests you’ve accumulated non‑training fatigue (e.g., mental or daily life stress).  
-- Keeping the session light respects the fatigue signal while still maintaining the planned neuromuscular stimulus for the upcoming long
+- **Decision:** Stick with today’s planned core/hip‑stability strength session, but keep the load light‑to‑moderate – treat it as a “maintenance” workout rather than a heavy strength day.  
+- **Execution:**  
+  - **Warm‑up:** 5 min easy jog or brisk walk + dynamic hip‑mobility drills (leg swings, hip circles).  
+  - **Main set:** 2‑3 rounds of the prescribed core/hip circuit (e.g., planks, side‑planks, glute bridges, single‑leg dead‑lifts). Aim for 10‑12 reps per exercise at a weight that feels easy‑
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
