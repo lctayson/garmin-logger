@@ -16,7 +16,7 @@
 - **Friday Core & Stability** — 0.0km · 23:51 · HR 94/126 max
   - TE: Aerobic Base · aerobic 0.3 · anaerobic 0
   - Readiness 40 → 49 (Find Time To Relax) · Recovery 7h 32m
-  - 🧠 The core‑stability session delivered a very low aerobic stimulus (AEROBIC 0.3) and minimal cardiovascular load (avg HR 94 bpm, body‑battery impact ‑1), which is appropriate for a recovery day given today’s low readiness score (40, “Low”) and sub‑optimal sleep (66). The modest load (3.8) and short duration (≈24 min) should help maintain neuromuscular stability without further taxing your already limited recovery resources. Consider prioritizing rest, hydration, and a light mobility routine tonight to improve tomorrow’s readiness before the next quality run.
+  - 🧠 The 24‑minute core‑stability session produced a very small aerobic stimulus (training‑effect label AEROBIC_BASE, aerobic 0.3) and essentially no anaerobic benefit, which aligns with its purpose as a non‑running day. Your average HR of 94 bpm (max 126) and a Garmin load of 3.8 confirm the cardiovascular demand was negligible compared with your typical run. Morning readiness was low (score 40, “Low” level) with a sleep score of 66 and an acute load of 647, indicating recovery capacity was already constrained before the workout. Because the session’s load is minimal, it’s appropriate today, but you should prioritize additional rest to be fresh for Thursday’s VO₂max‑quality workout.
 
 ## Next Session
 - **Planned:** Sat, Nov 14 — 14K EZ, HR ≤150; no fast finish
