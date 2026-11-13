@@ -19,7 +19,12 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled long‑run, but keep it strictly easy and skip any HM‑
+**Decision – Proceed, but dial back the volume/intensity**  
+Your ACWR is optimal (0.8) and resting HR is normal, but sleep was under 6 h and night‑HRV dropped to 41 ms (well below the 7‑day avg of 49 ms). That pattern flags moderate fatigue – enough to merit a lighter‑than‑usual long run rather than a hard finish.
+
+**Workout – Saturday long run (Bridge phase)**  
+- **Warm‑up:** 10 min easy jog (6:40‑7:15 / km) + 3 × 20‑sec strides at zone 5, easy jog back.  
+- **Main set:** Run at easy aerobic pace (≈ 6:45 / km, HR ≈ 145‑155 bpm). Keep the total
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
