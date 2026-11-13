@@ -19,14 +19,18 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Stick to today’s scheduled **core/hip‑stability strength day**, but trim the load (light‑to‑moderate volume, no heavy loading).  
+**Decision – adjust, don’t skip**  
+Your readiness score is low (40 → “Find time to relax”), but HRV is balanced, resting HR is low (57 bpm), and ACWR is optimal. Treat today as a **reduced‑intensity strength day** – keep the core/hip session, but cut volume/weight by ~30 % and focus on quality and mobility.
 
-**Workout execution** –  
-- **Warm‑up**: 5 min easy jog or brisk walk + dynamic hip‑mobility (leg swings, hip circles) and glute activation (clam shells, banded glute bridges).  
-- **Main set**: 2–3 circuits of body‑weight/core moves – e.g. 30 s plank, 30 s side‑plank each side, 12 × bird‑dog, 12 × single‑leg glute bridge, 12 × banded monster walks. Keep rest 45‑60 s between exercises; avoid adding heavy kettlebells or bar work.  
-- **Cool‑down**: 4‑5 min gentle walking + static stretch for hamstrings, hip flexors, and thoracic spine.  
+**Workout execution**  
+- **Warm‑up (10 min):** 5 min light jog or brisk walk, then dynamic hip‑mobility (leg swings, world’s greatest stretch) and 2 × 10 m A‑skips.  
+- **Main set:** Core/hip stability circuit (e.g., 3 × 30‑sec plank variations, 3 × 12‑15 single‑leg glute bridges, 3 × 12 banded clamshells). Use body‑weight or light resistance; stop the set if you feel excessive fatigue or joint pain.  
+- **Cool‑down (5 min):** Gentle stretching for hips, hamstrings, and lower back; finish with 2 min diaphragmatic breathing.
 
-**Readiness rationale** – HRV is “balanced/very good” and ACWR is optimal, so you’re not overloaded. The low readiness score stems mainly from modest sleep (≈7 h
+**Readiness rationale**  
+- Sleep ≈ 7 h (moderate) and HRV at 100 % of baseline show your autonomic system is OK, but the low composite score flags overall stress.  
+- Acute load (647) is only slightly above chronic (613) → no acute overload, but the “low” flag suggests you’ve accumulated non‑training fatigue (e.g., mental or daily life stress).  
+- Keeping the session light respects the fatigue signal while still maintaining the planned neuromuscular stimulus for the upcoming long
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
