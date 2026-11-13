@@ -79,7 +79,7 @@
         }
       }
     ],
-    "ai_analysis": "- **Decision:** Stick with today’s planned core/hip‑stability strength session, but keep the load light‑to‑moderate – treat it as a “maintenance” workout rather than a heavy strength day.  \n- **Execution:**  \n  - **Warm‑up:** 5 min easy jog or brisk walk + dynamic hip‑mobility drills (leg swings, hip circles).  \n  - **Main set:** 2‑3 rounds of the prescribed core/hip circuit (e.g., planks, side‑planks, glute bridges, single‑leg dead‑lifts). Aim for 10‑12 reps per exercise at a weight that feels easy‑",
+    "ai_analysis": "**Decision – modify** – Keep today’s planned Strength A (hip‑extension) but cut the load to a light activation/maintenance session rather than a heavy strength day.\n\n**Workout execution** –  \n- **Warm‑up (5 min)**: easy jog or brisk walk (2 min), then dynamic hip‑mobility circuit – leg swings, walking lunges, glute bridges, 10 reps each.  \n- **Main set**: 2 × 8‑10 reps of each exercise at RPE 6‑7 (moderate): barbell hip thrusts, single‑leg Romanian dead‑lifts, kettlebell goblet squats, banded clamshells. Keep",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
