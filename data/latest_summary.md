@@ -19,13 +19,9 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision – Proceed with today’s planned Friday strength/hip‑stability session, but keep the load moderate (≈60‑70 % of usual effort) and be ready to cut the volume if fatigue spikes.**  
-
-**Execution –**  
-- Warm‑up: 5 min easy dynamic mobility (leg swings, hip circles, body‑weight glute bridges).  
-- Main set: Follow the prescribed “Strength A – power/hip extension” routine (e.g., hip thrusts, single‑leg deadlifts, clamshells, side‑plank holds). Use a weight that feels comfortably heavy for 8‑12 rep sets; stop after 2‑3 sets per exercise instead of the usual 4 if you feel unusually tired.  
-- Recovery: 60‑90 s between sets, focus on controlled breathing.  
-- Cool‑down: 5 min light stretching and foam
+- **Decision:** Stick to the scheduled Friday core/hip‑stability session, but dial the volume/intensity down – treat it as a “recovery‑strength” day.  
+- **Warm‑up:** 5–10 min of easy dynamic mobility (leg swings, hip circles, ankle rolls) at a light pace; keep HR < 130 bpm.  
+- **Main set:** 2–3 sets of each core/hip exercise (e.g., glute bridges, clamshells, bird‑dogs, side planks). Perform each for 30–45 s at RPE 4
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
