@@ -19,12 +19,14 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Stick to the Friday strength day but **scale back** to a light, mobility‑focused core/hip routine (no heavy loads).  
+**Decision** – Stick to today’s scheduled **core/hip‑stability strength day**, but trim the load (light‑to‑moderate volume, no heavy loading).  
 
 **Workout execution** –  
-- **Warm‑up:** 5 min easy dynamic mobility (leg swings, hip circles, marching).  
-- **Main set:** 2 rounds of body‑weight core/hip stability moves (e.g., 30‑s plank, 12 glute bridges, 12 clamshells/side, 12 bird‑dogs each side). Keep effort at RPE 4–5; rest 30‑45 s between exercises.  
-- **Cool‑down:** 5
+- **Warm‑up**: 5 min easy jog or brisk walk + dynamic hip‑mobility (leg swings, hip circles) and glute activation (clam shells, banded glute bridges).  
+- **Main set**: 2–3 circuits of body‑weight/core moves – e.g. 30 s plank, 30 s side‑plank each side, 12 × bird‑dog, 12 × single‑leg glute bridge, 12 × banded monster walks. Keep rest 45‑60 s between exercises; avoid adding heavy kettlebells or bar work.  
+- **Cool‑down**: 4‑5 min gentle walking + static stretch for hamstrings, hip flexors, and thoracic spine.  
+
+**Readiness rationale** – HRV is “balanced/very good” and ACWR is optimal, so you’re not overloaded. The low readiness score stems mainly from modest sleep (≈7 h
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
