@@ -19,11 +19,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision – modify** – Keep today’s planned Strength A (hip‑extension) but cut the load to a light activation/maintenance session rather than a heavy strength day.
+**Decision – Proceed with today’s planned Friday strength/hip‑stability session, but keep the load moderate (≈60‑70 % of usual effort) and be ready to cut the volume if fatigue spikes.**  
 
-**Workout execution** –  
-- **Warm‑up (5 min)**: easy jog or brisk walk (2 min), then dynamic hip‑mobility circuit – leg swings, walking lunges, glute bridges, 10 reps each.  
-- **Main set**: 2 × 8‑10 reps of each exercise at RPE 6‑7 (moderate): barbell hip thrusts, single‑leg Romanian dead‑lifts, kettlebell goblet squats, banded clamshells. Keep
+**Execution –**  
+- Warm‑up: 5 min easy dynamic mobility (leg swings, hip circles, body‑weight glute bridges).  
+- Main set: Follow the prescribed “Strength A – power/hip extension” routine (e.g., hip thrusts, single‑leg deadlifts, clamshells, side‑plank holds). Use a weight that feels comfortably heavy for 8‑12 rep sets; stop after 2‑3 sets per exercise instead of the usual 4 if you feel unusually tired.  
+- Recovery: 60‑90 s between sets, focus on controlled breathing.  
+- Cool‑down: 5 min light stretching and foam
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
