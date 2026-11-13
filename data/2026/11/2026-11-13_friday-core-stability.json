@@ -97,7 +97,7 @@
         ]
       },
       "lap_count": 1,
-      "ai_analysis": "The Friday core‑stability session delivered only a minor aerobic stimulus (Aerobic 0.3 AEROBIC_BASE) and a negligible body‑battery impact (‑1 point), which is typical for a non‑running strength day. Your morning readiness score is low (40 / Low) with a modest sleep score (66) and 19.8 h of estimated recovery, so the session’s low load (3.8) aligns well with today’s recovery needs. No running main‑set data are present, so there’s nothing to verify against pacing or HR targets. Focus on rest and nutrition tonight to bring the readiness score back up for the upcoming Tuesday sub‑threshold workout.",
+      "ai_analysis": "The core‑stability session delivered a very low aerobic stimulus (AEROBIC 0.3) and minimal cardiovascular load (avg HR 94 bpm, body‑battery impact ‑1), which is appropriate for a recovery day given today’s low readiness score (40, “Low”) and sub‑optimal sleep (66). The modest load (3.8) and short duration (≈24 min) should help maintain neuromuscular stability without further taxing your already limited recovery resources. Consider prioritizing rest, hydration, and a light mobility routine tonight to improve tomorrow’s readiness before the next quality run.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
