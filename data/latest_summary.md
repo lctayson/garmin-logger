@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3.6 · anaerobic 0
   - MS: 14.03k @ 7:10 147bpm 0.83m 169spm 276ms 8.1cm 247w
   - Readiness 58 → 34 (Find Time To Relax) · Recovery 1d 8h 37m
-  - 🧠 The 14 km main set held a consistent 7:10 /km average (6:56–7:27 /km range) while heart rate rose gradually from 130 bpm to 152 bpm, staying within the Easy aerobic zone (≈145–155 bpm) and delivering a pure aerobic training effect (3.6 AEROBIC, 0 ANAEROBIC). Stamina fell to 68 % and body‑battery dropped –19 points, reflecting a noticeable fatigue accumulation despite the modest morning readiness score of 58. Because the session delivered no VO₂‑max or sub‑threshold stimulus, it met the bridge‑phase goal of easy volume but did not add any anaerobic load for the upcoming HM‑specific phase.
+  - 🧠 The 14 km main set was run at a steady 7:10 /km (range 6:56‑7:27) with a time‑weighted HR of 147 bpm, keeping within the easy‑aerobic zone (6:40‑7:15 /km, 145‑155 bpm) prescribed for Saturday long runs. Heart‑rate rose gradually from 130
 
 ## Next Session
 - **Planned:** Sun, Nov 15 — 8k EZ @ 6:50–7:20 ≤150bpm w/ optional 6-8x10s hills
