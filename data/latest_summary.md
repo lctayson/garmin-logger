@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3.6 · anaerobic 0
   - MS: 14.03k @ 7:10 147bpm 0.83m 169spm 276ms 8.1cm 247w
   - Readiness 58 → 34 (Find Time To Relax) · Recovery 1d 8h 37m
-  - 🧠 The 14 km main set was executed at an average 7:10 /km (range 6:56–7:27), keeping you squarely in the easy aerobic zone (≈6:40–7:15 /km, 145–155 bpm) and matching the prescribed pace for a bridge‑phase long run. Your time‑weighted heart rate rose steadily from 130 bpm early to 152 bpm late, which is expected in the 28‑33 °C morning heat and still below your LTHR‑based sub‑threshold threshold. With a pre‑run readiness score of 58 (moderate) and stamina falling to 68 % by the end, the session was appropriately challenging without overreaching.
+  - 🧠 The 14 km effort stayed squarely in the easy‑aerobic zone (average rep pace 7:10 /km, time‑weighted HR 147 bpm) and the gradual pace tightening from 7:27 to 6:56 /km occurred alongside a modest HR rise (130 → 152 bpm), showing a healthy positive drift rather than fatigue‑driven slowdown. Because the main set contains only easy‑pace reps, the lack of any anaerobic contribution aligns with the bridge‑phase focus on sub‑threshold volume. Your morning readiness was “moderate” (score 58); the post‑run dip to 34 reflects the 141‑point load and the acute‑load jump, not a failure of execution. Overall, the workout met its prescribed intensity and volume.
 
 ## Next Session
 - **Planned:** Sun, Nov 15 — 8k EZ @ 6:50–7:20 ≤150bpm w/ optional 6-8x10s hills
