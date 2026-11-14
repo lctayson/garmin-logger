@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3.6 · anaerobic 0
   - MS: 14.03k @ 7:10 147bpm 0.83m 169spm 276ms 8.1cm 247w
   - Readiness 58 → 34 (Find Time To Relax) · Recovery 1d 8h 37m
-  - 🧠 The 14 km main set was run at a steady 7:10 /km (range 6:56‑7:27) with a time‑weighted HR of 147 bpm, keeping within the easy‑aerobic zone (6:40‑7:15 /km, 145‑155 bpm) prescribed for Saturday long runs. Heart‑rate rose gradually from 130
+  - 🧠 The 14‑km main set stayed squarely in the easy aerobic zone (6:40–7:15 /km, 145–155 bpm), with the average rep pace of 7:10 /km and a gradual HR rise from 130 bpm early to 152 bpm late, matching the Saturday long‑run prescription and yielding an aerobic‑base training effect of 3.6. Stamina fell from 100 % to 68 % and body‑battery dropped 19 points, which is typical for a moderate‑intensity 1 h 40 min effort but signals you’ll need a good recovery before Tuesday’s sub‑threshold session. Morning readiness was “Moderate” (score 58), yet the post‑run snapshot fell to 34, reflecting the acute load (709) rather than a chronic issue. No anaerobic stimulus was present, so the workout met its easy‑run purpose without any red‑flag‑level stress.
 
 ## Next Session
 - **Planned:** Sun, Nov 15 — 8k EZ @ 6:50–7:20 ≤150bpm w/ optional 6-8x10s hills
