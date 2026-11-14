@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3.6 · anaerobic 0
   - MS: 14.03k @ 7:10 147bpm 0.83m 169spm 276ms 8.1cm 247w
   - Readiness 58 → 34 (Find Time To Relax) · Recovery 1d 8h 37m
-  - 🧠 The 14 km main set averaged 7:10 /km with a time‑weighted HR of ~147 bpm, keeping the entire work block within the easy‑aerobic zone (≈6:40‑7:15 /km, 145‑155 bpm) rather than the prescribed sub‑threshold range (5:20‑5:35 /km, 158‑168 bpm). Consequently the session delivered only aerobic‑base benefit (AEROBIC_BASE 3.6, no anaerobic load) and did not provide the sub‑threshold stimulus typically expected on Tuesday quality days. With a moderate morning readiness score (58) and a post‑run drop to 34, the low intensity was likely safe, but you may want to insert a true sub‑threshold interval (e.g., 3×8 min at ~5:30 /km, HR ≈ 160 bpm) to meet the phase’s development goals.
+  - 🧠 The 14 km main set averaged 7:10 /km (range 6:56–7:27), staying inside the easy‑aerobic target pace window of 6:40–7:15 /km. Heart‑rate rose smoothly from 130 bpm in the first rep to 152 bpm in the last, remaining within the easy‑zone range of ≈145–155 bpm and delivering the expected aerobic stimulus (AEROBIC_BASE = 3.6). Stamina dropped to 68 % by the end, which is typical for a ~
 
 ## Next Session
 - **Planned:** Sun, Nov 15 — 8k EZ @ 6:50–7:20 ≤150bpm w/ optional 6-8x10s hills
