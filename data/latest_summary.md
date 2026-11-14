@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3.6 · anaerobic 0
   - MS: 14.03k @ 7:10 147bpm 0.83m 169spm 276ms 8.1cm 247w
   - Readiness 58 → 34 (Find Time To Relax) · Recovery 1d 8h 37m
-  - 🧠 The 14‑km main set stayed squarely in the easy aerobic zone (average rep pace 7:10 /km, rep HR climbing from 130 bpm early to 152 bpm at the end), delivering an aerobic training effect of 3.6 and zero anaerobic contribution as expected for a Saturday long run. Stamina dropped from 100 % to 68 % and body‑battery fell 19 points, matching the moderate load (141) and the post‑run readiness score of 34, so the fatigue level is in line with the session’s volume. No red‑flag indicators (e.g., missing VO₂‑max stimulus or excessive HR spikes) appeared, indicating the workout was executed as prescribed for the current
+  - 🧠 The 14 km run stayed tightly clustered around the 7:10 /km average, with the slowest split at 7:27 and the quickest at 6:56—a modest ~5 % pace drift that indicates solid pacing consistency. Heart‑rate rose from 130 bpm in the first split to 152 bpm by the end, staying within the easy aerobic zone (≈145‑155 bpm) and producing no measurable anaerobic load. Stamina fell to 68 % and body‑battery dropped –19, which aligns with the moderate‑level readiness score (58) you logged before the run, but the post‑run readiness dip to 34 reflects the acute load rather than a problem with execution. For the bridge phase, this session delivered the intended aerobic base but did not provide the sub‑threshold stimulus expected on Tuesdays, so a targeted threshold block should follow to keep VO2 and lactate‑threshold development on track.
 
 ## Next Session
 - **Planned:** Sun, Nov 15 — 8k EZ @ 6:50–7:20 ≤150bpm w/ optional 6-8x10s hills
