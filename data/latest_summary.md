@@ -3,7 +3,7 @@
 ## Readiness: 58/100 (Moderate)
 > Balance Stress And Recovery
 
-- **VO₂max:** 45 ml/kg/min (Garmin precise)
+- **VO₂max:** 44.9 ml/kg/min (Garmin precise)
 - ⚠️ **RHR:** 62 bpm (7d avg: 58.1 bpm, trending up)
 - ⚠️ **HRV:** 41ms (7d avg: 49ms) · below 47–58ms
 - ⚠️ **Sleep:** 5h57 / 7h00 need (1h03 short) · score 67 · 7d avg 6h23 · 6/7 nights below need
@@ -11,38 +11,29 @@
 - ⚠️ **Limiter:** Sleep Score (50%)
 - **Also soft:** Sleep History, Stress History
 
-## Today's Session
-- **Planned:** Sat, Nov 14 — 14K EZ, HR ≤150; no fast finish
-- **Recommendation:** Keep it easy
-- **Reason:** short sleep last night (6.0h); ongoing sleep debt (7-day average 6.4h), 6/7 nights below need; resting heart rate is trending up; HRV is trending down; last-night HRV is below the balanced band; RHR-up/HRV-down recovery pattern.
-- **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
+## Today's Workout
 
-### 🧠 AI Coaching Guidance
+- **Malolos Running** — 14.03km · 1:40:29 · 7:10/km · HR 147/155 max
+  - TE: Aerobic Base · aerobic 3.6 · anaerobic 0
+  - MS: 14.03k @ 7:10 147bpm 0.83m 169spm 276ms 8.1cm 247w
+  - Readiness 58 → 34 (Find Time To Relax) · Recovery 1d 8h 37m
+  - 🧠 The 14 km main set averaged 7:10 /km with a time‑weighted HR of ~147 bpm, keeping the entire work block within the easy‑aerobic zone (≈6:40‑7:15 /km, 145‑155 bpm) rather than the prescribed sub‑threshold range (5:20‑5:35 /km, 158‑168 bpm). Consequently the session delivered only aerobic‑base benefit (AEROBIC_BASE 3.6, no anaerobic load) and did not provide the sub‑threshold stimulus typically expected on Tuesday quality days. With a moderate morning readiness score (58) and a post‑run drop to 34, the low intensity was likely safe, but you may want to insert a true sub‑threshold interval (e.g., 3×8 min at ~5:30 /km, HR ≈ 160 bpm) to meet the phase’s development goals.
 
-**Decision** – Run the scheduled easy long run, but keep it strictly aerobic and skip any HM‑effort finish.  
-
-**Execution** –  
-- **Warm‑up**: 10‑15 min easy jog, HR ≤ 150 bpm.  
-- **Main set**: 90 min (or up to 2 h if you feel solid) at easy aerobic pace ≈ 6:45‑7:15 /km, HR ≈ 145‑155 bpm, RPE ≤ 4.  
-- **Cool‑down**: 10 min very easy jog + a few gentle strides.  
-
-**Readiness rationale** – Sleep was only 5.9 h and night‑time HRV (41 ms) is below your 7‑day average
+## Next Session
+- **Planned:** Sun, Nov 15 — 8k EZ @ 6:50–7:20 ≤150bpm w/ optional 6-8x10s hills
+📌Coffee Run 10/16k
+- **Recommendation:** Adjust the workout
+- **Reason:** short sleep last night (6.0h); running tolerance is high (85.6%); ongoing sleep debt (7-day average 6.4h), 6/7 nights below need; resting heart rate is trending up; HRV is trending down; last-night HRV is below the balanced band; RHR-up/HRV-down recovery pattern.
+- **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
-## Latest Activity
-
-_Most recent activity (2026-11-13):_
-- **Friday Core & Stability** — 0.0km · 23:51 · HR 94/126 max
-  - TE: Aerobic Base · aerobic 0.3 · anaerobic 0
-  - 🧠 The 24‑minute core‑stability session produced a very small aerobic stimulus (training‑effect label AEROBIC_BASE, aerobic 0.3) and essentially no anaerobic benefit, which aligns with its purpose as a non‑running day. Your average HR of 94 bpm (max 126) and a Garmin load of 3.8 confirm the cardiovascular demand was negligible compared with your typical run. Morning readiness was low (score 40, “Low” level) with a sleep score of 66 and an acute load of 647, indicating recovery capacity was already constrained before the workout. Because the session’s load is minimal, it’s appropriate today, but you should prioritize additional rest to be fresh for Thursday’s VO₂max‑quality workout.
-
 ## Load & Trends
 
-- **ACWR:** 0.8 (Optimal) — acute 530 / chronic 597 (chronic range 477.6–895.5)
-- **7-day volume:** 31.26km vs 28-day avg 36.7km (-15%)
-- **Running tolerance:** 63.8% (Medium) — 31.3km of 64.6km weekly cap, acute impact load 41.2
-- **Aerobic Low:** 890.6 (target 816–1360 — in range)
+- **ACWR:** 1.1 (Optimal) — acute 709 / chronic 629 (chronic range 503.2–943.5)
+- **7-day volume:** 45.29km vs 28-day avg 40.2km (+13%)
+- ⚠️ **Running tolerance:** 85.6% (High) — 45.3km of 64.6km weekly cap, acute impact load 55.3
+- **Aerobic Low:** 1031.8 (target 816–1360 — in range)
 - **Aerobic High:** 1311.9 (target 816–1360 — in range)
 - ⚠️ **Anaerobic:** 33.7 (target 108–435 — -74 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
@@ -60,18 +51,18 @@ _Most recent activity (2026-11-13):_
 | W | Run + Strides/Hills | 7k · 54:35 | 71 |
 | T | 3x2k Thr | 9.2k · 59:06 | 218 |
 | F | Core & | 23:51 | 4 |
-| S | Rest | — | — |
+| S | Malolos Run | 14k · 1:40:29 | 141 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 6 | 31.27 km | 4:45:43 | 534.1 |
+| 7 | 45.30 km | 6:26:12 | 675.3 |
 
 ## Recent 4 Weeks
-_Average weekly running: 36.7 km_
+_Average weekly running: 40.2 km_
 
 | Week | Runs | Others | Load |
 |:---|---:|---:|---:|
-| Nov 8–14 | 31.26 km | 68 min | 534.1 |
+| Nov 8–14 | 45.29 km | 68 min | 675.3 |
 | Nov 1–7 | 37.13 km | 49 min | 626.8 |
 | Oct 25–31 | 41.16 km | 93 min | 633.6 |
 | Oct 18–24 | 37.14 km | 55 min | 518.8 |
