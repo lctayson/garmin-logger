@@ -11,34 +11,25 @@
 - ⚠️ **Limiter:** Sleep Score (49%)
 - **Also soft:** Sleep History, Stress History
 
-## Today's Session
-- **Planned:** Sun, Nov 15 — 8k EZ @ 6:50–7:20 ≤150bpm w/ optional 6-8x10s hills
-📌Coffee Run 10/16k
-- **Recommendation:** Adjust the workout
+## Today's Workout
+
+- **Malolos Running** — 7.03km · 51:10 · 7:17/km · HR 144/153 max
+  - TE: Aerobic Base · aerobic 3 · anaerobic 0
+  - MS: 7.03k @ 7:17 144bpm 0.82m 168spm 276ms 8.0cm 241w
+  - 🧠 The 7 km run stayed squarely in the easy‑aerobic zone—average rep pace 7:18 /km (range 7:09–7:32) and HR climbing from 125 bpm early to 151 bpm late, matching the 145‑155 bpm target for Zone 6. There was no meaningful pace drift (±3 % across splits) and the training‑effect score of 3.0 AEROBIC_BASE confirms the intended aerobic stimulus. Despite the low morning readiness score (39 / Low) driven by poor sleep, the session’s modest body‑battery loss (‑11) and stamina dip to 84 % suggest the workout was well tolerated. Continue to prioritize sleep recovery; the easy pace and HR profile mean today’s run did not add excessive stress.
+
+## Next Session
+- **Planned:** Mon, Nov 16 — Strength A
+- **Recommendation:** Keep it easy
 - **Reason:** low readiness (39/100); short sleep last night (5.0h); ongoing sleep debt (7-day average 6.3h), 7/7 nights below need; resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
-- **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
-
-### 🧠 AI Coaching Guidance
-
-**Decision** – Proceed with today’s scheduled Sunday workout, but **drop the optional hill‑sprints** and keep the run fully in the recovery zone.
-
-**Execution**  
-- **Warm‑up**: 10‑15 min easy jog + 2‑3 × 30 s dynamic drills (high‑knee, butt‑kick
+- **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
-
-## Latest Activity
-
-_Most recent activity (2026-11-14):_
-- **Malolos Running** — 14.03km · 1:40:29 · 7:10/km · HR 147/155 max
-  - TE: Aerobic Base · aerobic 3.6 · anaerobic 0
-  - MS: 14.03k @ 7:10 147bpm 0.83m 169spm 276ms 8.1cm 247w
-  - 🧠 The 14 km effort stayed squarely in the easy‑aerobic zone (average rep pace 7:10 /km, time‑weighted HR 147 bpm) and the gradual pace tightening from 7:27 to 6:56 /km occurred alongside a modest HR rise (130 → 152 bpm), showing a healthy positive drift rather than fatigue‑driven slowdown. Because the main set contains only easy‑pace reps, the lack of any anaerobic contribution aligns with the bridge‑phase focus on sub‑threshold volume. Your morning readiness was “moderate” (score 58); the post‑run dip to 34 reflects the 141‑point load and the acute‑load jump, not a failure of execution. Overall, the workout met its prescribed intensity and volume.
 
 ## Load & Trends
 
 - **ACWR:** 0.9 (Optimal) — acute 579 / chronic 613 (chronic range 490.4–919.5)
-- **7-day volume:** 37.26km vs 28-day avg 38.4km (-3%)
+- **7-day volume:** 44.29km vs 28-day avg 40.2km (+10%)
 - **Running tolerance:** 73.2% (Medium) — 37.3km of 64.6km weekly cap, acute impact load 47.3
 - **Aerobic Low:** 976.2 (target 816–1360 — in range)
 - **Aerobic High:** 1311.9 (target 816–1360 — in range)
@@ -58,18 +49,18 @@ _Most recent activity (2026-11-14):_
 | T | 3x2k Thr | 9.2k · 59:06 | 218 |
 | F | Core & | 23:51 | 4 |
 | S | Malolos Run | 14k · 1:40:29 | 141 |
-| S | Rest | — | — |
+| S | Malolos Run | 7k · 51:10 | 80 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 6 | 37.27 km | 5:27:38 | 590 |
+| 7 | 44.30 km | 6:18:48 | 669.5 |
 
 ## Recent 4 Weeks
-_Average weekly running: 38.4 km_
+_Average weekly running: 40.2 km_
 
 | Week | Runs | Others | Load |
 |:---|---:|---:|---:|
-| Nov 9–15 | 37.26 km | 68 min | 590 |
+| Nov 9–15 | 44.29 km | 68 min | 669.5 |
 | Nov 2–8 | 45.16 km | 49 min | 690.5 |
 | Oct 26–Nov 1 | 34.14 km | 93 min | 579.3 |
 | Oct 19–25 | 37.14 km | 55 min | 539.1 |
