@@ -1,29 +1,34 @@
 # Daily Check — 2026-11-15
 
-## Readiness: 53/100 (Moderate)
-> Recovered And Ready
+## Readiness: 39/100 (Low)
+> Focus On Sleep Quality
 
-- **Recovery remaining:** 16h24
-- ⚠️ **Limiter:** Sleep Score (0%)
+- **VO₂max:** 44.9 ml/kg/min (Garmin precise)
+- ⚠️ **RHR:** 56 bpm (7d avg: 57.7 bpm, trending up)
+- **HRV:** 53ms (7d avg: 50ms) · within 47–58ms
+- ⚠️ **Sleep:** 5h03 / 7h30 need (2h27 short) · score 66 · 7d avg 6h17 · 7/7 nights below need
+- **Recovery remaining:** 11h18
+- ⚠️ **Limiter:** Sleep Score (49%)
 - **Also soft:** Sleep History, Stress History
 
 ## Today's Session
 - **Planned:** Sun, Nov 15 — 8k EZ @ 6:50–7:20 ≤150bpm w/ optional 6-8x10s hills
 📌Coffee Run 10/16k
 - **Recommendation:** Adjust the workout
-- **Reason:** ongoing sleep debt (7-day average 6.5h), 6/7 nights below need; resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
+- **Reason:** low readiness (39/100); short sleep last night (5.0h); ongoing sleep debt (7-day average 6.3h), 7/7 nights below need; resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
 - **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Sunday easy/recovery run. Skip the optional hill‑sprint block unless you feel fully refreshed and calf‑free.
+**Decision** – Proceed with today’s scheduled **Sunday easy/recovery run**, but **skip the hill‑sprint component** and keep the total effort short (≈20 min) to honor the low sleep‑quality score.
 
 **Workout execution** –  
-- **Warm‑up:** 5–10 min easy jog, HR ≤150 bpm, RPE 2‑3.  
-- **Main set:** Continuous easy run at ~7:10‑7:45 min/km (HR 145‑155 bpm). Keep effort conversational; no strict pace target.  
-- **Cool‑down:** 5 min very easy jog or walk, gradually bringing HR down.
+- **Warm‑up:** 5‑7 min easy jog (≈7:30 km / min, HR ≤ 150 bpm).  
+- **Main set:** 15‑20 min continuous run in the Easy aerobic zone (≈6:50–7:15 km / min, HR ≈ 145‑155 bpm).  
+- **Cool‑down:** 5 min very easy jog + 2‑3 min light stretching.  
+*(No 6‑8×10 s hill sprints today.)*
 
-**Readiness rationale** – HRV is at 100 % (very good) and recovery‑time is 74 % (good), indicating the autonomic system is primed. Sleep history is only moderate (49 %) and the overall readiness score is 53 (moderate), so
+**Readiness rationale** – Sleep was only 5 h (sleep‑score 66
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -37,10 +42,15 @@ _Most recent activity (2026-11-14):_
 
 ## Load & Trends
 
+- **ACWR:** 0.9 (Optimal) — acute 579 / chronic 613 (chronic range 490.4–919.5)
 - **7-day volume:** 37.26km vs 28-day avg 38.4km (-3%)
 - **Running tolerance:** 73.2% (Medium) — 37.3km of 64.6km weekly cap, acute impact load 47.3
-- ⚠️ **Sleep (7d avg):** 6h30, 6/7 nights below need, trending flat
-- ⚠️ **RHR (7d avg):** 58.0, trending up
+- **Aerobic Low:** 976.2 (target 816–1360 — in range)
+- **Aerobic High:** 1311.9 (target 816–1360 — in range)
+- ⚠️ **Anaerobic:** 33.7 (target 108–435 — -74 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- ⚠️ **Sleep (7d avg):** 6h17, 7/7 nights below need, trending down
+- ⚠️ **RHR (7d avg):** 57.7, trending up
 - ⚠️ **HRV:** trending down
 
 ## This Week (Nov 9–15)
