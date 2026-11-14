@@ -627,7 +627,7 @@
         ]
       },
       "lap_count": 15,
-      "ai_analysis": "The 14 km run stayed tightly clustered around the 7:10 /km average, with the slowest split at 7:27 and the quickest at 6:56—a modest ~5 % pace drift that indicates solid pacing consistency. Heart‑rate rose from 130 bpm in the first split to 152 bpm by the end, staying within the easy aerobic zone (≈145‑155 bpm) and producing no measurable anaerobic load. Stamina fell to 68 % and body‑battery dropped –19, which aligns with the moderate‑level readiness score (58) you logged before the run, but the post‑run readiness dip to 34 reflects the acute load rather than a problem with execution. For the bridge phase, this session delivered the intended aerobic base but did not provide the sub‑threshold stimulus expected on Tuesdays, so a targeted threshold block should follow to keep VO2 and lactate‑threshold development on track.",
+      "ai_analysis": "The 14 km main‑set held a steady 7:10 /km average (range 6:56–7:27), which sits squarely in the prescribed easy‑aerobic zone (6:40–7:15 /km) and matches the modest HR rise from ~130 bpm early to ~152 bpm late, staying within the 145–155 bpm band for most of the run. The training‑effect output of “AEROBIC_BASE” and zero anaerobic contribution confirm that the session delivered the intended aerobic endurance stimulus without any sub‑threshold or VO2‑max intensity. Stamina fell to 68 % and body‑battery dropped –19 pts, which is typical for a 100‑minute effort at this pace, but the post‑run readiness dip to 34 reflects the acute load rather than a problem with the workout itself.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
