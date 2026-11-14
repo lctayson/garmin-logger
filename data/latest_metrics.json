@@ -75,7 +75,7 @@
         }
       }
     ],
-    "ai_analysis": "**Decision** – Proceed with today’s scheduled **Sunday easy/recovery run**, but **skip the hill‑sprint component** and keep the total effort short (≈20 min) to honor the low sleep‑quality score.\n\n**Workout execution** –  \n- **Warm‑up:** 5‑7 min easy jog (≈7:30 km / min, HR ≤ 150 bpm).  \n- **Main set:** 15‑20 min continuous run in the Easy aerobic zone (≈6:50–7:15 km / min, HR ≈ 145‑155 bpm).  \n- **Cool‑down:** 5 min very easy jog + 2‑3 min light stretching.  \n*(No 6‑8×10 s hill sprints today.)*\n\n**Readiness rationale** – Sleep was only 5 h (sleep‑score 66",
+    "ai_analysis": "**Decision** – Proceed with today’s scheduled **easy/recovery run**,",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
