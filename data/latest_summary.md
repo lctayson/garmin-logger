@@ -20,7 +20,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **easy/recovery run**,
+**Decision** – Proceed with today’s scheduled Sunday workout, but **drop the optional hill‑sprints** and keep the run fully in the recovery zone.
+
+**Execution**  
+- **Warm‑up**: 10‑15 min easy jog + 2‑3 × 30 s dynamic drills (high‑knee, butt‑kick
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
