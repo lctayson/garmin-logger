@@ -3,7 +3,7 @@
 ## Readiness: 39/100 (Low)
 > Focus On Sleep Quality
 
-- **VO₂max:** 44.9 ml/kg/min (Garmin precise)
+- **VO₂max:** 44.8 ml/kg/min (Garmin precise)
 - ⚠️ **RHR:** 56 bpm (7d avg: 57.7 bpm, trending up)
 - **HRV:** 53ms (7d avg: 50ms) · within 47–58ms
 - ⚠️ **Sleep:** 5h03 / 7h30 need (2h27 short) · score 66 · 7d avg 6h17 · 7/7 nights below need
@@ -16,7 +16,8 @@
 - **Malolos Running** — 7.03km · 51:10 · 7:17/km · HR 144/153 max
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 7.03k @ 7:17 144bpm 0.82m 168spm 276ms 8.0cm 241w
-  - 🧠 The 7 km run stayed squarely in the easy‑aerobic zone—average rep pace 7:18 /km (range 7:09–7:32) and HR climbing from 125 bpm early to 151 bpm late, matching the 145‑155 bpm target for Zone 6. There was no meaningful pace drift (±3 % across splits) and the training‑effect score of 3.0 AEROBIC_BASE confirms the intended aerobic stimulus. Despite the low morning readiness score (39 / Low) driven by poor sleep, the session’s modest body‑battery loss (‑11) and stamina dip to 84 % suggest the workout was well tolerated. Continue to prioritize sleep recovery; the easy pace and HR profile mean today’s run did not add excessive stress.
+  - Readiness 39 → 32 (Focus On Sleep Quality) · Recovery 21h 9m
+  - 🧠 Given your morning readiness of 39 driven by sub-par sleep (score 66), keeping this Sunday run strictly easy was the right call. You paced the 7 km smoothly between 7:09 and 7:32/km (averaging 7:18/km), and heart rate remained capped under your recovery/easy aerobic ceiling, topping out at 151 bpm on the final splits with a 144 bpm average. It delivered an honest 3.0 Aerobic Base stimulus without digging into the fatigue hole ahead of tomorrow’s strength work.
 
 ## Next Session
 - **Planned:** Mon, Nov 16 — Strength A
@@ -28,10 +29,10 @@
 
 ## Load & Trends
 
-- **ACWR:** 0.9 (Optimal) — acute 579 / chronic 613 (chronic range 490.4–919.5)
+- **ACWR:** 1.0 (Optimal) — acute 680 / chronic 631 (chronic range 504.8–946.5)
 - **7-day volume:** 44.29km vs 28-day avg 40.2km (+10%)
-- **Running tolerance:** 73.2% (Medium) — 37.3km of 64.6km weekly cap, acute impact load 47.3
-- **Aerobic Low:** 976.2 (target 816–1360 — in range)
+- **Running tolerance:** 84.1% (High) — 44.3km of 64.6km weekly cap, acute impact load 54.3
+- **Aerobic Low:** 1055.6 (target 816–1360 — in range)
 - **Aerobic High:** 1311.9 (target 816–1360 — in range)
 - ⚠️ **Anaerobic:** 33.7 (target 108–435 — -74 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
