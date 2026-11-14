@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3.6 · anaerobic 0
   - MS: 14.03k @ 7:10 147bpm 0.83m 169spm 276ms 8.1cm 247w
   - Readiness 58 → 34 (Find Time To Relax) · Recovery 1d 8h 37m
-  - 🧠 The 14 km main‑set held a steady 7:10 /km average (range 6:56–7:27), which sits squarely in the prescribed easy‑aerobic zone (6:40–7:15 /km) and matches the modest HR rise from ~130 bpm early to ~152 bpm late, staying within the 145–155 bpm band for most of the run. The training‑effect output of “AEROBIC_BASE” and zero anaerobic contribution confirm that the session delivered the intended aerobic endurance stimulus without any sub‑threshold or VO2‑max intensity. Stamina fell to 68 % and body‑battery dropped –19 pts, which is typical for a 100‑minute effort at this pace, but the post‑run readiness dip to 34 reflects the acute load rather than a problem with the workout itself.
+  - 🧠 The 14‑rep main set lasted 100 min at an average pace of 7:10 /km (range 6:56–7:27), which falls firmly in the easy aerobic zone (6:40–7:15 /km) rather than the sub‑threshold target (≈5:20–5:35 /km) prescribed for Tuesday sessions. Rep‑by‑rep heart‑rate climbed from 130 bpm to 152 bpm, staying well below the LTHR‑based sub‑threshold band (≈158–168 bpm), so the work delivered a pure endurance base stimulus without the
 
 ## Next Session
 - **Planned:** Sun, Nov 15 — 8k EZ @ 6:50–7:20 ≤150bpm w/ optional 6-8x10s hills
