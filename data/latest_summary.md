@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 7.03k @ 7:17 144bpm 0.82m 168spm 276ms 8.0cm 241w
   - Readiness 39 → 32 (Focus On Sleep Quality) · Recovery 21h 9m
-  - 🧠 The seven‑rep main set stayed firmly in the easy‑aerobic zone (≈6:40–7:15 /km) with a modest pace spread of 7:09 – 7:32 /km and an average rep HR rising from 125 bpm to 151 bpm, ending just below the upper easy HR range (≈155 bpm). Because the workout was entirely continuous (no separate warm‑up/cool‑down), the slight upward drift in both pace (≈5 % slower from the first to the last rep) and HR is expected for an easy run on a warm morning and does not indicate a loss of sub‑threshold stimulus. With a morning readiness score of 39 (Low) and sleep score 66, the easy intensity aligns well with the athlete’s reduced recovery capacity and avoids unnecessary load. No anaerobic or VO2‑max stimulus was present, which is appropriate for today’s low‑readiness day.
+  - 🧠 Given the low morning readiness (39, sleep score 66), keeping this Sunday run strictly easy was the right call. You executed well within the recovery/easy aerobic boundary, averaging 7:18/km with HR settling predictably from 141 bpm up to 151 bpm across the 7 km. Capping peak HR at 153 bpm ensured zero unwanted cardiac strain on an under-recovered system.
 
 ## Next Session
 - **Planned:** Mon, Nov 16 — Strength A
