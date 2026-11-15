@@ -12,10 +12,17 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned **Monday Strength A (hip‑extension/power) session**.  
-**Warm‑up / Main set / Cool‑down** – 5 min light jog or bike + dynamic leg swings, then 3 × 8–10 reps each of hip thrusts, single‑leg deadlifts, Bulgarian split squats, and glute bridges (focus on controlled tempo, moderate load). Finish with 5 min of gentle stretching for the hips, hamstrings and lower back.  
-**Readiness rationale** – Resting HR 57 bpm is in the normal range for you and you have no recorded load from prior days, suggesting low cumulative fatigue. With no sleep or HRV data available, there are no clear red flags; the modest cardiovascular strain of a strength day fits your current recovery profile.  
-**In‑session guardrails** – If your heart rate spikes above 150 bpm during the warm‑up, or you feel unusual joint pain, dizziness, or excessive fatigue, cut the load (e.g., reduce weight or drop a set) and focus on form. Keep the early‑morning heat in mind: stay hydrated, avoid long static holds that raise core temperature, and stop the session if you notice overheating symptoms.
+**Decision** – Your Monday Strength A (hip‑extension/power) session is cleared; go ahead as scheduled.
+
+**Execution** – Follow the exact Strength A routine you have in the training plan (warm‑up, prescribed hip‑extension sets, cool‑down). If you normally do a 5‑minute dynamic warm‑up, the listed strength circuit, then a brief mobility cool‑down, keep that order.
+
+**Readiness rationale** – Resting HR 57 bpm is well below your typical 60 ± 2 bpm range, indicating good autonomic recovery. No other red‑flag metrics (sleep, HRV, load) are reported, so there’s no evidence to dial back intensity.
+
+**Guardrails** – - Watch for any sudden spike in HR or early fatigue during the first set; if HR jumps > 10 bpm above resting or you feel “worn out,” cut the load by 30 % or stop.  
+- Keep an eye on joint/hip pain; any sharp discomfort = stop the exercise.  
+- Maintain proper form throughout—if you notice form breaking, reduce weight or reps.  
+
+**Fallback** – If any of the above triggers occur, switch to a light mobility/foam‑roll
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
