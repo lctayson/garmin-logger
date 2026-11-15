@@ -12,17 +12,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Your Monday Strength A (hip‑extension/power) session is cleared; go ahead as scheduled.
-
-**Execution** – Follow the exact Strength A routine you have in the training plan (warm‑up, prescribed hip‑extension sets, cool‑down). If you normally do a 5‑minute dynamic warm‑up, the listed strength circuit, then a brief mobility cool‑down, keep that order.
-
-**Readiness rationale** – Resting HR 57 bpm is well below your typical 60 ± 2 bpm range, indicating good autonomic recovery. No other red‑flag metrics (sleep, HRV, load) are reported, so there’s no evidence to dial back intensity.
-
-**Guardrails** – - Watch for any sudden spike in HR or early fatigue during the first set; if HR jumps > 10 bpm above resting or you feel “worn out,” cut the load by 30 % or stop.  
-- Keep an eye on joint/hip pain; any sharp discomfort = stop the exercise.  
-- Maintain proper form throughout—if you notice form breaking, reduce weight or reps.  
-
-**Fallback** – If any of the above triggers occur, switch to a light mobility/foam‑roll
+* **Decision:** Proceed as planned with your scheduled non-running strength work (Strength A: power/hip extension).
+* **Workout execution:** No running scheduled today. Focus on clean movement quality and explosive hip extension without accumulating excessive eccentric fatigue ahead of tomorrow's sub-threshold session. 
+* **Readiness rationale:** Resting HR is solid at 57 bpm; detailed metrics (sleep, HRV, ACWR) are unavailable, but with no adverse recovery signals recorded and a rest/strength day on tap, there is no reason to alter the plan.
+* **In-session guardrails:** Keep lifting loads controlled and stop short of muscular failure—if you feel lingering fatigue from the weekend long run, reduce volume by one set per exercise so your legs remain fresh for Tuesday's threshold intervals.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
