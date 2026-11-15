@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 7.03k @ 7:17 144bpm 0.82m 168spm 276ms 8.0cm 241w
   - Readiness 39 → 32 (Focus On Sleep Quality) · Recovery 21h 9m
-  - 🧠 The 7 km run was executed entirely as an easy‑aerobic effort: the main‑set paces hovered between 7:09 /km and 7:32 /km (average 7:18 /km) while heart rates rose from 125 bpm to about 151 bpm, well below your LTHR of 171 bpm and consistent with the “easy aerobic” zone in the bridge phase. The training‑effect rating (AEROBIC_BASE = 3.0, no anaerobic benefit) aligns with that intensity, and the load of ~80 AU and a modest –11 body‑battery impact indicate the session was well‑tolerated despite a low morning readiness score (39, “Low”) driven by poor sleep. Given today’s low readiness, keep tomorrow’s work in the easy zone and avoid adding any hard VO₂max or threshold work until recovery improves.
+  - 🧠 The 7 km continuous effort held an average pace of 7:18 min/km (range 7:09–7:32) with rep‑average HR climbing from 125 bpm to 151 bpm, staying within the easy aerobic zone (≈6:40–7:15 km and ≤155 bpm) and showing only a modest pace drift of about 3 % across the run. Given the low morning readiness score of 39 and a sleep score of 66, the session’s intensity was appropriate, but the elevated HR toward the end suggests you should prioritize extra recovery (e.g., skip strides or hill work) before the next quality day.
 
 ## Next Session
 - **Planned:** Mon, Nov 16 — Strength A
