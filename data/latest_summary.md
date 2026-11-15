@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 7.03k @ 7:17 144bpm 0.82m 168spm 276ms 8.0cm 241w
   - Readiness 39 → 32 (Focus On Sleep Quality) · Recovery 21h 9m
-  - 🧠 The 7 km run stayed firmly in the easy‑aerobic zone (average rep pace 7:18 /km, rep HR climbing from 125 bpm to 151 bpm) and produced a pure aerobic base stimulus (AEROBIC_BASE 3.0, no anaerobic load). Pace drift was minimal (range 7:09–7:32), so the session was executed consistently with the prescribed easy effort. Stamina dipped from 99 % to 84 % and the load of 79.5 AU is moderate, matching the low readiness score (39) and suggesting the workout contributed to the observed fatigue but did not exceed what the current bridge‑phase plan expects.
+  - 🧠 The 7 km main set was run as a continuous block at an average pace of 7:18 /km (range 7:09–7:32) with a time‑weighted HR of 144 bpm, staying just inside the easy aerobic zone (≈6:40–7:15 /km, 145–155 bpm) and showing the expected gradual HR rise from 125 bpm to 151 bpm across the reps. Training‑effect output confirms only an aerobic‑base benefit (AEROBIC = 3.0, anaerobic = 0.0), which aligns with the prescribed easy‑run focus and does not raise any concern about missing a VO2‑max stimulus. Despite a low morning readiness score (39, “Low”) driven by sleep quality, the execution remained stable and the modest body‑battery drop (‑11) suggests the session was well‑tolerated.
 
 ## Next Session
 - **Planned:** Mon, Nov 16 — Strength A
