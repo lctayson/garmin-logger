@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 7.03k @ 7:17 144bpm 0.82m 168spm 276ms 8.0cm 241w
   - Readiness 39 → 32 (Focus On Sleep Quality) · Recovery 21h 9m
-  - 🧠 The main set was a continuous easy‑run block; the early two splits were slower (7:32 / 125 bpm, 7:11 / 141 bpm) than the easy‑aerobic target of 6:40–7:15 /km and 145–155 bpm, while the later five reps settled near the upper edge of that zone (7:09–7:20 /km, 148–151 bpm). The progressive HR rise shows the effort gradually aligned with the intended zone, but the overall stimulus remained modest (AEROBIC_BASE 3.0, no anaerobic benefit). A low morning readiness score (39 Low) and a –11 body‑battery impact likely contributed to the slower start and the need to “warm up” into the target pace. No other risk signals appear; the run fulfilled an easy‑aerobic purpose, though a
+  - 🧠 The 7 × ≈7 min reps stayed in the 7:09–7:32 min/km range with HR climbing from 125 to 151 bpm, which places the entire main set firmly in the easy aerobic zone rather than the sub‑threshold target of 5:20–5:35 min/km and 158–168 bpm for Tuesdays. Pace drift was minimal (≈23 s spread) and HR rose steadily, but the stimulus was far below the intended intensity for this phase. With a morning readiness score of 39 (Low) and a sleep score of 66, you’re running on limited recovery, so consider easing the next hard session or adding extra sleep.
 
 ## Next Session
 - **Planned:** Mon, Nov 16 — Strength A
