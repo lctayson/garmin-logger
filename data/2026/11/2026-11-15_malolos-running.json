@@ -417,7 +417,7 @@
         ]
       },
       "lap_count": 8,
-      "ai_analysis": "The 7 km effort was a single main‑set run at an average pace of 7:18 /km—just outside the easy aerobic window (6:40‑7:15 /km) and with an average HR of 144 bpm, which is firmly in the recovery range, confirming it was a low‑intensity session as planned. Pace drift was modest (7:09 → 7:32 /km) while HR climbed from 125 to 151 bpm",
+      "ai_analysis": "The 7 km run stayed firmly in the easy‑aerobic zone (average rep pace 7:18 /km, rep HR climbing from 125 bpm to 151 bpm) and produced a pure aerobic base stimulus (AEROBIC_BASE 3.0, no anaerobic load). Pace drift was minimal (range 7:09–7:32), so the session was executed consistently with the prescribed easy effort. Stamina dipped from 99 % to 84 % and the load of 79.5 AU is moderate, matching the low readiness score (39) and suggesting the workout contributed to the observed fatigue but did not exceed what the current bridge‑phase plan expects.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
