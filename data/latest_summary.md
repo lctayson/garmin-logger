@@ -12,10 +12,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-* **Decision:** Proceed as planned with your scheduled non-running strength work (Strength A: power/hip extension).
-* **Workout execution:** No running scheduled today. Focus on clean movement quality and explosive hip extension without accumulating excessive eccentric fatigue ahead of tomorrow's sub-threshold session. 
-* **Readiness rationale:** Resting HR is solid at 57 bpm; detailed metrics (sleep, HRV, ACWR) are unavailable, but with no adverse recovery signals recorded and a rest/strength day on tap, there is no reason to alter the plan.
-* **In-session guardrails:** Keep lifting loads controlled and stop short of muscular failure—if you feel lingering fatigue from the weekend long run, reduce volume by one set per exercise so your legs remain fresh for Tuesday's threshold intervals.
+- **Decision:** Proceed with today’s planned **Monday Strength A (hip‑extension/power) session** – nothing in the readiness data (resting HR 57 bpm, well below your LTHR) suggests you need to cut back or skip.  
+- **Workout execution:** Warm‑up 5‑10 min of dynamic mobility (leg swings, hip circles, light banded glute activation). Main set: 3 × 8‑12 reps of each hip‑extension movement (glute bridges, single‑leg dead‑lifts, banded monster walks) at a moderate load that lets you keep form; rest 60‑90 s between sets. Finish with 5 min of static stretching/foam‑rolling for hips and hamstrings.  
+- **Readiness rationale:** A resting HR of 57 bpm is low and indicates good autonomic recovery; no spikes in load or ACWR were reported, and you have no sleep/H‑RV data to flag a problem. In isolation, the HR reading alone isn’t decisive, but combined with the lack of any negative trends it supports proceeding as planned.  
+- **In‑session guardrails:** Watch for unusually high perceived effort, joint pain, or a rapid rise in HR during the warm‑up; if you feel excessive fatigue or any sharp discomfort, drop the load (e.g., use lighter weight or fewer reps
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
