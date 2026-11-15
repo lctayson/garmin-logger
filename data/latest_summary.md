@@ -12,14 +12,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned **Strength A (power/hip‑extension)** session; nothing in the limited readiness data (resting HR 57 bpm) flags a need to cut it.
-
-**Workout execution** – 1) **Warm‑up**: 8‑10 min easy jog or bike + dynamic drills (leg swings, hip circles, body‑weight lunges).  
-2) **Main set** (≈30 min): 3 × 8‑12 reps each of single‑leg deadlift, hip thrust, Bulgarian split‑squat, and glute‑bridge; use a load that lets you keep strict form (RPE 6‑7).  
-3) **Core/hip stability**: 2 × 30‑sec side‑plank + 2 × 10 bird‑dog reps per side.  
-4) **Cool‑down**: 5‑min light mobility (foam roll hips/quads, static stretch 20‑30 s each).
-
-**Readiness rationale** – A resting HR of 57 bpm suggests good autonomic recovery; with no alarming sleep or HRV data, the nervous system appears primed for strength work. No recent heavy running load (Monday is
+**Decision** – Proceed with today’s planned **Monday Strength A (hip‑extension/power) session**.  
+**Warm‑up / Main set / Cool‑down** – 5 min light jog or bike + dynamic leg swings, then 3 × 8–10 reps each of hip thrusts, single‑leg deadlifts, Bulgarian split squats, and glute bridges (focus on controlled tempo, moderate load). Finish with 5 min of gentle stretching for the hips, hamstrings and lower back.  
+**Readiness rationale** – Resting HR 57 bpm is in the normal range for you and you have no recorded load from prior days, suggesting low cumulative fatigue. With no sleep or HRV data available, there are no clear red flags; the modest cardiovascular strain of a strength day fits your current recovery profile.  
+**In‑session guardrails** – If your heart rate spikes above 150 bpm during the warm‑up, or you feel unusual joint pain, dizziness, or excessive fatigue, cut the load (e.g., reduce weight or drop a set) and focus on form. Keep the early‑morning heat in mind: stay hydrated, avoid long static holds that raise core temperature, and stop the session if you notice overheating symptoms.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
