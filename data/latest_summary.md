@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0
   - MS: 7.03k @ 7:17 144bpm 0.82m 168spm 276ms 8.0cm 241w
   - Readiness 39 → 32 (Focus On Sleep Quality) · Recovery 21h 9m
-  - 🧠 The seven‑rep main set held a steady pace between 7:09 and 7:32 min/km (average 7:18) with a time‑weighted HR of 144 bpm, placing the effort squarely in the easy aerobic zone (≈145–155 bpm) rather than the sub‑threshold range prescribed for Tuesdays. Stamina dropped from 99 % to 84 % and body‑battery fell by 11 points, which aligns with the modest aerobic load (aerobic TE 3.0, no anaerobic contribution). Morning readiness was low (score 39, “Low”) and sleep quality was only 66 %—both suggest the athlete was not fully recovered and may need extra rest before the next quality session.
+  - 🧠 The 7 km effort was a single main‑set run at an average pace of 7:18 /km—just outside the easy aerobic window (6:40‑7:15 /km) and with an average HR of 144 bpm, which is firmly in the recovery range, confirming it was a low‑intensity session as planned. Pace drift was modest (7:09 → 7:32 /km) while HR climbed from 125 to 151 bpm
 
 ## Next Session
 - **Planned:** Mon, Nov 16 — Strength A
