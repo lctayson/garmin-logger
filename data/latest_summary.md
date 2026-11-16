@@ -19,15 +19,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **Monday Strength‑A (hip‑extension/power) session**. No need to cut volume; readiness is solid.
+**Decision** – Proceed with today’s planned **Strength A (power/hip‑extension)** session; the readiness profile is solid (good sleep, balanced HRV, low resting HR, ACWR 0.9).
 
-**Execution** – 1️⃣ Warm‑up: 5 min easy jog or bike + dynamic lower‑body drills (leg swings, walking lunges, hip circles).  
-2️⃣ Main set: follow the prescribed Strength‑A circuit (e.g., glute bridges, kettlebell swings, single‑leg Romanian dead‑lifts, banded hip thrusts) with the rep/weight scheme listed in the plan; keep rest intervals short (30‑45 s) to maintain a slightly elevated heart rate.  
-3️⃣ Cool‑down: 5 min light mobility + static stretching for glutes, hamstrings, quads.
+**Workout outline** – *Warm‑up*: 5 min easy jog or bike + dynamic hip‑mobility (leg swings, hip circles, glute bridges).  
+*Main set*: follow the Strength A prescription (e.g., 3 × 8–10 reps of power‑focused hip‑extension moves such as kettlebell swings, single‑leg Romanian dead‑lifts, banded hip thrusts, with 2‑min rest between sets).  
+*Cool‑down*: 5 min light mobility/foam‑roll focusing on glutes, hamstrings, and lower back.
 
-**Readiness rationale** – Sleep 8 h (score 85) and HRV 54 ms (balanced, above 7‑day avg) show good recovery; resting HR 57 bpm is low, indicating a rested autonomic state. ACWR 0.9 is optimal and overall readiness 68 (Moderate) reflects no acute fatigue. Together, these signals support a full strength effort.
+**Readiness rationale** – Sleep 8 h (score 85) and HRV 54 ms (balanced, above 7‑day avg) indicate good recovery; resting HR 57 bpm is low, suggesting the autonomic system is rested. ACWR 0.9 is in the optimal zone, and stress‑history is only moderate, so no red flags for today’s strength load.
 
-**In‑session guardrails** – Watch for any joint pain, loss of form, or unusually high breathing rate during the circuit. If you feel excessive soreness or your HR stays > 150 bpm after the warm‑up, cut the load (e.g., reduce weight or reps) and finish
+**In‑session guardrails** – Watch for any sudden rise
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
