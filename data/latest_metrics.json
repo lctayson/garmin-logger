@@ -46,8 +46,8 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "* **Decision:** Proceed as planned with **Strength A (power/hip extension)**; no running is scheduled today.\n* **Workout execution:** Execute the standard Strength A routine focusing on clean mechanics, posterior chain activation, and hip extension power without pushing to muscular failure.\n* **Readiness rationale:** Recovery markers are fully supportive following an 8.1-hour night (sleep score 85), balanced HRV (54 ms vs. 51 ms 7-day average), fully cleared recovery time (0 hours), and an optimal ACWR of 0.93 (load 567/611). While multi-day sleep history shows some residual drag (49%), acute readiness is solid and resting HR is settled at 57 bpm.\n* **In-session guardrails:** Keep rest intervals generous between sets to preserve movement quality; if lower back, hip flexor, or calf tightness lingers from the weekend, reduce external loads by 10–15% and prioritize mobility so you remain fresh for tomorrow's sub-threshold session.",
-    "ai_analysis_provider": "gemini:gemini-3.8-flash",
+    "ai_analysis": "**Decision** – Proceed with today’s scheduled **Strength A (power/hip‑extension)** session, but keep the volume moderate (e.g., 2‑3 × 8‑10 per exercise) to match today’s “moderate” readiness.\n\n**Workout execution** – 5‑10 min dynamic warm‑up (leg swings, high‑knee walk, glute bridges). Main set: hip thrusts, kettlebell swings, single",
+    "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
   "health": {
