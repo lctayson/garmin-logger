@@ -19,11 +19,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Strength A (hip‑extension power) session; no need to downgrade or skip.  
+**Decision** – Proceed with today’s scheduled **Monday Strength A (power/hip‑extension)** session. All readiness markers are in the “good‑to‑excellent” range (sleep 8 h, HRV +3 ms above 7‑day avg, resting HR 57 bpm, ACWR 0.9 optimal).  
 
-**Workout execution** – • Warm‑up: 5‑10 min dynamic mobility (leg swings, glute bridges, hip circles) + light activation (body‑weight hip thrusts).  
-• Main set: focus on hip‑extension power – e.g., barbell hip‑thrusts 4 × 6‑8, single‑leg RDL 3 × 8 each, Bulgarian split‑squat 3 × 8 each, plus a core plank series (3 × 45 s).  
-•
+**Workout execution** – *Warm‑up*: 5‑10 min of light jog or bike + dynamic hip/leg moves (leg swings, hip circles, glute bridges). *Main set*: follow the prescribed Strength A routine (e.g., 3 × 8 reps of single‑leg deadlifts, 3 × 12 reps of banded hip thrusts, core plank series). *Cool‑down*: 5 min easy mobility (foam roll hips/quads, static stretch). *(If your plan lists exact sets/reps, keep those; otherwise use the typical Strength A layout.)*  
+
+**Readiness rationale** – Sleep score 85 and 8 h of rest give a solid recovery base; HRV is “BALANCED” and actually above your 7‑day average, indicating autonomic recovery. Resting HR 57 bpm is low, suggesting good cardiovascular freshness. Load metrics (ACWR 0.9, acute 567 vs chronic 611) sit in the optimal zone, so the body is not under excess strain.  
+
+**In‑session guardrails** – Watch for any sharp hip or knee pain during the warm‑up; if HR spikes > 150 bpm or you feel unusually fatigued, cut the load or reduce weight/reps. Keep the tempo controlled (focus on quality over
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
