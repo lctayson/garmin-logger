@@ -1,26 +1,28 @@
 # Daily Check — 2026-11-17
 
-## Readiness: -/100
+## Readiness: 71/100 (Moderate)
+> Good Sleep History
 
+- **VO₂max:** 44.8 ml/kg/min (Garmin precise)
 - ⚠️ **RHR:** 60 bpm (7d avg: 58.1 bpm, trending up)
+- ⚠️ **HRV:** 42ms (7d avg: 48ms) · below 47–58ms
+- **Sleep:** 7h04 / 7h00 need (0h04 over) · score 79 · 7d avg 6h32 · 5/7 nights below need
+- **Recovery remaining:** 0h00
+- ⚠️ **Limiter:** Sleep Score (68%)
+- **Also soft:** Sleep History
 
 ## Today's Session
 - **Planned:** Tue, Nov 17 — 9k as 3×10min SUT @ 5:25–5:33; 2min walk-jog ≤168bpm
 rep 1 at 5:33, rep 2 at 5:30-5:33, and rep 3 no faster than 5:30 unless HR ≤166.
 If W9 shows 5:30 at HR ≤166 across all three reps with no fade, move the band to about 5:28-5:32 for W10. That’s a progression driven by data, not by chasing 5:23
 - **Recommendation:** Adjust the workout
-- **Reason:** low 7-day sleep average (6.5h); resting heart rate is trending up.
+- **Reason:** resting heart rate is trending up; HRV is trending down; last-night HRV is below the balanced band; RHR-up/HRV-down recovery pattern.
 - **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned Tuesday sub‑threshold (SUT) interval session.  
-
-**Workout execution** – • Warm‑up: 15‑20 min easy jog (zone 2, ~6:40‑7:15 /km, HR ≤150).  
- • Main set: 3 × 8 min at sub‑threshold pace (≈5:20‑5:35 /km, target HR 158‑168 bpm, RPE ~6/10) with 2‑3 min jog recovery between reps.  
- • Cool‑down: 10 min easy jog back to zone 2.  
-
-**Readiness rationale** – Your resting HR of 60 bpm is within normal range and you have no elevated load or fatigue markers today. With no sleep or HRV alerts, there’s no evidence of acute recovery deficit; the heat‑adjusted effort
+- **Decision:** Proceed with today’s scheduled Tuesday sub‑threshold (SUT) interval session – no recovery‑only flag from the data.  
+- **Execution cue (plan‑based):** Warm‑up 10‑15 min easy (include a few 80‑m strides). Main set: the SUT interval prescription from the calendar (e.g., 3 × 8 min at sub‑threshold pace, HR ≈ 158‑168 bpm) with 2 min easy jog between reps. Cool‑down 10 min easy.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -33,11 +35,16 @@ _Most recent activity (2026-11-16):_
 
 ## Load & Trends
 
+- ⚠️ **ACWR:** 0.7 (Low) — acute 463 / chronic 593 (chronic range 474.4–889.5)
 - **7-day volume:** 37.26km vs 28-day avg 38.4km (-3%)
 - **Running tolerance:** 61.0% (Medium) — 37.3km of 64.4km weekly cap, acute impact load 39.3
-- ⚠️ **Sleep (7d avg):** 6h28, 5/7 nights below need, trending flat
+- **Aerobic Low:** 1058.6 (target 816–1360 — in range)
+- **Aerobic High:** 1165.9 (target 816–1360 — in range)
+- ⚠️ **Anaerobic:** 33.7 (target 108–435 — -74 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- ⚠️ **Sleep (7d avg):** 6h32, 5/7 nights below need, trending flat
 - ⚠️ **RHR (7d avg):** 58.1, trending up
-- **HRV:** trending flat
+- ⚠️ **HRV:** trending down
 
 ## This Week (Nov 11–17)
 

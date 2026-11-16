@@ -1,17 +1,66 @@
 {
   "date": "2026-11-17",
   "readiness": {
+    "vo2_max": 45.0,
+    "vo2_max_precise": 44.8,
+    "score": 71,
+    "level": "Moderate",
+    "feedback": "Good Sleep History",
     "resting_hr": 60,
-    "ai_analysis": "**Decision** – Proceed with today’s planned Tuesday sub‑threshold (SUT) interval session.  \n\n**Workout execution** – • Warm‑up: 15‑20 min easy jog (zone 2, ~6:40‑7:15 /km, HR ≤150).  \n • Main set: 3 × 8 min at sub‑threshold pace (≈5:20‑5:35 /km, target HR 158‑168 bpm, RPE ~6/10) with 2‑3 min jog recovery between reps.  \n • Cool‑down: 10 min easy jog back to zone 2.  \n\n**Readiness rationale** – Your resting HR of 60 bpm is within normal range and you have no elevated load or fatigue markers today. With no sleep or HRV alerts, there’s no evidence of acute recovery deficit; the heat‑adjusted effort",
+    "hrv_last_night_avg_ms": 42.0,
+    "hrv_7_day_avg_ms": 48.0,
+    "hrv_status": "BALANCED",
+    "sleep_hours": 7.07,
+    "sleep_hours_including_previous_day_nap": 7.07,
+    "sleep_score": 79,
+    "recovery_hours": 0.0,
+    "hrv_baseline": {
+      "lowUpper": 45.0,
+      "balancedLow": 47.0,
+      "balancedUpper": 58.0,
+      "markerValue": 0.29544067
+    },
+    "factor_details": {
+      "sleep_score": {
+        "percent": 68,
+        "feedback": "Moderate"
+      },
+      "sleep_history": {
+        "percent": 68,
+        "feedback": "Moderate"
+      },
+      "recovery_time": {
+        "percent": 100,
+        "feedback": "Very Good"
+      },
+      "acwr": {
+        "percent": 100,
+        "feedback": "Very Good"
+      },
+      "hrv": {
+        "percent": 84,
+        "feedback": "Good"
+      },
+      "stress_history": {
+        "percent": 71,
+        "feedback": "Good"
+      }
+    },
+    "ai_analysis": "- **Decision:** Proceed with today’s scheduled Tuesday sub‑threshold (SUT) interval session – no recovery‑only flag from the data.  \n- **Execution cue (plan‑based):** Warm‑up 10‑15 min easy (include a few 80‑m strides). Main set: the SUT interval prescription from the calendar (e.g., 3 × 8 min at sub‑threshold pace, HR ≈ 158‑168 bpm) with 2 min easy jog between reps. Cool‑down 10 min easy.",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
   "health": {
-    "steps": 32
+    "steps": 71
   },
   "sleep": {
+    "deep_h": 0.82,
+    "light_h": 5.55,
+    "rem_h": 0.7,
+    "awake_h": 0.18,
     "baseline_h": 7.0,
     "need_h": 7.0,
+    "next_need_h": 7.0,
     "feedback": "No Change No Adjustments",
     "training_feedback": "No Change",
     "sleep_history_adjustment": "No Change",
@@ -19,11 +68,43 @@
     "nap_adjustment": "No Change",
     "previous_day_nap": null
   },
+  "load": {
+    "acute_load": 463,
+    "chronic_load": 593,
+    "acwr": 0.7,
+    "acwr_percent": 29,
+    "acwr_status": "Low",
+    "chronic_load_range": {
+      "min": 474.4,
+      "max": 889.5
+    },
+    "training_status": "Productive 3"
+  },
+  "vo2_max": 45.0,
+  "vo2_max_precise": 44.8,
   "race_predictions": {
     "5k": "27:00",
     "10k": "57:11",
     "half_marathon": "2:09:53",
     "marathon": "4:50:52"
+  },
+  "load_balance": {
+    "aerobic_low": 1058.6,
+    "aerobic_low_target": [
+      816,
+      1360
+    ],
+    "aerobic_high": 1165.9,
+    "aerobic_high_target": [
+      816,
+      1360
+    ],
+    "anaerobic": 33.7,
+    "anaerobic_target": [
+      108,
+      435
+    ],
+    "load_focus": "Anaerobic Shortage"
   },
   "running_tolerance": {
     "acute_impact_load": 39.3,
@@ -162,6 +243,14 @@
         }
       ]
     }
+  },
+  "heat_acclimation": {
+    "percentage": 100,
+    "trend": "Acclimatized"
+  },
+  "altitude_acclimation": {
+    "percentage": 0,
+    "trend": null
   },
   "trend_recent_daily": {
     "columns": [
@@ -343,16 +432,16 @@
       [
         "2026-11-17",
         60,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        42.0,
+        48.0,
+        7.07,
+        79,
+        45.0,
+        "Productive 3",
+        463,
+        593,
+        0.7,
+        "Low",
         0,
         0.0,
         0.0,
@@ -757,16 +846,16 @@
         "2026-11-11",
         "2026-11-17",
         60,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        42.0,
+        48.0,
+        7.07,
+        79,
+        45.0,
+        "Productive 3",
+        463,
+        593,
+        0.7,
+        "Low",
         6,
         5.27,
         37.26,
@@ -842,7 +931,7 @@
       [
         "2026-11-17",
         44,
-        0,
+        3,
         76,
         32
       ]
