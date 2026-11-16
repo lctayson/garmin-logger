@@ -16,7 +16,7 @@
 - **Mon Strength A** — 0.0km · 26:45 · HR 102/127 max
   - TE: Aerobic Base · aerobic 0.5 · anaerobic 0
   - Readiness 68 → 68 (Good Sleep Last Night) · Recovery 0h
-  - 🧠 The strength session delivered only a minor aerobic stimulus (Aerobic 0.5 AEROBIC_BASE) and a negligible anaerobic load, which is exactly what the “Strength A” day calls for and leaves no unintended running fatigue. Your readiness score of 68 (moderate) aligns with the “Good Sleep” feedback and a resting HR of 57, indicating you’re adequately recovered for tomorrow’s Tuesday sub‑threshold run. The body‑battery impact of –3 points is small and expected given the 27‑minute effort, so no extra recovery is needed before the next quality session.
+  - 🧠 The 26‑minute Strength A session delivered the expected low‑impact aerobic stimulus (AEROBIC_BASE 0.5, minor benefit) and a modest body‑battery dip of –3, with an overall load of 7.3 AU. Your readiness score stayed at 68 (moderate) after the workout, and the ACWR of 93 % remains in the “good” zone, indicating the session’s load was well‑matched to today’s recovery state. No concerns arise from the data; you can proceed with the planned Tuesday sub‑threshold run tomorrow.
 
 ## Next Session
 - **Planned:** Tue, Nov 17 — 9k as 3×10min SUT @ 5:25–5:33; 2min walk-jog ≤168bpm
