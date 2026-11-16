@@ -1,17 +1,66 @@
 {
   "date": "2026-11-16",
   "readiness": {
+    "vo2_max": 45.0,
+    "vo2_max_precise": 44.8,
+    "score": 68,
+    "level": "Moderate",
+    "feedback": "Good Sleep Last Night",
     "resting_hr": 57,
-    "ai_analysis": "**Decision** – Proceed with today’s scheduled **Strength A (power/hip‑extension)** session; no need to swap for recovery or a run.  \n\n**Execution** – - Warm‑up: 5‑10 min light cardio (e.g., brisk walk or easy jog) + dynamic hip/leg mobility (leg swings, glute bridges).  \n- Main set: follow the prescribed Strength A routine (e.g., 3 × 8‑10 reps of Romanian dead‑lifts, hip thrusts, single‑leg kettlebell swings, with 2‑3 min rest between sets).  \n- Cool‑down: 5 min of gentle stretching focusing on hamstrings, glutes, and lower back. *(Exact exercise list is in your training plan; stick to those.)*  \n\n**Readiness rationale** – Resting HR 57 bpm is well‑below typical LTHR and suggests strong parasympathetic recovery.  No load or sleep‑trend data flag any deficit, so the cardio‑heavy week ahead (Tue threshold, Thu VO₂) can be supported by a solid strength day.  \n\n**In‑session guardrails** – If you feel unusually tight hips, a rapid rise in HR during the warm‑up, or joint pain, drop the load by 20 % or replace the heavy set with a body‑weight variant.  Keep the session effort moderate; the goal is neuromuscular quality, not maximal fatigue, so stop early if overall fatigue spikes.",
+    "hrv_last_night_avg_ms": 54.0,
+    "hrv_7_day_avg_ms": 51.0,
+    "hrv_status": "BALANCED",
+    "sleep_hours": 8.07,
+    "sleep_hours_including_previous_day_nap": 8.65,
+    "sleep_score": 85,
+    "recovery_hours": 0.0,
+    "hrv_baseline": {
+      "lowUpper": 45.0,
+      "balancedLow": 47.0,
+      "balancedUpper": 58.0,
+      "markerValue": 0.43180847
+    },
+    "factor_details": {
+      "sleep_score": {
+        "percent": 80,
+        "feedback": "Good"
+      },
+      "sleep_history": {
+        "percent": 49,
+        "feedback": "Moderate"
+      },
+      "recovery_time": {
+        "percent": 100,
+        "feedback": "Very Good"
+      },
+      "acwr": {
+        "percent": 94,
+        "feedback": "Good"
+      },
+      "hrv": {
+        "percent": 100,
+        "feedback": "Very Good"
+      },
+      "stress_history": {
+        "percent": 67,
+        "feedback": "Moderate"
+      }
+    },
+    "ai_analysis": "**Decision** – Proceed with today’s scheduled **Strength A (power/hip‑extension)** session; no need to downgrade or replace it with recovery.\n\n**Workout execution** – - **Warm‑up**: 8‑10 min of dynamic mobility (leg swings, walking lunges, hip circles) + 2 × 30‑s body‑weight glute bridges.  \n- **Main set**: 3 × 8‑10 reps each of hip thrusts, single‑leg deadlifts, and Bulgarian split squats at a load that feels “moderately hard” (RPE ≈ 6‑7). Keep rest 60‑90 s between sets.  \n- **Core finisher** (optional): 2 × 30‑s plank variations.  \n- **Cool‑down**: 5 min of static hip‑flexor and glute stretches.\n\n**Readiness rationale** – Sleep was solid (8 h, score 85) and HRV is balanced and slightly above your 7‑day average, indicating good autonomic recovery. Resting HR 57 bpm is low, and ACWR 0.9 is in the optimal zone, so the cardiovascular system is ready for a moderate‑intensity strength day. No red flags from load metrics.\n\n**In‑session guardrails** – If",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
   "health": {
-    "steps": 14
+    "steps": 51
   },
   "sleep": {
+    "deep_h": 0.9,
+    "light_h": 5.0,
+    "rem_h": 2.17,
+    "awake_h": 0.75,
     "baseline_h": 7.0,
     "need_h": 7.33,
+    "next_need_h": 7.0,
     "feedback": "Increased",
     "training_feedback": "Chronic",
     "sleep_history_adjustment": "Increasing",
@@ -19,11 +68,43 @@
     "nap_adjustment": "Decreasing",
     "previous_day_nap": 35.0
   },
+  "load": {
+    "acute_load": 567,
+    "chronic_load": 611,
+    "acwr": 0.9,
+    "acwr_percent": 38,
+    "acwr_status": "Optimal",
+    "chronic_load_range": {
+      "min": 488.8,
+      "max": 916.5
+    },
+    "training_status": "Productive 3"
+  },
+  "vo2_max": 45.0,
+  "vo2_max_precise": 44.8,
   "race_predictions": {
     "5k": "27:00",
     "10k": "57:10",
     "half_marathon": "2:09:53",
     "marathon": "4:50:52"
+  },
+  "load_balance": {
+    "aerobic_low": 1051.4,
+    "aerobic_low_target": [
+      816,
+      1360
+    ],
+    "aerobic_high": 1311.9,
+    "aerobic_high_target": [
+      816,
+      1360
+    ],
+    "anaerobic": 33.7,
+    "anaerobic_target": [
+      108,
+      435
+    ],
+    "load_focus": "Anaerobic Shortage"
   },
   "running_tolerance": {
     "acute_impact_load": 47.4,
@@ -162,6 +243,14 @@
         }
       ]
     }
+  },
+  "heat_acclimation": {
+    "percentage": 100,
+    "trend": "Acclimatized"
+  },
+  "altitude_acclimation": {
+    "percentage": 0,
+    "trend": null
   },
   "trend_recent_daily": {
     "columns": [
@@ -343,16 +432,16 @@
       [
         "2026-11-16",
         57,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        54.0,
+        51.0,
+        8.07,
+        85,
+        45.0,
+        "Productive 3",
+        567,
+        611,
+        0.9,
+        "Optimal",
         0,
         0.0,
         0.0,
@@ -763,16 +852,16 @@
         "2026-11-10",
         "2026-11-16",
         57,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        54.0,
+        51.0,
+        8.07,
+        85,
+        45.0,
+        "Productive 3",
+        567,
+        611,
+        0.9,
+        "Optimal",
         6,
         5.58,
         44.29,
@@ -847,9 +936,9 @@
       ],
       [
         "2026-11-16",
-        70,
-        0,
-        84,
+        79,
+        3,
+        93,
         14
       ]
     ]
