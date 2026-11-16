@@ -19,15 +19,9 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned **Strength A (power/hip‑extension)** session; the readiness profile is solid (good sleep, balanced HRV, low resting HR, ACWR 0.9).
+**Decision** – Proceed with today’s planned Strength A (hip‑extension/power) session; your moderate readiness is backed by excellent sleep, balanced HRV and an optimal ACWR, so a normal‑intensity strength day is appropriate.
 
-**Workout outline** – *Warm‑up*: 5 min easy jog or bike + dynamic hip‑mobility (leg swings, hip circles, glute bridges).  
-*Main set*: follow the Strength A prescription (e.g., 3 × 8–10 reps of power‑focused hip‑extension moves such as kettlebell swings, single‑leg Romanian dead‑lifts, banded hip thrusts, with 2‑min rest between sets).  
-*Cool‑down*: 5 min light mobility/foam‑roll focusing on glutes, hamstrings, and lower back.
-
-**Readiness rationale** – Sleep 8 h (score 85) and HRV 54 ms (balanced, above 7‑day avg) indicate good recovery; resting HR 57 bpm is low, suggesting the autonomic system is rested. ACWR 0.9 is in the optimal zone, and stress‑history is only moderate, so no red flags for today’s strength load.
-
-**In‑session guardrails** – Watch for any sudden rise
+**Workout execution** – *Warm‑up*: 5 min easy jog or bike + dynamic hip‑mobility (leg swings,
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
