@@ -21,13 +21,12 @@ If W9 shows 5:30 at HR ≤166 across all three reps with no fade, move the band 
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned Tuesday sub‑threshold workout; nothing in the readiness data forces a recovery‑only day.
+**Decision** – Readiness is moderate but solid (good sleep, balanced HRV, low ACWR). Proceed with today’s planned Tuesday sub‑threshold session; no need to downgrade to recovery.
 
-**Execution** – *Warm‑up*: 12 min easy jog (≈6:40‑7:15 /km) + 4 × 100 m strides (fast, 90 % effort).  
-*Main set*: 3 × 8 min at sub‑threshold pace (≈5:20‑5:35 /km, HR ~158‑168 bpm) with 2 min easy jog between reps.  
-*Cool‑down*: 10 min easy jog back to recovery HR (<150 bpm).
-
-**Readiness rationale** – Readiness score is moderate (71) but “Good Sleep History” and a low AC
+**Workout execution**  
+- **Warm‑up**: 12 min easy jog (≈6:45 / km) + 4 × 100 m strides, gradually increasing cadence.  
+- **Main set**: 3 × 8 min sub‑threshold intervals at 5:20‑5:35 / km (HR ≈ 158‑168 bpm, RPE 7‑8). Keep 2‑3 min easy jog recovery between reps.  
+- **Cool‑
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
