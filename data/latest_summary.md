@@ -19,9 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned Strength A (hip‑extension/power) session; your moderate readiness is backed by excellent sleep, balanced HRV and an optimal ACWR, so a normal‑intensity strength day is appropriate.
+**Decision** – Proceed with today’s scheduled Strength A (hip‑extension power) session; no need to downgrade or skip.  
 
-**Workout execution** – *Warm‑up*: 5 min easy jog or bike + dynamic hip‑mobility (leg swings,
+**Workout execution** – • Warm‑up: 5‑10 min dynamic mobility (leg swings, glute bridges, hip circles) + light activation (body‑weight hip thrusts).  
+• Main set: focus on hip‑extension power – e.g., barbell hip‑thrusts 4 × 6‑8, single‑leg RDL 3 × 8 each, Bulgarian split‑squat 3 × 8 each, plus a core plank series (3 × 45 s).  
+•
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
