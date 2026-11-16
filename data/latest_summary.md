@@ -12,10 +12,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Proceed with today’s planned **Monday Strength A (hip‑extension/power) session** – nothing in the readiness data (resting HR 57 bpm, well below your LTHR) suggests you need to cut back or skip.  
-- **Workout execution:** Warm‑up 5‑10 min of dynamic mobility (leg swings, hip circles, light banded glute activation). Main set: 3 × 8‑12 reps of each hip‑extension movement (glute bridges, single‑leg dead‑lifts, banded monster walks) at a moderate load that lets you keep form; rest 60‑90 s between sets. Finish with 5 min of static stretching/foam‑rolling for hips and hamstrings.  
-- **Readiness rationale:** A resting HR of 57 bpm is low and indicates good autonomic recovery; no spikes in load or ACWR were reported, and you have no sleep/H‑RV data to flag a problem. In isolation, the HR reading alone isn’t decisive, but combined with the lack of any negative trends it supports proceeding as planned.  
-- **In‑session guardrails:** Watch for unusually high perceived effort, joint pain, or a rapid rise in HR during the warm‑up; if you feel excessive fatigue or any sharp discomfort, drop the load (e.g., use lighter weight or fewer reps
+**Decision** – Proceed with today’s scheduled **Strength A (hip‑extension / power) session**.  
+
+**Workout execution** – *Warm‑up*: 5 min easy jog or bike + dynamic hip/leg drills (leg swings, glute bridges). *Main set*: the prescribed Strength A circuit (e.g., 3 × 8 – 10 reps of hip thrusts, single‑leg dead‑lifts, kettlebell swings, and core‑stability work) at a moderate load where the last rep feels “hard but controllable.” *Cool‑down*: 5 min light cardio + static stretching of hamstrings, glutes, and lower back.  
+
+**Readiness rationale** – Resting HR = 57 bpm, well below your LTHR and indicative of good autonomic recovery. No sleep, HRV, or load alerts are present, so there are no red flags that would warrant skipping or scaling back today’s strength work.  
+
+**In‑session guardrails** – If your heart rate spikes above 150 bpm during the warm‑up, or you feel unusual joint pain or excessive fatigue, cut the load by ~30 % or shorten the circuit and focus on form. Keep an eye on any sharp hip or lower‑back discomfort; if it appears, stop the offending exercise and replace it with a mobility drill.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
