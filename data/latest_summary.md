@@ -12,13 +12,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **Strength A (hip‑extension / power) session**.  
+**Decision** – Proceed with today’s scheduled **Strength A (power/hip‑extension)** session; no need to swap for recovery or a run.  
 
-**Workout execution** – *Warm‑up*: 5 min easy jog or bike + dynamic hip/leg drills (leg swings, glute bridges). *Main set*: the prescribed Strength A circuit (e.g., 3 × 8 – 10 reps of hip thrusts, single‑leg dead‑lifts, kettlebell swings, and core‑stability work) at a moderate load where the last rep feels “hard but controllable.” *Cool‑down*: 5 min light cardio + static stretching of hamstrings, glutes, and lower back.  
+**Execution** – - Warm‑up: 5‑10 min light cardio (e.g., brisk walk or easy jog) + dynamic hip/leg mobility (leg swings, glute bridges).  
+- Main set: follow the prescribed Strength A routine (e.g., 3 × 8‑10 reps of Romanian dead‑lifts, hip thrusts, single‑leg kettlebell swings, with 2‑3 min rest between sets).  
+- Cool‑down: 5 min of gentle stretching focusing on hamstrings, glutes, and lower back. *(Exact exercise list is in your training plan; stick to those.)*  
 
-**Readiness rationale** – Resting HR = 57 bpm, well below your LTHR and indicative of good autonomic recovery. No sleep, HRV, or load alerts are present, so there are no red flags that would warrant skipping or scaling back today’s strength work.  
+**Readiness rationale** – Resting HR 57 bpm is well‑below typical LTHR and suggests strong parasympathetic recovery.  No load or sleep‑trend data flag any deficit, so the cardio‑heavy week ahead (Tue threshold, Thu VO₂) can be supported by a solid strength day.  
 
-**In‑session guardrails** – If your heart rate spikes above 150 bpm during the warm‑up, or you feel unusual joint pain or excessive fatigue, cut the load by ~30 % or shorten the circuit and focus on form. Keep an eye on any sharp hip or lower‑back discomfort; if it appears, stop the offending exercise and replace it with a mobility drill.
+**In‑session guardrails** – If you feel unusually tight hips, a rapid rise in HR during the warm‑up, or joint pain, drop the load by 20 % or replace the heavy set with a body‑weight variant.  Keep the session effort moderate; the goal is neuromuscular quality, not maximal fatigue, so stop early if overall fatigue spikes.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
