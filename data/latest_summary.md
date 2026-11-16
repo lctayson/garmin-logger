@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -5.1% · HR +9bpm
   - MS: 5.42k @ 5:32 162bpm 1.00m 181spm 245ms 8.2cm 311w
   - Readiness 71 → 40 (High Recovery Needs) · Recovery 1d 14h 24m
-  - 🧠 The three 10‑minute threshold reps hit the prescribed zone (5:32 km average pace sits comfortably inside the 5:20‑5:35 target and the HR rose from 157 to 166 bpm, staying within the 158‑168 bpm range). Stamina fell from 99 % to 64 % and HR climbed 9 bpm across reps, which is the expected physiological drift for a sub‑threshold effort and aligns with the –5.1 % pace‑efficiency drift indicating a stable‑to‑slightly‑faster pace. Readiness was moderate (71) before the run and dropped to 40 afterward, flagging a sizable acute load (706 acwr) but not a failure of execution. Overall
+  - 🧠 The main set delivered three 10‑minute reps at 5:32 ± 1 s/km (HR 157‑166), which sits squarely in the prescribed sub‑threshold zone (5:20‑
 
 ## Next Session
 - **Planned:** Wed, Nov 18 — 7k EZ @ 6:50–7:20 ≤150bpm w/ 5×20s strides; 75s WALK
