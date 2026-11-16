@@ -19,9 +19,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **Strength A (power/hip‑extension)** session, but keep the volume moderate (e.g., 2‑3 × 8‑10 per exercise) to match today’s “moderate” readiness.
+**Decision** – Proceed with today’s scheduled **Monday Strength‑A (hip‑extension/power) session**. No need to cut volume; readiness is solid.
 
-**Workout execution** – 5‑10 min dynamic warm‑up (leg swings, high‑knee walk, glute bridges). Main set: hip thrusts, kettlebell swings, single
+**Execution** – 1️⃣ Warm‑up: 5 min easy jog or bike + dynamic lower‑body drills (leg swings, walking lunges, hip circles).  
+2️⃣ Main set: follow the prescribed Strength‑A circuit (e.g., glute bridges, kettlebell swings, single‑leg Romanian dead‑lifts, banded hip thrusts) with the rep/weight scheme listed in the plan; keep rest intervals short (30‑45 s) to maintain a slightly elevated heart rate.  
+3️⃣ Cool‑down: 5 min light mobility + static stretching for glutes, hamstrings, quads.
+
+**Readiness rationale** – Sleep 8 h (score 85) and HRV 54 ms (balanced, above 7‑day avg) show good recovery; resting HR 57 bpm is low, indicating a rested autonomic state. ACWR 0.9 is optimal and overall readiness 68 (Moderate) reflects no acute fatigue. Together, these signals support a full strength effort.
+
+**In‑session guardrails** – Watch for any joint pain, loss of form, or unusually high breathing rate during the circuit. If you feel excessive soreness or your HR stays > 150 bpm after the warm‑up, cut the load (e.g., reduce weight or reps) and finish
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
