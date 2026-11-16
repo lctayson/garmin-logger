@@ -137,7 +137,7 @@
         ]
       },
       "lap_count": 1,
-      "ai_analysis": "The 26‑minute strength session delivered a minor aerobic stimulus (Aerobic 0.5 AEROBIC_BASE) with no anaerobic contribution and a modest load of 7.3, while body‑battery dipped only 3 points, indicating low systemic fatigue. Your readiness score of 68 (moderate) and a resting HR of 57 align with the “Good Sleep” feedback, suggesting you entered the workout well‑recovered. Given the low cardio load, you should have ample capacity for today’s scheduled Tuesday sub‑threshold run without needing to adjust intensity.",
+      "ai_analysis": "The strength session delivered only a minor aerobic stimulus (Aerobic 0.5 AEROBIC_BASE) and a negligible anaerobic load, which is exactly what the “Strength A” day calls for and leaves no unintended running fatigue. Your readiness score of 68 (moderate) aligns with the “Good Sleep” feedback and a resting HR of 57, indicating you’re adequately recovered for tomorrow’s Tuesday sub‑threshold run. The body‑battery impact of –3 points is small and expected given the 27‑minute effort, so no extra recovery is needed before the next quality session.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
