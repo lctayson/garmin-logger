@@ -570,7 +570,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "Your three 10‑minute threshold reps averaged 5:32 /km, right in the prescribed sub‑threshold window (5:20‑5:35 /km), and the HR rose modestly from 157 bpm to 166 bpm, staying within the 158‑168 bpm zone for sub‑threshold work. The –5.1 % pace‑efficiency drift reflects a slight speed‑up across reps, while stamina fell from 99 % to 64 %, indicating a normal level of fatigue for a 30‑minute threshold block. A lactate‑threshold training effect of 4.1 is strong and the lack of anaerobic credit matches the session’s intent, so the workout delivered the expected stimulus. Morning readiness was moderate (71), and the post‑run drop to 40 aligns with the high acute load (706) and the 190.9 training load you accrued.",
+      "ai_analysis": "The three 10‑minute reps hit 5:33, 5:32 and 5:32 min/km (average 5:32), which sits squarely in the prescribed sub‑threshold window (5:20‑5:35) and the HR rose from 157 bpm to 166 bpm, staying inside the target 158‑168 bpm range for a threshold effort. A modest –5.1 % pace drift combined with a 9 bpm HR increase shows the expected gradual cardiovascular loading, while stamina fell from 99 % to 64 %—a typical fatigue pattern for a 30‑minute threshold block. The training‑effect label (“LACTATE_THRESHOLD” aerobic 4.1, anaerobic 0) confirms the session delivered the intended lactate‑threshold stimulus without any VO₂max‑intensity, which is appropriate for today’s Tuesday SUT in the bridge phase. Morning readiness was moderate (71) with good sleep, and the post‑run drop to 40 reflects the load rather than any abnormal recovery issue.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
