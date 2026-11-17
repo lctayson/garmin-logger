@@ -570,7 +570,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The three 10‑minute sub‑threshold reps hit the prescribed pace range (5:33 → 5:32 km, within the 5:20–5:35 km target) and stayed in the expected HR window (157 → 166 bpm, sub‑threshold zone 158–168 bpm), though the upward HR drift shows the effort became progressively harder despite stable paces. Stamina fell from 99 % to 64 % and the body‑battery impact was –13, confirming a substantial cardiovascular load (load ≈ 191) for a Tuesday SUT day. The morning readiness was moderate (71) with good sleep, but the post‑run readiness drop to 40 reflects the high acute load and suggests a conservative recovery buffer before Thursday’s VO2‑max quality session.",
+      "ai_analysis": "The three 10‑minute threshold reps hit the prescribed 5:20‑5:35 km pace (5:32 ± 1 s) and stayed in the 158‑166 bpm HR window, so the session met the sub‑threshold intensity goal. Across the reps HR rose by about 9 bpm while pace drift was –5 % (a slight efficiency gain), indicating the body was handling the workload but fatigue was building—as reflected by stamina dropping from 99 % to 64 % by the end. With a moderate morning readiness score (71) and a post‑run readiness dip to 40, the dip is expected given the 191 load and the HR climb, but it does not signal an acute problem.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
