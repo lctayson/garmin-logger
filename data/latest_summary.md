@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -5.1% · HR +9bpm
   - MS: 5.42k @ 5:32 162bpm 1.00m 181spm 245ms 8.2cm 311w
   - Readiness 71 → 40 (High Recovery Needs) · Recovery 1d 14h 24m
-  - 🧠 The main set delivered three 10‑minute reps at 5:32 ± 1 s/km (HR 157‑166), which sits squarely in the prescribed sub‑threshold zone (5:20‑
+  - 🧠 The three 10‑minute sub‑threshold reps hit the prescribed pace range (5:33 → 5:32 km, within the 5:20–5:35 km target) and stayed in the expected HR window (157 → 166 bpm, sub‑threshold zone 158–168 bpm), though the upward HR drift shows the effort became progressively harder despite stable paces. Stamina fell from 99 % to 64 % and the body‑battery impact was –13, confirming a substantial cardiovascular load (load ≈ 191) for a Tuesday SUT day. The morning readiness was moderate (71) with good sleep, but the post‑run readiness drop to 40 reflects the high acute load and suggests a conservative recovery buffer before Thursday’s VO2‑max quality session.
 
 ## Next Session
 - **Planned:** Wed, Nov 18 — 7k EZ @ 6:50–7:20 ≤150bpm w/ 5×20s strides; 75s WALK
