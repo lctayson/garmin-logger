@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -5.1% · HR +9bpm
   - MS: 5.42k @ 5:32 162bpm 1.00m 181spm 245ms 8.2cm 311w
   - Readiness 71 → 40 (High Recovery Needs) · Recovery 1d 14h 24m
-  - 🧠 Your three 10‑minute threshold reps held a tight pace window (5:33 → 5:32 → 5:32 ≈ 5:32 /km) squarely inside the prescribed sub‑threshold range (5:20‑5:35 /km), and the time‑weighted HR of 162 bpm stayed within the target 158‑168 bpm zone, so the work itself was on‑target. The upward HR trend across reps (157 → 163 → 166 bpm) together with the stamina drop from 99 % to 64 % signals a noticeable cardiovascular cost and accumulating fatigue, which is typical for a threshold day run in the late‑morning heat. Your morning readiness was moderate (71) with good sleep, but the post‑exercise snapshot falling to 40 is expected after a high‑impact lactate‑threshold session and does not imply a training problem on its own.
+  - 🧠 Your three 10‑minute threshold reps averaged 5:32 /km, right in the prescribed sub‑threshold window (5:20‑5:35 /km), and the HR rose modestly from 157 bpm to 166 bpm, staying within the 158‑168 bpm zone for sub‑threshold work. The –5.1 % pace‑efficiency drift reflects a slight speed‑up across reps, while stamina fell from 99 % to 64 %, indicating a normal level of fatigue for a 30‑minute threshold block. A lactate‑threshold training effect of 4.1 is strong and the lack of anaerobic credit matches the session’s intent, so the workout delivered the expected stimulus. Morning readiness was moderate (71), and the post‑run drop to 40 aligns with the high acute load (706) and the 190.9 training load you accrued.
 
 ## Next Session
 - **Planned:** Wed, Nov 18 — 7k EZ @ 6:50–7:20 ≤150bpm w/ 5×20s strides; 75s WALK
