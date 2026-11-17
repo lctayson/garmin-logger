@@ -19,7 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Go ahead with today’s scheduled **Wednesday
+**Decision** – Proceed with today’s scheduled **Wednesday easy‑run + strides** but keep the intensity strictly easy; if the warm‑up feels unusually hard, skip the strides and treat the day as a recovery run.
+
+**Workout execution (typical Wed prescription)**  
+- **Warm‑up:** 10 min easy jog (≈7:30 km⁻¹, HR ≤ 150 bpm).  
+- **Main set
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
