@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -5.1% · HR +9bpm
   - MS: 5.42k @ 5:32 162bpm 1.00m 181spm 245ms 8.2cm 311w
   - Readiness 71 → 40 (High Recovery Needs) · Recovery 1d 14h 24m
-  - 🧠 The three 10‑minute threshold reps hit the prescribed 5:20‑5:35 km pace (5:32 ± 1 s) and stayed in the 158‑166 bpm HR window, so the session met the sub‑threshold intensity goal. Across the reps HR rose by about 9 bpm while pace drift was –5 % (a slight efficiency gain), indicating the body was handling the workload but fatigue was building—as reflected by stamina dropping from 99 % to 64 % by the end. With a moderate morning readiness score (71) and a post‑run readiness dip to 40, the dip is expected given the 191 load and the HR climb, but it does not signal an acute problem.
+  - 🧠 The three 10‑minute reps were run at 5:33, 5:32, 5:32 min/km (average 5:32), landing just inside the prescribed sub‑threshold window (5:20–5:35) and a few seconds slower than true threshold pace (≈5:30). Heart rate rose from 157 bpm in the first rep to 166 bpm in the third, while pace efficiency drifted ‑5.1 % across the block, indicating accumulating fatigue despite staying within the intended HR zone. Stamina fell from 99 % to 64 % and the training‑effect label shows a strong lactate‑threshold stimulus (aerobic 4.1) but no anaerobic load, matching the bridge‑phase focus on sub‑threshold volume. Your moderate morning readiness (71) likely contributed to the noticeable drift, so consider a slightly slower start or a brief extra recovery between reps on similar days.
 
 ## Next Session
 - **Planned:** Wed, Nov 18 — 7k EZ @ 6:50–7:20 ≤150bpm w/ 5×20s strides; 75s WALK
