@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -5.1% · HR +9bpm
   - MS: 5.42k @ 5:32 162bpm 1.00m 181spm 245ms 8.2cm 311w
   - Readiness 71 → 40 (High Recovery Needs) · Recovery 1d 14h 24m
-  - 🧠 The three 10‑minute reps were run at 5:33 → 5:32 → 5:32 min/km, landing squarely in the prescribed sub‑threshold window (5:20‑5:35 min/km) and the rep‑average HR rose from 157 bpm to 166 bpm, ending at a time‑weighted 162 bpm—well within the 158‑168 bpm target but clearly climbing across the set. The –5.1 % pace‑efficiency drift together with the 9 bpm HR increase and a stamina drop from 99 % to 64 % indicate the work was physiologically demanding, consuming a sizable share of the day’s load (≈191 AU) and leaving the post‑run readiness at 40 / 100. With a moderate morning readiness (score 71) and good sleep, the session was appropriate, but the sharp stamina loss suggests you should keep the following day easy to preserve recovery for the next Tuesday threshold block.
+  - 🧠 The three 10‑minute threshold reps hit the prescribed sub‑threshold zone (5:32 ± 1 s, HR 157‑166 bpm) and the pace stayed essentially flat, so the work was executed as intended. The −5.1 % pace‑efficiency drift reflects a modest slowdown in overall effort while HR rose 9 bpm across reps, and stamina fell from 99 % to 64 %, indicating a solid but taxing stimulus for this Tuesday SUT day. Morning readiness was moderate (71), and the post‑run drop to a 40 score simply flags the expected recovery debt from a high‑impact threshold session. No anaerobic load was recorded, which aligns with the bridge phase focus on sub‑threshold volume rather than VO2‑max work.
 
 ## Next Session
 - **Planned:** Wed, Nov 18 — 7k EZ @ 6:50–7:20 ≤150bpm w/ 5×20s strides; 75s WALK
