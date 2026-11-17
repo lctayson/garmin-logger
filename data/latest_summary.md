@@ -19,11 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Readiness is low mainly because of short sleep (5.8 h).  All other markers (HRV BALANCED, resting HR 59 bpm, ACWR 0.9) are fine, so you can **run today as scheduled**, but keep it easy and skip any hill‑sprint component if it’s listed.
+**Decision** – Keep today’s Wednesday workout, but scale it back to a pure easy run (skip or shorten the stride/hill component).  
 
-**Typical Wednesday prescription** (exact dated workout not provided, so follow the plan’s purpose):  
-- **Warm‑up**: 10‑15 min easy jog in Recovery zone (≈7:30 /km, HR ≤150 bpm).  
-- **Main set**: 6‑8 km easy aerobic run, stay in Zone 6 (≈6:40‑7:15 /km, HR
+**Execution** –  
+- **Warm‑up:** 8‑10 min easy jog in the 7:10‑7:45 / km range, followed by a few dynamic drills (leg swings, high‑knees).  
+- **Main set:** 30‑40 min continuous easy aerobic running, staying in zone 6 (≈6:40‑7:15 / km, HR ≤ 155 bpm).  If you feel fully
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
