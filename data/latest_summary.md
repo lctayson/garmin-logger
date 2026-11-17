@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -5.1% · HR +9bpm
   - MS: 5.42k @ 5:32 162bpm 1.00m 181spm 245ms 8.2cm 311w
   - Readiness 71 → 40 (High Recovery Needs) · Recovery 1d 14h 24m
-  - 🧠 The three 10‑minute reps were solidly in the prescribed threshold zone, averaging 5:32 /km (target 5:20‑5:35) while heart rate rose from 157 bpm in the first rep to 166 bpm by the third, delivering a clear sub‑threshold stimulus. The –5.1 % pace‑efficiency drift mirrors the 9 bpm HR increase and the drop in stamina from 99 % to 64 % (body‑battery –13), which is expected for a 30‑minute threshold block performed with a moderate morning readiness score of 71. No anaerobic benefit was recorded, aligning with the plan that true VO2‑max work should come from Thursday sessions rather than today’s Tuesday threshold workout.
+  - 🧠 The three 10‑minute reps hit the sub‑threshold zone (5:32 ± 1 s per km, HR climbing from 157 bpm to 166 bpm) and stayed pace‑stable despite a –5.1 % efficiency drift, indicating the intended workload was delivered but cardiovascular cost rose across the set. Stamina fell from 99 % to 64 % and the body‑battery impact was –13, which is notable given a moderate morning readiness score of 71 and suggests the session taxed recovery more than usual. No anaerobic stimulus was recorded (training effect = 0), aligning with the threshold focus but reinforcing the need to monitor fatigue before the next Thursday quality day.
 
 ## Next Session
 - **Planned:** Wed, Nov 18 — 7k EZ @ 6:50–7:20 ≤150bpm w/ 5×20s strides; 75s WALK
