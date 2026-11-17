@@ -56,6 +56,24 @@
           "recovery_time_change": "NONE"
         },
         {
+          "timestamp_local": "2026-11-17T17:10:25.0",
+          "context": "UPDATE_REALTIME_VARIABLES",
+          "score": 50,
+          "feedback": "LISTEN_TO_YOUR_BODY",
+          "recovery_minutes": 1721,
+          "acute_load": 706,
+          "factor_overrides": {
+            "recovery_time": {
+              "percent": 53,
+              "feedback": "Moderate"
+            },
+            "acwr": {
+              "percent": 86,
+              "feedback": "Good"
+            }
+          }
+        },
+        {
           "timestamp_local": "2026-11-17T07:22:35.0",
           "context": "AFTER_POST_EXERCISE_RESET",
           "score": 40,

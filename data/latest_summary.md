@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -5.1% · HR +9bpm
   - MS: 5.42k @ 5:32 162bpm 1.00m 181spm 245ms 8.2cm 311w
   - Readiness 71 → 40 (High Recovery Needs) · Recovery 1d 14h 24m
-  - 🧠 The three 10‑minute reps hit the sub‑threshold zone (5:32 ± 1 s per km, HR climbing from 157 bpm to 166 bpm) and stayed pace‑stable despite a –5.1 % efficiency drift, indicating the intended workload was delivered but cardiovascular cost rose across the set. Stamina fell from 99 % to 64 % and the body‑battery impact was –13, which is notable given a moderate morning readiness score of 71 and suggests the session taxed recovery more than usual. No anaerobic stimulus was recorded (training effect = 0), aligning with the threshold focus but reinforcing the need to monitor fatigue before the next Thursday quality day.
+  - 🧠 The three 10‑minute threshold reps hit the prescribed 5:20‑5:35 /km window (5:33, 5:32, 5:32) and the HR rose from 157 bpm to 166 bpm, staying inside the 158‑168 bpm sub‑threshold range, so the intensity was on target. Stamina fell from 99 % to 64 % and the 9‑bpm HR delta across reps reflect the expected cumulative load of a 30‑minute threshold block, while the –5.1 % pace‑efficiency drift is minimal and not a concern. The morning readiness score of 71 (moderate) matched a solid session, and the post‑run drop to 40 aligns with the high acute load (≈191) and –13 body‑battery impact, indicating you’ll need a focused recovery day. No red flags for this Tuesday SUT; just honor the suggested easy run tomorrow.
 
 ## Next Session
 - **Planned:** Wed, Nov 18 — 7k EZ @ 6:50–7:20 ≤150bpm w/ 5×20s strides; 75s WALK
