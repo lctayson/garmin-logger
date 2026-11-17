@@ -19,11 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **Wednesday easy‑run + strides** but keep the intensity strictly easy; if the warm‑up feels unusually hard, skip the strides and treat the day as a recovery run.
+**Decision** – Readiness is low mainly because of short sleep (5.8 h).  All other markers (HRV BALANCED, resting HR 59 bpm, ACWR 0.9) are fine, so you can **run today as scheduled**, but keep it easy and skip any hill‑sprint component if it’s listed.
 
-**Workout execution (typical Wed prescription)**  
-- **Warm‑up:** 10 min easy jog (≈7:30 km⁻¹, HR ≤ 150 bpm).  
-- **Main set
+**Typical Wednesday prescription** (exact dated workout not provided, so follow the plan’s purpose):  
+- **Warm‑up**: 10‑15 min easy jog in Recovery zone (≈7:30 /km, HR ≤150 bpm).  
+- **Main set**: 6‑8 km easy aerobic run, stay in Zone 6 (≈6:40‑7:15 /km, HR
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
