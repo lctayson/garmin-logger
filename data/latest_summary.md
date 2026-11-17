@@ -18,7 +18,7 @@
   - Intervals: 3 work reps · pace drift -5.1% · HR +9bpm
   - MS: 5.42k @ 5:32 162bpm 1.00m 181spm 245ms 8.2cm 311w
   - Readiness 71 → 40 (High Recovery Needs) · Recovery 1d 14h 24m
-  - 🧠 The three 10‑minute reps hit 5:33, 5:32 and 5:32 min/km (average 5:32), which sits squarely in the prescribed sub‑threshold window (5:20‑5:35) and the HR rose from 157 bpm to 166 bpm, staying inside the target 158‑168 bpm range for a threshold effort. A modest –5.1 % pace drift combined with a 9 bpm HR increase shows the expected gradual cardiovascular loading, while stamina fell from 99 % to 64 %—a typical fatigue pattern for a 30‑minute threshold block. The training‑effect label (“LACTATE_THRESHOLD” aerobic 4.1, anaerobic 0) confirms the session delivered the intended lactate‑threshold stimulus without any VO₂max‑intensity, which is appropriate for today’s Tuesday SUT in the bridge phase. Morning readiness was moderate (71) with good sleep, and the post‑run drop to 40 reflects the load rather than any abnormal recovery issue.
+  - 🧠 The three 10‑minute reps were solidly in the prescribed threshold zone, averaging 5:32 /km (target 5:20‑5:35) while heart rate rose from 157 bpm in the first rep to 166 bpm by the third, delivering a clear sub‑threshold stimulus. The –5.1 % pace‑efficiency drift mirrors the 9 bpm HR increase and the drop in stamina from 99 % to 64 % (body‑battery –13), which is expected for a 30‑minute threshold block performed with a moderate morning readiness score of 71. No anaerobic benefit was recorded, aligning with the plan that true VO2‑max work should come from Thursday sessions rather than today’s Tuesday threshold workout.
 
 ## Next Session
 - **Planned:** Wed, Nov 18 — 7k EZ @ 6:50–7:20 ≤150bpm w/ 5×20s strides; 75s WALK
