@@ -1,17 +1,66 @@
 {
   "date": "2026-11-18",
   "readiness": {
+    "vo2_max": 45.0,
+    "vo2_max_precise": 44.9,
+    "score": 43,
+    "level": "Low",
+    "feedback": "Find Time To Relax",
     "resting_hr": 59,
-    "ai_analysis": "**Decision** – Proceed with today’s scheduled Wednesday workout (easy run + strides or hill work).  \n\n**Workout execution** – Because the exact prescription isn’t listed, follow the typical format:  \n- **Warm‑up**: 10‑15 min easy jog (HR ≈ 145 bpm, RPE 2‑3).  \n- **Main set**: either  \n  • 6‑8 × 20‑sec strides (≈ 5 km pace) with 40‑sec easy jog recovery, **or**  \n  • 6‑8 × 10‑sec hill sprints (moderate grade) with full walk‑down recovery, **or** a steady easy run of 45‑60 min at 6:40‑7:15 /km (HR ≤ 155 bpm).  \n- **Cool‑down**",
+    "hrv_last_night_avg_ms": 48.0,
+    "hrv_7_day_avg_ms": 47.0,
+    "hrv_status": "BALANCED",
+    "sleep_hours": 5.75,
+    "sleep_hours_including_previous_day_nap": 5.75,
+    "sleep_score": 71,
+    "recovery_hours": 17.0,
+    "hrv_baseline": {
+      "lowUpper": 45.0,
+      "balancedLow": 47.0,
+      "balancedUpper": 58.0,
+      "markerValue": 0.25
+    },
+    "factor_details": {
+      "sleep_score": {
+        "percent": 56,
+        "feedback": "Moderate"
+      },
+      "sleep_history": {
+        "percent": 72,
+        "feedback": "Good"
+      },
+      "recovery_time": {
+        "percent": 73,
+        "feedback": "Good"
+      },
+      "acwr": {
+        "percent": 93,
+        "feedback": "Good"
+      },
+      "hrv": {
+        "percent": 73,
+        "feedback": "Good"
+      },
+      "stress_history": {
+        "percent": 63,
+        "feedback": "Moderate"
+      }
+    },
+    "ai_analysis": "**Decision** – Go ahead with today’s scheduled **Wednesday",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
   "health": {
-    "steps": 43
+    "steps": 53
   },
   "sleep": {
+    "deep_h": 0.63,
+    "light_h": 4.63,
+    "rem_h": 0.48,
+    "awake_h": 0.13,
     "baseline_h": 7.0,
     "need_h": 7.0,
+    "next_need_h": 7.0,
     "feedback": "No Change No Adjustments",
     "training_feedback": "No Change",
     "sleep_history_adjustment": "No Change",
@@ -19,11 +68,43 @@
     "nap_adjustment": "No Change",
     "previous_day_nap": null
   },
+  "load": {
+    "acute_load": 584,
+    "chronic_load": 618,
+    "acwr": 0.9,
+    "acwr_percent": 38,
+    "acwr_status": "Optimal",
+    "chronic_load_range": {
+      "min": 494.4,
+      "max": 927.0
+    },
+    "training_status": "Maintaining 2"
+  },
+  "vo2_max": 45.0,
+  "vo2_max_precise": 44.9,
   "race_predictions": {
     "5k": "26:51",
     "10k": "57:01",
     "half_marathon": "2:09:26",
     "marathon": "4:49:42"
+  },
+  "load_balance": {
+    "aerobic_low": 1006.3,
+    "aerobic_low_target": [
+      816,
+      1360
+    ],
+    "aerobic_high": 1356.8,
+    "aerobic_high_target": [
+      816,
+      1360
+    ],
+    "anaerobic": 33.7,
+    "anaerobic_target": [
+      108,
+      435
+    ],
+    "load_focus": "Anaerobic Shortage"
   },
   "running_tolerance": {
     "acute_impact_load": 45.1,
@@ -162,6 +243,14 @@
         }
       ]
     }
+  },
+  "heat_acclimation": {
+    "percentage": 100,
+    "trend": "Acclimatized"
+  },
+  "altitude_acclimation": {
+    "percentage": 0,
+    "trend": null
   },
   "trend_recent_daily": {
     "columns": [
@@ -343,16 +432,16 @@
       [
         "2026-11-18",
         59,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        48.0,
+        47.0,
+        5.75,
+        71,
+        45.0,
+        "Maintaining 2",
+        584,
+        618,
+        0.9,
+        "Optimal",
         0,
         0.0,
         0.0,
@@ -757,16 +846,16 @@
         "2026-11-12",
         "2026-11-18",
         59,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        48.0,
+        47.0,
+        5.75,
+        71,
+        45.0,
+        "Maintaining 2",
+        584,
+        618,
+        0.9,
+        "Optimal",
         6,
         5.34,
         39.26,
@@ -842,7 +931,7 @@
       [
         "2026-11-18",
         54,
-        2,
+        3,
         72,
         18
       ]

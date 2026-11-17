@@ -1,25 +1,25 @@
 # Daily Check — 2026-11-18
 
-## Readiness: -/100
+## Readiness: 43/100 (Low)
+> Find Time To Relax
 
+- **VO₂max:** 44.9 ml/kg/min (Garmin precise)
 - **RHR:** 59 bpm (7d avg: 58.3 bpm, trending down)
+- **HRV:** 48ms (7d avg: 47ms) · within 47–58ms
+- ⚠️ **Sleep:** 5h45 / 7h00 need (1h15 short) · score 71 · 7d avg 6h28 · 5/7 nights below need
+- **Recovery remaining:** 17h00
+- ⚠️ **Limiter:** Sleep Score (56%)
+- **Also soft:** Stress History
 
 ## Today's Session
 - **Planned:** Wed, Nov 18 — 7k EZ @ 6:50–7:20 ≤150bpm w/ 5×20s strides; 75s WALK
-- **Recommendation:** Proceed as planned
-- **Reason:** Available readiness, recovery-trend, and load indicators do not show a combination of major warnings.
-- **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
+- **Recommendation:** Adjust the workout
+- **Reason:** short sleep last night (5.8h); low 7-day sleep average (6.5h).
+- **Action:** Make this an easy aerobic run or substantially reduce the quality repetitions; keep effort controlled and stop if the warm-up feels abnormally hard. Resume the plan only if you feel normal.
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Wednesday workout (easy run + strides or hill work).  
-
-**Workout execution** – Because the exact prescription isn’t listed, follow the typical format:  
-- **Warm‑up**: 10‑15 min easy jog (HR ≈ 145 bpm, RPE 2‑3).  
-- **Main set**: either  
-  • 6‑8 × 20‑sec strides (≈ 5 km pace) with 40‑sec easy jog recovery, **or**  
-  • 6‑8 × 10‑sec hill sprints (moderate grade) with full walk‑down recovery, **or** a steady easy run of 45‑60 min at 6:40‑7:15 /km (HR ≤ 155 bpm).  
-- **Cool‑down**
+**Decision** – Go ahead with today’s scheduled **Wednesday
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -34,9 +34,14 @@ _Most recent activity (2026-11-17):_
 
 ## Load & Trends
 
+- **ACWR:** 0.9 (Optimal) — acute 584 / chronic 618 (chronic range 494.4–927)
 - **7-day volume:** 39.26km vs 28-day avg 39.2km (+0%)
 - **Running tolerance:** 70.0% (Medium) — 39.3km of 64.4km weekly cap, acute impact load 45.1
-- ⚠️ **Sleep (7d avg):** 6h35, 4/7 nights below need, trending up
+- **Aerobic Low:** 1006.3 (target 816–1360 — in range)
+- **Aerobic High:** 1356.8 (target 816–1360 — in range)
+- ⚠️ **Anaerobic:** 33.7 (target 108–435 — -74 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- ⚠️ **Sleep (7d avg):** 6h28, 5/7 nights below need, trending flat
 - **RHR (7d avg):** 58.3, trending down
 - **HRV:** trending up
 
