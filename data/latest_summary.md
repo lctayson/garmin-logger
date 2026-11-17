@@ -19,11 +19,7 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Keep today’s Wednesday workout, but scale it back to a pure easy run (skip or shorten the stride/hill component).  
-
-**Execution** –  
-- **Warm‑up:** 8‑10 min easy jog in the 7:10‑7:45 / km range, followed by a few dynamic drills (leg swings, high‑knees).  
-- **Main set:** 30‑40 min continuous easy aerobic running, staying in zone 6 (≈6:40‑7:15 / km, HR ≤ 155 bpm).  If you feel fully
+**Decision** – Proceed with today’s scheduled Wednesday easy‑run + strides, but **trim the volume** and **skip the strides/hills** if you feel any lingering fatigue from the short night.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
