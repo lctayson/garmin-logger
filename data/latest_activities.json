@@ -570,7 +570,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The three 10‑minute threshold reps hit the prescribed 5:20‑5:35 /km window (5:33, 5:32, 5:32) and the HR rose from 157 bpm to 166 bpm, staying inside the 158‑168 bpm sub‑threshold range, so the intensity was on target. Stamina fell from 99 % to 64 % and the 9‑bpm HR delta across reps reflect the expected cumulative load of a 30‑minute threshold block, while the –5.1 % pace‑efficiency drift is minimal and not a concern. The morning readiness score of 71 (moderate) matched a solid session, and the post‑run drop to 40 aligns with the high acute load (≈191) and –13 body‑battery impact, indicating you’ll need a focused recovery day. No red flags for this Tuesday SUT; just honor the suggested easy run tomorrow.",
+      "ai_analysis": "The three 10‑minute reps were run at 5:33 → 5:32 → 5:32 min/km, landing squarely in the prescribed sub‑threshold window (5:20‑5:35 min/km) and the rep‑average HR rose from 157 bpm to 166 bpm, ending at a time‑weighted 162 bpm—well within the 158‑168 bpm target but clearly climbing across the set. The –5.1 % pace‑efficiency drift together with the 9 bpm HR increase and a stamina drop from 99 % to 64 % indicate the work was physiologically demanding, consuming a sizable share of the day’s load (≈191 AU) and leaving the post‑run readiness at 40 / 100. With a moderate morning readiness (score 71) and good sleep, the session was appropriate, but the sharp stamina loss suggests you should keep the following day easy to preserve recovery for the next Tuesday threshold block.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
