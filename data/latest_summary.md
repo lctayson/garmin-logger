@@ -19,7 +19,12 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Wednesday easy‑run + strides, but **trim the volume** and **skip the strides/hills** if you feel any lingering fatigue from the short night.
+**Decision** – Proceed with today’s Wednesday session, but trim the volume/intensity to match today’s low‑readiness score (sleep ≈ 5¾ h).  
+
+**Workout (as scheduled for Wednesdays)**  
+- **Warm‑up:** 10‑15 min easy jog (HR ≤ 150 bpm, ~7:30 / km).  
+- **Main set:** 45‑60 min steady easy run at easy‑aerobic pace (≈ 6:45–7:10 / km, HR 145‑155 bpm).  
+- **Strides/Hill work:** If the week calls for strides, do 6 × 100 m strides at ~5K effort with full walk‑back recovery; if hill sprints are listed, limit to 4 × 10‑s uphill repeats, easy jog back down.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
