@@ -747,7 +747,7 @@
         ]
       },
       "lap_count": 19,
-      "ai_analysis": "The main set consisted of seven progressive repeats that averaged 7:27 /km (range 6:59–7:59 /km) with heart rates climbing from 122 bpm to 144 bpm, staying comfortably inside the easy‑aerobic zone and delivering an aerobic training effect of 2.9 and only 0.5 anaerobic points, which matches the scheduled Wednesday easy + strides/hills work. Stamina fell from 99 % to 84 % (minimum 79 %) and the overall body‑battery impact was –11, reflecting the modest load (78 AU) but also the low morning readiness score of 43. Because the session stayed well below sub‑threshold intensity, it does not raise concerns about missing a VO2 stimulus, but the low readiness suggests you should prioritize recovery (e.g., extra sleep or a relaxed day) before the next quality Thursday workout.",
+      "ai_analysis": "The 7‑rep main set averaged 7:27 /km (range 7:59–6:59 /km), which sits in the easy aerobic to recovery zone and is well slower than the sub‑threshold target of ~5:20‑5:35 /km for Tuesday quality work. Heart‑rate rose steadily from 122 bpm in the first rep to 144 bpm in the last, aligning with the modest pace drop and confirming the effort stayed within the ~145‑155 bpm easy‑zone range. Training‑",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
