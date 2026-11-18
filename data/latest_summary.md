@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 2.9 · anaerobic 0.5
   - MS: 6.06k @ 7:26 136bpm 0.79m 169spm 276ms 7.8cm 237w
   - Readiness 43 → 39 (Find Time To Relax) · Recovery 21h 37m
-  - 🧠 The 45‑minute main set averaged 7:27 /km (rep HR 122–144 bpm), well below the sub‑threshold zone (≈5:20–5:35 /km, ~158‑168 bpm) and even slower than the easy aerobic range, so the workout functioned as a low‑intensity run rather than a Tuesday threshold session. The pace drift was negative (first rep 7:59
+  - 🧠 The main set consisted of seven progressive repeats that averaged 7:27 /km (range 6:59–7:59 /km) with heart rates climbing from 122 bpm to 144 bpm, staying comfortably inside the easy‑aerobic zone and delivering an aerobic training effect of 2.9 and only 0.5 anaerobic points, which matches the scheduled Wednesday easy + strides/hills work. Stamina fell from 99 % to 84 % (minimum 79 %) and the overall body‑battery impact was –11, reflecting the modest load (78 AU) but also the low morning readiness score of 43. Because the session stayed well below sub‑threshold intensity, it does not raise concerns about missing a VO2 stimulus, but the low readiness suggests you should prioritize recovery (e.g., extra sleep or a relaxed day) before the next quality Thursday workout.
 
 ## Next Session
 - **Planned:** Thu, Nov 19 — 6K: 5×90 sec hard but controlled at 3–5K effort; 2 min easy recovery; don't sprint
