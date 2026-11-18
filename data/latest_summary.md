@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 2.9 · anaerobic 0.5
   - MS: 6.06k @ 7:26 136bpm 0.79m 169spm 276ms 7.8cm 237w
   - Readiness 43 → 39 (Find Time To Relax) · Recovery 21h 37m
-  - 🧠 The seven‑rep main set lasted 45:05 and moved from a 7:59 /km pace (HR 122 bpm) down to a 6:59 /km pace (HR 144 bpm), ending with an average rep pace of 7:27 /km and a time‑weighted HR of 136 bpm—well within the easy aerobic zone prescribed for Wednesday work. The modest aerobic training effect (2.9 AEROBIC_BASE) and the near‑zero anaerobic contribution (0.5 ANAEROBIC) confirm that the session delivered only the intended low‑intensity stimulus. With a morning readiness score of 43 (Low) and a post‑run dip to 39, the low‑intensity nature of the workout is appropriate, but the reduced recovery time (65 % of baseline) suggests you should prioritize rest before the next Tuesday sub‑threshold session.
+  - 🧠 The 7‑rep main set stayed firmly in easy‑aerobic intensity (rep HR 122‑144 bpm, well below LTHR 171) and the pace dropped from 7:59 /km to 6:59 /km, matching the Wednesday easy‑run + hill/stride format rather than a sub‑threshold or VO2 session. The modest aerobic training effect (2.9 AEROBIC, 0.5 ANAEROBIC) and the overall load of 78 AU align with a low‑impact day, despite the readiness score being low (43 Low). Stamina fell from 99 % to 84 % (min 79 %) and body‑battery dropped 11 pts, which is typical for a session that includes brief hill effort but not a cause for alarm. No execution issues are evident; the workout met the intended easy‑run purpose.
 
 ## Next Session
 - **Planned:** Thu, Nov 19 — 6K: 5×90 sec hard but controlled at 3–5K effort; 2 min easy recovery; don't sprint
