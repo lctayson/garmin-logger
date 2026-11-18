@@ -19,15 +19,16 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed, but trim today’s volume/intensity to match the low‑readiness score (short ≈30 min easy + strides).  
+**Decision – adjust, don’t skip**  
+Readiness is low (score 43) mainly because of short sleep (≈5.8 h). Your ACWR is optimal and HRV is still in the balanced band, so a full rest day isn’t required, but today’s “easy + strides/hills” should be trimmed to protect recovery.
 
-**Workout (typical Wed)** – *Warm‑up*: 5 min easy jog, gradually build to sub‑threshold HR (~155 bpm).  
-*Main*: 20‑25 min easy run at 6:40–7:15 km⁻¹ (Zone 6‑7), then 6 × 100 m strides (≈4:30 km⁻¹) with 45‑s jog recoveries.  
-*Cool‑down*: 5‑10 min very easy jog or walk.  
+**Workout execution – what to do**  
+- **Warm‑up:** 10‑15 min easy jog (≈7:30‑7:45 /km, HR ≈ 145‑150 bpm) plus a few dynamic leg swings.  
+- **Main set:** If the plan lists strides, run 4 × 100 m strides at ~85 % effort (≈5:30‑5:45 /km) with 30‑45 s easy jog recovery; if hill sprints are prescribed, limit to 4 × 10 s uphill at a hard but controlled effort, walking down for recovery.  
+- **Cool‑down:** 8‑10 min easy jog back into recovery zone (≤7:45 /km, HR ≤ 150 bpm).  
 
-**Readiness rationale** – Sleep was only 5.8 h (moderate‑low), pulling the overall readiness to 43, but HRV is balanced, resting HR (59 bpm) is normal, and ACWR 0.9 is optimal. The low score is driven mainly by sleep, not by cumulative fatigue, so a light, aerobic‑focused session is appropriate rather than full‑scale recovery or a hard workout.  
-
-**
+**Readiness rationale**  
+- **Sleep:** 5.75 h is below your usual threshold → lowers overall readiness.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
