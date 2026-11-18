@@ -747,7 +747,7 @@
         ]
       },
       "lap_count": 19,
-      "ai_analysis": "The 7‑rep main set stayed firmly in easy‑aerobic intensity (rep HR 122‑144 bpm, well below LTHR 171) and the pace dropped from 7:59 /km to 6:59 /km, matching the Wednesday easy‑run + hill/stride format rather than a sub‑threshold or VO2 session. The modest aerobic training effect (2.9 AEROBIC, 0.5 ANAEROBIC) and the overall load of 78 AU align with a low‑impact day, despite the readiness score being low (43 Low). Stamina fell from 99 % to 84 % (min 79 %) and body‑battery dropped 11 pts, which is typical for a session that includes brief hill effort but not a cause for alarm. No execution issues are evident; the workout met the intended easy‑run purpose.",
+      "ai_analysis": "The 45‑minute main set averaged 7:27 /km (rep HR 122–144 bpm), well below the sub‑threshold zone (≈5:20–5:35 /km, ~158‑168 bpm) and even slower than the easy aerobic range, so the workout functioned as a low‑intensity run rather than a Tuesday threshold session. The pace drift was negative (first rep 7:59",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
