@@ -19,9 +19,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision –** Proceed, but downgrade the session to a pure easy run (no strides or hill work) and keep the effort comfortably aerobic.  
+**Decision** – Proceed, but trim today’s volume/intensity to match the low‑readiness score (short ≈30 min easy + strides).  
 
-**Workout –** Warm‑up: 10‑15 min easy jog + 2‑3 × dynamic drills (leg swings, high‑knees). Main set: 6‑8 km at easy‑aerobic pace (≈6:40‑7:15 /km, HR ≤ 155 bpm
+**Workout (typical Wed)** – *Warm‑up*: 5 min easy jog, gradually build to sub‑threshold HR (~155 bpm).  
+*Main*: 20‑25 min easy run at 6:40–7:15 km⁻¹ (Zone 6‑7), then 6 × 100 m strides (≈4:30 km⁻¹) with 45‑s jog recoveries.  
+*Cool‑down*: 5‑10 min very easy jog or walk.  
+
+**Readiness rationale** – Sleep was only 5.8 h (moderate‑low), pulling the overall readiness to 43, but HRV is balanced, resting HR (59 bpm) is normal, and ACWR 0.9 is optimal. The low score is driven mainly by sleep, not by cumulative fatigue, so a light, aerobic‑focused session is appropriate rather than full‑scale recovery or a hard workout.  
+
+**
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
