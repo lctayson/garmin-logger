@@ -19,10 +19,12 @@
 
 ### 🧠 AI Coaching Guidance
 
-* **Decision:** Proceed with the planned Wednesday easy run, but treat strides as strictly optional based on how you feel late in the session.
-* **Workout execution:** Execute an easy aerobic run (6:40–7:15/km, keeping HR strictly under 150–155 bpm), followed by 4–6 flat strides only if your legs feel snappy and fully warmed up.
-* **Readiness rationale:** While the overall readiness score is low (43) due to a short night of sleep (5.75 hours), your underlying autonomic data is stable—HRV is balanced (48 ms vs. 47 ms baseline), resting HR is steady at 59 bpm, and ACWR is optimal at 0.90 (acute load 584 vs. chronic 618).
-* **In-session guardrails:** Account for early-morning heat/humidity by letting HR dictate pace rather than forcing 6:40/km; if cardiac drift pushes HR above 155 bpm at an easy effort, or if heavy leg fatigue lingers after 15 minutes, pull back to recovery pace (7:10+/km) and skip the strides entirely to protect Thursday's quality interval session.
+**Decision** – Proceed with today’s scheduled **Wednesday easy run + strides**, but trim the run by ~20 % (e.g., 30 min instead of 40 min) to respect the low‑readiness score.
+
+**Workout execution** –  
+- **Warm‑up**: 10 min easy jog (≈7:30 /km, HR ≤ 150 bpm).  
+- **Main set**: Easy steady run at easy‑aerobic pace (≈6:50 – 7:15 /km) for the shortened duration.  
+- **Strides**: 6 × 100 m strides, 90 %
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
