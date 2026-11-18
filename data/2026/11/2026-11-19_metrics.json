@@ -35,7 +35,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "**Decision** – Proceed with today’s Thursday quality session, but trim the volume (one",
+    "ai_analysis": "**Decision – go ahead, but trim the intensity**  \n- Your overall readiness is “moderate” (score 56). Sleep was short (5.7 h) but HRV, resting‑HR (59 bpm) and ACWR are all solid, so you have enough systemic capacity for a quality Thursday workout. Keep the plan but cut the load by one interval or stay a shade slower than the target VO₂max pace.\n\n**Workout execution (typical Thursday VO₂max",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
