@@ -17,10 +17,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision – go ahead, but trim the intensity**  
-- Your overall readiness is “moderate” (score 56). Sleep was short (5.7 h) but HRV, resting‑HR (59 bpm) and ACWR are all solid, so you have enough systemic capacity for a quality Thursday workout. Keep the plan but cut the load by one interval or stay a shade slower than the target VO₂max pace.
+**Decision** – Proceed with today’s Thursday VO₂‑max interval session, but trim the volume (one fewer repeat) to respect the sub‑optimal sleep quantity.
 
-**Workout execution (typical Thursday VO₂max
+**Workout execution (typical Thursday quality)**  
+- **Warm‑up:** 12 min easy run (≈7:30 km⁻¹) + 4 × 100 m strides, ending with a short, dynamic‑leg drill set.  
+- **Main set
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
