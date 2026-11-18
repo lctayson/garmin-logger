@@ -18,7 +18,7 @@
   - Intervals: 5 work reps · pace drift -5.0% · HR +12bpm
   - MS: 1.56k @ 4:48 155bpm 1.10m 186spm 231ms 8.2cm 353w
   - Readiness 56 → 41 (Find Time To Relax) · Recovery 22h 18m
-  - 🧠 The five 90‑second reps averaged 4:51 /km (range 4:45–4:55), which sits squarely in the VO2‑max zone (≈4:50–5:15 /km) rather than the sub‑threshold range prescribed for Tuesday sessions, so the work delivered a genuine high‑intensity stimulus. Across the set the pace drifted about –5 % (the final rep was ~5 % faster) while heart‑rate rose 12 bpm, indicating the athlete got progressively quicker rather than fatigued, even though perceived stamina fell from 99 % to 72 % and body‑battery dropped 8 points. Given a moderate morning readiness score (56) and only ~2 h of recovery, the ability to maintain and improve VO2‑level effort suggests the day’s load was well‑tolerated, but the low recovery window should be monitored for future hard sessions.
+  - 🧠 Your five 90‑second reps averaged 4:51 /km (range 4:45‑4:55), placing the work squarely in the VO2‑max intensity band (≈4:50‑5:15 /km) that Thursday quality sessions demand, and the HR rose from 147 bpm in the first rep to 159 bpm by the last, matching the expected cardiovascular load for that pace. The –5 % pace‑drift and +12 bpm HR‑delta show a modest speed‑up and progressive effort across reps, while stamina fell from 99 % to 72 % (minimum 56 %), indicating a typical fatigue profile for a high‑intensity interval block. With a morning readiness score of 56 (“Moderate”) and only about 2 hours of recovery logged, the session was completed on the low‑recovery side of your tolerance, so keep an eye on next‑day fatigue but the work itself hit the intended intensity.
 
 ## Next Session
 - **Planned:** Fri, Nov 20 — REST + Core
