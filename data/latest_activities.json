@@ -690,7 +690,7 @@
         ]
       },
       "lap_count": 17,
-      "ai_analysis": "Your five 90‑second reps averaged 4:51 /km (range 4:45‑4:55), placing the work squarely in the VO2‑max intensity band (≈4:50‑5:15 /km) that Thursday quality sessions demand, and the HR rose from 147 bpm in the first rep to 159 bpm by the last, matching the expected cardiovascular load for that pace. The –5 % pace‑drift and +12 bpm HR‑delta show a modest speed‑up and progressive effort across reps, while stamina fell from 99 % to 72 % (minimum 56 %), indicating a typical fatigue profile for a high‑intensity interval block. With a morning readiness score of 56 (“Moderate”) and only about 2 hours of recovery logged, the session was completed on the low‑recovery side of your tolerance, so keep an eye on next‑day fatigue but the work itself hit the intended intensity.",
+      "ai_analysis": "The five 90‑second reps averaged a 4:51 /km pace (range 4:45‑4:55), which sits squarely in the VO2‑max zone (≈4:50‑5:15 /km) but the corresponding HR climbed only from 147 bpm to 159 bpm, suggesting the heat limited cardiac strain despite the speed. The –5 % pace drift means the last rep was actually faster, while the 12 bpm HR rise shows a progressive effort load rather than fatigue‑induced slowing. Stamina fell from 99 % to 72 % (minimum 56 %), a moderate depletion consistent with a hard interval block and the “maintaining anaerobic base” training effect",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
