@@ -19,12 +19,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **Wednesday easy run + strides**, but trim the run by ~20 % (e.g., 30 min instead of 40 min) to respect the low‑readiness score.
+**Decision** – Proceed with today’s scheduled Wednesday workout, but dial it back to a pure easy run (skip the strides if you feel any lingering fatigue).  
 
-**Workout execution** –  
-- **Warm‑up**: 10 min easy jog (≈7:30 /km, HR ≤ 150 bpm).  
-- **Main set**: Easy steady run at easy‑aerobic pace (≈6:50 – 7:15 /km) for the shortened duration.  
-- **Strides**: 6 × 100 m strides, 90 %
+**Execution (as per the plan)**  
+- **Warm‑up**: 10 min easy jog + 2‑3 dynamic drills (leg swings, high‑knees).  
+- **Main set**: 30‑40 min easy aerobic run at ~7:30‑7:45 km⁻¹ (keep HR ≤150 bpm, RPE ≈ 3‑4).  
+- **Optional strides**: If you feel fully recovered after the run, add 6 × 100 m strides at moderate effort (RPE 5‑6) with full walking recovery; otherwise omit.  
+- **Cool‑down**: 5‑10 min very easy jog + light stretching.  
+
+**Readiness rationale** – Your overall readiness score is low (43) mainly because sleep was short (5.75 h). HRV is in the balanced band
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
