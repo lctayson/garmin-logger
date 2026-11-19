@@ -18,7 +18,7 @@
   - Intervals: 5 work reps · pace drift -5.0% · HR +12bpm
   - MS: 1.56k @ 4:48 155bpm 1.10m 186spm 231ms 8.2cm 353w
   - Readiness 56 → 41 (Find Time To Relax) · Recovery 22h 18m
-  - 🧠 The five 90‑second reps averaged 4:51 /km (range 4:45‑4:55), which sits squarely in the VO2max zone
+  - 🧠 The five 90‑second reps averaged 4:51 /km (range 4:45–4:55), squarely in the VO2‑max zone you target for Thursday quality work, and the time‑weighted HR of 155 bpm rose steadily to 159 bpm, matching the expected cardiovascular load for those paces. A –5 % pace‑efficiency drift shows the reps actually got faster (the last rep was 4:45 /km), confirming a genuine VO2 stimulus rather than a drift toward easy effort. Stamina fell from 99 % at the start to a low of 56 % by the end, which is a noticeable dip but not abnormal for a hard interval session performed with a moderate‑level readiness score of 56. Given the limited recovery hours (≈2 h) after sleep, you may want to prioritize extra rest or easy mileage before the next hard day to keep the stamina dip from compounding.
 
 ## Next Session
 - **Planned:** Fri, Nov 20 — REST + Core
