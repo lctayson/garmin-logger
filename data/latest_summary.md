@@ -18,7 +18,7 @@
   - Intervals: 5 work reps · pace drift -5.0% · HR +12bpm
   - MS: 1.56k @ 4:48 155bpm 1.10m 186spm 231ms 8.2cm 353w
   - Readiness 56 → 41 (Find Time To Relax) · Recovery 22h 18m
-  - 🧠 The five 90‑second reps averaged a 4:51 /km pace (range 4:45‑4:55), which sits squarely in the VO2‑max zone (≈4:50‑5:15 /km) but the corresponding HR climbed only from 147 bpm to 159 bpm, suggesting the heat limited cardiac strain despite the speed. The –5 % pace drift means the last rep was actually faster, while the 12 bpm HR rise shows a progressive effort load rather than fatigue‑induced slowing. Stamina fell from 99 % to 72 % (minimum 56 %), a moderate depletion consistent with a hard interval block and the “maintaining anaerobic base” training effect
+  - 🧠 The five 90‑second reps averaged 4:51 /km (range 4:45–4:55), which is well into the VO2max intensity band (≈4:50–5:15 /km) rather than the prescribed sub‑threshold range (5:20–5:35 /km), so the session delivered a solid aerobic‑capacity stimulus. Heart‑rate rose from 147 bpm in the first rep to 159 bpm in the last (12 bpm total increase) while pace improved 5 % (pace_ef_drift_pct ‑5 %), indicating the work became both faster and more efficient despite the heat‑related cardiac cost. Stamina fell from 99 % to 72 % (minimum 56 %) and body‑battery dropped ‑8, which aligns with the moderate‑level readiness score (56) and the post‑exercise readiness dip to 41, suggesting you’ll need a good recovery day before the next hard session.
 
 ## Next Session
 - **Planned:** Fri, Nov 20 — REST + Core
