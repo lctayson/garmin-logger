@@ -1,20 +1,30 @@
 # Daily Check — 2026-11-20
 
-## Readiness: -/100
+## Readiness: 61/100 (Moderate)
+> Listen To Your Body
 
-- ⚠️ **RHR:** 60 bpm (7d avg: 58.9 bpm, trending up)
+- **VO₂max:** 45 ml/kg/min (Garmin precise)
+- **RHR:** 58 bpm (7d avg: 58.6 bpm, trending flat)
+- ⚠️ **HRV:** 43ms (7d avg: 46ms) · below 47–58ms
+- ⚠️ **Sleep:** 7h03 / 7h30 need (0h27 short) · score 83 · 7d avg 6h23 · 6/7 nights below need
+- **Recovery remaining:** 0h00
+- ⚠️ **Limiter:** Stress History (50%)
+- **Also soft:** Hrv, Sleep History
 
 ## Today's Session
 - **Planned:** Fri, Nov 20 — REST + Core
 - **Recommendation:** Keep it easy
-- **Reason:** low 7-day sleep average (6.3h); resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
+- **Reason:** ongoing sleep debt (7-day average 6.4h), 6/7 nights below need; HRV is trending down; last-night HRV is below the balanced band.
 - **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned Strength A (hip‑extension power) session.  
+**Decision** – Proceed with today’s planned **Friday core/hip‑stability strength session**. Your readiness is “moderate” (score 61) with a slightly low HRV but good sleep, low resting HR (58 bpm) and optimal ACWR (0.9), so a normal‑intensity strength day is appropriate; no need to downgrade to full recovery.
 
-**Execution** – *Warm‑up*: 5‑10 min easy jog or dynamic mobility (leg swings, walking lunges). *Main*: 3‑4 sets of hip‑thrusts, single‑leg bridges, and banded hip‑abductions, 8‑12 reps each, using a load that lets you move explosively while staying below a perceived effort of 6/10. *Cool‑down*: 5 min light stretch focusing on glutes, hamstrings
+**Workout execution** – 1️⃣ Warm‑up: 5‑8 min light dynamic routine (leg swings, hip circles, air squats) keeping HR < 130 bpm.  
+2️⃣ Main set (≈30 min total):  
+  – Core circuit: 3 × 10‑12 reps each of plank (30‑45 s), side‑plank each side (30 s), dead‑bug, bird‑dog – RPE 5‑6.  
+  – Hip‑stability circuit: 3 ×
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -29,10 +39,15 @@ _Most recent activity (2026-11-19):_
 
 ## Load & Trends
 
+- **ACWR:** 0.9 (Optimal) — acute 609 / chronic 635 (chronic range 508–952.5)
 - **7-day volume:** 43.15km vs 28-day avg 40.7km (+6%)
 - **Running tolerance:** 71.6% (Medium) — 43.1km of 64.4km weekly cap, acute impact load 46.1
-- ⚠️ **Sleep (7d avg):** 6h16, 5/7 nights below need, trending flat
-- ⚠️ **RHR (7d avg):** 58.9, trending up
+- **Aerobic Low:** 1074.2 (target 816–1360 — in range)
+- **Aerobic High:** 1331.8 (target 816–1360 — in range)
+- ⚠️ **Anaerobic:** 71.8 (target 108–435 — -36 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- ⚠️ **Sleep (7d avg):** 6h23, 6/7 nights below need, trending flat
+- **RHR (7d avg):** 58.6, trending flat
 - ⚠️ **HRV:** trending down
 
 ## This Week (Nov 14–20)
