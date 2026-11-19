@@ -690,7 +690,7 @@
         ]
       },
       "lap_count": 17,
-      "ai_analysis": "The five 90‑second reps were executed at an average 4:51 /km (range 4:45–4:55), squarely in the VO2max zone you target for Thursday quality work, and the HR climbed from 147 bpm in the first rep to 159 bpm by the last, matching the expected rise toward the high‑end of the VO2max HR range. A –5 % pace‑efficiency drift indicates the final rep was actually quicker, not slower, and the modest 12 bpm HR increase shows the stimulus stayed progressive rather than flattening out. Stamina fell from 99 % to 72 % (min 56 %) and the training effect scores (TEMPO 3.3, anaerobic 2.2) are consistent with a solid VO2max effort without excessive fatigue for a bridge‑phase session. Morning readiness was moderate (56) and the post‑run drop to 41 is normal after this intensity, so no red flags appear.",
+      "ai_analysis": "The five 90‑second reps averaged 4:51 /km (range 4:45‑4:55), which sits squarely in the VO2max zone",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
