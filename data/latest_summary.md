@@ -19,12 +19,9 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned **Friday core/hip‑stability strength session**. Your readiness is “moderate” (score 61) with a slightly low HRV but good sleep, low resting HR (58 bpm) and optimal ACWR (0.9), so a normal‑intensity strength day is appropriate; no need to downgrade to full recovery.
+**Decision** – Proceed with today’s scheduled Friday core/hip‑stability strength session, but dial the load back a notch (≈70 % of usual weight or reps) given a moderate‑readiness signal.
 
-**Workout execution** – 1️⃣ Warm‑up: 5‑8 min light dynamic routine (leg swings, hip circles, air squats) keeping HR < 130 bpm.  
-2️⃣ Main set (≈30 min total):  
-  – Core circuit: 3 × 10‑12 reps each of plank (30‑45 s), side‑plank each side (30 s), dead‑bug, bird‑dog – RPE 5‑6.  
-  – Hip‑stability circuit: 3 ×
+**Workout execution** – *Warm‑up*: 5‑10 min of easy mobility (leg swings, hip circles, banded glute activates). *Main set*: follow the prescribed core/hip‑stability circuit (e.g., glute bridges, clamshells, side‑plank holds, bird‑dogs, single‑leg dead‑lifts) – 3 circuits, 8‑12 reps each, focusing on controlled form rather than
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
