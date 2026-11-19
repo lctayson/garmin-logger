@@ -690,7 +690,7 @@
         ]
       },
       "lap_count": 17,
-      "ai_analysis": "The five 90‑second reps hit an average pace of 4:51 km⁻¹ (range 4:45‑4:55) with heart rates climbing from 147 bpm to 159 bpm, delivering a clear VO2‑max stimulus rather than the sub‑threshold pace normally prescribed for Tuesday sessions. The –5 % pace‑efficiency drift and +12 bpm HR rise across the set confirm that the intensity increased as intended, providing the anaerobic load that has been missing in recent weeks. Though your readiness score was only moderate (56) and recovery hours were low, the work was executed within the expected physiological window for this phase, so the session can be considered a successful quality effort.",
+      "ai_analysis": "The five 90‑second reps averaged a 4:51 /km pace (range 4:45–4:55), squarely in the VO2‑max zone expected for Thursday quality work, and the slight negative pace‑drift (‑5 %) shows the final rep was even a touch quicker despite the HR climbing from 147 to 159 bpm. Stamina dropped from 99 % to 72 % (minimum 56 %) and the body‑battery impact was –8, which is typical for a high‑intensity interval block and not a red flag given the moderate morning readiness (score 56, sleep 78). Overall the session delivered the intended VO2 stimulus without undue cardiovascular overload",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
