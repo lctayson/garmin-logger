@@ -18,7 +18,7 @@
   - Intervals: 5 work reps · pace drift -5.0% · HR +12bpm
   - MS: 1.56k @ 4:48 155bpm 1.10m 186spm 231ms 8.2cm 353w
   - Readiness 56 → 41 (Find Time To Relax) · Recovery 22h 18m
-  - 🧠 The five 90‑second reps averaged 4:51 /km (range 4:45–4:55), which sits squarely in the prescribed VO₂‑max interval zone (≈4:50–5:15 /km) for Thursday quality work, and the final rep even hit the fastest 4:45 /km. Across the set heart rate climbed from 147 bpm to 159 bpm (time‑weighted 155 bpm), matching the expected rise toward the upper end of the VO₂‑max HR range despite the early‑morning heat. The –5 % pace‑efficiency drift indicates a modest overall speed gain rather than a loss of stimulus, while stamina fell from 99 % to 72 % (min 56 %) – a normal fatigue signal for a hard interval day given a moderate‑level readiness score of 56. No red flags appear; the session delivered the intended VO₂‑max intensity and stayed within the current bridge‑phase objectives.
+  - 🧠 The main set delivered a clear VO2‑max stimulus: five 90‑second reps at 4:45‑4:55 /km (average 4:51 /km) with HR climbing from 147 bpm in the first rep to 159 bpm in the last, which is modestly below the typical VO2‑max HR range (≈170–178 bpm) but understandable given the early‑morning heat. Stamina dropped from 99 % to 72 % (min 56 %) and interval‑drift shows a –5 % pace efficiency gain and a +12 bpm HR rise, indicating the work was progressively harder yet still well‑controlled. Morning readiness was “Moderate” (score 56) and post‑exercise it fell to 41, a normal response to this quality Thursday session and not a sign of excessive load.
 
 ## Next Session
 - **Planned:** Fri, Nov 20 — REST + Core
