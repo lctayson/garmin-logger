@@ -18,7 +18,7 @@
   - Intervals: 5 work reps · pace drift -5.0% · HR +12bpm
   - MS: 1.56k @ 4:48 155bpm 1.10m 186spm 231ms 8.2cm 353w
   - Readiness 56 → 41 (Find Time To Relax) · Recovery 22h 18m
-  - 🧠 The five 90‑second reps averaged 4:51 /km (range 4:45–4:55), which sits squarely in the VO2max zone (≈4:50–5:15 /km) prescribed for Thursday quality work, and the -5 % pace‑efficiency drift shows a modest acceleration across the set. Heart‑rate rose from 147 bpm in the first rep to 159 bpm by the last, matching the expected climb toward the upper sub‑threshold/VO2max range (≈158–169 bpm). Stamina fell from 99 % to 72 % (minimum 56 %), a typical depletion for a session of this intensity given a moderate morning readiness score of 56. Overall, the main set delivered the intended VO2 stimulus without evident pacing shortfall.
+  - 🧠 The five 90‑second reps averaged 4:51 /km (range 4:45‑4:55), which sits squarely in the VO2max zone (≈4:50‑5:15 /km) and therefore met the intended high‑intensity Thursday stimulus. Heart rate rose from 147 bpm in the first rep to 159 bpm by the last, with a +12 bpm overall delta, confirming a progressive load, while the ‑5 % pace drift indicates the reps actually got faster rather than slowing down. Stamina dipped to 72 % (min 56 %), a typical response for this effort, and the moderate readiness score (56) did not appear to impair execution. This session delivered a genuine anaerobic/VO2max stimulus, addressing the known risk of insufficient high‑intensity work in the bridge phase.
 
 ## Next Session
 - **Planned:** Fri, Nov 20 — REST + Core
