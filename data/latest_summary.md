@@ -18,7 +18,7 @@
   - Intervals: 5 work reps · pace drift -5.0% · HR +12bpm
   - MS: 1.56k @ 4:48 155bpm 1.10m 186spm 231ms 8.2cm 353w
   - Readiness 56 → 41 (Find Time To Relax) · Recovery 22h 18m
-  - 🧠 The five 90‑second reps averaged 4:51 /km (range 4:45‑4:55) with a time‑weighted HR of 155 bpm, landing squarely in the VO2max zone prescribed for Thursday quality work (≈4:50‑5:15 /km, HR climbing toward 170‑178). The –5 % pace drift and a 12 bpm HR rise across reps show the reps got marginally faster and more cardiovascularly demanding, which aligns with the intended VO2 stimulus rather than indicating a shortfall. Despite a moderate readiness score (56) and a stamina dip to 72 % (min 56 %), the session delivered the expected aerobic‑anaerobic mix (TEMPO label, aerobic 3.3, anaerobic 2.2) without any red flags.
+  - 🧠 The five 90‑second reps were executed at an average 4:51 /km (range 4:45–4:55), squarely in the VO2max zone you target for Thursday quality work, and the HR climbed from 147 bpm in the first rep to 159 bpm by the last, matching the expected rise toward the high‑end of the VO2max HR range. A –5 % pace‑efficiency drift indicates the final rep was actually quicker, not slower, and the modest 12 bpm HR increase shows the stimulus stayed progressive rather than flattening out. Stamina fell from 99 % to 72 % (min 56 %) and the training effect scores (TEMPO 3.3, anaerobic 2.2) are consistent with a solid VO2max effort without excessive fatigue for a bridge‑phase session. Morning readiness was moderate (56) and the post‑run drop to 41 is normal after this intensity, so no red flags appear.
 
 ## Next Session
 - **Planned:** Fri, Nov 20 — REST + Core
