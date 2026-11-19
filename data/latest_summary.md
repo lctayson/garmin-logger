@@ -19,19 +19,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision – Proceed as planned**  
-Your readiness is moderate (score 61) with decent sleep, low resting HR, and an optimal ACWR (0.9). The slight dip in HRV is isolated and not enough to warrant skipping today’s core/hip‑stability day.
+**Decision** – Proceed with today’s scheduled core/hip‑stability strength session, but keep the load light‑to‑moderate (≈60 % of your usual effort) in case you feel lingering fatigue.
 
-**Workout execution (strength‑only day)**  
-- **Warm‑up**: 5 min light jog or brisk walk + dynamic hip‑mobility (leg swings, hip circles).  
-- **Main set** (typical core/hip routine): 2‑3 rounds of  
-  1) Glute bridges × 15,  
-  2) Clamshells × 12 each side,  
-  3) Side‑plank × 30 s each side,  
-  4) Bird‑dog × 12 each side,  
-  5) Pallof press × 12 each side.  
-  Keep effort in the “moderate‑hard” RPE 6–7 range; focus on quality over speed.  
-- **Cool‑down**: 4‑5 min gentle stretch of glutes, hamstrings, hip flexors, and low
+**Workout execution** –  
+- **Warm‑up**: 5 min easy dynamic mobility (leg swings, hip circles, body‑weight glute bridges).  
+- **Main set**: Perform the exact core/hip‑stability circuit prescribed for Friday (e.g., planks, side‑planks, bird‑dogs, clamshells, glute bridges) with the usual rep scheme; stay in a “moderate” RPE range (4‑5/10) rather than pushing to failure.  
+- **Recovery**: Keep rest intervals as written (typically 30‑60 s between sets).  
+- **Cool‑down**: 3‑5 min gentle stretching of hips, hamstrings, and lower back.
+
+**Readiness rationale** – Your sleep was solid (7 h, score 83) and ACWR is optimal (0.9), but HRV is low (43 ms, “UNBALANCED”) and the overall readiness score is moderate (61). The low resting HR (58
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
