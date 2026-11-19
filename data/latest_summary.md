@@ -18,7 +18,7 @@
   - Intervals: 5 work reps · pace drift -5.0% · HR +12bpm
   - MS: 1.56k @ 4:48 155bpm 1.10m 186spm 231ms 8.2cm 353w
   - Readiness 56 → 41 (Find Time To Relax) · Recovery 22h 18m
-  - 🧠 The five 90‑second reps averaged 4:51 /km (range 4:45–4:55), which is well into the VO2max intensity band (≈4:50–5:15 /km) rather than the prescribed sub‑threshold range (5:20–5:35 /km), so the session delivered a solid aerobic‑capacity stimulus. Heart‑rate rose from 147 bpm in the first rep to 159 bpm in the last (12 bpm total increase) while pace improved 5 % (pace_ef_drift_pct ‑5 %), indicating the work became both faster and more efficient despite the heat‑related cardiac cost. Stamina fell from 99 % to 72 % (minimum 56 %) and body‑battery dropped ‑8, which aligns with the moderate‑level readiness score (56) and the post‑exercise readiness dip to 41, suggesting you’ll need a good recovery day before the next hard session.
+  - 🧠 The five 90‑second reps hit an average pace of 4:51 km⁻¹ (range 4:45‑4:55) with heart rates climbing from 147 bpm to 159 bpm, delivering a clear VO2‑max stimulus rather than the sub‑threshold pace normally prescribed for Tuesday sessions. The –5 % pace‑efficiency drift and +12 bpm HR rise across the set confirm that the intensity increased as intended, providing the anaerobic load that has been missing in recent weeks. Though your readiness score was only moderate (56) and recovery hours were low, the work was executed within the expected physiological window for this phase, so the session can be considered a successful quality effort.
 
 ## Next Session
 - **Planned:** Fri, Nov 20 — REST + Core
