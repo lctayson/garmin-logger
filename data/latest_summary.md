@@ -19,9 +19,19 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Friday core/hip‑stability strength session, but dial the load back a notch (≈70 % of usual weight or reps) given a moderate‑readiness signal.
+**Decision – Proceed as planned**  
+Your readiness is moderate (score 61) with decent sleep, low resting HR, and an optimal ACWR (0.9). The slight dip in HRV is isolated and not enough to warrant skipping today’s core/hip‑stability day.
 
-**Workout execution** – *Warm‑up*: 5‑10 min of easy mobility (leg swings, hip circles, banded glute activates). *Main set*: follow the prescribed core/hip‑stability circuit (e.g., glute bridges, clamshells, side‑plank holds, bird‑dogs, single‑leg dead‑lifts) – 3 circuits, 8‑12 reps each, focusing on controlled form rather than
+**Workout execution (strength‑only day)**  
+- **Warm‑up**: 5 min light jog or brisk walk + dynamic hip‑mobility (leg swings, hip circles).  
+- **Main set** (typical core/hip routine): 2‑3 rounds of  
+  1) Glute bridges × 15,  
+  2) Clamshells × 12 each side,  
+  3) Side‑plank × 30 s each side,  
+  4) Bird‑dog × 12 each side,  
+  5) Pallof press × 12 each side.  
+  Keep effort in the “moderate‑hard” RPE 6–7 range; focus on quality over speed.  
+- **Cool‑down**: 4‑5 min gentle stretch of glutes, hamstrings, hip flexors, and low
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
