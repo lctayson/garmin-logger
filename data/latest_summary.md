@@ -19,15 +19,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled core/hip‑stability strength session, but keep the load light‑to‑moderate (≈60 % of your usual effort) in case you feel lingering fatigue.
+**Decision** – Proceed with today’s scheduled **core/hip‑stability strength session**, but keep the load moderate (e.g., lighter weight or fewer reps) in case the low HRV translates to lingering fatigue.
 
-**Workout execution** –  
-- **Warm‑up**: 5 min easy dynamic mobility (leg swings, hip circles, body‑weight glute bridges).  
-- **Main set**: Perform the exact core/hip‑stability circuit prescribed for Friday (e.g., planks, side‑planks, bird‑dogs, clamshells, glute bridges) with the usual rep scheme; stay in a “moderate” RPE range (4‑5/10) rather than pushing to failure.  
-- **Recovery**: Keep rest intervals as written (typically 30‑60 s between sets).  
-- **Cool‑down**: 3‑5 min gentle stretching of hips, hamstrings, and lower back.
+**Workout execution** – 1️⃣ **Warm‑up**: 8‑10 min easy dynamic mobility (leg swings, hip circles, inchworms).  
+2️⃣ **Main set**: 3 ×  circuits of 8‑10 reps each – single‑leg dead‑lift, banded clamshells, plank‑to‑side‑plank, glute bridges, and Pallof presses. Rest 45‑60 s between circuits; focus on crisp technique, not maximal load.  
+3️⃣ **Cool‑down**: 5 min gentle stretching (hamstring, quad, hip flexor, thoracic spine) and 1‑2 min diaphragmatic breathing.
 
-**Readiness rationale** – Your sleep was solid (7 h, score 83) and ACWR is optimal (0.9), but HRV is low (43 ms, “UNBALANCED”) and the overall readiness score is moderate (61). The low resting HR (58
+**Readiness rationale** – Your sleep (7 h, score 83) and low resting HR (58 bpm) are solid, and ACWR is in the “optimal” zone (0.9). The only red flag is a dip in night‑time HRV (43 ms vs 7‑day avg 46 ms), indicating modest autonomic stress. With a moderate overall
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
