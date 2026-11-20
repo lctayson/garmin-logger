@@ -137,7 +137,7 @@
         ]
       },
       "lap_count": 1,
-      "ai_analysis": "The 22‑minute core and stability session delivered a very low aerobic stimulus (training‑effect AEROBIC_BASE 0.2, body‑battery –3, load 3.4) and, as expected for a Friday strength day, produced no anaerobic benefit. Your morning readiness was moderate (score 61) and the post‑exercise snapshot rose modestly to 66, likely reflecting the brief nap‑boost noted in the factor override. This low‑impact workout fits the bridge‑phase plan to keep strength work light while preserving overall recovery for the upcoming Tuesday sub‑threshold run.",
+      "ai_analysis": "The Friday strength session delivered a very modest aerobic stimulus (Aerobic = 0.2, load = 3.4) and a slight body‑battery dip (‑3 pts), which is exactly what the bridge phase calls for on a non‑running day. Your morning readiness was 61 (Moderate) and the post‑exercise snapshot nudged to 66, but the change is simply the expected recovery boost from a light strength workout, not a signal of overload. Overall, the session’s low HR (avg 91 bpm) and minimal aerobic effect are on‑target and pose no concern for your upcoming Tuesday sub‑threshold or Thursday VO2 intervals.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]

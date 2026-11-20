@@ -16,7 +16,7 @@
 - **Friday Core & Stability** — 0.0km · 22:23 · HR 91/115 max
   - TE: Aerobic Base · aerobic 0.2 · anaerobic 0
   - Readiness 61 → 66 (Boosted By Napping) · Recovery 0h
-  - 🧠 The 22‑minute core and stability session delivered a very low aerobic stimulus (training‑effect AEROBIC_BASE 0.2, body‑battery –3, load 3.4) and, as expected for a Friday strength day, produced no anaerobic benefit. Your morning readiness was moderate (score 61) and the post‑exercise snapshot rose modestly to 66, likely reflecting the brief nap‑boost noted in the factor override. This low‑impact workout fits the bridge‑phase plan to keep strength work light while preserving overall recovery for the upcoming Tuesday sub‑threshold run.
+  - 🧠 The Friday strength session delivered a very modest aerobic stimulus (Aerobic = 0.2, load = 3.4) and a slight body‑battery dip (‑3 pts), which is exactly what the bridge phase calls for on a non‑running day. Your morning readiness was 61 (Moderate) and the post‑exercise snapshot nudged to 66, but the change is simply the expected recovery boost from a light strength workout, not a signal of overload. Overall, the session’s low HR (avg 91 bpm) and minimal aerobic effect are on‑target and pose no concern for your upcoming Tuesday sub‑threshold or Thursday VO2 intervals.
 
 ## Next Session
 - **Planned:** Sat, Nov 21 — 14K fully easy, HR ≤150, last km no faster than the previous one, no finish OR
