@@ -19,7 +19,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled long‑
+**Decision** – Your readiness (moderate 73, balanced HRV, resting HR 60, ACWR 0.8) looks solid; go ahead with today’s scheduled long‑run. Keep the effort easy‑aerobic and only add the optional half‑marathon‑finish if you feel fully recovered mid‑run.
+
+**Workout outline (as per the plan)**  
+- **Warm‑up:** 10‑15 min easy jog (≈7:30 – 7:45 /km) + a few light strides if you like.  
+- **Main set:** Continuous easy run, 60‑90 min at easy‑aerobic pace (≈6:40 – 7:15 /km, HR ≈145‑155 bpm).  
+- **Optional finish:** If you’re still fresh after ~75 min, you may tack on a 10‑min effort at sub‑threshold pace (≈5:20 – 5:35 /km, HR ≈158‑168 bpm).  
+- **
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
