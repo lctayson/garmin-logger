@@ -46,7 +46,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "**Decision** – Proceed with today’s planned Friday core/hip‑stability strength session; keep an eye on fatigue and cut volume only if you feel unusually heavy.\n\n**Workout** – Warm‑up: 5‑10 min easy cardio + dynamic mobility (leg swings, hip circles).  \nMain set (3 circuits, 12 reps each, 60‑90 s rest): plank, side‑plank, glute bridge, single‑leg dead‑lift, clamshell/monster‑walk.  \nCool‑down: 5‑10 min light stretching",
+    "ai_analysis": "**Decision** – Proceed with today’s scheduled Friday core/hip‑stability strength session; keep the volume/intensity modest (e.g., 2–3 × the usual circuit) in case the moderate HRV and “listen to your body” feedback signal a need for extra caution.  \n\n**Workout execution** – Warm‑up: 5 min easy jog or bike plus dynamic hip‑mobility drills (leg swings, world’s greatest stretch). Main set: core/hip circuit (e.g., glute bridges, single‑leg Romanian dead‑lifts, planks, side‑band walks) for 2–3 rounds at a weight you can move with perfect form; rest 60 s between exercises. Cool‑down: 5 min light stretching focusing on glutes, hamstrings, and lower back.  \n\n**Readiness rationale** – Resting HR 58 bpm is low (good), sleep score 83 and 7 h of sleep are solid, and ACWR 0.9 is in the optimal range, indicating you’re not overloaded. The dip in HRV (43 ms vs 7‑day avg 46 ms) and “moderate” readiness score are mild signals, not a red flag on their own, so a full strength day is acceptable provided you stay attuned to how you feel.  \n\n**In‑session guardrails**",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
