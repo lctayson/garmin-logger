@@ -19,13 +19,14 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **core/hip‑stability strength session**, but keep the load moderate (e.g., lighter weight or fewer reps) in case the low HRV translates to lingering fatigue.
+**Decision** – Proceed with today’s scheduled **Strength A (power/hip‑extension)** session, but keep the load a bit lighter than usual (e.g., drop 10‑15 % of weight or cut one set) to respect the modest HRV dip.
 
-**Workout execution** – 1️⃣ **Warm‑up**: 8‑10 min easy dynamic mobility (leg swings, hip circles, inchworms).  
-2️⃣ **Main set**: 3 ×  circuits of 8‑10 reps each – single‑leg dead‑lift, banded clamshells, plank‑to‑side‑plank, glute bridges, and Pallof presses. Rest 45‑60 s between circuits; focus on crisp technique, not maximal load.  
-3️⃣ **Cool‑down**: 5 min gentle stretching (hamstring, quad, hip flexor, thoracic spine) and 1‑2 min diaphragmatic breathing.
+**Workout execution** – Follow the plan’s outline:  
+- **Warm‑up**: 5‑10 min of easy mobility (leg swings, hip circles, body‑weight glute bridges) and a few light activation sets of the first lift.  
+- **Main set**: Power/hip‑extension circuit as prescribed (e.g., hip thrusts, single‑leg Romanian dead‑lifts, kettlebell swings). Stick to the prescribed reps/sets, but use the reduced load noted above.  
+- **Cool‑down**: 5 min of gentle static stretching for glutes, hamstrings, and hip flexors plus a few deep‑breathing rounds.
 
-**Readiness rationale** – Your sleep (7 h, score 83) and low resting HR (58 bpm) are solid, and ACWR is in the “optimal” zone (0.9). The only red flag is a dip in night‑time HRV (43 ms vs 7‑day avg 46 ms), indicating modest autonomic stress. With a moderate overall
+**Readiness rationale** – Sleep was solid (7 h, score 83) and the acute‑to‑chronic load ratio is optimal (0.9). Resting HR is low
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
