@@ -1,21 +1,25 @@
 # Daily Check — 2026-11-21
 
-## Readiness: -/100
+## Readiness: 73/100 (Moderate)
+> Recovered And Ready
 
-- ⚠️ **RHR:** 61 bpm (7d avg: 58.4 bpm, trending up)
+- **VO₂max:** 45 ml/kg/min (Garmin precise)
+- ⚠️ **RHR:** 60 bpm (7d avg: 58.3 bpm, trending up)
+- **HRV:** 48ms (7d avg: 47ms) · within 47–58ms
+- **Sleep:** 6h56 / 6h40 need (0h16 over) · score 83 · 7d avg 6h31 · 3/7 nights below need
+- **Recovery remaining:** 0h00
+- ⚠️ **Limiter:** Sleep History (72%)
 
 ## Today's Session
 - **Planned:** Sat, Nov 21 — 14K fully easy, HR ≤150, last km no faster than the previous one, no finish OR
 12K: 8K EZ + optional 4K @ 5:40–5:50/km, only if fresh; drop the finish first if tired
 - **Recommendation:** Keep it easy
-- **Reason:** low 7-day sleep average (6.5h); resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
+- **Reason:** resting heart rate is trending up; HRV is trending down; RHR-up/HRV-down recovery pattern.
 - **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Proceed with today’s scheduled Saturday long run (easy aerobic, optional brief sub‑threshold finish) – nothing in the readiness data suggests a need to cut or recover.  
-- **Warm‑up:** 10‑15 min easy jog (Zone 2, ≤150 bpm) followed by 4 × 100 m strides, gradually building to race‑pace effort.  
-- **Main set:**
+**Decision** – Proceed with today’s scheduled long‑
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -28,10 +32,15 @@ _Most recent activity (2026-11-20):_
 
 ## Load & Trends
 
+- **ACWR:** 0.8 (Optimal) — acute 494 / chronic 617 (chronic range 493.6–925.5)
 - **7-day volume:** 29.13km vs 28-day avg 38.2km (-24%)
 - **Running tolerance:** 59.6% (Medium) — 29.1km of 64.4km weekly cap, acute impact load 38.4
-- **Sleep (7d avg):** 6h27, 3/7 nights below need, trending down
-- ⚠️ **RHR (7d avg):** 58.4, trending up
+- **Aerobic Low:** 975.5 (target 816–1360 — in range)
+- **Aerobic High:** 1331.8 (target 816–1360 — in range)
+- ⚠️ **Anaerobic:** 71.8 (target 108–435 — -36 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- **Sleep (7d avg):** 6h31, 3/7 nights below need, trending down
+- ⚠️ **RHR (7d avg):** 58.3, trending up
 - ⚠️ **HRV:** trending down
 
 ## This Week (Nov 15–21)

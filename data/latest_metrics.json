@@ -1,14 +1,66 @@
 {
   "date": "2026-11-21",
   "readiness": {
-    "resting_hr": 61,
-    "ai_analysis": "- **Decision:** Proceed with today’s scheduled Saturday long run (easy aerobic, optional brief sub‑threshold finish) – nothing in the readiness data suggests a need to cut or recover.  \n- **Warm‑up:** 10‑15 min easy jog (Zone 2, ≤150 bpm) followed by 4 × 100 m strides, gradually building to race‑pace effort.  \n- **Main set:**",
+    "vo2_max": 45.0,
+    "vo2_max_precise": 45.0,
+    "score": 73,
+    "level": "Moderate",
+    "feedback": "Recovered And Ready",
+    "resting_hr": 60,
+    "hrv_last_night_avg_ms": 48.0,
+    "hrv_7_day_avg_ms": 47.0,
+    "hrv_status": "BALANCED",
+    "sleep_hours": 6.93,
+    "sleep_hours_including_previous_day_nap": 7.68,
+    "sleep_score": 83,
+    "recovery_hours": 0.0,
+    "hrv_baseline": {
+      "lowUpper": 44.0,
+      "balancedLow": 47.0,
+      "balancedUpper": 58.0,
+      "markerValue": 0.25
+    },
+    "factor_details": {
+      "sleep_score": {
+        "percent": 76,
+        "feedback": "Good"
+      },
+      "sleep_history": {
+        "percent": 72,
+        "feedback": "Good"
+      },
+      "recovery_time": {
+        "percent": 100,
+        "feedback": "Very Good"
+      },
+      "acwr": {
+        "percent": 99,
+        "feedback": "Good"
+      },
+      "hrv": {
+        "percent": 74,
+        "feedback": "Good"
+      },
+      "stress_history": {
+        "percent": 73,
+        "feedback": "Good"
+      }
+    },
+    "ai_analysis": "**Decision** – Proceed with today’s scheduled long‑",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
+  "health": {
+    "steps": 20
+  },
   "sleep": {
+    "deep_h": 0.9,
+    "light_h": 5.2,
+    "rem_h": 0.83,
+    "awake_h": 0.02,
     "baseline_h": 7.0,
     "need_h": 6.67,
+    "next_need_h": 7.0,
     "feedback": "Decreased",
     "training_feedback": "Chronic",
     "sleep_history_adjustment": "No Change",
@@ -16,11 +68,43 @@
     "nap_adjustment": "Decreasing",
     "previous_day_nap": 45.0
   },
+  "load": {
+    "acute_load": 494,
+    "chronic_load": 617,
+    "acwr": 0.8,
+    "acwr_percent": 33,
+    "acwr_status": "Optimal",
+    "chronic_load_range": {
+      "min": 493.6,
+      "max": 925.5
+    },
+    "training_status": "Maintaining 2"
+  },
+  "vo2_max": 45.0,
+  "vo2_max_precise": 45.0,
   "race_predictions": {
     "5k": "26:50",
     "10k": "56:57",
     "half_marathon": "2:09:15",
     "marathon": "4:49:13"
+  },
+  "load_balance": {
+    "aerobic_low": 975.5,
+    "aerobic_low_target": [
+      816,
+      1360
+    ],
+    "aerobic_high": 1331.8,
+    "aerobic_high_target": [
+      816,
+      1360
+    ],
+    "anaerobic": 71.8,
+    "anaerobic_target": [
+      108,
+      435
+    ],
+    "load_focus": "Anaerobic Shortage"
   },
   "running_tolerance": {
     "acute_impact_load": 38.4,
@@ -159,6 +243,14 @@
         }
       ]
     }
+  },
+  "heat_acclimation": {
+    "percentage": 100,
+    "trend": "Acclimatized"
+  },
+  "altitude_acclimation": {
+    "percentage": 0,
+    "trend": null
   },
   "trend_recent_daily": {
     "columns": [
@@ -339,17 +431,17 @@
       ],
       [
         "2026-11-21",
-        61,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        60,
+        48.0,
+        47.0,
+        6.93,
+        83,
+        45.0,
+        "Maintaining 2",
+        494,
+        617,
+        0.8,
+        "Optimal",
         0,
         0.0,
         0.0,
@@ -753,17 +845,17 @@
         "2026-11-21",
         "2026-11-15",
         "2026-11-21",
-        61,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        60,
+        48.0,
+        47.0,
+        6.93,
+        83,
+        45.0,
+        "Maintaining 2",
+        494,
+        617,
+        0.8,
+        "Optimal",
         6,
         4.25,
         29.13,
@@ -838,9 +930,9 @@
       ],
       [
         "2026-11-21",
-        27,
-        0,
-        70,
+        41,
+        4,
+        84,
         43
       ]
     ]
