@@ -19,14 +19,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **Strength A (power/hip‑extension)** session, but keep the load a bit lighter than usual (e.g., drop 10‑15 % of weight or cut one set) to respect the modest HRV dip.
-
-**Workout execution** – Follow the plan’s outline:  
-- **Warm‑up**: 5‑10 min of easy mobility (leg swings, hip circles, body‑weight glute bridges) and a few light activation sets of the first lift.  
-- **Main set**: Power/hip‑extension circuit as prescribed (e.g., hip thrusts, single‑leg Romanian dead‑lifts, kettlebell swings). Stick to the prescribed reps/sets, but use the reduced load noted above.  
-- **Cool‑down**: 5 min of gentle static stretching for glutes, hamstrings, and hip flexors plus a few deep‑breathing rounds.
-
-**Readiness rationale** – Sleep was solid (7 h, score 83) and the acute‑to‑chronic load ratio is optimal (0.9). Resting HR is low
+- **Decision:** Follow today’s scheduled core/hip‑stability strength session, but keep the load light‑to‑moderate (e.g., 2‑3 sets per exercise, 8‑12 reps) – you’re in the “moderate” readiness zone with a small HRV dip.  
+- **Execution:** Warm‑up 5 min easy mobility (dynamic leg swings, glute bridges, banded clams). Main circuit: body‑weight/band exercises (single‑leg deadlift, side‑plank, hip‑thrust, monster walk) – 2 × 8‑12 reps each, focusing on control rather than maximal load. Finish with 5 min gentle stretch and breathing.  
+- **Readiness rationale:** Resting HR is normal (58 bpm) and sleep score is good (83), so overall fatigue is low; however HRV is below your 7‑day average (43 vs 46 ms) and flagged “unbalanced,” suggesting the autonomic system is a bit stressed. Load metrics (ACWR 0.9, acute 609 vs chronic 635) are within the optimal range, so a full‑intensity strength day isn’t required – a moderate effort respects the subtle HRV warning.  
+- **Guardrails:** During the warm‑up watch for a higher‑than‑expected HR rise (>130 bpm) or lingering heaviness; if you feel joint pain, excessive muscle tightness, or the HR stays elevated after 5 min, cut the weight or drop to a pure
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
