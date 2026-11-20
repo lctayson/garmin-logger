@@ -19,11 +19,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled long run (easy‑pace, optional HM‑effort finish). All readiness indicators are in the “good”‑to‑balanced range, and the ACWR (0.8) shows you’re well‑recovered.
+**Decision** – Proceed with today’s scheduled Saturday long run (easy aerobic with optional short sub‑threshold finish).  
 
-**Workout execution (per the plan)**  
-- **Warm‑up:** 10–15 min easy jog (≈7:30 km⁻¹) + 4‑6 × 100 m strides, gradually raising HR into the easy aerobic zone.  
-- **Main set:** steady easy run at easy‑aerobic pace (≈6:40–7:15 km⁻¹, HR
+**Workout execution** – 15‑20 min easy jog warm‑up (HR ≤150 bpm). Main set: steady easy run at 6:40‑7:15 min/km (≈145‑155 bpm) for the prescribed duration/dist (~90‑120 min). If you feel fully recovered, finish the last 2‑3 km at sub‑threshold pace (≈5:20‑5:35 min/km, HR 158‑168 bpm). End with a 10‑min easy cooldown jog.  
+
+**Readiness rationale** – Sleep ≈ 7 h (score 83) and HRV 48 ms (balanced) show good autonomic recovery; resting HR
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
