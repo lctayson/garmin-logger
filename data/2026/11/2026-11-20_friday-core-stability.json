@@ -1,0 +1,144 @@
+{
+  "date": "2026-11-20",
+  "units": {
+    "distance": "km",
+    "pace": "min/km",
+    "elevation": "m",
+    "stride_length": "m",
+    "vertical_oscillation": "cm",
+    "temperature": "°C",
+    "wind_speed": "m/s",
+    "precipitation": "mm"
+  },
+  "activities": [
+    {
+      "name": "Friday Core & Stability",
+      "activity_id": 25139812714,
+      "type": "strength_training",
+      "distance": 0.0,
+      "time": "22:23",
+      "elapsed_time": "22:23",
+      "moving_time": "14:36",
+      "avg_hr": 91.0,
+      "max_hr": 115,
+      "recovery_hr": 16,
+      "load": 3.4,
+      "start_time_local": "2026-11-20T18:22:16.0",
+      "training_effect": {
+        "label": "AEROBIC_BASE",
+        "aerobic": 0.2,
+        "aerobic_message": "MINOR_AEROBIC_BENEFIT",
+        "anaerobic": 0.0,
+        "anaerobic_message": "NO_ANAEROBIC_BENEFIT"
+      },
+      "body_battery_impact": -3.0,
+      "splits": {
+        "columns": [
+          "step_type",
+          "lap",
+          "time",
+          "elapsed_time",
+          "avg_pace",
+          "avg_gap",
+          "avg_hr",
+          "max_hr",
+          "start_hr",
+          "min_hr",
+          "end_hr",
+          "avg_run_cadence",
+          "best_pace",
+          "max_run_cadence",
+          "moving_time",
+          "avg_moving_pace",
+          "distance",
+          "elevation_gain",
+          "elevation_loss",
+          "stride_length",
+          "avg_vertical_oscillation",
+          "avg_ground_contact_time",
+          "normalized_power",
+          "avg_power",
+          "max_power",
+          "avg_vertical_ratio",
+          "workout_step_index",
+          "workout_compliance_pct"
+        ],
+        "data": [
+          [
+            null,
+            1,
+            "22:23",
+            "22:23",
+            null,
+            null,
+            91.0,
+            115.0,
+            77,
+            74,
+            106,
+            null,
+            null,
+            null,
+            "14:36",
+            null,
+            0.0,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      },
+      "hr_zones": {
+        "columns": [
+          "zone",
+          "range",
+          "time",
+          "percent"
+        ],
+        "data": [
+          [
+            "Zone 1 - Warm Up",
+            "59-144 bpm",
+            "22:05",
+            100
+          ],
+          [
+            "Zone 2 - Easy",
+            "145-153 bpm",
+            "0:00",
+            0
+          ],
+          [
+            "Zone 3 - Aerobic",
+            "154-161 bpm",
+            "0:00",
+            0
+          ],
+          [
+            "Zone 4 - Threshold",
+            "162-170 bpm",
+            "0:00",
+            0
+          ],
+          [
+            "Zone 5 - Maximum",
+            ">170 bpm",
+            "0:00",
+            0
+          ]
+        ]
+      },
+      "lap_count": 1,
+      "ai_analysis": "The Friday core‑and‑stability session delivered a minimal aerobic stimulus (aerobic TE 0.2, “MINOR_AEROBIC_BENEFIT”) and essentially no anaerobic load, which aligns with the prescribed strength focus and the low body‑battery impact of –3.0. Your overall readiness remained moderate (score 61) in the morning and ticked up modestly to 66 after the session, reflecting the small acute load increase (from 609 to 614) and the brief post‑exercise nap boost. Given the bridge phase’s emphasis on preserving quality Tuesday and Thursday runs, today’s light load (3.4) and low HR (avg 91 bpm) are appropriate and should not detract from upcoming sub‑threshold work.",
+      "ai_analysis_provider": "groq:openai/gpt-oss-120b"
+    }
+  ]
+}
