@@ -46,7 +46,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "**Decision** – Proceed with today’s scheduled **Friday strength/hip‑extension session**, but keep the load light‑to‑moderate (≈60 % of your usual working weight).  \n\n**Workout execution** –  \n- **Warm‑up**: 5 min easy jog or bike + dynamic hip/leg activation (leg swings, glute bridges, monster walks).  \n- **Main set**: 3 × 8–10 reps of hip thrusts, single‑leg Romanian dead‑lifts, and lateral band walks; stop 1–2 reps short of failure, focus on quality.  \n- **Recovery**: 60‑90 s rest between sets; keep breathing steady, stay hydrated.  \n- **Cool‑down**: 5 min light mobility (foam roll hips/quads, static stretch).  \n\n**Readiness rationale** – Sleep was adequate (7 h, score 83) and ACWR is optimal (0.9), so a moderate training load is acceptable. HRV is below your 7‑day",
+    "ai_analysis": "**Decision** – Proceed with today’s scheduled Friday core/hip‑stability strength session, but keep the load light‑to‑moderate (reduce weight or reps if you feel unusually fatigued or your HR spikes early).  \n\n**Workout execution** – 1️⃣ Warm‑up: 8‑10 min of easy dynamic moves (leg swings, glute bridges, inchworms).  \n2️⃣ Main set (as per plan): 3 circuits of core/hip exercises (e.g., planks, side‑planks, dead‑bugs, single‑leg glute bridges, clamshells) – 12‑15 reps per movement, focus on controlled form, rest 30‑45 s between exercises.  \n3️⃣ Cool‑down: 5‑7 min of gentle mobility (hip flexor stretch, thoracic roll‑outs, slow walking).  \n\n**Readiness rationale** – Your sleep was solid (7 h, score 83) and ACWR is in the optimal 0.9 range, so overall load is manageable. HRV is modestly",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },

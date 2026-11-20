@@ -19,15 +19,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **Friday strength/hip‑extension session**, but keep the load light‑to‑moderate (≈60 % of your usual working weight).  
+**Decision** – Proceed with today’s scheduled Friday core/hip‑stability strength session, but keep the load light‑to‑moderate (reduce weight or reps if you feel unusually fatigued or your HR spikes early).  
 
-**Workout execution** –  
-- **Warm‑up**: 5 min easy jog or bike + dynamic hip/leg activation (leg swings, glute bridges, monster walks).  
-- **Main set**: 3 × 8–10 reps of hip thrusts, single‑leg Romanian dead‑lifts, and lateral band walks; stop 1–2 reps short of failure, focus on quality.  
-- **Recovery**: 60‑90 s rest between sets; keep breathing steady, stay hydrated.  
-- **Cool‑down**: 5 min light mobility (foam roll hips/quads, static stretch).  
+**Workout execution** – 1️⃣ Warm‑up: 8‑10 min of easy dynamic moves (leg swings, glute bridges, inchworms).  
+2️⃣ Main set (as per plan): 3 circuits of core/hip exercises (e.g., planks, side‑planks, dead‑bugs, single‑leg glute bridges, clamshells) – 12‑15 reps per movement, focus on controlled form, rest 30‑45 s between exercises.  
+3️⃣ Cool‑down: 5‑7 min of gentle mobility (hip flexor stretch, thoracic roll‑outs, slow walking).  
 
-**Readiness rationale** – Sleep was adequate (7 h, score 83) and ACWR is optimal (0.9), so a moderate training load is acceptable. HRV is below your 7‑day
+**Readiness rationale** – Your sleep was solid (7 h, score 83) and ACWR is in the optimal 0.9 range, so overall load is manageable. HRV is modestly
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
