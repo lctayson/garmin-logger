@@ -18,16 +18,11 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision –** Proceed with today’s scheduled Sunday session (easy run + optional hill‑sprint block). Your overall readiness is “Recovered and Ready” and all factor scores are in the “Good” range, so the prescribed workout is appropriate; just listen to how you feel before adding the hills.
+**Decision** – Proceed with today’s scheduled Sunday run (easy/recovery). Keep the intensity low; add the optional hill‑sprint block only if you feel fully recovered and calves are symptom‑free.
 
-**Workout execution –**  
-- **Warm‑up:** 10 min easy jog at 7:10‑7:30 min/km (HR ≤ 150 bpm).  
-- **Main set:** 30‑45 min steady easy run at the same easy‑aerobic pace (7:10‑7:45 min/km, HR ≈ 145‑155 bpm).  
-- **Optional hill block** (if calves feel fresh and HR stays < 155 bpm): 6‑8 × 10‑s uphill sprints, full effort, jog‑back recovery 45‑60 s.  
-- **Cool‑down:** 5‑10 min very easy jog or walk, back to HR < 140 bpm.
+**Workout execution** – Warm‑up: 10 min easy jog (≈7:30 km⁻¹, HR ≤150 bpm). Main set: 45‑60 min continuous easy run (recovery zone, 7:10‑7:45 km⁻¹, HR ≤155 bpm). *Optional* hill work: 6‑8 × 10 s uphill sprints with full walk‑back recovery if you’re feeling good; otherwise skip. Cool‑down: 5‑10 min easy jog + light stretching.
 
-**Readiness rationale –**  
-- Resting HR 56 bpm (well below LTHR) and balanced HRV (52 ms night avg, 47 ms 7
+**Readiness rationale** – Rest
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
