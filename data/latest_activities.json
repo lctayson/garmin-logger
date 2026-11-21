@@ -627,7 +627,7 @@
         ]
       },
       "lap_count": 15,
-      "ai_analysis": "The 14 km main set held a steady 7:08–7:36 /km pace with a time‑weighted HR of 145 bpm, placing it squarely in the easy aerobic zone for your bridge phase and matching the prescribed long‑run effort. Stamina fell from 100 % to 70 % and the training‑effect shows only aerobic benefit (AEROBIC_BASE 3.5, no anaerobic load), which is exactly what an easy run should deliver. Your morning readiness was moderate (73) and the post‑run drop to 51 reflects the expected acute load (≈126) and body‑battery impact (‑22), so no red flags appear.",
+      "ai_analysis": "The 14 km main set ran at an average rep pace of 7:23 min/km (range 7:08–7:36), which sits just outside the easy‑aerobic target window of 6:40–7:15 min/km for a long run, while the time‑weighted HR stayed around 145 bpm—squarely in the intended easy‑zone range. Stamina fell from 100 % to a low of 70 % over the session, reflecting the cumulative load of a 103‑minute effort in the morning heat but not indicating any acute HR‑driven stress. Morning readiness was moderate (score 73), and the post‑run drop to 51 aligns with the expected recovery cost of a long, easy‑pace effort rather than a sign of execution failure.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
