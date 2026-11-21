@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 3.5 · anaerobic 0
   - MS: 14.02k @ 7:22 145bpm 0.80m 170spm 276ms 7.9cm 242w
   - Readiness 73 → 51 (Recovery In Progress) · Recovery 1d 4h 45m
-  - 🧠 The 14‑rep main set averaged 7:23 /km (range 7:08–7:36) with a time‑weighted HR of 145 bpm, placing the entire effort squarely in the prescribed easy‑aerobic zone (≈6:40–7:15 /km, 145–155 bpm) for a bridge‑phase long run. Rep‑by‑rep HR rose from 129 bpm early to 151 bpm late while pace drifted modestly slower, indicating expected fatigue but no loss of aerobic intensity. Stamina fell from 100 % to 70 % and body‑battery dropped 22 points, matching the moderate load (≈126 AU) of a 1:43 h, 14 km run. The post‑run readiness drop to 51 is consistent with the session’s volume and does not signal an abnormal recovery issue.
+  - 🧠 The 14‑km main set stayed solidly in the easy‑aerobic zone, averaging 7:23 /km (range 7:08–7:36) with a time‑weighted HR of 145 bpm, which aligns with the prescribed easy‑run intensity for the bridge phase. The modest slowing toward the end and the drop in stamina from 100 % to 70 % are typical for a 14‑km effort and do not indicate a missed target or inadequate load. Your morning readiness of 73 (moderate) was sufficient for this workout, and the post‑run readiness dip to 51 reflects normal acute fatigue rather than a training issue.
 
 ## Next Session
 - **Planned:** Sun, Nov 22 — 8k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
