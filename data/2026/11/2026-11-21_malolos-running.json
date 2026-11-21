@@ -627,7 +627,7 @@
         ]
       },
       "lap_count": 15,
-      "ai_analysis": "The 14 km main set was run at an average rep pace of 7:23 km⁻¹ (range 7:08–7:36), slightly slower than the easy‑aerobic target (≈6:40–7:15 km⁻¹) and likely reflecting the 28‑33 °C heat, while the time‑weighted HR of 145 bpm sits squarely in the easy zone. The training‑effect label of AEROBIC_BASE with a 3.5 score and zero anaerobic contribution confirms the session delivered the intended aerobic volume without a VO2‑max stimulus, which is appropriate for the bridge‑phase long run. Stamina fell from 100 % to 70 % and post‑run readiness dropped to 51, both expected after a 1 h 43 min effort of this length. Overall the workout executed as planned for an easy long run, with no red‑flag deviations.",
+      "ai_analysis": "The 14‑rep main set averaged 7:23 /km (range 7:08–7:36) with a time‑weighted HR of 145 bpm, placing the entire effort squarely in the prescribed easy‑aerobic zone (≈6:40–7:15 /km, 145–155 bpm) for a bridge‑phase long run. Rep‑by‑rep HR rose from 129 bpm early to 151 bpm late while pace drifted modestly slower, indicating expected fatigue but no loss of aerobic intensity. Stamina fell from 100 % to 70 % and body‑battery dropped 22 points, matching the moderate load (≈126 AU) of a 1:43 h, 14 km run. The post‑run readiness drop to 51 is consistent with the session’s volume and does not signal an abnormal recovery issue.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
