@@ -1,8 +1,14 @@
 # Daily Check — 2026-11-22
 
-## Readiness: -/100
+## Readiness: 62/100 (Moderate)
+> Recovered And Ready
 
+- **VO₂max:** 44.9 ml/kg/min (Garmin precise)
 - **RHR:** 56 bpm (7d avg: 58.3 bpm, trending flat)
+- **HRV:** 52ms (7d avg: 47ms) · within 47–58ms
+- ⚠️ **Sleep:** 6h12 / 6h30 need (0h18 short) · score 83 · 7d avg 6h41 · 3/7 nights below need
+- **Recovery remaining:** 7h00
+- ⚠️ **Limiter:** Hrv (72%)
 
 ## Today's Session
 - **Planned:** Sun, Nov 22 — 8k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
@@ -12,10 +18,7 @@
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Proceed with today’s scheduled Sunday easy/recovery run (include optional hill sprints only if calves feel good).  
-- **Warm‑up / Main set / Cool‑down:** 10 min easy jog (HR ≤ 150 bpm, ~7:30 km⁻¹), then 30–45 min steady easy run at recovery pace (7:10‑7:45 km⁻¹). If you’re symptom‑free, add 6‑8 × 10 s hill sprints (≈90 % effort) with an easy jog back down for recovery; finish with 5‑10 min easy jog/walk to cool down.  
-- **Readiness rationale:** Resting HR 56 bpm is low, indicating good autonomic recovery; no load or sleep flags are present, so there’s no reason to downgrade intensity.  
-- **In‑session guardrails:** Keep HR in the easy zone; if it climbs above ~150 bpm or you feel unusually fatigued, trim the run or skip the hills. Watch calf comfort—any ache → drop the sprints. Early‑morning heat (28‑33
+**Decision** – Proceed with today’s scheduled Sunday easy/recovery run (hill‑sprint option). Your moderate readiness (score 62) is supported by a
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -29,9 +32,14 @@ _Most recent activity (2026-11-21):_
 
 ## Load & Trends
 
+- **ACWR:** 0.8 (Optimal) — acute 528 / chronic 628 (chronic range 502.4–942)
 - **7-day volume:** 36.12km vs 28-day avg 39.9km (-10%)
 - **Running tolerance:** 69.3% (Medium) — 36.1km of 64.4km weekly cap, acute impact load 44.6
-- **Sleep (7d avg):** 6h46, 2/7 nights below need, trending down
+- **Aerobic Low:** 1025.4 (target 816–1360 — in range)
+- **Aerobic High:** 1331.8 (target 816–1360 — in range)
+- ⚠️ **Anaerobic:** 71.8 (target 108–435 — -36 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- **Sleep (7d avg):** 6h41, 3/7 nights below need, trending down
 - **RHR (7d avg):** 58.3, trending flat
 - ⚠️ **HRV:** trending down
 
