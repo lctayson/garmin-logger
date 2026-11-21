@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 3.5 · anaerobic 0
   - MS: 14.02k @ 7:22 145bpm 0.80m 170spm 276ms 7.9cm 242w
   - Readiness 73 → 51 (Recovery In Progress) · Recovery 1d 4h 45m
-  - 🧠 The 14‑km main set stayed solidly in the easy‑aerobic zone, averaging 7:23 /km (range 7:08–7:36) with a time‑weighted HR of 145 bpm, which aligns with the prescribed easy‑run intensity for the bridge phase. The modest slowing toward the end and the drop in stamina from 100 % to 70 % are typical for a 14‑km effort and do not indicate a missed target or inadequate load. Your morning readiness of 73 (moderate) was sufficient for this workout, and the post‑run readiness dip to 51 reflects normal acute fatigue rather than a training issue.
+  - 🧠 The 14‑km main set held a steady 7:08–7:36 /km pace (average 7:23) with a time‑weighted HR of ~145 bpm, landing squarely in the easy aerobic zone (6:40–7:15 /km, ~145–155 bpm) and delivering the expected aerobic‑base training effect (3.5 aerobic, 0 anaerobic). Stamina fell from 100 % to 70 % over the session, which is typical for a long run of this length and intensity, and the modest HR drift upward from 129 bpm early to 151 bpm late aligns with normal cardiovascular cost in the morning heat. With a morning readiness score of 73 (“Recovered and Ready”), the workout was well‑matched to the current bridge‑phase emphasis on sub‑threshold volume rather than VO₂max stimulus. No execution concerns are evident.
 
 ## Next Session
 - **Planned:** Sun, Nov 22 — 8k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
