@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 3.5 · anaerobic 0
   - MS: 14.02k @ 7:22 145bpm 0.80m 170spm 276ms 7.9cm 242w
   - Readiness 73 → 51 (Recovery In Progress) · Recovery 1d 4h 45m
-  - 🧠 The 14 km main set ran at an average rep pace of 7:23 min/km (range 7:08–7:36), which sits just outside the easy‑aerobic target window of 6:40–7:15 min/km for a long run, while the time‑weighted HR stayed around 145 bpm—squarely in the intended easy‑zone range. Stamina fell from 100 % to a low of 70 % over the session, reflecting the cumulative load of a 103‑minute effort in the morning heat but not indicating any acute HR‑driven stress. Morning readiness was moderate (score 73), and the post‑run drop to 51 aligns with the expected recovery cost of a long, easy‑pace effort rather than a sign of execution failure.
+  - 🧠 The 14 km main set stayed within the prescribed easy‑aerobic zone, posting an average rep pace of 7:23 min/km (range 7:08–
 
 ## Next Session
 - **Planned:** Sun, Nov 22 — 8k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
