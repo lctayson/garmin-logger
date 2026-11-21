@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 3.5 · anaerobic 0
   - MS: 14.02k @ 7:22 145bpm 0.80m 170spm 276ms 7.9cm 242w
   - Readiness 73 → 51 (Recovery In Progress) · Recovery 1d 4h 45m
-  - 🧠 The 14‑km main set held a steady 7:08–7:36 /km pace (average 7:23) with a time‑weighted HR of ~145 bpm, landing squarely in the easy aerobic zone (6:40–7:15 /km, ~145–155 bpm) and delivering the expected aerobic‑base training effect (3.5 aerobic, 0 anaerobic). Stamina fell from 100 % to 70 % over the session, which is typical for a long run of this length and intensity, and the modest HR drift upward from 129 bpm early to 151 bpm late aligns with normal cardiovascular cost in the morning heat. With a morning readiness score of 73 (“Recovered and Ready”), the workout was well‑matched to the current bridge‑phase emphasis on sub‑threshold volume rather than VO₂max stimulus. No execution concerns are evident.
+  - 🧠 The 14 km long run stayed in the easy aerobic zone (average rep HR ≈ 145 bpm, within the 145‑155 bpm range) but the mean pace of 7:23 /km sits just outside the typical easy‑run target of 6:40‑7:15 /km, likely reflecting the warm‑weather conditions. Stamina fell from 100 % to 70 % over the session, which aligns with the 125 ‑point aerobic training load and the modest body‑battery impact of –22 pts. Morning readiness was “moderate” (score 73) and the post‑run drop to 51 is expected after a 103‑minute effort, not a sign of inadequate recovery. No anaerobic stimulus was present, so the workout fulfilled its purpose as a steady endurance run without adding VO₂max stress.
 
 ## Next Session
 - **Planned:** Sun, Nov 22 — 8k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
