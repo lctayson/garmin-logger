@@ -16,7 +16,7 @@
   - TE: Aerobic Base · aerobic 3.5 · anaerobic 0
   - MS: 14.02k @ 7:22 145bpm 0.80m 170spm 276ms 7.9cm 242w
   - Readiness 73 → 51 (Recovery In Progress) · Recovery 1d 4h 45m
-  - 🧠 This was a disciplined, textbook long aerobic run off a solid 73 morning readiness score. Across the 14 km, your pace stayed tightly controlled between 7:08 and 7:36/km while average heart rate leveled off at 145–151 bpm, keeping the entire effort strictly within your easy aerobic and recovery ceiling (≤155 bpm). The modest cardiac drift in the final kilometers and performance condition slide from +1 to -2 are completely normal for 103 minutes on your feet in Malolos morning conditions. Clean execution that delivered the targeted 3.5 aerobic base stimulus without unnecessary fatigue.
+  - 🧠 The 14 km main set held a steady 7:08‑7:36 / km range (average 7:23) with time‑weighted HR around 145 bpm, squarely in the easy‑aerobic zone prescribed for Saturday long runs. Stamina fell from 100 % to 70 % and the training‑effect shows only aerobic benefit, confirming the session delivered the intended low‑intensity load without any anaerobic stimulus. Morning readiness was 73 (moderate), and the post‑run drop to 51 aligns with the expected recovery demand of a 1 h 43 min effort in heat. No deviations or risk factors (e.g., insufficient VO₂max work) appeared in the data.
 
 ## Next Session
 - **Planned:** Sun, Nov 22 — 8k EZ @ 6:50–7:20 ≤150bpm w/ 6-8x10s hills
