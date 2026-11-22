@@ -747,7 +747,7 @@
         ]
       },
       "lap_count": 19,
-      "ai_analysis": "The five hill repeats were run at 7:35–8:22 km pace (average 7:44), keeping HR in the low‑150 bpm range and staying well within the easy aerobic zone, so the session delivered the expected",
+      "ai_analysis": "The five‑rep main set stayed firmly in the easy‑aerobic zone (average rep pace 7:44 /km, time‑weighted HR ≈139 bpm), matching the intended “run + hills” workload rather than a sub‑threshold or VO₂max effort. A noticeable slowdown in the final rep (8:22 /km, HR 143 bpm) signals the expected fatigue as the hill work progressed, but the overall drift is modest and does not indicate a loss of form. With a morning readiness score of 62 (“Recovered and Ready”) and an aerobic‑base training effect of 2.5, the session delivered the intended low‑intensity stimulus without compromising recovery.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
@@ -1001,7 +1001,7 @@
         ]
       },
       "lap_count": 3,
-      "ai_analysis": "The two work reps (7:56 km⁻¹ and 7:39 km⁻¹) averaged 7:51 km⁻¹ with HR 126–134 bpm, firmly inside the recovery zone and matching the “RECOVERY” training‑effect label. With a morning readiness of 62 (moderate, recovered), the modest acute load (≈624) caused a brief dip in the post‑exercise readiness score, which is normal for a low‑intensity run.",
+      "ai_analysis": "The two‑rep main set stayed solidly in a recovery‑level effort (average pace ≈ 7:51 /km, HR ≈ 128 bpm), matching the prescribed easy‑day intensity and the “RECOVERY” training‑effect label. Pace drift was minimal (7:39 → 7:56 /km) and HR rose only modestly between reps, indicating consistent execution without any hidden anaerobic load. Morning readiness was moderate (score 62) and the post‑run dip to 53 aligns with the expected acute load of a 20‑load session, so no abnormal recovery concern appears.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
