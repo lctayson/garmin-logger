@@ -16,11 +16,11 @@
   - TE: Aerobic Base · aerobic 2.5 · anaerobic 0
   - MS: 4.54k @ 7:43 139bpm 0.78m 166spm 280ms 7.8cm 232w
   - Readiness 62 → 63 (Recovered And Ready) · Recovery 5h 59m
-  - 🧠 The main‑set consisted of five reps lasting 35:04 total, with paces ranging from 7:35 /km to 8:22 /km (average 7:44 /km) and a time‑weighted HR of ~139 bpm, keeping you well below the sub‑threshold zone (≈5:20–5:35 /km, 158–168 bpm) and even under the easy‑aerobic HR range. This indicates the session was essentially a recovery‑pace effort, which aligns with the modest training‑effect score (AEROBIC_BASE 2.5, no anaerobic benefit) and the low load (≈54). Your morning readiness was “Moderate” (score 62) with good sleep and recovery, so the low‑intensity work was appropriate for today’s state and did not add appreciable stress.
+  - 🧠 The main‑set work (5 × ≈7:40 / km, HR 133‑143 bpm) stayed squarely in the easy aerobic zone that Wednesday’s “easy + strides/hills” session calls for, so pacing was appropriate for the prescribed intensity. The final rep
 - **Malolos - Run + Strides/Hills** — 2.02km · 15:50 · 7:49/km · HR 129/137 max
   - TE: Recovery (Low Aerobic) · aerobic 1.6 · anaerobic 0
   - MS: 2.01k @ 7:49 128bpm 0.75m 169spm 279ms 7.6cm 223w
-  - 🧠 The two‑rep main set stayed well below the easy‑aerobic pace range (average 7:51 min/km vs. the 6:40‑7:15 km target) and HR stayed in the recovery zone (126‑134 bpm), matching the prescribed recovery focus and yielding a negligible anaerobic training effect. Load was low (≈20 AU) and stamina dipped only to 96 %, reinforcing that the session was truly easy rather than a hidden threshold effort. Readiness was moderate (score 62) before the run and edged up to 63 afterward, a trivial shift consistent with a light workout rather than a recovery deficit.
+  - 🧠 The two‑rep main set held a pace of 7:56 → 7:39 km (average 7:51 km) with a time‑weighted HR of ~128 bpm
 
 ## Next Session
 - **Planned:** Mon, Nov 23 — Strength A - Lite
@@ -33,10 +33,10 @@ TT Week
 
 ## Load & Trends
 
-- **ACWR:** 0.8 (Optimal) — acute 555 / chronic 633 (chronic range 506.4–949.5)
+- **ACWR:** 0.9 (Optimal) — acute 624 / chronic 645 (chronic range 516–967.5)
 - **7-day volume:** 44.18km vs 28-day avg 41.9km (+5%)
-- **Running tolerance:** 72.5% (Medium) — 38.1km of 64.4km weekly cap, acute impact load 46.7
-- **Aerobic Low:** 1046 (target 816–1360 — in range)
+- **Running tolerance:** 81.8% (Medium) — 44.2km of 64.4km weekly cap, acute impact load 52.7
+- **Aerobic Low:** 1099.2 (target 816–1360 — in range)
 - **Aerobic High:** 1331.8 (target 816–1360 — in range)
 - ⚠️ **Anaerobic:** 71.8 (target 108–435 — -36 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
