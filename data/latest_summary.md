@@ -20,11 +20,16 @@ TT Week
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Do the Monday Strength‑A session, but **cut the load to ~50 %** (lighter weights, one set per exercise) and treat it as an active‑recovery strength day.  
+**Decision – adjust, don’t skip**  
+Your readiness score is low (38) mainly because of very short sleep (4.2 h) and modest HRV. Acute‑load/ACWR are fine and resting HR is normal, so a light strength session is acceptable but should be scaled back to protect recovery.
 
-**Workout execution** – Follow the prescribed power/hip‑extension circuit (e.g., glute bridges, single‑leg Romanian dead‑lifts, banded hip thrusts, core‑stability moves). Warm‑up with 5 min easy dynamic mobility (leg swings, hip circles, body‑weight squats). Perform each exercise **1 × 8‑12 reps at an easy‑to‑moderate RPE ≈ 5–6**, focusing on clean technique. Finish with 5 min gentle stretching/foam‑rolling.  
+**Workout – scaled‑down Strength A**  
+- **Warm‑up (5‑10 min):** easy jog or bike < 10 km h⁻¹, followed by dynamic hip/leg drills (leg swings, hip circles, glute bridges).  
+- **Main set:** perform each listed power/hip‑extension exercise for **2 × 8‑10 reps** at ~60‑65 % of your usual load (RPE 6‑7). Drop any heavy single‑leg work or overloads.  
+- **Cool‑down (5 min):** gentle stretch of hamstrings, quads, glutes + foam‑roll calves.
 
-**Readiness rationale** – Your readiness score is low (38) driven by **very short sleep (4.2 h) and an unbalanced HRV** (50 ms vs 7‑day avg 47 ms). Resting HR is normal (59 bpm) and ACWR is optimal (0.8), so overall training load isn’t the issue; the primary limiter is acute fatigue from poor sleep. Reducing intensity lets you respect the recovery
+**Readiness rationale**  
+- **Sleep:** 4.2 h (poor) is the biggest negative flag; HRV is slightly below baseline (50 ms vs 7‑day avg 47 ms, “moder
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
