@@ -747,7 +747,7 @@
         ]
       },
       "lap_count": 19,
-      "ai_analysis": "The five work reps totaled 35:04 min at an average pace of 7:44 /km (range 7:35‑8:22) with HR climbing from 133 bpm to 143 bpm, which kept the effort in the recovery/easy aerobic zone rather than the intended easy aerobic range (≈6:40‑7:15 /km, 145‑155 bpm). That level of intensity is appropriate for a Wednesday easy run with hills/strides and explains the zero anaerobic training effect and the modest aerobic load of 54.3 AU. Your stamina dropped from 96 % to 85 % and body‑battery fell 9 points, consistent with a moderate‑intensity session given a readiness score of 62 (moderate) this morning. No red flags appear; the workout fulfilled its easy‑day purpose without unnecessary stress.",
+      "ai_analysis": "The 5‑rep main set lasted 35:04 at an average pace of 7:44 /km (133‑143 bpm), which sits squarely in the easy aerobic zone (≈7:10‑7:45 /km, ≤155 bpm) as intended for a Wednesday easy + strides/hills day. The final rep slowed to 8:22 /km and 143 bpm, about a 5 % drift from the first rep, indicating the hill/stride portion taxed you more than expected. With a morning readiness score of 62 (moderate) and no acute",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
@@ -1001,7 +1001,7 @@
         ]
       },
       "lap_count": 3,
-      "ai_analysis": "The two‑rep main set stayed firmly in the recovery range (7:56 → 7:39 min/km, HR 126 → 134 bpm), matching the prescribed easy/stride‑hill format rather than a sub‑threshold effort. The modest rise in HR between reps and the overall training‑effect label of “RECOVERY” indicate the session delivered the intended low‑load stimulus without any noticeable drift. With a morning readiness score of 62, a resting HR of 56 and 7 h of sleep, the athlete appears adequately recovered to handle the upcoming Tuesday threshold workout.",
+      "ai_analysis": "The two‑rep main set stayed firmly in the recovery zone (7:56 → 7:39 min/km, HR 126‑134 bpm) and the slight pace gain in the second rep reflects a normal warm‑up effect rather than any concerning drift. With a training‑effect label of RECOVERY, a low load of 20.6 and only a 4 % stamina dip, the session aligns with the bridge‑phase Tuesday sub‑threshold volume and the moderate morning readiness score (62). No execution issues are evident, and the modest body‑battery impact (‑3) suggests the run was appropriately easy.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
