@@ -16,11 +16,11 @@
   - TE: Aerobic Base · aerobic 2.5 · anaerobic 0
   - MS: 4.54k @ 7:43 139bpm 0.78m 166spm 280ms 7.8cm 232w
   - Readiness 62 → 63 (Recovered And Ready) · Recovery 5h 59m
-  - 🧠 The five‑rep main set averaged 7 : 44 /km (range 7 : 35–8 : 22), which sits well below the prescribed easy‑aerobic window of 6 : 40–7 : 15 /km and kept HR between 133–143 bpm—under the sub‑threshold band (158–168 bpm). The gradual HR climb across reps is modest, but the last rep’s 8 : 22 pace marks a clear efficiency drop, likely reflecting hill work or emerging fatigue rather than a training stimulus. With a readiness score of 62, good sleep (83) and a resting HR of 56 bpm, the session delivered a modest aerobic base maintenance (AEROBIC 2.5) but no anaerobic benefit, matching today’s easy‑run purpose.
+  - 🧠 The main‑set consisted of five reps lasting 35:04 total, with paces ranging from 7:35 /km to 8:22 /km (average 7:44 /km) and a time‑weighted HR of ~139 bpm, keeping you well below the sub‑threshold zone (≈5:20–5:35 /km, 158–168 bpm) and even under the easy‑aerobic HR range. This indicates the session was essentially a recovery‑pace effort, which aligns with the modest training‑effect score (AEROBIC_BASE 2.5, no anaerobic benefit) and the low load (≈54). Your morning readiness was “Moderate” (score 62) with good sleep and recovery, so the low‑intensity work was appropriate for today’s state and did not add appreciable stress.
 - **Malolos - Run + Strides/Hills** — 2.02km · 15:50 · 7:49/km · HR 129/137 max
   - TE: Recovery (Low Aerobic) · aerobic 1.6 · anaerobic 0
   - MS: 2.01k @ 7:49 128bpm 0.75m 169spm 279ms 7.6cm 223w
-  - 🧠 The two reps (7:56 and 7:39 min/km) averaged 7:51 min/km with HR 126–134 bpm, keeping the effort in the recovery zone rather than the easy‑aerobic range (≈6:40–7:15 min/km, ≈145–155 bpm) that Wednesday easy + strides typically target. The training‑effect label of RECOVERY (aerobic 1.6, anaerobic 0) and the modest load of 20.6 align with your morning readiness score of 62 (moderate
+  - 🧠 The two‑rep main set stayed well below the easy‑aerobic pace range (average 7:51 min/km vs. the 6:40‑7:15 km target) and HR stayed in the recovery zone (126‑134 bpm), matching the prescribed recovery focus and yielding a negligible anaerobic training effect. Load was low (≈20 AU) and stamina dipped only to 96 %, reinforcing that the session was truly easy rather than a hidden threshold effort. Readiness was moderate (score 62) before the run and edged up to 63 afterward, a trivial shift consistent with a light workout rather than a recovery deficit.
 
 ## Next Session
 - **Planned:** Mon, Nov 23 — Strength A - Lite
