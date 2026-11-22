@@ -1,17 +1,66 @@
 {
   "date": "2026-11-23",
   "readiness": {
+    "vo2_max": 45.0,
+    "vo2_max_precise": 44.9,
+    "score": 38,
+    "level": "Low",
+    "feedback": "Listen To Your Body",
     "resting_hr": 59,
-    "ai_analysis": "- **Decision:** Proceed with today’s planned Strength A (power/hip‑extension) session – the low resting HR (59 bpm) indicates good cardiovascular recovery and there’s no load flag to suggest scaling back.  \n- **Workout execution:** Warm‑up with 5‑10 min of easy jogging or bike plus dynamic hip‑mobility (leg swings, hip circles). Follow the prescribed Strength A routine (e.g., hip thrusts, single‑leg glute bridges, kettlebell swings) at the usual load and rep scheme. Finish with a brief 5‑min cool‑down of light stretching for the glutes, hamstrings, and lower back.  \n- **Readiness rationale:** Only the resting‑HR metric is available; 59 bpm is well below your typical LTHR zone, signalling a rested state. Absence of any elevated load or fatigue markers means there’s no evidence to modify intensity.  \n- **In‑session guardrails:** If your warm‑up HR spikes above 130 bpm or you feel unusually stiff/tired, trim the volume or weight by ~10‑15 % and focus on form. Stop any exercise that causes sharp joint pain or sudden fatigue, and replace it with low‑impact core work.  \n\n*(If you notice any illness, injury, or abnormal symptoms, skip the session and prioritize recovery.)*",
+    "hrv_last_night_avg_ms": 50.0,
+    "hrv_7_day_avg_ms": 47.0,
+    "hrv_status": "UNBALANCED",
+    "sleep_hours": 4.23,
+    "sleep_hours_including_previous_day_nap": 4.23,
+    "sleep_score": 58,
+    "recovery_hours": 0.5,
+    "hrv_baseline": {
+      "lowUpper": 45.0,
+      "balancedLow": 48.0,
+      "balancedUpper": 58.0,
+      "markerValue": 0.2313385
+    },
+    "factor_details": {
+      "sleep_score": {
+        "percent": 39,
+        "feedback": "Poor"
+      },
+      "sleep_history": {
+        "percent": 76,
+        "feedback": "Good"
+      },
+      "recovery_time": {
+        "percent": 99,
+        "feedback": "Good"
+      },
+      "acwr": {
+        "percent": 98,
+        "feedback": "Good"
+      },
+      "hrv": {
+        "percent": 65,
+        "feedback": "Moderate"
+      },
+      "stress_history": {
+        "percent": 73,
+        "feedback": "Good"
+      }
+    },
+    "ai_analysis": "**Decision** – Proceed with today’s planned **Strength A (hip‑extension/Power)**, but dial the load back to a “moderate” effort (≈ 60‑70 % of your 1RM) and keep volume lower than a typical heavy day.\n\n**Workout execution** – *Warm‑up*: 5 min easy jog or bike + dynamic hip‑mobility series (leg swings, glute bridges, 2 × 10 lunges each side). *Main set*: 3 × 8 – 10 reps of hip‑extension/power moves (e.g., single‑leg glute‑bridge, kettlebell swings, Romanian dead‑lift) at the moderate load; rest 90 s between sets. *Core/hip stability finisher*: 2 × 30 s planks + 2 × 12 banded clamshells. *Cool‑down*: 5 min light stretch focusing on hamstrings, glutes, lower back.\n\n**Readiness rationale** – Sleep was only 4.2 h (poor) and HRV is modestly below your 7‑day average (50 ms vs 47 ms baseline) → nervous‑system recovery is limited. Resting HR (59 bpm) is normal, and ACWR is in the optimal zone, so overall training load isn’t the issue; the low score is driven mainly by sleep deficit. Hence keep the stimulus sub‑maximal and prioritize quality over quantity.\n\n**In‑session guardrails** – Monitor how your heart rate and perceived effort feel during the first set; if HR spikes > 175 bpm or RPE > 7",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
   "health": {
-    "steps": 110
+    "steps": 156
   },
   "sleep": {
+    "deep_h": 0.82,
+    "light_h": 3.25,
+    "rem_h": 0.17,
+    "awake_h": 0.1,
     "baseline_h": 7.0,
     "need_h": 7.0,
+    "next_need_h": 8.0,
     "feedback": "No Change No Adjustments",
     "training_feedback": "No Change",
     "sleep_history_adjustment": "No Change",
@@ -19,11 +68,43 @@
     "nap_adjustment": "No Change",
     "previous_day_nap": null
   },
+  "load": {
+    "acute_load": 515,
+    "chronic_load": 624,
+    "acwr": 0.8,
+    "acwr_percent": 33,
+    "acwr_status": "Optimal",
+    "chronic_load_range": {
+      "min": 499.2,
+      "max": 936.0
+    },
+    "training_status": "Maintaining 2"
+  },
+  "vo2_max": 45.0,
+  "vo2_max_precise": 44.9,
   "race_predictions": {
     "5k": "26:56",
     "10k": "57:04",
     "half_marathon": "2:09:29",
     "marathon": "4:49:59"
+  },
+  "load_balance": {
+    "aerobic_low": 1091.0,
+    "aerobic_low_target": [
+      816,
+      1360
+    ],
+    "aerobic_high": 1331.8,
+    "aerobic_high_target": [
+      816,
+      1360
+    ],
+    "anaerobic": 71.8,
+    "anaerobic_target": [
+      108,
+      435
+    ],
+    "load_focus": "Anaerobic Shortage"
   },
   "running_tolerance": {
     "acute_impact_load": 46.0,
@@ -162,6 +243,14 @@
         }
       ]
     }
+  },
+  "heat_acclimation": {
+    "percentage": 100,
+    "trend": "Acclimatized"
+  },
+  "altitude_acclimation": {
+    "percentage": 0,
+    "trend": null
   },
   "trend_recent_daily": {
     "columns": [
@@ -343,16 +432,16 @@
       [
         "2026-11-23",
         59,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        50.0,
+        47.0,
+        4.23,
+        58,
+        45.0,
+        "Maintaining 2",
+        515,
+        624,
+        0.8,
+        "Optimal",
         0,
         0.0,
         0.0,
@@ -763,16 +852,16 @@
         "2026-11-17",
         "2026-11-23",
         59,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        50.0,
+        47.0,
+        4.23,
+        58,
+        45.0,
+        "Maintaining 2",
+        515,
+        624,
+        0.8,
+        "Optimal",
         7,
         5.74,
         44.18,
@@ -847,9 +936,9 @@
       ],
       [
         "2026-11-23",
-        14,
+        43,
         4,
-        24,
+        53,
         11
       ]
     ]

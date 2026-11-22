@@ -1,24 +1,32 @@
 # Daily Check — 2026-11-23
 
-## Readiness: -/100
+## Readiness: 38/100 (Low)
+> Listen To Your Body
 
+- **VO₂max:** 44.9 ml/kg/min (Garmin precise)
 - **RHR:** 59 bpm (7d avg: 58.6 bpm, trending down)
+- **HRV:** 50ms (7d avg: 47ms) · within 48–58ms
+- ⚠️ **Sleep:** 4h14 / 7h00 need (2h46 short) · score 58 · 7d avg 6h08 · 5/7 nights below need
+- **Recovery remaining:** 0h30
+- ⚠️ **Limiter:** Sleep Score (39%)
+- **Also soft:** Hrv
 
 ## Today's Session
 - **Planned:** Mon, Nov 23 — Strength A - Lite
 TT Week
-- **Recommendation:** Proceed as planned
-- **Reason:** low 7-day sleep average (6.5h).
-- **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
+- **Recommendation:** Keep it easy
+- **Reason:** very short sleep last night (4.2h); low readiness (38/100); low 7-day sleep average (6.1h).
+- **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision:** Proceed with today’s planned Strength A (power/hip‑extension) session – the low resting HR (59 bpm) indicates good cardiovascular recovery and there’s no load flag to suggest scaling back.  
-- **Workout execution:** Warm‑up with 5‑10 min of easy jogging or bike plus dynamic hip‑mobility (leg swings, hip circles). Follow the prescribed Strength A routine (e.g., hip thrusts, single‑leg glute bridges, kettlebell swings) at the usual load and rep scheme. Finish with a brief 5‑min cool‑down of light stretching for the glutes, hamstrings, and lower back.  
-- **Readiness rationale:** Only the resting‑HR metric is available; 59 bpm is well below your typical LTHR zone, signalling a rested state. Absence of any elevated load or fatigue markers means there’s no evidence to modify intensity.  
-- **In‑session guardrails:** If your warm‑up HR spikes above 130 bpm or you feel unusually stiff/tired, trim the volume or weight by ~10‑15 % and focus on form. Stop any exercise that causes sharp joint pain or sudden fatigue, and replace it with low‑impact core work.  
+**Decision** – Proceed with today’s planned **Strength A (hip‑extension/Power)**, but dial the load back to a “moderate” effort (≈ 60‑70 % of your 1RM) and keep volume lower than a typical heavy day.
 
-*(If you notice any illness, injury, or abnormal symptoms, skip the session and prioritize recovery.)*
+**Workout execution** – *Warm‑up*: 5 min easy jog or bike + dynamic hip‑mobility series (leg swings, glute bridges, 2 × 10 lunges each side). *Main set*: 3 × 8 – 10 reps of hip‑extension/power moves (e.g., single‑leg glute‑bridge, kettlebell swings, Romanian dead‑lift) at the moderate load; rest 90 s between sets. *Core/hip stability finisher*: 2 × 30 s planks + 2 × 12 banded clamshells. *Cool‑down*: 5 min light stretch focusing on hamstrings, glutes, lower back.
+
+**Readiness rationale** – Sleep was only 4.2 h (poor) and HRV is modestly below your 7‑day average (50 ms vs 47 ms baseline) → nervous‑system recovery is limited. Resting HR (59 bpm) is normal, and ACWR is in the optimal zone, so overall training load isn’t the issue; the low score is driven mainly by sleep deficit. Hence keep the stimulus sub‑maximal and prioritize quality over quantity.
+
+**In‑session guardrails** – Monitor how your heart rate and perceived effort feel during the first set; if HR spikes > 175 bpm or RPE > 7
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -36,9 +44,14 @@ _Most recent activity (2026-11-22):_
 
 ## Load & Trends
 
+- **ACWR:** 0.8 (Optimal) — acute 515 / chronic 624 (chronic range 499.2–936)
 - **7-day volume:** 44.18km vs 28-day avg 41.9km (+5%)
 - **Running tolerance:** 70.4% (Medium) — 44.2km of 65.3km weekly cap, acute impact load 46
-- ⚠️ **Sleep (7d avg):** 6h28, 4/7 nights below need, trending up
+- **Aerobic Low:** 1091 (target 816–1360 — in range)
+- **Aerobic High:** 1331.8 (target 816–1360 — in range)
+- ⚠️ **Anaerobic:** 71.8 (target 108–435 — -36 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- ⚠️ **Sleep (7d avg):** 6h08, 5/7 nights below need, trending flat
 - **RHR (7d avg):** 58.6, trending down
 - **HRV:** trending up
 
