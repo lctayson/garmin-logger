@@ -20,13 +20,22 @@ TT Week
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned **Strength A (hip‑extension/Power)**, but dial the load back to a “moderate” effort (≈ 60‑70 % of your 1RM) and keep volume lower than a typical heavy day.
+**Decision – adjust, don’t skip:**  
+Proceed with today’s Strength A session, but cut the load ≈ 30 % (fewer sets or lighter weight) and keep the effort in the “moderate” RPE ≈ 5–6 range.  
 
-**Workout execution** – *Warm‑up*: 5 min easy jog or bike + dynamic hip‑mobility series (leg swings, glute bridges, 2 × 10 lunges each side). *Main set*: 3 × 8 – 10 reps of hip‑extension/power moves (e.g., single‑leg glute‑bridge, kettlebell swings, Romanian dead‑lift) at the moderate load; rest 90 s between sets. *Core/hip stability finisher*: 2 × 30 s planks + 2 × 12 banded clamshells. *Cool‑down*: 5 min light stretch focusing on hamstrings, glutes, lower back.
+**Execution – what to do:**  
+- **Warm‑up:** 8‑10 min of dynamic mobility (leg swings, hip circles, light band work) and 2 × 30‑sec body‑weight jumps.  
+- **Main‑set:** Follow the prescribed hip‑extension/strength circuit, but stop after 2 × the usual number of sets or use 60 % of the usual load; focus on perfect form and controlled tempo.  
+- **Cool‑down:** 5 min easy jogging or brisk walking + gentle stretching of glutes, hamstrings, and calves.  
 
-**Readiness rationale** – Sleep was only 4.2 h (poor) and HRV is modestly below your 7‑day average (50 ms vs 47 ms baseline) → nervous‑system recovery is limited. Resting HR (59 bpm) is normal, and ACWR is in the optimal zone, so overall training load isn’t the issue; the low score is driven mainly by sleep deficit. Hence keep the stimulus sub‑maximal and prioritize quality over quantity.
+**Readiness rationale:**  
+- Sleep = 4.2 h (poor) and HRV ≈ 50 ms (unbalanced) signal acute nervous‑system fatigue.  
+- Resting HR 59 bpm is normal, but the low sleep score outweighs the otherwise “good” ACWR (0.8) and recovery‑time metric.  
+- Hence, a full‑intensity strength day could amplify fatigue without added benefit.  
 
-**In‑session guardrails** – Monitor how your heart rate and perceived effort feel during the first set; if HR spikes > 175 bpm or RPE > 7
+**In‑session guardrails:**  
+- Keep an eye on heart‑rate: if it spikes > 150 bpm during the warm‑up or early sets, reduce weight further or stop.  
+- RPE > 7 or any joint/pain warning → cut the set, rest, and consider postponing
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
