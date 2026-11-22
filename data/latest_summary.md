@@ -20,22 +20,11 @@ TT Week
 
 ### 🧠 AI Coaching Guidance
 
-**Decision – adjust, don’t skip:**  
-Proceed with today’s Strength A session, but cut the load ≈ 30 % (fewer sets or lighter weight) and keep the effort in the “moderate” RPE ≈ 5–6 range.  
+**Decision** – Do the Monday Strength‑A session, but **cut the load to ~50 %** (lighter weights, one set per exercise) and treat it as an active‑recovery strength day.  
 
-**Execution – what to do:**  
-- **Warm‑up:** 8‑10 min of dynamic mobility (leg swings, hip circles, light band work) and 2 × 30‑sec body‑weight jumps.  
-- **Main‑set:** Follow the prescribed hip‑extension/strength circuit, but stop after 2 × the usual number of sets or use 60 % of the usual load; focus on perfect form and controlled tempo.  
-- **Cool‑down:** 5 min easy jogging or brisk walking + gentle stretching of glutes, hamstrings, and calves.  
+**Workout execution** – Follow the prescribed power/hip‑extension circuit (e.g., glute bridges, single‑leg Romanian dead‑lifts, banded hip thrusts, core‑stability moves). Warm‑up with 5 min easy dynamic mobility (leg swings, hip circles, body‑weight squats). Perform each exercise **1 × 8‑12 reps at an easy‑to‑moderate RPE ≈ 5–6**, focusing on clean technique. Finish with 5 min gentle stretching/foam‑rolling.  
 
-**Readiness rationale:**  
-- Sleep = 4.2 h (poor) and HRV ≈ 50 ms (unbalanced) signal acute nervous‑system fatigue.  
-- Resting HR 59 bpm is normal, but the low sleep score outweighs the otherwise “good” ACWR (0.8) and recovery‑time metric.  
-- Hence, a full‑intensity strength day could amplify fatigue without added benefit.  
-
-**In‑session guardrails:**  
-- Keep an eye on heart‑rate: if it spikes > 150 bpm during the warm‑up or early sets, reduce weight further or stop.  
-- RPE > 7 or any joint/pain warning → cut the set, rest, and consider postponing
+**Readiness rationale** – Your readiness score is low (38) driven by **very short sleep (4.2 h) and an unbalanced HRV** (50 ms vs 7‑day avg 47 ms). Resting HR is normal (59 bpm) and ACWR is optimal (0.8), so overall training load isn’t the issue; the primary limiter is acute fatigue from poor sleep. Reducing intensity lets you respect the recovery
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
