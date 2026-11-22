@@ -16,11 +16,11 @@
   - TE: Aerobic Base · aerobic 2.5 · anaerobic 0
   - MS: 4.54k @ 7:43 139bpm 0.78m 166spm 280ms 7.8cm 232w
   - Readiness 62 → 63 (Recovered And Ready) · Recovery 5h 59m
-  - 🧠 The main‑set work (5 × ≈7:40 / km, HR 133‑143 bpm) stayed squarely in the easy aerobic zone that Wednesday’s “easy + strides/hills” session calls for, so pacing was appropriate for the prescribed intensity. The final rep
+  - 🧠 The five‑rep main set held a steady 7:35–7:38 /km for the first four intervals before slipping to 8:22 /km on the final rep, a ~5 % pace drift that matches the gradual rise in average HR from 133 bpm to 143 bpm. At an overall time‑weighted HR of 139 bpm the work stayed well below the easy‑aerobic zone (≈145 bpm), which explains the modest aerobic training effect (2.5 AU) and the small stamina dip from 96 → 85 % after the 35‑minute effort. Readiness was “Moderate” (score 62) with good sleep (83) and a body‑battery impact of –9, indicating the session was well‑tolerated and appropriate for a recovery/stride‑focused day in the bridge phase.
 - **Malolos - Run + Strides/Hills** — 2.02km · 15:50 · 7:49/km · HR 129/137 max
   - TE: Recovery (Low Aerobic) · aerobic 1.6 · anaerobic 0
   - MS: 2.01k @ 7:49 128bpm 0.75m 169spm 279ms 7.6cm 223w
-  - 🧠 The two‑rep main set held a pace of 7:56 → 7:39 km (average 7:51 km) with a time‑weighted HR of ~128 bpm
+  - 🧠 The two‑rep main set lasted virtually the whole 15 min session, averaging 7:51 /km (7:56 and 7:39 /km) which sits in the recovery zone rather than the easy aerobic range you normally target on Wednesdays. Given the short 2 km distance, early‑morning heat, and the fact that the training‑effect label is “RECOVERY” with zero anaerobic contribution, the pace is appropriate and there’s no evidence of missed sub‑threshold work. Your morning readiness score of 62 (moderate) dipped briefly after the run (to 53) then rebounded to 63, a typical pattern for a low‑load workout. No red flags appear for this session.
 
 ## Next Session
 - **Planned:** Mon, Nov 23 — Strength A - Lite
