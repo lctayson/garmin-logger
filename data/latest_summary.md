@@ -16,10 +16,11 @@
   - TE: Aerobic Base · aerobic 2.5 · anaerobic 0
   - MS: 4.54k @ 7:43 139bpm 0.78m 166spm 280ms 7.8cm 232w
   - Readiness 62 → 63 (Recovered And Ready) · Recovery 5h 59m
+  - 🧠 The five hill repeats were run at 7:35–8:22 km pace (average 7:44), keeping HR in the low‑150 bpm range and staying well within the easy aerobic zone, so the session delivered the expected
 - **BHM W9: Run** — 2.02km · 15:50 · 7:49/km · HR 129/137 max
   - TE: Recovery (Low Aerobic) · aerobic 1.6 · anaerobic 0
   - MS: 2.01k @ 7:49 128bpm 0.75m 169spm 279ms 7.6cm 223w
-  - 🧠 The two‑rep main set (15 min 42 s total) averaged 7:51
+  - 🧠 The two work reps (7:56 km⁻¹ and 7:39 km⁻¹) averaged 7:51 km⁻¹ with HR 126–134 bpm, firmly inside the recovery zone and matching the “RECOVERY” training‑effect label. With a morning readiness of 62 (moderate, recovered), the modest acute load (≈624) caused a brief dip in the post‑exercise readiness score, which is normal for a low‑intensity run.
 
 ## Next Session
 - **Planned:** Mon, Nov 23 — Strength A - Lite
