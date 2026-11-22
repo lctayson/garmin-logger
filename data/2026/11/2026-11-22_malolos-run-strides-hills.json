@@ -747,8 +747,8 @@
         ]
       },
       "lap_count": 19,
-      "ai_analysis": "The 5‑rep main set lasted 35:04 at an average pace of 7:44 /km (133‑143 bpm), which sits squarely in the easy aerobic zone (≈7:10‑7:45 /km, ≤155 bpm) as intended for a Wednesday easy + strides/hills day. The final rep slowed to 8:22 /km and 143 bpm, about a 5 % drift from the first rep, indicating the hill/stride portion taxed you more than expected. With a morning readiness score of 62 (moderate) and no acute",
-      "ai_analysis_provider": "groq:openai/gpt-oss-120b"
+      "ai_analysis": "This was a strictly controlled recovery session, averaging 7:44/km across the work blocks with a modest time-weighted heart rate of 139 bpm, well under your 145–150 bpm ceiling. However, despite the workout title indicating strides or hills, your max HR peaked at just 146 bpm and anaerobic training effect was 0.0, meaning no genuine high-intensity neuromuscular reps actually registered. The aerobic maintenance and low cardiac cost did their job to keep recovery intact ahead of Saturday's 5K time trial, but be aware that the intended sprint stimulus was missed entirely.",
+      "ai_analysis_provider": "gemini:gemini-3.8-flash"
     },
     {
       "name": "Malolos - Run + Strides/Hills",
@@ -1001,8 +1001,8 @@
         ]
       },
       "lap_count": 3,
-      "ai_analysis": "The two‑rep main set stayed firmly in the recovery zone (7:56 → 7:39 min/km, HR 126‑134 bpm) and the slight pace gain in the second rep reflects a normal warm‑up effect rather than any concerning drift. With a training‑effect label of RECOVERY, a low load of 20.6 and only a 4 % stamina dip, the session aligns with the bridge‑phase Tuesday sub‑threshold volume and the moderate morning readiness score (62). No execution issues are evident, and the modest body‑battery impact (‑3) suggests the run was appropriately easy.",
-      "ai_analysis_provider": "groq:openai/gpt-oss-120b"
+      "ai_analysis": "This was a very short, light flush of just 2.02 km over 15:50, keeping cardiac demand firmly at baseline with a peak heart rate of only 137 bpm (average 129 bpm). The two recorded work splits averaged 7:51/km with an average HR of 128 bpm, but despite the activity title mentioning strides or hills, there is no evidence of high-intensity efforts or anaerobic stimulus (0.0 anaerobic TE). It functioned strictly as pure active recovery with minimal load (20.6), which leaves your legs untouched ahead of the upcoming bridge-phase quality work.",
+      "ai_analysis_provider": "gemini:gemini-3.8-flash"
     }
   ]
 }
