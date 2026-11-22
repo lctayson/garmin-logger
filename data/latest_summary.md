@@ -16,11 +16,10 @@
   - TE: Aerobic Base · aerobic 2.5 · anaerobic 0
   - MS: 4.54k @ 7:43 139bpm 0.78m 166spm 280ms 7.8cm 232w
   - Readiness 62 → 63 (Recovered And Ready) · Recovery 5h 59m
-  - 🧠 The five‑rep main set averaged 7 min 44 s/km (range 7 : 35–8 : 22) with a steady HR rise from 133 to 143 bpm, staying well below your LTHR of 171 bpm and therefore matching an easy‑to‑sub‑threshold effort rather than a VO2‑max stimulus. The final rep slowed to 8 : 22, about a 12 % pace drift from the fastest repeat, suggesting fatigue or hill difficulty that limited you from maintaining the earlier 7 : 35–7 : 38 tempo. Training‑effect scores (aerobic 2
 - **BHM W9: Run** — 2.02km · 15:50 · 7:49/km · HR 129/137 max
   - TE: Recovery (Low Aerobic) · aerobic 1.6 · anaerobic 0
   - MS: 2.01k @ 7:49 128bpm 0.75m 169spm 279ms 7.6cm 223w
-  - 🧠 The two 7‑minute‑plus reps averaged a 7:51 /km pace with a time‑weighted HR of 128 bpm, placing the effort squarely in the recovery zone rather than the sub‑threshold range prescribed for Tuesday sessions. Training‑effect metrics confirm a pure recovery stimulus (aerobic 1.6, anaerobic 0), and the modest load of 20.6 aligns with the low‑intensity intent. Readiness was moderate (score 62) before the run and dipped only slightly after, which is typical for a session of this magnitude. No compliance concerns or risk‑factor signals appear in the data.
+  - 🧠 The two‑rep main set (15 min 42 s total) averaged 7:51
 
 ## Next Session
 - **Planned:** Mon, Nov 23 — Strength A - Lite
