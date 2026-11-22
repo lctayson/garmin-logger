@@ -747,7 +747,7 @@
         ]
       },
       "lap_count": 19,
-      "ai_analysis": "The five‑rep main set held a steady 7:35–7:38 /km for the first four intervals before slipping to 8:22 /km on the final rep, a ~5 % pace drift that matches the gradual rise in average HR from 133 bpm to 143 bpm. At an overall time‑weighted HR of 139 bpm the work stayed well below the easy‑aerobic zone (≈145 bpm), which explains the modest aerobic training effect (2.5 AU) and the small stamina dip from 96 → 85 % after the 35‑minute effort. Readiness was “Moderate” (score 62) with good sleep (83) and a body‑battery impact of –9, indicating the session was well‑tolerated and appropriate for a recovery/stride‑focused day in the bridge phase.",
+      "ai_analysis": "The main set was five reps totalling 35:04, pacing between 7:35 /km and 8:22 /km (average 7:44) with heart rates rising from 133 to 143 bpm, which kept the effort solidly in the easy‑aerobic zone rather than the sub‑threshold range you target for Tuesday quality sessions. The slight slowdown in the final rep is consistent with the hill/stride component and, as the training‑effect data shows, produced no anaerobic load. Morning readiness was moderate (score 62) and the post‑run dip to 53 reflects the expected acute load; recovery time remains at 70 % of baseline, so no immediate concern.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
@@ -1001,7 +1001,7 @@
         ]
       },
       "lap_count": 3,
-      "ai_analysis": "The two‑rep main set lasted virtually the whole 15 min session, averaging 7:51 /km (7:56 and 7:39 /km) which sits in the recovery zone rather than the easy aerobic range you normally target on Wednesdays. Given the short 2 km distance, early‑morning heat, and the fact that the training‑effect label is “RECOVERY” with zero anaerobic contribution, the pace is appropriate and there’s no evidence of missed sub‑threshold work. Your morning readiness score of 62 (moderate) dipped briefly after the run (to 53) then rebounded to 63, a typical pattern for a low‑load workout. No red flags appear for this session.",
+      "ai_analysis": "The two‑rep main set was fully executed (15 min 42 s total) with a modest negative pace drift – the first 7:56 /km interval slowed to 7:39 /km, a ~3 % pickup that kept the HR in the low‑130 bpm range (126 → 134 bpm). The training‑effect label of “RECOVERY” and the low aerobic load (aerobic 1.6, load 20.6) confirm the session stayed comfortably in an easy‑recovery zone, matching the Wednesday easy‑run + strides/hills purpose. Your morning readiness was moderate (score 62) and the post‑run snapshot shows only a slight dip, which is typical after a low‑intensity effort. No red flags appear for this workout.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
