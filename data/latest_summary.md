@@ -12,15 +12,15 @@
 
 ## Today's Workout
 
-- **Malolos - Run + Strides/Hills** — 6.03km · 48:17 · 8:00/km · HR 138/146 max
+- **BHM W9: Run + Hills** — 6.03km · 48:17 · 8:00/km · HR 138/146 max
   - TE: Aerobic Base · aerobic 2.5 · anaerobic 0
   - MS: 4.54k @ 7:43 139bpm 0.78m 166spm 280ms 7.8cm 232w
   - Readiness 62 → 63 (Recovered And Ready) · Recovery 5h 59m
-  - 🧠 The main set was five reps totalling 35:04, pacing between 7:35 /km and 8:22 /km (average 7:44) with heart rates rising from 133 to 143 bpm, which kept the effort solidly in the easy‑aerobic zone rather than the sub‑threshold range you target for Tuesday quality sessions. The slight slowdown in the final rep is consistent with the hill/stride component and, as the training‑effect data shows, produced no anaerobic load. Morning readiness was moderate (score 62) and the post‑run dip to 53 reflects the expected acute load; recovery time remains at 70 % of baseline, so no immediate concern.
-- **Malolos - Run + Strides/Hills** — 2.02km · 15:50 · 7:49/km · HR 129/137 max
+  - 🧠 The five‑rep main set averaged 7 min 44 s/km (range 7 : 35–8 : 22) with a steady HR rise from 133 to 143 bpm, staying well below your LTHR of 171 bpm and therefore matching an easy‑to‑sub‑threshold effort rather than a VO2‑max stimulus. The final rep slowed to 8 : 22, about a 12 % pace drift from the fastest repeat, suggesting fatigue or hill difficulty that limited you from maintaining the earlier 7 : 35–7 : 38 tempo. Training‑effect scores (aerobic 2
+- **BHM W9: Run** — 2.02km · 15:50 · 7:49/km · HR 129/137 max
   - TE: Recovery (Low Aerobic) · aerobic 1.6 · anaerobic 0
   - MS: 2.01k @ 7:49 128bpm 0.75m 169spm 279ms 7.6cm 223w
-  - 🧠 The two‑rep main set was fully executed (15 min 42 s total) with a modest negative pace drift – the first 7:56 /km interval slowed to 7:39 /km, a ~3 % pickup that kept the HR in the low‑130 bpm range (126 → 134 bpm). The training‑effect label of “RECOVERY” and the low aerobic load (aerobic 1.6, load 20.6) confirm the session stayed comfortably in an easy‑recovery zone, matching the Wednesday easy‑run + strides/hills purpose. Your morning readiness was moderate (score 62) and the post‑run snapshot shows only a slight dip, which is typical after a low‑intensity effort. No red flags appear for this workout.
+  - 🧠 The two 7‑minute‑plus reps averaged a 7:51 /km pace with a time‑weighted HR of 128 bpm, placing the effort squarely in the recovery zone rather than the sub‑threshold range prescribed for Tuesday sessions. Training‑effect metrics confirm a pure recovery stimulus (aerobic 1.6, anaerobic 0), and the modest load of 20.6 aligns with the low‑intensity intent. Readiness was moderate (score 62) before the run and dipped only slightly after, which is typical for a session of this magnitude. No compliance concerns or risk‑factor signals appear in the data.
 
 ## Next Session
 - **Planned:** Mon, Nov 23 — Strength A - Lite
@@ -54,7 +54,7 @@ TT Week
 | T | 5x90s 3-5K Reps | 6k · 41:53 | 145 |
 | F | Core & | 22:23 | 3 |
 | S | Malolos Run | 14k · 1:43:24 | 126 |
-| S | Run + Strides/Hills/Run + Strides/Hills | 8.1k · 1:04:07 | 75 |
+| S | BHM W9: Run + Hills/BHM W9: Run | 8.1k · 1:04:07 | 75 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
