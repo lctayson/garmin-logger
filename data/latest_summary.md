@@ -18,14 +18,6 @@ TT Week
 - **Reason:** very short sleep last night (4.2h); low readiness (38/100); low 7-day sleep average (6.1h).
 - **Action:** Avoid adding intensity or volume; shorten the session if effort is unusually high.
 
-### 🧠 AI Coaching Guidance
-
-**Decision** – Do the Monday Strength A session, but cut the volume / intensity by about 30 % (e.g., fewer sets or lighter load).  
-
-**Execution** – Warm‑up: 5‑10 min dynamic mobility (leg swings, hip circles, body‑weight glute bridges). Main set: power/hip‑extension work listed for Strength A (e.g., hip‑thrusts, kettlebell swings, single‑leg RDL) – perform the usual rep scheme but stop after 2 × the normal sets or use ~70 % of the prescribed load. Cool‑down: 3‑5 min light stretching of glutes, hamstrings, and lower back.  
-
-**Readiness rationale** – Sleep was only
-
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
 ## Latest Activity
