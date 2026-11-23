@@ -20,16 +20,13 @@ TT Week
 
 ### 🧠 AI Coaching Guidance
 
-**Decision – adjust, don’t skip**  
-Your readiness score is low (38) mainly because of very short sleep (4.2 h) and modest HRV. Acute‑load/ACWR are fine and resting HR is normal, so a light strength session is acceptable but should be scaled back to protect recovery.
+**Decision** – Proceed, but scale back the Monday Strength‑A workout (lighter load, fewer sets).  
 
-**Workout – scaled‑down Strength A**  
-- **Warm‑up (5‑10 min):** easy jog or bike < 10 km h⁻¹, followed by dynamic hip/leg drills (leg swings, hip circles, glute bridges).  
-- **Main set:** perform each listed power/hip‑extension exercise for **2 × 8‑10 reps** at ~60‑65 % of your usual load (RPE 6‑7). Drop any heavy single‑leg work or overloads.  
-- **Cool‑down (5 min):** gentle stretch of hamstrings, quads, glutes + foam‑roll calves.
+**Execution** – Warm‑up: 5 min easy jog or bike + dynamic hip/leg mobility (leg swings, glute bridges). Main set: 2 × 8 reps of the prescribed hip‑extension/ power moves at ~50 % of your usual load, focusing on perfect technique; rest 90 s between reps. Finish with a 5‑min gentle cooldown (light walking, static stretching for hips/hamstrings).  
 
-**Readiness rationale**  
-- **Sleep:** 4.2 h (poor) is the biggest negative flag; HRV is slightly below baseline (50 ms vs 7‑day avg 47 ms, “moder
+**Readiness rationale** – Sleep was only 4.2 h (poor) and HRV is down ≈ 3 ms vs 7‑day average, pulling the overall readiness to “Low”.  Resting HR (59 bpm) is unchanged, ACWR is optimal (0.8) and recovery‑time score is good, so the stress load isn’t the issue – the acute deficit is sleep‑related.  Because the session is non‑cardiovascular, a modest reduction preserves recovery while still maintaining weekly strength stimulus.  
+
+**In‑session guardrails** – If you feel unusually heavy‑legged, heart rate stays > 150 bpm during the warm‑up, or you notice joint pain, stop
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
