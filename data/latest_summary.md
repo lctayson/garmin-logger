@@ -20,9 +20,11 @@ TT Week
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s Strength A session, but cut the load/intensity by about 30 % (lighter weight, fewer reps) and keep the total volume short.  
+**Decision** – Proceed with the scheduled Strength A session, but trim volume/intensity (e.g., drop the third set or use ~60 % of usual load) to match today’s low‑readiness profile.  
 
-**Execution** – Warm‑up: 5
+**Execution** – Warm‑up: 5 min easy dynamic mobility (leg swings, hip circles, body‑weight glute bridges). Main‑set: follow the prescribed hip‑extension circuit (e.g., hip thrusts, single‑leg Romanian dead‑lifts, banded clamshells) but limit to 2 solid sets, keep reps 8‑12, RPE ≈ 6–7. Cool‑down: 5 min light stretching and foam‑roll hips/quads.  
+
+**Readiness rationale** – Sleep was only 4.2 h (poor) and HRV is modestly down (50 ms vs 7‑day avg 47 ms, “unbalanced”), driving the overall readiness score to 38 (Low). Load metrics are
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
