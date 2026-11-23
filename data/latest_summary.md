@@ -20,17 +20,11 @@ TT Week
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Low‑readiness flag (4 h sleep, HRV unbalanced). Keep today’s Strength A but **scale back**: treat it as a light activation / mobility day; skip heavy loads or max‑effort hip‑extension work if you feel unusually fatigued.
+**Decision** – Do the Monday Strength A session, but cut the volume / intensity by about 30 % (e.g., fewer sets or lighter load).  
 
-**Warm‑up / main set / cool‑down** – Follow the prescribed Strength A routine, but:
-- Warm‑up: 5 min easy jog or bike + dynamic hip/open‑chain moves (leg swings, glute bridges, body‑weight lunges).  
-- Main set: perform the listed hip‑extension/power exercises at **≈50 % of usual load** and **reduce reps/sets by ~30 %** (e.g., 2 × 8 instead of 3 × 10).  
-- Cool‑down: 5 min gentle stretching and foam‑rolling focusing on hips, glutes, and hamstrings.
+**Execution** – Warm‑up: 5‑10 min dynamic mobility (leg swings, hip circles, body‑weight glute bridges). Main set: power/hip‑extension work listed for Strength A (e.g., hip‑thrusts, kettlebell swings, single‑leg RDL) – perform the usual rep scheme but stop after 2 × the normal sets or use ~70 % of the prescribed load. Cool‑down: 3‑5 min light stretching of glutes, hamstrings, and lower back.  
 
-**Readiness rationale** – Sleep was markedly short (4.2 h, “Poor” score) and HRV is below baseline (50 ms vs 7‑day avg 47 ms, flagged “UNBALANCED”), indicating acute nervous‑system stress. Resting HR is normal (59 bpm) and ACWR is optimal (0.8), so overall training load isn’t the issue; the primary limiter is the sleep/recovery deficit.
-
-**In‑session guardrails** – Watch for:
-- **Form breakdown**
+**Readiness rationale** – Sleep was only
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
