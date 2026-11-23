@@ -10,8 +10,8 @@
     "sleep_hours_including_previous_day_nap": 6.11,
     "sleep_score": 58,
     "training_status": "Maintaining 2",
-    "acute_load": 515,
-    "chronic_load": 624,
+    "acute_load": 518,
+    "chronic_load": 625,
     "acwr": 0.8,
     "vo2_max": 45.0,
     "recovery_time_hours": 0.5,
@@ -69,6 +69,21 @@
           "recovery_minutes": 29,
           "acute_load": 515,
           "recovery_time_change": "NO_CHANGE_SLEEP"
+        },
+        {
+          "timestamp_local": "2026-11-23T20:19:27.0",
+          "context": "AFTER_POST_EXERCISE_RESET",
+          "score": 51,
+          "feedback": "BOOSTED_BY_NAPPING",
+          "recovery_minutes": 0,
+          "acute_load": 518,
+          "recovery_time_change": "NONE",
+          "factor_overrides": {
+            "recovery_time": {
+              "percent": 100,
+              "feedback": "Very Good"
+            }
+          }
         }
       ]
     },
@@ -117,11 +132,11 @@
   "training_status": {
     "status": "Maintaining 2",
     "training_load": {
-      "acute_load": 515,
-      "chronic_load": 624,
+      "acute_load": 518,
+      "chronic_load": 625,
       "chronic_load_range": {
-        "min": 499.2,
-        "max": 936.0
+        "min": 500.0,
+        "max": 937.5
       },
       "acwr": 0.8,
       "acwr_percent": 33,
@@ -130,7 +145,7 @@
     "recovery_time_hours": 0.5,
     "load_focus": "Anaerobic Shortage",
     "monthly_load_balance": {
-      "aerobic_low": 1091.0,
+      "aerobic_low": 1093.3,
       "aerobic_low_target_min": 816,
       "aerobic_low_target_max": 1360,
       "aerobic_high": 1331.8,
@@ -162,10 +177,10 @@
   "training_history": {
     "7_day": {
       "total_endurance": {
-        "activity_count": 7,
+        "activity_count": 8,
         "distance_km": 44.18,
-        "duration_hours": 5.74,
-        "exercise_load": 618.1
+        "duration_hours": 6.13,
+        "exercise_load": 620.4
       },
       "sports": {
         "running": {
@@ -175,10 +190,10 @@
           "exercise_load": 614.7
         },
         "other": {
-          "activity_count": 1,
+          "activity_count": 2,
           "distance_km": 0.0,
-          "duration_hours": 0.37,
-          "exercise_load": 3.4
+          "duration_hours": 0.76,
+          "exercise_load": 5.7
         }
       }
     },
@@ -267,10 +282,10 @@
           "week_start": "2026-11-17",
           "week_end": "2026-11-23",
           "total_endurance": {
-            "activity_count": 7,
+            "activity_count": 8,
             "distance_km": 44.18,
-            "duration_hours": 5.74,
-            "exercise_load": 618.1
+            "duration_hours": 6.13,
+            "exercise_load": 620.4
           },
           "sports": {
             "running": {
@@ -280,10 +295,10 @@
               "exercise_load": 614.7
             },
             "other": {
-              "activity_count": 1,
+              "activity_count": 2,
               "distance_km": 0.0,
-              "duration_hours": 0.37,
-              "exercise_load": 3.4
+              "duration_hours": 0.76,
+              "exercise_load": 5.7
             }
           }
         }
@@ -494,14 +509,22 @@
       "sleep_score": 58,
       "vo2_max": 45.0,
       "training_status": "Maintaining 2",
-      "acute_load": 515,
-      "chronic_load": 624,
+      "acute_load": 518,
+      "chronic_load": 625,
       "acwr": 0.8,
       "acwr_status": "Optimal",
-      "activity_count": 0,
-      "total_endurance_duration_hours": 0.0,
+      "activity_count": 1,
+      "total_endurance_duration_hours": 0.39,
       "total_endurance_distance_km": 0.0,
-      "sport_volume": {}
+      "sport_volume": {
+        "other": {
+          "activity_count": 1,
+          "distance_km": 0.0,
+          "duration_hours": 0.39,
+          "exercise_load": 2.3
+        }
+      },
+      "total_exercise_load": 2.3
     }
   ],
   "trend_long_range_weekly": [
@@ -902,12 +925,12 @@
       "sleep_score": 58,
       "vo2_max": 45.0,
       "training_status": "Maintaining 2",
-      "acute_load": 515,
-      "chronic_load": 624,
+      "acute_load": 518,
+      "chronic_load": 625,
       "acwr": 0.8,
       "acwr_status": "Optimal",
-      "activity_count": 7,
-      "total_endurance_duration_hours": 5.74,
+      "activity_count": 8,
+      "total_endurance_duration_hours": 6.13,
       "total_endurance_distance_km": 44.18,
       "sport_volume": {
         "running": {
@@ -917,13 +940,13 @@
           "exercise_load": 614.7
         },
         "other": {
-          "activity_count": 1,
+          "activity_count": 2,
           "distance_km": 0.0,
-          "duration_hours": 0.37,
-          "exercise_load": 3.4
+          "duration_hours": 0.76,
+          "exercise_load": 5.6
         }
       },
-      "total_exercise_load": 618.0
+      "total_exercise_load": 620.3
     }
   ],
   "body_battery_trend": [
@@ -977,5 +1000,85 @@
       "low": 11
     }
   ],
-  "activities": []
+  "activities": [
+    {
+      "name": "Mon Strength A - Lite",
+      "activity_id": 25172023337,
+      "type": "strength_training",
+      "distance": 0.0,
+      "time": "23:22",
+      "elapsed_time": "23:22",
+      "moving_time": "14:05",
+      "avg_hr": 87.0,
+      "max_hr": 102,
+      "recovery_hr": 4,
+      "start_time_local": "2026-11-23T19:47:15.0",
+      "training_effect": {
+        "label": "AEROBIC_BASE",
+        "aerobic": 0.1,
+        "aerobic_message": "MINOR_AEROBIC_BENEFIT",
+        "anaerobic": 0.0,
+        "anaerobic_message": "NO_ANAEROBIC_BENEFIT"
+      },
+      "exercise_load": 2.3,
+      "body_battery_impact": -1.0,
+      "activity_splits": [
+        {
+          "lap": 1,
+          "time": "23:22",
+          "avg_hr": 87.0,
+          "max_hr": 102.0,
+          "start_hr": 85,
+          "min_hr": 72,
+          "end_hr": 93,
+          "moving_time": "14:05",
+          "elapsed_time": "23:22",
+          "calories": 80,
+          "time_seconds": 1402.406,
+          "distance": 0.0
+        }
+      ],
+      "hr_zones": {
+        "columns": [
+          "zone",
+          "range",
+          "time",
+          "percent"
+        ],
+        "data": [
+          [
+            "Zone 1 - Warm Up",
+            "59-144 bpm",
+            "23:04",
+            100
+          ],
+          [
+            "Zone 2 - Easy",
+            "145-153 bpm",
+            "0:00",
+            0
+          ],
+          [
+            "Zone 3 - Aerobic",
+            "154-161 bpm",
+            "0:00",
+            0
+          ],
+          [
+            "Zone 4 - Threshold",
+            "162-170 bpm",
+            "0:00",
+            0
+          ],
+          [
+            "Zone 5 - Maximum",
+            ">170 bpm",
+            "0:00",
+            0
+          ]
+        ]
+      },
+      "lap_count": 1
+    }
+  ]
 }
