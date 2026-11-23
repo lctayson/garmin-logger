@@ -46,12 +46,12 @@
         "feedback": "Good"
       }
     },
-    "ai_analysis": "**Decision:** Given a low readiness score (38) driven by poor sleep (4.2 h) and an unbalanced HRV, keep today’s strength day but **scale back the load** – treat it as a light‑to‑moderate activation session rather than a heavy strength block.  \n\n**Workout execution (scaled version):**  \n- **Warm‑up:** 5‑7 min of dynamic hip‑mobility (leg swings, hip circles, body‑weight glute bridges).  \n- **Main set:** Use roughly 50 % of your usual load; perform 2 × 8‑10 reps of each prescribed movement (",
+    "ai_analysis": "**Decision** – Low‑readiness flag (4 h sleep, HRV unbalanced). Keep today’s Strength A but **scale back**: treat it as a light activation / mobility day; skip heavy loads or max‑effort hip‑extension work if you feel unusually fatigued.\n\n**Warm‑up / main set / cool‑down** – Follow the prescribed Strength A routine, but:\n- Warm‑up: 5 min easy jog or bike + dynamic hip/open‑chain moves (leg swings, glute bridges, body‑weight lunges).  \n- Main set: perform the listed hip‑extension/power exercises at **≈50 % of usual load** and **reduce reps/sets by ~30 %** (e.g., 2 × 8 instead of 3 × 10).  \n- Cool‑down: 5 min gentle stretching and foam‑rolling focusing on hips, glutes, and hamstrings.\n\n**Readiness rationale** – Sleep was markedly short (4.2 h, “Poor” score) and HRV is below baseline (50 ms vs 7‑day avg 47 ms, flagged “UNBALANCED”), indicating acute nervous‑system stress. Resting HR is normal (59 bpm) and ACWR is optimal (0.8), so overall training load isn’t the issue; the primary limiter is the sleep/recovery deficit.\n\n**In‑session guardrails** – Watch for:\n- **Form breakdown**",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
   "health": {
-    "steps": 156
+    "steps": 175
   },
   "sleep": {
     "deep_h": 0.82,
@@ -936,9 +936,9 @@
       ],
       [
         "2026-11-23",
-        43,
-        4,
-        53,
+        54,
+        7,
+        61,
         11
       ]
     ]

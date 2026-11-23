@@ -20,11 +20,17 @@ TT Week
 
 ### 🧠 AI Coaching Guidance
 
-**Decision:** Given a low readiness score (38) driven by poor sleep (4.2 h) and an unbalanced HRV, keep today’s strength day but **scale back the load** – treat it as a light‑to‑moderate activation session rather than a heavy strength block.  
+**Decision** – Low‑readiness flag (4 h sleep, HRV unbalanced). Keep today’s Strength A but **scale back**: treat it as a light activation / mobility day; skip heavy loads or max‑effort hip‑extension work if you feel unusually fatigued.
 
-**Workout execution (scaled version):**  
-- **Warm‑up:** 5‑7 min of dynamic hip‑mobility (leg swings, hip circles, body‑weight glute bridges).  
-- **Main set:** Use roughly 50 % of your usual load; perform 2 × 8‑10 reps of each prescribed movement (
+**Warm‑up / main set / cool‑down** – Follow the prescribed Strength A routine, but:
+- Warm‑up: 5 min easy jog or bike + dynamic hip/open‑chain moves (leg swings, glute bridges, body‑weight lunges).  
+- Main set: perform the listed hip‑extension/power exercises at **≈50 % of usual load** and **reduce reps/sets by ~30 %** (e.g., 2 × 8 instead of 3 × 10).  
+- Cool‑down: 5 min gentle stretching and foam‑rolling focusing on hips, glutes, and hamstrings.
+
+**Readiness rationale** – Sleep was markedly short (4.2 h, “Poor” score) and HRV is below baseline (50 ms vs 7‑day avg 47 ms, flagged “UNBALANCED”), indicating acute nervous‑system stress. Resting HR is normal (59 bpm) and ACWR is optimal (0.8), so overall training load isn’t the issue; the primary limiter is the sleep/recovery deficit.
+
+**In‑session guardrails** – Watch for:
+- **Form breakdown**
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
