@@ -20,11 +20,15 @@ TT Week
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with the scheduled Strength A session, but trim volume/intensity (e.g., drop the third set or use ~60 % of usual load) to match today’s low‑readiness profile.  
+**Decision – Scale back, don’t skip** – Your readiness score is low (38) driven by very short sleep and modest HRV, but resting HR is low (59 bpm) and acute‑load balance is still optimal (ACWR 0.8). A full‑strength‑day is still acceptable, just keep the load light‑to‑moderate and focus on quality over quantity.  
 
-**Execution** – Warm‑up: 5 min easy dynamic mobility (leg swings, hip circles, body‑weight glute bridges). Main‑set: follow the prescribed hip‑extension circuit (e.g., hip thrusts, single‑leg Romanian dead‑lifts, banded clamshells) but limit to 2 solid sets, keep reps 8‑12, RPE ≈ 6–7. Cool‑down: 5 min light stretching and foam‑roll hips/quads.  
+**Planned session (Strength A – power/hip‑extension)**  
+- **Warm‑up**: 5 min easy jog or bike + dynamic hip‑mobility drills (leg swings, hip circles).  
+- **Main set** (as you normally do for Strength A): 3 × 8 reps of each hip‑extension/strength exercise (e.g., single‑leg glute bridges, kettlebell swings, banded hip thrusts), using a load that feels “moderately hard” (RPE ≈ 6) – avoid heavy max‑effort sets.  
+- **Recovery** between sets: 60‑90 s active rest (light walk or easy bike).  
+- **Cool‑down**: 5 min gentle mobility/foam‑rolling for glutes, hamstrings, and lower back.  
 
-**Readiness rationale** – Sleep was only 4.2 h (poor) and HRV is modestly down (50 ms vs 7‑day avg 47 ms, “unbalanced”), driving the overall readiness score to 38 (Low). Load metrics are
+**Readiness rationale** – Sleep was only 4.2 h (poor) and HRV is below your 7‑day average,
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 

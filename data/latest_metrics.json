@@ -46,12 +46,38 @@
         "feedback": "Good"
       }
     },
-    "ai_analysis": "**Decision** – Proceed with the scheduled Strength A session, but trim volume/intensity (e.g., drop the third set or use ~60 % of usual load) to match today’s low‑readiness profile.  \n\n**Execution** – Warm‑up: 5 min easy dynamic mobility (leg swings, hip circles, body‑weight glute bridges). Main‑set: follow the prescribed hip‑extension circuit (e.g., hip thrusts, single‑leg Romanian dead‑lifts, banded clamshells) but limit to 2 solid sets, keep reps 8‑12, RPE ≈ 6–7. Cool‑down: 5 min light stretching and foam‑roll hips/quads.  \n\n**Readiness rationale** – Sleep was only 4.2 h (poor) and HRV is modestly down (50 ms vs 7‑day avg 47 ms, “unbalanced”), driving the overall readiness score to 38 (Low). Load metrics are",
+    "snapshots": [
+      {
+        "timestamp_local": "2026-11-23T14:56:32.0",
+        "context": "AFTER_WAKEUP_RESET",
+        "score": 51,
+        "feedback": "BOOSTED_BY_NAPPING",
+        "recovery_minutes": 0,
+        "acute_load": 515,
+        "recovery_time_change": "NONE",
+        "factor_overrides": {
+          "recovery_time": {
+            "percent": 100,
+            "feedback": "Very Good"
+          }
+        }
+      },
+      {
+        "timestamp_local": "2026-11-23T05:34:02.0",
+        "context": "AFTER_WAKEUP_RESET",
+        "score": 38,
+        "feedback": "LISTEN_TO_YOUR_BODY",
+        "recovery_minutes": 29,
+        "acute_load": 515,
+        "recovery_time_change": "NO_CHANGE_SLEEP"
+      }
+    ],
+    "ai_analysis": "**Decision – Scale back, don’t skip** – Your readiness score is low (38) driven by very short sleep and modest HRV, but resting HR is low (59 bpm) and acute‑load balance is still optimal (ACWR 0.8). A full‑strength‑day is still acceptable, just keep the load light‑to‑moderate and focus on quality over quantity.  \n\n**Planned session (Strength A – power/hip‑extension)**  \n- **Warm‑up**: 5 min easy jog or bike + dynamic hip‑mobility drills (leg swings, hip circles).  \n- **Main set** (as you normally do for Strength A): 3 × 8 reps of each hip‑extension/strength exercise (e.g., single‑leg glute bridges, kettlebell swings, banded hip thrusts), using a load that feels “moderately hard” (RPE ≈ 6) – avoid heavy max‑effort sets.  \n- **Recovery** between sets: 60‑90 s active rest (light walk or easy bike).  \n- **Cool‑down**: 5 min gentle mobility/foam‑rolling for glutes, hamstrings, and lower back.  \n\n**Readiness rationale** – Sleep was only 4.2 h (poor) and HRV is below your 7‑day average,",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
   "health": {
-    "steps": 175
+    "steps": 400
   },
   "sleep": {
     "deep_h": 0.82,
@@ -60,7 +86,7 @@
     "awake_h": 0.1,
     "baseline_h": 7.0,
     "need_h": 7.0,
-    "next_need_h": 8.0,
+    "next_need_h": 6.5,
     "feedback": "No Change No Adjustments",
     "training_feedback": "No Change",
     "sleep_history_adjustment": "No Change",
@@ -936,9 +962,9 @@
       ],
       [
         "2026-11-23",
+        57,
         54,
-        7,
-        61,
+        62,
         11
       ]
     ]

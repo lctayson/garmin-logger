@@ -44,7 +44,33 @@
           "percent": 73,
           "feedback": "Good"
         }
-      }
+      },
+      "snapshots": [
+        {
+          "timestamp_local": "2026-11-23T14:56:32.0",
+          "context": "AFTER_WAKEUP_RESET",
+          "score": 51,
+          "feedback": "BOOSTED_BY_NAPPING",
+          "recovery_minutes": 0,
+          "acute_load": 515,
+          "recovery_time_change": "NONE",
+          "factor_overrides": {
+            "recovery_time": {
+              "percent": 100,
+              "feedback": "Very Good"
+            }
+          }
+        },
+        {
+          "timestamp_local": "2026-11-23T05:34:02.0",
+          "context": "AFTER_WAKEUP_RESET",
+          "score": 38,
+          "feedback": "LISTEN_TO_YOUR_BODY",
+          "recovery_minutes": 29,
+          "acute_load": 515,
+          "recovery_time_change": "NO_CHANGE_SLEEP"
+        }
+      ]
     },
     "sleep_need": {
       "baseline_hours": 7.0,
@@ -54,7 +80,7 @@
       "sleep_history_adjustment": "No Change",
       "hrv_adjustment": "No Change",
       "nap_adjustment": "No Change",
-      "next_need_hours": 8.0
+      "next_need_hours": 6.5
     },
     "previous_day_nap": 113.0
   },
@@ -79,7 +105,7 @@
       "rem": 0.17,
       "awake": 0.1
     },
-    "total_steps": 175,
+    "total_steps": 400,
     "naps": [
       {
         "start": "2026-11-22T22:35:00",
@@ -945,9 +971,9 @@
     },
     {
       "date": "2026-11-23",
-      "charged": 54,
-      "drained": 7,
-      "high": 61,
+      "charged": 57,
+      "drained": 54,
+      "high": 62,
       "low": 11
     }
   ],
