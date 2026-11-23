@@ -16,7 +16,7 @@
 - **Mon Strength A - Lite** — 0.0km · 23:22 · HR 87/102 max
   - TE: Aerobic Base · aerobic 0.1 · anaerobic 0
   - Readiness 51 → 51 (Boosted By Napping) · Recovery 0h
-  - 🧠 The 23‑minute “Strength A – Lite” session produced a trivial aerobic stimulus (aerobic 0.1, “minor benefit”) and a very low training load of 2.3, which aligns with the intended light‑strength day in the bridge phase. Your morning readiness was low (score 38, sleep 58, only 0.5 h recovery) and the workout showed a slight negative body‑battery impact (‑1), suggesting you entered the session with limited recovery reserve. Given these cues, keeping the strength work minimal was appropriate, and you might benefit from an extra nap or additional sleep (the post‑nap snapshot rose to 51) before any higher‑intensity runs later in the week.
+  - 🧠 The strength session delivered a negligible aerobic stimulus (aerobic training effect 0.1, body‑battery impact ‑1) and therefore did not tax your cardiovascular system, which aligns with the “Strength A” purpose in the bridge phase. Your morning readiness score was low (38 / Low) despite a decent sleep score, but the post‑exercise snapshot shows a boost to 51 after a nap, indicating that a short rest helped recover the modest load you incurred. Given the minimal cardio demand, this workout should not interfere with Tuesday’s sub‑threshold run, but keep an eye on overall recovery if the low readiness persists into the next day.
 
 ## Next Session
 - **Planned:** Tue, Nov 24 — 6k as 2×8min SUT @ 5:25–5:35; 2min walk-jog ≤168bpm (easy 6k if sleep or fatigue is poor)
