@@ -20,16 +20,9 @@ TT Week
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Do the Monday Strength A session, but cut the load to ~50 % (fewer reps/sets, lighter weight) and stop if you feel unusually fatigued or any joint discomfort.  
+**Decision** – Proceed with today’s Strength A session, but cut the load/intensity by about 30 % (lighter weight, fewer reps) and keep the total volume short.  
 
-**Workout execution** –  
-- **Warm‑up**: 5 min easy dynamic mobility (leg swings, hip circles, body‑weight glute bridges).  
-- **Main set** (reduced): 2 × 8 reps each of hip‑extension moves (single‑leg RDL, kettlebell swing, banded hip thrust) at a moderate RPE ≈ 6; add core activation (plank 30 s × 2).  
-- **Cool‑down**: 4 min light stretch of hamstrings, glutes, and hip flexors, focusing on breathing.  
-
-**Readiness rationale** – Sleep was only 4.2 h (poor) and HRV is modestly down (50 ms vs 7‑day avg 47 ms, “UNBALANCED”), while resting HR (59 bpm) and ACWR (0.8, optimal) are fine. The low sleep score is the dominant stressor, so a full‑intensity strength day would add unnecessary strain; a lighter, technique‑focused session respects the recovery need without skipping the weekly stimulus.  
-
-**In‑session guardrails** – Watch your heart‑rate and perceived effort; if the warm‑up feels unusually hard (HR > 150 bpm) or you
+**Execution** – Warm‑up: 5
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
