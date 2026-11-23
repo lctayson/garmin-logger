@@ -20,13 +20,11 @@ TT Week
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed, but scale back the Monday Strength‑A workout (lighter load, fewer sets).  
+**Decision:** Given a low readiness score (38) driven by poor sleep (4.2 h) and an unbalanced HRV, keep today’s strength day but **scale back the load** – treat it as a light‑to‑moderate activation session rather than a heavy strength block.  
 
-**Execution** – Warm‑up: 5 min easy jog or bike + dynamic hip/leg mobility (leg swings, glute bridges). Main set: 2 × 8 reps of the prescribed hip‑extension/ power moves at ~50 % of your usual load, focusing on perfect technique; rest 90 s between reps. Finish with a 5‑min gentle cooldown (light walking, static stretching for hips/hamstrings).  
-
-**Readiness rationale** – Sleep was only 4.2 h (poor) and HRV is down ≈ 3 ms vs 7‑day average, pulling the overall readiness to “Low”.  Resting HR (59 bpm) is unchanged, ACWR is optimal (0.8) and recovery‑time score is good, so the stress load isn’t the issue – the acute deficit is sleep‑related.  Because the session is non‑cardiovascular, a modest reduction preserves recovery while still maintaining weekly strength stimulus.  
-
-**In‑session guardrails** – If you feel unusually heavy‑legged, heart rate stays > 150 bpm during the warm‑up, or you notice joint pain, stop
+**Workout execution (scaled version):**  
+- **Warm‑up:** 5‑7 min of dynamic hip‑mobility (leg swings, hip circles, body‑weight glute bridges).  
+- **Main set:** Use roughly 50 % of your usual load; perform 2 × 8‑10 reps of each prescribed movement (
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
