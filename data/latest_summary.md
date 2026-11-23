@@ -19,9 +19,16 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Tuesday sub‑threshold interval workout, but keep the effort slightly “easy‑ish” (stay in the upper easy/low steady range) in case the early‑morning heat feels harsher than usual.  
+**Decision – Proceed as planned**  
+Your readiness is “Moderate” with balanced HRV, low resting HR (59 bpm) and a low ACWR (0.6). Sleep was a bit short (6.4 h) but overall recovery factors are good, so the sub‑threshold Tuesday session should be doable.
 
-**Workout execution** – Warm‑up: 10 min easy jog + 3 × 100 m strides (gradual build to race‑pace effort). Main set: 3 × 8 min sub‑threshold intervals at ~5:25 /km (HR ≈ 158‑166 bpm, RPE 6‑7). Recovery: 2‑min easy
+**Workout execution (per today’s plan)**  
+- **Warm‑up:** 12 min easy jog (≈7:30 – 7:45 /km) + 4 × 100 m strides, gradual build‑up.  
+- **Main set:** 3 × 8 min sub‑threshold intervals at 5:20 – 5:35 /km (aim for HR ≈ 158‑168 bpm). Recover 2‑3 min easy jog between intervals.  
+- **Cool‑down:** 8 min very easy run (≥7:45 /km) + light stretching.
+
+**Readiness rationale**  
+- Resting HR is low and HRV is
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
