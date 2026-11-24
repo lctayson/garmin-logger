@@ -18,7 +18,7 @@
   - Intervals: 2 work reps · pace drift -3.5% · HR +7bpm
   - MS: 2.89k @ 5:32 156bpm 1.01m 180spm 246ms 8.2cm 312w
   - Readiness 52 → 35 (Focus On Sleep Quality) · Recovery 22h 18m
-  - 🧠 The two 8‑minute threshold reps were executed at 5:33 /km and 5:30 /km (average 5:32 /km), which sits comfortably inside the prescribed sub‑threshold/threshold window of 5:20–5:35 /km. Heart‑rate stayed in the expected range (152 bpm → 159 bpm, time‑weighted 156 bpm), though the first rep was a few beats below the target 158‑168 bpm band, suggesting a slightly conservative start. Stamina fell from 99 % to 77 % and the post‑run readiness score dropped to 35, both typical responses after a solid threshold session given today’s moderate morning recovery score.
+  - 🧠 The two 8‑minute threshold reps hit the prescribed pace window (5:33 → 5:30 km, within the 5:20‑5:35 km target) and showed a modest -3.5 % pace drift while HR rose from 152 bpm to 159 bpm, indicating a progressive effort despite the early‑morning heat. Stamina fell from 99 % to 77 % and the lactate‑threshold training effect was positive (3.3 aerobic), but the HR stayed just below the typical threshold zone (≈160‑169 bpm), so the session delivered sub‑threshold work rather than a true threshold stimulus. Readiness was moderate (score 52) before the run and dropped sharply afterward (score 35), reflecting the acute load of 117.8 and the observed stamina loss. No anaerobic benefit was recorded, aligning with the phase’s focus on sub‑threshold volume rather than VO2‑max intensity.
 
 ## Next Session
 - **Planned:** Wed, Nov 25 — 6K EZ, no strides needed
