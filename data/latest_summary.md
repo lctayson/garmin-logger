@@ -18,7 +18,7 @@
   - Intervals: 2 work reps · pace drift -3.5% · HR +7bpm
   - MS: 2.89k @ 5:32 156bpm 1.01m 180spm 246ms 8.2cm 312w
   - Readiness 52 → 35 (Focus On Sleep Quality) · Recovery 22h 18m
-  - 🧠 The two 8‑minute threshold reps were run at 5:33 and 5:30 min/km, squarely inside the prescribed sub‑threshold window (5:20‑5:35 min/km), with a modest negative pace drift of –3.5 % indicating the second rep was slightly quicker. Heart‑rate stayed just below target on the first rep (152 bpm) and hit the expected zone on the second (159 bpm), and the 77 % end‑of‑work stamina suggests the load was appropriately challenging for a Tuesday SUT. The training‑effect readout (LACTATE_THRESHOLD 3.3, anaerobic 0.3) confirms a genuine threshold stimulus with minimal anaerobic contribution, aligning with the current bridge phase goals. Morning readiness was “Moderate” (score 52), and the post‑run drop to 35 reflects the acute cost of this session rather than a chronic fatigue issue.
+  - 🧠 The two 8‑minute threshold reps were paced solidly within the prescribed 5:20–5:35 /km window (5:33 then 5:30) and the slight 3.5 % pace‑efficiency drift reflects a modest speed gain across reps. Heart‑rate rose from 152 bpm in the first rep to 159 bpm in the second, bringing the second interval into the intended sub‑threshold HR band (≈158–168 bpm) while the first stayed a bit below it, suggesting a warm‑up effect rather than a pacing shortfall. Stamina fell from 99 % to a low of 77 % and body‑battery dropped 9 points, which is typical for a threshold session given the moderate morning readiness score of 52 (good recovery).
 
 ## Next Session
 - **Planned:** Wed, Nov 25 — 6K EZ, no strides needed
