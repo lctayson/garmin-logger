@@ -540,7 +540,7 @@
         ]
       },
       "lap_count": 12,
-      "ai_analysis": "The two 8‑minute reps averaged 5:32 /km, comfortably inside the sub‑threshold window (5:20‑5:35 /km) and 3.5 % faster on the second rep while HR rose from 152 bpm to 159 bpm, indicating a modest efficiency gain despite a higher cardiac cost. Stamina fell from 99 % to 77 % over the 16‑minute work block, which is typical for this volume, but the HR stayed below true threshold levels (≈160‑169 bpm), so the session delivered the intended sub‑threshold stimulus without a genuine threshold or VO2max load. Your pre‑run readiness was moderate (score 52) and the post‑run drop to 35 reflects the acute load of 560, matching the expected cost of a focused threshold workout in the bridge phase.",
+      "ai_analysis": "The two 8‑minute threshold reps were run at 5:33 and 5:30 /km, staying within the prescribed sub‑threshold pace window (5:20‑5:35 /km) and showing a 3.5 % drift toward a faster pace in the second rep, accompanied by a 7 bpm rise in HR (152 → 159 bpm). The time‑weighted average HR for the work set was 156 bpm, a touch below the typical sub‑",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
