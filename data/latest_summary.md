@@ -18,7 +18,7 @@
   - Intervals: 2 work reps · pace drift -3.5% · HR +7bpm
   - MS: 2.89k @ 5:32 156bpm 1.01m 180spm 246ms 8.2cm 312w
   - Readiness 52 → 35 (Focus On Sleep Quality) · Recovery 22h 18m
-  - 🧠 The two
+  - 🧠 The two 8‑minute threshold reps were executed at 5:33 /km and 5:30 /km (average 5:32 /km), which sits comfortably inside the prescribed sub‑threshold/threshold window of 5:20–5:35 /km. Heart‑rate stayed in the expected range (152 bpm → 159 bpm, time‑weighted 156 bpm), though the first rep was a few beats below the target 158‑168 bpm band, suggesting a slightly conservative start. Stamina fell from 99 % to 77 % and the post‑run readiness score dropped to 35, both typical responses after a solid threshold session given today’s moderate morning recovery score.
 
 ## Next Session
 - **Planned:** Wed, Nov 25 — 6K EZ, no strides needed
