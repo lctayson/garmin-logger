@@ -19,12 +19,15 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Wednesday session (easy run + strides/hill work). Your sleep was solid, HRV is balanced, and acute load is well below chronic load, so recovery is sufficient.
+**Decision** – Proceed with today’s scheduled Wednesday session (easy run + strides). The moderate‑level readiness score is supported by good sleep, balanced HRV and a low acute‑load/ACWR, so a low‑intensity day fits the recovery picture.
 
 **Workout execution** –   
-- **Warm‑up:** 10 min easy jog (≈6:50–7:15 km, HR ≈ 145‑155 bpm).  
-- **Main set:** 45‑60 min steady easy run at sub‑5:20 /km pace (aim for HR ≈ 150‑155 bpm, RPE 3‑4).  
-- **Strides / hill work:** 6‑8 × 100 m strides (or the week’s hill sprints if listed) at ~5:00 /km effort, full recovery jog back.
+- **Warm‑up:** 5 min easy jog (7:15‑7:45 /km) + 2 × 60‑s strides at 5 k‑race effort, 90 s easy jog between.  
+- **Main set:** 30 min steady easy run at 7:00‑7:30 /km (HR ≈ 145‑155 bpm).  
+- **Strides:** 6 × 100 m strides at ~5 k pace, full 2‑min walk/jog recovery.  
+- **Cool‑down:** 5‑10 min light jog + gentle stretch.
+
+**Readiness rationale** – Sleep = 7.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
