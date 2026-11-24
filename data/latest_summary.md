@@ -17,6 +17,21 @@
 - **Reason:** low 7-day sleep average (6.2h).
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
+### 🧠 AI Coaching Guidance
+
+**Decision –** Proceed with today’s scheduled Wednesday session, but keep the overall load light‑to‑moderate.  
+
+**Execution –**  
+- **Warm‑up:** 10 min easy jog (≈6:45‑7:15 /km, HR ≈150 bpm) + dynamic leg drills.  
+- **Main set:** 45‑60 min steady easy run at easy‑aerobic pace (≈6:40‑7:15 /km, HR ≈145‑155 bpm).  
+- **Strides (or hills if your week calls for them):** 6‑8 × 100 m strides at ~4:30‑4:45 /km, 30‑45 s easy jog recovery between each; if hills, 6‑8 × 10‑s hill sprints with full walk‑down recovery.  
+- **Cool‑down:** 5‑8 min easy jog + 2‑3 min of gentle stretching.  
+
+**Readiness rationale –**  
+- Resting HR 59 bpm and balanced HRV (47 ms) show good autonomic recovery; sleep was solid (7.3 h, score 81).  
+- ACWR is low (0.7) and acute load is well below chronic, indicating ample capacity for today’s easy‑run focus.  
+- The moderate overall readiness score
+
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
 ## Latest Activity
