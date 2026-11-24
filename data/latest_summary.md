@@ -18,7 +18,7 @@
   - Intervals: 2 work reps · pace drift -3.5% · HR +7bpm
   - MS: 2.89k @ 5:32 156bpm 1.01m 180spm 246ms 8.2cm 312w
   - Readiness 52 → 35 (Focus On Sleep Quality) · Recovery 22h 18m
-  - 🧠 The two 8‑minute work reps averaged 5:32 /km (5:33 → 5:30) with a modest 7 bpm HR rise, keeping the first rep just inside the sub‑threshold pace window (5:20–5:35 /km) but slightly below the typical HR range (≈158–168 bpm); the second rep hit 5:30 /km and 159 bpm, matching the prescribed sub‑threshold intensity. A –3.5 % pace drift indicates the second interval was genuinely faster, while the HR increase shows the expected rise in effort without any clear VO2max‑level stimulus (anaerobic effect remains negligible). Stamina dropped from 99 % to 77 % and the lactate‑threshold training effect is positive (3.3 aerobic), which is appropriate for Tuesday sub‑threshold work in the bridge phase. Morning readiness was moderate (score 52), and the post‑run score dip is simply a post‑exercise snapshot, not a concern for today’s execution.
+  - 🧠 The two
 
 ## Next Session
 - **Planned:** Wed, Nov 25 — 6K EZ, no strides needed

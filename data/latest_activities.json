@@ -540,7 +540,7 @@
         ]
       },
       "lap_count": 12,
-      "ai_analysis": "The two 8‑minute work reps averaged 5:32 /km (5:33 → 5:30) with a modest 7 bpm HR rise, keeping the first rep just inside the sub‑threshold pace window (5:20–5:35 /km) but slightly below the typical HR range (≈158–168 bpm); the second rep hit 5:30 /km and 159 bpm, matching the prescribed sub‑threshold intensity. A –3.5 % pace drift indicates the second interval was genuinely faster, while the HR increase shows the expected rise in effort without any clear VO2max‑level stimulus (anaerobic effect remains negligible). Stamina dropped from 99 % to 77 % and the lactate‑threshold training effect is positive (3.3 aerobic), which is appropriate for Tuesday sub‑threshold work in the bridge phase. Morning readiness was moderate (score 52), and the post‑run score dip is simply a post‑exercise snapshot, not a concern for today’s execution.",
+      "ai_analysis": "The two",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
