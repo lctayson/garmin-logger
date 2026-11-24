@@ -19,15 +19,9 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Wednesday session (easy run + strides). The moderate‑level readiness score is supported by good sleep, balanced HRV and a low acute‑load/ACWR, so a low‑intensity day fits the recovery picture.
+**Decision** – Readiness is moderate but driven by solid sleep, balanced HRV and low ACWR. Proceed with today’s planned Wednesday session; no need to downgrade, just keep the effort easy and stay flexible with the stride portion.
 
-**Workout execution** –   
-- **Warm‑up:** 5 min easy jog (7:15‑7:45 /km) + 2 × 60‑s strides at 5 k‑race effort, 90 s easy jog between.  
-- **Main set:** 30 min steady easy run at 7:00‑7:30 /km (HR ≈ 145‑155 bpm).  
-- **Strides:** 6 × 100 m strides at ~5 k pace, full 2‑min walk/jog recovery.  
-- **Cool‑down:** 5‑10 min light jog + gentle stretch.
-
-**Readiness rationale** – Sleep = 7.
+**Workout execution** – 1️⃣ Warm‑up: 12 min easy jog (≈7:30 km⁻¹, HR ≤ 150 bpm). 2️⃣ Main: 30–35 min steady aerobic run (6:40‑7:15 km⁻¹, stay in zone 2, HR ≈ 150‑160 bpm). 3️⃣ Strides: 5 × 100
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
