@@ -46,7 +46,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "**Decision** – Readiness is moderate but driven by solid sleep, balanced HRV and low ACWR. Proceed with today’s planned Wednesday session; no need to downgrade, just keep the effort easy and stay flexible with the stride portion.\n\n**Workout execution** – 1️⃣ Warm‑up: 12 min easy jog (≈7:30 km⁻¹, HR ≤ 150 bpm). 2️⃣ Main: 30–35 min steady aerobic run (6:40‑7:15 km⁻¹, stay in zone 2, HR ≈ 150‑160 bpm). 3️⃣ Strides: 5 × 100",
+    "ai_analysis": "**Decision** – Proceed with today’s planned Wednesday session (easy run + strides).  \n\n**Workout execution** – *Warm‑up*: 10‑15 min easy jog (≈7:30 km⁻¹, HR ≈ 140‑150 bpm). *Main*: steady easy effort for the prescribed distance (usually 6‑8 km) at 6:40‑7:15 km⁻¹ (HR ≈ 145‑155 bpm). *Strides*: 6‑8 × 100 m strides, building up to ~4:30‑4:45 km⁻¹, full recovery jog back. *Cool‑down*: 5‑10 min very",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
