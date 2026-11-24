@@ -540,7 +540,7 @@
         ]
       },
       "lap_count": 12,
-      "ai_analysis": "The two 8‑minute threshold reps were run at 5:33 and 5:30 /km, right inside the prescribed sub‑threshold window (5:20–5:35 /km), and the modest -3.5 % pace drift shows you actually got a touch quicker on the second rep. Heart‑rate rose from 152 bpm to 159 bpm across the reps (≈+7 bpm), which aligns with the expected sub‑threshold HR range (≈158–168 bpm) but suggests the first rep was a little below target intensity. Stamina fell from 99 % to 77 % during the set, indicating a noticeable load, while the morning readiness score of 52 (moderate) was adequate for today’s Tuesday SUT session. No anaerobic benefit was recorded, which is normal for a pure threshold workout, but you may want to start the first rep a few seconds per km faster to ensure you’re fully in sub‑threshold HR zone.",
+      "ai_analysis": "The two 8‑minute reps averaged 5:32 /km, comfortably inside the sub‑threshold window (5:20‑5:35 /km) and 3.5 % faster on the second rep while HR rose from 152 bpm to 159 bpm, indicating a modest efficiency gain despite a higher cardiac cost. Stamina fell from 99 % to 77 % over the 16‑minute work block, which is typical for this volume, but the HR stayed below true threshold levels (≈160‑169 bpm), so the session delivered the intended sub‑threshold stimulus without a genuine threshold or VO2max load. Your pre‑run readiness was moderate (score 52) and the post‑run drop to 35 reflects the acute load of 560, matching the expected cost of a focused threshold workout in the bridge phase.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
