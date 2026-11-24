@@ -540,7 +540,7 @@
         ]
       },
       "lap_count": 12,
-      "ai_analysis": "The two 8‑minute threshold reps hit the prescribed pace window (5:33 → 5:30 km, within the 5:20‑5:35 km target) and showed a modest -3.5 % pace drift while HR rose from 152 bpm to 159 bpm, indicating a progressive effort despite the early‑morning heat. Stamina fell from 99 % to 77 % and the lactate‑threshold training effect was positive (3.3 aerobic), but the HR stayed just below the typical threshold zone (≈160‑169 bpm), so the session delivered sub‑threshold work rather than a true threshold stimulus. Readiness was moderate (score 52) before the run and dropped sharply afterward (score 35), reflecting the acute load of 117.8 and the observed stamina loss. No anaerobic benefit was recorded, aligning with the phase’s focus on sub‑threshold volume rather than VO2‑max intensity.",
+      "ai_analysis": "The two 8‑minute threshold reps hit the intended zone – pace stayed at 5:33 → 5:30 /km (within the 5:20‑5:35 sub‑threshold range) and HR rose from 152 → 159 bpm, ending just below the 158‑168 bpm threshold window but showing the expected upward drift (+7 bpm). The –3.5 % pace‑efficiency drift reflects a modest speed gain in the second rep, confirming the session delivered a genuine threshold stimulus rather than a flat aerobic effort. Stamina fell from 99 % to 77 % over the 16 min work block, which aligns with the known cost of two 8‑minute threshold intervals in today’s early‑morning heat. The post‑run readiness dip to 35 is typical after a lactate‑threshold load and does not indicate a recovery issue given the moderate pre‑run score (52).",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
