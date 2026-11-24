@@ -18,7 +18,7 @@
   - Intervals: 2 work reps · pace drift -3.5% · HR +7bpm
   - MS: 2.89k @ 5:32 156bpm 1.01m 180spm 246ms 8.2cm 312w
   - Readiness 52 → 35 (Focus On Sleep Quality) · Recovery 22h 18m
-  - 🧠 The two 8‑minute reps hit the prescribed sub‑threshold/threshold window (5:33 → 5:30 min/km) and the HR climbed from 152 bpm to 159 bpm, approaching the expected 160‑169 bpm range for a true threshold effort. The –3.5 % pace‑drift confirms the second rep was a bit quicker, while the stamina dip from 99 % to 77 % is typical for this intensity. Morning readiness was a moderate 52, and the post‑run score fell to 35, reflecting the acute load rather than a failure of execution. Overall, the session met the Tuesday sub‑threshold target and delivered a clean, progressive stimulus.
+  - 🧠 The two 8‑minute reps were run at 5:33 and 5:30 /km (average 5:32 /km), squarely inside the prescribed sub‑threshold window (5:20–5:35 /km) and produced a modest –3.5 % pace‑efficiency drift, indicating a slight gain in pacing consistency across reps. HR rose from 152 bpm in the first rep to 159 bpm in the second (time‑weighted avg 156 bpm), which is just below the upper sub‑threshold HR range (158–168 bpm) but shows the expected progressive cardiovascular demand. The stamina metric fell from 99 % to 77 % and the training effect logged a solid aerobic threshold stimulus (aerobic 3.3) with virtually no anaerobic contribution, matching the bridge‑phase focus on sub‑threshold volume. Morning readiness was moderate (score 52) and dropped to 35 post‑run, reflecting the load (≈118) and the transient fatigue from the threshold work rather than any abnormal issue.
 
 ## Next Session
 - **Planned:** Wed, Nov 25 — 6K EZ, no strides needed
