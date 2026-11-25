@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 2.6 · anaerobic 0
   - MS: 6.03k @ 7:29 140bpm 0.79m 168spm 278ms 7.9cm 237w
   - Readiness 59 → 47 (Focus On Energy Levels) · Recovery 16h 27m
-  - 🧠 The six work reps averaged 7:30 /km with a clear downward drift from 7:54 to 7:18 /km and heart‑rate climbing from 124 bpm to 148 bpm, showing a gradual increase in intensity across the block. The aerobic training effect of 2.6 AEROBIC_BASE and zero anaerobic contribution align with the modest HR zone (~140 bpm) recorded, indicating this was an easy aerobic effort rather than a sub‑threshold stimulus. Your morning readiness was moderate (score 59) and dropped to 47 after the run, reflecting the acute load increase and is expected for a session of this low stress.
+  - 🧠 The six‑rep main set stayed firmly in easy‑run territory, with rep paces moving from 7:54 to 7:18 /km (average 7:30) and time‑weighted HR rising from 124 bpm to 148 bpm—well within the 145‑155 bpm easy aerobic window. The modest 12‑point drop in stamina (100 → 88) matches the moderate‑readiness score (59) and the aerobic‑base training effect of 2.6, confirming the session behaved as a recovery‑oriented run. No anaerobic stimulus was expected or delivered, and the post‑exercise readiness dip to 47 simply reflects the accumulated acute load (531) rather than a training quality issue.
 
 ## Next Session
 - **Planned:** Thu, Nov 26 — 6k EZ @ 6:55–7:25 ≤150bpm w/ 4×20s strides; 75s WALK
