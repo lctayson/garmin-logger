@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 2.6 · anaerobic 0
   - MS: 6.03k @ 7:29 140bpm 0.79m 168spm 278ms 7.9cm 237w
   - Readiness 59 → 47 (Focus On Energy Levels) · Recovery 16h 27m
-  - 🧠 The six‑rep main set averaged a 7:30 min/km pace with a time‑weighted HR of 140 bpm, placing the work solidly in the easy aerobic zone (≈6:40–7:15 min/km, ≤155 bpm) rather than the sub‑threshold range of 5:20–5:35 min/km you target for Tuesday sessions. Heart‑rate drift from 124 bpm in the first rep to 148 bpm in the last shows a gradual intensity rise but still stayed well below your LTHR of 171 bpm, confirming the session provided only a maintenance‑level aerobic stimulus (Aerobic Base 2.6, no anaerobic load). Given a moderate morning readiness score of 59 and the post‑run dip to 47, the easy effort was appropriate for recovery, though it will not contribute the sub‑threshold volume needed in the bridge phase. Consider scheduling a true sub‑threshold interval block later this week to ensure the intended threshold stimulus is met.
+  - 🧠 The six‑rep main set stayed firmly in the easy aerobic zone, ranging from 7:54 /km (HR 124 bpm) to 7:18 /km (HR 148 bpm) with an average of 7:30 /km and a modest upward drift in both pace and heart rate that kept the effort well below sub‑threshold intensity. Your readiness score was 59 (moderate) before the run and fell to 47 after, yet the recovery‑time and ACWR overrides still indicate acceptable short‑term load. Overall the session matched the expected easy‑run profile for a Wednesday, with no red flags for fatigue or insufficient stimulus.
 
 ## Next Session
 - **Planned:** Thu, Nov 26 — 6k EZ @ 6:55–7:25 ≤150bpm w/ 4×20s strides; 75s WALK
