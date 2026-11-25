@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 2.6 · anaerobic 0
   - MS: 6.03k @ 7:29 140bpm 0.79m 168spm 278ms 7.9cm 237w
   - Readiness 59 → 47 (Focus On Energy Levels) · Recovery 16h 27m
-  - 🧠 The six‑rep main set stayed between 7:54 /km and 7:18 /km (average 7:30 /km), which sits just below your usual easy‑aerobic pace range (6:40‑7:15 /km) and produced an aerobic‑base training effect (2.6 AEROBIC, 0 ANAEROBIC) as expected for a Wednesday easy run. Heart‑rate rose progressively from 124 bpm to 148 bpm, staying well under the LTHR 171 bpm and confirming the effort stayed in the easy zone. Stamina dropped modestly from 100 % to 88 % and the post‑run readiness fell to 47 (score Moderate → Low), but with a morning readiness of 59 and a good sleep score (81) there’s no indication of overreaching—just normal fatigue from the session. No VO₂max or sub‑threshold stimulus was required today, so the workout aligns with the bridge‑phase plan.
+  - 🧠 The 44:55 min main set was run at a steadily improving pace from 7:54 to 7:18 min/km (average 7:30) with heart‑rate rising from 124 to 148 bpm, keeping the effort squarely in the easy‑aerobic/recovery zones rather than the sub‑threshold intensity normally scheduled for Tuesdays. The modest HR increase and the training‑effect
 
 ## Next Session
 - **Planned:** Thu, Nov 26 — 6k EZ @ 6:55–7:25 ≤150bpm w/ 4×20s strides; 75s WALK
