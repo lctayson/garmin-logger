@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0.7
   - MS: 5.39k @ 7:07 142bpm 0.83m 170spm 272ms 7.9cm 247w
   - Readiness 54 → 39 (Find Time To Relax) · Recovery 19h 37m
-  - 🧠 The main set lasted 38 min 21 s over six reps, averaging 7:07 /km with HR rising from 128 bpm to 149 bpm—well within the easy aerobic zone (≈6:40‑7:15 /km, ~145‑155 bpm) and far slower than the sub‑threshold target of ~5:20‑5:35 /km for Tuesday sessions. Because the intensity stayed aerobic, the workout generated a modest aerobic‑base effect (3.0) and essentially no anaerobic benefit (0.7, “NO_ANAEROBIC_BENEFIT”), so it did not meet the intended sub‑threshold stimulus for the bridge phase. Readiness fell from a moderate 54 pre‑run to 39 after the run, mirroring the acute load rise (547) but not indicating any overt overreaching given the low‑int
+  - 🧠 The six‑rep main set stayed firmly in the easy‑aerobic zone (average rep pace 7:07 / km, HR 128‑149 bpm), so the work matched the intended “run + strides/hills” intensity and did not generate an anaerobic stimulus (training‑effect ANAEROBIC ≈ 0.7). Stamina fell from 100 % to 82 % (low 76 %) over the 38‑minute effort, which is typical for a 6‑km session in 28‑33 °C heat and does not signal excessive load. Your morning readiness was moderate (score 54), and the post‑run drop to 39 reflects the expected acute fatigue rather than a pre‑run issue. No deviations from the prescribed effort are evident.
 
 ## Next Session
 - **Planned:** Fri, Nov 27 — REST
