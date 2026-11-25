@@ -387,7 +387,7 @@
         ]
       },
       "lap_count": 7,
-      "ai_analysis": "The 6‑rep main set averaged 7:30 /km (range 7:54–7:18 /km), which sits just outside the prescribed easy‑aerobic zone (6:40–7:15 /km) and reflects a slower‑than‑typical effort, likely influenced by the early‑morning heat. Heart‑rate rose steadily from 124 bpm to 148 bpm, ending near the upper limit of the easy zone and confirming the session’s aerobic‑base focus without any anaerobic stimulus (training effect AEROBIC_BASE = 2.6, anaerobic = 0). Readiness fell from a moderate 59 pre‑run to 47 after the workout, matching the –9 battery impact and a modest load of 59, so the fatigue level is proportionate to the effort.",
+      "ai_analysis": "The six‑rep main set averaged a 7:30 /km pace with a steady HR rise from 124 bpm to 148 bpm, keeping the effort solidly in the easy‑aerobic zone rather than the sub‑threshold range (5:20–5:35 /km, ~158–168 bpm) prescribed for Tuesday quality work. The modest pace drift—from a slower 7:54 /km first rep to 7:18 /km by the last—shows a gradual sharpening that stayed well below any VO₂‑max intensity, matching the bridge phase’s easy‑run focus for a Wednesday or recovery day. With a moderate readiness score (59) and no anaerobic training effect, the session appears appropriately low‑stress and poses no immediate concern.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]

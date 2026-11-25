@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 2.6 · anaerobic 0
   - MS: 6.03k @ 7:29 140bpm 0.79m 168spm 278ms 7.9cm 237w
   - Readiness 59 → 47 (Focus On Energy Levels) · Recovery 16h 27m
-  - 🧠 The 6‑rep main set averaged 7:30 /km (range 7:54–7:18 /km), which sits just outside the prescribed easy‑aerobic zone (6:40–7:15 /km) and reflects a slower‑than‑typical effort, likely influenced by the early‑morning heat. Heart‑rate rose steadily from 124 bpm to 148 bpm, ending near the upper limit of the easy zone and confirming the session’s aerobic‑base focus without any anaerobic stimulus (training effect AEROBIC_BASE = 2.6, anaerobic = 0). Readiness fell from a moderate 59 pre‑run to 47 after the workout, matching the –9 battery impact and a modest load of 59, so the fatigue level is proportionate to the effort.
+  - 🧠 The six‑rep main set averaged a 7:30 /km pace with a steady HR rise from 124 bpm to 148 bpm, keeping the effort solidly in the easy‑aerobic zone rather than the sub‑threshold range (5:20–5:35 /km, ~158–168 bpm) prescribed for Tuesday quality work. The modest pace drift—from a slower 7:54 /km first rep to 7:18 /km by the last—shows a gradual sharpening that stayed well below any VO₂‑max intensity, matching the bridge phase’s easy‑run focus for a Wednesday or recovery day. With a moderate readiness score (59) and no anaerobic training effect, the session appears appropriately low‑stress and poses no immediate concern.
 
 ## Next Session
 - **Planned:** Thu, Nov 26 — 6k EZ @ 6:55–7:25 ≤150bpm w/ 4×20s strides; 75s WALK
