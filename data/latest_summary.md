@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0.7
   - MS: 5.39k @ 7:07 142bpm 0.83m 170spm 272ms 7.9cm 247w
   - Readiness 54 → 39 (Find Time To Relax) · Recovery 19h 37m
-  - 🧠 The six‑rep main set stayed firmly in the easy‑aerobic zone (average rep pace 7:07 / km, HR 128‑149 bpm), so the work matched the intended “run + strides/hills” intensity and did not generate an anaerobic stimulus (training‑effect ANAEROBIC ≈ 0.7). Stamina fell from 100 % to 82 % (low 76 %) over the 38‑minute effort, which is typical for a 6‑km session in 28‑33 °C heat and does not signal excessive load. Your morning readiness was moderate (score 54), and the post‑run drop to 39 reflects the expected acute fatigue rather than a pre‑run issue. No deviations from the prescribed effort are evident.
+  - 🧠 The main set comprised six reps over 38 min 21 s with an average rep pace of 7:07 /km (range 7:34–6:56) and HR climbing from 128 bpm to 149 bpm, staying within the easy‑aerobic zone (6:40–7:15 /km, ~145–155 b
 
 ## Next Session
 - **Planned:** Fri, Nov 27 — REST
