@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 2.6 · anaerobic 0
   - MS: 6.03k @ 7:29 140bpm 0.79m 168spm 278ms 7.9cm 237w
   - Readiness 59 → 47 (Focus On Energy Levels) · Recovery 16h 27m
-  - 🧠 The six‑rep main set stayed firmly in the easy aerobic zone, ranging from 7:54 /km (HR 124 bpm) to 7:18 /km (HR 148 bpm) with an average of 7:30 /km and a modest upward drift in both pace and heart rate that kept the effort well below sub‑threshold intensity. Your readiness score was 59 (moderate) before the run and fell to 47 after, yet the recovery‑time and ACWR overrides still indicate acceptable short‑term load. Overall the session matched the expected easy‑run profile for a Wednesday, with no red flags for fatigue or insufficient stimulus.
+  - 🧠 The main‑set shows six continuous reps totaling 44:55 at an average pace of 7:30 /km and a time‑weighted HR of 140 bpm, which sits at the upper edge of your easy‑aerobic zone (6:40‑7:15 /km, ~145‑155 bpm) rather than the sub‑threshold range you target for Tuesday sessions. The progressive pace drift (7:54 → 7:18 /km) and corresponding HR rise (124 → 148 bpm) indicate a normal warm‑up response, but the overall intensity did not reach the 5:20‑5:35 /km, ~158‑168 bpm sub‑threshold target, so the workout delivered only aerobic‑base maintenance as reflected by the training‑effect scores. Given your moderate readiness (score 59) and the lack of any anaerobic stimulus, the session was appropriate as an easy run but does not contribute to the VO₂max or sub‑threshold work needed this phase. No risk factors appeared; just be sure to schedule a true sub‑threshold interval day to keep progressing toward the half‑marathon goal.
 
 ## Next Session
 - **Planned:** Thu, Nov 26 — 6k EZ @ 6:55–7:25 ≤150bpm w/ 4×20s strides; 75s WALK
