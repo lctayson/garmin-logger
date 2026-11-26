@@ -597,7 +597,7 @@
         ]
       },
       "lap_count": 14,
-      "ai_analysis": "Your main set comprised six continuous reps (38 min 21 s total) with paces sliding from 7:34 to 6:56",
+      "ai_analysis": "The six‑rep main set drifted from a relatively easy 7:34 /km first rep down to a peak of 6:56 /km before slipping back to 7:03 /km, while the average heart‑rate rose from 128 bpm to a steady ~149 bpm, staying well below your LTHR of 171 bpm. With an average rep pace of 7:07 /km this session fell into the easy‑aerobic zone rather than the sub‑threshold range (≈5:20‑5:35 /km, 158‑168 bpm) that your Tuesday SUT workouts target, so it provided minimal VO₂‑max stimulus. Readiness dropped from a moderate 54 pre‑run to 39 post‑run, reflecting the cumulative acute load (547) and a modest body‑battery penalty (‑10).",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]

@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0.7
   - MS: 5.39k @ 7:07 142bpm 0.83m 170spm 272ms 7.9cm 247w
   - Readiness 54 → 39 (Find Time To Relax) · Recovery 19h 37m
-  - 🧠 Your main set comprised six continuous reps (38 min 21 s total) with paces sliding from 7:34 to 6:56
+  - 🧠 The six‑rep main set drifted from a relatively easy 7:34 /km first rep down to a peak of 6:56 /km before slipping back to 7:03 /km, while the average heart‑rate rose from 128 bpm to a steady ~149 bpm, staying well below your LTHR of 171 bpm. With an average rep pace of 7:07 /km this session fell into the easy‑aerobic zone rather than the sub‑threshold range (≈5:20‑5:35 /km, 158‑168 bpm) that your Tuesday SUT workouts target, so it provided minimal VO₂‑max stimulus. Readiness dropped from a moderate 54 pre‑run to 39 post‑run, reflecting the cumulative acute load (547) and a modest body‑battery penalty (‑10).
 
 ## Next Session
 - **Planned:** Fri, Nov 27 — REST
