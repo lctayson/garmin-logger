@@ -19,22 +19,7 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **core/hip‑stability strength session** (no running). Your readiness looks solid, so there’s no reason to skip or downgrade it.
-
-**Workout execution**  
-- **Warm‑up:** 5 min dynamic mobility (leg swings, hip circles, inch‑worms) – aim for light sweat, HR ≈ 115‑120 bpm.  
-- **Main set:** 3 × circuits, 45 s each exercise, 15 s transition; repeat circuit 2‑3 times with 2 min rest between rounds:  
-  1. Single‑leg Romanian dead‑lift (each leg)  
-  2. Banded clamshells × 20 reps  
-  3. Plank with alternating leg lift (30 s)  
-  4. Side‑lying hip abduction (15 reps/side)  
-- **Cool‑down:** 4‑5 min easy stretch (hip flexor, glute, hamstring) and 1‑2 min diaphragmatic breathing.
-
-**Readiness rationale**  
-- Resting HR 55 bpm and night‑HRV 56 ms (above 7‑day avg) signal strong autonomic recovery.  
-- Sleep 8.8 h, sleep‑score 85 % → well‑rested.  
-- ACWR 0.7 (low) and acute load 434 vs chronic 603 show you’re comfortably below your typical weekly stress.  
-- No red flags in stress‑history or HRV trend; the “moderate” overall score is driven mainly by the composite weighting
+**Decision** – Proceed with the planned Friday core/hip‑stability strength session. Your readiness score (73 – “Well Rested”), balanced HRV, low resting HR (55
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
