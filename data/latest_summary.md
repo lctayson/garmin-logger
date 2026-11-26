@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0.7
   - MS: 5.39k @ 7:07 142bpm 0.83m 170spm 272ms 7.9cm 247w
   - Readiness 54 → 39 (Find Time To Relax) · Recovery 19h 37m
-  - 🧠 The six‑rep main set stayed in the easy‑aerobic range, averaging 7:07 /km (6:56–7:34 /km) with rep HRs climbing from 128 bpm to 149 bpm and a time‑weighted average of 142 bpm, which is just below the prescribed 145‑155 bpm for the easy zone. The modest pace “drift” toward faster splits (the first rep 7:34 /km, the last two around 7:03 /km) reflects a typical warm‑up to finish pattern rather than a loss of control. Stamina fell from 100 % to a low of 76 % and body‑battery dropped 10 points, coinciding with the post‑run readiness score falling from 54 to 39, so the session taxed the day’s recovery budget as expected for a Wednesday easy + hill/stride run. No anaerobic stimulus was evident, matching the “NO_ANAEROBIC_BENEFIT” label and the current bridge‑phase focus.
+  - 🧠 The six work‑reps stayed squarely in the easy aerobic zone (average rep pace 7:07 /km, HR 128‑149 bpm) and therefore met the prescribed intensity for a Wednesday easy run with strides/hills. Pace drifted from a slower 7:34 /km first rep to a quick 6:56 /km by the middle, then eased back to 7:03 /km, showing a modest negative‑split pattern without any late‑stage slowdown. Stamina fell from 100 % to 82 % (minimum 76 %), matching the moderate load (load 93.5) expected from a sub‑hour 6 km effort in warm conditions. Morning readiness was “Moderate” (score 54), so the session’s demand aligns with the athlete’s current recovery state.
 
 ## Next Session
 - **Planned:** Fri, Nov 27 — REST
