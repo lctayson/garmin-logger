@@ -12,13 +12,12 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Friday core/hip‑stability strength session (no running).  
-
-**Workout execution** – 1) Warm‑up: 5‑10 min of easy dynamic mobility (leg swings, hip circles, glute bridges). 2) Main set: follow your usual core/hip‑stability circuit (e.g., planks, side‑planks, single‑leg dead‑lifts, clamshells) with the prescribed reps/sets you have programmed. 3) Recovery: brief 30‑s active rest between exercises; finish with a 5‑min gentle cool‑down (light stretching, foam roll).  
-
-**Readiness rationale** – Resting HR = 58 bpm, well below your LTHR and indicative of good autonomic recovery. No sleep or HRV data are available, but the low HR alone doesn’t flag any acute fatigue, so the planned strength work is appropriate.  
-
-**In‑session guardrails** – Watch your form and any joint discomfort; if you feel unusually heavy, drop the load or cut the volume in half. Keep breathing steady and avoid holding your breath on core holds. If fatigue spikes or pain appears, stop the set and switch to a light mobility routine instead.
+- **Decision**: Stick to the scheduled Friday core/hip‑stability strength day – no run is prescribed.  
+- **Warm‑up**: 5‑10 min easy mobility (leg swings, hip circles, ankle pumps) + light body‑weight activation (glute bridges, marching planks).  
+- **Main set**: 2‑3 rounds of the usual core/hip circuit (e.g., 30‑s plank, 30‑s side‑plank each side, 12‑15 glute bridges, 8‑10 single‑leg dead‑lifts per leg, 12‑15 banded clamshells). Keep the pace controlled; focus on form, not max load.  
+- **Cool‑down**: 5 min gentle stretching for hips, hamstrings, and lower back, plus a few deep‑breathing rounds.  
+- **Readiness rationale**: Resting HR = 58 bpm, which sits in your normal baseline range; with no other red flags (sleep, HRV, load) the body appears recovered enough for a moderate‑intensity strength session.  
+- **In‑session guardrails**: If the warm‑up feels unusually hard, HR spikes > 140 b
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
