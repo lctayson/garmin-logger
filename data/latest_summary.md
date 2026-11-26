@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0.7
   - MS: 5.39k @ 7:07 142bpm 0.83m 170spm 272ms 7.9cm 247w
   - Readiness 54 → 39 (Find Time To Relax) · Recovery 19h 37m
-  - 🧠 The six‑rep main set (38 min 21 s) averaged 7:07 /km, moving from 7:34 to 6:56 /km while heart rate rose from 128 bpm to 149 bpm, keeping the work firmly inside the easy aerobic zone (≈6:40‑7:15 /km, ~145‑155 bpm) and showing the normal warm‑up drift toward the faster end. The training‑effect tags (AEROBIC_BASE 3, anaerobic ≈0
+  - 🧠 The main‑set consisted of six continuous reps averaging 7:07 /km (range 7:34–6:56 /km) with a steady HR climb from 128 bpm to 149 bpm, matching the easy‑aerobic zone prescribed for Wednesday “run + strides/hills” sessions. The modest pace drift—fastest reps at 6:56 /km and a slight slowdown on the last two—kept the work within the target intensity and did not generate any anaerobic benefit, as reflected by the training‑effect profile (anaerobic ≈ 0.7, “NO_ANAEROBIC_BENEFIT”). Morning readiness was only moderate (score 54), and the post‑run dip to 39 aligns with the 93.5 load and -10 battery impact, so the session was appropriately demanding given the athlete’s current recovery state.
 
 ## Next Session
 - **Planned:** Fri, Nov 27 — REST
