@@ -19,7 +19,16 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with the planned Friday core/hip‑stability strength session. Your readiness score (73 – “Well Rested”), balanced HRV, low resting HR (55
+**Decision** – Proceed with today’s scheduled core‑/hip‑stability strength session (no run). The readiness score is “Moderate” but all key metrics (sleep ≈ 9 h, HRV balanced, resting HR 55 bpm, ACWR 0.7 Low) indicate you’re well‑recovered, so a normal‑intensity strength day is appropriate.
+
+**Workout execution** – 1️⃣ Warm‑up: 5 min easy jog or bike + dynamic hip/leg drills (leg swings, glute bridges, inchworms).  
+2️⃣ Main set: perform the prescribed core/hip circuit (e.g., planks, side‑planks, clamshells, single‑leg dead‑lifts, banded monster walks) at the prescribed rep scheme and weight – keep the tempo controlled, focus on quality over volume.  
+3️⃣ Recovery: 30‑60 s active rest between sets; if you feel excessive fatigue, drop the load by ~10‑15 %.  
+4️⃣ Cool‑down: 3‑5 min light mobility work and static stretching for hips, hamstrings, and lower back.
+
+**Readiness rationale** – Sleep quality (85 score, 8.8 h) and HRV (56 ms night, 50 ms 7‑day avg, “Balanced”) show good autonomic recovery; resting HR is low (55 bpm), and ACWR is well below the “high‑risk” zone (0.7 Low). There are no red flags, so the plan’s strength focus can be kept as‑is.
+
+**In‑
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
