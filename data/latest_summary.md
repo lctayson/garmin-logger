@@ -17,7 +17,7 @@
   - TE: Aerobic Base · aerobic 3 · anaerobic 0.7
   - MS: 5.39k @ 7:07 142bpm 0.83m 170spm 272ms 7.9cm 247w
   - Readiness 54 → 39 (Find Time To Relax) · Recovery 19h 37m
-  - 🧠 The main set comprised six reps over 38 min 21 s with an average rep pace of 7:07 /km (range 7:34–6:56) and HR climbing from 128 bpm to 149 bpm, staying within the easy‑aerobic zone (6:40–7:15 /km, ~145–155 b
+  - 🧠 The main set comprised six reps over 38 min 21 s, with paces dropping from 7:34 in the first rep to a low of 6:56 before ending at 7:03, giving an average rep pace of 7:07 – well within the easy‑to‑steady range prescribed for this bridge‑phase sub‑threshold work. Heart‑rate rose consistently from 128 bpm in rep 1 to 149 bpm in the final two reps, matching the expected progressive intensity. The training effect (aerobic 3.0, anaerobic ≈0.7) confirms a solid aerobic stimulus with no meaningful anaerobic load, aligning with the session’s goal. Morning readiness was moderate (score 54), and the post‑run drop to 39 simply reflects the acute load rather than a pre‑run readiness problem.
 
 ## Next Session
 - **Planned:** Fri, Nov 27 — REST
