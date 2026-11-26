@@ -19,14 +19,22 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision – Proceed as planned** – Friday is a core/hip‑stability strength day; the readiness score (73 / “Moderate”) is backed by 8.8 h of quality sleep, balanced HRV (56 ms vs 7‑day avg 50 ms), a low resting HR (55 bpm) and a low ACWR (0.7). All indicators point to good recovery, so you can execute the scheduled strength session.
+**Decision** – Proceed with today’s scheduled **core/hip‑stability strength session** (no running). Your readiness looks solid, so there’s no reason to skip or downgrade it.
 
-**Workout execution (typical Friday strength block)**  
-- **Warm‑up (10 min):** Light jog or bike (4‑5 km h⁻¹) + dynamic hip‑mobility drills (leg swings, hip circles, world’s greatest stretch).  
-- **Main set:** 3 × core/hip circuit (30 s each exercise, 10‑s transition, 2 min rest between circuits). Typical exercises: single‑leg glute bridge, side‑plank with hip dip, bird‑dog, clamshells, dead‑bug, and pallof press. Aim for 8‑10 RPE – quality over speed.  
-- **Cool‑down (5 min):** Gentle stretching focusing on hip flexors, glutes, and lumbar spine; breath‑focused relaxation.
+**Workout execution**  
+- **Warm‑up:** 5 min dynamic mobility (leg swings, hip circles, inch‑worms) – aim for light sweat, HR ≈ 115‑120 bpm.  
+- **Main set:** 3 × circuits, 45 s each exercise, 15 s transition; repeat circuit 2‑3 times with 2 min rest between rounds:  
+  1. Single‑leg Romanian dead‑lift (each leg)  
+  2. Banded clamshells × 20 reps  
+  3. Plank with alternating leg lift (30 s)  
+  4. Side‑lying hip abduction (15 reps/side)  
+- **Cool‑down:** 4‑5 min easy stretch (hip flexor, glute, hamstring) and 1‑2 min diaphragmatic breathing.
 
-**Readiness rationale** – Sleep (8.8 h, score 85)
+**Readiness rationale**  
+- Resting HR 55 bpm and night‑HRV 56 ms (above 7‑day avg) signal strong autonomic recovery.  
+- Sleep 8.8 h, sleep‑score 85 % → well‑rested.  
+- ACWR 0.7 (low) and acute load 434 vs chronic 603 show you’re comfortably below your typical weekly stress.  
+- No red flags in stress‑history or HRV trend; the “moderate” overall score is driven mainly by the composite weighting
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
