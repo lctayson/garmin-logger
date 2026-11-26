@@ -597,7 +597,7 @@
         ]
       },
       "lap_count": 14,
-      "ai_analysis": "The main‑set consisted of six continuous reps averaging 7:07 /km (range 7:34–6:56 /km) with a steady HR climb from 128 bpm to 149 bpm, matching the easy‑aerobic zone prescribed for Wednesday “run + strides/hills” sessions. The modest pace drift—fastest reps at 6:56 /km and a slight slowdown on the last two—kept the work within the target intensity and did not generate any anaerobic benefit, as reflected by the training‑effect profile (anaerobic ≈ 0.7, “NO_ANAEROBIC_BENEFIT”). Morning readiness was only moderate (score 54), and the post‑run dip to 39 aligns with the 93.5 load and -10 battery impact, so the session was appropriately demanding given the athlete’s current recovery state.",
+      "ai_analysis": "Your main set comprised six continuous reps (38 min 21 s total) with paces sliding from 7:34 to 6:56",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
