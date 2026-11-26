@@ -1,23 +1,32 @@
 # Daily Check — 2026-11-27
 
-## Readiness: -/100
+## Readiness: 73/100 (Moderate)
+> Well Rested
 
-- **RHR:** 58 bpm (7d avg: 57.9 bpm, trending down)
+- **VO₂max:** 45 ml/kg/min (Garmin precise)
+- **RHR:** 55 bpm (7d avg: 57.4 bpm, trending down)
+- **HRV:** 56ms (7d avg: 50ms) · within 47–58ms
+- **Sleep:** 8h50 / 7h00 need (1h50 over) · score 85 · 7d avg 6h34 · 5/7 nights below need
+- **Recovery remaining:** 0h00
+- ⚠️ **Limiter:** Sleep History (55%)
+- **Also soft:** Stress History
 
 ## Today's Session
 - **Planned:** Fri, Nov 27 — REST
 - **Recommendation:** Proceed as planned
-- **Reason:** low 7-day sleep average (6.2h); HRV is trending down.
+- **Reason:** Available readiness, recovery-trend, and load indicators do not show a combination of major warnings.
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision**: Stick to the scheduled Friday core/hip‑stability strength day – no run is prescribed.  
-- **Warm‑up**: 5‑10 min easy mobility (leg swings, hip circles, ankle pumps) + light body‑weight activation (glute bridges, marching planks).  
-- **Main set**: 2‑3 rounds of the usual core/hip circuit (e.g., 30‑s plank, 30‑s side‑plank each side, 12‑15 glute bridges, 8‑10 single‑leg dead‑lifts per leg, 12‑15 banded clamshells). Keep the pace controlled; focus on form, not max load.  
-- **Cool‑down**: 5 min gentle stretching for hips, hamstrings, and lower back, plus a few deep‑breathing rounds.  
-- **Readiness rationale**: Resting HR = 58 bpm, which sits in your normal baseline range; with no other red flags (sleep, HRV, load) the body appears recovered enough for a moderate‑intensity strength session.  
-- **In‑session guardrails**: If the warm‑up feels unusually hard, HR spikes > 140 b
+**Decision – Proceed as planned** – Friday is a core/hip‑stability strength day; the readiness score (73 / “Moderate”) is backed by 8.8 h of quality sleep, balanced HRV (56 ms vs 7‑day avg 50 ms), a low resting HR (55 bpm) and a low ACWR (0.7). All indicators point to good recovery, so you can execute the scheduled strength session.
+
+**Workout execution (typical Friday strength block)**  
+- **Warm‑up (10 min):** Light jog or bike (4‑5 km h⁻¹) + dynamic hip‑mobility drills (leg swings, hip circles, world’s greatest stretch).  
+- **Main set:** 3 × core/hip circuit (30 s each exercise, 10‑s transition, 2 min rest between circuits). Typical exercises: single‑leg glute bridge, side‑plank with hip dip, bird‑dog, clamshells, dead‑bug, and pallof press. Aim for 8‑10 RPE – quality over speed.  
+- **Cool‑down (5 min):** Gentle stretching focusing on hip flexors, glutes, and lumbar spine; breath‑focused relaxation.
+
+**Readiness rationale** – Sleep (8.8 h, score 85)
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -31,11 +40,16 @@ _Most recent activity (2026-11-26):_
 
 ## Load & Trends
 
+- ⚠️ **ACWR:** 0.7 (Low) — acute 434 / chronic 603 (chronic range 482.4–904.5)
 - **7-day volume:** 40.19km vs 28-day avg 41.2km (-2%)
 - **Running tolerance:** 58.3% (Medium) — 40.2km of 65.3km weekly cap, acute impact load 38.1
-- ⚠️ **Sleep (7d avg):** 6h11, 5/7 nights below need, trending up
-- **RHR (7d avg):** 57.9, trending down
-- ⚠️ **HRV:** trending down
+- **Aerobic Low:** 1159.1 (target 816–1360 — in range)
+- **Aerobic High:** 1142.6 (target 816–1360 — in range)
+- ⚠️ **Anaerobic:** 38.1 (target 108–435 — -70 under)
+- ⚠️ **Load focus:** Anaerobic Shortage
+- ⚠️ **Sleep (7d avg):** 6h34, 5/7 nights below need, trending up
+- **RHR (7d avg):** 57.4, trending down
+- **HRV:** trending flat
 
 ## This Week (Nov 21–27)
 
