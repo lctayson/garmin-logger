@@ -597,7 +597,7 @@
         ]
       },
       "lap_count": 14,
-      "ai_analysis": "The six‑rep main set drifted from a relatively easy 7:34 /km first rep down to a peak of 6:56 /km before slipping back to 7:03 /km, while the average heart‑rate rose from 128 bpm to a steady ~149 bpm, staying well below your LTHR of 171 bpm. With an average rep pace of 7:07 /km this session fell into the easy‑aerobic zone rather than the sub‑threshold range (≈5:20‑5:35 /km, 158‑168 bpm) that your Tuesday SUT workouts target, so it provided minimal VO₂‑max stimulus. Readiness dropped from a moderate 54 pre‑run to 39 post‑run, reflecting the cumulative acute load (547) and a modest body‑battery penalty (‑10).",
+      "ai_analysis": "The 6‑rep main set lasted 38:21 and averaged 7:07 /km (range 7:34–6:56), keeping you solidly in the easy aerobic zone (6:40–7:15 /km) with HR rising from 128 to 149 bpm—well below the sub‑threshold target of 5:20–5:35 /km and 158‑168 bpm, which matches the “NO ANAEROBIC BENEFIT” training‑effect label. Stamina dropped from 100 % to 82 % and body‑battery fell 10 points, aligning with a moderate readiness score (54) and a load of 93.5, so the fatigue level is as expected for an easy run with strides/hills. No concerns for insufficient VO₂max stimulus or overreaching appear in this session.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
