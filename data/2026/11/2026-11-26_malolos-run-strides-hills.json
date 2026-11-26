@@ -597,7 +597,7 @@
         ]
       },
       "lap_count": 14,
-      "ai_analysis": "The main set comprised six reps over 38 min 21 s, with paces dropping from 7:34 in the first rep to a low of 6:56 before ending at 7:03, giving an average rep pace of 7:07 – well within the easy‑to‑steady range prescribed for this bridge‑phase sub‑threshold work. Heart‑rate rose consistently from 128 bpm in rep 1 to 149 bpm in the final two reps, matching the expected progressive intensity. The training effect (aerobic 3.0, anaerobic ≈0.7) confirms a solid aerobic stimulus with no meaningful anaerobic load, aligning with the session’s goal. Morning readiness was moderate (score 54), and the post‑run drop to 39 simply reflects the acute load rather than a pre‑run readiness problem.",
+      "ai_analysis": "The six‑rep main set lasted 38:21 and paced between 7:34 /km and 6:56 /km (average 7:07 /km), keeping the effort in the easy‑aerobic zone (HR rising from 128 bpm to 149 bpm) rather than the prescribed sub‑threshold range of ~5:20–5:35 /km. Although the pace drifted positively (the later reps were about 6 % faster), the final rep still sat well above sub‑threshold intensity, explaining the “NO_ANAEROBIC_BENEFIT” training‑effect label. Stamina fell from 100 % to 82 % (min 76 %) and the post‑run readiness dropped to 39, but the pre‑run score of 54 was only moderate, so the session’s load appears consistent with an easy run rather than a quality threshold/VO2 stimulus.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
