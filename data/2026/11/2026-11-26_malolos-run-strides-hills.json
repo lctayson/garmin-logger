@@ -597,7 +597,7 @@
         ]
       },
       "lap_count": 14,
-      "ai_analysis": "The 6‑rep main set (38 min 21 s) averaged 7:07 /km with heart rates climbing from 128 bpm to 149 bpm, keeping the effort solidly in the easy‑aerobic zone (≈6:40–7:15 /km, ≤155 bpm) and well below your LTHR of 171 bpm, so the session delivered the intended low‑intensity stimulus. The pace drifted slightly negative—starting at 7:34 /km and ending at 6:56 /km—indicating you actually got a modest speed‑up as the run progressed, but the anaerobic training effect remained negligible (0.7 ≈ “no anaerobic benefit”). With a morning readiness score of 54 (moderate) and a post‑run drop to 39, the decline is consistent with the 93.5 load and a stamina dip to 82 % (min 76 %); no specific risk signals appear for this easy‑run day.",
+      "ai_analysis": "The six‑rep main set covered 38 min 21 s at an average pace of 7:07 /km, slipping from 7:34 to a low of 6:56 /km before finishing near 7:03 /km, which sits squarely in the easy‑aerobic zone (6:40–7:15 /km) and is reflected by the modest HR rise from 128 bpm to ~149 bpm. Stamina dropped from 100 % to 82 % and the training‑effect flags only aerobic benefit (anaerobic ≈0.7), confirming the session delivered the intended low‑intensity stimulus without any VO2‑max or sub‑threshold load. Your morning readiness was moderate (score 54), and the post‑run dip to 39 aligns with the acute load increase (547 acwr) rather than indicating overreaching. No red flags appear for this easy‑run + strides/hills day.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
