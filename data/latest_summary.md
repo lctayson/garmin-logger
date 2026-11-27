@@ -19,13 +19,9 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled Friday core/hip‑stability strength session; no running is required.
+**Decision** – Proceed with today’s planned Friday core/hip‑stability strength session; the readiness profile is solid (good sleep, balanced HRV, low resting HR, low ACWR).  
 
-**Workout execution** – Warm‑up 5‑10 min easy jog or dynamic mobility (leg swings, hip circles). Main set: prescribed core/hip stability circuit (e.g., planks, side‑planks, glute bridges, clamshells, single‑leg dead‑lifts) at a controlled tempo, 2‑3 × the listed reps/sets from the plan. Keep rest intervals short (30‑45 s) to maintain a steady, low‑to‑moderate heart‑rate zone. Cool‑down 5 min of static stretching for hips, hamstrings, and calves.
-
-**Readiness rationale** – Sleep was excellent (8.8 h, score 85) and HRV is balanced (56 ms vs 7‑day avg 50 ms), with a low resting HR (55 bpm). ACWR is low (0.7) and all recovery factors are in the “Very Good” range, indicating you’re well‑recovered and ready for a strength focus.
-
-**In‑session guardrails** – Watch for any sudden spikes in heart‑rate or unexpected fatigue during the circuit; if HR climbs into the easy‑aerobic range (>150 bpm) or you feel joint pain, cut the set volume in half or stop the exercise. Keep intensity moderate—prioritize good form over maximal load, especially in early‑morning heat. If you notice any unusual soreness or symptoms, switch to a lighter mobility‑only routine and resume full work tomorrow.
+**Workout execution** – Warm‑up 5‑10 min of light mobility (hip circles, dynamic lunges, cat‑cow). Perform your usual core/hip stability circuit (e.g., planks, side‑planks, glute bridges, banded clamshells) using the prescribed sets/reps from your program; keep inter‑set rest 60‑90 s. Finish with 3‑
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
