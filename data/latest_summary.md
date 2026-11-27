@@ -19,9 +19,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s planned Friday core/hip‑stability strength session; the readiness profile is solid (good sleep, balanced HRV, low resting HR, low ACWR).  
-
-**Workout execution** – Warm‑up 5‑10 min of light mobility (hip circles, dynamic lunges, cat‑cow). Perform your usual core/hip stability circuit (e.g., planks, side‑planks, glute bridges, banded clamshells) using the prescribed sets/reps from your program; keep inter‑set rest 60‑90 s. Finish with 3‑
+- **Decision:** Proceed with today’s planned Friday strength session (core + hip‑stability); the readiness profile is “well‑rested” (8.8 h sleep, HRV balanced, resting HR 55 bpm) and ACWR is low, so there’s no need to downgrade or shift to recovery.  
+- **Warm‑up / Main set:** 5 min easy dynamic mobility (leg swings, hip circles, world‑globe planks); then 3 × circuits of 8 min core/hip work (e.g., single‑leg bridges, side‑plank 30 s each side, bird‑dog, clamshells, glute‑ham raises) with 1‑min active rest between circuits; finish with 5 min light stretching.  
+- **Readiness rationale:** Sleep quality (score 85) and duration are high, HRV is in the balanced band and 12 % above the 7‑day average, resting HR is low—signs of good autonomic recovery. Load metrics (acute 434 vs chronic 603, ACWR 0.7) indicate a light cumulative strain, so the body is ready for a moderate‑intensity strength load.  
+- **In‑session guardrails:** If your heart rate spikes above 150 bpm during a circuit, trim the rest interval or cut the set; watch for excessive low‑back fatigue or hip soreness—replace the offending exercise with a body‑weight alternative (e.g., glute bridges) and keep the session ≤30 min total. If temperature feels >32 °C, stay well‑hydrated and consider shortening the rest periods to keep the overall effort modest.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
