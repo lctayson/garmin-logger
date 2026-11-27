@@ -19,10 +19,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-* **Decision:** Proceed as planned with Friday's scheduled rest from running and complete your core/hip stability strength session.
-* **Workout execution:** No running scheduled today; execute a dedicated core and hip stability routine (glute medius work, planks, single-leg control) without introducing heavy lower-body eccentric fatigue ahead of Saturday's long run.
-* **Readiness rationale:** Recovery markers are exceptionally solid—you logged 8.8 hours of sleep (score 85), last night's HRV rebound to 56 ms sits above your 50 ms 7-day average within a balanced band, and recovery time is at 0 hours with an ACWR of 0.70. 
-* **In-session guardrails:** Keep the strength work strictly focused on activation, posture, and stability rather than muscular exhaustion; if hip flexors or calves feel tight from Thursday's quality work, swap higher-tension movements for mobility and soft-tissue work to keep your legs fully primed for tomorrow.
+**Decision** – Proceed with today’s scheduled **core/hip‑stability strength session** (no run). Your readiness profile is solid (good sleep, HRV ↑, low resting HR, low ACWR), so a normal strength day fits the recovery balance.
+
+**Workout execution** – 1️⃣ **Warm‑up:** 5 min easy jog or brisk walk + 5 min dynamic hip‑mobility (leg swings, hip circles, walking lunges).  
+2️⃣ **Main set:** Follow the prescribed core/hip routine (e.g., 3 × 12 – 15 reps of glute bridges, single‑leg dead‑lifts, side‑plank holds, clamshell
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
