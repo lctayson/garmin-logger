@@ -19,16 +19,13 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled core‑/hip‑stability strength session (no run). The readiness score is “Moderate” but all key metrics (sleep ≈ 9 h, HRV balanced, resting HR 55 bpm, ACWR 0.7 Low) indicate you’re well‑recovered, so a normal‑intensity strength day is appropriate.
+**Decision** – Proceed with today’s scheduled **core/hip‑stability strength session**; no running is prescribed for Friday.
 
-**Workout execution** – 1️⃣ Warm‑up: 5 min easy jog or bike + dynamic hip/leg drills (leg swings, glute bridges, inchworms).  
-2️⃣ Main set: perform the prescribed core/hip circuit (e.g., planks, side‑planks, clamshells, single‑leg dead‑lifts, banded monster walks) at the prescribed rep scheme and weight – keep the tempo controlled, focus on quality over volume.  
-3️⃣ Recovery: 30‑60 s active rest between sets; if you feel excessive fatigue, drop the load by ~10‑15 %.  
-4️⃣ Cool‑down: 3‑5 min light mobility work and static stretching for hips, hamstrings, and lower back.
+**Workout execution** – *Warm‑up*: 5 min easy dynamic mobility (leg swings, hip circles, glute bridges). *Main set*: 3 × circuits of 8–10 reps each – single‑leg RDL, side‑plank with hip‑dip, banded monster walks, single‑leg calf raise, and plank (30‑s). Keep rest ≤30 s between exercises; finish with 2 × 30‑s plank holds. *Cool‑down*: 4‑5 min of static stretching (hamstrings, quads, hip flexors, glutes).
 
-**Readiness rationale** – Sleep quality (85 score, 8.8 h) and HRV (56 ms night, 50 ms 7‑day avg, “Balanced”) show good autonomic recovery; resting HR is low (55 bpm), and ACWR is well below the “high‑risk” zone (0.7 Low). There are no red flags, so the plan’s strength focus can be kept as‑is.
+**Readiness rationale** – Sleep was excellent (8.8 h, sleep‑score 85) and HRV is balanced (56 ms vs 7‑day avg 50 ms), indicating good autonomic recovery. Resting HR 55 bpm is low, and ACWR is low (0.7), so the body is ready for moderate‑intensity strength work. No red flags in the readiness score; the “moderate” label reflects the overall balanced profile, not a need to skip training.
 
-**In‑
+**In‑session guardrails** – Watch for any hip, knee, or lower‑back discomfort; if form degrades or you feel unusually fatigued, drop the reps by half or replace a circuit with a lighter body‑weight version. Keep the effort in a “moderate” RPE zone (≈6–7/10)
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
