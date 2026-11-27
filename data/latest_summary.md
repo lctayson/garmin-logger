@@ -1,28 +1,35 @@
-# Daily Check — 2026-11-27
+# Daily Check — 2026-11-28
 
-## Readiness: 73/100 (Moderate)
-> Well Rested
+## Readiness: 76/100 (High)
+> Well Recovered
 
 - **VO₂max:** 45 ml/kg/min (Garmin precise)
-- **RHR:** 55 bpm (7d avg: 57.4 bpm, trending down)
-- **HRV:** 56ms (7d avg: 50ms) · within 47–58ms
-- **Sleep:** 8h50 / 7h00 need (1h50 over) · score 85 · 7d avg 6h34 · 5/7 nights below need
+- **RHR:** 58 bpm (7d avg: 57.1 bpm, trending down)
+- ⚠️ **HRV:** 45ms (7d avg: 50ms) · below 47–58ms
+- ⚠️ **Sleep:** 6h34 / 6h40 need (0h06 short) · score 74 · 7d avg 6h31 · 5/7 nights below need
 - **Recovery remaining:** 0h00
-- ⚠️ **Limiter:** Sleep History (55%)
-- **Also soft:** Stress History
+- ⚠️ **Limiter:** Sleep Score (61%)
+- **Also soft:** Sleep History
 
 ## Today's Session
-- **Planned:** Fri, Nov 27 — REST
+- **Planned:** Sat, Nov 28 — 8k as 5K TT: ~2K warm-up + 5K hard, evenly paced + ~1.5K cooldown. Record TT as a separate activity 
+A-goal 25:30, expected 25:45-26:00
+26:15 or faster keeps you on the 1:58 path.
+25:30 or faster puts 1:55 in play.
+Slower than 26:45 means sub-1:58 is the target and 1:55 is off the table
+2025 5k TT: 26:00
+
+PACING: km 1 ~5:10, hold 5:08-5:10 through km 4 (laps within 3 s); free last km only if km 1 held. Run profile, 1 km auto-lap, no alerts, hide avg pace; warm-up / 5K / cool-down as 3 activities. Sleep 7+ h Wed-Fri.
 - **Recommendation:** Proceed as planned
-- **Reason:** Available readiness, recovery-trend, and load indicators do not show a combination of major warnings.
+- **Reason:** last-night HRV is below the balanced band.
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
 ### 🧠 AI Coaching Guidance
 
-- **Decision** – Go ahead with today’s scheduled Friday core/hip‑stability strength session; no need to downgrade or swap for recovery.  
-- **Execution** – Follow the prescribed routine: dynamic warm‑up (leg swings, hip circles), then the planned core/hip circuit (e.g., glute bridges, clamshells, side‑planks, bird‑dogs, hip‑thrusts) with the prescribed reps/sets; finish with a brief active cool‑down (light mobility, deep‑breathing). Keep the load moderate‑heavy but stop short of muscular failure – the goal is quality, not max‑effort.  
-- **Readiness rationale** – Sleep was 8.8 h with a score of 85, HRV is balanced and above your 7‑day average, resting HR is a low 55 bpm, and ACWR is low (0.7). All recovery factors are in the “Very Good” band, so the body is primed for a strength day.  
-- **In‑session guardrails** – Watch for any sharp hip, knee or low‑back pain; if heart rate spikes > 150 bpm during the warm‑up or you feel unusual fatigue, cut the volume or switch to lighter resistance. Keep breathing steady; if form breaks down, reduce weight or reps. If ambient heat
+* **Decision:** Proceed as planned with your Saturday long run; readiness supports a full aerobic session.
+* **Workout execution:** Execute a mostly easy long run at aerobic pace (6:40–7:15/km, keeping HR strictly ~145–155 bpm); keep the entire volume strictly aerobic without forcing any fast finishes. (Note: Specific target date/week was not supplied, so this defaults to the standard bridge-phase Saturday long run).
+* **Readiness rationale:** Readiness is solid at 76 with full recovery hours (0.0 remaining) and a balanced HRV status (45 ms last night vs. 50 ms 7-day average), alongside a settled resting HR of 58 bpm. Sleep duration is slightly truncated at 6.57 hours (score 74) and chronic load is on the lower side (ACWR 0.59), which indicates plenty of fresh capacity rather than accumulated fatigue.
+* **In-session guardrails:** Account for the early-morning heat and humidity—anchor your effort to HR (capped at 155 bpm) rather than trying to hit a rigid pace. If cardiac drift pushes your HR above 155 bpm or perceived effort spikes during the warm-up, back off immediately into recovery pace (7:10–7:45+/km, ≤150 bpm) for the remainder of the duration.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
@@ -36,39 +43,39 @@ _Most recent activity (2026-11-26):_
 
 ## Load & Trends
 
-- ⚠️ **ACWR:** 0.7 (Low) — acute 434 / chronic 603 (chronic range 482.4–904.5)
-- **7-day volume:** 40.19km vs 28-day avg 41.2km (-2%)
-- **Running tolerance:** 58.3% (Medium) — 40.2km of 65.3km weekly cap, acute impact load 38.1
-- **Aerobic Low:** 1159.1 (target 816–1360 — in range)
-- **Aerobic High:** 1142.6 (target 816–1360 — in range)
-- ⚠️ **Anaerobic:** 38.1 (target 108–435 — -70 under)
+- ⚠️ **ACWR:** 0.5 (Low) — acute 345 / chronic 580 (chronic range 464–870)
+- **7-day volume:** 26.16km vs 28-day avg 37.9km (-31%)
+- **Running tolerance:** 48.5% (Medium) — 26.2km of 65.3km weekly cap, acute impact load 31.7
+- **Aerobic Low:** 1033.4 (target 598–1142 — in range)
+- **Aerobic High:** 1142.6 (target 924–1468 — in range)
+- ⚠️ **Anaerobic:** 38.1 (target 217–544 — -179 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
-- ⚠️ **Sleep (7d avg):** 6h34, 5/7 nights below need, trending up
-- **RHR (7d avg):** 57.4, trending down
+- ⚠️ **Sleep (7d avg):** 6h31, 5/7 nights below need, trending up
+- **RHR (7d avg):** 57.1, trending down
 - **HRV:** trending flat
 
-## This Week (Nov 21–27)
+## This Week (Nov 22–28)
 
 | D | Activity | Volume | Load |
 |:---:|:---|---:|---:|
-| S | Malolos Run | 14k · 1:43:24 | 126 |
 | S | BHM W9: Run + Hills/BHM W9: Run | 8.1k · 1:04:07 | 75 |
 | M | Strength A - Lite | 23:22 | 2 |
 | T | 2x8min Thr | 6k · 40:17 | 118 |
 | W | Malolos Run | 6k · 45:05 | 59 |
 | T | Run + Strides/Hills | 6k · 43:39 | 94 |
 | F | Rest | — | — |
+| S | Rest | — | — |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 7 | 40.18 km | 5:19:54 | 473.4 |
+| 6 | 26.16 km | 3:36:30 | 347.5 |
 
 ## Recent 4 Weeks
-_Average weekly running: 41.2 km_
+_Average weekly running: 37.9 km_
 
 | Week | Runs | Others | Load |
 |:---|---:|---:|---:|
-| Nov 21–27 | 40.19 km | 23 min | 473.4 |
-| Nov 14–20 | 43.15 km | 49 min | 645.3 |
-| Nov 7–13 | 45.29 km | 68 min | 664.7 |
-| Oct 31–Nov 6 | 36.14 km | 82 min | 623.2 |
+| Nov 22–28 | 26.16 km | 23 min | 347.5 |
+| Nov 15–21 | 43.15 km | 49 min | 630 |
+| Nov 8–14 | 45.29 km | 68 min | 675.3 |
+| Nov 1–7 | 37.13 km | 49 min | 626.8 |
