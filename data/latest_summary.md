@@ -26,10 +26,15 @@ PACING: km 1 ~5:10, hold 5:08-5:10 through km 4 (laps within 3 s); free last km 
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled long‑run (easy + optional HM‑effort finish). No need to cut back; readiness is “High” and ACWR is low.
+**Decision** – Proceed with today’s scheduled Saturday long‑run (easy aerobic, optional half‑marathon finish) – no need to cut it short or switch to recovery.
 
-**Workout outline** – Warm‑up: 10‑15 min easy jog + 4 × dynamic strides.  
-Main set: run at easy‑aerobic pace (≈6:40‑7:15 /km, HR ≈ 145‑155 bpm
+**Execution** – *Warm‑up*: 10 min easy jog (≈7:30 km / min, HR ≤150 bpm).  
+*Main set*: Run at easy aerobic pace (≈6:40‑7:15 / km, HR 145‑155 bpm) for the planned distance; if you feel fully recovered you may add a brief HM‑effort finish (≈5:30‑5:45 / km for the last 2‑3 km).  
+*Cool‑down*: 8‑10 min very easy jog or walk, let HR drop below 130 bpm.
+
+**Readiness rationale** – Sleep was 6.6 h (moderate) and sleep‑score 74, HRV was a touch below the 7‑day average (45 ms vs 50 ms) but still flagged “BALANCED”. Resting HR is low (58 bpm) and ACWR is low (0.5), indicating ample systemic recovery. The overall readiness score (76 = High) and “Well Recovered” feedback outweigh the modest sleep shortfall, so the planned long run is appropriate.
+
+**In‑session guardrails** – If your warm‑up HR stays >155 bpm, cut the pace a notch or shorten the run. Watch for excessive breathing rate or leg fatigue beyond the easy zone; drop to recovery pace (≥7:30 / km) and stop any HM‑effort finish. Heat (28‑33 °C) will raise HR; prioritize perceived effort over exact pace and hydrate early. If you notice dizziness, abnormal heart
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 

@@ -46,7 +46,7 @@
         "feedback": "Good"
       }
     },
-    "ai_analysis": "**Decision** – Proceed with today’s scheduled long‑run (easy + optional HM‑effort finish). No need to cut back; readiness is “High” and ACWR is low.\n\n**Workout outline** – Warm‑up: 10‑15 min easy jog + 4 × dynamic strides.  \nMain set: run at easy‑aerobic pace (≈6:40‑7:15 /km, HR ≈ 145‑155 bpm",
+    "ai_analysis": "**Decision** – Proceed with today’s scheduled Saturday long‑run (easy aerobic, optional half‑marathon finish) – no need to cut it short or switch to recovery.\n\n**Execution** – *Warm‑up*: 10 min easy jog (≈7:30 km / min, HR ≤150 bpm).  \n*Main set*: Run at easy aerobic pace (≈6:40‑7:15 / km, HR 145‑155 bpm) for the planned distance; if you feel fully recovered you may add a brief HM‑effort finish (≈5:30‑5:45 / km for the last 2‑3 km).  \n*Cool‑down*: 8‑10 min very easy jog or walk, let HR drop below 130 bpm.\n\n**Readiness rationale** – Sleep was 6.6 h (moderate) and sleep‑score 74, HRV was a touch below the 7‑day average (45 ms vs 50 ms) but still flagged “BALANCED”. Resting HR is low (58 bpm) and ACWR is low (0.5), indicating ample systemic recovery. The overall readiness score (76 = High) and “Well Recovered” feedback outweigh the modest sleep shortfall, so the planned long run is appropriate.\n\n**In‑session guardrails** – If your warm‑up HR stays >155 bpm, cut the pace a notch or shorten the run. Watch for excessive breathing rate or leg fatigue beyond the easy zone; drop to recovery pace (≥7:30 / km) and stop any HM‑effort finish. Heat (28‑33 °C) will raise HR; prioritize perceived effort over exact pace and hydrate early. If you notice dizziness, abnormal heart",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
