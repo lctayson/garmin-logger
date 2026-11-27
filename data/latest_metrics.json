@@ -46,7 +46,7 @@
         "feedback": "Moderate"
       }
     },
-    "ai_analysis": "- **Decision:** Proceed with today’s scheduled core/hip‑stability strength session – your readiness (73 Moderate, “Well Rested”, HRV balanced, resting HR 55 bpm, 8.8 h sleep) is solid and the ACWR is low (0.7).  \n\n- **Warm‑up / Main set / Cool‑down:** 5‑10 min easy jog or bike plus dynamic hip/leg drills (leg swings, hip circles). Then 3 rounds of the core/hip circuit: 45 s plank, 30 s each side side‑plank, 20 glute bridges, 20 cl",
+    "ai_analysis": "**Decision** – Proceed with today’s scheduled **Friday core/hip‑stability strength session** (no running).  \n\n**Execution** – 1️⃣ Warm‑up: 5‑10 min easy jog or dynamic mobility (leg swings, glute bridges, hip‑CARs).  \n2️⃣ Main set: follow the prescribed core/hip‑stability circuit (e.g., single‑leg dead‑lifts, clamshells, planks, side‑band walks) with the prescribed reps/sets; keep rest intervals as written.  \n3️⃣ Cool‑down: 3‑5 min gentle stretch of hip flexors, hamstrings, and lower back.  \n\n**Readiness rationale** – Sleep was solid (8.8 h, score 85) and HRV is",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
