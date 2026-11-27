@@ -19,13 +19,18 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **Friday core/hip‑stability strength session** (no running).  
+**Decision** – Proceed with today’s scheduled **Friday core/hip‑stability strength session**; no need to downgrade or replace it.
 
-**Workout execution** – *Warm‑up*: 5 min low‑intensity mobility (leg swings, hip circles, body‑weight glute bridges). *Main set*: 3 × 8 min circuits, each circuit = 12 RM hip thrust, 10 RM single‑leg RDL, 60 s side‑plank each side, 30 s rest between exercises; repeat circuit 3 times. *Cool‑down*: 4 min gentle stretching of hamstrings, hip flexors, and lumbar spine.  
+**Workout execution** – 1️⃣ Warm‑up: 5 min light cardio (e.g., jog or bike) + 5 min dynamic mobility (leg swings, hip circles, band‑walks).  
+2️⃣ Main set (3 × rounds, 45 s work / 15 s rest):  
+  • Plank variations (front, side)  
+  • Glute‑bridge + single‑leg bridge  
+  • Clamshells / monster‑walks with band  
+  • Single‑leg Romanian deadlift (light‑moderate load)  
+  • Bird‑dog.  
+3️⃣ Cool‑down: 5 min static stretching for hip flexors, glutes, and lower back.
 
-**Readiness rationale** – Sleep was excellent (8.8 h, sleep‑score 85) and HRV is in the “balanced” band (56 ms vs 7‑day avg 50 ms), while resting HR is low (55 bpm). Acute load is modest (434) and ACWR is low (0.7), indicating ample recovery capacity; no red flags in stress or HRV trends.  
-
-**In‑session guardrails** – If heart rate spikes > 130 bpm during the warm‑up, or you feel unusually tight/fatigued, cut the weight or shorten the set count. Keep form tight; if any joint pain or excessive soreness appears, drop to 50 % of the prescribed load and finish with only the core/plyo elements. Stay hydrated even in early‑morning heat and finish with a brief foam‑roll to aid recovery.
+**Readiness rationale** – Sleep ≈ 9 h, sleep‑score 85 (good); HRV 56 ms (above 7‑day avg) → “Balanced”; resting HR 55 bpm (low) and ACWR 0.7 (low) all signal solid recovery. The moderate readiness score reflects the algorithm’s weighting, but the underlying metrics are all favorable, so the planned strength work should be well tolerated
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
