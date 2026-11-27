@@ -26,12 +26,13 @@ PACING: km 1 ~5:10, hold 5:08-5:10 through km 4 (laps within 3 s); free last km 
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled long‑run, but keep the optional half‑marathon‑effort finish optional. Your overall readiness is “High” and ACWR is low, yet sleep ≈ 6.6 h and HRV is a few ms below the 7‑day average, so a conservative finish is prudent.
+**Decision** – Readiness is “High” (score 76) with balanced HRV, low resting‑HR (58 bpm) and a low ACWR (0.5). Proceed with today’s scheduled **Saturday long run** as planned; keep any HM‑effort finish optional and only if you feel strong.
 
-**Workout plan** –   
-- **Warm‑up**: 10 min easy jog (≈ 7:00 /km) + 4 × 20‑sec strides, easy pace.  
-- **Main set**: Easy aerobic run 12‑15 km at 6:40‑7:15 /km (HR ≈ 145‑155 bpm).  
-- **Optional finish** (if you feel good after the easy portion): 3
+**Workout execution** – Warm‑up: 10‑15 min easy jog (≈7:30 / km) plus 2‑3 × 100 m strides.  
+Main set: run at **easy aerobic pace (≈6:40‑7:15 / km), HR 145‑155 bpm, RPE 3‑4** for the prescribed distance/time (the plan calls for a steady long run; no interval work today).  
+Cool‑down: 5‑10 min easy jog + light stretching.
+
+**Readiness rationale** – HRV is within the “Balanced” band (45 ms vs 7‑day avg 50 ms) and resting HR
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
