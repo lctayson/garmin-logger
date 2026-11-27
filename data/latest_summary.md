@@ -26,11 +26,10 @@ PACING: km 1 ~5:10, hold 5:08-5:10 through km 4 (laps within 3 s); free last km 
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled long‑run (easy + optional HM‑effort finish). Your readiness score is “High” and ACWR is low, so you have sufficient recovery to take the run as planned; no need to downgrade to a recovery jog.
+**Decision** – Proceed with today’s scheduled long‑run (easy + optional HM‑effort finish). No need to cut back; readiness is “High” and ACWR is low.
 
-**Workout execution** –   
-- **Warm‑up:** 10‑15 min easy jog (≈7:30 /km, HR ≤150 bpm).  
-- **Main set:** Run at easy aerobic pace (≈7:10–7:45 /km, HR 145‑155 bpm) for the planned duration (typically
+**Workout outline** – Warm‑up: 10‑15 min easy jog + 4 × dynamic strides.  
+Main set: run at easy‑aerobic pace (≈6:40‑7:15 /km, HR ≈ 145‑155 bpm
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 

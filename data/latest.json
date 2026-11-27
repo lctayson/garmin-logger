@@ -79,7 +79,7 @@
       "rem": 0.8,
       "awake": 0.72
     },
-    "total_steps": 67
+    "total_steps": 103
   },
   "training_status": {
     "status": "Recovery 2",
@@ -925,7 +925,7 @@
     {
       "date": "2026-11-28",
       "charged": 43,
-      "drained": 2,
+      "drained": 5,
       "high": 86,
       "low": 43
     }
