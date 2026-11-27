@@ -3,7 +3,7 @@
 ## Readiness: 76/100 (High)
 > Well Recovered
 
-- **VO₂max:** 45 ml/kg/min (Garmin precise)
+- **VO₂max:** 45.1 ml/kg/min (Garmin precise)
 - **RHR:** 58 bpm (7d avg: 57.1 bpm, trending down)
 - ⚠️ **HRV:** 45ms (7d avg: 50ms) · below 47–58ms
 - ⚠️ **Sleep:** 6h34 / 6h40 need (0h06 short) · score 74 · 7d avg 6h31 · 5/7 nights below need
@@ -11,48 +11,38 @@
 - ⚠️ **Limiter:** Sleep Score (61%)
 - **Also soft:** Sleep History
 
-## Today's Session
-- **Planned:** Sat, Nov 28 — 8k as 5K TT: ~2K warm-up + 5K hard, evenly paced + ~1.5K cooldown. Record TT as a separate activity 
-A-goal 25:30, expected 25:45-26:00
-26:15 or faster keeps you on the 1:58 path.
-25:30 or faster puts 1:55 in play.
-Slower than 26:45 means sub-1:58 is the target and 1:55 is off the table
-2025 5k TT: 26:00
+## Today's Workout
 
-PACING: km 1 ~5:10, hold 5:08-5:10 through km 4 (laps within 3 s); free last km only if km 1 held. Run profile, 1 km auto-lap, no alerts, hide avg pace; warm-up / 5K / cool-down as 3 activities. Sleep 7+ h Wed-Fri.
+- **Guiguinto Running** — 2.02km · 16:27 · 8:08/km · HR 146/152 max
+  - TE: Recovery (Low Aerobic) · aerobic 2.2 · anaerobic 0
+  - MS: 2.02k @ 8:08 146bpm 0.79m 155spm 271ms 7.3cm 207w
+  - Readiness 76 → 35 (High Recovery Needs) · Recovery 1d 19h 12m
+  - 🧠 The main‑set consisted of two 8‑minute reps at 8:22 and 7:56 /km (average 8:09 /km), which is far slower than the sub‑threshold target (≈5:20‑5:35 /km) and even below your typical easy‑aerobic range (≈6:40‑7:15 /km), confirming that the session was a genuine recovery effort. Heart‑rate stayed around 146–147 bpm, aligning with the low‑intensity zone and matching the “RECOVERY” training‑effect label. Your morning readiness was high (score 76, “Well Recovered”), and the post‑run drop in score reflects the acute load rather than any execution issue. No deviations or risk factors appear in this workout.
+- **Malolos Running** — 5.01km · 26:14 · 5:14/km · HR 171/180 max
+  - TE: VO2 Max (High Aerobic) · aerobic 3.9 · anaerobic 0.2
+  - MS: 5.01k @ 5:14 171bpm 1.04m 183spm 239ms 8.2cm 325w
+  - 🧠 The main set was a single continuous 5 km effort (5 × ~5:09‑5:19 min/km) with heart rate climbing from 158 bpm to 177 bpm, which does not match Thursday’s prescribed VO₂‑max interval format and therefore provides limited interval‐specific stimulus despite the VO₂‑MAX training‑effect label. Pace drift of roughly 2 % across the reps and the steady HR rise indicate accumulating fatigue, which is reflected in the post‑run readiness dropping to the low‑30s and an acute load of 670. Morning readiness was high (score 76, “Well Recovered”), so the session’s load was well‑tolerated but may not have delivered the intended quality work for this phase.
+- **Malolos - TT Warm Up** — 2.52km · 19:02 · 7:34/km · HR 140/154 max
+  - TE: Recovery (Low Aerobic) · aerobic 2.3 · anaerobic 0.2
+  - Intervals: 3 work reps · pace drift +40.2% · HR +-22bpm
+  - MS: 0.20k @ 5:00 139bpm 0.93m 182spm 240ms 7.4cm 310w
+  - 🧠 The three 20‑second reps progressed from 5:41 /km to 4:45 /km while heart rate fell 22 bpm (150 → 128 bpm), indicating a clear increase in intensity and a healthy cardiovascular response for a warm‑up. However, a 40 % pace‑efficiency drift shows the first rep was markedly slower than the later ones, so the activation was uneven and the early effort fell below the sub‑threshold range you normally target for a TT prep. The post‑exercise readiness drop (score 29–35) aligns with the acute load spike (≈670) and is expected after even a short, high‑intensity warm‑up.
+
+## Next Session
+- **Planned:** Sun, Nov 29 — 6k very easy or rest, no hills
 - **Recommendation:** Proceed as planned
 - **Reason:** last-night HRV is below the balanced band.
 - **Action:** Follow the planned session, using normal effort-based adjustments and reassess during the warm-up.
 
-### 🧠 AI Coaching Guidance
-
-**Decision** – Proceed with today’s scheduled Saturday long‑run (easy aerobic, optional half‑marathon finish) – no need to cut it short or switch to recovery.
-
-**Execution** – *Warm‑up*: 10 min easy jog (≈7:30 km / min, HR ≤150 bpm).  
-*Main set*: Run at easy aerobic pace (≈6:40‑7:15 / km, HR 145‑155 bpm) for the planned distance; if you feel fully recovered you may add a brief HM‑effort finish (≈5:30‑5:45 / km for the last 2‑3 km).  
-*Cool‑down*: 8‑10 min very easy jog or walk, let HR drop below 130 bpm.
-
-**Readiness rationale** – Sleep was 6.6 h (moderate) and sleep‑score 74, HRV was a touch below the 7‑day average (45 ms vs 50 ms) but still flagged “BALANCED”. Resting HR is low (58 bpm) and ACWR is low (0.5), indicating ample systemic recovery. The overall readiness score (76 = High) and “Well Recovered” feedback outweigh the modest sleep shortfall, so the planned long run is appropriate.
-
-**In‑session guardrails** – If your warm‑up HR stays >155 bpm, cut the pace a notch or shorten the run. Watch for excessive breathing rate or leg fatigue beyond the easy zone; drop to recovery pace (≥7:30 / km) and stop any HM‑effort finish. Heat (28‑33 °C) will raise HR; prioritize perceived effort over exact pace and hydrate early. If you notice dizziness, abnormal heart
-
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
-
-## Latest Activity
-
-_Most recent activity (2026-11-26):_
-- **Malolos - Run + Strides/Hills** — 6.05km · 43:39 · 7:13/km · HR 142/156 max
-  - TE: Aerobic Base · aerobic 3 · anaerobic 0.7
-  - MS: 5.39k @ 7:07 142bpm 0.83m 170spm 272ms 7.9cm 247w
-  - 🧠 The 6‑rep main set lasted 38:21 and averaged 7:07 /km (range 7:34–6:56), keeping you solidly in the easy aerobic zone (6:40–7:15 /km) with HR rising from 128 to 149 bpm—well below the sub‑threshold target of 5:20–5:35 /km and 158‑168 bpm, which matches the “NO ANAEROBIC BENEFIT” training‑effect label. Stamina dropped from 100 % to 82 % and body‑battery fell 10 points, aligning with a moderate readiness score (54) and a load of 93.5, so the fatigue level is as expected for an easy run with strides/hills. No concerns for insufficient VO₂max stimulus or overreaching appear in this session.
 
 ## Load & Trends
 
-- ⚠️ **ACWR:** 0.5 (Low) — acute 345 / chronic 580 (chronic range 464–870)
-- **7-day volume:** 26.16km vs 28-day avg 37.9km (-31%)
-- **Running tolerance:** 48.5% (Medium) — 26.2km of 65.3km weekly cap, acute impact load 31.7
-- **Aerobic Low:** 1033.4 (target 598–1142 — in range)
-- **Aerobic High:** 1142.6 (target 924–1468 — in range)
+- **ACWR:** 1.0 (Optimal) — acute 670 / chronic 638 (chronic range 510.4–957)
+- **7-day volume:** 35.71km vs 28-day avg 40.3km (-11%)
+- **Running tolerance:** 69.5% (Medium) — 35.7km of 65.3km weekly cap, acute impact load 45.4
+- **Aerobic Low:** 1111.1 (target 600–1144 — in range)
+- **Aerobic High:** 1314.9 (target 922–1466 — in range)
 - ⚠️ **Anaerobic:** 38.1 (target 217–544 — -179 under)
 - ⚠️ **Load focus:** Anaerobic Shortage
 - ⚠️ **Sleep (7d avg):** 6h31, 5/7 nights below need, trending up
@@ -69,18 +59,18 @@ _Most recent activity (2026-11-26):_
 | W | Malolos Run | 6k · 45:05 | 59 |
 | T | Run + Strides/Hills | 6k · 43:39 | 94 |
 | F | Rest | — | — |
-| S | Rest | — | — |
+| S | Guiguinto Run/Malolos Run/TT Warm Up | 9.6k · 1:01:43 | 256 |
 
 | Sessions | Distance | Time | Load |
 |:---:|:---:|:---:|:---:|
-| 6 | 26.16 km | 3:36:30 | 347.5 |
+| 9 | 35.71 km | 4:38:13 | 603.2 |
 
 ## Recent 4 Weeks
-_Average weekly running: 37.9 km_
+_Average weekly running: 40.3 km_
 
 | Week | Runs | Others | Load |
 |:---|---:|---:|---:|
-| Nov 22–28 | 26.16 km | 23 min | 347.5 |
+| Nov 22–28 | 35.71 km | 23 min | 603.2 |
 | Nov 15–21 | 43.15 km | 49 min | 630 |
 | Nov 8–14 | 45.29 km | 68 min | 675.3 |
 | Nov 1–7 | 37.13 km | 49 min | 626.8 |
