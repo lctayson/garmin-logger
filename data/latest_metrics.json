@@ -46,7 +46,7 @@
         "feedback": "Good"
       }
     },
-    "ai_analysis": "**Decision** – Readiness is “High” (score 76) with balanced HRV, low resting‑HR (58 bpm) and a low ACWR (0.5). Proceed with today’s scheduled **Saturday long run** as planned; keep any HM‑effort finish optional and only if you feel strong.\n\n**Workout execution** – Warm‑up: 10‑15 min easy jog (≈7:30 / km) plus 2‑3 × 100 m strides.  \nMain set: run at **easy aerobic pace (≈6:40‑7:15 / km), HR 145‑155 bpm, RPE 3‑4** for the prescribed distance/time (the plan calls for a steady long run; no interval work today).  \nCool‑down: 5‑10 min easy jog + light stretching.\n\n**Readiness rationale** – HRV is within the “Balanced” band (45 ms vs 7‑day avg 50 ms) and resting HR",
+    "ai_analysis": "**Decision** – Proceed with today’s scheduled long‑run (easy + optional HM‑effort finish). Your readiness score is “High” and ACWR is low, so you have sufficient recovery to take the run as planned; no need to downgrade to a recovery jog.\n\n**Workout execution** –   \n- **Warm‑up:** 10‑15 min easy jog (≈7:30 /km, HR ≤150 bpm).  \n- **Main set:** Run at easy aerobic pace (≈7:10–7:45 /km, HR 145‑155 bpm) for the planned duration (typically",
     "ai_analysis_provider": "groq:openai/gpt-oss-120b",
     "ai_analysis_version": 2
   },
