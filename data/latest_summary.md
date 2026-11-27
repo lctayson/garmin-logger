@@ -26,10 +26,12 @@ PACING: km 1 ~5:10, hold 5:08-5:10 through km 4 (laps within 3 s); free last km 
 
 ### 🧠 AI Coaching Guidance
 
-* **Decision:** Proceed as planned with your Saturday long run; readiness supports a full aerobic session.
-* **Workout execution:** Execute a mostly easy long run at aerobic pace (6:40–7:15/km, keeping HR strictly ~145–155 bpm); keep the entire volume strictly aerobic without forcing any fast finishes. (Note: Specific target date/week was not supplied, so this defaults to the standard bridge-phase Saturday long run).
-* **Readiness rationale:** Readiness is solid at 76 with full recovery hours (0.0 remaining) and a balanced HRV status (45 ms last night vs. 50 ms 7-day average), alongside a settled resting HR of 58 bpm. Sleep duration is slightly truncated at 6.57 hours (score 74) and chronic load is on the lower side (ACWR 0.59), which indicates plenty of fresh capacity rather than accumulated fatigue.
-* **In-session guardrails:** Account for the early-morning heat and humidity—anchor your effort to HR (capped at 155 bpm) rather than trying to hit a rigid pace. If cardiac drift pushes your HR above 155 bpm or perceived effort spikes during the warm-up, back off immediately into recovery pace (7:10–7:45+/km, ≤150 bpm) for the remainder of the duration.
+**Decision** – Proceed with today’s scheduled long‑run, but keep the optional half‑marathon‑effort finish optional. Your overall readiness is “High” and ACWR is low, yet sleep ≈ 6.6 h and HRV is a few ms below the 7‑day average, so a conservative finish is prudent.
+
+**Workout plan** –   
+- **Warm‑up**: 10 min easy jog (≈ 7:00 /km) + 4 × 20‑sec strides, easy pace.  
+- **Main set**: Easy aerobic run 12‑15 km at 6:40‑7:15 /km (HR ≈ 145‑155 bpm).  
+- **Optional finish** (if you feel good after the easy portion): 3
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
