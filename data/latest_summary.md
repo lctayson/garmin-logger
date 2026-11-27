@@ -19,18 +19,10 @@
 
 ### 🧠 AI Coaching Guidance
 
-**Decision** – Proceed with today’s scheduled **Friday core/hip‑stability strength session**; no need to downgrade or replace it.
-
-**Workout execution** – 1️⃣ Warm‑up: 5 min light cardio (e.g., jog or bike) + 5 min dynamic mobility (leg swings, hip circles, band‑walks).  
-2️⃣ Main set (3 × rounds, 45 s work / 15 s rest):  
-  • Plank variations (front, side)  
-  • Glute‑bridge + single‑leg bridge  
-  • Clamshells / monster‑walks with band  
-  • Single‑leg Romanian deadlift (light‑moderate load)  
-  • Bird‑dog.  
-3️⃣ Cool‑down: 5 min static stretching for hip flexors, glutes, and lower back.
-
-**Readiness rationale** – Sleep ≈ 9 h, sleep‑score 85 (good); HRV 56 ms (above 7‑day avg) → “Balanced”; resting HR 55 bpm (low) and ACWR 0.7 (low) all signal solid recovery. The moderate readiness score reflects the algorithm’s weighting, but the underlying metrics are all favorable, so the planned strength work should be well tolerated
+- **Decision** – Go ahead with today’s scheduled Friday core/hip‑stability strength session; no need to downgrade or swap for recovery.  
+- **Execution** – Follow the prescribed routine: dynamic warm‑up (leg swings, hip circles), then the planned core/hip circuit (e.g., glute bridges, clamshells, side‑planks, bird‑dogs, hip‑thrusts) with the prescribed reps/sets; finish with a brief active cool‑down (light mobility, deep‑breathing). Keep the load moderate‑heavy but stop short of muscular failure – the goal is quality, not max‑effort.  
+- **Readiness rationale** – Sleep was 8.8 h with a score of 85, HRV is balanced and above your 7‑day average, resting HR is a low 55 bpm, and ACWR is low (0.7). All recovery factors are in the “Very Good” band, so the body is primed for a strength day.  
+- **In‑session guardrails** – Watch for any sharp hip, knee or low‑back pain; if heart rate spikes > 150 bpm during the warm‑up or you feel unusual fatigue, cut the volume or switch to lighter resistance. Keep breathing steady; if form breaks down, reduce weight or reps. If ambient heat
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
