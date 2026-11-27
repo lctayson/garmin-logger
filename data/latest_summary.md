@@ -16,17 +16,17 @@
 - **Guiguinto Running** — 2.02km · 16:27 · 8:08/km · HR 146/152 max
   - TE: Recovery (Low Aerobic) · aerobic 2.2 · anaerobic 0
   - MS: 2.02k @ 8:08 146bpm 0.79m 155spm 271ms 7.3cm 207w
-  - Readiness 76 → 35 (High Recovery Needs) · Recovery 1d 19h 12m
-  - 🧠 The main‑set consisted of two 8‑minute reps at 8:22 and 7:56 /km (average 8:09 /km), which is far slower than the sub‑threshold target (≈5:20‑5:35 /km) and even below your typical easy‑aerobic range (≈6:40‑7:15 /km), confirming that the session was a genuine recovery effort. Heart‑rate stayed around 146–147 bpm, aligning with the low‑intensity zone and matching the “RECOVERY” training‑effect label. Your morning readiness was high (score 76, “Well Recovered”), and the post‑run drop in score reflects the acute load rather than any execution issue. No deviations or risk factors appear in this workout.
+  - Readiness 76 → 67 (Good Sleep History) · Recovery 12h 38m
+  - 🧠 This was a very short, low-stress recovery jog covering 2.02 km in 16:27, keeping heart rate strictly capped at an average of 146 bpm (max 152 bpm). The main-set reps averaged 8:09/km with virtually no cardiac drift between intervals (146 to 147 bpm), yielding an expectedly modest load of 37.4. Given that this Saturday was slated for the bridge phase's primary 5K time trial, this jog served only as light movement rather than the planned test; ensure you are clear on whether the time trial was postponed or run in a separate untracked bout before moving into the HM block.
 - **Malolos Running** — 5.01km · 26:14 · 5:14/km · HR 171/180 max
   - TE: VO2 Max (High Aerobic) · aerobic 3.9 · anaerobic 0.2
   - MS: 5.01k @ 5:14 171bpm 1.04m 183spm 239ms 8.2cm 325w
-  - 🧠 The main set was a single continuous 5 km effort (5 × ~5:09‑5:19 min/km) with heart rate climbing from 158 bpm to 177 bpm, which does not match Thursday’s prescribed VO₂‑max interval format and therefore provides limited interval‐specific stimulus despite the VO₂‑MAX training‑effect label. Pace drift of roughly 2 % across the reps and the steady HR rise indicate accumulating fatigue, which is reflected in the post‑run readiness dropping to the low‑30s and an acute load of 670. Morning readiness was high (score 76, “Well Recovered”), so the session’s load was well‑tolerated but may not have delivered the intended quality work for this phase.
+  - 🧠 You executed this 5K time trial in 26:11 (5:14/km average) off a solid 76 morning readiness, successfully driving your heart rate right into VO2max territory as planned, with rep averages climbing from 158 bpm up to 177 bpm and a 180 bpm peak. However, the pacing drifted positive across the five kilometers from 5:09 down to 5:19, showing how early aggression cost you efficiency later in the effort. For future benchmark trials and the upcoming HM block, aim for a more disciplined, controlled start so you can finish strong with a true negative split rather than bleeding time in the final kilometers.
 - **Malolos - TT Warm Up** — 2.52km · 19:02 · 7:34/km · HR 140/154 max
   - TE: Recovery (Low Aerobic) · aerobic 2.3 · anaerobic 0.2
   - Intervals: 3 work reps · pace drift +40.2% · HR +-22bpm
   - MS: 0.20k @ 5:00 139bpm 0.93m 182spm 240ms 7.4cm 310w
-  - 🧠 The three 20‑second reps progressed from 5:41 /km to 4:45 /km while heart rate fell 22 bpm (150 → 128 bpm), indicating a clear increase in intensity and a healthy cardiovascular response for a warm‑up. However, a 40 % pace‑efficiency drift shows the first rep was markedly slower than the later ones, so the activation was uneven and the early effort fell below the sub‑threshold range you normally target for a TT prep. The post‑exercise readiness drop (score 29–35) aligns with the acute load spike (≈670) and is expected after even a short, high‑intensity warm‑up.
+  - 🧠 This warm-up executed exactly as intended ahead of the 5K time trial, keeping aerobic cost negligible (avg HR 140 bpm, load 43.5) with morning readiness at a solid 76. The 3×20s strides progressed cleanly from 5:41 down to 4:45/km to prime neuromuscular turnover without accumulating fatigue. The dramatic pace-efficiency drift (+40.2%) and negative HR delta are merely artifacts of HR lag over short 20-second efforts rather than true physiological decoupling.
 
 ## Next Session
 - **Planned:** Sun, Nov 29 — 6k very easy or rest, no hills

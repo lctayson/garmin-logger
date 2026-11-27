@@ -63,6 +63,18 @@
           "recovery_time": {"percent": 34, "feedback": "Poor"},
           "acwr": {"percent": 91, "feedback": "Good"}
         }
+      },
+      {
+        "timestamp_local": "2026-11-28T06:20:11.0",
+        "context": "AFTER_POST_EXERCISE_RESET",
+        "score": 67,
+        "feedback": "GOOD_SLEEP_HISTORY",
+        "recovery_minutes": 758,
+        "acute_load": 400,
+        "recovery_time_change": "NONE",
+        "factor_overrides": {
+          "recovery_time": {"percent": 80, "feedback": "Good"}
+        }
       }
     ]
   },
