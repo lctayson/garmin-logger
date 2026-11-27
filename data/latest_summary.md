@@ -21,11 +21,11 @@
 
 **Decision** – Proceed with today’s scheduled **Friday core/hip‑stability strength session** (no running).  
 
-**Execution** – 1️⃣ Warm‑up: 5‑10 min easy jog or dynamic mobility (leg swings, glute bridges, hip‑CARs).  
-2️⃣ Main set: follow the prescribed core/hip‑stability circuit (e.g., single‑leg dead‑lifts, clamshells, planks, side‑band walks) with the prescribed reps/sets; keep rest intervals as written.  
-3️⃣ Cool‑down: 3‑5 min gentle stretch of hip flexors, hamstrings, and lower back.  
+**Workout execution** – *Warm‑up*: 5 min low‑intensity mobility (leg swings, hip circles, body‑weight glute bridges). *Main set*: 3 × 8 min circuits, each circuit = 12 RM hip thrust, 10 RM single‑leg RDL, 60 s side‑plank each side, 30 s rest between exercises; repeat circuit 3 times. *Cool‑down*: 4 min gentle stretching of hamstrings, hip flexors, and lumbar spine.  
 
-**Readiness rationale** – Sleep was solid (8.8 h, score 85) and HRV is
+**Readiness rationale** – Sleep was excellent (8.8 h, sleep‑score 85) and HRV is in the “balanced” band (56 ms vs 7‑day avg 50 ms), while resting HR is low (55 bpm). Acute load is modest (434) and ACWR is low (0.7), indicating ample recovery capacity; no red flags in stress or HRV trends.  
+
+**In‑session guardrails** – If heart rate spikes > 130 bpm during the warm‑up, or you feel unusually tight/fatigued, cut the weight or shorten the set count. Keep form tight; if any joint pain or excessive soreness appears, drop to 50 % of the prescribed load and finish with only the core/plyo elements. Stay hydrated even in early‑morning heat and finish with a brief foam‑roll to aid recovery.
 
 - *Automated guidance uses available metrics only; pain, illness, unusual symptoms, or a major subjective fatigue change should override it.*
 
