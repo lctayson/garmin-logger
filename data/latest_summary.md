@@ -17,16 +17,16 @@
   - TE: Recovery (Low Aerobic) · aerobic 2.2 · anaerobic 0
   - MS: 2.02k @ 8:08 146bpm 0.79m 155spm 271ms 7.3cm 207w
   - Readiness 76 → 67 (Good Sleep History) · Recovery 12h 38m
-  - 🧠 This was a very short, low-stress jog (2.02 km in 16:27) that functioned purely as active recovery. The main set averaged 8:09/km with heart rate held steady at 146 bpm, staying strictly within your recovery ceiling (≤145–150 bpm) and generating an aerobic training effect of just 2.2. With your morning readiness at 76, this brief outing added minimal fatigue ahead of the upcoming HM-specific training block.
+  - 🧠 The two‑rep main set stayed firmly in recovery territory, averaging 8:09 /km with HR 146–147 bpm—well below the sub‑threshold (5:20–5:35 /km, ~158–168 bpm) and even the easy aerobic zone, matching the prescribed recovery effort. No interval‑drift data are present, but the small 26‑second spread between the reps (8:22 vs 7:56) shows consistent pacing rather than a slipping stimulus. Although your morning readiness was “High” (score 76), the post‑run snapshots fell to the high‑need range (scores 29–35) as the acute load jumped to ~670, reflecting the early‑morning heat’s extra cardiac cost even for a short 2‑km run.
 - **Malolos Running** — 5.01km · 26:14 · 5:14/km · HR 171/180 max
   - TE: VO2 Max (High Aerobic) · aerobic 3.9 · anaerobic 0.2
   - MS: 5.01k @ 5:14 171bpm 1.04m 183spm 239ms 8.2cm 325w
-  - 🧠 For the primary 5K time trial, you delivered a solid 26:14 effort at an average pace of 5:14/km off a strong 76 morning readiness. However, execution skewed slightly positive in pacing—opening at 5:09/km before fading to 5:19/km as heart rate climbed steadily from 158 bpm into the upper VO2 zone at 177 bpm (peaking at 180 bpm). Even with that slight late deceleration, holding an average heart rate of 171 bpm right at your LTHR provided the sustained high-end aerobic stimulus targeted for the end of this bridge phase.
+  - 🧠 The Thursday main set delivered a true VO2‑max effort (training‑effect label VO2MAX, aerobic 3.9) with HR climbing from 158 bpm in the first rep to 177 bpm by the final rep, but the pace drifted from 5:09 /km to 5:19 /km, staying just above the intended 4:50‑5:15 /km VO2‑max window and edging into sub‑threshold territory. Given the high morning readiness (score 76) the acute load of 670 and post‑exercise readiness dropping to the low‑30s are expected, but the modest pace slip suggests the stimulus could be sharpened to secure a clearer VO2‑max overload. Maintain the HR profile but aim for ≤5:12 /km in the early reps to avoid drift and ensure the Thursday quality remains a strong VO2‑max driver for the upcoming HM‑specific phase.
 - **Malolos - TT Warm Up** — 2.52km · 19:02 · 7:34/km · HR 140/154 max
   - TE: Recovery (Low Aerobic) · aerobic 2.3 · anaerobic 0.2
   - Intervals: 3 work reps · pace drift +40.2% · HR +-22bpm
   - MS: 0.20k @ 5:00 139bpm 0.93m 182spm 240ms 7.4cm 310w
-  - 🧠 Execution was spot-on for a pre-race shakeout, with morning readiness high at 76 providing clear green lights. Across the three 20-second strides, you progressively opened up from 5:41/km down to 4:45/km without accumulating any cardiovascular cost (peak heart rate only hit 154 bpm, averaging 140 bpm). This kept overall session load at a negligible 43.5, priming the neuromuscular system without denting stamina ahead of the 5K time trial.
+  - 🧠 The main set comprised three 20‑second reps that progressed from 5:41 /km to 4:45 /km (average 5:07 /km), placing the effort in the threshold/VO2‑max range, yet the time‑weighted HR fell 22 bpm across the reps (150 → 128 bpm), indicating the cardiovascular stimulus was inconsistent despite the faster paces. A 40 % pace‑efficiency drift further confirms substantial variation between reps, which suggests the warm‑up did not
 
 ## Next Session
 - **Planned:** Sun, Nov 29 — 6k very easy or rest, no hills
