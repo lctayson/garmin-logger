@@ -17,15 +17,16 @@
   - TE: Recovery (Low Aerobic) · aerobic 2.2 · anaerobic 0
   - MS: 2.02k @ 8:08 146bpm 0.79m 155spm 271ms 7.3cm 207w
   - Readiness 76 → 67 (Good Sleep History) · Recovery 12h 38m
-  - 🧠 The two‑rep main set stayed firmly in easy‑aerobic intensity (average pace ≈ 8:09 / km, HR ≈ 146 bpm), matching the Wednesday easy‑run prescription and yielding a RECOVERY training effect with 2.2 aerobic benefit and no anaerobic load. Pace drift between the two reps (8:22 → 7:56) is modest and well within the expected variation for a short, low‑stress session. With a morning readiness score of 76 (High) and no flagged risk factors, the workout was executed as intended and does not raise any concern.
+  - 🧠 The two‑rep main set stayed tightly clustered (8:22 → 7:56 / avg 8:09) with HR around 146 bpm, which sits squarely in the recovery‑easy zone and delivered essentially no anaerobic stimulus, matching the prescribed low‑load nature of today’s run. Stamina slipped from 59 % to 52 % over the 2 km, a modest decline consistent with the modest training effect (aerobic 2.2, recovery label). Your morning readiness was high (score 76), but the post‑run snapshots show a sharp dip to the high‑recovery‑needs range, reflecting the acute load of 670 AU; this is expected after even a brief recovery effort in the early‑morning heat. No deviations from the intended workout intensity are evident.
 - **Malolos Running** — 5.01km · 26:14 · 5:14/km · HR 171/180 max
   - TE: VO2 Max (High Aerobic) · aerobic 3.9 · anaerobic 0.2
   - MS: 5.01k @ 5:14 171bpm 1.04m 183spm 239ms 8.2cm 325w
-  - 🧠 The 5‑rep main set (26 min 11 s of continuous running) stayed well below the prescribed sub‑threshold pace range (5:20–5:35 /km) – the rep paces ran 5:09‑5:19 /km – but the heart‑rate drift climbed from 158 bpm in the first rep to 177 bpm by the final rep, moving the later effort into the threshold/VO2‑max zone. The training‑effect output (VO2MAX 3.9, no anaerobic benefit) confirms that the session delivered a strong aerobic stimulus but overshot the intended sub‑threshold intensity, which could limit the specific volume needed in the bridge phase. Morning readiness was high (score 76, “Well Recovered”), so the elevated HR drift appears to be a pacing execution issue rather than a recovery limitation. Consider holding the later reps closer to 165–170 bpm to keep the work firmly sub‑threshold while still maintaining the faster-than‑target pace.
+  - 🧠 The 5 km main set was run at an average pace of 5:14 /km, beginning at 5:09 /km and finishing at 5:19 /km, which sits just inside Onin’s sub‑threshold/threshold zone (5:20‑5
 - **Malolos - TT Warm Up** — 2.52km · 19:02 · 7:34/km · HR 140/154 max
   - TE: Recovery (Low Aerobic) · aerobic 2.3 · anaerobic 0.2
   - Intervals: 3 work reps · pace drift +40.2% · HR +-22bpm
   - MS: 0.20k @ 5:00 139bpm 0.93m 182spm 240ms 7.4cm 310w
+  - 🧠 The main set was three 20‑second reps at 5:41, 4:55 and 4:45 /km (average 5:07 /km), placing the effort squarely
 
 ## Next Session
 - **Planned:** Sun, Nov 29 — 6k very easy or rest, no hills
