@@ -17,16 +17,15 @@
   - TE: Recovery (Low Aerobic) · aerobic 2.2 · anaerobic 0
   - MS: 2.02k @ 8:08 146bpm 0.79m 155spm 271ms 7.3cm 207w
   - Readiness 76 → 67 (Good Sleep History) · Recovery 12h 38m
-  - 🧠 The main set was two 8‑minute reps at 8:22 and 7:56 min/km (average 8:09 min/km) with average HR 146‑147 bpm, which sits squarely in the easy aerobic zone. The session’s training‑effect label of RECOVERY (aerobic 2.2, anaerobic 0), low load of 37.4, and –5 body‑battery impact match that low‑intensity intent. Morning readiness was high (score 76, “Well Recovered”), yet the post‑exercise snapshots dropped to 29‑35, reflecting the acute load spike (up to 670) from this easy work.
+  - 🧠 The two‑rep main set stayed between 7:56 and 8:22 min/km with a time‑weighted HR of 146‑147 bpm, landing squarely in the recovery zone (≈7:45+ min/km and ≤150 bpm) and producing a modest training‑effect score of 2.2 aerobic. Load was only 37 AU and the stamina metric fell from 59 to 52, which is typical for a short, easy effort and does not flag any fatigue risk. Readiness was “High” (score 76) with a solid sleep score, so today’s run was appropriately easy and fully compliant with the bridge‑phase easy‑day prescription.
 - **Malolos Running** — 5.01km · 26:14 · 5:14/km · HR 171/180 max
   - TE: VO2 Max (High Aerobic) · aerobic 3.9 · anaerobic 0.2
   - MS: 5.01k @ 5:14 171bpm 1.04m 183spm 239ms 8.2cm 325w
-  - 🧠 The 5 km run was treated as a single sub‑threshold block (5 × ≈5 min reps) and the average rep pace of 5:14 /km sits comfortably within the prescribed sub‑threshold range (5:20–5:35 /km), though the first two reps were even a touch quicker (5:09–5:11). Heart‑rate rose from 158 bpm in the first rep to 177 bpm by the final rep, moving the latter portion of the session into the upper‑threshold/VO2max zone rather than staying in the target 158‑168 bpm sub‑threshold window. This upward HR drift suggests the workout became progressively harder than intended, which is worth monitoring on future Tuesday sub‑threshold days to avoid inadvertent overload.
 - **Malolos - TT Warm Up** — 2.52km · 19:02 · 7:34/km · HR 140/154 max
   - TE: Recovery (Low Aerobic) · aerobic 2.3 · anaerobic 0.2
   - Intervals: 3 work reps · pace drift +40.2% · HR +-22bpm
   - MS: 0.20k @ 5:00 139bpm 0.93m 182spm 240ms 7.4cm 310w
-  - 🧠 The three 20‑second reps drifted from a sub‑threshold pace (5:41) to clear VO2‑max territory (4:45) while average heart rate fell from 150 bpm to 128 bpm, so the work block delivered faster speed with diminishing cardiac stress rather than the intended steady sub‑threshold stimulus. Stamina dipped to 90 % by the end and the modest load (43.5) aligns with a “recovery” label, confirming the session was easy overall, but the pacing inconsistency suggests the Tuesday sub‑threshold goal was not fully met.
+  - 🧠 The three 20‑second reps progressed from 5:41 to 4:45 /km while heart rate dropped from 150 bpm to 128 bpm, showing a strong speed‑up (40 % pace‑efficiency drift) and a corresponding HR decline that kept the final effort well below sub‑threshold intensity. Stamina stayed high (99 → 91 % with a minimum of 90 %) and the training‑effect label of RECOVERY (aerobic 2.3, anaerobic ≈ 0) confirms the session behaved as a warm‑up rather than a threshold stimulus.
 
 ## Next Session
 - **Planned:** Sun, Nov 29 — 6k very easy or rest, no hills
