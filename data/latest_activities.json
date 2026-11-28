@@ -263,7 +263,7 @@
         ]
       },
       "lap_count": 3,
-      "ai_analysis": "The 2 km effort stayed firmly in the easy aerobic zone (8:09 min/km, ~146 bpm) and the training‑effect label of RECOVERY confirms it was executed as a low‑intensity run; no sub‑threshold or VO2‑max target was prescribed for this block, so compliance is as intended. The modest stamina dip (59 → 52) and the acute load of 37.4 are typical for a short recovery session and explain the post‑run readiness drop to the high‑30s. With a morning readiness score of 76 (High) and no evidence of missed intensity, the workout appears unremarkable and appropriately easy for the current bridge‑phase schedule.",
+      "ai_analysis": "The two‑rep main set stayed firmly in the recovery zone (average pace ≈ 8:09 /km, HR ≈ 146 bpm), matching the prescribed easy‑run intensity and producing a low aerobic training effect (2.2) with no anaerobic stimulus. Load was modest (37 AU) and the slight 26‑second pace spread between reps is well within normal variability for such a short effort. With a morning readiness score of 76 (High), the session was appropriately easy and did not add unnecessary fatigue. No compliance issues or unexpected drift were evident.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
@@ -612,7 +612,7 @@
         ]
       },
       "lap_count": 6,
-      "ai_analysis": "The five‑rep main set held a fairly steady pace (5:09 → 5:19 /km) while heart rate rose from 158 to 177 bpm, so the effort stayed in the high‑end sub‑threshold/threshold zone rather than reaching the prescribed VO2‑max intensity (≈4:50–5:15 /km, HR ≈ 170–178). Training‑effect data label the session “VO2MAX” but show only modest aerobic benefit (aerobic 3.9, anaerobic ≈ 0.2), confirming the intensity fell short of a true VO2‑max stimulus. Morning readiness was high (score 76, “Well Recovered”), and the post‑run drop to low scores (≈30) aligns with the acute load of ~670, indicating the session was taxing but not overly compromised by fatigue. For the bridge phase, consider sharpening the pace or shortening the reps to ensure the Thursday quality work delivers a genuine VO2‑max load.",
+      "ai_analysis": "The five‑rep main set stayed largely within the sub‑threshold pace window (5:09‑5:19 /km) but the HR climbed from 158 bpm on the first rep to 177 bpm by the last, overshooting the typical sub‑threshold range (≈158‑168 bpm) and edging toward VO2‑max intensity, which is reflected in the VO2MAX training‑effect label (aerobic 3.9, anaerobic 0.2). Stamina dropped from 91 to 59, and the load of 174.8 AU pushed acute load to 670, explaining the post‑exercise readiness plunge to the 20‑30 range despite a high pre‑run score of 76. This indicates the session delivered a stronger aerobic/VO2 stimulus than a pure sub‑threshold workout and may warrant a lighter recovery day before the next quality session.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
@@ -1174,7 +1174,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The three 20‑second reps were executed progressively faster (5:41 → 4:55 → 4:45 min/km) while heart rate dropped 22 bpm, so the warm‑up provided a clear sub‑threshold stimulus (average 5:07 min/km) without excessive cardio stress (RECOVERY label, aerobic = 2.3).",
+      "ai_analysis": "The main set was three 20‑second reps at 5:41, 4:55 and 4:45 /​km, yielding an average rep pace of 5:07 /​km—well inside the VO2max range rather than a sub‑threshold warm‑up. Heart‑rate fell 22 bpm across the reps while stamina dropped from 99 % to a low of 90 %, reflected by a +40 % pace‑efficiency drift and a noticeable fatigue signal despite the short work. With an acute load of 670 and a post‑exercise readiness score",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
