@@ -263,8 +263,8 @@
         ]
       },
       "lap_count": 3,
-      "ai_analysis": "This was a brief, low-stress jog (2.02 km in 16:27) that functioned purely as active recovery or a shakeout, holding heart rate right at the bottom edge of your aerobic range (146 bpm average, capping at 152 bpm). The two splits (8:22 and 7:56/km) were executed well within safe recovery bounds and generated minimal training load (37.4). Note that the scheduled primary 5K time trial for the end of the bridge phase was not performed here, so keep tomorrow fully easy before transitioning into the half-marathon specific block on Monday.",
-      "ai_analysis_provider": "gemini:gemini-3.8-flash"
+      "ai_analysis": "The main set was two 8‑minute reps at 8:22 and 7:56 min/km (average 8:09 min/km) with average HR 146‑147 bpm, which sits squarely in the easy aerobic zone. The session’s training‑effect label of RECOVERY (aerobic 2.2, anaerobic 0), low load of 37.4, and –5 body‑battery impact match that low‑intensity intent. Morning readiness was high (score 76, “Well Recovered”), yet the post‑exercise snapshots dropped to 29‑35, reflecting the acute load spike (up to 670) from this easy work.",
+      "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
       "name": "Malolos Running",
@@ -612,8 +612,8 @@
         ]
       },
       "lap_count": 6,
-      "ai_analysis": "This continuous 5K time trial was executed with solid aerobic grit off a 76 morning readiness, finishing in 26:14 at a 5:14/km average pace. Pacing faded slightly from 5:09/km in the opening kilometer to 5:19/km by kilometer five, but you kept heart rate climbing steadily above your 171 bpm threshold to peak at 180 bpm. While the Garmin TE scored this as high aerobic VO2max stimulus (3.9) with negligible anaerobic credit (0.2), spending the final 3 kilometers between 174–177 bpm provided the exact sustained high-end threshold test planned to close out this bridge block.",
-      "ai_analysis_provider": "gemini:gemini-3.8-flash"
+      "ai_analysis": "The 5 km run was treated as a single sub‑threshold block (5 × ≈5 min reps) and the average rep pace of 5:14 /km sits comfortably within the prescribed sub‑threshold range (5:20–5:35 /km), though the first two reps were even a touch quicker (5:09–5:11). Heart‑rate rose from 158 bpm in the first rep to 177 bpm by the final rep, moving the latter portion of the session into the upper‑threshold/VO2max zone rather than staying in the target 158‑168 bpm sub‑threshold window. This upward HR drift suggests the workout became progressively harder than intended, which is worth monitoring on future Tuesday sub‑threshold days to avoid inadvertent overload.",
+      "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
       "name": "Malolos - TT Warm Up",
@@ -1174,8 +1174,8 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "This warm-up executed exactly as intended ahead of the 5K time trial, keeping aerobic cost negligible (avg HR 140 bpm, peak 154 bpm). The three 20-second strides progressed cleanly from 5:41 down to 4:45/km to prime neuromuscular turnover without accumulating fatigue. With a solid morning readiness of 76 and zero lingering recovery hours, the system was primed for the baseline test.",
-      "ai_analysis_provider": "gemini:gemini-3.8-flash"
+      "ai_analysis": "The three 20‑second reps drifted from a sub‑threshold pace (5:41) to clear VO2‑max territory (4:45) while average heart rate fell from 150 bpm to 128 bpm, so the work block delivered faster speed with diminishing cardiac stress rather than the intended steady sub‑threshold stimulus. Stamina dipped to 90 % by the end and the modest load (43.5) aligns with a “recovery” label, confirming the session was easy overall, but the pacing inconsistency suggests the Tuesday sub‑threshold goal was not fully met.",
+      "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
 }
