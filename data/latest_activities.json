@@ -263,7 +263,7 @@
         ]
       },
       "lap_count": 3,
-      "ai_analysis": "The two‑rep main set stayed firmly in recovery territory (8:22 → 7:56 min/km, HR 146‑147 bpm), matching the “RECOVERY” training‑effect label and delivering a modest aerobic benefit (aerobic 2.2, no anaerobic load). Pace drift was minimal (≈ 5 % faster on the second rep) and HR remained flat, so there’s no evidence of missed VO2‑max stimulus or pacing issues. Morning readiness was high (score 76, “Well Recovered”), and the sharp drop in post‑run readiness reflects the acute load (670) rather than a problem with the session itself. Continue using these easy/recovery runs to preserve the high‑readiness baseline for upcoming threshold and VO₂‑max work.",
+      "ai_analysis": "The two‑rep main set stayed between 8:22 /km and 7:56 /km with a time‑weighted HR of ~146 bpm, landing squarely in the easy aerobic zone and delivering a RECOVERY‑type training effect (aerobic 2.2, no anaerobic load). Given your high morning readiness (score 76) the session was appropriate, but the post‑exercise readiness dropped sharply to the high‑30s with an acute load of ~670, suggesting today’s load was disproportionately taxing for a recovery run. If similar drops recur, consider trimming the work duration or adding extra sleep/recovery before the next quality session.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
@@ -612,7 +612,7 @@
         ]
       },
       "lap_count": 6,
-      "ai_analysis": "The 5 km main set stayed roughly in the sub‑threshold range (overall pace 5:14 /km, HR rising from 158 bpm to 177 bpm), but the 6 % pace drift (5:09 → 5:19) and steady HR climb indicate emerging fatigue toward the end. The VO2‑max training effect (aerobic 3.9, anaerobic ≈0) confirms a modest aerobic stimulus but no true anaerobic load, which aligns with the bridge‑phase goal of sub‑threshold volume rather than hard VO2max intervals. Your morning readiness was “High” (score 76), yet the post‑run readiness dropped sharply (scores 29‑35, acute load ≈ 670), signaling the session was a relatively heavy load for today’s recovery state.",
+      "ai_analysis": "The 5‑km main set was run continuously at 5:09–5:19 /km (average 5:14), which sits just inside your sub‑threshold window (5:20–5:35 /km) rather than delivering a true VO2‑max effort, as reflected by the HR climbing from 158 bpm early to 177 bpm late. The 10‑second pace drift and steady HR rise indicate a modest fatigue buildup but no loss of aerobic quality, aligning with the VO2‑max training‑effect label that was driven by overall load rather than intensity. Your morning readiness was high (",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
@@ -1174,7 +1174,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The three 20‑second reps progressed from 5:41 /km to 4:45 /km while average HR fell 22 bpm, showing a clear speed‑up and corresponding cardiac easing that matches a typical warm‑up acceleration rather than a target sub‑threshold pace. A 40 % pace‑efficiency drift across reps and a 12.5 % power‑efficiency drop indicate the first rep was substantially slower and less economical than the later ones, which is worth tightening to ensure the warm‑up consistently primes the system. Stamina dipped only from 99 % to 91 % and the acute load (≈670) drove the post‑run readiness score down to the low‑20s, a normal response for a session that still carried a modest load (43.5). Given today’s high morning readiness (score 76), the execution was acceptable but could be refined by starting the warm‑up at a steadier pace to reduce the early inefficiency.",
+      "ai_analysis": "The three 20‑second reps",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
