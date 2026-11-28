@@ -263,7 +263,7 @@
         ]
       },
       "lap_count": 3,
-      "ai_analysis": "The two‑rep main set was executed as a short recovery run (total 16:18 ≈ 2 km) with rep paces of 8:22 and 7:56 km (average 8:09 km), which sits well below the easy‑aerobic range (6:40‑7:15 km) and even slower than the defined recovery zone (7:10‑7:45 km). Heart‑rate stayed around 146‑147 bpm, aligning with the upper edge of the easy aerobic zone (≈145‑155 bpm) and far under your LTHR of 171 bpm, confirming the intended low‑intensity stimulus. Stamina dropped from 59 to 52, a modest dip typical for a recovery effort, and the low training load (≈37) matches the “RECOVERY” label in the training‑effect summary. Your morning readiness was high (score 76), but the post‑run drop to the high‑needs range reflects the acute load of this session, not a failure to meet the prescribed intensity.",
+      "ai_analysis": "The two‑rep main set lasted 16 min 18 s at an average pace of 8:09 min/km (8:22 then 7:56), which sits well below the easy‑aerobic target (≈6:40‑7:15 min/km) and produced a recovery‑label training effect (aerobic 2.2, no anaerobic load). Heart‑rate stayed around 146‑147 bpm, matching the expected 145‑155 bpm range for easy work despite the early‑morning heat, so the stimulus was appropriately low‑intensity. With a morning readiness score of 76 (High) and no evidence of pacing drift or missed targets, the session behaved exactly as a recovery run should. No red flags appear for this day’s bridge‑phase training.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
@@ -611,9 +611,7 @@
           ]
         ]
       },
-      "lap_count": 6,
-      "ai_analysis": "The 5 km main set was run at an average pace of 5:14 /km, which sits squarely in the sub‑threshold zone (5:20‑5:35 /km) rather than the VO2‑max range prescribed for Thursday quality work, and the HR rose from 158 bpm to 177 bpm, edging into threshold territory by the final rep. The modest pace drift (+10 s) and the training‑effect output (VO2MAX aerobic 3.9 but anaerobic 0.2 “NO_ANAEROBIC_BENEFIT”) confirm that the session delivered mainly sub‑threshold stimulus with little genuine VO2‑max load—exactly the kind of execution gap we want to avoid given the prior lack of anaerobic development. Morning readiness was high (score 76), yet the post‑run readiness dropped sharply, reflecting the high acute load (174.8) rather than any recovery deficit. For future Thursday sessions, re‑introduce short, high‑intensity intervals (e.g., 3 × 4 min @ ≈ 4:55 /km) to secure the intended VO2‑max stimulus.",
-      "ai_analysis_provider": "groq:openai/gpt-oss-120b"
+      "lap_count": 6
     },
     {
       "name": "Malolos - TT Warm Up",
@@ -1174,7 +1172,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The three 20‑second reps were run at 5:41, 4:55 and 4:45 /km while heart‑rate fell from 150 bpm to 128 bpm (‑22 bpm), showing the pace increased as cardiac cost decreased—a classic warm‑up progression rather than a sub‑threshold stimulus. A 40 % pace‑efficiency drift across the reps confirms this rapid intensity shift, but stamina stayed above 90 % and the training‑effect label remained “RECOVERY",
+      "ai_analysis": "Your morning readiness was high (score 76) and the overall training effect was classified as RECOVERY, which aligns with the modest aerobic load (2.3 AE) and negligible anaerobic contribution (0.2 AE). However, the three 20‑second reps in the main set deviated from a typical sub‑threshold Tuesday: the first rep paced at 5:41 /km (slower than the 5:20‑5:35 /km target) while the subsequent reps sped up to 4:55 and 4:45 /km, moving into VO₂‑max intensity, yet the corresponding HRs dropped from 150 bpm to 128 bpm, well below the sub‑threshold zone (≈158‑168 bpm). The 40 % pace‑efficiency drift confirms a rapid acceleration across reps, but the decreasing heart rate indicates the effort was not physiologically demanding enough to generate the intended sub‑threshold stimulus. In short, the session was far easier than prescribed for a Tuesday sub‑threshold workout, so you didn’t acquire the targeted aerobic stress.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
