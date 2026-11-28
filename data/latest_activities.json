@@ -263,7 +263,7 @@
         ]
       },
       "lap_count": 3,
-      "ai_analysis": "The two‑rep main set stayed firmly in recovery territory, averaging 8:09 /km with HR 146–147 bpm—well below the sub‑threshold (5:20–5:35 /km, ~158–168 bpm) and even the easy aerobic zone, matching the prescribed recovery effort. No interval‑drift data are present, but the small 26‑second spread between the reps (8:22 vs 7:56) shows consistent pacing rather than a slipping stimulus. Although your morning readiness was “High” (score 76), the post‑run snapshots fell to the high‑need range (scores 29–35) as the acute load jumped to ~670, reflecting the early‑morning heat’s extra cardiac cost even for a short 2‑km run.",
+      "ai_analysis": "The 2 km effort stayed firmly in the easy aerobic zone (8:09 min/km, ~146 bpm) and the training‑effect label of RECOVERY confirms it was executed as a low‑intensity run; no sub‑threshold or VO2‑max target was prescribed for this block, so compliance is as intended. The modest stamina dip (59 → 52) and the acute load of 37.4 are typical for a short recovery session and explain the post‑run readiness drop to the high‑30s. With a morning readiness score of 76 (High) and no evidence of missed intensity, the workout appears unremarkable and appropriately easy for the current bridge‑phase schedule.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
@@ -612,7 +612,7 @@
         ]
       },
       "lap_count": 6,
-      "ai_analysis": "The Thursday main set delivered a true VO2‑max effort (training‑effect label VO2MAX, aerobic 3.9) with HR climbing from 158 bpm in the first rep to 177 bpm by the final rep, but the pace drifted from 5:09 /km to 5:19 /km, staying just above the intended 4:50‑5:15 /km VO2‑max window and edging into sub‑threshold territory. Given the high morning readiness (score 76) the acute load of 670 and post‑exercise readiness dropping to the low‑30s are expected, but the modest pace slip suggests the stimulus could be sharpened to secure a clearer VO2‑max overload. Maintain the HR profile but aim for ≤5:12 /km in the early reps to avoid drift and ensure the Thursday quality remains a strong VO2‑max driver for the upcoming HM‑specific phase.",
+      "ai_analysis": "The five‑rep main set held a fairly steady pace (5:09 → 5:19 /km) while heart rate rose from 158 to 177 bpm, so the effort stayed in the high‑end sub‑threshold/threshold zone rather than reaching the prescribed VO2‑max intensity (≈4:50–5:15 /km, HR ≈ 170–178). Training‑effect data label the session “VO2MAX” but show only modest aerobic benefit (aerobic 3.9, anaerobic ≈ 0.2), confirming the intensity fell short of a true VO2‑max stimulus. Morning readiness was high (score 76, “Well Recovered”), and the post‑run drop to low scores (≈30) aligns with the acute load of ~670, indicating the session was taxing but not overly compromised by fatigue. For the bridge phase, consider sharpening the pace or shortening the reps to ensure the Thursday quality work delivers a genuine VO2‑max load.",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     },
     {
@@ -1174,7 +1174,7 @@
         ]
       },
       "lap_count": 13,
-      "ai_analysis": "The main set comprised three 20‑second reps that progressed from 5:41 /km to 4:45 /km (average 5:07 /km), placing the effort in the threshold/VO2‑max range, yet the time‑weighted HR fell 22 bpm across the reps (150 → 128 bpm), indicating the cardiovascular stimulus was inconsistent despite the faster paces. A 40 % pace‑efficiency drift further confirms substantial variation between reps, which suggests the warm‑up did not",
+      "ai_analysis": "The three 20‑second reps were executed progressively faster (5:41 → 4:55 → 4:45 min/km) while heart rate dropped 22 bpm, so the warm‑up provided a clear sub‑threshold stimulus (average 5:07 min/km) without excessive cardio stress (RECOVERY label, aerobic = 2.3).",
       "ai_analysis_provider": "groq:openai/gpt-oss-120b"
     }
   ]
